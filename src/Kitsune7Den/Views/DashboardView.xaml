@@ -10,6 +10,47 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="24">
         <StackPanel MaxWidth="700">
 
+            <!-- Welcome / First-run card — only shown when no server is configured -->
+            <Border Background="{DynamicResource BgMediumBrush}" CornerRadius="8"
+                    BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1"
+                    Margin="0,0,0,16" Padding="0"
+                    Visibility="{Binding IsFirstRun, Converter={StaticResource BoolVis}}">
+                <DockPanel>
+                    <Border DockPanel.Dock="Left" Width="4" CornerRadius="8,0,0,8"
+                            Background="{DynamicResource AccentBrush}" />
+                    <StackPanel Margin="20,16,20,16">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="20"
+                                       Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center"
+                                       Margin="0,0,10,0" />
+                            <TextBlock Text="Welcome to Kitsune7Den" Foreground="{DynamicResource TextPrimaryBrush}"
+                                       FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <TextBlock TextWrapping="Wrap" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12"
+                                   Margin="0,0,0,10">
+                            <Run Text="Let's get your server wired up. Pick one:" />
+                        </TextBlock>
+                        <StackPanel Margin="0,0,0,4">
+                            <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="12" Margin="0,0,0,4">
+                                <Run Text="• " Foreground="{DynamicResource AccentBrush}" FontWeight="Bold" />
+                                <Run Text="Already installed?" FontWeight="SemiBold" />
+                                <Run Text=" Click " Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="Browse" FontWeight="SemiBold" />
+                                <Run Text=" below and point to your " Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="7DaysToDieServer.exe" FontWeight="SemiBold" />
+                            </TextBlock>
+                            <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="12">
+                                <Run Text="• " Foreground="{DynamicResource AccentBrush}" FontWeight="Bold" />
+                                <Run Text="Starting fresh?" FontWeight="SemiBold" />
+                                <Run Text=" Head to " Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="Settings → SteamCMD" FontWeight="SemiBold" />
+                                <Run Text=" and Kitsune7Den will install the server for you" Foreground="{DynamicResource TextSecondaryBrush}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
             <!-- Server Path Config -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>

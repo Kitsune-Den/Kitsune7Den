@@ -23,7 +23,7 @@
 
 ## Quick Start
 
-1. Download `Kitsune7Den.exe` from [Releases](https://github.com/AdaInTheLab/Kitsune7Den/releases)
+1. Download `Kitsune7Den.exe` from [Releases](https://github.com/Kitsune-Den/Kitsune7Den/releases)
 2. Run it
 3. Browse to your `7DaysToDieServer.exe`
 4. Hit Start

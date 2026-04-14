@@ -37,3 +37,8 @@ desktop.ini
 
 ## Claude
 .claude/
+
+## Publish output and release artifacts (built locally, shipped via GitHub Releases)
+publish/
+Kitsune7Den-v*/
+Kitsune7Den-v*.zip

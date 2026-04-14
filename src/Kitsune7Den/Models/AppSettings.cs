@@ -24,6 +24,13 @@ public class AppSettings
     // App
     public string Theme { get; set; } = "Kitsune";
 
+    // Window
+    public double WindowWidth { get; set; }
+    public double WindowHeight { get; set; }
+    public double WindowLeft { get; set; } = -1;
+    public double WindowTop { get; set; } = -1;
+    public bool WindowMaximized { get; set; }
+
     // Backups
     public bool ScheduledBackupsEnabled { get; set; }
     public int BackupIntervalMinutes { get; set; } = 360; // default 6 hours

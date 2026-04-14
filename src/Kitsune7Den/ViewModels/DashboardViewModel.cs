@@ -21,6 +21,15 @@ public partial class DashboardViewModel : ObservableObject
     [ObservableProperty] private bool _canStop;
     [ObservableProperty] private string _serverExePath = "";
     [ObservableProperty] private string _serverDirectory = "";
+
+    public bool IsFirstRun => string.IsNullOrWhiteSpace(ServerExePath) || !System.IO.File.Exists(ServerExePath);
+    public bool IsConfigured => !IsFirstRun;
+
+    partial void OnServerExePathChanged(string value)
+    {
+        OnPropertyChanged(nameof(IsFirstRun));
+        OnPropertyChanged(nameof(IsConfigured));
+    }
     [ObservableProperty] private string _lanIp = "...";
     [ObservableProperty] private string _publicIp = "...";
     [ObservableProperty] private int _serverPort = 26900;
@@ -122,7 +131,36 @@ public partial class DashboardViewModel : ObservableObject
             ServerExePath = dialog.FileName;
             ServerDirectory = System.IO.Path.GetDirectoryName(dialog.FileName) ?? "";
             SavePaths();
+            AutoDetectTelnetSettings();
+            _ = DetectIpsAsync(); // refresh IP + port with the new config
         }
+    }
+
+    /// <summary>
+    /// Read telnet port + password from the server's serverconfig.xml so the
+    /// user doesn't have to manually enter them in Settings.
+    /// </summary>
+    private void AutoDetectTelnetSettings()
+    {
+        try
+        {
+            var configPath = System.IO.Path.Combine(ServerDirectory, "serverconfig.xml");
+            if (!System.IO.File.Exists(configPath)) return;
+
+            var doc = System.Xml.Linq.XDocument.Load(configPath);
+            var props = doc.Descendants("property").ToList();
+
+            var portProp = props.FirstOrDefault(p => p.Attribute("name")?.Value == "TelnetPort");
+            var pwProp = props.FirstOrDefault(p => p.Attribute("name")?.Value == "TelnetPassword");
+
+            if (portProp is not null && int.TryParse(portProp.Attribute("value")?.Value, out var port))
+                _settings.TelnetPort = port;
+            if (pwProp is not null)
+                _settings.TelnetPassword = pwProp.Attribute("value")?.Value ?? "";
+
+            _settings.Save();
+        }
+        catch { /* best effort */ }
     }
 
     private void SavePaths()

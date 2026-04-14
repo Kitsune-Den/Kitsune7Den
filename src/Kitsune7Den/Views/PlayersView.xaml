@@ -20,7 +20,7 @@
                 </TextBlock>
             </StackPanel>
             <Button Content="Refresh" Style="{StaticResource SecondaryButton}" DockPanel.Dock="Right"
-                    Command="{Binding RefreshAsyncCommand}" HorizontalAlignment="Right" />
+                    Command="{Binding RefreshCommand}" HorizontalAlignment="Right" />
         </DockPanel>
 
         <!-- Player Cards -->
