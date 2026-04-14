@@ -20,6 +20,9 @@ public partial class App : Application
 
     private void OnStartup(object sender, StartupEventArgs e)
     {
+        // Clean up any leftover *.old exe from a previous self-update
+        UpdateService.CleanupStaleOldExe();
+
         var services = new ServiceCollection();
 
         // Settings
@@ -36,6 +39,7 @@ public partial class App : Application
         services.AddSingleton<AdminService>();
         services.AddSingleton<ThemeService>();
         services.AddSingleton<BackupService>();
+        services.AddSingleton<UpdateService>();
 
         // ViewModels
         services.AddSingleton<MainViewModel>();

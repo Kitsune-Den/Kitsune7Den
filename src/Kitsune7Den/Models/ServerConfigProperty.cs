@@ -79,5 +79,6 @@ public enum ConfigFieldType
     Number,
     Boolean,
     Password,
-    Select
+    Select,
+    EditableSelect
 }

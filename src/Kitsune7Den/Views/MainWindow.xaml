@@ -49,15 +49,11 @@
         <Border Grid.Column="0" Grid.RowSpan="2" Background="{DynamicResource BgMediumBrush}"
                 BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,1,0">
             <DockPanel>
-                <!-- Logo/Title -->
-                <StackPanel DockPanel.Dock="Top" Margin="16,16,16,20">
-                    <Image Source="pack://application:,,,/Resources/logo.png" Width="90" Height="90"
-                           HorizontalAlignment="Left" Margin="0,0,0,8" RenderOptions.BitmapScalingMode="HighQuality" />
-                    <TextBlock Text="Kitsune7Den" Foreground="{DynamicResource AccentBrush}"
-                               FontSize="20" FontWeight="Bold" />
-                    <TextBlock Text="7D2D Server Manager" Foreground="{DynamicResource TextSecondaryBrush}"
-                               FontSize="11" Margin="0,2,0,0" />
-                </StackPanel>
+                <!-- Logo: full sidebar width, touches the top. KITSUNE7DEN branding baked in. -->
+                <Image DockPanel.Dock="Top" Source="pack://application:,,,/Resources/logo.png"
+                       Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                       RenderOptions.BitmapScalingMode="HighQuality"
+                       Margin="0,0,0,12" />
 
                 <!-- Version info at very bottom -->
                 <TextBlock DockPanel.Dock="Bottom" Foreground="{DynamicResource TextSecondaryBrush}"

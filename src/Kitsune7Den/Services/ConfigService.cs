@@ -15,6 +15,47 @@ public class ConfigService
 
     private string ConfigPath => Path.Combine(_settings.ServerDirectory, "serverconfig.xml");
 
+    /// <summary>
+    /// Scan both built-in and user-generated world folders for valid worlds.
+    /// Valid worlds are directories containing a main.ttw file.
+    /// </summary>
+    public List<string> DiscoverWorlds()
+    {
+        var worlds = new SortedSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        // Built-in worlds ship with the server
+        if (!string.IsNullOrEmpty(_settings.ServerDirectory))
+        {
+            var builtInDir = Path.Combine(_settings.ServerDirectory, "Data", "Worlds");
+            if (Directory.Exists(builtInDir))
+            {
+                foreach (var dir in Directory.GetDirectories(builtInDir))
+                {
+                    if (File.Exists(Path.Combine(dir, "main.ttw")))
+                        worlds.Add(Path.GetFileName(dir));
+                }
+            }
+        }
+
+        // User-generated RWG worlds
+        var generatedDir = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "7DaysToDie", "GeneratedWorlds");
+        if (Directory.Exists(generatedDir))
+        {
+            foreach (var dir in Directory.GetDirectories(generatedDir))
+            {
+                if (File.Exists(Path.Combine(dir, "main.ttw")))
+                    worlds.Add(Path.GetFileName(dir));
+            }
+        }
+
+        // Always include RWG as a special option (triggers fresh world gen)
+        worlds.Add("RWG");
+
+        return worlds.ToList();
+    }
+
     public List<ServerConfigProperty> LoadConfig()
     {
         if (!File.Exists(ConfigPath))
@@ -22,6 +63,9 @@ public class ConfigService
 
         var doc = XDocument.Load(ConfigPath, LoadOptions.PreserveWhitespace);
         var properties = new List<ServerConfigProperty>();
+
+        // Discover worlds once so we can inject into GameWorld options
+        var discoveredWorlds = DiscoverWorlds();
 
         foreach (var element in doc.Descendants("property"))
         {
@@ -31,6 +75,16 @@ public class ConfigService
             if (string.IsNullOrEmpty(name)) continue;
 
             var def = FieldDefinitions.GetDefinition(name);
+            var options = def.Options;
+            var optionLabels = def.OptionLabels;
+
+            // Dynamic: populate GameWorld from scanned folders
+            if (name == "GameWorld")
+            {
+                options = discoveredWorlds.ToArray();
+                optionLabels = null;
+            }
+
             properties.Add(new ServerConfigProperty
             {
                 Name = name,
@@ -39,8 +93,8 @@ public class ConfigService
                 Description = def.Description,
                 DefaultValue = def.DefaultValue,
                 FieldType = def.FieldType,
-                Options = def.Options,
-                OptionLabels = def.OptionLabels
+                Options = options,
+                OptionLabels = optionLabels
             });
         }
 
@@ -111,7 +165,7 @@ public static class FieldDefinitions
         ["ServerLoginConfirmationText"] = Def("Core", "Message players must accept before joining", "", ConfigFieldType.Text),
 
         // ── World ──
-        ["GameWorld"] = Def("World", "Navezgane = fixed map, RWG = random generated", "Navezgane", ConfigFieldType.Select,
+        ["GameWorld"] = Def("World", "Auto-populated from Data/Worlds and GeneratedWorlds. Pick an existing world or type a custom name.", "Navezgane", ConfigFieldType.EditableSelect,
             ["Navezgane", "RWG"]),
         ["WorldGenSeed"] = Def("World", "Seed string used for random world generation", "SomeSeed", ConfigFieldType.Text),
         ["WorldGenSize"] = Def("World", "Map size in meters. Must be between 2048 and 16384. Must be a multiple of 2048.", "6144", ConfigFieldType.Select,
@@ -166,8 +220,6 @@ public static class FieldDefinitions
         ["DeathPenalty"] = Def("Player", "XP penalty when a player dies", "1", ConfigFieldType.Select,
             ["0", "1", "2", "3"],
             ["0 - None", "1 - Default", "2 - Injured", "3 - Permanent Death"]),
-        ["BedrollAllowSpawnNearBackpack"] = Def("Player", "Allow players to spawn near their dropped backpack after death", "true", ConfigFieldType.Select,
-            ["true", "false"], ["On", "Off"]),
         ["AllowSpawnNearFriend"] = Def("Player", "Can new players select to join near a friend on first connect?", "2", ConfigFieldType.Select,
             ["0", "1", "2"],
             ["0 - Disabled", "1 - Always", "2 - Only Near Friends in Forest"]),
