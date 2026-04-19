@@ -7,6 +7,7 @@
 <p align="center">A standalone Windows desktop app for managing your 7D2D dedicated server.<br/>No web stack. No browser. Just a simple exe.</p>
 
 <p align="center">
+  <a href="https://www.nexusmods.com/7daystodie/mods/10067"><img src="https://img.shields.io/badge/Download-Nexus_Mods-da8e35?logo=nexusmods&logoColor=white" alt="Download on Nexus Mods" /></a>
   <a href="https://github.com/Kitsune-Den/Kitsune7Den/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Kitsune-Den/Kitsune7Den/ci.yml?branch=main&label=build&logo=github" alt="Build Status" /></a>
   <a href="https://github.com/Kitsune-Den/Kitsune7Den/releases/latest"><img src="https://img.shields.io/github/v/release/Kitsune-Den/Kitsune7Den?label=release&color=e94560" alt="Latest Release" /></a>
   <a href="https://github.com/Kitsune-Den/Kitsune7Den/releases"><img src="https://img.shields.io/github/downloads/Kitsune-Den/Kitsune7Den/total?label=downloads&color=4ecca3" alt="Total Downloads" /></a>
