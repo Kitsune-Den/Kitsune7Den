@@ -111,6 +111,44 @@
                 </StackPanel>
             </Border>
 
+            <!-- Support the Project -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="Support the Project" />
+                    <TextBlock TextWrapping="Wrap" Foreground="{DynamicResource TextSecondaryBrush}"
+                               FontSize="12" Margin="0,0,0,12">
+                        Kitsune7Den is free and open source. If it saves you time or makes your server life easier, you can buy me a coffee. No pressure, only gratitude.
+                    </TextBlock>
+                    <Button HorizontalAlignment="Left" Cursor="Hand" BorderThickness="0"
+                            Padding="16,10" Background="#FF330447"
+                            Click="KofiButton_Click"
+                            ToolTip="Opens ko-fi.com in your default browser">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="Bd" Background="{TemplateBinding Background}"
+                                        Padding="{TemplateBinding Padding}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Bd" Property="Background">
+                                            <Setter.Value>
+                                                <SolidColorBrush Color="#FF4a0866" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="☕" FontSize="16" VerticalAlignment="Center" Margin="0,0,8,0" />
+                            <TextBlock Text="Support me on Ko-fi" Foreground="White"
+                                       FontWeight="SemiBold" FontSize="13" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+
             <!-- SteamCMD Section -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>
