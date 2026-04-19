@@ -2,6 +2,19 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [1.0.3] - 2026-04-14
+
+### Added
+- **Support the Project card** in Settings with a Ko-fi button so users can optionally throw a coffee my way if Kitsune7Den's been useful to them.
+- Matching Ko-fi badge at the top of the README and a Support section near the bottom.
+
+### Infrastructure (shipped in a prior PR, now baked into this release)
+- **62 xUnit tests** across 6 suites covering the self-updater, Day/Night math, mod manager, config parser, admin file, and backup service.
+- **GitHub Actions CI** builds and runs tests on every push and PR, with coverage reporting.
+- **README badges** for build status, latest release, total downloads, license, .NET 8, and platform.
+- **INSTALL.md** explaining the SHA-256 verification and the Windows SmartScreen warning for unsigned open source builds.
+- **scripts/publish-release.ps1** builds the Release exe and generates a sha256sum-format checksum alongside it.
+
 ## [1.0.2] - 2026-04-14
 
 ### Added

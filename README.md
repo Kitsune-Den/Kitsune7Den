@@ -13,6 +13,7 @@
   <a href="https://github.com/Kitsune-Den/Kitsune7Den/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Kitsune-Den/Kitsune7Den?color=blue" alt="License" /></a>
   <img src="https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet" alt=".NET 8" />
   <img src="https://img.shields.io/badge/platform-windows-0078D4?logo=windows" alt="Platform: Windows" />
+  <a href="https://ko-fi.com/T6T57VRO7"><img src="https://img.shields.io/badge/support-ko--fi-FF5E5B?logo=kofi&logoColor=white" alt="Support on Ko-fi" /></a>
 </p>
 
 ---
@@ -85,6 +86,14 @@ dotnet publish src/Kitsune7Den -c Release -r win-x64 --self-contained -p:Publish
 - Telnet client for server commands + player data
 - XDocument for serverconfig.xml + ModInfo.xml + serveradmin.xml parsing
 - SteamCMD integration for server install/update
+
+## Support the project
+
+Kitsune7Den is free and open source. If it saves you time or makes your server life easier, you can buy me a coffee. No pressure, only gratitude.
+
+<p align="center">
+  <a href="https://ko-fi.com/T6T57VRO7"><img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="Support on Ko-fi" height="40" /></a>
+</p>
 
 ## License
 

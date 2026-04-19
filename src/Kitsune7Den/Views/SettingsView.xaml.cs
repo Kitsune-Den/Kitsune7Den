@@ -34,4 +34,13 @@ public partial class SettingsView : UserControl
         Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
         e.Handled = true;
     }
+
+    private void KofiButton_Click(object sender, System.Windows.RoutedEventArgs e)
+    {
+        try
+        {
+            Process.Start(new ProcessStartInfo("https://ko-fi.com/T6T57VRO7") { UseShellExecute = true });
+        }
+        catch { /* best effort — browser just won't open */ }
+    }
 }
