@@ -22,6 +22,7 @@
 ## Features
 
 - **Dashboard** -- Start/stop/restart server, connect telnet, view LAN/public IPs with click-to-copy
+- **Automatic Restarts** -- Restart after a crash (with a crash-loop guard), plus daily or every-N-hours scheduled restarts with in-game countdown warnings
 - **Console** -- Live server log tailing + telnet command input with history
 - **Players** -- Player cards with stats, admin badges, kick/ban, give/remove admin via serveradmin.xml
 - **Configuration** -- Grouped form editor with 90+ properties, smart dropdowns, Raw XML toggle
@@ -37,6 +38,8 @@
 ## 简体中文
 
 Kitsune7Den 支持简体中文。首次运行时会跟随 Windows 显示语言，也可以随时在 **设置 → 外观 → Language / 语言** 中切换，无需重启。服务器配置和沙盒选项使用游戏官方的中文译名，并保留原始属性名（例如 `玩家杀戮 (PlayerKillingMode)`），方便对照 `serverconfig.xml`。
+
+自动重启：服务器崩溃后自动重启（带防循环保护），并支持每天定时或按运行小时数重启，重启前会在游戏内倒计时提醒玩家。
 
 支持七日杀 3.x（已在 3.3 上测试）：自动识别游戏版本，提供完整的沙盒选项编辑器（SandboxCode），并可一键将 3.0 之前的配置更新为 3.x 格式（会先备份）。
 

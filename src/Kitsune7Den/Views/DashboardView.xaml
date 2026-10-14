@@ -130,6 +130,128 @@
                 </StackPanel>
             </Border>
 
+            <!-- Automatic Restarts (issue #4) -->
+            <Border Style="{StaticResource Card}" Visibility="{Binding IsConfigured, Converter={StaticResource BoolVis}}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Restart_Header}" />
+
+                    <!-- Status + actions -->
+                    <Border Background="#FF0d0d1a" CornerRadius="6" Padding="12,10" Margin="0,0,0,14">
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                                <Button Content="{l:Tr Restart_CancelCountdown}" Style="{StaticResource SecondaryButton}"
+                                        Command="{Binding CancelRestartCommand}" Padding="10,4" FontSize="12"
+                                        Visibility="{Binding RestartCountdownActive, Converter={StaticResource BoolVis}}" />
+                                <Button Content="{l:Tr Restart_NowWithWarnings}" Style="{StaticResource SecondaryButton}"
+                                        Command="{Binding RestartWithWarningsCommand}" Padding="10,4" FontSize="12"
+                                        IsEnabled="{Binding CanStop}" ToolTip="{l:Tr Restart_NowWithWarningsTooltip}"
+                                        Visibility="{Binding RestartCountdownActive, Converter={StaticResource InverseBoolVis}}" />
+                            </StackPanel>
+                            <TextBlock Text="&#xE777;" FontFamily="Segoe MDL2 Assets" FontSize="16" DockPanel.Dock="Left"
+                                       Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+                            <TextBlock Text="{Binding RestartStatusText}" Foreground="{DynamicResource TextPrimaryBrush}"
+                                       FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap" />
+                        </DockPanel>
+                    </Border>
+
+                    <!-- Crash restart -->
+                    <CheckBox Content="{l:Tr Restart_CrashEnabled}" IsChecked="{Binding CrashRestartEnabled}"
+                              Foreground="{DynamicResource TextPrimaryBrush}" VerticalContentAlignment="Center" />
+                    <TextBlock Text="{l:Tr Restart_CrashHint}" Foreground="{DynamicResource TextSecondaryBrush}"
+                               FontSize="11" TextWrapping="Wrap" Margin="20,2,0,14" />
+
+                    <!-- Scheduled restart -->
+                    <CheckBox Content="{l:Tr Restart_ScheduledEnabled}" IsChecked="{Binding ScheduledRestartEnabled}"
+                              Foreground="{DynamicResource TextPrimaryBrush}" VerticalContentAlignment="Center" />
+                    <StackPanel Margin="20,8,0,0" IsEnabled="{Binding ScheduledRestartEnabled}">
+                        <StackPanel.Style>
+                            <Style TargetType="StackPanel">
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Opacity" Value="0.5" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </StackPanel.Style>
+
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <RadioButton Grid.Row="0" Grid.Column="0" GroupName="RestartMode" IsChecked="{Binding IsDailyMode}"
+                                         Content="{l:Tr Restart_ModeDaily}" Foreground="{DynamicResource TextPrimaryBrush}"
+                                         VerticalAlignment="Center" Margin="0,0,12,6" />
+                            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0,0,0,6">
+                                <TextBox Style="{StaticResource DarkTextBox}" Width="160"
+                                         Text="{Binding RestartTimes, UpdateSourceTrigger=PropertyChanged}"
+                                         IsEnabled="{Binding IsDailyMode}" />
+                                <TextBlock Text="{l:Tr Restart_TimesHint}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                           FontSize="11" VerticalAlignment="Center" Margin="10,0,0,0" />
+                            </StackPanel>
+
+                            <RadioButton Grid.Row="1" Grid.Column="0" GroupName="RestartMode"
+                                         IsChecked="{Binding IsDailyMode, Converter={StaticResource InverseBool}}"
+                                         Content="{l:Tr Restart_ModeInterval}" Foreground="{DynamicResource TextPrimaryBrush}"
+                                         VerticalAlignment="Center" Margin="0,0,12,0" />
+                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                <ComboBox ItemsSource="{Binding RestartIntervalOptions}" SelectedItem="{Binding RestartIntervalHours}"
+                                          Width="80" IsEnabled="{Binding IsDailyMode, Converter={StaticResource InverseBool}}" />
+                                <TextBlock Text="{l:Tr Restart_HoursOfUptime}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                           FontSize="11" VerticalAlignment="Center" Margin="10,0,0,0" />
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Text="{l:Tr Restart_WarningsHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                   FontSize="10" FontWeight="Bold" Margin="0,4,0,3" />
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                            <TextBox Style="{StaticResource DarkTextBox}" Width="160"
+                                     Text="{Binding RestartWarningMinutes, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Text="{l:Tr Restart_WarningsHint}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                       FontSize="11" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+
+                        <TextBlock Text="{l:Tr Restart_MessageHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                   FontSize="10" FontWeight="Bold" Margin="0,4,0,3" />
+                        <Grid Margin="0,0,0,8">
+                            <TextBox x:Name="WarningMessageBox" Style="{StaticResource DarkTextBox}"
+                                     Text="{Binding RestartWarningMessage, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Text="{Binding DefaultWarningMessage}" IsHitTestVisible="False" Margin="10,0,0,0"
+                                       VerticalAlignment="Center" FontSize="12" Opacity="0.5"
+                                       Foreground="{DynamicResource TextSecondaryBrush}"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=WarningMessageBox, Converter={StaticResource BoolVis}}" />
+                        </Grid>
+
+                        <TextBlock Text="{l:Tr Restart_FinalMessageHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                   FontSize="10" FontWeight="Bold" Margin="0,4,0,3" />
+                        <Grid Margin="0,0,0,4">
+                            <TextBox x:Name="FinalMessageBox" Style="{StaticResource DarkTextBox}"
+                                     Text="{Binding RestartFinalMessage, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBlock Text="{Binding DefaultFinalMessage}" IsHitTestVisible="False" Margin="10,0,0,0"
+                                       VerticalAlignment="Center" FontSize="12" Opacity="0.5"
+                                       Foreground="{DynamicResource TextSecondaryBrush}"
+                                       Visibility="{Binding Text.IsEmpty, ElementName=FinalMessageBox, Converter={StaticResource BoolVis}}" />
+                        </Grid>
+                        <TextBlock Text="{l:Tr Restart_ScheduledHint}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                   FontSize="11" TextWrapping="Wrap" Margin="0,4,0,0" />
+                    </StackPanel>
+
+                    <!-- Save -->
+                    <DockPanel Margin="0,14,0,0">
+                        <Button DockPanel.Dock="Right" Content="{l:Tr Restart_Save}" Style="{StaticResource ActionButton}"
+                                Command="{Binding SaveRestartSettingsCommand}" IsEnabled="{Binding RestartSettingsDirty}"
+                                Padding="14,5" FontSize="12" />
+                        <TextBlock Text="{Binding RestartSettingsError}" Foreground="{DynamicResource AccentBrush}"
+                                   FontSize="11" TextWrapping="Wrap" VerticalAlignment="Center" />
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+
             <!-- Connection Info -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>

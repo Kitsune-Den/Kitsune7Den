@@ -37,6 +37,18 @@ public class AppSettings
     public int BackupIntervalMinutes { get; set; } = 360; // default 6 hours
     public int MaxBackups { get; set; } = 20;
 
+    // Automatic restarts
+    public bool CrashRestartEnabled { get; set; }
+    public int CrashRestartMaxAttempts { get; set; } = 3;
+    public int CrashRestartWindowMinutes { get; set; } = 15;
+    public bool ScheduledRestartEnabled { get; set; }
+    public string ScheduledRestartMode { get; set; } = "Daily"; // Daily | Interval
+    public string ScheduledRestartTimes { get; set; } = "04:00";
+    public int ScheduledRestartIntervalHours { get; set; } = 6;
+    public string RestartWarningMinutes { get; set; } = "10, 5, 1";
+    public string RestartWarningMessage { get; set; } = string.Empty; // blank = default in the UI language
+    public string RestartFinalMessage { get; set; } = string.Empty;
+
     public void Save()
     {
         var dir = Path.GetDirectoryName(SettingsPath)!;

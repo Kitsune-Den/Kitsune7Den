@@ -13,6 +13,13 @@ All notable changes to Kitsune7Den are documented here.
   - New fields: **Region**, **Language**, **SandboxCode**.
 - **Simplified Chinese (简体中文).** The whole app is translated, including every config field and option. Config and Sandbox labels use the game's own official Chinese wording from its `Localization.csv`, so they match what players see in-game. Kitsune7Den follows the Windows display language on first run, and you can switch at any time in **Settings → Appearance → Language / 语言**. The switch is live, with no restart. Translated config fields still show the real property name, e.g. `玩家杀戮 (PlayerKillingMode)`.
 - RWG world discovery also scans `UserDataFolder/GeneratedWorlds` when `serverconfig.xml` overrides it.
+- **Automatic restarts** ([#4](https://github.com/Kitsune-Den/Kitsune7Den/issues/4)), in a new card on the Dashboard:
+  - **Crash restart.** If the server exits without Kitsune7Den asking it to, it starts again 15 seconds later. It stops after 3 crashes in 15 minutes, so a broken mod or config can't loop forever. Using the Stop button, or typing `shutdown` in the Console, doesn't count as a crash.
+  - **Scheduled restarts.** Restart every day at set times (`04:00, 16:00`) or after N hours of uptime.
+    - Players get in-game `say` warnings beforehand. The default is at 10, 5 and 1 minutes; both the times and the messages can be changed.
+    - At restart time the world is saved, then the server shuts down gracefully and starts again.
+    - The Dashboard shows when the next restart is. You can cancel a countdown, or trigger "Restart with warnings" by hand.
+  - Telnet now reconnects with retries after a start or restart (for up to about 5 minutes), instead of one fixed 15-second wait that 3.x servers often outlast.
 
 ### Fixed
 - **Player Killing Mode** labels for 1 and 2 were swapped. The game's own definition is 1 = Kill Allies Only, 2 = Kill Strangers Only.

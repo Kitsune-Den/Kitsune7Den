@@ -20,7 +20,8 @@ public partial class ConsoleViewModel : ObservableObject
 
     public ObservableCollection<string> LogLines { get; } = [];
 
-    public ConsoleViewModel(TelnetService telnetService, LogWatcherService logWatcher, ServerProcessService processService)
+    public ConsoleViewModel(TelnetService telnetService, LogWatcherService logWatcher, ServerProcessService processService,
+        RestartService restartService)
     {
         _telnetService = telnetService;
         _logWatcher = logWatcher;
@@ -46,6 +47,16 @@ public partial class ConsoleViewModel : ObservableObject
             });
         };
 
+        // Automatic restart progress
+        restartService.StatusChanged += line =>
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                LogLines.Add($"[{DateTime.Now:HH:mm:ss}] [Restart] {line}");
+                TrimLines();
+            });
+        };
+
         // Process stdout
         _processService.OutputReceived += line =>
         {
@@ -67,6 +78,9 @@ public partial class ConsoleViewModel : ObservableObject
         _historyIndex = _commandHistory.Count;
 
         LogLines.Add($"> {cmd}");
+        // A shutdown typed here is deliberate: don't let crash auto-restart bring it back
+        if (cmd.Equals("shutdown", StringComparison.OrdinalIgnoreCase))
+            _processService.NoteShutdownRequested();
         await _telnetService.SendCommandAsync(cmd);
         CommandInput = "";
     }

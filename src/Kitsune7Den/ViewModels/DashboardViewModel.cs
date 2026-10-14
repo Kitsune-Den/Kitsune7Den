@@ -47,12 +47,13 @@ public partial class DashboardViewModel : ObservableObject
     private bool _publicIpUnavailable;
 
     public DashboardViewModel(ServerProcessService processService, TelnetService telnetService,
-        LogWatcherService logWatcher, AppSettings settings)
+        LogWatcherService logWatcher, AppSettings settings, RestartService restartService)
     {
         _processService = processService;
         _telnetService = telnetService;
         _logWatcher = logWatcher;
         _settings = settings;
+        InitRestarts(restartService);
 
         ServerExePath = settings.ServerExePath;
         ServerDirectory = settings.ServerDirectory;
@@ -101,14 +102,8 @@ public partial class DashboardViewModel : ObservableObject
     private async Task Start()
     {
         SavePaths();
-        await _processService.StartAsync();
-
-        // Auto-connect telnet after a delay
-        _ = Task.Run(async () =>
-        {
-            await Task.Delay(15000); // wait for server to boot
-            await _telnetService.ConnectAsync();
-        });
+        if (await _processService.StartAsync())
+            _ = RestartService.ConnectTelnetWhenReadyAsync(_telnetService, _processService);
     }
 
     [RelayCommand]
@@ -128,12 +123,8 @@ public partial class DashboardViewModel : ObservableObject
     private async Task Restart()
     {
         await _processService.RestartAsync(_telnetService);
-
-        _ = Task.Run(async () =>
-        {
-            await Task.Delay(15000);
-            await _telnetService.ConnectAsync();
-        });
+        _telnetService.Disconnect();
+        _ = RestartService.ConnectTelnetWhenReadyAsync(_telnetService, _processService);
     }
 
     [RelayCommand]

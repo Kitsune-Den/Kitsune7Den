@@ -336,4 +336,46 @@ A timestamped backup of serverconfig.xml is made first. The old values stay in t
   <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>A SandboxCode is letters A–Z only.</value></data>
   <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>This code starts with "{0}", but this game version's codes start with "{1}".</value></data>
   <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>{0} part(s) of this code aren't options in this game version and will be kept as they are: {1}</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>The server exited unexpectedly (exit code {0}).</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>Automatic Restarts</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>Restart the server if it crashes</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>Restarts 15 seconds after the server exits on its own, up to 3 times in 15 minutes so a broken mod or config can't loop forever. Stopping with Kitsune7Den's Stop button, or typing shutdown in the Console, never counts as a crash.</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>Scheduled restarts</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>Every day at</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>24-hour, this PC's time. Several: 04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>Every</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>hours of uptime</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>IN-GAME WARNINGS (MINUTES BEFORE)</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>Blank = no warnings</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>WARNING MESSAGE ({minutes} = minutes left)</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>FINAL MESSAGE</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>Warnings are sent with the in-game say command over telnet. At restart time the world is saved, the server shuts down gracefully, and starts again. Kitsune7Den has to be running for scheduled restarts to happen.</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>Times must look like 04:00 or 4:00, separated by commas.</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>Warnings must be whole minutes from 1 to 120, separated by commas.</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>Cancel restart</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>Restart with warnings</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>Start the warning countdown now, then save, stop and start the server</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>Next restart: {0} (in {1})</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>Restarting at {0} (in {1}). Players are being warned.</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>Scheduled restarts are on. The schedule starts when the server is running.</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>Scheduled restarts are on, but no restart is planned. Check the times.</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>No scheduled restarts.</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>under a minute</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0}h {1}m</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>Server restarting in {minutes} minute(s). Please find a safe spot.</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>Server restarting now. See you in a minute!</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>The scheduled restart has been cancelled.</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>Restart cancelled.</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>Scheduled restart at {0}: warning players.</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>Restart at {0}: warning players.</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet isn't connected, so players won't see the warnings and the shutdown can't be graceful.</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>Saving the world...</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>Restarting the server...</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>The server isn't running anymore; skipping the scheduled restart.</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>The server didn't start again. Check the Console and the server path on the Dashboard.</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>Automatic restart failed: {0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>Restarting the server in {0} seconds (crash restart {1} of {2}).</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>The server crashed again. It already restarted {0} times in {1} minutes, so it stays stopped. Check the Console and Logs for the cause.</value></data>
 </root>
