@@ -9,7 +9,7 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
     <AssemblyName>Kitsune7Den</AssemblyName>
     <RootNamespace>Kitsune7Den</RootNamespace>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
     <!-- Only ship the UI languages we translate; keeps package satellites out of the exe -->
     <SatelliteResourceLanguages>en;zh-Hans</SatelliteResourceLanguages>
   </PropertyGroup>
