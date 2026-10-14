@@ -1,6 +1,7 @@
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -14,7 +15,14 @@ public partial class DashboardViewModel : ObservableObject
     private readonly AppSettings _settings;
     private System.Threading.Timer? _uptimeTimer;
 
-    [ObservableProperty] private string _serverState = "Stopped";
+    // Raw enum name: StatusToColorConverter switches on it, so it must stay untranslated.
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(ServerStateText))]
+    private string _serverState = "Stopped";
+
+    /// <summary>Translated state for display.</summary>
+    public string ServerStateText => Loc.T($"ServerState_{ServerState}");
+
     [ObservableProperty] private string _uptimeText = "--:--:--";
     [ObservableProperty] private int _playerCount;
     [ObservableProperty] private bool _canStart = true;
@@ -34,6 +42,10 @@ public partial class DashboardViewModel : ObservableObject
     [ObservableProperty] private string _publicIp = "...";
     [ObservableProperty] private int _serverPort = 26900;
 
+    // Remember which IP placeholders are showing so a language switch can re-translate them.
+    private bool _lanIpUnknown;
+    private bool _publicIpUnavailable;
+
     public DashboardViewModel(ServerProcessService processService, TelnetService telnetService,
         LogWatcherService logWatcher, AppSettings settings)
     {
@@ -47,6 +59,13 @@ public partial class DashboardViewModel : ObservableObject
 
         // Detect IPs on load
         _ = DetectIpsAsync();
+
+        Loc.LanguageChanged += () =>
+        {
+            OnPropertyChanged(nameof(ServerStateText));
+            if (_lanIpUnknown) LanIp = Loc.T("Dash_IpUnknown");
+            if (_publicIpUnavailable) PublicIp = Loc.T("Dash_IpUnavailable");
+        };
 
         _processService.StateChanged += state =>
         {
@@ -122,8 +141,8 @@ public partial class DashboardViewModel : ObservableObject
     {
         var dialog = new Microsoft.Win32.OpenFileDialog
         {
-            Filter = "Server Executable|7DaysToDieServer.exe|All Executables|*.exe",
-            Title = "Select 7 Days to Die Server Executable"
+            Filter = $"{Loc.T("Dash_ExeFilterServer")}|7DaysToDieServer.exe|{Loc.T("Dash_ExeFilterAll")}|*.exe",
+            Title = Loc.T("Dash_BrowseExeTitle")
         };
 
         if (dialog.ShowDialog() == true)
@@ -213,11 +232,13 @@ public partial class DashboardViewModel : ObservableObject
             var lanIp = candidates.FirstOrDefault(a => a.ToString().StartsWith("192.168."))
                         ?? candidates.FirstOrDefault(a => a.ToString().StartsWith("10."))
                         ?? candidates.FirstOrDefault();
-            LanIp = lanIp?.ToString() ?? "Unknown";
+            _lanIpUnknown = lanIp is null;
+            LanIp = lanIp?.ToString() ?? Loc.T("Dash_IpUnknown");
         }
         catch
         {
-            LanIp = "Unknown";
+            _lanIpUnknown = true;
+            LanIp = Loc.T("Dash_IpUnknown");
         }
 
         // Public IP
@@ -225,10 +246,12 @@ public partial class DashboardViewModel : ObservableObject
         {
             using var http = new System.Net.Http.HttpClient { Timeout = TimeSpan.FromSeconds(5) };
             PublicIp = (await http.GetStringAsync("https://api.ipify.org")).Trim();
+            _publicIpUnavailable = false;
         }
         catch
         {
-            PublicIp = "Unavailable";
+            _publicIpUnavailable = true;
+            PublicIp = Loc.T("Dash_IpUnavailable");
         }
     }
 }

@@ -1,7 +1,8 @@
 <UserControl x:Class="Kitsune7Den.Views.DashboardView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:converters="clr-namespace:Kitsune7Den.Converters">
+             xmlns:converters="clr-namespace:Kitsune7Den.Converters"
+             xmlns:l="clr-namespace:Kitsune7Den.Localization">
 
     <UserControl.Resources>
         <converters:StatusToColorConverter x:Key="StatusColor" />
@@ -23,28 +24,28 @@
                             <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="20"
                                        Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center"
                                        Margin="0,0,10,0" />
-                            <TextBlock Text="Welcome to Kitsune7Den" Foreground="{DynamicResource TextPrimaryBrush}"
+                            <TextBlock Text="{l:Tr Dash_WelcomeTitle}" Foreground="{DynamicResource TextPrimaryBrush}"
                                        FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" />
                         </StackPanel>
                         <TextBlock TextWrapping="Wrap" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12"
                                    Margin="0,0,0,10">
-                            <Run Text="Let's get your server wired up. Pick one:" />
+                            <Run Text="{l:Tr Dash_WelcomeIntro}" />
                         </TextBlock>
                         <StackPanel Margin="0,0,0,4">
                             <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="12" Margin="0,0,0,4">
                                 <Run Text="• " Foreground="{DynamicResource AccentBrush}" FontWeight="Bold" />
-                                <Run Text="Already installed?" FontWeight="SemiBold" />
-                                <Run Text=" Click " Foreground="{DynamicResource TextSecondaryBrush}" />
-                                <Run Text="Browse" FontWeight="SemiBold" />
-                                <Run Text=" below and point to your " Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="{l:Tr Dash_FirstRun_Installed}" FontWeight="SemiBold" />
+                                <Run Text="{l:Tr Dash_FirstRun_Click}" Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="{l:Tr Common_Browse}" FontWeight="SemiBold" />
+                                <Run Text="{l:Tr Dash_FirstRun_PointTo}" Foreground="{DynamicResource TextSecondaryBrush}" />
                                 <Run Text="7DaysToDieServer.exe" FontWeight="SemiBold" />
                             </TextBlock>
                             <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="12">
                                 <Run Text="• " Foreground="{DynamicResource AccentBrush}" FontWeight="Bold" />
-                                <Run Text="Starting fresh?" FontWeight="SemiBold" />
-                                <Run Text=" Head to " Foreground="{DynamicResource TextSecondaryBrush}" />
-                                <Run Text="Settings → SteamCMD" FontWeight="SemiBold" />
-                                <Run Text=" and Kitsune7Den will install the server for you" Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="{l:Tr Dash_FirstRun_Fresh}" FontWeight="SemiBold" />
+                                <Run Text="{l:Tr Dash_FirstRun_HeadTo}" Foreground="{DynamicResource TextSecondaryBrush}" />
+                                <Run Text="{l:Tr Dash_FirstRun_SettingsSteamCmd}" FontWeight="SemiBold" />
+                                <Run Text="{l:Tr Dash_FirstRun_WillInstall}" Foreground="{DynamicResource TextSecondaryBrush}" />
                             </TextBlock>
                         </StackPanel>
                     </StackPanel>
@@ -54,15 +55,15 @@
             <!-- Server Path Config -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>
-                    <TextBlock Style="{StaticResource SectionHeader}" Text="Server Location" />
-                    <TextBlock Text="Point this to your 7DaysToDieServer.exe (or install one via Settings)"
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Dash_ServerLocation}" />
+                    <TextBlock Text="{l:Tr Dash_ServerLocationHint}"
                                Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" Margin="0,0,0,6" />
                     <DockPanel Margin="0,0,0,8">
-                        <Button DockPanel.Dock="Right" Content="Browse" Style="{StaticResource SecondaryButton}"
+                        <Button DockPanel.Dock="Right" Content="{l:Tr Common_Browse}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding BrowseExeCommand}" Margin="8,0,0,0" />
                         <TextBox Style="{StaticResource DarkTextBox}" Text="{Binding ServerExePath, UpdateSourceTrigger=PropertyChanged}"
                                  IsReadOnly="True"
-                                 ToolTip="Path to 7DaysToDieServer.exe — use Browse or set up SteamCMD in Settings to auto-install" />
+                                 ToolTip="{l:Tr Dash_ServerPathTooltip}" />
                     </DockPanel>
                 </StackPanel>
             </Border>
@@ -70,7 +71,7 @@
             <!-- Status -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>
-                    <TextBlock Style="{StaticResource SectionHeader}" Text="Server Status" />
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Dash_ServerStatus}" />
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -82,9 +83,9 @@
                         <StackPanel Grid.Column="0" HorizontalAlignment="Center">
                             <Ellipse Width="12" Height="12" HorizontalAlignment="Center" Margin="0,0,0,6"
                                      Fill="{Binding ServerState, Converter={StaticResource StatusColor}}" />
-                            <TextBlock Text="{Binding ServerState}" Foreground="{DynamicResource TextPrimaryBrush}"
+                            <TextBlock Text="{Binding ServerStateText}" Foreground="{DynamicResource TextPrimaryBrush}"
                                        FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" />
-                            <TextBlock Text="State" Foreground="{DynamicResource TextSecondaryBrush}"
+                            <TextBlock Text="{l:Tr Dash_State}" Foreground="{DynamicResource TextSecondaryBrush}"
                                        FontSize="11" HorizontalAlignment="Center" Margin="0,2,0,0" />
                         </StackPanel>
 
@@ -92,7 +93,7 @@
                         <StackPanel Grid.Column="1" HorizontalAlignment="Center">
                             <TextBlock Text="{Binding UptimeText}" Foreground="{DynamicResource TextPrimaryBrush}"
                                        FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,18,0,0" />
-                            <TextBlock Text="Uptime" Foreground="{DynamicResource TextSecondaryBrush}"
+                            <TextBlock Text="{l:Tr Dash_Uptime}" Foreground="{DynamicResource TextSecondaryBrush}"
                                        FontSize="11" HorizontalAlignment="Center" Margin="0,2,0,0" />
                         </StackPanel>
 
@@ -100,7 +101,7 @@
                         <StackPanel Grid.Column="2" HorizontalAlignment="Center">
                             <TextBlock Text="{Binding PlayerCount}" Foreground="{DynamicResource TextPrimaryBrush}"
                                        FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,18,0,0" />
-                            <TextBlock Text="Players" Foreground="{DynamicResource TextSecondaryBrush}"
+                            <TextBlock Text="{l:Tr Dash_Players}" Foreground="{DynamicResource TextSecondaryBrush}"
                                        FontSize="11" HorizontalAlignment="Center" Margin="0,2,0,0" />
                         </StackPanel>
                     </Grid>
@@ -110,19 +111,19 @@
             <!-- Controls -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>
-                    <TextBlock Style="{StaticResource SectionHeader}" Text="Controls" />
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Dash_Controls}" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Start" Style="{StaticResource ActionButton}"
+                        <Button Content="{l:Tr Dash_Start}" Style="{StaticResource ActionButton}"
                                 Command="{Binding StartCommand}" IsEnabled="{Binding CanStart}"
                                 Width="120" Margin="0,0,8,0" />
-                        <Button Content="Stop" Style="{StaticResource SecondaryButton}"
+                        <Button Content="{l:Tr Dash_Stop}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding StopCommand}" IsEnabled="{Binding CanStop}"
                                 Width="120" Margin="0,0,8,0" />
-                        <Button Content="Connect Telnet" Style="{StaticResource SecondaryButton}"
+                        <Button Content="{l:Tr Dash_ConnectTelnet}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding ConnectTelnetCommand}"
                                 Width="130" Margin="0,0,8,0"
-                                ToolTip="Manually connect telnet — use when the server is already running" />
-                        <Button Content="Restart" Style="{StaticResource SecondaryButton}"
+                                ToolTip="{l:Tr Dash_ConnectTelnetTooltip}" />
+                        <Button Content="{l:Tr Dash_Restart}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding RestartCommand}" IsEnabled="{Binding CanStop}"
                                 Width="120" />
                     </StackPanel>
@@ -132,7 +133,7 @@
             <!-- Connection Info -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>
-                    <TextBlock Style="{StaticResource SectionHeader}" Text="Connection Info" />
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Dash_ConnectionInfo}" />
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -144,11 +145,11 @@
                             <DockPanel>
                                 <Button DockPanel.Dock="Right" Style="{StaticResource SecondaryButton}"
                                         Command="{Binding CopyLanCommand}" Padding="8,4" FontSize="11"
-                                        ToolTip="Copy LAN address to clipboard" VerticalAlignment="Center">
+                                        ToolTip="{l:Tr Dash_CopyLanTooltip}" VerticalAlignment="Center">
                                     <TextBlock Text="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="12" />
                                 </Button>
                                 <StackPanel VerticalAlignment="Center">
-                                    <TextBlock Text="LAN" Foreground="{DynamicResource TextSecondaryBrush}"
+                                    <TextBlock Text="{l:Tr Dash_Lan}" Foreground="{DynamicResource TextSecondaryBrush}"
                                                FontSize="10" FontWeight="Bold" Margin="0,0,0,2" />
                                     <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="14" FontFamily="Consolas">
                                         <Run Text="{Binding LanIp, Mode=OneWay}" />
@@ -164,11 +165,11 @@
                             <DockPanel>
                                 <Button DockPanel.Dock="Right" Style="{StaticResource SecondaryButton}"
                                         Command="{Binding CopyPublicCommand}" Padding="8,4" FontSize="11"
-                                        ToolTip="Copy public address to clipboard" VerticalAlignment="Center">
+                                        ToolTip="{l:Tr Dash_CopyPublicTooltip}" VerticalAlignment="Center">
                                     <TextBlock Text="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="12" />
                                 </Button>
                                 <StackPanel VerticalAlignment="Center">
-                                    <TextBlock Text="PUBLIC" Foreground="{DynamicResource TextSecondaryBrush}"
+                                    <TextBlock Text="{l:Tr Dash_Public}" Foreground="{DynamicResource TextSecondaryBrush}"
                                                FontSize="10" FontWeight="Bold" Margin="0,0,0,2" />
                                     <TextBlock Foreground="{DynamicResource TextPrimaryBrush}" FontSize="14" FontFamily="Consolas">
                                         <Run Text="{Binding PublicIp, Mode=OneWay}" />

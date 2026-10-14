@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.IO;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.Services;
@@ -52,20 +53,20 @@ public class ServerProcessService : IDisposable
             try
             {
                 File.Copy(configPath, configBackup, overwrite: true);
-                OutputReceived?.Invoke("Backed up serverconfig.xml (protection against Steam updates).");
+                OutputReceived?.Invoke(Loc.T("Server_ConfigBackedUp"));
             }
             catch (Exception ex)
             {
-                OutputReceived?.Invoke($"[WARN] Could not back up config: {ex.Message}");
+                OutputReceived?.Invoke("[WARN] " + Loc.F("Server_ConfigBackupFailed", ex.Message));
             }
         }
 
         // ── Step 2: Auto-update via SteamCMD (if enabled) ──
         if (_settings.AutoUpdateOnStart && _steamCmd.IsSteamCmdAvailable)
         {
-            OutputReceived?.Invoke("Checking for updates...");
+            OutputReceived?.Invoke(Loc.T("Server_CheckingUpdates"));
             var updated = await _steamCmd.InstallOrUpdateServerAsync();
-            OutputReceived?.Invoke(updated ? "Update check complete." : "Update check failed — starting anyway.");
+            OutputReceived?.Invoke(Loc.T(updated ? "Server_UpdateCheckComplete" : "Server_UpdateCheckFailed"));
         }
 
         // ── Step 3: Restore config from backup (undo any Steam overwrites) ──
@@ -74,11 +75,11 @@ public class ServerProcessService : IDisposable
             try
             {
                 File.Copy(configBackup, configPath, overwrite: true);
-                OutputReceived?.Invoke("Restored serverconfig.xml from backup.");
+                OutputReceived?.Invoke(Loc.T("Server_ConfigRestored"));
             }
             catch (Exception ex)
             {
-                OutputReceived?.Invoke($"[WARN] Could not restore config backup: {ex.Message}");
+                OutputReceived?.Invoke("[WARN] " + Loc.F("Server_ConfigRestoreFailed", ex.Message));
             }
         }
 
@@ -97,7 +98,7 @@ public class ServerProcessService : IDisposable
         var logFileName = $"output_log_dedi__{timestamp}.txt";
         _currentLogFile = Path.Combine(serverDir, logFileName);
 
-        OutputReceived?.Invoke($"Log file: {logFileName}");
+        OutputReceived?.Invoke(Loc.F("Server_LogFile", logFileName));
 
         // ── Step 6: Launch server with proper arguments ──
         var args = $"-logfile \"{_currentLogFile}\" -quit -batchmode -nographics -configfile=serverconfig.xml -dedicated";
@@ -136,7 +137,7 @@ public class ServerProcessService : IDisposable
 
         try
         {
-            OutputReceived?.Invoke($"Starting server: {Path.GetFileName(_settings.ServerExePath)} {args}");
+            OutputReceived?.Invoke(Loc.F("Server_StartingCommand", Path.GetFileName(_settings.ServerExePath), args));
             _serverProcess.Start();
             _serverProcess.BeginOutputReadLine();
             _serverProcess.BeginErrorReadLine();
@@ -146,7 +147,7 @@ public class ServerProcessService : IDisposable
         }
         catch (Exception ex)
         {
-            OutputReceived?.Invoke($"[ERR] Failed to start server: {ex.Message}");
+            OutputReceived?.Invoke("[ERR] " + Loc.F("Server_StartFailed", ex.Message));
             SetState(ServerState.Stopped);
             return false;
         }
@@ -161,7 +162,7 @@ public class ServerProcessService : IDisposable
 
         if (telnet is { IsConnected: true })
         {
-            OutputReceived?.Invoke("Sending shutdown command...");
+            OutputReceived?.Invoke(Loc.T("Server_SendingShutdown"));
             await telnet.SendCommandAsync("shutdown");
             var sw = Stopwatch.StartNew();
             while (_serverProcess is { HasExited: false } && sw.ElapsedMilliseconds < gracefulTimeoutMs)
@@ -170,14 +171,14 @@ public class ServerProcessService : IDisposable
 
         if (_serverProcess is { HasExited: false })
         {
-            OutputReceived?.Invoke("Force killing server process...");
+            OutputReceived?.Invoke(Loc.T("Server_ForceKilling"));
             try { _serverProcess.Kill(entireProcessTree: true); }
             catch { /* already exited */ }
         }
 
         _startedAt = null;
         SetState(ServerState.Stopped);
-        OutputReceived?.Invoke("Server stopped.");
+        OutputReceived?.Invoke(Loc.T("Server_Stopped"));
     }
 
     public async Task RestartAsync(TelnetService? telnet = null)
@@ -210,7 +211,7 @@ public class ServerProcessService : IDisposable
                     try
                     {
                         File.Delete(file);
-                        OutputReceived?.Invoke($"Cleaned old log: {Path.GetFileName(file)}");
+                        OutputReceived?.Invoke(Loc.F("Server_CleanedOldLog", Path.GetFileName(file)));
                     }
                     catch { /* file may be locked */ }
                 }
