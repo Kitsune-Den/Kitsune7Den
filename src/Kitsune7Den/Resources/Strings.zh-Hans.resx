@@ -584,4 +584,46 @@ Kitsune7Den 将下载新版本并重新启动。服务器会继续运行。</val
   <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>生成区块网格时排队的最大层数。数值越低内存占用越少，但生成更慢。</value></data>
   <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>用户数据文件夹</value></data>
   <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>覆盖存档、用户数据和随机生成世界的保存路径。留空使用默认位置。</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>服务器意外退出（退出代码 {0}）。</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>自动重启</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>服务器崩溃时自动重启</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>服务器自行退出 15 秒后重启。15 分钟内最多重启 3 次，避免损坏的模组或配置导致无限循环。使用 Kitsune7Den 的“停止”按钮，或在控制台输入 shutdown，都不会被视为崩溃。</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>定时重启</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>每天</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>24 小时制，本机时间。多个时间用逗号分隔：04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>每隔</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>小时运行时间</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>游戏内提醒（提前分钟数）</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>留空则不提醒</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>提醒消息（{minutes} = 剩余分钟数）</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>最终消息</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>提醒会通过 Telnet 使用游戏内 say 命令发送。到达重启时间时会先保存世界，然后正常关闭服务器并重新启动。Kitsune7Den 需要保持运行，定时重启才会生效。</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>时间格式应为 04:00 或 4:00，多个时间用逗号分隔。</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>提醒时间必须是 1 到 120 之间的整数分钟，用逗号分隔。</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>取消重启</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>提醒后重启</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>立即开始提醒倒计时，然后保存、停止并重新启动服务器</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>下次重启：{0}（{1}后）</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>将于 {0} 重启（{1}后），正在提醒玩家。</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>定时重启已开启，服务器运行后开始计时。</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>定时重启已开启，但没有计划中的重启，请检查时间设置。</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>未设置定时重启。</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>不到 1 分钟</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0} 小时 {1} 分钟</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} 分钟</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>服务器将在 {minutes} 分钟后重启，请尽快前往安全的地方。</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>服务器正在重启，稍后见！</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>计划中的重启已取消。</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>已取消重启。</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>定时重启（{0}）：正在提醒玩家。</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>将于 {0} 重启：正在提醒玩家。</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet 未连接，玩家将看不到提醒，服务器也无法正常关闭。</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>正在保存世界...</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>正在重启服务器...</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>服务器已不在运行，跳过本次定时重启。</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>服务器未能重新启动，请检查控制台和仪表盘中的服务器路径。</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>自动重启失败：{0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>将在 {0} 秒后重启服务器（崩溃重启第 {1}/{2} 次）。</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>服务器再次崩溃。它在 {1} 分钟内已重启 {0} 次，因此将保持停止状态。请在控制台和日志中查找原因。</value></data>
 </root>

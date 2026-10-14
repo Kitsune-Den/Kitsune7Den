@@ -46,6 +46,7 @@ public partial class App : Application
         services.AddSingleton<ThemeService>();
         services.AddSingleton<BackupService>();
         services.AddSingleton<UpdateService>();
+        services.AddSingleton<RestartService>();
 
         // ViewModels
         services.AddSingleton<MainViewModel>();

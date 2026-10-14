@@ -13,11 +13,25 @@ public class ServerProcessService : IDisposable
     private DateTime? _startedAt;
     private string? _currentLogFile;
 
+    // Set whenever Kitsune7Den itself asked the server to go away, so the process exiting
+    // afterwards isn't mistaken for a crash.
+    private volatile bool _stopRequested;
+
+    // Orders the "now Running" transition in StartAsync against the Exited handler, so a
+    // process that dies within milliseconds of launch can't be left showing as Running.
+    private readonly object _stateLock = new();
+
     private const string SteamAppId = "251570";
     private const int MaxLogFiles = 20;
 
     public event Action<ServerState>? StateChanged;
     public event Action<string>? OutputReceived;
+
+    /// <summary>
+    /// The server process exited without Kitsune7Den asking it to (crash, killed, or shut
+    /// down from somewhere else). Carries the exit code when Windows reports one.
+    /// </summary>
+    public event Action<int?>? Crashed;
 
     public ServerState CurrentState { get; private set; } = ServerState.Stopped;
 
@@ -32,6 +46,15 @@ public class ServerProcessService : IDisposable
 
     public TimeSpan Uptime => _startedAt.HasValue ? DateTime.UtcNow - _startedAt.Value : TimeSpan.Zero;
 
+    /// <summary>Local time the running server was started, or null when stopped.</summary>
+    public DateTime? StartedAt => _startedAt?.ToLocalTime();
+
+    /// <summary>
+    /// Mark a shutdown that's on its way through another path (e.g. "shutdown" typed into
+    /// the console), so the exit isn't treated as a crash.
+    /// </summary>
+    public void NoteShutdownRequested() => _stopRequested = true;
+
     public async Task<bool> StartAsync()
     {
         if (CurrentState != ServerState.Stopped)
@@ -42,6 +65,7 @@ public class ServerProcessService : IDisposable
 
         var serverDir = Path.GetDirectoryName(_settings.ServerExePath) ?? "";
 
+        _stopRequested = false;
         SetState(ServerState.Starting);
 
         var configPath = Path.Combine(serverDir, "serverconfig.xml");
@@ -129,10 +153,28 @@ public class ServerProcessService : IDisposable
             if (e.Data is not null)
                 OutputReceived?.Invoke($"[ERR] {e.Data}");
         };
-        _serverProcess.Exited += (_, _) =>
+        var process = _serverProcess;
+        process.Exited += (_, _) =>
         {
-            _startedAt = null;
-            SetState(ServerState.Stopped);
+            bool unexpected;
+            int? exitCode = null;
+            lock (_stateLock)
+            {
+                // A stale process from before a restart must not touch the new one's state
+                if (!ReferenceEquals(process, _serverProcess)) return;
+
+                unexpected = !_stopRequested && CurrentState is ServerState.Running or ServerState.Starting;
+                try { exitCode = process.ExitCode; } catch { /* not available */ }
+
+                _startedAt = null;
+                SetState(ServerState.Stopped);
+            }
+
+            if (unexpected)
+            {
+                OutputReceived?.Invoke("[WARN] " + Loc.F("Server_ExitedUnexpectedly", exitCode?.ToString() ?? "?"));
+                Crashed?.Invoke(exitCode);
+            }
         };
 
         try
@@ -141,8 +183,13 @@ public class ServerProcessService : IDisposable
             _serverProcess.Start();
             _serverProcess.BeginOutputReadLine();
             _serverProcess.BeginErrorReadLine();
-            _startedAt = DateTime.UtcNow;
-            SetState(ServerState.Running);
+            lock (_stateLock)
+            {
+                // If it already died, the Exited handler has reported it; don't resurrect the state
+                if (process.HasExited) return false;
+                _startedAt = DateTime.UtcNow;
+                SetState(ServerState.Running);
+            }
             return true;
         }
         catch (Exception ex)
@@ -158,6 +205,7 @@ public class ServerProcessService : IDisposable
         if (CurrentState != ServerState.Running)
             return;
 
+        _stopRequested = true;
         SetState(ServerState.Stopping);
 
         if (telnet is { IsConnected: true })
@@ -181,9 +229,9 @@ public class ServerProcessService : IDisposable
         OutputReceived?.Invoke(Loc.T("Server_Stopped"));
     }
 
-    public async Task RestartAsync(TelnetService? telnet = null)
+    public async Task RestartAsync(TelnetService? telnet = null, int gracefulTimeoutMs = 15000)
     {
-        await StopAsync(telnet);
+        await StopAsync(telnet, gracefulTimeoutMs);
         await Task.Delay(2000);
         await StartAsync();
     }
@@ -228,6 +276,7 @@ public class ServerProcessService : IDisposable
 
     public void Dispose()
     {
+        _stopRequested = true;
         if (_serverProcess is { HasExited: false })
         {
             try { _serverProcess.Kill(entireProcessTree: true); }
