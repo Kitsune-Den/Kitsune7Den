@@ -87,10 +87,12 @@
                                             <Button Content="{l:Tr Players_Kick}" Style="{StaticResource SecondaryButton}" Padding="10,4"
                                                     FontSize="11"
                                                     Command="{Binding DataContext.KickCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}"
                                                     Tag="{Binding}" />
                                             <Button Style="{StaticResource ActionButton}" Padding="10,4"
                                                     FontSize="11" Margin="6,0,0,0"
                                                     Command="{Binding DataContext.BanCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}"
                                                     Tag="{Binding}">
                                                 <TextBlock Text="{l:Tr Players_Ban}" />
                                             </Button>
@@ -172,7 +174,8 @@
                                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
                                             <!-- Give Admin (shown when NOT admin) -->
                                             <Button Style="{StaticResource SecondaryButton}" Padding="8,3" FontSize="10"
-                                                    Command="{Binding DataContext.GiveAdminCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}">
+                                                    Command="{Binding DataContext.GiveAdminCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}">
                                                 <Button.Visibility>
                                                     <Binding Path="IsAdmin" Converter="{StaticResource InverseBoolVis}" />
                                                 </Button.Visibility>
@@ -185,6 +188,7 @@
                                             <!-- Remove Admin (shown when IS admin) -->
                                             <Button Style="{StaticResource SecondaryButton}" Padding="8,3" FontSize="10"
                                                     Command="{Binding DataContext.RemoveAdminCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding}"
                                                     Visibility="{Binding IsAdmin, Converter={StaticResource BoolVis}}">
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="&#xE7EF;" FontFamily="Segoe MDL2 Assets" FontSize="11"

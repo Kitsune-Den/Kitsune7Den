@@ -103,32 +103,34 @@ public partial class BackupsViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private async Task Restore()
+    private async Task Restore(BackupInfo? backup)
     {
-        if (SelectedBackup is null) return;
+        backup ??= SelectedBackup;
+        if (backup is null) return;
 
         var result = MessageBox.Show(
-            Loc.F("Backups_RestoreConfirm", SelectedBackup.FileName),
+            Loc.F("Backups_RestoreConfirm", backup.FileName),
             Loc.T("Backups_RestoreConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
         IsBusy = true;
-        await _backupService.RestoreBackupAsync(SelectedBackup);
+        await _backupService.RestoreBackupAsync(backup);
         Refresh();
         IsBusy = false;
     }
 
     [RelayCommand]
-    private void Delete()
+    private void Delete(BackupInfo? backup)
     {
-        if (SelectedBackup is null) return;
+        backup ??= SelectedBackup;
+        if (backup is null) return;
 
         var result = MessageBox.Show(
-            Loc.F("Backups_DeleteConfirm", SelectedBackup.FileName),
+            Loc.F("Backups_DeleteConfirm", backup.FileName),
             Loc.T("Backups_DeleteConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
-        _backupService.DeleteBackup(SelectedBackup);
+        _backupService.DeleteBackup(backup);
         Refresh();
     }
 

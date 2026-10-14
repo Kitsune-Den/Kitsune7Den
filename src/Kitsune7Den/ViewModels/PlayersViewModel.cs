@@ -85,65 +85,70 @@ public partial class PlayersViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private async Task Kick()
+    private async Task Kick(PlayerInfo? player)
     {
-        if (SelectedPlayer is null) return;
-        await _telnetService.SendCommandAsync($"kick {SelectedPlayer.Name}");
+        // The card's button passes its own player; nothing sets SelectedPlayer on click
+        player ??= SelectedPlayer;
+        if (player is null) return;
+        await _telnetService.SendCommandAsync($"kick {player.Name}");
         await Task.Delay(1000);
         await RefreshAsync();
     }
 
     [RelayCommand]
-    private async Task Ban()
+    private async Task Ban(PlayerInfo? player)
     {
-        if (SelectedPlayer is null) return;
+        player ??= SelectedPlayer;
+        if (player is null) return;
         var result = MessageBox.Show(
-            Loc.F("Players_BanConfirm", SelectedPlayer.Name),
+            Loc.F("Players_BanConfirm", player.Name),
             Loc.T("Players_BanConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
-        await _telnetService.SendCommandAsync($"ban add {SelectedPlayer.Name} 1 year \"Banned from Kitsune7Den\"");
+        await _telnetService.SendCommandAsync($"ban add {player.Name} 1 year \"Banned from Kitsune7Den\"");
         await Task.Delay(1000);
         await RefreshAsync();
     }
 
     [RelayCommand]
-    private void GiveAdmin()
+    private void GiveAdmin(PlayerInfo? player)
     {
-        if (SelectedPlayer is null) return;
+        player ??= SelectedPlayer;
+        if (player is null) return;
 
         // Determine platform and ID
-        var (platform, userId) = ResolvePlatformId(SelectedPlayer);
+        var (platform, userId) = ResolvePlatformId(player);
         if (userId is null)
         {
             MessageBox.Show(Loc.T("Players_NoPlatformId"), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
 
-        _adminService.SetAdmin(platform, userId, SelectedPlayer.Name, 0);
-        SelectedPlayer.IsAdmin = true;
-        SelectedPlayer.PermissionLevel = 0;
+        _adminService.SetAdmin(platform, userId, player.Name, 0);
+        player.IsAdmin = true;
+        player.PermissionLevel = 0;
 
         // Re-trigger UI update
         _ = RefreshAsync();
     }
 
     [RelayCommand]
-    private void RemoveAdmin()
+    private void RemoveAdmin(PlayerInfo? player)
     {
-        if (SelectedPlayer is null) return;
+        player ??= SelectedPlayer;
+        if (player is null) return;
 
         var result = MessageBox.Show(
-            Loc.F("Players_RemoveAdminConfirm", SelectedPlayer.Name),
+            Loc.F("Players_RemoveAdminConfirm", player.Name),
             Loc.T("Players_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
         if (result != MessageBoxResult.Yes) return;
 
-        var (_, userId) = ResolvePlatformId(SelectedPlayer);
+        var (_, userId) = ResolvePlatformId(player);
         if (userId is null) return;
 
         _adminService.RemoveAdmin(userId);
-        SelectedPlayer.IsAdmin = false;
-        SelectedPlayer.PermissionLevel = 1000;
+        player.IsAdmin = false;
+        player.PermissionLevel = 1000;
 
         _ = RefreshAsync();
     }
