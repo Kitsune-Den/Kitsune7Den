@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:models="clr-namespace:Kitsune7Den.Models"
              xmlns:local="clr-namespace:Kitsune7Den.ViewModels"
+             xmlns:l="clr-namespace:Kitsune7Den.Localization"
              Loaded="OnLoaded">
 
     <Grid Margin="24">
@@ -16,17 +17,17 @@
         <!-- Header -->
         <DockPanel Grid.Row="0" Margin="0,0,0,16">
             <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
-                <TextBlock Style="{StaticResource SectionHeader}" Text="Backups" Margin="0,0,0,4" />
+                <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Nav_Backups}" Margin="0,0,0,4" />
                 <TextBlock Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11">
-                    <Run Text="Save: " />
+                    <Run Text="{l:Tr Backups_SaveLabel}" />
                     <Run Text="{Binding SaveDirectory, Mode=OneWay}" />
                 </TextBlock>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right"
                         VerticalAlignment="Top">
-                <Button Content="Open Folder" Style="{StaticResource SecondaryButton}"
+                <Button Content="{l:Tr Backups_OpenFolder}" Style="{StaticResource SecondaryButton}"
                         Command="{Binding OpenBackupFolderCommand}" Margin="0,0,8,0" />
-                <Button Content="Refresh" Style="{StaticResource SecondaryButton}"
+                <Button Content="{l:Tr Common_Refresh}" Style="{StaticResource SecondaryButton}"
                         Command="{Binding RefreshCommand}" Margin="0,0,8,0" />
                 <Button Style="{StaticResource ActionButton}"
                         Command="{Binding CreateBackupCommand}"
@@ -34,7 +35,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="13"
                                    VerticalAlignment="Center" Margin="0,0,6,0" />
-                        <TextBlock Text="Create Backup" VerticalAlignment="Center" />
+                        <TextBlock Text="{l:Tr Backups_CreateBackup}" VerticalAlignment="Center" />
                     </StackPanel>
                 </Button>
             </StackPanel>
@@ -58,15 +59,15 @@
 
                     <!-- Enable toggle -->
                     <StackPanel Grid.Column="0" Margin="0,0,20,0" VerticalAlignment="Center">
-                        <TextBlock Text="SCHEDULED" Foreground="{DynamicResource TextSecondaryBrush}"
+                        <TextBlock Text="{l:Tr Backups_ScheduledHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
                                    FontSize="9" FontWeight="Bold" Margin="0,0,0,3" />
-                        <CheckBox IsChecked="{Binding ScheduledEnabled}" Content="Enabled"
+                        <CheckBox IsChecked="{Binding ScheduledEnabled}" Content="{l:Tr Backups_ScheduleEnabledCheck}"
                                   Foreground="{DynamicResource TextPrimaryBrush}" VerticalContentAlignment="Center" />
                     </StackPanel>
 
                     <!-- Interval -->
                     <StackPanel Grid.Column="1" Margin="0,0,20,0" VerticalAlignment="Center">
-                        <TextBlock Text="INTERVAL" Foreground="{DynamicResource TextSecondaryBrush}"
+                        <TextBlock Text="{l:Tr Backups_IntervalHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
                                    FontSize="9" FontWeight="Bold" Margin="0,0,0,3" />
                         <ComboBox ItemsSource="{x:Static local:BackupsViewModel.IntervalOptions}"
                                   SelectedValue="{Binding SelectedInterval}"
@@ -76,7 +77,7 @@
 
                     <!-- Max backups -->
                     <StackPanel Grid.Column="2" Margin="0,0,20,0" VerticalAlignment="Center">
-                        <TextBlock Text="MAX BACKUPS" Foreground="{DynamicResource TextSecondaryBrush}"
+                        <TextBlock Text="{l:Tr Backups_MaxBackupsHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
                                    FontSize="9" FontWeight="Bold" Margin="0,0,0,3" />
                         <TextBox Style="{StaticResource DarkTextBox}" Width="60"
                                  Text="{Binding MaxBackups, UpdateSourceTrigger=PropertyChanged}" />
@@ -85,13 +86,13 @@
                     <!-- Save + Status -->
                     <StackPanel Grid.Column="3" Margin="0,0,20,0" VerticalAlignment="Center">
                         <TextBlock Text="&#x200B;" FontSize="9" Margin="0,0,0,3" /> <!-- spacer -->
-                        <Button Content="Save Schedule" Style="{StaticResource ActionButton}"
+                        <Button Content="{l:Tr Backups_SaveSchedule}" Style="{StaticResource ActionButton}"
                                 Command="{Binding SaveScheduleCommand}" Padding="12,5" FontSize="12" />
                     </StackPanel>
 
                     <!-- Next backup indicator -->
                     <StackPanel Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right">
-                        <TextBlock Text="NEXT BACKUP" Foreground="{DynamicResource TextSecondaryBrush}"
+                        <TextBlock Text="{l:Tr Backups_NextBackupHeader}" Foreground="{DynamicResource TextSecondaryBrush}"
                                    FontSize="9" FontWeight="Bold" Margin="0,0,0,3" HorizontalAlignment="Right" />
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                             <Ellipse Width="8" Height="8" Margin="0,0,6,0" VerticalAlignment="Center">
@@ -130,14 +131,14 @@
                 <TextBlock Text="&#xE81E;" FontFamily="Segoe MDL2 Assets" FontSize="48"
                            Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"
                            Opacity="0.5" Margin="0,0,0,16" />
-                <TextBlock Text="No backups yet" Foreground="{DynamicResource TextPrimaryBrush}"
+                <TextBlock Text="{l:Tr Backups_EmptyTitle}" Foreground="{DynamicResource TextPrimaryBrush}"
                            FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,8" />
                 <TextBlock TextAlignment="Center" TextWrapping="Wrap"
                            Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12">
-                    <Run Text="Hit " />
-                    <Run Text="Create Backup" FontWeight="SemiBold"
+                    <Run Text="{l:Tr Backups_EmptyHintBefore}" />
+                    <Run Text="{l:Tr Backups_CreateBackup}" FontWeight="SemiBold"
                          Foreground="{DynamicResource TextPrimaryBrush}" />
-                    <Run Text=" to zip up your current save, or enable the schedule above to auto-backup at a regular interval." />
+                    <Run Text="{l:Tr Backups_EmptyHintAfter}" />
                 </TextBlock>
             </StackPanel>
         </Grid>
@@ -198,8 +199,25 @@
                                             <!-- Type badge -->
                                             <Border CornerRadius="3" Padding="5,1" Margin="8,0,0,0"
                                                     VerticalAlignment="Center" Background="{DynamicResource BgLightBrush}">
-                                                <TextBlock Text="{Binding BackupType}" FontSize="9"
-                                                           Foreground="{DynamicResource TextSecondaryBrush}" />
+                                                <!-- BackupType stays the raw value (manual / scheduled / pre-restore) for the accent triggers; only the badge text is translated. -->
+                                                <TextBlock FontSize="9" Foreground="{DynamicResource TextSecondaryBrush}">
+                                                    <TextBlock.Style>
+                                                        <Style TargetType="TextBlock">
+                                                            <Setter Property="Text" Value="{Binding BackupType}" />
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding BackupType}" Value="manual">
+                                                                    <Setter Property="Text" Value="{l:Tr Backups_TypeManual}" />
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding BackupType}" Value="scheduled">
+                                                                    <Setter Property="Text" Value="{l:Tr Backups_TypeScheduled}" />
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding BackupType}" Value="pre-restore">
+                                                                    <Setter Property="Text" Value="{l:Tr Backups_TypePreRestore}" />
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBlock.Style>
+                                                </TextBlock>
                                             </Border>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
@@ -223,7 +241,7 @@
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="&#xE777;" FontFamily="Segoe MDL2 Assets" FontSize="12"
                                                        VerticalAlignment="Center" Margin="0,0,4,0" />
-                                            <TextBlock Text="Restore" VerticalAlignment="Center" />
+                                            <TextBlock Text="{l:Tr Backups_Restore}" VerticalAlignment="Center" />
                                         </StackPanel>
                                     </Button>
 

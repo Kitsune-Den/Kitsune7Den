@@ -13,7 +13,11 @@ namespace Kitsune7Den.Tests;
 /// exercise the parts of BackupService that don't require that global state
 /// so tests stay hermetic: BackupDirectory, GetBackups, DeleteBackup, and
 /// the BackupInfo size/age formatting helpers.
+///
+/// The age text is localized and asserted in English, so this class shares the
+/// "Localization" collection: it can't run while LocalizationTests has Chinese active.
 /// </summary>
+[Collection("Localization")]
 public class BackupServiceTests : IDisposable
 {
     private readonly string _tempRoot;

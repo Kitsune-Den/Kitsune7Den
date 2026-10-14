@@ -1,5 +1,6 @@
 using System.IO;
 using System.IO.Compression;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.Services;
@@ -37,13 +38,13 @@ public class BackupService : IDisposable
 
         _scheduledTimer = new System.Threading.Timer(async _ =>
         {
-            StatusChanged?.Invoke("Running scheduled backup...");
+            StatusChanged?.Invoke(Loc.T("Backups_RunningScheduled"));
             await CreateBackupAsync("scheduled");
             LastScheduledBackup = DateTime.Now;
             NextScheduledBackup = DateTime.Now.AddMinutes(_settings.BackupIntervalMinutes);
         }, null, intervalMs, intervalMs);
 
-        StatusChanged?.Invoke($"Scheduled backups enabled — every {FormatInterval(_settings.BackupIntervalMinutes)}");
+        StatusChanged?.Invoke(Loc.F("Backups_ScheduleEnabled", FormatInterval(_settings.BackupIntervalMinutes)));
     }
 
     /// <summary>
@@ -58,11 +59,11 @@ public class BackupService : IDisposable
 
     private static string FormatInterval(int minutes) => minutes switch
     {
-        < 60 => $"{minutes} minutes",
-        60 => "1 hour",
-        < 1440 => $"{minutes / 60} hours",
-        1440 => "1 day",
-        _ => $"{minutes / 1440} days"
+        < 60 => Loc.F("Backups_IntervalMinutes", minutes),
+        60 => Loc.T("Backups_IntervalOneHour"),
+        < 1440 => Loc.F("Backups_IntervalHours", minutes / 60),
+        1440 => Loc.T("Backups_IntervalOneDay"),
+        _ => Loc.F("Backups_IntervalDays", minutes / 1440)
     };
 
     /// <summary>
@@ -130,7 +131,7 @@ public class BackupService : IDisposable
         var saveDir = FindSaveDirectory();
         if (saveDir is null)
         {
-            StatusChanged?.Invoke("Error: Could not find save directory");
+            StatusChanged?.Invoke(Loc.T("Backups_ErrNoSaveDir"));
             return null;
         }
 
@@ -141,7 +142,7 @@ public class BackupService : IDisposable
         var fileName = $"{gameName}_{timestamp}_{type}.zip";
         var backupPath = Path.Combine(BackupDirectory, fileName);
 
-        StatusChanged?.Invoke($"Creating backup of {gameName}...");
+        StatusChanged?.Invoke(Loc.F("Backups_Creating", gameName));
 
         try
         {
@@ -163,7 +164,7 @@ public class BackupService : IDisposable
                 Notes = notes
             };
 
-            StatusChanged?.Invoke($"Backup created: {fileName} ({backup.SizeText})");
+            StatusChanged?.Invoke(Loc.F("Backups_Created", fileName, backup.SizeText));
 
             // Auto-prune old backups
             PruneOldBackups();
@@ -172,7 +173,7 @@ public class BackupService : IDisposable
         }
         catch (Exception ex)
         {
-            StatusChanged?.Invoke($"Backup failed: {ex.Message}");
+            StatusChanged?.Invoke(Loc.F("Backups_CreateFailed", ex.Message));
             return null;
         }
     }
@@ -185,15 +186,15 @@ public class BackupService : IDisposable
         var saveDir = FindSaveDirectory();
         if (saveDir is null)
         {
-            StatusChanged?.Invoke("Error: Could not find save directory to restore to");
+            StatusChanged?.Invoke(Loc.T("Backups_ErrNoRestoreDir"));
             return false;
         }
 
         // Safety: create a pre-restore backup
-        StatusChanged?.Invoke("Creating safety backup before restore...");
+        StatusChanged?.Invoke(Loc.T("Backups_CreatingSafety"));
         await CreateBackupAsync("pre-restore", $"Auto-backup before restoring {backup.FileName}");
 
-        StatusChanged?.Invoke($"Restoring {backup.FileName}...");
+        StatusChanged?.Invoke(Loc.F("Backups_Restoring", backup.FileName));
 
         try
         {
@@ -220,12 +221,12 @@ public class BackupService : IDisposable
                 }
             });
 
-            StatusChanged?.Invoke($"Restored {backup.FileName} successfully. Restart the server for changes to take effect.");
+            StatusChanged?.Invoke(Loc.F("Backups_Restored", backup.FileName));
             return true;
         }
         catch (Exception ex)
         {
-            StatusChanged?.Invoke($"Restore failed: {ex.Message}");
+            StatusChanged?.Invoke(Loc.F("Backups_RestoreFailed", ex.Message));
             return false;
         }
     }
@@ -264,7 +265,7 @@ public class BackupService : IDisposable
     {
         if (!File.Exists(backup.FilePath)) return false;
         File.Delete(backup.FilePath);
-        StatusChanged?.Invoke($"Deleted {backup.FileName}");
+        StatusChanged?.Invoke(Loc.F("Backups_Deleted", backup.FileName));
         return true;
     }
 
@@ -283,7 +284,7 @@ public class BackupService : IDisposable
             try
             {
                 File.Delete(b.FilePath);
-                StatusChanged?.Invoke($"Pruned old backup: {b.FileName}");
+                StatusChanged?.Invoke(Loc.F("Backups_Pruned", b.FileName));
             }
             catch { /* best effort */ }
         }

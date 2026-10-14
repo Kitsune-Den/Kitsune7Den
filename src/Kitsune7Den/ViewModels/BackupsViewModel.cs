@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -29,13 +30,13 @@ public partial class BackupsViewModel : ObservableObject
 
     public static readonly ScheduleOption[] IntervalOptions =
     [
-        new("30", "Every 30 minutes"),
-        new("60", "Every hour"),
-        new("120", "Every 2 hours"),
-        new("240", "Every 4 hours"),
-        new("360", "Every 6 hours"),
-        new("720", "Every 12 hours"),
-        new("1440", "Every day"),
+        new("30", "Backups_Every30Minutes"),
+        new("60", "Backups_EveryHour"),
+        new("120", "Backups_Every2Hours"),
+        new("240", "Backups_Every4Hours"),
+        new("360", "Backups_Every6Hours"),
+        new("720", "Backups_Every12Hours"),
+        new("1440", "Backups_EveryDay"),
     ];
 
     public BackupsViewModel(BackupService backupService, AppSettings settings)
@@ -43,7 +44,7 @@ public partial class BackupsViewModel : ObservableObject
         _backupService = backupService;
         _settings = settings;
         BackupDirectory = backupService.BackupDirectory;
-        SaveDirectory = backupService.FindSaveDirectory() ?? "Not found";
+        SaveDirectory = backupService.FindSaveDirectory() ?? Loc.T("Backups_SaveNotFound");
 
         // Load schedule settings
         ScheduledEnabled = settings.ScheduledBackupsEnabled;
@@ -60,9 +61,24 @@ public partial class BackupsViewModel : ObservableObject
             });
         };
 
+        Loc.LanguageChanged += OnLanguageChanged;
+
         // Auto-start schedule if enabled
         if (ScheduledEnabled)
             StartSchedule();
+    }
+
+    /// <summary>
+    /// Rebuild the strings that stay on screen: the "not found" save path and each
+    /// card's relative age (re-adding the items makes their bindings re-read it).
+    /// </summary>
+    private void OnLanguageChanged()
+    {
+        SaveDirectory = _backupService.FindSaveDirectory() ?? Loc.T("Backups_SaveNotFound");
+        var items = Backups.ToList();
+        Backups.Clear();
+        foreach (var b in items)
+            Backups.Add(b);
     }
 
     [RelayCommand]
@@ -72,9 +88,9 @@ public partial class BackupsViewModel : ObservableObject
         Backups.Clear();
         foreach (var b in backups)
             Backups.Add(b);
-        SaveDirectory = _backupService.FindSaveDirectory() ?? "Not found";
+        SaveDirectory = _backupService.FindSaveDirectory() ?? Loc.T("Backups_SaveNotFound");
         UpdateNextBackupText();
-        StatusMessage = $"{backups.Count} backup(s) found";
+        StatusMessage = Loc.F("Backups_FoundCount", backups.Count);
     }
 
     [RelayCommand]
@@ -92,8 +108,8 @@ public partial class BackupsViewModel : ObservableObject
         if (SelectedBackup is null) return;
 
         var result = MessageBox.Show(
-            $"Restore backup '{SelectedBackup.FileName}'?\n\nA safety backup will be created first.\nThe server should be stopped before restoring.",
-            "Confirm Restore", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            Loc.F("Backups_RestoreConfirm", SelectedBackup.FileName),
+            Loc.T("Backups_RestoreConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
         IsBusy = true;
@@ -108,8 +124,8 @@ public partial class BackupsViewModel : ObservableObject
         if (SelectedBackup is null) return;
 
         var result = MessageBox.Show(
-            $"Delete backup '{SelectedBackup.FileName}'?\nThis cannot be undone.",
-            "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            Loc.F("Backups_DeleteConfirm", SelectedBackup.FileName),
+            Loc.T("Backups_DeleteConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
         _backupService.DeleteBackup(SelectedBackup);
@@ -139,7 +155,7 @@ public partial class BackupsViewModel : ObservableObject
         else
             StopSchedule();
 
-        StatusMessage = "Schedule settings saved";
+        StatusMessage = Loc.T("Backups_ScheduleSaved");
     }
 
     private void StartSchedule()
@@ -160,13 +176,29 @@ public partial class BackupsViewModel : ObservableObject
     private void UpdateNextBackupText()
     {
         if (_backupService.NextScheduledBackup is { } next)
-            NextBackupText = next.ToString("HH:mm:ss");
+            NextBackupText = next.ToString("HH:mm:ss", Loc.Instance.Culture);
         else
             NextBackupText = "--";
     }
 }
 
-public record ScheduleOption(string Value, string Label)
+/// <summary>
+/// An interval choice. <see cref="Value"/> (minutes) is what gets saved; <see cref="Label"/>
+/// is looked up from <see cref="LabelKey"/> and re-raised on a language switch so the
+/// ComboBox text follows it live.
+/// </summary>
+public sealed class ScheduleOption : ObservableObject
 {
+    public ScheduleOption(string value, string labelKey)
+    {
+        Value = value;
+        LabelKey = labelKey;
+        Loc.LanguageChanged += () => OnPropertyChanged(nameof(Label));
+    }
+
+    public string Value { get; }
+    public string LabelKey { get; }
+    public string Label => Loc.T(LabelKey);
+
     public override string ToString() => Label;
 }
