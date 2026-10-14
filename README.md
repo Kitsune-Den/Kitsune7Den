@@ -25,12 +25,22 @@
 - **Console** -- Live server log tailing + telnet command input with history
 - **Players** -- Player cards with stats, admin badges, kick/ban, give/remove admin via serveradmin.xml
 - **Configuration** -- Grouped form editor with 90+ properties, smart dropdowns, Raw XML toggle
+- **7 Days to Die 3.x** -- Detects your server's game version, edits the 3.x `SandboxCode` with a full Sandbox editor and the built-in presets, and updates pre-3.0 configs in one click
 - **Mods** -- List installed mods, enable/disable, delete, install from zip
 - **Backups** -- Manual + scheduled backups, restore with automatic safety backup, auto-prune
 - **Logs** -- Browse all server log files with dropdown selector and text filter
 - **Settings** -- SteamCMD install/update, auto-update on start, telnet config
 - **Themes** -- 4 live-swappable themes (Kitsune, Midnight, Forest, Accessible/colorblind-friendly)
+- **Languages** -- English and Simplified Chinese (简体中文), switchable live
 - **Config Protection** -- Automatically backs up serverconfig.xml before Steam updates, restores after
+
+## 简体中文
+
+Kitsune7Den 支持简体中文。首次运行时会跟随 Windows 显示语言，也可以随时在 **设置 → 外观 → Language / 语言** 中切换，无需重启。服务器配置和沙盒选项使用游戏官方的中文译名，并保留原始属性名（例如 `玩家杀戮 (PlayerKillingMode)`），方便对照 `serverconfig.xml`。
+
+支持七日杀 3.x（已在 3.3 上测试）：自动识别游戏版本，提供完整的沙盒选项编辑器（SandboxCode），并可一键将 3.0 之前的配置更新为 3.x 格式（会先备份）。
+
+翻译有问题或想补充？欢迎提交 [Issue](https://github.com/Kitsune-Den/Kitsune7Den/issues)。
 
 ## Screenshots
 
@@ -86,6 +96,8 @@ dotnet publish src/Kitsune7Den -c Release -r win-x64 --self-contained -p:Publish
 - .NET 8 / WPF / MVVM (CommunityToolkit.Mvvm)
 - Telnet client for server commands + player data
 - XDocument for serverconfig.xml + ModInfo.xml + serveradmin.xml parsing
+- .resx string tables (`Resources/Strings*.resx`) with a live-switching `{l:Tr Key}` markup extension
+- 7D2D 3.x Sandbox option tables (`Resources/Sandbox/`), generated from the game assembly by PackRelay's extractor; never hand-edit them, the order is the code format
 - SteamCMD integration for server install/update
 
 ## Support the project
