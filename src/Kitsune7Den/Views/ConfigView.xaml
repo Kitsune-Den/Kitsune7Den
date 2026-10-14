@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="clr-namespace:Kitsune7Den.ViewModels"
              xmlns:models="clr-namespace:Kitsune7Den.Models"
+             xmlns:l="clr-namespace:Kitsune7Den.Localization"
              Loaded="OnLoaded">
 
     <Grid>
@@ -18,7 +19,7 @@
             <DockPanel>
                 <!-- Title -->
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Server Configuration" Foreground="{DynamicResource TextPrimaryBrush}"
+                    <TextBlock Text="{l:Tr Config_Title}" Foreground="{DynamicResource TextPrimaryBrush}"
                                FontSize="16" FontWeight="SemiBold" />
                     <TextBlock Text="  (serverconfig.xml)" Foreground="{DynamicResource TextSecondaryBrush}"
                                FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,1" />
@@ -29,7 +30,7 @@
                     <!-- View Toggle -->
                     <Border CornerRadius="6" Background="#FF0d0d1a" Padding="2" Margin="0,0,12,0">
                         <StackPanel Orientation="Horizontal">
-                            <Button Content="Form View" Command="{Binding SwitchToFormCommand}"
+                            <Button Content="{l:Tr Config_FormView}" Command="{Binding SwitchToFormCommand}"
                                     Padding="10,5" FontSize="12" Cursor="Hand" BorderThickness="0">
                                 <Button.Style>
                                     <Style TargetType="Button">
@@ -54,7 +55,7 @@
                                     </Style>
                                 </Button.Style>
                             </Button>
-                            <Button Content="Raw XML" Command="{Binding SwitchToRawCommand}"
+                            <Button Content="{l:Tr Config_RawXml}" Command="{Binding SwitchToRawCommand}"
                                     Padding="10,5" FontSize="12" Cursor="Hand" BorderThickness="0">
                                 <Button.Style>
                                     <Style TargetType="Button">
@@ -82,9 +83,9 @@
                         </StackPanel>
                     </Border>
 
-                    <Button Content="Reset" Style="{StaticResource SecondaryButton}"
+                    <Button Content="{l:Tr Config_Reset}" Style="{StaticResource SecondaryButton}"
                             Command="{Binding ResetCommand}" Margin="0,0,8,0" />
-                    <Button Content="Save Changes" Style="{StaticResource ActionButton}"
+                    <Button Content="{l:Tr Config_SaveChanges}" Style="{StaticResource ActionButton}"
                             Command="{Binding SaveCommand}"
                             IsEnabled="{Binding HasChanges}" />
                 </StackPanel>
@@ -98,14 +99,12 @@
                 <TextBlock Text="&#xE7B8;" FontFamily="Segoe MDL2 Assets" FontSize="48"
                            Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"
                            Opacity="0.5" Margin="0,0,0,16" />
-                <TextBlock Text="No server configured" Foreground="{DynamicResource TextPrimaryBrush}"
+                <TextBlock Text="{l:Tr Config_EmptyTitle}" Foreground="{DynamicResource TextPrimaryBrush}"
                            FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,8" />
                 <TextBlock TextAlignment="Center" TextWrapping="Wrap"
                            Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12">
-                    <Run Text="Go to the Dashboard and browse to your " />
-                    <Run Text="7DaysToDieServer.exe" FontWeight="SemiBold"
-                         Foreground="{DynamicResource TextPrimaryBrush}" />
-                    <Run Text=" — or install a new server from the Settings page via SteamCMD." />
+                    <Run Text="{l:Tr Config_EmptyBefore}" /><Run Text="7DaysToDieServer.exe" FontWeight="SemiBold"
+                         Foreground="{DynamicResource TextPrimaryBrush}" /><Run Text="{l:Tr Config_EmptyAfter}" />
                 </TextBlock>
             </StackPanel>
         </Grid>
@@ -125,6 +124,31 @@
                     </Style.Triggers>
                 </Style>
             </ScrollViewer.Style>
+            <StackPanel>
+            <!-- Detected game version -->
+            <TextBlock Text="{Binding GameVersionText}" Foreground="{DynamicResource TextSecondaryBrush}"
+                       FontSize="11" Margin="0,0,0,10"
+                       Visibility="{Binding GameVersionText, Converter={StaticResource StringVis}}" />
+
+            <!-- 3.x migration banner -->
+            <Border Background="{DynamicResource BgMediumBrush}" CornerRadius="8"
+                    BorderBrush="{DynamicResource WarningBrush}" BorderThickness="1"
+                    Margin="0,0,0,16" Padding="16,12"
+                    Visibility="{Binding NeedsMigration, Converter={StaticResource BoolVis}}">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Content="{l:Tr Config_MigrateButton}" Style="{StaticResource ActionButton}"
+                            Command="{Binding MigrateToSandboxCommand}" VerticalAlignment="Center" Margin="16,0,0,0" />
+                    <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="18" DockPanel.Dock="Left"
+                               Foreground="{DynamicResource WarningBrush}" VerticalAlignment="Top" Margin="0,2,12,0" />
+                    <StackPanel>
+                        <TextBlock Text="{l:Tr Config_MigrateBannerTitle}" Foreground="{DynamicResource TextPrimaryBrush}"
+                                   FontSize="13" FontWeight="SemiBold" Margin="0,0,0,4" />
+                        <TextBlock Text="{l:Tr Config_MigrateBannerBody}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                   FontSize="11" TextWrapping="Wrap" />
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+
             <ItemsControl ItemsSource="{Binding Groups}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="{x:Type vm:ConfigGroup}">
@@ -142,6 +166,28 @@
                                     <TextBlock Text="{Binding NameUpper}" Foreground="{DynamicResource TextPrimaryBrush}"
                                                FontSize="14" FontWeight="Bold" Margin="0,0,0,16" />
 
+                                    <!-- Legacy (3.x): explain why these do nothing now -->
+                                    <TextBlock Text="{l:Tr Config_LegacyNote}" Foreground="{DynamicResource WarningBrush}"
+                                               FontSize="11" TextWrapping="Wrap" Margin="0,-8,0,16"
+                                               Visibility="{Binding IsLegacy, Converter={StaticResource BoolVis}}" />
+
+                                    <!-- Sandbox (3.x): what the current code means + the editor -->
+                                    <Border Background="#FF0d0d1a" CornerRadius="6" Padding="16,12" Margin="0,0,0,16"
+                                            BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1"
+                                            Visibility="{Binding IsSandbox, Converter={StaticResource BoolVis}}">
+                                        <DockPanel DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=ItemsControl}}">
+                                            <Button DockPanel.Dock="Right" Style="{StaticResource ActionButton}"
+                                                    Content="{l:Tr Sandbox_OpenEditor}" VerticalAlignment="Center"
+                                                    Command="{Binding OpenSandboxEditorCommand}" Margin="16,0,0,0" />
+                                            <StackPanel VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding SandboxSummary}" Foreground="{DynamicResource TextPrimaryBrush}"
+                                                           FontSize="13" FontWeight="SemiBold" />
+                                                <TextBlock Text="{l:Tr Sandbox_CardHint}" Foreground="{DynamicResource TextSecondaryBrush}"
+                                                           FontSize="11" TextWrapping="Wrap" Margin="0,2,0,0" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </Border>
+
                                     <!-- Day/Night Calculator (Gameplay only) — ported from KitsuneDen -->
                                     <Border Background="#FF0d0d1a" CornerRadius="6" Padding="16,14" Margin="0,0,0,16"
                                             BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
@@ -149,14 +195,18 @@
                                             <Style TargetType="Border">
                                                 <Setter Property="Visibility" Value="Collapsed" />
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="Gameplay">
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding Name}" Value="Gameplay" />
+                                                            <Condition Binding="{Binding DataContext.ShowDayNightCalculator, RelativeSource={RelativeSource AncestorType=ItemsControl, AncestorLevel=1}}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
                                                         <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
+                                                    </MultiDataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </Border.Style>
                                         <StackPanel DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=ItemsControl}}">
-                                            <TextBlock Text="DAY / NIGHT CYCLE" Foreground="{DynamicResource AccentBrush}"
+                                            <TextBlock Text="{l:Tr Config_DayNightTitle}" Foreground="{DynamicResource AccentBrush}"
                                                        FontSize="10" FontWeight="Bold" Margin="0,0,0,10" />
 
                                             <!-- Two sliders side-by-side -->
@@ -170,13 +220,13 @@
                                                 <!-- Day -->
                                                 <StackPanel Grid.Column="0">
                                                     <DockPanel Margin="0,0,0,4">
-                                                        <TextBlock Text="DAY" DockPanel.Dock="Left"
+                                                        <TextBlock Text="{l:Tr Config_Day}" DockPanel.Dock="Left"
                                                                    Foreground="{DynamicResource WarningBrush}"
                                                                    FontSize="10" FontWeight="Bold" />
                                                         <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Right"
                                                                    Foreground="{DynamicResource TextPrimaryBrush}" FontSize="11">
                                                             <Run Text="{Binding DayMinutes, Mode=OneWay}" FontWeight="SemiBold" />
-                                                            <Run Text=" min" Foreground="{DynamicResource TextSecondaryBrush}" />
+                                                            <Run Text="{l:Tr Config_MinutesSuffix}" Foreground="{DynamicResource TextSecondaryBrush}" />
                                                         </TextBlock>
                                                     </DockPanel>
                                                     <Slider Minimum="1" Maximum="239"
@@ -188,13 +238,13 @@
                                                 <!-- Night -->
                                                 <StackPanel Grid.Column="2">
                                                     <DockPanel Margin="0,0,0,4">
-                                                        <TextBlock Text="NIGHT" DockPanel.Dock="Left"
+                                                        <TextBlock Text="{l:Tr Config_Night}" DockPanel.Dock="Left"
                                                                    Foreground="{DynamicResource AccentBrush}"
                                                                    FontSize="10" FontWeight="Bold" />
                                                         <TextBlock DockPanel.Dock="Right" HorizontalAlignment="Right"
                                                                    Foreground="{DynamicResource TextPrimaryBrush}" FontSize="11">
                                                             <Run Text="{Binding NightMinutes, Mode=OneWay}" FontWeight="SemiBold" />
-                                                            <Run Text=" min" Foreground="{DynamicResource TextSecondaryBrush}" />
+                                                            <Run Text="{l:Tr Config_MinutesSuffix}" Foreground="{DynamicResource TextSecondaryBrush}" />
                                                         </TextBlock>
                                                     </DockPanel>
                                                     <Slider Minimum="1" Maximum="239"
@@ -211,7 +261,7 @@
                                                            FontSize="11" VerticalAlignment="Center">
                                                     <Run Text="{Binding DayNightTotal, Mode=OneWay}" FontWeight="SemiBold"
                                                          Foreground="{DynamicResource TextPrimaryBrush}" />
-                                                    <Run Text=" min total" />
+                                                    <Run Text="{l:Tr Config_MinutesTotalSuffix}" />
                                                 </TextBlock>
                                                 <Border Height="6" CornerRadius="3" Background="{DynamicResource BorderBrush}"
                                                         VerticalAlignment="Center">
@@ -230,12 +280,12 @@
 
                                             <!-- Total cycle editable input -->
                                             <StackPanel Orientation="Horizontal" Margin="0,4,0,8">
-                                                <TextBlock Text="Total cycle:" Foreground="{DynamicResource TextSecondaryBrush}"
+                                                <TextBlock Text="{l:Tr Config_TotalCycle}" Foreground="{DynamicResource TextSecondaryBrush}"
                                                            FontSize="11" VerticalAlignment="Center" Margin="0,0,8,0" />
                                                 <TextBox Style="{StaticResource DarkTextBox}" Width="60"
                                                          Text="{Binding DayNightTotal, Mode=OneWay}"
                                                          KeyDown="TotalCycleBox_KeyDown" />
-                                                <TextBlock Text="min  (10 – 240)" Foreground="{DynamicResource TextSecondaryBrush}"
+                                                <TextBlock Text="{l:Tr Config_TotalCycleRange}" Foreground="{DynamicResource TextSecondaryBrush}"
                                                            FontSize="10" VerticalAlignment="Center" Margin="8,0,0,0" />
                                             </StackPanel>
 
@@ -257,9 +307,11 @@
                                             <DataTemplate DataType="{x:Type models:ServerConfigProperty}">
                                                 <StackPanel Width="330" Margin="0,0,24,16">
                                                     <!-- Field Label -->
-                                                    <TextBlock Text="{Binding DisplayName}"
-                                                               Foreground="{DynamicResource TextSecondaryBrush}"
-                                                               FontSize="11" Margin="0,0,0,4" />
+                                                    <TextBlock Foreground="{DynamicResource TextSecondaryBrush}"
+                                                               FontSize="11" Margin="0,0,0,4" ToolTip="{Binding Name}">
+                                                        <Run Text="{Binding DisplayName, Mode=OneWay}" /><Run Text="{Binding KeyHint, Mode=OneWay}" FontSize="10"
+                                                             Foreground="{DynamicResource TextSecondaryBrush}" />
+                                                    </TextBlock>
 
                                                     <!-- Field Input (chosen by type) -->
                                                     <ContentControl>
@@ -300,6 +352,14 @@
                                                                             </Setter.Value>
                                                                         </Setter>
                                                                     </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding FieldType}" Value="Sandbox">
+                                                                        <Setter Property="Content">
+                                                                            <Setter.Value>
+                                                                                <TextBox Style="{StaticResource DarkTextBox}" FontFamily="Consolas"
+                                                                                         Text="{Binding Value, UpdateSourceTrigger=PropertyChanged}" />
+                                                                            </Setter.Value>
+                                                                        </Setter>
+                                                                    </DataTrigger>
                                                                     <DataTrigger Binding="{Binding FieldType}" Value="EditableSelect">
                                                                         <Setter Property="Content">
                                                                             <Setter.Value>
@@ -329,6 +389,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            </StackPanel>
         </ScrollViewer>
 
         <!-- Raw XML View -->

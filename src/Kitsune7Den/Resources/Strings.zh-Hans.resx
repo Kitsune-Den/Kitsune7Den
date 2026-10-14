@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>仪表盘</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>控制台</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>玩家</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>服务器配置</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>模组</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>备份</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>日志</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>服务器：</value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet：</value></data>
+  <data name="Status_Players" xml:space="preserve"><value>玩家：</value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>已停止</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>正在启动</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>运行中</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>正在停止</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>已连接</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>未连接</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>是</value></data>
+  <data name="Common_No" xml:space="preserve"><value>否</value></data>
+  <data name="Common_On" xml:space="preserve"><value>开启</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>关闭</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>浏览</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>错误</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>欢迎使用 Kitsune7Den</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>先把服务器配置好吧，任选一种方式：</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>已经装好了？</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value>点击下方的</value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value>按钮，选择你的</value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>从零开始？</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value>前往</value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>设置 → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value>，Kitsune7Den 会帮你安装服务器</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>服务器位置</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>指定你的 7DaysToDieServer.exe（也可以在设置中安装）</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>7DaysToDieServer.exe 的路径。点击“浏览”选择，或在设置中配置 SteamCMD 自动安装</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>服务器状态</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>状态</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>运行时长</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>玩家</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>服务器控制</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>启动</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>连接 Telnet</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>手动连接 Telnet，适用于服务器已在运行的情况</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>重启</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>连接信息</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>复制局域网地址到剪贴板</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>复制公网地址到剪贴板</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>局域网</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>公网</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>不可用</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>服务器程序</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>所有可执行文件</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>选择七日杀服务器程序</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>控制台</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>清空</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>发送</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>已备份 serverconfig.xml（防止被 Steam 更新覆盖）。</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>无法备份配置：{0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>正在检查更新…</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>更新检查完成。</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>更新检查失败，仍将继续启动。</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>已从备份恢复 serverconfig.xml。</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>无法恢复配置备份：{0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>日志文件：{0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>正在启动服务器：{0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>启动服务器失败：{0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>正在发送 shutdown 命令…</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>正在强制结束服务器进程…</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>服务器已停止。</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>已清理旧日志：{0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>在线玩家</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>人在线</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>踢出</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>封禁</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>等级</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>生命值</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>得分</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>丧尸击杀</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>死亡</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>延迟</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP：</value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>设为管理员</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>移除管理员</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>未找到</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>确定封禁“{0}”吗？
+该玩家将被加入黑名单。</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>确认封禁</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>无法确定该玩家的平台 ID。</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>确定移除“{0}”的管理员权限吗？</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>确认</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>所有者</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>管理员</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>版主</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>权限等级 {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>服务器日志</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>筛选日志（如 ERR、INF、玩家名称……）</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>在资源管理器中打开</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>未设置服务器目录</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>找到 {0} 个日志文件</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>未找到日志文件</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>文件不存在</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- 仅显示 {0} 的前 10,000 行（可使用筛选缩小范围）---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>{1} 中有 {0} 行匹配</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>{0} 行 — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>读取日志出错：{0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>更新</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>从 GitHub 检查 Kitsune7Den 的最新版本。更新会直接下载并原地安装，无需安装程序。</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>检查更新</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>安装更新</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>在 GitHub 上查看</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>有可用更新：</value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>外观</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>主题</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>深海军蓝 + 红色点缀（默认）</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>深炭灰 + 冷蓝色点缀</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>深绿色调 + 琥珀色点缀</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>高对比度，色盲友好（蓝/橙配色，不用红/绿）</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>支持本项目</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den 是免费的开源软件。如果它帮你节省了时间，或让你的开服生活更轻松，欢迎请我喝杯咖啡。全凭心意，感激不尽。</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>在默认浏览器中打开 ko-fi.com</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>在 Ko-fi 上支持我</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>通过 SteamCMD 可以直接安装和更新 7D2D 专用服务器。</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>SteamCMD 路径</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>下载</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>自动下载 SteamCMD</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>steamcmd.exe 的路径</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>未找到 SteamCMD</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD 已就绪</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>服务器安装</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>安装目录</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>7D2D 服务器文件的安装位置</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>服务器分支</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>选择已知分支，或输入自定义分支（例如 alpha21.2）</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>启动服务器时自动更新</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>校验文件</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>更新时校验文件（速度较慢，但能修复损坏的文件）</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>安装/更新服务器</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet 连接</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>这些值应与 serverconfig.xml 中的设置保持一致。Kitsune7Den 通过 Telnet 发送命令并读取玩家数据。</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet 端口</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet 密码</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>保存全部设置</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>使用条款</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den 按“原样”提供，仅限个人非商业用途。不提供任何形式的保证或担保。对于因使用本软件而导致的数据丢失、服务器问题或其他任何损失，作者概不负责。使用风险由你自行承担。本工具与 The Fun Pimps 及 Valve 无任何关联，也未获其认可。</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>操作已成功完成</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>操作失败，请查看日志</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>主题已切换为 {0}</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>设置已保存</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>所有可执行文件</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>选择 steamcmd.exe</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>选择服务器安装目录</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>请先设置服务器安装目录，SteamCMD 会放在它旁边</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>未找到 SteamCMD，请先下载，或浏览选择其位置</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>请先设置服务器安装目录</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>正在更新…</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>正在取消…</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>要安装更新 {0}（{1}）吗？
+
+Kitsune7Den 将下载新版本并重新启动。服务器会继续运行。</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>确认更新</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>正在检查更新…</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>已是最新版本（{0}）</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>发现更新 {0}，但该发布版本中没有可下载的 exe/zip 文件</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>有可用更新：{0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>检查更新失败：{0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>无法定位当前 exe 的路径</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>正在下载 {0}（{1}）…</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>正在解压…</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>压缩包中没有 {0}</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>下载完成，正在安装…</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>更新已安装，正在重新启动…</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>更新失败：{0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD 已存在于：{0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>正在下载 SteamCMD…</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>正在解压 SteamCMD…</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD 已安装到：{0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>错误：解压后未找到 steamcmd.exe</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>下载 SteamCMD 时出错：{0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>错误：未设置 SteamCMD 路径，或找不到该文件。请先下载。</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>错误：未设置服务器安装目录。</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>正在运行：steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>分支：{0} | 校验文件：{1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>首次安装可能需要较长时间…</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>已找到服务器 exe：{0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>更新成功完成！</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD 已退出，退出代码：{0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>更新已取消。</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>运行 SteamCMD 时出错：{0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>打开文件夹</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>从 Zip 安装</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>已启用 {0} / {1}</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>已启用</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>已禁用</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>启用</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>禁用</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>作者：</value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>共 {0} 个模组（已启用 {1} 个）</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>已启用 {0}</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>已禁用 {0}</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>删除模组“{0}”？
+这将移除其所有文件，且无法撤销。</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>确认删除</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>已删除 {0}</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>模组压缩包</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>所有文件</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>选择模组 Zip 文件</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>错误：无法识别 zip 中的模组结构。应包含一个带有 ModInfo.xml 的文件夹。</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>错误：模组文件夹名称无效。</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>已安装模组：{0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>安装模组时出错：{0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>存档：</value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>未找到</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>打开文件夹</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>创建备份</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>定时备份</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>启用</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>间隔</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>最大备份数</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>保存计划</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>下次备份</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>暂无备份</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>点击</value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value>将当前存档打包为 zip，或启用上方的定时备份，按固定间隔自动备份。</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>恢复</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>手动</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>定时</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>恢复前</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>每 30 分钟</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>每小时</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>每 2 小时</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>每 4 小时</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>每 6 小时</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>每 12 小时</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>每天</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>找到 {0} 个备份</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>恢复备份“{0}”？
+
+恢复前会先自动创建一个安全备份。
+恢复前应先停止服务器。</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>确认恢复</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>删除备份“{0}”？
+此操作无法撤销。</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>确认删除</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>定时备份设置已保存</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>刚刚</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>{0} 分钟前</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>{0} 小时前</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>{0} 天前</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>正在执行定时备份…</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>定时备份已启用——每 {0}</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} 分钟</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 小时</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} 小时</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 天</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} 天</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>错误：找不到存档目录</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>正在备份 {0}…</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>备份已创建：{0}（{1}）</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>备份失败：{0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>错误：找不到要恢复到的存档目录</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>恢复前正在创建安全备份…</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>正在恢复 {0}…</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>已成功恢复 {0}。请重启服务器以使更改生效。</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>恢复失败：{0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>已删除 {0}</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>已清理旧备份：{0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>服务器配置</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>表单视图</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>原始 XML</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>重置</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>保存更改</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>尚未配置服务器</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>请前往仪表盘并选择你的 </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value>，或在设置页面通过 SteamCMD 安装新服务器。</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>未找到 serverconfig.xml，请先在仪表盘中配置服务器</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>已加载 {0} 项设置</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>已保存（已创建备份）</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>保存失败，请检查 XML 格式是否有效</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>已恢复为上次保存的值</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>昼夜循环</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>白天</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>夜晚</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> 分钟</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> 分钟（总计）</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>完整周期：</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>分钟（10 – 240）</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>将替换 DayNightLength（{0}）和 DayLightLength（{1}）</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>检测到七日杀 {0}（来自服务器日志）</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>七日杀 {0}（来自 SteamCMD 分支设置）</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>七日杀 3.x（服务器启动过一次后才能确定具体版本）</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>此 serverconfig.xml 是七日杀 3.0 之前的格式</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>3.x 已将难度、战利品、丧尸、血月和昼夜时长等设置移入游戏内的沙盒选项，统一由 SandboxCode 控制。下方“旧版设置”中的属性游戏已不再读取。更新会将它们注释掉（不会删除任何内容），添加 SandboxCode、Region 和 Language，并会先创建备份。</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>更新到 3.x 格式</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>将 serverconfig.xml 更新为 3.x 格式</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>是否注释掉 3.x 不再读取的设置，并添加 SandboxCode、Region 和 Language？
+
+操作前会先创建带时间戳的 serverconfig.xml 备份，旧的值会以注释形式保留在文件中。</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>已更新为 3.x 格式：注释了 {0} 项旧版设置，新增：{1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml 已是 3.x 格式</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>更新失败：{0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>请先保存或重置未保存的更改</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>七日杀 3.x 不再读取这些设置，而是改由 SandboxCode 决定。请在上方的沙盒编辑器中修改。</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>沙盒选项</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>编辑沙盒...</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>难度、战利品、丧尸、血月、昼夜时长、商人等，与游戏内的沙盒选项界面一致。</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>预设：{0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>自定义规则：{0} 项与默认值不同</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>无法读取此 SandboxCode，请打开编辑器查看原因。</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode 已更新。点击“保存更改”写入 serverconfig.xml。</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>使用 {0} 版选项表（服务器：七日杀 {1}）。</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>此服务器运行的是七日杀 {0}，但当前版本的 Kitsune7Den 中最新的选项表是 {1}。之后新增或变更的选项可能缺失或错位，请检查 Kitsune7Den 更新。</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>无法确定此服务器运行的 3.x 具体版本，因此使用最新的选项表（{0}）。请先启动一次服务器，让日志记录版本号；同一代码在不同 3.x 版本中的含义可能不同。</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>预设</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>与“{0}”预设一致</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>自定义规则</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>搜索选项...</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>恢复默认</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>全部重置</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>应用</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>项与默认值不同</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>默认：{0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>代码为空。</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>SandboxCode 只能包含字母 A–Z。</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>此代码以“{0}”开头，但此游戏版本的代码应以“{1}”开头。</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>此代码中有 {0} 段不属于当前游戏版本的选项，将原样保留：{1}</value></data>
+  <data name="CfgCat_Core" xml:space="preserve"><value>基本信息</value></data>
+  <data name="CfgCat_Sandbox" xml:space="preserve"><value>沙盒（3.x）</value></data>
+  <data name="CfgCat_World" xml:space="preserve"><value>世界</value></data>
+  <data name="CfgCat_BlockDamage" xml:space="preserve"><value>物块伤害</value></data>
+  <data name="CfgCat_Gameplay" xml:space="preserve"><value>游戏玩法</value></data>
+  <data name="CfgCat_Player" xml:space="preserve"><value>玩家</value></data>
+  <data name="CfgCat_Zombies" xml:space="preserve"><value>丧尸</value></data>
+  <data name="CfgCat_LootDrops" xml:space="preserve"><value>战利品与掉落</value></data>
+  <data name="CfgCat_LandClaims" xml:space="preserve"><value>领地</value></data>
+  <data name="CfgCat_Network" xml:space="preserve"><value>网络</value></data>
+  <data name="CfgCat_Admin" xml:space="preserve"><value>管理</value></data>
+  <data name="CfgCat_Advanced" xml:space="preserve"><value>高级</value></data>
+  <data name="CfgCat_Legacy" xml:space="preserve"><value>旧版设置（3.x 已忽略）</value></data>
+  <data name="CfgCat_Other" xml:space="preserve"><value>其他</value></data>
+  <data name="Cfg_ServerName_Name" xml:space="preserve"><value>服务器名称</value></data>
+  <data name="Cfg_ServerName_Desc" xml:space="preserve"><value>在服务器浏览器中显示的名称</value></data>
+  <data name="Cfg_ServerPassword_Name" xml:space="preserve"><value>服务器密码</value></data>
+  <data name="Cfg_ServerPassword_Desc" xml:space="preserve"><value>加入服务器所需的密码（留空则无需密码）</value></data>
+  <data name="Cfg_ServerDescription_Name" xml:space="preserve"><value>服务器描述</value></data>
+  <data name="Cfg_ServerDescription_Desc" xml:space="preserve"><value>在服务器浏览器列表中显示的描述</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Name" xml:space="preserve"><value>加入确认文本</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Desc" xml:space="preserve"><value>玩家加入前必须确认的消息</value></data>
+  <data name="Cfg_Region_Name" xml:space="preserve"><value>区域</value></data>
+  <data name="Cfg_Region_Desc" xml:space="preserve"><value>服务器所在的区域，用于服务器浏览器的区域筛选（3.x）</value></data>
+  <data name="Cfg_Region_Opts" xml:space="preserve"><value>北美 - 东部|北美 - 西部|中美洲|南美洲|欧洲|俄罗斯|亚洲|中东|非洲|大洋洲</value></data>
+  <data name="Cfg_Language_Name" xml:space="preserve"><value>语言</value></data>
+  <data name="Cfg_Language_Desc" xml:space="preserve"><value>玩家使用的主要语言。请填写语言的英文名称（例如 Chinese，而不是“中文”），以便服务器浏览器能搜索到（3.x）</value></data>
+  <data name="Cfg_SandboxCode_Name" xml:space="preserve"><value>沙盒代码</value></data>
+  <data name="Cfg_SandboxCode_Desc" xml:space="preserve"><value>七日杀 3.x 将游戏规则（难度、战利品、丧尸、血月、昼夜时长等）保存在这一串代码中。可使用沙盒编辑器修改，或粘贴从游戏“沙盒选项”界面复制的代码。</value></data>
+  <data name="Cfg_GameWorld_Name" xml:space="preserve"><value>游戏世界</value></data>
+  <data name="Cfg_GameWorld_Desc" xml:space="preserve"><value>自动读取 Data/Worlds 和 GeneratedWorlds 中的世界。可选择现有世界，也可输入自定义名称。</value></data>
+  <data name="Cfg_WorldGenSeed_Name" xml:space="preserve"><value>世界生成种子</value></data>
+  <data name="Cfg_WorldGenSeed_Desc" xml:space="preserve"><value>随机生成世界（RWG）使用的种子</value></data>
+  <data name="Cfg_WorldGenSize_Name" xml:space="preserve"><value>世界大小</value></data>
+  <data name="Cfg_WorldGenSize_Desc" xml:space="preserve"><value>随机生成世界的宽度/高度（米）。官方支持 6144 至 10240，且须为 2048 的倍数。</value></data>
+  <data name="Cfg_GameName_Name" xml:space="preserve"><value>游戏名称</value></data>
+  <data name="Cfg_GameName_Desc" xml:space="preserve"><value>存档名称（可用字母、数字、_ - . 和空格）。更改后将开始新的存档。</value></data>
+  <data name="Cfg_GameMode_Name" xml:space="preserve"><value>游戏模式</value></data>
+  <data name="Cfg_GameMode_Desc" xml:space="preserve"><value>服务器的游戏模式</value></data>
+  <data name="Cfg_GameMode_Opts" xml:space="preserve"><value>生存（GameModeSurvival）</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Name" xml:space="preserve"><value>睡袋死区</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Desc" xml:space="preserve"><value>睡袋周围此半径（物块）内其他人无法放置睡袋，也不会刷出丧尸</value></data>
+  <data name="Cfg_BedrollExpiryTime_Name" xml:space="preserve"><value>睡袋持续时间</value></data>
+  <data name="Cfg_BedrollExpiryTime_Desc" xml:space="preserve"><value>主人最后一次在线后，睡袋保持有效的现实天数</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Name" xml:space="preserve"><value>每位玩家可揭示地图区块上限</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Desc" xml:space="preserve"><value>每位玩家可在地图上揭示的最大区块数（131072 = 完整地图）</value></data>
+  <data name="Cfg_BlockDamagePlayer_Name" xml:space="preserve"><value>物块伤害</value></data>
+  <data name="Cfg_BlockDamagePlayer_Desc" xml:space="preserve"><value>玩家对物块造成的伤害比例。单人游戏常设为 300% 以减少采集量。</value></data>
+  <data name="Cfg_BlockDamageAI_Name" xml:space="preserve"><value>敌人物块伤害</value></data>
+  <data name="Cfg_BlockDamageAI_Desc" xml:space="preserve"><value>平时丧尸/动物对物块造成的伤害比例。降到 25-50% 可防止丧尸轻易拆墙。</value></data>
+  <data name="Cfg_BlockDamageAIBM_Name" xml:space="preserve"><value>血月物块伤害</value></data>
+  <data name="Cfg_BlockDamageAIBM_Desc" xml:space="preserve"><value>仅在血月期间丧尸对物块造成的伤害比例。与平时分开设置，让尸潮更猛或更温和。</value></data>
+  <data name="Cfg_GameDifficulty_Name" xml:space="preserve"><value>游戏难度</value></data>
+  <data name="Cfg_GameDifficulty_Desc" xml:space="preserve"><value>总体难度。在 3.x 中，玩家实际感受到的是沙盒难度预设，此项基本属于旧版设置。</value></data>
+  <data name="Cfg_GameDifficulty_Opts" xml:space="preserve"><value>0 - 拾荒者|1 - 冒险家|2 - 流浪者|3 - 战士|4 - 幸存者|5 - 疯狂</value></data>
+  <data name="Cfg_DayNightLength_Name" xml:space="preserve"><value>24 小时周期</value></data>
+  <data name="Cfg_DayNightLength_Desc" xml:space="preserve"><value>游戏内 24 小时对应的现实分钟数</value></data>
+  <data name="Cfg_DayLightLength_Name" xml:space="preserve"><value>白昼时长</value></data>
+  <data name="Cfg_DayLightLength_Desc" xml:space="preserve"><value>白天在游戏内持续的小时数（共 24 小时）</value></data>
+  <data name="Cfg_BuildCreate_Name" xml:space="preserve"><value>创意模式</value></data>
+  <data name="Cfg_BuildCreate_Desc" xml:space="preserve"><value>允许创造/作弊建造模式</value></data>
+  <data name="Cfg_BuildCreate_Opts" xml:space="preserve"><value>开启|关闭</value></data>
+  <data name="Cfg_BloodMoonFrequency_Name" xml:space="preserve"><value>血月频率</value></data>
+  <data name="Cfg_BloodMoonFrequency_Desc" xml:space="preserve"><value>每隔 N 天出现一次血月尸潮</value></data>
+  <data name="Cfg_BloodMoonRange_Name" xml:space="preserve"><value>血月范围</value></data>
+  <data name="Cfg_BloodMoonRange_Desc" xml:space="preserve"><value>血月日期随机增减的天数（0 = 准时）</value></data>
+  <data name="Cfg_BloodMoonWarning_Name" xml:space="preserve"><value>血月警告</value></data>
+  <data name="Cfg_BloodMoonWarning_Desc" xml:space="preserve"><value>血月前多少小时出现警告</value></data>
+  <data name="Cfg_BiomeProgression_Name" xml:space="preserve"><value>生态环境进度</value></data>
+  <data name="Cfg_BiomeProgression_Desc" xml:space="preserve"><value>越往危险的生态环境，丧尸越强</value></data>
+  <data name="Cfg_BiomeProgression_Opts" xml:space="preserve"><value>开启|关闭</value></data>
+  <data name="Cfg_StormFreq_Name" xml:space="preserve"><value>风暴频率</value></data>
+  <data name="Cfg_StormFreq_Desc" xml:space="preserve"><value>天气风暴的频率。0% 为关闭。</value></data>
+  <data name="Cfg_StormFreq_Opts" xml:space="preserve"><value>0% - 关闭|50%|100%|150%|200%|300%|400%|500%</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Name" xml:space="preserve"><value>每日任务数</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Desc" xml:space="preserve"><value>每天计入任务等级进度的任务数量上限。超出的任务仍有奖励。0 = 不限。</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Name" xml:space="preserve"><value>血月计数</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Desc" xml:space="preserve"><value>血月期间每位玩家同时存活的丧尸数量。游戏阶段和丧尸上限可能覆盖此值。对性能影响很大。</value></data>
+  <data name="Cfg_XPMultiplier_Name" xml:space="preserve"><value>经验值倍数</value></data>
+  <data name="Cfg_XPMultiplier_Desc" xml:space="preserve"><value>经验获取倍率（%）。数值越高升级越快。</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Name" xml:space="preserve"><value>玩家安全区等级</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Desc" xml:space="preserve"><value>等级不超过此值的玩家出生时会产生安全区（无敌人）</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Name" xml:space="preserve"><value>玩家安全区时长</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Desc" xml:space="preserve"><value>安全区持续的游戏内小时数</value></data>
+  <data name="Cfg_PlayerKillingMode_Name" xml:space="preserve"><value>玩家杀戮</value></data>
+  <data name="Cfg_PlayerKillingMode_Desc" xml:space="preserve"><value>玩家对战（PvP）规则</value></data>
+  <data name="Cfg_PlayerKillingMode_Opts" xml:space="preserve"><value>0 - 禁止杀戮|1 - 只能杀死盟友|2 - 只能杀死陌生人|3 - 能杀死任何人</value></data>
+  <data name="Cfg_PartySharedKillRange_Name" xml:space="preserve"><value>队伍共享杀戮范围</value></data>
+  <data name="Cfg_PartySharedKillRange_Desc" xml:space="preserve"><value>队友在此距离（米）内才能共享击杀经验和任务击杀进度</value></data>
+  <data name="Cfg_DeathPenalty_Name" xml:space="preserve"><value>死亡惩罚</value></data>
+  <data name="Cfg_DeathPenalty_Desc" xml:space="preserve"><value>玩家死亡时的惩罚</value></data>
+  <data name="Cfg_DeathPenalty_Opts" xml:space="preserve"><value>0 - 无|1 - 默认（经验惩罚）|2 - 受伤|3 - 永久死亡</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Name" xml:space="preserve"><value>允许在好友附近出生</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Desc" xml:space="preserve"><value>首次加入的新玩家能否选择在同时在线的好友附近出生</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Opts" xml:space="preserve"><value>0 - 禁用|1 - 始终允许|2 - 仅限森林生态中的好友</value></data>
+  <data name="Cfg_JarRefund_Name" xml:space="preserve"><value>罐子退款</value></data>
+  <data name="Cfg_JarRefund_Desc" xml:space="preserve"><value>制作食物/饮料时返还玻璃罐的百分比（0 = 不返还）</value></data>
+  <data name="Cfg_ZombieMove_Name" xml:space="preserve"><value>丧尸白天速度</value></data>
+  <data name="Cfg_ZombieMove_Desc" xml:space="preserve"><value>白天丧尸的移动速度</value></data>
+  <data name="Cfg_ZombieMove_Opts" xml:space="preserve"><value>0 - 行走|1 - 慢走|2 - 慢跑|3 - 奔跑|4 - 冲刺</value></data>
+  <data name="Cfg_ZombieMoveNight_Name" xml:space="preserve"><value>丧尸夜间速度</value></data>
+  <data name="Cfg_ZombieMoveNight_Desc" xml:space="preserve"><value>夜间丧尸的移动速度</value></data>
+  <data name="Cfg_ZombieMoveNight_Opts" xml:space="preserve"><value>0 - 行走|1 - 慢走|2 - 慢跑|3 - 奔跑|4 - 冲刺</value></data>
+  <data name="Cfg_ZombieFeralMove_Name" xml:space="preserve"><value>凶残丧尸速度</value></data>
+  <data name="Cfg_ZombieFeralMove_Desc" xml:space="preserve"><value>凶残丧尸的移动速度</value></data>
+  <data name="Cfg_ZombieFeralMove_Opts" xml:space="preserve"><value>0 - 行走|1 - 慢走|2 - 慢跑|3 - 奔跑|4 - 冲刺</value></data>
+  <data name="Cfg_ZombieBMMove_Name" xml:space="preserve"><value>丧尸血月速度</value></data>
+  <data name="Cfg_ZombieBMMove_Desc" xml:space="preserve"><value>血月期间丧尸的移动速度</value></data>
+  <data name="Cfg_ZombieBMMove_Opts" xml:space="preserve"><value>0 - 行走|1 - 慢走|2 - 慢跑|3 - 奔跑|4 - 冲刺</value></data>
+  <data name="Cfg_EnemyDifficulty_Name" xml:space="preserve"><value>敌人攻击性</value></data>
+  <data name="Cfg_EnemyDifficulty_Desc" xml:space="preserve"><value>凶猛模式会加入更具挑战性的丧尸类型</value></data>
+  <data name="Cfg_EnemyDifficulty_Opts" xml:space="preserve"><value>0 - 普通|1 - 凶猛</value></data>
+  <data name="Cfg_EnemySpawnMode_Name" xml:space="preserve"><value>敌人生成</value></data>
+  <data name="Cfg_EnemySpawnMode_Desc" xml:space="preserve"><value>是否在世界中生成敌人。关闭后适合安心建造或测试。</value></data>
+  <data name="Cfg_EnemySpawnMode_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Name" xml:space="preserve"><value>丧尸上限</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Desc" xml:space="preserve"><value>整个世界同时存活的丧尸上限（血月时 x1.9，睡眠丧尸 x2.1）。对性能影响很大。</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Name" xml:space="preserve"><value>动物上限</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Desc" xml:space="preserve"><value>同时存活的动物上限</value></data>
+  <data name="Cfg_ZombieFeralSense_Name" xml:space="preserve"><value>凶残丧尸感知</value></data>
+  <data name="Cfg_ZombieFeralSense_Desc" xml:space="preserve"><value>凶残丧尸可隔着墙壁和障碍物感知玩家</value></data>
+  <data name="Cfg_ZombieFeralSense_Opts" xml:space="preserve"><value>0 - 关闭|1 - 仅白天|2 - 仅夜晚|3 - 全天</value></data>
+  <data name="Cfg_AISmellMode_Name" xml:space="preserve"><value>AI 嗅觉模式</value></data>
+  <data name="Cfg_AISmellMode_Desc" xml:space="preserve"><value>丧尸循着气味追踪玩家时的移动速度。丧尸能闻到血液、食物和熔炉。速度越快，在丧尸附近烹饪和制作就越危险。</value></data>
+  <data name="Cfg_AISmellMode_Opts" xml:space="preserve"><value>0 - 关闭|1 - 行走|2 - 慢跑|3 - 奔跑|4 - 冲刺|5 - 噩梦</value></data>
+  <data name="Cfg_LootAbundance_Name" xml:space="preserve"><value>掉落率</value></data>
+  <data name="Cfg_LootAbundance_Desc" xml:space="preserve"><value>战利品数量倍率（%）</value></data>
+  <data name="Cfg_LootRespawnDays_Name" xml:space="preserve"><value>战利品刷新天数</value></data>
+  <data name="Cfg_LootRespawnDays_Desc" xml:space="preserve"><value>被搜刮的容器重新刷新所需的天数</value></data>
+  <data name="Cfg_AirDropFrequency_Name" xml:space="preserve"><value>空投</value></data>
+  <data name="Cfg_AirDropFrequency_Desc" xml:space="preserve"><value>空投间隔（游戏内小时，0 = 关闭）</value></data>
+  <data name="Cfg_AirDropMarker_Name" xml:space="preserve"><value>标记空投</value></data>
+  <data name="Cfg_AirDropMarker_Desc" xml:space="preserve"><value>空投落地时是否在地图和指南针上显示标记</value></data>
+  <data name="Cfg_AirDropMarker_Opts" xml:space="preserve"><value>显示|隐藏</value></data>
+  <data name="Cfg_DropOnDeath_Name" xml:space="preserve"><value>死亡丢失物品</value></data>
+  <data name="Cfg_DropOnDeath_Desc" xml:space="preserve"><value>玩家被杀死时掉落的物品</value></data>
+  <data name="Cfg_DropOnDeath_Opts" xml:space="preserve"><value>0 - 无|1 - 全部|2 - 仅工具带|3 - 仅背包|4 - 删除所有</value></data>
+  <data name="Cfg_DropOnQuit_Name" xml:space="preserve"><value>退出丢失物品</value></data>
+  <data name="Cfg_DropOnQuit_Desc" xml:space="preserve"><value>玩家断开连接时掉落的物品</value></data>
+  <data name="Cfg_DropOnQuit_Opts" xml:space="preserve"><value>0 - 无|1 - 全部|2 - 仅工具带|3 - 仅背包</value></data>
+  <data name="Cfg_LandClaimSize_Name" xml:space="preserve"><value>所有权范围</value></data>
+  <data name="Cfg_LandClaimSize_Desc" xml:space="preserve"><value>领地石保护的区域大小（物块，41 = 向各方向延伸 20 格）</value></data>
+  <data name="Cfg_LandClaimDeadZone_Name" xml:space="preserve"><value>死区距离</value></data>
+  <data name="Cfg_LandClaimDeadZone_Desc" xml:space="preserve"><value>领地石之间的最小距离（物块，好友除外）</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Name" xml:space="preserve"><value>所有权期限</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Desc" xml:space="preserve"><value>玩家离线多少现实天数后其领地失效</value></data>
+  <data name="Cfg_LandClaimDecayMode_Name" xml:space="preserve"><value>所有权衰减模式</value></data>
+  <data name="Cfg_LandClaimDecayMode_Desc" xml:space="preserve"><value>离线玩家的领地保护如何衰减</value></data>
+  <data name="Cfg_LandClaimDecayMode_Opts" xml:space="preserve"><value>0 - 慢速（线性）|1 - 快速（指数）|2 - 无（失效前完全保护）</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Name" xml:space="preserve"><value>在线所有权生命值</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Desc" xml:space="preserve"><value>主人在线时领地内物块的硬度倍率（0 = 无法破坏）</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Name" xml:space="preserve"><value>离线所有权生命值</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Desc" xml:space="preserve"><value>主人离线时领地内物块的硬度倍率（0 = 无法破坏）</value></data>
+  <data name="Cfg_LandClaimCount_Name" xml:space="preserve"><value>领地数量上限</value></data>
+  <data name="Cfg_LandClaimCount_Desc" xml:space="preserve"><value>每位玩家可拥有的领地数量上限</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Name" xml:space="preserve"><value>领地离线延迟</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Desc" xml:space="preserve"><value>玩家下线后，领地硬度从在线切换为离线前的分钟数</value></data>
+  <data name="Cfg_ServerPort_Name" xml:space="preserve"><value>游戏端口</value></data>
+  <data name="Cfg_ServerPort_Desc" xml:space="preserve"><value>游戏主端口（还会额外使用 +1 和 +2 端口）</value></data>
+  <data name="Cfg_ServerVisibility_Name" xml:space="preserve"><value>服务器可见性</value></data>
+  <data name="Cfg_ServerVisibility_Desc" xml:space="preserve"><value>谁能在服务器浏览器中看到此服务器</value></data>
+  <data name="Cfg_ServerVisibility_Opts" xml:space="preserve"><value>0 - 不公开|1 - 仅好友|2 - 公开</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Name" xml:space="preserve"><value>最大玩家数</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Desc" xml:space="preserve"><value>同时在线的最大玩家数</value></data>
+  <data name="Cfg_ServerReservedSlots_Name" xml:space="preserve"><value>预留名额</value></data>
+  <data name="Cfg_ServerReservedSlots_Desc" xml:space="preserve"><value>最大玩家数中，为拥有预留名额权限等级的玩家保留的名额数</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Name" xml:space="preserve"><value>世界传输速度上限</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Desc" xml:space="preserve"><value>新玩家首次连接时下载世界的最大速度（KiB/s，游戏上限约 1300）</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Name" xml:space="preserve"><value>禁用的网络协议</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Desc" xml:space="preserve"><value>要禁用的协议。如果玩家与服务器之间没有 NAT 路由器，或已正确设置端口转发，专用服务器应禁用 SteamNetworking。</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Opts" xml:space="preserve"><value>无|SteamNetworking|LiteNetLib|两者都禁用</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Name" xml:space="preserve"><value>跨平台联机</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Desc" xml:space="preserve"><value>启用跨平台联机。跨平台服务器不能忽略制裁，且玩家名额须为默认值或更少。</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Opts" xml:space="preserve"><value>开启|关闭</value></data>
+  <data name="Cfg_TelnetEnabled_Name" xml:space="preserve"><value>启用 Telnet</value></data>
+  <data name="Cfg_TelnetEnabled_Desc" xml:space="preserve"><value>启用 Telnet 远程控制台</value></data>
+  <data name="Cfg_TelnetEnabled_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_TelnetPort_Name" xml:space="preserve"><value>Telnet 端口</value></data>
+  <data name="Cfg_TelnetPort_Desc" xml:space="preserve"><value>Telnet 连接使用的端口</value></data>
+  <data name="Cfg_TelnetPassword_Name" xml:space="preserve"><value>Telnet 密码</value></data>
+  <data name="Cfg_TelnetPassword_Desc" xml:space="preserve"><value>Telnet 访问密码。留空时 Telnet 只监听本机（localhost）。</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Name" xml:space="preserve"><value>Telnet 登录失败上限</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Desc" xml:space="preserve"><value>登录失败多少次后临时封禁该客户端</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Name" xml:space="preserve"><value>Telnet 封禁时长</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Desc" xml:space="preserve"><value>登录失败次数过多后封禁的秒数</value></data>
+  <data name="Cfg_EACEnabled_Name" xml:space="preserve"><value>反作弊（EAC）</value></data>
+  <data name="Cfg_EACEnabled_Desc" xml:space="preserve"><value>Easy Anti-Cheat。关闭后允许安装了模组的客户端连接。</value></data>
+  <data name="Cfg_EACEnabled_Opts" xml:space="preserve"><value>开启|关闭</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Name" xml:space="preserve"><value>隐藏命令执行日志</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Desc" xml:space="preserve"><value>隐藏命令执行的日志记录。数值越高，隐藏的范围越广。</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Opts" xml:space="preserve"><value>0 - 全部显示|1 - 对 Telnet/控制面板隐藏|2 - 同时对游戏客户端隐藏|3 - 全部隐藏</value></data>
+  <data name="Cfg_AdminFileName_Name" xml:space="preserve"><value>管理员文件名</value></data>
+  <data name="Cfg_AdminFileName_Desc" xml:space="preserve"><value>服务器管理员文件名，路径相对于存档文件夹。</value></data>
+  <data name="Cfg_ServerAdminSlots_Name" xml:space="preserve"><value>管理员名额</value></data>
+  <data name="Cfg_ServerAdminSlots_Desc" xml:space="preserve"><value>服务器满员时仍可加入的管理员数量</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Name" xml:space="preserve"><value>管理员名额权限</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Desc" xml:space="preserve"><value>使用管理员名额所需的权限等级（0 = 最高管理员）</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Name" xml:space="preserve"><value>预留名额权限</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Desc" xml:space="preserve"><value>使用预留名额所需的权限等级</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Name" xml:space="preserve"><value>忽略 EOS 制裁</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Desc" xml:space="preserve"><value>允许玩家加入时忽略 EOS 制裁</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Name" xml:space="preserve"><value>固定玩家档案</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Desc" xml:space="preserve"><value>开启后，玩家总是使用上次加入时的角色档案；关闭则可任选档案。</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_CameraRestrictionMode_Name" xml:space="preserve"><value>限制镜头模式</value></data>
+  <data name="Cfg_CameraRestrictionMode_Desc" xml:space="preserve"><value>限制玩家可使用的视角</value></data>
+  <data name="Cfg_CameraRestrictionMode_Opts" xml:space="preserve"><value>0 - 自由（第一/第三人称）|1 - 仅第一人称|2 - 仅第三人称</value></data>
+  <data name="Cfg_TwitchServerPermission_Name" xml:space="preserve"><value>Twitch 权限等级</value></data>
+  <data name="Cfg_TwitchServerPermission_Desc" xml:space="preserve"><value>在服务器上使用 Twitch 集成所需的权限等级</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Name" xml:space="preserve"><value>血月期间允许 Twitch</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Desc" xml:space="preserve"><value>是否允许在血月期间触发 Twitch 动作。额外刷出的丧尸可能导致卡顿。</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_ServerWebsiteURL_Name" xml:space="preserve"><value>服务器网站</value></data>
+  <data name="Cfg_ServerWebsiteURL_Desc" xml:space="preserve"><value>在服务器浏览器中作为服务器网站显示的网址</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Name" xml:space="preserve"><value>最大视距</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Desc" xml:space="preserve"><value>客户端可请求的最大视距（6-12）。对内存和性能影响很大。</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Name" xml:space="preserve"><value>终端窗口</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Desc" xml:space="preserve"><value>显示用于输出日志和输入命令的终端窗口（仅 Windows）</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_WebDashboardEnabled_Name" xml:space="preserve"><value>网页控制面板</value></data>
+  <data name="Cfg_WebDashboardEnabled_Desc" xml:space="preserve"><value>启用游戏自带的网页控制面板</value></data>
+  <data name="Cfg_WebDashboardEnabled_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_WebDashboardPort_Name" xml:space="preserve"><value>网页控制面板端口</value></data>
+  <data name="Cfg_WebDashboardPort_Desc" xml:space="preserve"><value>游戏自带网页控制面板的端口</value></data>
+  <data name="Cfg_WebDashboardUrl_Name" xml:space="preserve"><value>网页控制面板外部地址</value></data>
+  <data name="Cfg_WebDashboardUrl_Desc" xml:space="preserve"><value>使用反向代理时网页控制面板的外部 URL</value></data>
+  <data name="Cfg_EnableMapRendering_Name" xml:space="preserve"><value>地图渲染</value></data>
+  <data name="Cfg_EnableMapRendering_Desc" xml:space="preserve"><value>探索时将地图渲染为图块图像，供网页控制面板显示地图。</value></data>
+  <data name="Cfg_EnableMapRendering_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Name" xml:space="preserve"><value>动态网格</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Desc" xml:space="preserve"><value>启用动态网格系统以改善远景效果</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Name" xml:space="preserve"><value>动态网格仅限领地</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Desc" xml:space="preserve"><value>仅在玩家领地范围内启用动态网格</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Opts" xml:space="preserve"><value>是|否</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Name" xml:space="preserve"><value>动态网格领地缓冲</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Desc" xml:space="preserve"><value>动态网格在领地周围的区块半径</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Name" xml:space="preserve"><value>动态网格最大并发</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Desc" xml:space="preserve"><value>同时处理的项目数量上限。数值越高，内存占用越大。</value></data>
+  <data name="Cfg_MaxChunkAge_Name" xml:space="preserve"><value>区块重置计时器</value></data>
+  <data name="Cfg_MaxChunkAge_Desc" xml:space="preserve"><value>区块在多少游戏天内未被访问且未受保护后重置为原始状态。-1 = 永不重置。</value></data>
+  <data name="Cfg_SaveDataLimit_Name" xml:space="preserve"><value>存档空间上限</value></data>
+  <data name="Cfg_SaveDataLimit_Desc" xml:space="preserve"><value>每个存档的最大磁盘空间（MB）。达到上限时可能重置区块以释放空间。-1 = 不限制。</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Name" xml:space="preserve"><value>网格层队列上限</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>生成区块网格时排队的最大层数。数值越低内存占用越少，但生成更慢。</value></data>
+  <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>用户数据文件夹</value></data>
+  <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>覆盖存档、用户数据和随机生成世界的保存路径。留空使用默认位置。</value></data>
+</root>

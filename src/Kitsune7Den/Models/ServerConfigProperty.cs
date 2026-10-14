@@ -15,6 +15,12 @@ public partial class ServerConfigProperty : ObservableObject
     public string[]? Options { get; set; }
     public string[]? OptionLabels { get; set; }
 
+    /// <summary>Translated field name, or null to derive one from <see cref="Name"/>.</summary>
+    public string? Label { get; set; }
+
+    /// <summary>Set on a 3.x server for properties the game now takes from SandboxCode.</summary>
+    public bool IsSandboxGoverned { get; set; }
+
     /// <summary>
     /// Human-friendly display name derived from the property name.
     /// "ServerMaxPlayerCount" -> "Server Max Player Count"
@@ -23,6 +29,7 @@ public partial class ServerConfigProperty : ObservableObject
     {
         get
         {
+            if (!string.IsNullOrEmpty(Label)) return Label;
             if (string.IsNullOrEmpty(Name)) return Name;
             var chars = new System.Text.StringBuilder();
             for (var i = 0; i < Name.Length; i++)
@@ -37,6 +44,9 @@ public partial class ServerConfigProperty : ObservableObject
             return chars.ToString();
         }
     }
+
+    /// <summary>When the label is translated, the real key in parentheses so admins can still find it.</summary>
+    public string KeyHint => string.IsNullOrEmpty(Label) ? "" : $"  ({Name})";
 
     /// <summary>
     /// For select fields: pairs of (value, label) for the ComboBox.
@@ -80,5 +90,7 @@ public enum ConfigFieldType
     Boolean,
     Password,
     Select,
-    EditableSelect
+    EditableSelect,
+    /// <summary>A 7D2D 3.x SandboxCode, edited through the Sandbox editor.</summary>
+    Sandbox
 }

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>Console</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>Players</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>Configuration</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>Mods</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>Backups</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>Logs</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>Server: </value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet: </value></data>
+  <data name="Status_Players" xml:space="preserve"><value>Players: </value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>Starting</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>Running</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>Stopping</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>Connected</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>Disconnected</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="Common_No" xml:space="preserve"><value>No</value></data>
+  <data name="Common_On" xml:space="preserve"><value>On</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>Off</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Browse</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Error</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>Welcome to Kitsune7Den</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>Let's get your server wired up. Pick one:</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>Already installed?</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value> Click </value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value> below and point to your </value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>Starting fresh?</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value> Head to </value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>Settings → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value> and Kitsune7Den will install the server for you</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>Server Location</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>Point this to your 7DaysToDieServer.exe (or install one via Settings)</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>Path to 7DaysToDieServer.exe — use Browse or set up SteamCMD in Settings to auto-install</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>Server Status</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>State</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>Uptime</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>Players</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>Controls</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>Connect Telnet</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>Manually connect telnet — use when the server is already running</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>Restart</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>Connection Info</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>Copy LAN address to clipboard</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>Copy public address to clipboard</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>LAN</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>PUBLIC</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>Server Executable</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>All Executables</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>Select 7 Days to Die Server Executable</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>Console</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>Send</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>Backed up serverconfig.xml (protection against Steam updates).</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>Could not back up config: {0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>Checking for updates...</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>Update check complete.</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>Update check failed — starting anyway.</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>Restored serverconfig.xml from backup.</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>Could not restore config backup: {0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>Log file: {0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>Starting server: {0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>Failed to start server: {0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>Sending shutdown command...</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>Force killing server process...</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>Server stopped.</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>Cleaned old log: {0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>Online Players</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>online</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>Kick</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>Ban</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>LEVEL</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>HEALTH</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>SCORE</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>ZOMBIES</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>DEATHS</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>PING</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP: </value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>Give Admin</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>Remove Admin</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>Not found</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>Ban '{0}'?
+This will add them to the blacklist.</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>Confirm Ban</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>Could not determine player's platform ID.</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>Remove admin from '{0}'?</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>Confirm</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>Owner</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>Moderator</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>Level {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>Server Logs</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>Filter logs (e.g. ERR, INF, player name...)</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>Open in Explorer</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>Server directory not set</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>{0} log files found</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>No log files found</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>File not found</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- Showing first 10,000 of {0} (use filter to narrow) ---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>{0} matching lines in {1}</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>{0} lines — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>Error reading log: {0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>Updates</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>Check GitHub for the latest release of Kitsune7Den. Updates are downloaded and installed in-place — no installer needed.</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Check for Updates</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>Install Update</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>View on GitHub</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>Update available: </value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>Appearance</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>Theme</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>Deep navy + red accent (default)</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>Dark charcoal + cool blue accent</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>Dark green tones + amber accent</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>High contrast, colorblind-friendly (blue/orange, no red/green)</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>Support the Project</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den is free and open source. If it saves you time or makes your server life easier, you can buy me a coffee. No pressure, only gratitude.</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>Opens ko-fi.com in your default browser</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>Support me on Ko-fi</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>SteamCMD lets you install and update the 7D2D dedicated server directly.</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>SteamCMD Path</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>Download</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>Downloads SteamCMD automatically</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>Path to steamcmd.exe</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>SteamCMD not found</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD ready</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>Server Installation</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>Install Directory</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>Where the 7D2D server files will be installed</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>Server Branch</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>Select a known branch or type a custom one (e.g. alpha21.2)</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>Auto-update on server start</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>Validate files</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>Runs file validation during update (slower but fixes corrupted files)</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>Install / Update Server</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet Connection</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>These should match the values in your serverconfig.xml. Kitsune7Den uses telnet to send commands and read player data.</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet Port</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet Password</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>Save All Settings</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>Terms of Use</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den is provided as-is for personal, non-commercial use only. No warranty or guarantee of any kind is offered. The author is not responsible for data loss, server issues, or any other damages arising from use of this software. Use at your own risk. This tool is not affiliated with or endorsed by The Fun Pimps or Valve.</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>Operation completed successfully</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>Operation failed — check log</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>Theme changed to {0}</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>Settings saved</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>All Executables</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>Select steamcmd.exe</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>Select Server Install Directory</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>Set a server install directory first — SteamCMD will be placed nearby</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>SteamCMD not found — download or browse to it first</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>Set a server install directory first</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>Updating...</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>Cancelling...</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>Install update {0} ({1})?
+
+Kitsune7Den will download the new version and restart. The server will keep running.</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>Confirm Update</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>Checking for updates...</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>You're on the latest version ({0})</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>Update {0} available but no downloadable exe/zip asset was found on the release</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>Update available: {0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>Update check failed: {0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>Could not locate current exe path</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>Downloading {0} ({1})...</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>Extracting...</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>Zip did not contain {0}</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>Download complete. Installing...</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>Update installed. Restarting...</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Update failed: {0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD already exists at: {0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>Downloading SteamCMD...</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>Extracting SteamCMD...</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD installed at: {0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>Error: steamcmd.exe not found after extraction</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>Error downloading SteamCMD: {0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>Error: SteamCMD path not set or not found. Download it first.</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>Error: Server install directory not set.</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>Running: steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>Branch: {0} | Validate: {1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>This may take a while on first install...</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>Server exe found: {0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>Update completed successfully!</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD exited with code: {0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>Update cancelled.</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>Error running SteamCMD: {0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>Open Folder</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>Install from Zip</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>{0} / {1} enabled</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>Enable</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>Disable</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>by </value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>{0} mods ({1} enabled)</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>Enabled {0}</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>Disabled {0}</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>Delete mod '{0}'?
+This will remove all files and cannot be undone.</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>Confirm Delete</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>Deleted {0}</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>Mod Archives</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>All Files</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>Select Mod Zip File</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>Error: Could not detect mod structure in zip. Expected a folder with ModInfo.xml.</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>Error: Invalid mod folder name.</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>Installed mod: {0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>Error installing mod: {0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>Save: </value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>Not found</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>Open Folder</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>Create Backup</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>SCHEDULED</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>INTERVAL</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>MAX BACKUPS</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>Save Schedule</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>NEXT BACKUP</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>No backups yet</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>Hit </value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value> to zip up your current save, or enable the schedule above to auto-backup at a regular interval.</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>Restore</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>manual</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>scheduled</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>pre-restore</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>Every 30 minutes</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>Every hour</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>Every 2 hours</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>Every 4 hours</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>Every 6 hours</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>Every 12 hours</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>Every day</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>{0} backup(s) found</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>Restore backup '{0}'?
+
+A safety backup will be created first.
+The server should be stopped before restoring.</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>Confirm Restore</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>Delete backup '{0}'?
+This cannot be undone.</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>Confirm Delete</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>Schedule settings saved</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>just now</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>{0}m ago</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>{0}h ago</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>{0}d ago</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>Running scheduled backup...</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>Scheduled backups enabled — every {0}</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} minutes</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 hour</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} hours</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 day</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} days</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>Error: Could not find save directory</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>Creating backup of {0}...</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>Backup created: {0} ({1})</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>Backup failed: {0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>Error: Could not find save directory to restore to</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>Creating safety backup before restore...</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>Restoring {0}...</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>Restored {0} successfully. Restart the server for changes to take effect.</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>Restore failed: {0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>Deleted {0}</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>Pruned old backup: {0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>Server Configuration</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>Form View</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>Raw XML</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>Reset</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>Save Changes</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>No server configured</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>Go to the Dashboard and browse to your </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value> — or install a new server from the Settings page via SteamCMD.</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>No serverconfig.xml found — configure a server on the Dashboard</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>Loaded {0} properties</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>Saved (backup created)</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>Save failed — check XML validity</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>Reset to last saved values</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>DAY / NIGHT CYCLE</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>DAY</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>NIGHT</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> min</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> min total</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>Total cycle:</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>min  (10 – 240)</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>Replaces DayNightLength ({0}) and DayLightLength ({1})</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>Detected 7 Days to Die {0} (from the server log)</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>7 Days to Die {0} (from the SteamCMD branch setting)</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>7 Days to Die 3.x (exact version unknown until the server has started once)</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>This serverconfig.xml is from before 7 Days to Die 3.0</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>3.x moved difficulty, loot, zombie, blood moon and day-length settings into the in-game Sandbox, set by one SandboxCode. The old properties below under Legacy are ignored by the game. Updating comments them out (nothing is deleted), adds SandboxCode, Region and Language, and takes a backup first.</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>Update for 3.x</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>Update serverconfig.xml for 3.x</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>Comment out the settings 3.x ignores and add SandboxCode, Region and Language?
+
+A timestamped backup of serverconfig.xml is made first. The old values stay in the file as comments.</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>Updated for 3.x: commented out {0} legacy settings, added: {1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml is already in the 3.x format</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>Update failed: {0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Save or reset your unsaved changes first</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ignores these: it takes them from SandboxCode instead. Change them in the Sandbox editor above.</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Sandbox Options</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Edit Sandbox...</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>Difficulty, loot, zombies, blood moons, day length, traders and more. Same options as the game's Sandbox screen.</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>Preset: {0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>Custom rules: {0} options changed from default</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>This SandboxCode can't be read. Open the editor to see why.</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode updated. Save Changes to write it to serverconfig.xml.</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>Using the {0} option table (server: 7 Days to Die {1}).</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>This server runs 7 Days to Die {0}, but the newest option table in this version of Kitsune7Den is {1}. Options added or changed since then may be missing or shifted. Check for a Kitsune7Den update.</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>Couldn't tell which 3.x version this server runs, so the newest table ({0}) is used. Start the server once so its log records the version; codes can mean different things on different 3.x versions.</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>Preset</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>Matches the {0} preset</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>Custom rules</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>Search options...</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>Back to default</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>Reset All</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>Apply</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>changed from default</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>Default: {0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>The code is empty.</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>A SandboxCode is letters A–Z only.</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>This code starts with "{0}", but this game version's codes start with "{1}".</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>{0} part(s) of this code aren't options in this game version and will be kept as they are: {1}</value></data>
+</root>

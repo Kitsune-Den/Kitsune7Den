@@ -1,3 +1,5 @@
+using Kitsune7Den.Localization;
+
 namespace Kitsune7Den.Models;
 
 public class ModInfo
@@ -18,5 +20,5 @@ public class ModInfo
         _ => $"{FolderSizeBytes / (1024.0 * 1024):F1} MB"
     };
 
-    public string StatusText => IsEnabled ? "Enabled" : "Disabled";
+    public string StatusText => Loc.T(IsEnabled ? "Mods_StatusEnabled" : "Mods_StatusDisabled");
 }

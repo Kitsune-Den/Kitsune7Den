@@ -1,3 +1,5 @@
+using Kitsune7Den.Localization;
+
 namespace Kitsune7Den.Models;
 
 public class BackupInfo
@@ -24,11 +26,11 @@ public class BackupInfo
         get
         {
             var ago = DateTime.Now - CreatedAt;
-            if (ago.TotalMinutes < 1) return "just now";
-            if (ago.TotalMinutes < 60) return $"{(int)ago.TotalMinutes}m ago";
-            if (ago.TotalHours < 24) return $"{(int)ago.TotalHours}h ago";
-            if (ago.TotalDays < 7) return $"{(int)ago.TotalDays}d ago";
-            return CreatedAt.ToString("yyyy-MM-dd HH:mm");
+            if (ago.TotalMinutes < 1) return Loc.T("Backups_JustNow");
+            if (ago.TotalMinutes < 60) return Loc.F("Backups_MinutesAgo", (int)ago.TotalMinutes);
+            if (ago.TotalHours < 24) return Loc.F("Backups_HoursAgo", (int)ago.TotalHours);
+            if (ago.TotalDays < 7) return Loc.F("Backups_DaysAgo", (int)ago.TotalDays);
+            return CreatedAt.ToString("yyyy-MM-dd HH:mm", Loc.Instance.Culture);
         }
     }
 }

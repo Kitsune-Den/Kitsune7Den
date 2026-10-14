@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -15,6 +16,7 @@ public partial class ModsViewModel : ObservableObject
     [ObservableProperty] private string _statusMessage = "";
     [ObservableProperty] private int _enabledCount;
     [ObservableProperty] private int _totalCount;
+    [ObservableProperty] private string _enabledSummary = "";
 
     public ObservableCollection<ModInfo> Mods { get; } = [];
 
@@ -26,7 +28,16 @@ public partial class ModsViewModel : ObservableObject
         {
             Application.Current.Dispatcher.Invoke(() => StatusMessage = msg);
         };
+
+        UpdateEnabledSummary();
+        Loc.LanguageChanged += UpdateEnabledSummary;
     }
+
+    partial void OnEnabledCountChanged(int value) => UpdateEnabledSummary();
+    partial void OnTotalCountChanged(int value) => UpdateEnabledSummary();
+
+    private void UpdateEnabledSummary() =>
+        EnabledSummary = Loc.F("Mods_EnabledSummary", EnabledCount, TotalCount);
 
     [RelayCommand]
     private void Refresh()
@@ -37,7 +48,7 @@ public partial class ModsViewModel : ObservableObject
             Mods.Add(mod);
         TotalCount = mods.Count;
         EnabledCount = mods.Count(m => m.IsEnabled);
-        StatusMessage = $"{TotalCount} mods ({EnabledCount} enabled)";
+        StatusMessage = Loc.F("Mods_CountStatus", TotalCount, EnabledCount);
     }
 
     [RelayCommand]
@@ -48,8 +59,8 @@ public partial class ModsViewModel : ObservableObject
         if (_modManager.ToggleMod(target.FolderName))
         {
             StatusMessage = target.IsEnabled
-                ? $"Disabled {target.DisplayName}"
-                : $"Enabled {target.DisplayName}";
+                ? Loc.F("Mods_DisabledMod", target.DisplayName)
+                : Loc.F("Mods_EnabledMod", target.DisplayName);
             Refresh();
         }
     }
@@ -61,8 +72,8 @@ public partial class ModsViewModel : ObservableObject
         if (target is null) return;
 
         var result = MessageBox.Show(
-            $"Delete mod '{target.DisplayName}'?\nThis will remove all files and cannot be undone.",
-            "Confirm Delete",
+            Loc.F("Mods_DeleteConfirm", target.DisplayName),
+            Loc.T("Mods_DeleteConfirmTitle"),
             MessageBoxButton.YesNo,
             MessageBoxImage.Warning);
 
@@ -70,7 +81,7 @@ public partial class ModsViewModel : ObservableObject
         {
             if (_modManager.DeleteMod(target.FolderName))
             {
-                StatusMessage = $"Deleted {target.DisplayName}";
+                StatusMessage = Loc.F("Mods_Deleted", target.DisplayName);
                 Refresh();
             }
         }
@@ -81,8 +92,8 @@ public partial class ModsViewModel : ObservableObject
     {
         var dialog = new Microsoft.Win32.OpenFileDialog
         {
-            Filter = "Mod Archives|*.zip|All Files|*.*",
-            Title = "Select Mod Zip File",
+            Filter = $"{Loc.T("Mods_FilterArchives")}|*.zip|{Loc.T("Mods_FilterAllFiles")}|*.*",
+            Title = Loc.T("Mods_SelectZipTitle"),
             Multiselect = true
         };
 

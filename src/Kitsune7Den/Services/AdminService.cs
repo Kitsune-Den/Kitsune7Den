@@ -146,11 +146,5 @@ public class AdminUser
     public string Name { get; set; } = "";
     public int PermissionLevel { get; set; } = 1000;
 
-    public string PermissionLabel => PermissionLevel switch
-    {
-        0 => "Owner",
-        1 => "Admin",
-        2 => "Moderator",
-        _ => $"Level {PermissionLevel}"
-    };
+    public string PermissionLabel => PermissionLabels.For(PermissionLevel);
 }

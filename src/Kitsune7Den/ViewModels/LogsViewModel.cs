@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.ViewModels;
@@ -18,9 +19,22 @@ public partial class LogsViewModel : ObservableObject
     public ObservableCollection<LogFileItem> LogFiles { get; } = [];
     public ObservableCollection<string> Lines { get; } = [];
 
+    // How the current status line was built, so a language switch can rebuild it.
+    private Func<string>? _status;
+
     public LogsViewModel(AppSettings settings)
     {
         _settings = settings;
+        Loc.LanguageChanged += () =>
+        {
+            if (_status is not null) StatusMessage = _status();
+        };
+    }
+
+    private void SetStatus(Func<string> build)
+    {
+        _status = build;
+        StatusMessage = build();
     }
 
     [RelayCommand]
@@ -30,7 +44,7 @@ public partial class LogsViewModel : ObservableObject
 
         if (string.IsNullOrEmpty(_settings.ServerDirectory))
         {
-            StatusMessage = "Server directory not set";
+            SetStatus(() => Loc.T("Logs_ServerDirNotSet"));
             return;
         }
 
@@ -67,11 +81,12 @@ public partial class LogsViewModel : ObservableObject
         if (LogFiles.Count > 0)
         {
             SelectedLog = LogFiles[0]; // auto-select newest
-            StatusMessage = $"{LogFiles.Count} log files found";
+            var count = LogFiles.Count;
+            SetStatus(() => Loc.F("Logs_FilesFound", count));
         }
         else
         {
-            StatusMessage = "No log files found";
+            SetStatus(() => Loc.T("Logs_NoFilesFound"));
         }
     }
 
@@ -93,7 +108,7 @@ public partial class LogsViewModel : ObservableObject
 
         if (!File.Exists(logFile.FilePath))
         {
-            StatusMessage = "File not found";
+            SetStatus(() => Loc.T("Logs_FileNotFound"));
             return;
         }
 
@@ -117,18 +132,19 @@ public partial class LogsViewModel : ObservableObject
                 // Cap at 10000 lines for performance
                 if (lineCount >= 10000)
                 {
-                    Lines.Add($"--- Showing first 10,000 of {logFile.FileName} (use filter to narrow) ---");
+                    Lines.Add(Loc.F("Logs_Truncated", logFile.FileName));
                     break;
                 }
             }
 
-            StatusMessage = hasFilter
-                ? $"{lineCount} matching lines in {logFile.FileName}"
-                : $"{lineCount} lines — {logFile.SizeText}";
+            SetStatus(() => hasFilter
+                ? Loc.F("Logs_MatchingLines", lineCount, logFile.FileName)
+                : Loc.F("Logs_LineCount", lineCount, logFile.SizeText));
         }
         catch (Exception ex)
         {
-            StatusMessage = $"Error reading log: {ex.Message}";
+            var message = ex.Message;
+            SetStatus(() => Loc.F("Logs_ReadError", message));
         }
     }
 

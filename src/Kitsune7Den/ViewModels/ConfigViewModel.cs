@@ -1,22 +1,35 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
+using Kitsune7Den.Services.Sandbox;
+using Kitsune7Den.Views;
 
 namespace Kitsune7Den.ViewModels;
 
 public partial class ConfigViewModel : ObservableObject
 {
     private readonly ConfigService _configService;
+    private readonly GameVersionService _gameVersionService;
     private bool _suppressDayNightSync;
+    private DetectedGameVersion _detected = DetectedGameVersion.Unknown;
 
     [ObservableProperty] private bool _hasChanges;
     [ObservableProperty] private bool _isEmpty = true;
     [ObservableProperty] private string _statusMessage = "";
     [ObservableProperty] private bool _isFormView = true;
     [ObservableProperty] private string _rawXml = "";
+
+    // 7D2D 3.x: gameplay rules moved from serverconfig.xml into SandboxCode
+    [ObservableProperty] private bool _isSandboxEra;
+    [ObservableProperty] private bool _needsMigration;
+    [ObservableProperty] private string _gameVersionText = "";
+    [ObservableProperty] private string _sandboxSummary = "";
+    [ObservableProperty] private bool _showDayNightCalculator;
 
     // Day/Night calculator — friendly inputs that sync to DayNightLength + DayLightLength.
     // Ported from KitsuneDen's resolveDayNightConfig / reverseDayNightConfig (src/lib/day-night.ts).
@@ -27,7 +40,7 @@ public partial class ConfigViewModel : ObservableObject
     public int DayNightTotal => DayMinutes + NightMinutes;
     public int DayPercent => DayNightTotal > 0 ? (int)Math.Round(DayMinutes * 100.0 / DayNightTotal) : 0;
     public string DayNightRawPreview =>
-        $"Replaces DayNightLength ({_dayNightLengthProp?.Value ?? "—"}) and DayLightLength ({_dayLightLengthProp?.Value ?? "—"})";
+        Loc.F("Config_DayNightPreview", _dayNightLengthProp?.Value ?? "—", _dayLightLengthProp?.Value ?? "—");
 
     private const int MinCycle = 10;
     private const int MaxCycle = 240;
@@ -39,15 +52,45 @@ public partial class ConfigViewModel : ObservableObject
     private ServerConfigProperty? _dayNightLengthProp;
     private ServerConfigProperty? _dayLightLengthProp;
 
-    public ConfigViewModel(ConfigService configService)
+    public ConfigViewModel(ConfigService configService, GameVersionService gameVersionService)
     {
         _configService = configService;
+        _gameVersionService = gameVersionService;
+        Loc.LanguageChanged += OnLanguageChanged;
+    }
+
+    private void OnLanguageChanged()
+    {
+        foreach (var prop in _allProperties)
+            FieldDefinitions.Localize(prop);
+        BuildGroups();
+        UpdateVersionText();
+        UpdateSandboxSummary();
+        OnPropertyChanged(nameof(DayNightRawPreview));
+        if (StatusMessage.Length > 0 && !HasChanges)
+            StatusMessage = LoadedMessage();
     }
 
     [RelayCommand]
     private void Load()
     {
-        _allProperties = _configService.LoadConfig();
+        foreach (var prop in _allProperties)
+            prop.PropertyChanged -= OnPropertyChanged;
+
+        _detected = _gameVersionService.Detect();
+        _allProperties = _configService.LoadConfig(_detected.IsSandboxEra);
+
+        // A config that already carries SandboxCode is 3.x-shaped even if we couldn't
+        // tell the version from the install (no log yet, "public" branch).
+        if (!_detected.IsSandboxEra && _allProperties.Any(p => p.Name == "SandboxCode"))
+        {
+            _detected = new DetectedGameVersion(null, GameVersionSource.InstallFiles);
+            _allProperties = _configService.LoadConfig(sandboxEra: true);
+        }
+
+        IsSandboxEra = _detected.IsSandboxEra;
+        NeedsMigration = IsSandboxEra && _configService.NeedsSandboxMigration();
+        UpdateVersionText();
         BuildGroups();
         RawXml = _configService.GetRawConfig() ?? "";
 
@@ -61,12 +104,113 @@ public partial class ConfigViewModel : ObservableObject
         _dayNightLengthProp = _allProperties.FirstOrDefault(p => p.Name == "DayNightLength");
         _dayLightLengthProp = _allProperties.FirstOrDefault(p => p.Name == "DayLightLength");
         SeedCalculatorFromRaw();
+        ShowDayNightCalculator = !IsSandboxEra && _dayNightLengthProp is not null && _dayLightLengthProp is not null;
+        UpdateSandboxSummary();
 
         HasChanges = false;
         IsEmpty = _allProperties.Count == 0;
-        StatusMessage = _allProperties.Count == 0
-            ? "No serverconfig.xml found — configure a server on the Dashboard"
-            : $"Loaded {_allProperties.Count} properties";
+        StatusMessage = LoadedMessage();
+    }
+
+    private string LoadedMessage() => _allProperties.Count == 0
+        ? Loc.T("Config_NoConfigFound")
+        : Loc.F("Config_Loaded", _allProperties.Count);
+
+    private void UpdateVersionText()
+    {
+        GameVersionText = _detected switch
+        {
+            { Version: { } v, Source: GameVersionSource.ServerLog } => Loc.F("Config_VersionFromLog", v),
+            { Version: { } v, Source: GameVersionSource.SteamBranch } => Loc.F("Config_VersionFromBranch", v),
+            { Source: GameVersionSource.InstallFiles } => Loc.T("Config_VersionThreeX"),
+            _ => "",
+        };
+    }
+
+    // ── Sandbox (3.x) ──
+
+    /// <summary>The option table for this server, and how sure we are it's the right one.</summary>
+    private (SandboxTable Table, string Note, bool Uncertain) PickSandboxTable()
+    {
+        var exact = SandboxTables.For(_detected.Version);
+        if (exact is not null)
+        {
+            return SandboxTables.IsBehind(_detected.Version, exact)
+                ? (exact, Loc.F("Sandbox_TableBehind", _detected.Version, exact.Version), true)
+                : (exact, Loc.F("Sandbox_TableExact", exact.Version, _detected.Version), false);
+        }
+
+        var latest = SandboxTables.Latest;
+        return (latest, Loc.F("Sandbox_TableGuess", latest.Version), true);
+    }
+
+    private void UpdateSandboxSummary()
+    {
+        var prop = _allProperties.FirstOrDefault(p => p.Name == "SandboxCode");
+        if (prop is null)
+        {
+            SandboxSummary = "";
+            return;
+        }
+
+        var (table, _, _) = PickSandboxTable();
+        var decoded = SandboxCodec.Decode(prop.Value, table);
+        if (!decoded.Ok)
+        {
+            SandboxSummary = Loc.T("Sandbox_SummaryInvalid");
+            return;
+        }
+
+        var selection = SandboxCodec.SelectionFromCode(prop.Value, table);
+        var preset = SandboxCodec.MatchingPreset(selection, table);
+        SandboxSummary = preset is not null
+            ? Loc.F("Sandbox_SummaryPreset", table.PresetLabel(preset))
+            : Loc.F("Sandbox_SummaryCustom", decoded.Entries.Count(e => e.ValueIndex != e.Option.DefaultIndex));
+    }
+
+    [RelayCommand]
+    private void OpenSandboxEditor()
+    {
+        var prop = _allProperties.FirstOrDefault(p => p.Name == "SandboxCode");
+        if (prop is null) return;
+
+        var (table, note, uncertain) = PickSandboxTable();
+        var editor = new SandboxEditorViewModel(table, prop.Value, note, uncertain);
+        var window = new SandboxEditorWindow(editor) { Owner = Application.Current.MainWindow };
+        if (window.ShowDialog() == true && editor.Code != prop.Value)
+        {
+            prop.Value = editor.Code;
+            UpdateSandboxSummary();
+            StatusMessage = Loc.T("Sandbox_Updated");
+        }
+    }
+
+    [RelayCommand]
+    private void MigrateToSandbox()
+    {
+        if (HasChanges)
+        {
+            StatusMessage = Loc.T("Config_SaveBeforeMigrate");
+            return;
+        }
+
+        var confirm = MessageBox.Show(
+            Loc.T("Config_MigrateConfirm"), Loc.T("Config_MigrateTitle"),
+            MessageBoxButton.YesNo, MessageBoxImage.Question);
+        if (confirm != MessageBoxResult.Yes) return;
+
+        try
+        {
+            var result = _configService.MigrateToSandbox();
+            Load();
+            StatusMessage = result.Changed
+                ? Loc.F("Config_Migrated", result.CommentedOut.Count, string.Join(", ", result.Added))
+                : Loc.T("Config_AlreadyMigrated");
+        }
+        catch (Exception ex)
+        {
+            StatusMessage = Loc.F("Config_MigrateFailed", ex.Message);
+        }
     }
 
     private void OnPropertyChanged(object? sender, PropertyChangedEventArgs e)
@@ -169,7 +313,7 @@ public partial class ConfigViewModel : ObservableObject
             if (success) Load(); // Reload form from saved XML
         }
 
-        StatusMessage = success ? "Saved (backup created)" : "Save failed — check XML validity";
+        StatusMessage = Loc.T(success ? "Config_Saved" : "Config_SaveFailed");
         HasChanges = false;
     }
 
@@ -177,7 +321,7 @@ public partial class ConfigViewModel : ObservableObject
     private void Reset()
     {
         Load();
-        StatusMessage = "Reset to last saved values";
+        StatusMessage = Loc.T("Config_ResetDone");
     }
 
     [RelayCommand]
@@ -220,13 +364,18 @@ public partial class ConfigViewModel : ObservableObject
 
 public class ConfigGroup
 {
+    /// <summary>English category key ("Gameplay"), used by the view's triggers.</summary>
     public string Name { get; }
-    public string NameUpper => Name.ToUpperInvariant();
+    public string DisplayName { get; }
+    public string NameUpper => DisplayName.ToUpper(Loc.Instance.Culture);
+    public bool IsLegacy => Name == FieldDefinitions.LegacyCategory;
+    public bool IsSandbox => Name == "Sandbox";
     public List<ServerConfigProperty> Properties { get; }
 
     public ConfigGroup(string name, List<ServerConfigProperty> properties)
     {
         Name = name;
+        DisplayName = FieldDefinitions.CategoryLabel(name);
         Properties = properties;
     }
 }

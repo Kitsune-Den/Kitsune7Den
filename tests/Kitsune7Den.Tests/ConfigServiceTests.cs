@@ -1,12 +1,15 @@
 using System.IO;
+using System.Xml.Linq;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
 namespace Kitsune7Den.Tests;
 
 /// <summary>
-/// Tests the serverconfig.xml parser and the world discovery scanner.
+/// Tests the serverconfig.xml parser, the world discovery scanner and the 3.x migration.
 /// </summary>
+[Collection("Localization")]
 public class ConfigServiceTests : IDisposable
 {
     private readonly string _tempRoot;
@@ -157,5 +160,191 @@ public class ConfigServiceTests : IDisposable
         WriteServerConfig("<?xml version=\"1.0\"?><ServerSettings></ServerSettings>");
         var ok = _service.SaveRawConfig("this is not xml at all <unclosed");
         Assert.False(ok);
+    }
+
+    // ── 7D2D 3.x ──
+
+    private const string PreThreeConfig = @"<?xml version=""1.0""?>
+<ServerSettings>
+  <property name=""ServerName"" value=""Den"" />
+  <property name=""GameDifficulty"" value=""3"" />
+  <property name=""XPMultiplier"" value=""200"" />
+  <property name=""BloodMoonFrequency"" value=""14"" />
+  <property name=""LootAbundance"" value=""150"" />
+  <property name=""LandClaimSize"" value=""41"" />
+</ServerSettings>";
+
+    private string ConfigPath => Path.Combine(_tempRoot, "serverconfig.xml");
+
+    private static List<string> LiveNames(string path) =>
+        XDocument.Load(path).Descendants("property").Select(p => p.Attribute("name")!.Value).ToList();
+
+    [Fact]
+    public void LoadConfig_SandboxEra_MovesGovernedKeysToLegacy()
+    {
+        WriteServerConfig(PreThreeConfig);
+
+        var props = _service.LoadConfig(sandboxEra: true);
+
+        Assert.Equal(FieldDefinitions.LegacyCategory, props.Single(p => p.Name == "XPMultiplier").Category);
+        Assert.True(props.Single(p => p.Name == "BloodMoonFrequency").IsSandboxGoverned);
+        // Survivors stay where they were
+        Assert.Equal("Gameplay", props.Single(p => p.Name == "GameDifficulty").Category);
+        Assert.Equal("Land Claims", props.Single(p => p.Name == "LandClaimSize").Category);
+    }
+
+    [Fact]
+    public void LoadConfig_Pre30_LeavesCategoriesAlone()
+    {
+        WriteServerConfig(PreThreeConfig);
+        var props = _service.LoadConfig();
+        Assert.Equal("Player", props.Single(p => p.Name == "XPMultiplier").Category);
+        Assert.DoesNotContain(props, p => p.IsSandboxGoverned);
+    }
+
+    [Fact]
+    public void MigrateToSandbox_CommentsOutGovernedKeys_AndAddsThe3xProperties()
+    {
+        WriteServerConfig(PreThreeConfig);
+        Assert.True(_service.NeedsSandboxMigration());
+
+        var result = _service.MigrateToSandbox();
+
+        Assert.True(result.Changed);
+        Assert.Equal(["XPMultiplier", "BloodMoonFrequency", "LootAbundance"], result.CommentedOut);
+        Assert.Equal(["SandboxCode", "Region", "Language"], result.Added);
+
+        var names = LiveNames(ConfigPath);
+        Assert.DoesNotContain("XPMultiplier", names);
+        Assert.Contains("GameDifficulty", names);
+        Assert.Contains("SandboxCode", names);
+
+        // The old values are preserved as comments, not deleted
+        var text = File.ReadAllText(ConfigPath);
+        Assert.Contains(@"name=""BloodMoonFrequency"" value=""14""", text);
+        Assert.Contains("AAAJABJACJADJARFBNC", text);
+
+        // And the original was backed up first
+        Assert.NotNull(result.BackupPath);
+        Assert.Contains(@"<property name=""XPMultiplier"" value=""200"" />", File.ReadAllText(result.BackupPath!));
+        Assert.False(_service.NeedsSandboxMigration());
+
+        // Added properties sit on their own lines, indented like the rest
+        Assert.Contains("\n  <property name=\"Region\"", text);
+        Assert.EndsWith("\n</ServerSettings>", text.TrimEnd());
+    }
+
+    [Fact]
+    public void MigrateToSandbox_IsIdempotent()
+    {
+        WriteServerConfig(PreThreeConfig);
+        _service.MigrateToSandbox();
+        var after = File.ReadAllText(ConfigPath);
+
+        var second = _service.MigrateToSandbox();
+
+        Assert.False(second.Changed);
+        Assert.Null(second.BackupPath);
+        Assert.Equal(after, File.ReadAllText(ConfigPath));
+    }
+
+    [Fact]
+    public void MigrateToSandbox_KeepsAnExistingSandboxCode()
+    {
+        WriteServerConfig(@"<?xml version=""1.0""?>
+<ServerSettings>
+  <property name=""SandboxCode"" value=""AAAKABKARDBNB"" />
+  <property name=""DropOnDeath"" value=""2"" />
+</ServerSettings>");
+
+        var result = _service.MigrateToSandbox();
+
+        Assert.DoesNotContain("SandboxCode", result.Added);
+        Assert.Contains(@"value=""AAAKABKARDBNB""", File.ReadAllText(ConfigPath));
+    }
+
+    [Fact]
+    public void Shipped33Template_NeedsNoMigration_AndHasNoGovernedKeys()
+    {
+        File.Copy(Path.Combine(AppContext.BaseDirectory, "Fixtures", "serverconfig-3.3.xml"), ConfigPath);
+
+        Assert.False(_service.NeedsSandboxMigration());
+        var props = _service.LoadConfig(sandboxEra: true);
+        Assert.DoesNotContain(props, p => p.IsSandboxGoverned);
+        Assert.Equal(ConfigFieldType.Sandbox, props.Single(p => p.Name == "SandboxCode").FieldType);
+        // Every property in the official template has a definition (none fall into "Other")
+        Assert.DoesNotContain(props, p => p.Category == "Other");
+    }
+
+    [Fact]
+    public void FieldLabels_MatchTheGamesOwnComments()
+    {
+        // serverconfig.xml: "0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone"
+        var pvp = FieldDefinitions.GetDefinition("PlayerKillingMode");
+        Assert.Equal("1 - Kill Allies Only", pvp.OptionLabels![1]);
+        Assert.Equal("2 - Kill Strangers Only", pvp.OptionLabels![2]);
+
+        // "0=Slow (Linear), 1=Fast (Exponential), 2=None"
+        var decay = FieldDefinitions.GetDefinition("LandClaimDecayMode");
+        Assert.StartsWith("0 - Slow", decay.OptionLabels![0]);
+        Assert.StartsWith("2 - None", decay.OptionLabels![2]);
+    }
+
+    [Fact]
+    public void DiscoverWorlds_AlsoScansUserDataFolder()
+    {
+        var udf = Path.Combine(_tempRoot, "UserData");
+        Directory.CreateDirectory(Path.Combine(udf, "GeneratedWorlds", "Funny Fox Hills"));
+        File.WriteAllText(Path.Combine(udf, "GeneratedWorlds", "Funny Fox Hills", "main.ttw"), "");
+
+        Assert.Contains("Funny Fox Hills", _service.DiscoverWorlds(udf));
+    }
+
+    [Fact]
+    public void Chinese_TranslatesLabelsButNeverValues()
+    {
+        WriteServerConfig(@"<?xml version=""1.0""?>
+<ServerSettings>
+  <property name=""PlayerKillingMode"" value=""1"" />
+</ServerSettings>");
+        try
+        {
+            Loc.Instance.SetLanguage(Loc.SimplifiedChinese);
+            var prop = Assert.Single(_service.LoadConfig());
+
+            Assert.Equal("玩家杀戮", prop.DisplayName);
+            Assert.Equal("  (PlayerKillingMode)", prop.KeyHint);
+            Assert.Equal("1 - 只能杀死盟友", prop.SelectedOption!.Label);
+            Assert.Equal("1", prop.SelectedOption.Value);
+            Assert.Equal("Player", prop.Category);
+        }
+        finally
+        {
+            Loc.Instance.SetLanguage(Loc.English);
+        }
+    }
+
+    [Fact]
+    public void EveryField_HasAChineseNameAndDescription_AndMatchingOptionCounts()
+    {
+        try
+        {
+            Loc.Instance.SetLanguage(Loc.SimplifiedChinese);
+            foreach (var name in FieldDefinitions.DefinedNames)
+            {
+                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Name")), $"{name}: no zh name");
+                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Desc")), $"{name}: no zh description");
+
+                var opts = Loc.TryGet($"Cfg_{name}_Opts");
+                if (opts is not null)
+                    Assert.Equal(FieldDefinitions.GetDefinition(name).Options!.Length, opts.Split('|').Length);
+            }
+            foreach (var category in FieldDefinitions.CategoryOrder.Append("Other"))
+                Assert.NotNull(Loc.TryGet("CfgCat_" + FieldDefinitions.CategoryKey(category)));
+        }
+        finally
+        {
+            Loc.Instance.SetLanguage(Loc.English);
+        }
     }
 }

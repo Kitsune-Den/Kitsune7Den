@@ -1,6 +1,7 @@
 <UserControl x:Class="Kitsune7Den.Views.LogsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:l="clr-namespace:Kitsune7Den.Localization"
              Loaded="OnLoaded">
 
     <Grid Margin="24">
@@ -13,9 +14,9 @@
 
         <!-- Header -->
         <DockPanel Grid.Row="0" Margin="0,0,0,12">
-            <TextBlock Style="{StaticResource SectionHeader}" Text="Server Logs" DockPanel.Dock="Left"
+            <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Logs_Title}" DockPanel.Dock="Left"
                        VerticalAlignment="Center" Margin="0" />
-            <Button Content="Refresh" Style="{StaticResource SecondaryButton}" DockPanel.Dock="Right"
+            <Button Content="{l:Tr Common_Refresh}" Style="{StaticResource SecondaryButton}" DockPanel.Dock="Right"
                     Command="{Binding RefreshCommand}" HorizontalAlignment="Right" />
         </DockPanel>
 
@@ -35,10 +36,10 @@
             <!-- Filter -->
             <TextBox Grid.Column="2" Style="{StaticResource DarkTextBox}"
                      Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged, Delay=300}"
-                     Tag="Filter logs (e.g. ERR, INF, player name...)" />
+                     Tag="{l:Tr Logs_FilterPlaceholder}" />
 
             <Button Grid.Column="3" Style="{StaticResource SecondaryButton}" Padding="8,6" Margin="6,0,0,0"
-                    Command="{Binding OpenInExplorerCommand}" ToolTip="Open in Explorer">
+                    Command="{Binding OpenInExplorerCommand}" ToolTip="{l:Tr Logs_OpenInExplorer}">
                 <TextBlock Text="&#xE838;" FontFamily="Segoe MDL2 Assets" FontSize="13" />
             </Button>
         </Grid>

@@ -2,6 +2,26 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [1.1.0] - 2026-10-14
+
+### Added
+- **7 Days to Die 3.x support (tested against 3.3).** 3.0 moved the gameplay rules (difficulty, XP, loot, zombie speed, blood moons, day length, and more) out of `serverconfig.xml` and into one `SandboxCode`. Kitsune7Den now knows that:
+  - **Game version detection** from the server's own log (`Version: V 3.3.0 (b18)`), a pinned SteamCMD branch, or the 3.x install files. It's shown at the top of the Configuration page.
+  - **Sandbox editor.** All 165 Sandbox options, grouped like the game's own Sandbox Options tabs, plus the built-in presets (Scavenger to Insane, and the Official set). It reads and writes `SandboxCode` exactly as the game's copy-code button does, with an option table for each of 3.0, 3.1, 3.2 and 3.3, so the letters mean the right thing on your server's version.
+  - **"Update for 3.x"** for configs from before 3.0. It comments out (never deletes) the 29 properties 3.x ignores, adds `SandboxCode`, `Region` and `Language`, and takes a timestamped backup first. Running it again changes nothing.
+  - On a 3.x server, the ignored properties move into a **Legacy** section with a note, instead of looking like they still do something. The Day/Night calculator only shows where it still applies.
+  - New fields: **Region**, **Language**, **SandboxCode**.
+- **Simplified Chinese (简体中文).** The whole app is translated, including every config field and option. Config and Sandbox labels use the game's own official Chinese wording from its `Localization.csv`, so they match what players see in-game. Kitsune7Den follows the Windows display language on first run, and you can switch at any time in **Settings → Appearance → Language / 语言**. The switch is live, with no restart. Translated config fields still show the real property name, e.g. `玩家杀戮 (PlayerKillingMode)`.
+- RWG world discovery also scans `UserDataFolder/GeneratedWorlds` when `serverconfig.xml` overrides it.
+
+### Fixed
+- **Player Killing Mode** labels for 1 and 2 were swapped. The game's own definition is 1 = Kill Allies Only, 2 = Kill Strangers Only.
+- **Land Claim Decay Mode** labels were wrong. They're now 0 = Slow (Linear), 1 = Fast (Exponential), 2 = None.
+- **Kick, Ban, Give Admin and Remove Admin** on player cards did nothing, because they acted on a "selected" player that was never set. They now act on the card you click.
+- **Restore and Delete** on backup cards could act on a different backup than the card you clicked.
+- Leaving the Configuration page and coming back silently threw away unsaved edits. It now only reloads when there's nothing unsaved.
+- Descriptions that didn't match the game: Reserved Slots, Admin Slots, Telnet Password (blank = localhost only), World Gen Size (officially 6144 to 10240), and others now follow the 3.3 `serverconfig.xml` comments.
+
 ## [1.0.3] - 2026-04-14
 
 ### Added

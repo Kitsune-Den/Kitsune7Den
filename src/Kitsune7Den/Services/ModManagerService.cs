@@ -1,6 +1,7 @@
 using System.IO;
 using System.IO.Compression;
 using System.Xml.Linq;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.Services;
@@ -142,14 +143,14 @@ public class ModManagerService
             else
             {
                 // Can't detect structure
-                StatusChanged?.Invoke("Error: Could not detect mod structure in zip. Expected a folder with ModInfo.xml.");
+                StatusChanged?.Invoke(Loc.T("Mods_ErrNoModStructure"));
                 return null;
             }
 
             // Security: prevent path traversal
             if (modFolderName.Contains(".."))
             {
-                StatusChanged?.Invoke("Error: Invalid mod folder name.");
+                StatusChanged?.Invoke(Loc.T("Mods_ErrInvalidFolderName"));
                 return null;
             }
 
@@ -172,12 +173,12 @@ public class ModManagerService
                 Directory.Delete(tempDir, recursive: true);
             }
 
-            StatusChanged?.Invoke($"Installed mod: {modFolderName}");
+            StatusChanged?.Invoke(Loc.F("Mods_Installed", modFolderName));
             return modFolderName;
         }
         catch (Exception ex)
         {
-            StatusChanged?.Invoke($"Error installing mod: {ex.Message}");
+            StatusChanged?.Invoke(Loc.F("Mods_InstallError", ex.Message));
 
             // Clean up temp on failure
             try { if (Directory.Exists(tempDir)) Directory.Delete(tempDir, recursive: true); }
