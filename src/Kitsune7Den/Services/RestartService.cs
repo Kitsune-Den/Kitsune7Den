@@ -317,7 +317,9 @@ public sealed class RestartService : IDisposable
         for (var attempt = 0; attempt < 30; attempt++)
         {
             if (process.CurrentState != ServerState.Running || telnet.IsConnected) return;
-            if (await telnet.ConnectAsync()) return;
+            // Only "not up yet" is worth retrying. A wrong password stays wrong, and every
+            // try counts toward the server's TelnetFailedLoginLimit block.
+            if (await telnet.ConnectAsync() != TelnetConnectResult.Unreachable) return;
             await Task.Delay(TimeSpan.FromSeconds(10));
         }
     }

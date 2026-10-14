@@ -148,7 +148,7 @@
   <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>更新时校验文件（速度较慢，但能修复损坏的文件）</value></data>
   <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>安装/更新服务器</value></data>
   <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet 连接</value></data>
-  <data name="Settings_TelnetDescription" xml:space="preserve"><value>这些值应与 serverconfig.xml 中的设置保持一致。Kitsune7Den 通过 Telnet 发送命令并读取玩家数据。</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den 每次连接时都会从 serverconfig.xml 读取 Telnet 端口和密码，只有在读取失败时才使用这里的值。Kitsune7Den 通过 Telnet 发送命令并读取玩家数据。</value></data>
   <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet 端口</value></data>
   <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet 密码</value></data>
   <data name="Settings_SaveAll" xml:space="preserve"><value>保存全部设置</value></data>
@@ -626,4 +626,11 @@ Kitsune7Den 将下载新版本并重新启动。服务器会继续运行。</val
   <data name="Restart_Failed" xml:space="preserve"><value>自动重启失败：{0}</value></data>
   <data name="Restart_CrashRestarting" xml:space="preserve"><value>将在 {0} 秒后重启服务器（崩溃重启第 {1}/{2} 次）。</value></data>
   <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>服务器再次崩溃。它在 {1} 分钟内已重启 {0} 次，因此将保持停止状态。请在控制台和日志中查找原因。</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>Telnet 端口 {0} 上暂无响应。如果服务器仍在启动，请稍等片刻；否则请检查 serverconfig.xml 中的 TelnetEnabled 和 TelnetPort。</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>服务器拒绝了 Telnet 密码。Kitsune7Den 使用 serverconfig.xml 中的 TelnetPassword。如果你在服务器运行期间修改过密码，请重启服务器使新密码生效。</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>服务器要求 Telnet 密码，但 serverconfig.xml 和设置中都没有填写。如果你刚在 serverconfig.xml 中添加了密码，请重启服务器。</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>serverconfig.xml 中已关闭 Telnet（TelnetEnabled = false）。Kitsune7Den 的控制台、玩家列表和重启功能都需要它，请开启后重启服务器。</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>密码错误</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>需要密码</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>配置中已关闭</value></data>
 </root>

@@ -54,7 +54,7 @@ public partial class MainViewModel : ObservableObject
         Loc.LanguageChanged += () =>
         {
             ServerStateText = Loc.T($"ServerState_{_processService.CurrentState}");
-            TelnetStateText = Loc.T(_telnetService.IsConnected ? "Telnet_Connected" : "Telnet_Disconnected");
+            TelnetStateText = TelnetStatus();
         };
 
         _processService.StateChanged += state =>
@@ -69,10 +69,21 @@ public partial class MainViewModel : ObservableObject
         {
             App.Current.Dispatcher.Invoke(() =>
             {
-                TelnetStateText = Loc.T(connected ? "Telnet_Connected" : "Telnet_Disconnected");
+                TelnetStateText = TelnetStatus();
             });
         };
     }
+
+    /// <summary>"Connected", or why not: a rejected login must not look like a plain disconnect.</summary>
+    private string TelnetStatus() => _telnetService.IsConnected
+        ? Loc.T("Telnet_Connected")
+        : _telnetService.LastResult switch
+        {
+            TelnetConnectResult.WrongPassword => Loc.T("Telnet_Status_WrongPassword"),
+            TelnetConnectResult.PasswordRequired => Loc.T("Telnet_Status_PasswordRequired"),
+            TelnetConnectResult.TelnetDisabled => Loc.T("Telnet_Status_TelnetDisabled"),
+            _ => Loc.T("Telnet_Disconnected"),
+        };
 
     [RelayCommand]
     private void Navigate(string destination)
