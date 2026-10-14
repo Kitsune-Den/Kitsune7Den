@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>Console</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>Players</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>Configuration</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>Mods</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>Backups</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>Logs</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>Server: </value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet: </value></data>
+  <data name="Status_Players" xml:space="preserve"><value>Players: </value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>Stopped</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>Starting</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>Running</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>Stopping</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>Connected</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>Disconnected</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="Common_No" xml:space="preserve"><value>No</value></data>
+  <data name="Common_On" xml:space="preserve"><value>On</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>Off</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Browse</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Error</value></data>
+</root>

@@ -1,5 +1,7 @@
 using System.Reflection;
 using System.Windows;
+using System.Windows.Markup;
+using Kitsune7Den.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
@@ -28,6 +30,9 @@ public partial class App : Application
         // Settings
         var settings = AppSettings.Load();
         services.AddSingleton(settings);
+
+        // Language before any view is built, so the first frame is already translated
+        Loc.Instance.SetLanguage(settings.Language);
 
         // Services
         services.AddSingleton<ServerProcessService>();
@@ -64,8 +69,17 @@ public partial class App : Application
 
         var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
         mainWindow.DataContext = _serviceProvider.GetRequiredService<MainViewModel>();
+
+        // xml:lang steers WPF's font fallback — without it Chinese text can pick up
+        // Japanese glyph variants from whatever CJK font the fallback lands on.
+        ApplyXmlLanguage(mainWindow);
+        Loc.LanguageChanged += () => ApplyXmlLanguage(mainWindow);
+
         mainWindow.Show();
     }
+
+    private static void ApplyXmlLanguage(FrameworkElement root) =>
+        root.Language = XmlLanguage.GetLanguage(Loc.Instance.Culture.IetfLanguageTag);
 
     protected override void OnExit(ExitEventArgs e)
     {

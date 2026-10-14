@@ -72,6 +72,10 @@
             <Border Style="{StaticResource Card}">
                 <StackPanel>
                     <TextBlock Style="{StaticResource SectionHeader}" Text="Appearance" />
+                    <TextBlock Text="Language / 语言" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" Margin="0,0,0,4" />
+                    <ComboBox ItemsSource="{Binding AvailableLanguages}"
+                              SelectedItem="{Binding SelectedLanguage}" Width="200"
+                              HorizontalAlignment="Left" Margin="0,0,0,12" />
                     <TextBlock Text="Theme" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" Margin="0,0,0,4" />
                     <StackPanel Orientation="Horizontal">
                         <ComboBox ItemsSource="{Binding AvailableThemes}"

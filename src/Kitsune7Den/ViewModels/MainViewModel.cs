@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -12,9 +13,9 @@ public partial class MainViewModel : ObservableObject
 
     [ObservableProperty] private ObservableObject? _currentView;
     [ObservableProperty] private string _selectedNav = "Dashboard";
-    [ObservableProperty] private string _serverStateText = "Stopped";
+    [ObservableProperty] private string _serverStateText = Loc.T("ServerState_Stopped");
     [ObservableProperty] private int _playerCount;
-    [ObservableProperty] private string _telnetStateText = "Disconnected";
+    [ObservableProperty] private string _telnetStateText = Loc.T("Telnet_Disconnected");
 
     public DashboardViewModel Dashboard { get; }
     public ConsoleViewModel Console { get; }
@@ -50,11 +51,17 @@ public partial class MainViewModel : ObservableObject
 
         CurrentView = dashboard;
 
+        Loc.LanguageChanged += () =>
+        {
+            ServerStateText = Loc.T($"ServerState_{_processService.CurrentState}");
+            TelnetStateText = Loc.T(_telnetService.IsConnected ? "Telnet_Connected" : "Telnet_Disconnected");
+        };
+
         _processService.StateChanged += state =>
         {
             App.Current.Dispatcher.Invoke(() =>
             {
-                ServerStateText = state.ToString();
+                ServerStateText = Loc.T($"ServerState_{state}");
             });
         };
 
@@ -62,7 +69,7 @@ public partial class MainViewModel : ObservableObject
         {
             App.Current.Dispatcher.Invoke(() =>
             {
-                TelnetStateText = connected ? "Connected" : "Disconnected";
+                TelnetStateText = Loc.T(connected ? "Telnet_Connected" : "Telnet_Disconnected");
             });
         };
     }

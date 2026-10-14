@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -18,6 +19,10 @@ public partial class SettingsViewModel : ObservableObject
     // Theme
     [ObservableProperty] private string _selectedTheme = "Kitsune";
     public string[] AvailableThemes => ThemeService.AvailableThemes;
+
+    // Language
+    [ObservableProperty] private LanguageOption _selectedLanguage;
+    public IReadOnlyList<LanguageOption> AvailableLanguages => Loc.Languages;
 
     // App self-update
     [ObservableProperty] private string _currentAppVersion = "";
@@ -67,6 +72,7 @@ public partial class SettingsViewModel : ObservableObject
         };
 
         // Load current values
+        _selectedLanguage = Loc.Languages.First(l => l.Code == Loc.Instance.Code);
         SelectedTheme = settings.Theme;
         SteamCmdPath = settings.SteamCmdPath;
         SteamCmdAvailable = steamCmd.IsSteamCmdAvailable;
@@ -103,6 +109,14 @@ public partial class SettingsViewModel : ObservableObject
     {
         _themeService.ApplyTheme(value);
         StatusMessage = $"Theme changed to {value}";
+    }
+
+    partial void OnSelectedLanguageChanged(LanguageOption value)
+    {
+        if (value is null) return;
+        Loc.Instance.SetLanguage(value.Code);
+        _settings.Language = value.Code;
+        _settings.Save();
     }
 
     [RelayCommand]

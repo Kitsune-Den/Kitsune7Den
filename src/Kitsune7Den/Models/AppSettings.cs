@@ -23,6 +23,7 @@ public class AppSettings
 
     // App
     public string Theme { get; set; } = "Kitsune";
+    public string Language { get; set; } = string.Empty; // blank = follow Windows
 
     // Window
     public double WindowWidth { get; set; }
