@@ -1,59 +1,218 @@
+using System.Globalization;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Channels;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.Services;
 
+public enum TelnetConnectResult
+{
+    Connected,
+    /// <summary>Nothing listening yet (server still booting, or wrong port).</summary>
+    Unreachable,
+    /// <summary>The server asked for a password and rejected the one we have.</summary>
+    WrongPassword,
+    /// <summary>The server asked for a password and we don't have one.</summary>
+    PasswordRequired,
+    /// <summary>serverconfig.xml has TelnetEnabled = false.</summary>
+    TelnetDisabled,
+}
+
 public partial class TelnetService : IDisposable
 {
+    private static readonly TimeSpan ConnectTimeout = TimeSpan.FromSeconds(3);
+    // The server greets with its password prompt straight away; no prompt means no password.
+    private static readonly TimeSpan PromptTimeout = TimeSpan.FromSeconds(2);
+    private static readonly TimeSpan LoginTimeout = TimeSpan.FromSeconds(5);
+
     private TcpClient? _client;
     private NetworkStream? _stream;
     private CancellationTokenSource? _readCts;
     private readonly AppSettings _settings;
+    private readonly SemaphoreSlim _connectLock = new(1, 1);
+
+    // Login handshake: the read loop reports what it sees until the login is settled
+    private volatile bool _authenticated;
+    private Channel<AuthEvent>? _authEvents;
+    private string _authBuffer = "";
+
+    private enum AuthEvent { PasswordPrompt, LogonSuccessful, PasswordIncorrect }
 
     public event Action<string>? DataReceived;
     public event Action<bool>? ConnectionStateChanged;
 
-    public bool IsConnected => _client?.Connected == true;
+    /// <summary>Connected AND logged in. A socket the server hasn't accepted a password on doesn't count.</summary>
+    public bool IsConnected => _authenticated && _client?.Connected == true;
+
+    /// <summary>The outcome of the last connection attempt.</summary>
+    public TelnetConnectResult LastResult { get; private set; } = TelnetConnectResult.Unreachable;
 
     public TelnetService(AppSettings settings)
     {
         _settings = settings;
     }
 
-    public async Task<bool> ConnectAsync()
+    /// <summary>
+    /// Connect and log in. Port and password come from the server's serverconfig.xml when
+    /// it exists (that's what the server accepts), with Settings as a fallback. Only a
+    /// confirmed login counts as connected; anything else is explained in the Console.
+    /// </summary>
+    /// <param name="reportUnreachable">
+    /// Also explain "nothing is listening" in the Console. Off for background retries while
+    /// a server boots, where that's expected and would just be noise.
+    /// </param>
+    public async Task<TelnetConnectResult> ConnectAsync(bool reportUnreachable = false)
     {
+        await _connectLock.WaitAsync();
         try
         {
-            Disconnect();
+            var endpoints = TelnetCredentials.Resolve(
+                _settings.ServerDirectory, _settings.TelnetPort, _settings.TelnetPassword, out var disabled);
 
-            _client = new TcpClient();
-            await _client.ConnectAsync("127.0.0.1", _settings.TelnetPort);
-            _stream = _client.GetStream();
-
-            _readCts = new CancellationTokenSource();
-            _ = ReadLoopAsync(_readCts.Token);
-
-            // Send password if configured
-            if (!string.IsNullOrEmpty(_settings.TelnetPassword))
+            var result = TelnetConnectResult.Unreachable;
+            if (disabled)
             {
-                await Task.Delay(500); // wait for server prompt
-                await SendCommandAsync(_settings.TelnetPassword);
+                result = TelnetConnectResult.TelnetDisabled;
+            }
+            else
+            {
+                foreach (var endpoint in endpoints)
+                {
+                    var attempt = await TryConnectAsync(endpoint);
+                    if (attempt == TelnetConnectResult.Connected)
+                    {
+                        RememberWorkingEndpoint(endpoint);
+                        result = attempt;
+                        break;
+                    }
+                    // Keep the most telling failure: "wrong password" beats "nothing on that port"
+                    if (result == TelnetConnectResult.Unreachable)
+                        result = attempt;
+                }
             }
 
-            ConnectionStateChanged?.Invoke(true);
-            return true;
+            LastResult = result;
+            if (result != TelnetConnectResult.Connected)
+            {
+                CloseSocket();
+                if (result != TelnetConnectResult.Unreachable || reportUnreachable)
+                    DataReceived?.Invoke("[Telnet] " + Loc.F($"Telnet_Result_{result}", endpoints.FirstOrDefault()?.Port ?? _settings.TelnetPort));
+            }
+            ConnectionStateChanged?.Invoke(result == TelnetConnectResult.Connected);
+            return result;
         }
-        catch
+        finally
         {
-            ConnectionStateChanged?.Invoke(false);
-            return false;
+            _connectLock.Release();
         }
     }
 
-    public void Disconnect()
+    private async Task<TelnetConnectResult> TryConnectAsync(TelnetEndpoint endpoint)
     {
+        CloseSocket();
+
+        var client = new TcpClient();
+        try
+        {
+            using var timeout = new CancellationTokenSource(ConnectTimeout);
+            await client.ConnectAsync("127.0.0.1", endpoint.Port, timeout.Token);
+        }
+        catch
+        {
+            client.Dispose();
+            return TelnetConnectResult.Unreachable;
+        }
+
+        _client = client;
+        _stream = client.GetStream();
+        _authenticated = false;
+        _authBuffer = "";
+        _authEvents = Channel.CreateUnbounded<AuthEvent>();
+        _readCts = new CancellationTokenSource();
+        _ = ReadLoopAsync(_stream, _readCts.Token);
+
+        var first = await NextAuthEventAsync(PromptTimeout);
+        if (first is null or AuthEvent.LogonSuccessful)
+        {
+            // No password prompt: a server with a blank TelnetPassword (localhost only)
+            return Authenticated();
+        }
+
+        if (string.IsNullOrEmpty(endpoint.Password))
+            return TelnetConnectResult.PasswordRequired;
+
+        await WriteRawAsync(endpoint.Password);
+        return await NextAuthEventAsync(LoginTimeout) == AuthEvent.LogonSuccessful
+            ? Authenticated()
+            : TelnetConnectResult.WrongPassword;
+
+        TelnetConnectResult Authenticated()
+        {
+            _authenticated = true;
+            _authEvents = null;
+            return _client?.Connected == true ? TelnetConnectResult.Connected : TelnetConnectResult.Unreachable;
+        }
+    }
+
+    private async Task<AuthEvent?> NextAuthEventAsync(TimeSpan timeout)
+    {
+        if (_authEvents is not { } events) return null;
+        using var cts = new CancellationTokenSource(timeout);
+        try { return await events.Reader.ReadAsync(cts.Token); }
+        catch (OperationCanceledException) { return null; }
+        catch (ChannelClosedException) { return null; }
+    }
+
+    /// <summary>
+    /// Watch raw incoming text for the login prompts. The password prompt has no newline
+    /// after it, so this looks at partial data, not just complete lines.
+    /// </summary>
+    private void InspectForLogin(string chunk)
+    {
+        if (_authenticated || _authEvents is not { } events) return;
+
+        _authBuffer += chunk;
+        // Order matters: "Password incorrect, please enter password:" contains the prompt too
+        // "*** Connected with 7DTD server." is the greeting once logged in, and straight away
+        // on a server without a password, so it counts as success without waiting for a prompt
+        if (_authBuffer.Contains("Logon successful", StringComparison.OrdinalIgnoreCase) ||
+            _authBuffer.Contains("Connected with 7DTD", StringComparison.OrdinalIgnoreCase))
+            events.Writer.TryWrite(AuthEvent.LogonSuccessful);
+        else if (_authBuffer.Contains("incorrect", StringComparison.OrdinalIgnoreCase))
+            events.Writer.TryWrite(AuthEvent.PasswordIncorrect);
+        else if (_authBuffer.Contains("enter password", StringComparison.OrdinalIgnoreCase))
+            events.Writer.TryWrite(AuthEvent.PasswordPrompt);
+        else
+            return;
+
+        _authBuffer = "";
+    }
+
+    /// <summary>Keep Settings in step with what actually worked, so it shows the real values.</summary>
+    private void RememberWorkingEndpoint(TelnetEndpoint endpoint)
+    {
+        if (_settings.TelnetPort == endpoint.Port && _settings.TelnetPassword == endpoint.Password) return;
+        _settings.TelnetPort = endpoint.Port;
+        _settings.TelnetPassword = endpoint.Password;
+        try { _settings.Save(); } catch { /* best effort */ }
+    }
+
+    private async Task WriteRawAsync(string text)
+    {
+        if (_stream is null) return;
+        var bytes = Encoding.UTF8.GetBytes(text + "\n");
+        await _stream.WriteAsync(bytes);
+    }
+
+    private void CloseSocket()
+    {
+        _authenticated = false;
+        _authEvents?.Writer.TryComplete();
+        _authEvents = null;
+
         _readCts?.Cancel();
         _readCts?.Dispose();
         _readCts = null;
@@ -63,7 +222,11 @@ public partial class TelnetService : IDisposable
 
         _client?.Dispose();
         _client = null;
+    }
 
+    public void Disconnect()
+    {
+        CloseSocket();
         ConnectionStateChanged?.Invoke(false);
     }
 
@@ -91,19 +254,23 @@ public partial class TelnetService : IDisposable
 
     private List<PlayerInfo> _lastPlayerList = [];
 
-    private async Task ReadLoopAsync(CancellationToken ct)
+    private async Task ReadLoopAsync(NetworkStream stream, CancellationToken ct)
     {
         var buffer = new byte[4096];
         var sb = new StringBuilder();
+        var decoder = Encoding.UTF8.GetDecoder(); // keeps multi-byte characters split across reads intact
 
         try
         {
-            while (!ct.IsCancellationRequested && _stream is not null)
+            while (!ct.IsCancellationRequested)
             {
-                var bytesRead = await _stream.ReadAsync(buffer, ct);
+                var bytesRead = await stream.ReadAsync(buffer, ct);
                 if (bytesRead == 0) break;
 
-                var text = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                var chars = new char[decoder.GetCharCount(buffer, 0, bytesRead)];
+                decoder.GetChars(buffer, 0, bytesRead, chars, 0);
+                var text = new string(chars);
+                InspectForLogin(text);
                 sb.Append(text);
 
                 // Process complete lines
@@ -124,9 +291,14 @@ public partial class TelnetService : IDisposable
                 }
             }
         }
-        catch (OperationCanceledException) { }
-        catch (Exception)
+        catch (OperationCanceledException) { return; }
+        catch (Exception) { }
+
+        // The server closed the connection (shutdown, restart, or too many bad logins)
+        if (!ct.IsCancellationRequested && ReferenceEquals(stream, _stream))
         {
+            _authenticated = false;
+            _authEvents?.Writer.TryComplete();
             ConnectionStateChanged?.Invoke(false);
         }
     }
@@ -160,9 +332,10 @@ public partial class TelnetService : IDisposable
             {
                 EntityId = int.TryParse(match.Groups["id"].Value, out var id) ? id : 0,
                 Name = match.Groups["name"].Value,
-                X = float.TryParse(match.Groups["x"].Value, out var x) ? x : 0,
-                Y = float.TryParse(match.Groups["y"].Value, out var y) ? y : 0,
-                Z = float.TryParse(match.Groups["z"].Value, out var z) ? z : 0
+                // The server always writes "-303.4"; a German or French Windows would read that as 0
+                X = float.TryParse(match.Groups["x"].Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var x) ? x : 0,
+                Y = float.TryParse(match.Groups["y"].Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var y) ? y : 0,
+                Z = float.TryParse(match.Groups["z"].Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var z) ? z : 0
             };
 
             // Parse additional fields from the rest of the line
@@ -201,6 +374,7 @@ public partial class TelnetService : IDisposable
 
     public void Dispose()
     {
-        Disconnect();
+        CloseSocket();
+        _connectLock.Dispose();
     }
 }

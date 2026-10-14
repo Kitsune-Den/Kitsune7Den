@@ -148,7 +148,7 @@ This will add them to the blacklist.</value></data>
   <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>Runs file validation during update (slower but fixes corrupted files)</value></data>
   <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>Install / Update Server</value></data>
   <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet Connection</value></data>
-  <data name="Settings_TelnetDescription" xml:space="preserve"><value>These should match the values in your serverconfig.xml. Kitsune7Den uses telnet to send commands and read player data.</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den reads the telnet port and password from your serverconfig.xml every time it connects, and only uses the values here if that doesn't work. Telnet is how it sends commands and reads player data.</value></data>
   <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet Port</value></data>
   <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet Password</value></data>
   <data name="Settings_SaveAll" xml:space="preserve"><value>Save All Settings</value></data>
@@ -378,4 +378,11 @@ A timestamped backup of serverconfig.xml is made first. The old values stay in t
   <data name="Restart_Failed" xml:space="preserve"><value>Automatic restart failed: {0}</value></data>
   <data name="Restart_CrashRestarting" xml:space="preserve"><value>Restarting the server in {0} seconds (crash restart {1} of {2}).</value></data>
   <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>The server crashed again. It already restarted {0} times in {1} minutes, so it stays stopped. Check the Console and Logs for the cause.</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>Nothing is listening on telnet port {0} yet. If the server is still starting, give it a minute. Otherwise check TelnetEnabled and TelnetPort in serverconfig.xml.</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>The server rejected the telnet password. Kitsune7Den uses TelnetPassword from serverconfig.xml. If you changed it while the server was running, restart the server so it picks up the new one.</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>The server wants a telnet password, but none is set in serverconfig.xml or in Settings. If you just added one to serverconfig.xml, restart the server.</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>Telnet is turned off in serverconfig.xml (TelnetEnabled = false). Kitsune7Den needs it for the console, players and restarts. Turn it on and restart the server.</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>Wrong password</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>Password needed</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>Off in config</value></data>
 </root>

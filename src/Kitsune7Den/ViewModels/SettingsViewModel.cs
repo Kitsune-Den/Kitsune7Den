@@ -53,7 +53,8 @@ public partial class SettingsViewModel : ObservableObject
     public ObservableCollection<string> Branches { get; } = new(SteamCmdService.KnownBranches);
     public ObservableCollection<string> UpdateLog { get; } = [];
 
-    public SettingsViewModel(AppSettings settings, SteamCmdService steamCmd, ThemeService themeService, UpdateService updateService)
+    public SettingsViewModel(AppSettings settings, SteamCmdService steamCmd, ThemeService themeService, UpdateService updateService,
+        TelnetService telnetService)
     {
         _settings = settings;
         _steamCmd = steamCmd;
@@ -82,6 +83,17 @@ public partial class SettingsViewModel : ObservableObject
         ValidateOnUpdate = settings.ValidateOnUpdate;
         TelnetPort = settings.TelnetPort;
         TelnetPassword = settings.TelnetPassword;
+
+        // A successful login may have picked up new values from serverconfig.xml
+        telnetService.ConnectionStateChanged += connected =>
+        {
+            if (!connected) return;
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                TelnetPort = _settings.TelnetPort;
+                TelnetPassword = _settings.TelnetPassword;
+            });
+        };
 
         // Wire SteamCMD output
         _steamCmd.OutputReceived += line =>

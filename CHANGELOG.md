@@ -2,6 +2,14 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [1.1.1] - Unreleased
+
+### Fixed
+- **Telnet said "Connected" when the server had rejected the password**, so commands quietly did nothing and the Players page always showed 0 (reported on Nexus). Kitsune7Den now waits for the server to confirm the login. If it doesn't, the status bar says why (Wrong password / Password needed / Off in config) and the Console explains how to fix it.
+- **Telnet used stale port and password values.** They were copied once when you browsed to the exe, so changing them in serverconfig.xml later broke telnet. Kitsune7Den now reads them from serverconfig.xml every time it connects, falls back to Settings, and updates Settings to whatever worked.
+- **Automatic reconnect stops on a rejected password** instead of retrying, which could trip the server's TelnetFailedLoginLimit block.
+- **Player coordinates read as 0** on Windows set to a comma-decimal language (e.g. German, French).
+
 ## [1.1.0] - 2026-10-14
 
 ### Added

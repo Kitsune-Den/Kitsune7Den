@@ -109,7 +109,7 @@ public partial class DashboardViewModel : ObservableObject
     [RelayCommand]
     private async Task ConnectTelnet()
     {
-        await _telnetService.ConnectAsync();
+        await _telnetService.ConnectAsync(reportUnreachable: true);
     }
 
     [RelayCommand]
