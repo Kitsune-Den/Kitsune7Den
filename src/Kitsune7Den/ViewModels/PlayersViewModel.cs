@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 using Kitsune7Den.Services;
 
@@ -22,7 +23,19 @@ public partial class PlayersViewModel : ObservableObject
     {
         _telnetService = telnetService;
         _adminService = adminService;
-        AdminFilePath = adminService.AdminFilePath ?? "Not found";
+        AdminFilePath = adminService.AdminFilePath ?? Loc.T("Players_AdminFileNotFound");
+
+        // Permission badges are computed from the active language when a card is
+        // built, so re-add the same players to re-render them after a switch.
+        Loc.LanguageChanged += () => Application.Current?.Dispatcher.Invoke(() =>
+        {
+            if (adminService.AdminFilePath is null)
+                AdminFilePath = Loc.T("Players_AdminFileNotFound");
+            var current = Players.ToList();
+            Players.Clear();
+            foreach (var p in current)
+                Players.Add(p);
+        });
 
         _telnetService.ConnectionStateChanged += connected =>
         {
@@ -85,8 +98,8 @@ public partial class PlayersViewModel : ObservableObject
     {
         if (SelectedPlayer is null) return;
         var result = MessageBox.Show(
-            $"Ban '{SelectedPlayer.Name}'?\nThis will add them to the blacklist.",
-            "Confirm Ban", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            Loc.F("Players_BanConfirm", SelectedPlayer.Name),
+            Loc.T("Players_BanConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Warning);
         if (result != MessageBoxResult.Yes) return;
 
         await _telnetService.SendCommandAsync($"ban add {SelectedPlayer.Name} 1 year \"Banned from Kitsune7Den\"");
@@ -103,7 +116,7 @@ public partial class PlayersViewModel : ObservableObject
         var (platform, userId) = ResolvePlatformId(SelectedPlayer);
         if (userId is null)
         {
-            MessageBox.Show("Could not determine player's platform ID.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show(Loc.T("Players_NoPlatformId"), Loc.T("Common_Error"), MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
 
@@ -121,8 +134,8 @@ public partial class PlayersViewModel : ObservableObject
         if (SelectedPlayer is null) return;
 
         var result = MessageBox.Show(
-            $"Remove admin from '{SelectedPlayer.Name}'?",
-            "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            Loc.F("Players_RemoveAdminConfirm", SelectedPlayer.Name),
+            Loc.T("Players_ConfirmTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
         if (result != MessageBoxResult.Yes) return;
 
         var (_, userId) = ResolvePlatformId(SelectedPlayer);

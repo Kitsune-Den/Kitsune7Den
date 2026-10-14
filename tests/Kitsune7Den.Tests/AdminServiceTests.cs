@@ -8,7 +8,10 @@ namespace Kitsune7Den.Tests;
 /// Tests the serveradmin.xml parser and the give/remove admin writers.
 /// The real file lives in %AppData%\7DaysToDie\Saves — for tests we
 /// fall back to the ServerDirectory copy that AdminService also checks.
+/// Shares the "Localization" collection so permission labels are never read while
+/// LocalizationTests has Chinese active.
 /// </summary>
+[Collection("Localization")]
 public class AdminServiceTests : IDisposable
 {
     private readonly string _tempRoot;
