@@ -2,7 +2,7 @@
 
 All notable changes to Kitsune7Den are documented here.
 
-## [1.1.1] - Unreleased
+## [1.1.1] - 2026-10-14
 
 ### Fixed
 - **Telnet said "Connected" when the server had rejected the password**, so commands quietly did nothing and the Players page always showed 0 (reported on Nexus). Kitsune7Den now waits for the server to confirm the login. If it doesn't, the status bar says why (Wrong password / Password needed / Off in config) and the Console explains how to fix it.
