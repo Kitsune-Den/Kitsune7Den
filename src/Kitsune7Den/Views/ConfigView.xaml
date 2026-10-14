@@ -21,7 +21,7 @@
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
                     <TextBlock Text="{l:Tr Config_Title}" Foreground="{DynamicResource TextPrimaryBrush}"
                                FontSize="16" FontWeight="SemiBold" />
-                    <TextBlock Text="  (serverconfig.xml)" Foreground="{DynamicResource TextSecondaryBrush}"
+                    <TextBlock Text="{Binding ConfigFileLabel}" Foreground="{DynamicResource TextSecondaryBrush}"
                                FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,1" />
                 </StackPanel>
 

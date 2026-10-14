@@ -17,13 +17,14 @@ public sealed record TelnetEndpoint(int Port, string Password, bool FromServerCo
 /// </summary>
 public static class TelnetCredentials
 {
+    /// <param name="configFilePath">The server's config file (see <see cref="ServerLaunch.ConfigFilePath(AppSettings)"/>).</param>
     public static IReadOnlyList<TelnetEndpoint> Resolve(
-        string? serverDirectory, int settingsPort, string? settingsPassword, out bool disabledInConfig)
+        string? configFilePath, int settingsPort, string? settingsPassword, out bool disabledInConfig)
     {
         disabledInConfig = false;
         var endpoints = new List<TelnetEndpoint>();
 
-        var fromConfig = ReadServerConfig(serverDirectory);
+        var fromConfig = ReadServerConfig(configFilePath);
         if (fromConfig is { } cfg)
         {
             disabledInConfig = !cfg.Enabled;
@@ -37,12 +38,10 @@ public static class TelnetCredentials
         return endpoints;
     }
 
-    /// <summary>TelnetEnabled/TelnetPort/TelnetPassword from serverconfig.xml, or null if unreadable.</summary>
-    public static (bool Enabled, int Port, string Password)? ReadServerConfig(string? serverDirectory)
+    /// <summary>TelnetEnabled/TelnetPort/TelnetPassword from the server's config file, or null if unreadable.</summary>
+    public static (bool Enabled, int Port, string Password)? ReadServerConfig(string? path)
     {
-        if (string.IsNullOrWhiteSpace(serverDirectory)) return null;
-        var path = Path.Combine(serverDirectory, "serverconfig.xml");
-        if (!File.Exists(path)) return null;
+        if (string.IsNullOrWhiteSpace(path) || !File.Exists(path)) return null;
 
         try
         {

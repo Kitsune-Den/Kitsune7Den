@@ -4,6 +4,11 @@ All notable changes to Kitsune7Den are documented here.
 
 ## [Unreleased]
 
+### Added
+- **Extra launch arguments** (Settings → Server Launch), for anything you'd otherwise add to `startdedicated.bat`. They go just before `-dedicated`, where the .bat's extra arguments go, and a live preview shows the full command.
+  - **Custom config file:** `-configfile=yourconfig.xml` swaps the config file everywhere. The server, the Config page, telnet, backups and the Steam-update protection all use it.
+  - **Protected arguments:** the ones Kitsune7Den relies on (`-logfile`, `-quit`, `-batchmode`, `-nographics`, `-dedicated`) are ignored, with a note.
+
 ### Infrastructure
 - **Releases are code-signed automatically.** `scripts/publish-release.ps1` now signs the exe with Azure Artifact Signing (via `az login`, or a service principal from environment variables), verifies the signature, and only then writes the SHA-256. If signing fails it stops instead of producing an unsigned release; `-SkipSign` builds unsigned on purpose. It no longer deletes everything in `publish\`, only its own build output.
 - **INSTALL.md** now covers checking the signature. v1.1.0 and v1.1.1 were signed by hand.

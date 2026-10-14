@@ -42,6 +42,31 @@ public partial class SettingsViewModel : ObservableObject
     [ObservableProperty] private bool _autoUpdateOnStart;
     [ObservableProperty] private bool _validateOnUpdate = true;
 
+    // Server launch
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(LaunchPreview), nameof(LaunchNote))]
+    private string _serverLaunchArguments = "";
+
+    /// <summary>The full command Kitsune7Den will run, so people can see where their arguments land.</summary>
+    public string LaunchPreview =>
+        "7DaysToDieServer.exe " + ServerLaunch.Build("output_log_dedi__<time>.txt", ServerLaunchArguments).Arguments;
+
+    /// <summary>What happens to arguments Kitsune7Den won't pass on, and which config file it will read.</summary>
+    public string LaunchNote
+    {
+        get
+        {
+            var notes = new List<string>();
+            var ignored = ServerLaunch.Build("x", ServerLaunchArguments).Ignored;
+            if (ignored.Count > 0)
+                notes.Add(Loc.F("Settings_LaunchIgnored", string.Join(", ", ignored)));
+            var config = ServerLaunch.ConfigFileName(ServerLaunchArguments);
+            if (!string.Equals(config, ServerLaunch.DefaultConfigFile, StringComparison.OrdinalIgnoreCase))
+                notes.Add(Loc.F("Settings_LaunchConfigFile", config));
+            return string.Join("\n", notes);
+        }
+    }
+
     // Telnet
     [ObservableProperty] private int _telnetPort = 8081;
     [ObservableProperty] private string _telnetPassword = "";
@@ -83,6 +108,7 @@ public partial class SettingsViewModel : ObservableObject
         ValidateOnUpdate = settings.ValidateOnUpdate;
         TelnetPort = settings.TelnetPort;
         TelnetPassword = settings.TelnetPassword;
+        ServerLaunchArguments = settings.ServerLaunchArguments;
 
         // A successful login may have picked up new values from serverconfig.xml
         telnetService.ConnectionStateChanged += connected =>
@@ -141,6 +167,7 @@ public partial class SettingsViewModel : ObservableObject
         _settings.ValidateOnUpdate = ValidateOnUpdate;
         _settings.TelnetPort = TelnetPort;
         _settings.TelnetPassword = TelnetPassword;
+        _settings.ServerLaunchArguments = ServerLaunchArguments.Trim();
         _settings.Save();
         StatusMessage = Loc.T("Settings_Saved");
     }

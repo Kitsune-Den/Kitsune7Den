@@ -70,7 +70,7 @@ public partial class TelnetService : IDisposable
         try
         {
             var endpoints = TelnetCredentials.Resolve(
-                _settings.ServerDirectory, _settings.TelnetPort, _settings.TelnetPassword, out var disabled);
+                ServerLaunch.ConfigFilePath(_settings), _settings.TelnetPort, _settings.TelnetPassword, out var disabled);
 
             var result = TelnetConnectResult.Unreachable;
             if (disabled)

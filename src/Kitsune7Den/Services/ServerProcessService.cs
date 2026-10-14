@@ -68,7 +68,7 @@ public class ServerProcessService : IDisposable
         _stopRequested = false;
         SetState(ServerState.Starting);
 
-        var configPath = Path.Combine(serverDir, "serverconfig.xml");
+        var configPath = ServerLaunch.ConfigFilePath(serverDir, _settings.ServerLaunchArguments);
         var configBackup = configPath + ".bak";
 
         // ── Step 1: Back up config BEFORE SteamCMD can touch it ──
@@ -77,7 +77,7 @@ public class ServerProcessService : IDisposable
             try
             {
                 File.Copy(configPath, configBackup, overwrite: true);
-                OutputReceived?.Invoke(Loc.T("Server_ConfigBackedUp"));
+                OutputReceived?.Invoke(Loc.F("Server_ConfigBackedUp", Path.GetFileName(configPath)));
             }
             catch (Exception ex)
             {
@@ -99,7 +99,7 @@ public class ServerProcessService : IDisposable
             try
             {
                 File.Copy(configBackup, configPath, overwrite: true);
-                OutputReceived?.Invoke(Loc.T("Server_ConfigRestored"));
+                OutputReceived?.Invoke(Loc.F("Server_ConfigRestored", Path.GetFileName(configPath)));
             }
             catch (Exception ex)
             {
@@ -125,7 +125,10 @@ public class ServerProcessService : IDisposable
         OutputReceived?.Invoke(Loc.F("Server_LogFile", logFileName));
 
         // ── Step 6: Launch server with proper arguments ──
-        var args = $"-logfile \"{_currentLogFile}\" -quit -batchmode -nographics -configfile=serverconfig.xml -dedicated";
+        var launch = ServerLaunch.Build(_currentLogFile, _settings.ServerLaunchArguments);
+        var args = launch.Arguments;
+        foreach (var ignored in launch.Ignored)
+            OutputReceived?.Invoke("[WARN] " + Loc.F("Server_LaunchArgIgnored", ignored));
 
         var startInfo = new ProcessStartInfo
         {
