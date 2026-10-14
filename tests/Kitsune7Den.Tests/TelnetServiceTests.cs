@@ -165,7 +165,7 @@ public class TelnetServiceTests : IDisposable
     public void Credentials_ServerConfigFirst_SettingsAsFallback()
     {
         WriteServerConfig(8084, "new");
-        var endpoints = TelnetCredentials.Resolve(_serverDir, 8081, "old", out var disabled);
+        var endpoints = TelnetCredentials.Resolve(Path.Combine(_serverDir, "serverconfig.xml"), 8081, "old", out var disabled);
 
         Assert.False(disabled);
         Assert.Equal([new TelnetEndpoint(8084, "new", true), new TelnetEndpoint(8081, "old", false)], endpoints);
@@ -175,7 +175,7 @@ public class TelnetServiceTests : IDisposable
     public void Credentials_SameValues_AreTriedOnce()
     {
         WriteServerConfig(8081, "same");
-        Assert.Single(TelnetCredentials.Resolve(_serverDir, 8081, "same", out _));
+        Assert.Single(TelnetCredentials.Resolve(Path.Combine(_serverDir, "serverconfig.xml"), 8081, "same", out _));
     }
 
     private static int FreePort()

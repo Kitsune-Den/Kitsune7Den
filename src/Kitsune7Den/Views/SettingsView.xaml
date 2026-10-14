@@ -262,6 +262,27 @@
                 </StackPanel>
             </Border>
 
+            <!-- Server Launch -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource SectionHeader}" Text="{l:Tr Settings_LaunchHeader}" />
+                    <TextBlock Text="{l:Tr Settings_LaunchDescription}"
+                               Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12" Margin="0,0,0,12" TextWrapping="Wrap" />
+                    <TextBlock Text="{l:Tr Settings_LaunchArgsLabel}" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" Margin="0,0,0,4" />
+                    <TextBox Style="{StaticResource DarkTextBox}" FontFamily="Consolas"
+                             Text="{Binding ServerLaunchArguments, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock Text="{l:Tr Settings_LaunchPreviewLabel}" Foreground="{DynamicResource TextSecondaryBrush}"
+                               FontSize="11" Margin="0,10,0,4" />
+                    <Border Background="#FF0d0d1a" CornerRadius="4" Padding="10,8">
+                        <TextBlock Text="{Binding LaunchPreview}" FontFamily="Consolas" FontSize="11" TextWrapping="Wrap"
+                                   Foreground="{DynamicResource TextPrimaryBrush}" />
+                    </Border>
+                    <TextBlock Text="{Binding LaunchNote}" Foreground="{DynamicResource WarningBrush}" FontSize="11"
+                               TextWrapping="Wrap" Margin="0,6,0,0"
+                               Visibility="{Binding LaunchNote, Converter={StaticResource StringVis}}" />
+                </StackPanel>
+            </Border>
+
             <!-- Telnet Section -->
             <Border Style="{StaticResource Card}">
                 <StackPanel>

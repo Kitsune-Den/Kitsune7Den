@@ -14,7 +14,11 @@ public class ConfigService
         _settings = settings;
     }
 
-    private string ConfigPath => Path.Combine(_settings.ServerDirectory, "serverconfig.xml");
+    // serverconfig.xml, or whatever -configfile the server is launched with
+    private string ConfigPath => ServerLaunch.ConfigFilePath(_settings);
+
+    /// <summary>File name shown in the Config page header.</summary>
+    public string ConfigFileName => Path.GetFileName(ConfigPath);
 
     /// <summary>
     /// Scan both built-in and user-generated world folders for valid worlds.

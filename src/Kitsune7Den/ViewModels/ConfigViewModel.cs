@@ -23,6 +23,7 @@ public partial class ConfigViewModel : ObservableObject
     [ObservableProperty] private string _statusMessage = "";
     [ObservableProperty] private bool _isFormView = true;
     [ObservableProperty] private string _rawXml = "";
+    [ObservableProperty] private string _configFileLabel = "  (serverconfig.xml)";
 
     // 7D2D 3.x: gameplay rules moved from serverconfig.xml into SandboxCode
     [ObservableProperty] private bool _isSandboxEra;
@@ -88,6 +89,7 @@ public partial class ConfigViewModel : ObservableObject
             _allProperties = _configService.LoadConfig(sandboxEra: true);
         }
 
+        ConfigFileLabel = $"  ({_configService.ConfigFileName})";
         IsSandboxEra = _detected.IsSandboxEra;
         NeedsMigration = IsSandboxEra && _configService.NeedsSandboxMigration();
         UpdateVersionText();

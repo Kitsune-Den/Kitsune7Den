@@ -154,7 +154,7 @@ public partial class DashboardViewModel : ObservableObject
     {
         try
         {
-            var configPath = System.IO.Path.Combine(ServerDirectory, "serverconfig.xml");
+            var configPath = ServerLaunch.ConfigFilePath(ServerDirectory, _settings.ServerLaunchArguments);
             if (!System.IO.File.Exists(configPath)) return;
 
             var doc = System.Xml.Linq.XDocument.Load(configPath);

@@ -66,12 +66,12 @@
   <data name="Console_Title" xml:space="preserve"><value>控制台</value></data>
   <data name="Console_Clear" xml:space="preserve"><value>清空</value></data>
   <data name="Console_Send" xml:space="preserve"><value>发送</value></data>
-  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>已备份 serverconfig.xml（防止被 Steam 更新覆盖）。</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>已备份 {0}（防止被 Steam 更新覆盖）。</value></data>
   <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>无法备份配置：{0}</value></data>
   <data name="Server_CheckingUpdates" xml:space="preserve"><value>正在检查更新…</value></data>
   <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>更新检查完成。</value></data>
   <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>更新检查失败，仍将继续启动。</value></data>
-  <data name="Server_ConfigRestored" xml:space="preserve"><value>已从备份恢复 serverconfig.xml。</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>已从备份恢复 {0}。</value></data>
   <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>无法恢复配置备份：{0}</value></data>
   <data name="Server_LogFile" xml:space="preserve"><value>日志文件：{0}</value></data>
   <data name="Server_StartingCommand" xml:space="preserve"><value>正在启动服务器：{0} {1}</value></data>
@@ -633,4 +633,11 @@ Kitsune7Den 将下载新版本并重新启动。服务器会继续运行。</val
   <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>密码错误</value></data>
   <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>需要密码</value></data>
   <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>配置中已关闭</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>服务器启动</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den 使用与 startdedicated.bat 相同的参数启动 7DaysToDieServer.exe。在这里添加的参数会放在 .bat 额外参数的位置，即 -dedicated 之前。使用 -configfile=你的配置.xml 可以改用其他配置文件，Kitsune7Den 也会在所有地方读取和编辑该文件。</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>额外启动参数（可选）</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den 将运行：</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>以下参数由 Kitsune7Den 自行设置，将被忽略：{0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>服务器、配置页面、Telnet 和备份将改用 {0}，而不是 serverconfig.xml。保存后需重启服务器才会生效。</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>已忽略启动参数 {0}：该参数由 Kitsune7Den 自行设置。</value></data>
 </root>

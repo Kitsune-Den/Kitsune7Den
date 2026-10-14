@@ -27,6 +27,9 @@ public class AppSettings
     public bool AutoUpdateOnStart { get; set; }
     public bool ValidateOnUpdate { get; set; } = true;
 
+    // Extra arguments for 7DaysToDieServer.exe, like startdedicated.bat's %*
+    public string ServerLaunchArguments { get; set; } = string.Empty;
+
     // App
     public string Theme { get; set; } = "Kitsune";
     public string Language { get; set; } = string.Empty; // blank = follow Windows

@@ -66,12 +66,12 @@
   <data name="Console_Title" xml:space="preserve"><value>Console</value></data>
   <data name="Console_Clear" xml:space="preserve"><value>Clear</value></data>
   <data name="Console_Send" xml:space="preserve"><value>Send</value></data>
-  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>Backed up serverconfig.xml (protection against Steam updates).</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>Backed up {0} (protection against Steam updates).</value></data>
   <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>Could not back up config: {0}</value></data>
   <data name="Server_CheckingUpdates" xml:space="preserve"><value>Checking for updates...</value></data>
   <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>Update check complete.</value></data>
   <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>Update check failed — starting anyway.</value></data>
-  <data name="Server_ConfigRestored" xml:space="preserve"><value>Restored serverconfig.xml from backup.</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>Restored {0} from backup.</value></data>
   <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>Could not restore config backup: {0}</value></data>
   <data name="Server_LogFile" xml:space="preserve"><value>Log file: {0}</value></data>
   <data name="Server_StartingCommand" xml:space="preserve"><value>Starting server: {0} {1}</value></data>
@@ -385,4 +385,11 @@ A timestamped backup of serverconfig.xml is made first. The old values stay in t
   <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>Wrong password</value></data>
   <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>Password needed</value></data>
   <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>Off in config</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>Server Launch</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den starts 7DaysToDieServer.exe with the same arguments as startdedicated.bat. Anything you add here goes where the .bat's extra arguments go, just before -dedicated. Use -configfile=yourconfig.xml to run with a different config file; Kitsune7Den then reads and edits that file everywhere.</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>Extra launch arguments (optional)</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den will run:</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>Kitsune7Den sets these itself and will ignore them: {0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>The server, the Config page, telnet and backups will use {0} instead of serverconfig.xml. Save, then restart the server for it to take effect.</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>Ignored launch argument {0}: Kitsune7Den sets that itself.</value></data>
 </root>
