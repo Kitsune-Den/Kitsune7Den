@@ -2,7 +2,7 @@
 
 All notable changes to Kitsune7Den are documented here.
 
-## [Unreleased]
+## [1.2.0] - 2026-10-14
 
 ### Added
 - **Extra launch arguments** (Settings → Server Launch), for anything you'd otherwise add to `startdedicated.bat`. They go just before `-dedicated`, where the .bat's extra arguments go, and a live preview shows the full command.
