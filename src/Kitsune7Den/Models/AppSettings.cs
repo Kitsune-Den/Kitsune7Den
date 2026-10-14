@@ -5,9 +5,15 @@ namespace Kitsune7Den.Models;
 
 public class AppSettings
 {
-    private static readonly string SettingsPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-        "Kitsune7Den", "settings.json");
+    /// <summary>Set to redirect settings to another file. The test project uses it so tests never touch real settings.</summary>
+    public const string PathOverrideVariable = "KITSUNE7DEN_SETTINGS_PATH";
+
+    private static string SettingsPath =>
+        Environment.GetEnvironmentVariable(PathOverrideVariable) is { Length: > 0 } overridden
+            ? overridden
+            : Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "Kitsune7Den", "settings.json");
 
     public string ServerExePath { get; set; } = string.Empty;
     public string ServerDirectory { get; set; } = string.Empty;
