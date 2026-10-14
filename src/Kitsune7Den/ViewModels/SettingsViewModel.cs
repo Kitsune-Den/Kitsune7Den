@@ -98,7 +98,7 @@ public partial class SettingsViewModel : ObservableObject
             Application.Current.Dispatcher.Invoke(() =>
             {
                 IsUpdating = false;
-                StatusMessage = success ? "Operation completed successfully" : "Operation failed — check log";
+                StatusMessage = Loc.T(success ? "Settings_OperationSucceeded" : "Settings_OperationFailed");
                 SteamCmdAvailable = _steamCmd.IsSteamCmdAvailable;
                 SteamCmdPath = _settings.SteamCmdPath;
             });
@@ -108,7 +108,7 @@ public partial class SettingsViewModel : ObservableObject
     partial void OnSelectedThemeChanged(string value)
     {
         _themeService.ApplyTheme(value);
-        StatusMessage = $"Theme changed to {value}";
+        StatusMessage = Loc.F("Settings_ThemeChanged", value);
     }
 
     partial void OnSelectedLanguageChanged(LanguageOption value)
@@ -130,7 +130,7 @@ public partial class SettingsViewModel : ObservableObject
         _settings.TelnetPort = TelnetPort;
         _settings.TelnetPassword = TelnetPassword;
         _settings.Save();
-        StatusMessage = "Settings saved";
+        StatusMessage = Loc.T("Settings_Saved");
     }
 
     [RelayCommand]
@@ -138,8 +138,8 @@ public partial class SettingsViewModel : ObservableObject
     {
         var dialog = new Microsoft.Win32.OpenFileDialog
         {
-            Filter = "SteamCMD|steamcmd.exe|All Executables|*.exe",
-            Title = "Select steamcmd.exe"
+            Filter = $"SteamCMD|steamcmd.exe|{Loc.T("Settings_FilterAllExecutables")}|*.exe",
+            Title = Loc.T("Settings_SelectSteamCmdTitle")
         };
 
         if (dialog.ShowDialog() == true)
@@ -154,7 +154,7 @@ public partial class SettingsViewModel : ObservableObject
     {
         var dialog = new Microsoft.Win32.OpenFolderDialog
         {
-            Title = "Select Server Install Directory"
+            Title = Loc.T("Settings_SelectInstallDirTitle")
         };
 
         if (dialog.ShowDialog() == true)
@@ -168,7 +168,7 @@ public partial class SettingsViewModel : ObservableObject
     {
         if (string.IsNullOrWhiteSpace(ServerInstallDirectory))
         {
-            StatusMessage = "Set a server install directory first — SteamCMD will be placed nearby";
+            StatusMessage = Loc.T("Settings_SetInstallDirFirstSteamCmd");
             return;
         }
 
@@ -190,13 +190,13 @@ public partial class SettingsViewModel : ObservableObject
     {
         if (!SteamCmdAvailable)
         {
-            StatusMessage = "SteamCMD not found — download or browse to it first";
+            StatusMessage = Loc.T("Settings_SteamCmdNotFoundDownloadFirst");
             return;
         }
 
         if (string.IsNullOrWhiteSpace(ServerInstallDirectory))
         {
-            StatusMessage = "Set a server install directory first";
+            StatusMessage = Loc.T("Settings_SetInstallDirFirst");
             return;
         }
 
@@ -205,7 +205,7 @@ public partial class SettingsViewModel : ObservableObject
 
         IsUpdating = true;
         UpdateLog.Clear();
-        StatusMessage = "Updating...";
+        StatusMessage = Loc.T("Settings_Updating");
 
         _updateCts = new CancellationTokenSource();
         await Task.Run(() => _steamCmd.InstallOrUpdateServerAsync(_updateCts.Token));
@@ -215,7 +215,7 @@ public partial class SettingsViewModel : ObservableObject
     private void CancelUpdate()
     {
         _updateCts?.Cancel();
-        StatusMessage = "Cancelling...";
+        StatusMessage = Loc.T("Settings_Cancelling");
     }
 
     // --- App self-update ---
@@ -240,9 +240,8 @@ public partial class SettingsViewModel : ObservableObject
         if (_pendingRelease is null) return;
 
         var result = MessageBox.Show(
-            $"Install update {_pendingRelease.TagName} ({_pendingRelease.AssetSizeText})?\n\n" +
-            "Kitsune7Den will download the new version and restart. The server will keep running.",
-            "Confirm Update", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            Loc.F("Settings_ConfirmUpdateMessage", _pendingRelease.TagName, _pendingRelease.AssetSizeText),
+            Loc.T("Settings_ConfirmUpdateTitle"), MessageBoxButton.YesNo, MessageBoxImage.Question);
         if (result != MessageBoxResult.Yes) return;
 
         IsDownloadingUpdate = true;

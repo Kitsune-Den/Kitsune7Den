@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
+using Kitsune7Den.Localization;
 using Kitsune7Den.Models;
 
 namespace Kitsune7Den.Services;
@@ -44,35 +45,35 @@ public class SteamCmdService
 
             if (File.Exists(exePath))
             {
-                OutputReceived?.Invoke("SteamCMD already exists at: " + exePath);
+                OutputReceived?.Invoke(Loc.F("Steam_AlreadyExists", exePath));
                 return true;
             }
 
-            OutputReceived?.Invoke("Downloading SteamCMD...");
+            OutputReceived?.Invoke(Loc.T("Steam_Downloading"));
 
             using var httpClient = new HttpClient();
             var zipBytes = await httpClient.GetByteArrayAsync(SteamCmdDownloadUrl);
             var zipPath = Path.Combine(installDir, "steamcmd.zip");
             await File.WriteAllBytesAsync(zipPath, zipBytes);
 
-            OutputReceived?.Invoke("Extracting SteamCMD...");
+            OutputReceived?.Invoke(Loc.T("Steam_Extracting"));
             ZipFile.ExtractToDirectory(zipPath, installDir, overwriteFiles: true);
             File.Delete(zipPath);
 
             if (File.Exists(exePath))
             {
-                OutputReceived?.Invoke("SteamCMD installed at: " + exePath);
+                OutputReceived?.Invoke(Loc.F("Steam_Installed", exePath));
                 _settings.SteamCmdPath = exePath;
                 _settings.Save();
                 return true;
             }
 
-            OutputReceived?.Invoke("Error: steamcmd.exe not found after extraction");
+            OutputReceived?.Invoke(Loc.T("Steam_ExeMissingAfterExtract"));
             return false;
         }
         catch (Exception ex)
         {
-            OutputReceived?.Invoke($"Error downloading SteamCMD: {ex.Message}");
+            OutputReceived?.Invoke(Loc.F("Steam_DownloadError", ex.Message));
             return false;
         }
     }
@@ -84,14 +85,14 @@ public class SteamCmdService
     {
         if (string.IsNullOrWhiteSpace(_settings.SteamCmdPath) || !File.Exists(_settings.SteamCmdPath))
         {
-            OutputReceived?.Invoke("Error: SteamCMD path not set or not found. Download it first.");
+            OutputReceived?.Invoke(Loc.T("Steam_PathNotSet"));
             OperationCompleted?.Invoke(false);
             return false;
         }
 
         if (string.IsNullOrWhiteSpace(_settings.ServerInstallDirectory))
         {
-            OutputReceived?.Invoke("Error: Server install directory not set.");
+            OutputReceived?.Invoke(Loc.T("Steam_InstallDirNotSet"));
             OperationCompleted?.Invoke(false);
             return false;
         }
@@ -108,9 +109,9 @@ public class SteamCmdService
                    $"+app_update {SevenDaysToDieServerAppId}{betaArg}{validate} " +
                    $"+quit";
 
-        OutputReceived?.Invoke($"Running: steamcmd {args}");
-        OutputReceived?.Invoke($"Branch: {branch} | Validate: {_settings.ValidateOnUpdate}");
-        OutputReceived?.Invoke("This may take a while on first install...");
+        OutputReceived?.Invoke(Loc.F("Steam_Running", args));
+        OutputReceived?.Invoke(Loc.F("Steam_BranchValidate", branch, _settings.ValidateOnUpdate));
+        OutputReceived?.Invoke(Loc.T("Steam_FirstInstallSlow"));
 
         try
         {
@@ -150,15 +151,15 @@ public class SteamCmdService
                 {
                     _settings.ServerExePath = exePath;
                     _settings.ServerDirectory = _settings.ServerInstallDirectory;
-                    OutputReceived?.Invoke($"Server exe found: {exePath}");
+                    OutputReceived?.Invoke(Loc.F("Steam_ServerExeFound", exePath));
                 }
 
                 _settings.Save();
-                OutputReceived?.Invoke("Update completed successfully!");
+                OutputReceived?.Invoke(Loc.T("Steam_UpdateSucceeded"));
             }
             else
             {
-                OutputReceived?.Invoke($"SteamCMD exited with code: {process.ExitCode}");
+                OutputReceived?.Invoke(Loc.F("Steam_ExitCode", process.ExitCode));
             }
 
             OperationCompleted?.Invoke(success);
@@ -166,13 +167,13 @@ public class SteamCmdService
         }
         catch (OperationCanceledException)
         {
-            OutputReceived?.Invoke("Update cancelled.");
+            OutputReceived?.Invoke(Loc.T("Steam_Cancelled"));
             OperationCompleted?.Invoke(false);
             return false;
         }
         catch (Exception ex)
         {
-            OutputReceived?.Invoke($"Error running SteamCMD: {ex.Message}");
+            OutputReceived?.Invoke(Loc.F("Steam_RunError", ex.Message));
             OperationCompleted?.Invoke(false);
             return false;
         }

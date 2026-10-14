@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text.Json;
+using Kitsune7Den.Localization;
 
 namespace Kitsune7Den.Services;
 
@@ -41,7 +42,7 @@ public class UpdateService
     {
         try
         {
-            StatusChanged?.Invoke("Checking for updates...");
+            StatusChanged?.Invoke(Loc.T("Update_Checking"));
 
             using var http = new HttpClient();
             http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Kitsune7Den", CurrentVersion));
@@ -108,17 +109,17 @@ public class UpdateService
 
             if (CompareVersions(latestVersion, currentVersion) <= 0)
             {
-                StatusChanged?.Invoke($"You're on the latest version ({CurrentVersion})");
+                StatusChanged?.Invoke(Loc.F("Update_UpToDate", CurrentVersion));
                 return null;
             }
 
             if (string.IsNullOrEmpty(downloadUrl))
             {
-                StatusChanged?.Invoke($"Update {tagName} available but no downloadable exe/zip asset was found on the release");
+                StatusChanged?.Invoke(Loc.F("Update_NoAsset", tagName));
                 return null;
             }
 
-            StatusChanged?.Invoke($"Update available: {tagName}");
+            StatusChanged?.Invoke(Loc.F("Update_Available", tagName));
             return new ReleaseInfo
             {
                 TagName = tagName,
@@ -133,7 +134,7 @@ public class UpdateService
         }
         catch (Exception ex)
         {
-            StatusChanged?.Invoke($"Update check failed: {ex.Message}");
+            StatusChanged?.Invoke(Loc.F("Update_CheckFailed", ex.Message));
             return null;
         }
     }
@@ -149,7 +150,7 @@ public class UpdateService
             var currentExe = Environment.ProcessPath;
             if (string.IsNullOrEmpty(currentExe) || !File.Exists(currentExe))
             {
-                StatusChanged?.Invoke("Could not locate current exe path");
+                StatusChanged?.Invoke(Loc.T("Update_ExeNotFound"));
                 return false;
             }
 
@@ -157,7 +158,7 @@ public class UpdateService
             var tempDownload = currentExe + ".download";
             var oldPath = currentExe + ".old";
 
-            StatusChanged?.Invoke($"Downloading {release.TagName} ({release.AssetName})...");
+            StatusChanged?.Invoke(Loc.F("Update_Downloading", release.TagName, release.AssetName));
 
             using var http = new HttpClient();
             http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Kitsune7Den", CurrentVersion));
@@ -186,7 +187,7 @@ public class UpdateService
             string newExePath;
             if (release.IsZip)
             {
-                StatusChanged?.Invoke("Extracting...");
+                StatusChanged?.Invoke(Loc.T("Update_Extracting"));
                 var extractDir = currentExe + ".extract";
                 if (Directory.Exists(extractDir))
                     Directory.Delete(extractDir, recursive: true);
@@ -199,7 +200,7 @@ public class UpdateService
                 var extractedExe = Directory.GetFiles(extractDir, ExeName, SearchOption.AllDirectories).FirstOrDefault();
                 if (extractedExe is null)
                 {
-                    StatusChanged?.Invoke($"Zip did not contain {ExeName}");
+                    StatusChanged?.Invoke(Loc.F("Update_ZipMissingExe", ExeName));
                     Directory.Delete(extractDir, recursive: true);
                     return false;
                 }
@@ -210,7 +211,7 @@ public class UpdateService
                 newExePath = tempDownload;
             }
 
-            StatusChanged?.Invoke("Download complete. Installing...");
+            StatusChanged?.Invoke(Loc.T("Update_DownloadComplete"));
 
             // Clean up any stale .old from a previous update
             if (File.Exists(oldPath))
@@ -232,7 +233,7 @@ public class UpdateService
                 catch { /* best effort */ }
             }
 
-            StatusChanged?.Invoke("Update installed. Restarting...");
+            StatusChanged?.Invoke(Loc.T("Update_Installed"));
 
             // Relaunch and exit this process
             Process.Start(new ProcessStartInfo
@@ -248,7 +249,7 @@ public class UpdateService
         }
         catch (Exception ex)
         {
-            StatusChanged?.Invoke($"Update failed: {ex.Message}");
+            StatusChanged?.Invoke(Loc.F("Update_Failed", ex.Message));
             return false;
         }
     }
