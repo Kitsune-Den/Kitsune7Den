@@ -2,6 +2,12 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [Unreleased]
+
+### Infrastructure
+- **Releases are code-signed automatically.** `scripts/publish-release.ps1` now signs the exe with Azure Artifact Signing (via `az login`, or a service principal from environment variables), verifies the signature, and only then writes the SHA-256. If signing fails it stops instead of producing an unsigned release; `-SkipSign` builds unsigned on purpose. It no longer deletes everything in `publish\`, only its own build output.
+- **INSTALL.md** now covers checking the signature. v1.1.0 and v1.1.1 were signed by hand.
+
 ## [1.1.1] - 2026-10-14
 
 ### Fixed

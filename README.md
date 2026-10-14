@@ -94,6 +94,8 @@ To publish a single-file exe:
 dotnet publish src/Kitsune7Den -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o ./publish
 ```
 
+Official releases are built with `scripts/publish-release.ps1`, which also code-signs the exe with Azure Artifact Signing and writes its SHA-256. Signing needs access to the project's signing account, so for your own builds run it with `-SkipSign` (or use the `dotnet publish` line above).
+
 ## Tech Stack
 
 - .NET 8 / WPF / MVVM (CommunityToolkit.Mvvm)

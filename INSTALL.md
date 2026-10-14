@@ -18,15 +18,25 @@ Get-Content .\Kitsune7Den.exe.sha256
 
 The two hashes should match. If they don't, don't run it — download again or report it.
 
+## Check the signature
+
+From v1.1.0 on, `Kitsune7Den.exe` is code-signed through Microsoft's Artifact Signing service. To see it, right-click the exe → **Properties** → **Digital Signatures**, or in PowerShell:
+
+```powershell
+Get-AuthenticodeSignature .\Kitsune7Den.exe | Format-List Status, SignerCertificate
+```
+
+`Status` should be `Valid`, and the certificate's issuer should be a **Microsoft ID Verified CS** certificate authority. If the signature is missing or invalid, don't run it.
+
 ## First run: the SmartScreen warning
 
-Because Kitsune7Den isn't code-signed with a commercial certificate, Windows SmartScreen will show a blue dialog the first time you run it:
+Even signed, a new release can still get a blue SmartScreen dialog the first time you run it, while Microsoft's reputation system gets to know the signature:
 
 > **Windows protected your PC**
 >
 > Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.
 
-**This is expected for unsigned open source software.** It doesn't mean the app is malicious — it means the publisher isn't in Microsoft's "known reputation" database yet, which requires paying a commercial CA several hundred dollars a year for an EV code signing certificate. That's not in scope for a free tool right now.
+**This doesn't mean the app is malicious.** It means the signature hasn't built up enough download history yet. The warning goes away as more people run signed releases. Builds older than v1.1.0 aren't signed at all, so they always show it.
 
 **To run it anyway:**
 
@@ -37,6 +47,7 @@ You only have to do this once per downloaded version. After that Windows remembe
 
 If you want to be extra careful before clicking "Run anyway":
 
+- **Check the signature** is valid (see above)
 - **Verify the SHA-256** matches the value in the release (see above)
 - **Read the source** — everything Kitsune7Den does is in [this repo](https://github.com/Kitsune-Den/Kitsune7Den)
 - **Build it yourself** — see [Building from Source](README.md#building-from-source) in the README
