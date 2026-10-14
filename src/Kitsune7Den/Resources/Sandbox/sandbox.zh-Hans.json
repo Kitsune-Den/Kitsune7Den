@@ -1,0 +1,4120 @@
+{
+ "v3_0": {
+  "categories": {
+   "Crafting": "制作",
+   "Entities": "实体",
+   "General": "玩家",
+   "Misc": "其他",
+   "Resources": "资源",
+   "Tasks": "任务",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "启用或禁用丧尸气味追踪，并设置当它们嗅到气味时移动的速度。",
+    "label": "AI 嗅觉模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投补给的频率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地图和指南针上显示空投位置的标记。",
+    "label": "标记空投"
+   },
+   "AirDropRandomTime": {
+    "description": "允许控制空投出现的时间。选择一个特定的时间可使空投按时出现，或选择“任意”以实现完全随机。\\n\\n无 = 默认中午空投。\\n早晨 = 04:00 - 10:00\\n日间 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜间 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投变化"
+   },
+   "AllowCompass": {
+    "description": "显示玩家的指南针。",
+    "label": "允许指南针"
+   },
+   "AllowMap": {
+    "description": "开启游戏内地图。",
+    "label": "允许地图"
+   },
+   "AllowScreenMarkers": {
+    "description": "在屏幕上显示导航标记。地图标记保持可见。",
+    "label": "允许屏幕标记"
+   },
+   "AllowZombieDigging": {
+    "description": "允许丧尸向下挖掘地形。仍可横向挖掘。",
+    "label": "丧尸挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "战利品中找到的弹药数量。",
+    "label": "弹药丰富度"
+   },
+   "ApiaryInput": {
+    "description": "设置蜂箱产蜜所需的花朵数量。",
+    "label": "蜂箱原料"
+   },
+   "ApiaryOutput": {
+    "description": "蜂箱单次蜂蜜产出量。",
+    "label": "蜂箱产出"
+   },
+   "ApiaryTime": {
+    "description": "调整蜂箱产出蜂蜜所需的时长。",
+    "label": "蜂箱时长"
+   },
+   "ArmorLootCount": {
+    "description": "战利品中找到的护甲和护甲部件数量。",
+    "label": "护甲丰富度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包中制作什么物品。\\n\\n否：禁用背包制作。\\n是：允许在背包中制作。\\n少量：允许在背包中制作少量配方。\\n仅工作台：无法在背包中制作，所有制作仅能在工作台完成。",
+    "label": "背包制作"
+   },
+   "BiomeAnimalRespawn": {
+    "description": "提高激活环境中动物的重生率。影响非丧尸的被动和攻击性食物来源。默认读取配置文件参数。",
+    "label": "环境动物重生"
+   },
+   "BiomeEnemyDensity": {
+    "description": "覆盖环境敌人密度，设置每种环境中会生成多少敌人。默认读取配置文件参数。",
+    "label": "敌人密度"
+   },
+   "BiomeGSModifier": {
+    "description": "基于环境的难度修正。更高难度的环境会提高敌人的强度和战利品等级，使其超出你的基础进度。默认读取配置文件参数。",
+    "label": "环境游戏阶段"
+   },
+   "BiomeLSModifier": {
+    "description": "按环境生效的战利品等级倍数。默认读取配置文件参数。",
+    "label": "环境战利品等级"
+   },
+   "BiomeProgression": {
+    "description": "启用环境危害。天气和风暴不受此设置影响。",
+    "label": "生态环境进度"
+   },
+   "BiomeZombieRespawn": {
+    "description": "提高激活环境中敌人的重生率。默认读取配置文件参数。",
+    "label": "敌人重生"
+   },
+   "BlockDamage": {
+    "description": "玩家对物块造成的伤害量。",
+    "label": "物块伤害"
+   },
+   "BlockDamageAI": {
+    "description": "敌人对物块造成的伤害量。",
+    "label": "敌人物块伤害"
+   },
+   "BlockDamageAIBM": {
+    "description": "血月期间敌人对物块造成的伤害量。",
+    "label": "血月物块伤害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期间每位玩家对应的最大存活丧尸数量。\\n\\n附近玩家共享最多30只丧尸的上限。若达到上限，将通过游戏阶段机制提升难度，而非继续生成丧尸。全局上限约为 MaxSpawnedZombies 的 1.9 倍。较低的游戏阶段会减少生成数量。\\n\\n提高该设置可能会显著影响性能。",
+    "label": "血月计数"
+   },
+   "BloodMoonFrequency": {
+    "description": "两次血月之间间隔的游戏内天数。禁用 = 没有血月。",
+    "label": "血月频率"
+   },
+   "BloodMoonRange": {
+    "description": "在血月基础间隔之上额外增加的随机天数范围。\\n\\n例如：若设定为基础间隔 7 天 + 随机范围 5 天，则血月会在第 7 天到第 12 天之间随机出现。\\n\\n0 天 = 无额外随机天数。",
+    "label": "血月范围"
+   },
+   "BloodMoonWarning": {
+    "description": "设置何时 HUD 上会出现血月警告，并且天数数字变成红色。",
+    "label": "血月警告"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "是否在商人任务列表刷新埋藏任务。如果关闭，则仅刷新目标点任务。",
+    "label": "埋藏任务"
+   },
+   "ChallengesEnabled": {
+    "description": "开启游戏内挑战系统。",
+    "label": "挑战"
+   },
+   "CraftingInput": {
+    "description": "制作所需的材料数量（不包括资源组合包）。",
+    "label": "制作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制战利品中找到的制作杂志数量。",
+    "label": "杂志丰富度"
+   },
+   "CraftingMaxTier": {
+    "description": "设置制作物品的最高品质。",
+    "label": "制作最高品质"
+   },
+   "CraftingOutput": {
+    "description": "每次制作产出的物品数量（不包括资源组合包）。",
+    "label": "制作产出"
+   },
+   "CraftingProgression": {
+    "description": "启用或禁用基于杂志和设计图的制作进度。",
+    "label": "制作进度"
+   },
+   "CraftingTime": {
+    "description": "制作物品所需的时间。",
+    "label": "制作计时器"
+   },
+   "CropGrowthSpeed": {
+    "description": "调整玩家种植的作物和树木的生长速度。百分比数值越高，生长周期越长。注：现有存档内，作物需重新种植，修改才会生效。",
+    "label": "农作物生长"
+   },
+   "CropOutput": {
+    "description": "控制从野生和玩家种植的农作物收获到的资源数量。关闭后会提升生存难度。",
+    "label": "农作物产出"
+   },
+   "CrouchSpeed": {
+    "description": "调整玩家蹲伏行走时的移动速度。",
+    "label": "蹲伏速度"
+   },
+   "DayLightLength": {
+    "description": "设置游戏内白昼的时长。总是夜晚和总是白天模式的运行逻辑不变。白昼时长参数：\\n\\n4 小时 = 10:00 - 14:00\\n6 小时 = 09:00 - 15:00\\n8 小时 = 08:00 - 16:00\\n10 小时 = 07:00 - 17:00\\n12 小时 = 06:00 - 18:00\\n14 小时 = 05:00 - 19:00\\n16 小时 = 04:00 - 20:00\\n18 小时 = 04:00 - 22:00\\n20 小时 = 02:00 - 22:00",
+    "label": "白昼时长"
+   },
+   "DayNightLength": {
+    "description": "游戏内的 24 小时在现实世界中需花费多少分钟。",
+    "label": "24 小时周期"
+   },
+   "DeathPenalty": {
+    "description": "决定死亡时的死亡惩罚。\\n\\n无 = 没有惩罚。\\n仅经验值 = 典型的经验值损失模式。\\n受伤 = 复活后会保留一些减益效果，并且食物/水会重置为 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡惩罚"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "当启用死亡损耗时，此项设置决定死亡时耐久度损失的百分比。",
+    "label": "死亡损耗量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "设置角色死亡时物品是否会发生损耗。\\n\\n无 = 没有损失。\\n耐久度 = 当前耐久度降低一部分，可通过修理恢复。\\n最大耐久度 = 减少最大耐久度，降低修理的上限。\\n两者 = 物品同时损失当前和最大耐久度。",
+    "label": "死亡损耗"
+   },
+   "DewCollectorInput": {
+    "description": "设置开始收集露水所需的空水罐数量。",
+    "label": "露水收集器原料"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器单次产出的水量。",
+    "label": "露水收集器产出"
+   },
+   "DewCollectorTime": {
+    "description": "调整露水收集器产出清水所需时间。",
+    "label": "露水收集器时间"
+   },
+   "DrinkLootCount": {
+    "description": "容器中找到的饮料数量。",
+    "label": "饮料丰富度"
+   },
+   "DropOnDeath": {
+    "description": "决定死亡时掉落哪些物品。\\n\\n无 = 不掉落任何物品。\\n全部 = 掉落背包和工具带中的物品。\\n仅工具带 = 掉落工具带中的物品。\\n仅背包 = 掉落背包中的物品。\\n全部删除 = 删除所有物品。",
+    "label": "死亡丢失物品"
+   },
+   "DropOnQuit": {
+    "description": "退出时会掉落什么物品。\\n\\n无 = 不掉落任何物品。\\n所有 = 掉落背包和工具带。\\n工具带 = 掉落工具带上的物品。\\n背包 = 掉落背包里的物品。",
+    "label": "退出丢失物品"
+   },
+   "DukesLootCount": {
+    "description": "战利品中找到的公爵币和旧钞票数量。",
+    "label": "货币丰富度"
+   },
+   "ElectricalOutput": {
+    "description": "控制发电量。",
+    "label": "电力输出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制负重背包栏位的数量。可选择“无负重”至“满负重”。默认读取配置文件参数。",
+    "label": "负重栏位"
+   },
+   "EnemySpawnMode": {
+    "description": "启用或禁用敌人生成。",
+    "label": "敌人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敌人对玩家造成的伤害量。这会与玩家受到的其他伤害叠加。",
+    "label": "敌人造成的伤害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敌人和动物等实体受到来自玩家的伤害。",
+    "label": "实体所受伤害"
+   },
+   "FoodLootCount": {
+    "description": "容器中找到的食物数量。",
+    "label": "食物丰富度"
+   },
+   "GlobalGSModifier": {
+    "description": "根据你的等级和存活天数，决定敌人类型、难度升级、战利品品质和血月强度。数值越高，难度越高。默认读取配置文件参数。",
+    "label": "全局游戏阶段"
+   },
+   "GlobalLSModifier": {
+    "description": "作用于玩家战利品等级的全局倍数。默认读取配置文件参数。",
+    "label": "全局战利品等级"
+   },
+   "GlobalLootCount": {
+    "description": "全局调整地图内所有战利品产出总量。选择“无”将彻底关闭全部战利品，包含丧尸掉落袋和补给箱。",
+    "label": "掉落率"
+   },
+   "GlobalTSModifier": {
+    "description": "作用于商人阶段进程的全局修正。控制商人售卖道具的品质与种类丰富度。默认读取配置文件参数。",
+    "label": "全局商人阶段"
+   },
+   "HarvestingOutput": {
+    "description": "控制收获物块和物品获得的资源数量。不影响矿石、种子或农作物。关闭后会提升生存难度。",
+    "label": "资源产出"
+   },
+   "HeadshotMode": {
+    "description": "设置爆头伤害的规则。\\n\\n仅限爆头 = 只有爆头才能对敌人造成伤害。\\n爆头终结 = 射击身体可以造成伤害，但只有爆头才能终结敌人。\\n\\n对野生动物不生效。",
+    "label": "爆头模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家爆头实体所造成伤害的倍数。",
+    "label": "爆头倍数"
+   },
+   "HeatMapSensitivity": {
+    "description": "玩家活动对热力图的影响程度。热量越高，尖叫丧尸刷新概率越高。默认读取配置文件参数。",
+    "label": "热力图敏感度"
+   },
+   "IncomingDamage": {
+    "description": "玩家受到所有来源的伤害量。",
+    "label": "玩家所受伤害"
+   },
+   "InfectionRate": {
+    "description": "调整感染进展的速度。",
+    "label": "感染速率"
+   },
+   "IntroChallengesEnabled": {
+    "description": "开启新手引导挑战任务。",
+    "label": "入门挑战"
+   },
+   "IntroQuestEnabled": {
+    "description": "跳过开头的埋藏补给任务，直接解锁完整任务流程。",
+    "label": "入门任务"
+   },
+   "ItemDegradation": {
+    "description": "武器和工具耐久度下降的速度。默认读取配置文件参数。",
+    "label": "物品损坏"
+   },
+   "JarRefund": {
+    "description": "消耗物品后归还罐子的几率。",
+    "label": "罐子退款"
+   },
+   "JumpStrength": {
+    "description": "修改玩家的跳跃高度。",
+    "label": "跳跃力量"
+   },
+   "LootBagChance": {
+    "description": "敌人死亡时掉落战利品袋的几率倍率。",
+    "label": "战利品袋掉落"
+   },
+   "LootMaxTier": {
+    "description": "设置战利品中出现的武器和物品的最高品质。",
+    "label": "最大战利品品质"
+   },
+   "LootRespawnDays": {
+    "description": "未访问区域内战利品容器重置所需的天数。",
+    "label": "战利品刷新天数"
+   },
+   "LootTimer": {
+    "description": "搜刮容器所需的时间。",
+    "label": "开箱时间"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "设置死亡时随机物品丢失的数量。",
+    "label": "死亡丢失数量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "设置哪些物品在死亡时会丢失。\\n\\n无 = 无物品\\n全部 = 所有物品。\\n工具带 = 仅工具带上的物品。\\n背包 = 仅背包里的物品。\\n装备 = 穿戴的护甲和衣物。\\n仅携带物品 = 工具带和背包中的物品。",
+    "label": "死亡时丢失"
+   },
+   "MaxDegradationAmount": {
+    "description": "决定物品修理后会损失多少耐久度。",
+    "label": "修理损坏"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的丧尸种类的最大等级。",
+    "label": "最大敌人等级"
+   },
+   "MaxTechType": {
+    "description": "全局设置武器和物品可达到的最高科技等级，让你可以控制进度和游戏节奏。参考下方分级：\\n\\n0级科技：石器、铁管\\n1级科技：铁器、AK-47\\n2级科技：钢材、战术突击步枪\\n3级科技：螺旋钻、M60",
+    "label": "最大科技类型"
+   },
+   "MedicalLootCount": {
+    "description": "战利品中找到的药品数量。",
+    "label": "药品丰富度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近战武器和工具造成的伤害。",
+    "label": "近战伤害"
+   },
+   "MeleeLootCount": {
+    "description": "战利品中找到的近战武器和部件数量。",
+    "label": "近战武器丰富度"
+   },
+   "MiningOutput": {
+    "description": "控制采矿获得的矿石数量。关闭后会提升生存难度。",
+    "label": "采矿产出"
+   },
+   "NewbieCoat": {
+    "description": "如果开启，新玩家出生时将获得新手保护增益。",
+    "label": "新玩家增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "是否在商人任务列表刷新目标点任务。如果关闭，则仅刷新埋藏任务。",
+    "label": "目标点任务"
+   },
+   "POITierLSModifier": {
+    "description": "基于目标点等级的战利品等级倍数。默认读取配置文件参数。",
+    "label": "目标点战利品等级"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "决定生命值和体力值是否每级增加。",
+    "label": "等级属性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "阅读技能杂志获得的进度。",
+    "label": "杂志进度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "计入商人进度的每日任务数量。额外的任务仍会给予经验值和奖励，但不会推进商人等级进度。",
+    "label": "每日任务数"
+   },
+   "QuestsEnabled": {
+    "description": "启用或禁用游戏内任务。",
+    "label": "任务"
+   },
+   "QuestsPerTier": {
+    "description": "解锁下一等级所需完成的任务数量。数值越高，升级的进度越慢。无 = 无限制，可直接访问全部任务等级。",
+    "label": "每级任务"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓箭、火器和其他远程武器造成的伤害。",
+    "label": "远程伤害"
+   },
+   "RangedLootCount": {
+    "description": "战利品中找到的远程武器和部件数量。",
+    "label": "远程武器丰富度"
+   },
+   "RepairTypes": {
+    "description": "决定物品的修理方式：\\n\\n无 = 不可修理\\n仅维修工具 = 仅可使用维修工具修理\\n仅合并工作站 = 仅可在合并工作站修理\\n两者皆可 = 可使用维修工具或合并工作站修理。",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "战利品中找到的资源物品数量。",
+    "label": "资源丰富度"
+   },
+   "RunSpeed": {
+    "description": "调整玩家奔跑时的移动速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "分解物品时获得的数量。",
+    "label": "分解产出"
+   },
+   "SeedDropOutput": {
+    "description": "玩家收获农作物获得的种子数量。不影响种子掉落几率或树木的种子。",
+    "label": "种子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在屏幕上显示天数和时间信息。如果关闭此选项，血月警告提示也会一同关闭。",
+    "label": "显示天数/时间"
+   },
+   "ShowEnemyDamage": {
+    "description": "当实体被击中时显示浮动的伤害数字。",
+    "label": "显示实体伤害"
+   },
+   "ShowHealthBars": {
+    "description": "显示或隐藏实体的生命值条。",
+    "label": "实体生命值条"
+   },
+   "ShowLocationInfo": {
+    "description": "显示环境和目标点的名称和难度。",
+    "label": "显示地点信息"
+   },
+   "ShowXP": {
+    "description": "隐藏或显示屏幕上的经验值条和经验值弹出提示。",
+    "label": "显示经验值"
+   },
+   "SillyBigHeads": {
+    "description": "开启丧尸、动物和商人的“大头模式”。",
+    "label": "大头"
+   },
+   "SillyBlackandWhite": {
+    "description": "启用经典黑白色调（灵感源自 20 世纪 60 年代的恐怖电影）。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "开启击杀实体时的庆祝五彩纸屑特效。“仅限爆头”选项仅会在爆头击杀时触发五彩纸屑特效，因此可以射击动物的身体以收集肉类。“仅限爆头”选项不适用于非敌对动物。",
+    "label": "庆祝击杀"
+   },
+   "SillyLowGravity": {
+    "description": "控制游戏内重力的大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "为游戏内的动作开启滑稽音效。",
+    "label": "滑稽声音"
+   },
+   "SillyTinyZombies": {
+    "description": "启用缩小版的丧尸。",
+    "label": "迷你丧尸"
+   },
+   "SkillGainRate": {
+    "description": "调整需要多少等级才能获得技能点。",
+    "label": "技能获得速率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制在获得技能点时会获得多少技能点。",
+    "label": "技能获得数量"
+   },
+   "SmeltingType": {
+    "description": "控制锻造炉制作的方式。是将物品放入锻造炉进行熔炼，还是直接使用你背包中的材料进行制作。",
+    "label": "熔炉类型"
+   },
+   "StaminaRegen": {
+    "description": "控制体力回复的速率。数值为近似值。",
+    "label": "体力值回复"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳跃和攻击等动作的体力消耗。数值为近似值。",
+    "label": "体力值消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成新手引导任务可获得的技能点数。如果关闭引导，则开局直接发放对应点数。",
+    "label": "基础技能点"
+   },
+   "StormFreq": {
+    "description": "调整风暴出现的频率。设为“无”将禁用风暴。",
+    "label": "风暴频率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否会听到风暴警报声和看到屏幕上的风暴警告提示。",
+    "label": "风暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "设置环境温度（高温和低温）是否对玩家造成影响。",
+    "label": "温度生存"
+   },
+   "TerrainDamage": {
+    "description": "玩家对地形造成的伤害量。",
+    "label": "地形伤害"
+   },
+   "TraderBuyLimit": {
+    "description": "商人收购玩家物品的数量上限，超过后将拒绝继续收购。该值决定了玩家每次卖出囤积物资的价格。",
+    "label": "商人收购上限"
+   },
+   "TraderBuyPrices": {
+    "description": "调整玩家向商人购买物品的价格。",
+    "label": "购买价格"
+   },
+   "TraderDialog": {
+    "description": "隐藏/显示商人的语音台词和屏幕上的对话。",
+    "label": "交易对话"
+   },
+   "TraderHours": {
+    "description": "控制商人的营业和打烊时间。24 小时周期和白昼时长不影响此设置。血月已关闭表示仅在血月期间关门。默认使用 XML 中的数值。\\n\\nXML 默认 = 04:00-22:00\\n 早晨 = 04:00-12:00\\n 日间 = 10:00-18:00\\n 晚上 = 16:00-22:00\\n 深夜 = 22:00-04:00",
+    "label": "商人营业时间"
+   },
+   "TraderItemAbundance": {
+    "description": "商人出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "商人物品数量"
+   },
+   "TraderMaxTier": {
+    "description": "设置可从商人处购买物品的最高品质。",
+    "label": "商人最高品质"
+   },
+   "TraderProtection": {
+    "description": "设置商人据点的伤害保护，以及玩家是否可以占领该区域。",
+    "label": "商人保护"
+   },
+   "TraderResetInterval": {
+    "description": "设置商人重置库存的频率。默认读取配置文件参数。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "调整玩家出售物品给商人的价格。",
+    "label": "出售价格"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "允许接受去找其他商人的任务。",
+    "label": "商贸路线"
+   },
+   "TradersEnabled": {
+    "description": "允许与 NPC 商人交易。",
+    "label": "交易开启"
+   },
+   "TreasureMapChance": {
+    "description": "战利品容器和敌人战利品袋中生成藏宝图的概率倍率。",
+    "label": "藏宝图生成概率"
+   },
+   "VehicleBlockDamage": {
+    "description": "载具对物块造成的伤害量。",
+    "label": "载具物块伤害"
+   },
+   "VehicleEntityDamage": {
+    "description": "载具对实体造成的伤害量。",
+    "label": "载具实体伤害"
+   },
+   "VehicleFuelUsage": {
+    "description": "调整载具消耗燃料的速率。",
+    "label": "载具燃料使用量"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的载具发生碰撞时自身受到的伤害量。",
+    "label": "载具自身伤害"
+   },
+   "VendingEnabled": {
+    "description": "启用或禁用自动贩卖机功能。",
+    "label": "贩卖机开启"
+   },
+   "VendingItemAbundance": {
+    "description": "自动贩卖机出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "贩卖机物品数量"
+   },
+   "VendingResetInterval": {
+    "description": "设置商人自动贩卖机重置库存的频率。默认读取配置文件参数。",
+    "label": "贩卖机重置"
+   },
+   "WalkSpeed": {
+    "description": "调整玩家行走时的移动速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "是：允许在工作台制作物品。否：玩家仅可进行背包制作。",
+    "label": "工作台制作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允许在世界中生成可用的工作站。在生成新的纳维戈恩或随机世界生成地图时生效。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "作用于所有获得的经验值的倍数。",
+    "label": "经验值倍数"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月尸群和风暴期间丧尸的移动速度。",
+    "label": "丧尸血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "设置凶残丧尸的移动速度。",
+    "label": "凶残丧尸速度"
+   },
+   "ZombieFeralSense": {
+    "description": "丧尸视觉和听觉感知玩家的灵敏度。",
+    "label": "凶残丧尸感知"
+   },
+   "ZombieMove": {
+    "description": "设置白天普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸白天速度"
+   },
+   "ZombieMoveNight": {
+    "description": "设置夜晚普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸夜间速度"
+   },
+   "ZombieRageChance": {
+    "description": "丧尸受到伤害时进入狂暴模式的几率。",
+    "label": "丧尸狂暴"
+   },
+   "ZombiesEatAnimals": {
+    "description": "决定丧尸是否会吃动物的尸体。",
+    "label": "丧尸吃动物"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "无",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "冲刺",
+    "5": "噩梦"
+   },
+   "AirDropRandomTime": {
+    "0": "无",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "全天",
+    "6": "任何"
+   },
+   "AirDrops": {
+    "0": "关闭",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "无"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "仅工作台"
+   },
+   "BarterValues": {
+    "0": "无"
+   },
+   "BiomeEnemyDensity": {
+    "0": "默认",
+    "1": "非常低",
+    "2": "低",
+    "3": "中等",
+    "4": "高",
+    "5": "非常高"
+   },
+   "BloodMoonCount": {
+    "0": "4 个敌人",
+    "1": "6 个敌人",
+    "2": "8 个敌人",
+    "3": "10 个敌人",
+    "4": "12 个敌人",
+    "5": "16 个敌人",
+    "6": "24 个敌人",
+    "7": "32 个敌人",
+    "8": "64 个敌人"
+   },
+   "BloodMoonFrequency": {
+    "0": "关闭",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "关闭",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "仅限爆头"
+   },
+   "CropGrowthSpeed": {
+    "0": "无",
+    "1": "立即"
+   },
+   "DamageValues": {
+    "0": "无"
+   },
+   "DayLightLength": {
+    "0": "总是夜晚",
+    "10": "总是白天"
+   },
+   "DeathPenalty": {
+    "0": "无",
+    "1": "仅经验值",
+    "2": "受伤",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "无",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "均可"
+   },
+   "DewCollectorInput": {
+    "0": "无"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "关闭",
+    "1": "非常低",
+    "2": "低",
+    "3": "默认",
+    "4": "高",
+    "5": "非常高"
+   },
+   "DropOnDeath": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "删除所有"
+   },
+   "DropOnQuit": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包"
+   },
+   "Encumbrance": {
+    "0": "关闭",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高",
+    "5": "完整"
+   },
+   "HeadshotMode": {
+    "0": "无",
+    "1": "仅限爆头",
+    "2": "爆头终结"
+   },
+   "JarRefund": {
+    "0": "无"
+   },
+   "JumpStrength": {
+    "0": "无"
+   },
+   "LootAbundanceValues": {
+    "0": "无"
+   },
+   "LootRespawnDays": {
+    "0": "关闭"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "LowDefaultHigh": {
+    "0": "非常低",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高"
+   },
+   "MaxChunkAge": {
+    "0": "关闭"
+   },
+   "MaxDegradationAmounts": {
+    "0": "无"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "强壮",
+    "2": "特殊",
+    "3": "凶残",
+    "4": "辐射",
+    "5": "精英"
+   },
+   "MaxTechType": {
+    "0": "无",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "无"
+   },
+   "PointsPer": {
+    "0": "无"
+   },
+   "QuestPerDay": {
+    "0": "无限制"
+   },
+   "QuestPerTier": {
+    "0": "无"
+   },
+   "RepairTypes": {
+    "0": "无",
+    "1": "仅修理",
+    "2": "仅合并",
+    "3": "均可"
+   },
+   "ShowXP": {
+    "0": "全部",
+    "1": "仅显示条",
+    "2": "仅通知",
+    "3": "无"
+   },
+   "SlowToFast": {
+    "0": "默认",
+    "1": "非常慢",
+    "2": "慢速",
+    "3": "普通",
+    "4": "快速",
+    "5": "非常快"
+   },
+   "SmeltingType": {
+    "0": "熔炉",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "无"
+   },
+   "StaminaUsage": {
+    "0": "无"
+   },
+   "StarterSkillPoints": {
+    "0": "无"
+   },
+   "StormFrequency": {
+    "0": "无"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可占领",
+    "2": "不可占领"
+   },
+   "TraderHourPresets": {
+    "0": "默认",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "血月已关闭",
+    "6": "总是开门"
+   },
+   "TraderResetInterval": {
+    "0": "默认",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "无"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "关闭",
+    "1": "白天",
+    "2": "深夜",
+    "3": "全部"
+   },
+   "ZombieRageChance": {
+    "0": "无"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "冲刺",
+    "4": "噩梦"
+   }
+  }
+ },
+ "v3_1": {
+  "categories": {
+   "Crafting": "制作",
+   "Entities": "实体",
+   "General": "玩家",
+   "Misc": "其他",
+   "Resources": "资源",
+   "Tasks": "任务",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "启用或禁用丧尸气味追踪，并设置当它们嗅到气味时移动的速度。",
+    "label": "AI 嗅觉模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投补给的频率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地图和指南针上显示空投位置的标记。",
+    "label": "标记空投"
+   },
+   "AirDropRandomTime": {
+    "description": "允许控制空投出现的时间。选择一个特定的时间可使空投按时出现，或选择“任意”以实现完全随机。\\n\\n无 = 默认中午空投。\\n早晨 = 04:00 - 10:00\\n日间 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜间 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投变化"
+   },
+   "AllowCompass": {
+    "description": "显示玩家的指南针。",
+    "label": "允许指南针"
+   },
+   "AllowMap": {
+    "description": "开启游戏内地图。",
+    "label": "允许地图"
+   },
+   "AllowScreenMarkers": {
+    "description": "在屏幕上显示导航标记。地图标记保持可见。",
+    "label": "允许屏幕标记"
+   },
+   "AllowZombieDigging": {
+    "description": "允许丧尸向下挖掘地形。仍可横向挖掘。",
+    "label": "丧尸挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "战利品中找到的弹药数量。",
+    "label": "弹药丰富度"
+   },
+   "ApiaryInput": {
+    "description": "设置蜂箱产蜜所需的花朵数量。",
+    "label": "蜂箱原料"
+   },
+   "ApiaryOutput": {
+    "description": "蜂箱单次蜂蜜产出量。",
+    "label": "蜂箱产出"
+   },
+   "ApiaryTime": {
+    "description": "调整蜂箱产出蜂蜜所需的时长。",
+    "label": "蜂箱时长"
+   },
+   "ArmorLootCount": {
+    "description": "战利品中找到的护甲和护甲部件数量。",
+    "label": "护甲丰富度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包中制作什么物品。\\n\\n否：禁用背包制作。\\n是：允许在背包中制作。\\n少量：允许在背包中制作少量配方。\\n仅工作台：无法在背包中制作，所有制作仅能在工作台完成。",
+    "label": "背包制作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆盖各生态环境的白天动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "白天动物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高白天期间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "白天动物重新生成"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆盖各生态环境的白天敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "白天敌人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高白天期间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "白天敌人重新生成"
+   },
+   "BiomeGSModifier": {
+    "description": "基于环境的难度修正。更高难度的环境会提高敌人的强度和战利品等级，使其超出你的基础进度。默认读取配置文件参数。",
+    "label": "环境游戏阶段"
+   },
+   "BiomeLSModifier": {
+    "description": "按环境生效的战利品等级倍数。默认读取配置文件参数。",
+    "label": "环境战利品等级"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆盖各生态环境的夜间动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "夜间动物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "夜间动物重新生成"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆盖各生态环境的夜间敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "夜间敌人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "夜间敌人重新生成"
+   },
+   "BiomeProgression": {
+    "description": "启用环境危害。天气和风暴不受此设置影响。",
+    "label": "生态环境进度"
+   },
+   "BlockDamage": {
+    "description": "玩家对物块造成的伤害量。",
+    "label": "物块伤害"
+   },
+   "BlockDamageAI": {
+    "description": "敌人对物块造成的伤害量。",
+    "label": "敌人物块伤害"
+   },
+   "BlockDamageAIBM": {
+    "description": "血月期间敌人对物块造成的伤害量。",
+    "label": "血月物块伤害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期间每位玩家对应的最大存活丧尸数量。\\n\\n附近玩家共享最多30只丧尸的上限。若达到上限，将通过游戏阶段机制提升难度，而非继续生成丧尸。全局上限约为 MaxSpawnedZombies 的 1.9 倍。较低的游戏阶段会减少生成数量。\\n\\n提高该设置可能会显著影响性能。",
+    "label": "血月计数"
+   },
+   "BloodMoonFrequency": {
+    "description": "两次血月之间间隔的游戏内天数。禁用 = 没有血月。",
+    "label": "血月频率"
+   },
+   "BloodMoonRange": {
+    "description": "在血月基础间隔之上额外增加的随机天数范围。\\n\\n例如：若设定为基础间隔 7 天 + 随机范围 5 天，则血月会在第 7 天到第 12 天之间随机出现。\\n\\n0 天 = 无额外随机天数。",
+    "label": "血月范围"
+   },
+   "BloodMoonWarning": {
+    "description": "设置何时 HUD 上会出现血月警告，并且天数数字变成红色。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制战利品中找到的书籍和设计图数量。",
+    "label": "书籍丰富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "是否在商人任务列表刷新埋藏任务。如果关闭，则仅刷新目标点任务。",
+    "label": "埋藏任务"
+   },
+   "ChallengesEnabled": {
+    "description": "开启游戏内挑战系统。",
+    "label": "挑战"
+   },
+   "ChickenCoopInput": {
+    "description": "设置开始生产所需的饲料量。",
+    "label": "鸡舍投入量"
+   },
+   "ChickenCoopOutput": {
+    "description": "每个生产周期产出的鸡只、鸡蛋和羽毛数量。",
+    "label": "鸡舍产量"
+   },
+   "ChickenCoopTime": {
+    "description": "调整鸡舍产出鸡只、鸡蛋和羽毛所需的时间。",
+    "label": "鸡舍生产时间"
+   },
+   "CraftingInput": {
+    "description": "制作所需的材料数量（不包括资源组合包）。",
+    "label": "制作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制战利品中找到的制作杂志数量。",
+    "label": "杂志丰富度"
+   },
+   "CraftingMaxTier": {
+    "description": "设置制作物品的最高品质。",
+    "label": "制作最高品质"
+   },
+   "CraftingOutput": {
+    "description": "每次制作产出的物品数量（不包括资源组合包）。",
+    "label": "制作产出"
+   },
+   "CraftingProgression": {
+    "description": "启用或禁用基于杂志和设计图的制作进度。",
+    "label": "制作进度"
+   },
+   "CraftingTime": {
+    "description": "制作物品所需的时间。",
+    "label": "制作计时器"
+   },
+   "CropGrowthSpeed": {
+    "description": "调整玩家种植的作物和树木的生长速度。百分比数值越高，生长周期越长。注：现有存档内，作物需重新种植，修改才会生效。",
+    "label": "农作物生长"
+   },
+   "CropOutput": {
+    "description": "控制从野生和玩家种植的农作物收获到的资源数量。关闭后会提升生存难度。",
+    "label": "农作物产出"
+   },
+   "CrouchRunSpeed": {
+    "description": "调整玩家蹲伏奔跑时的移动速度。",
+    "label": "蹲伏奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "调整玩家蹲伏行走时的移动速度。",
+    "label": "蹲伏速度"
+   },
+   "DayLightLength": {
+    "description": "设置游戏内白昼的时长。总是夜晚和总是白天模式的运行逻辑不变。白昼时长参数：\\n\\n4 小时 = 10:00 - 14:00\\n6 小时 = 09:00 - 15:00\\n8 小时 = 08:00 - 16:00\\n10 小时 = 07:00 - 17:00\\n12 小时 = 06:00 - 18:00\\n14 小时 = 05:00 - 19:00\\n16 小时 = 04:00 - 20:00\\n18 小时 = 04:00 - 22:00\\n20 小时 = 02:00 - 22:00",
+    "label": "白昼时长"
+   },
+   "DayNightLength": {
+    "description": "游戏内的 24 小时在现实世界中需花费多少分钟。",
+    "label": "24 小时周期"
+   },
+   "DeathPenalty": {
+    "description": "决定死亡时的死亡惩罚。\\n\\n无 = 没有惩罚。\\n仅经验值 = 典型的经验值损失模式。\\n受伤 = 复活后会保留一些减益效果，并且食物/水会重置为 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡惩罚"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "当启用死亡损耗时，此项设置决定死亡时耐久度损失的百分比。",
+    "label": "死亡损耗量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "设置角色死亡时物品是否会发生损耗。\\n\\n无 = 没有损失。\\n耐久度 = 当前耐久度降低一部分，可通过修理恢复。\\n最大耐久度 = 减少最大耐久度，降低修理的上限。\\n两者 = 物品同时损失当前和最大耐久度。",
+    "label": "死亡损耗"
+   },
+   "DewCollectorInput": {
+    "description": "设置开始收集露水所需的空水罐数量。",
+    "label": "露水收集器原料"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器单次产出的水量。",
+    "label": "露水收集器产出"
+   },
+   "DewCollectorTime": {
+    "description": "调整露水收集器产出清水所需时间。",
+    "label": "露水收集器时间"
+   },
+   "DrinkLootCount": {
+    "description": "容器中找到的饮料数量。",
+    "label": "饮料丰富度"
+   },
+   "DropOnDeath": {
+    "description": "决定死亡时掉落哪些物品。\\n\\n无 = 不掉落任何物品。\\n全部 = 掉落背包和工具带中的物品。\\n仅工具带 = 掉落工具带中的物品。\\n仅背包 = 掉落背包中的物品。\\n全部删除 = 删除所有物品。",
+    "label": "死亡丢失物品"
+   },
+   "DropOnQuit": {
+    "description": "退出时会掉落什么物品。\\n\\n无 = 不掉落任何物品。\\n所有 = 掉落背包和工具带。\\n工具带 = 掉落工具带上的物品。\\n背包 = 掉落背包里的物品。",
+    "label": "退出丢失物品"
+   },
+   "DukesLootCount": {
+    "description": "战利品中找到的公爵币和旧钞票数量。",
+    "label": "货币丰富度"
+   },
+   "ElectricalOutput": {
+    "description": "控制发电量。",
+    "label": "电力输出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制负重背包栏位的数量。可选择“无负重”至“满负重”。默认读取配置文件参数。",
+    "label": "负重栏位"
+   },
+   "EnemySpawnMode": {
+    "description": "启用或禁用敌人生成。",
+    "label": "敌人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敌人对玩家造成的伤害量。这会与玩家受到的其他伤害叠加。",
+    "label": "敌人造成的伤害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敌人和动物等实体受到来自玩家的伤害。",
+    "label": "实体所受伤害"
+   },
+   "FoodLootCount": {
+    "description": "容器中找到的食物数量。",
+    "label": "食物丰富度"
+   },
+   "FullChickenStressEvent": {
+    "description": "设置手持鸡只的压力达到 100% 时触发的事件。“无”会禁用事件，“随机”则会从下列事件中随机选择一个。\\n\\n鸡脱手 = 鸡会从你手中挣脱。\\n愤怒的鸡 = 鸡会反过来攻击你。\\n丧尸群 = 鸡的压力会引来一群丧尸。\\n杀人鸡群 = 愤怒的鸡会联合起来攻击你。",
+    "label": "鸡只压力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根据你的等级和存活天数，决定敌人类型、难度升级、战利品品质和血月强度。数值越高，难度越高。默认读取配置文件参数。",
+    "label": "全局游戏阶段"
+   },
+   "GlobalLSModifier": {
+    "description": "作用于玩家战利品等级的全局倍数。默认读取配置文件参数。",
+    "label": "全局战利品等级"
+   },
+   "GlobalLootCount": {
+    "description": "全局调整地图内所有战利品产出总量。选择“无”将彻底关闭全部战利品，包含丧尸掉落袋和补给箱。",
+    "label": "掉落率"
+   },
+   "GlobalTSModifier": {
+    "description": "作用于商人阶段进程的全局修正。控制商人售卖道具的品质与种类丰富度。默认读取配置文件参数。",
+    "label": "全局商人阶段"
+   },
+   "HarvestingOutput": {
+    "description": "控制收获物块和物品获得的资源数量。不影响矿石、种子或农作物。关闭后会提升生存难度。",
+    "label": "资源产出"
+   },
+   "HeadshotMode": {
+    "description": "设置爆头伤害的规则。\\n\\n仅限爆头 = 只有爆头才能对敌人造成伤害。\\n爆头终结 = 射击身体可以造成伤害，但只有爆头才能终结敌人。\\n\\n对野生动物不生效。",
+    "label": "爆头模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家爆头实体所造成伤害的倍数。",
+    "label": "爆头倍数"
+   },
+   "HeatMapSensitivity": {
+    "description": "玩家活动对热力图的影响程度。热量越高，尖叫丧尸刷新概率越高。默认读取配置文件参数。",
+    "label": "热力图敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。更高的数值会增加食物的消耗量。",
+    "label": "饥饿度倍数"
+   },
+   "IncomingDamage": {
+    "description": "玩家受到所有来源的伤害量。",
+    "label": "玩家所受伤害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家感染的几率。",
+    "label": "感染几率"
+   },
+   "InfectionRate": {
+    "description": "调整感染进展的速度。",
+    "label": "感染速率"
+   },
+   "IntroChallengesEnabled": {
+    "description": "开启新手引导挑战任务。",
+    "label": "入门挑战"
+   },
+   "IntroQuestEnabled": {
+    "description": "跳过开头的埋藏补给任务，直接解锁完整任务流程。",
+    "label": "入门任务"
+   },
+   "ItemDegradation": {
+    "description": "武器和工具耐久度下降的速度。默认读取配置文件参数。",
+    "label": "物品损坏"
+   },
+   "JarRefund": {
+    "description": "消耗物品后归还罐子的几率。",
+    "label": "罐子退款"
+   },
+   "JumpStrength": {
+    "description": "修改玩家的跳跃高度。",
+    "label": "跳跃力量"
+   },
+   "LootBagChance": {
+    "description": "敌人死亡时掉落战利品袋的几率倍率。",
+    "label": "战利品袋掉落"
+   },
+   "LootMaxTier": {
+    "description": "设置战利品中出现的武器和物品的最高品质。",
+    "label": "最大战利品品质"
+   },
+   "LootRespawnDays": {
+    "description": "未访问区域内战利品容器重置所需的天数。",
+    "label": "战利品刷新天数"
+   },
+   "LootTimer": {
+    "description": "搜刮容器所需的时间。",
+    "label": "开箱时间"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "设置死亡时随机物品丢失的数量。",
+    "label": "死亡丢失数量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "设置哪些物品在死亡时会丢失。\\n\\n无 = 无物品\\n全部 = 所有物品。\\n工具带 = 仅工具带上的物品。\\n背包 = 仅背包里的物品。\\n装备 = 穿戴的护甲和衣物。\\n仅携带物品 = 工具带和背包中的物品。",
+    "label": "死亡时丢失"
+   },
+   "MaxDegradationAmount": {
+    "description": "决定物品修理后会损失多少耐久度。",
+    "label": "修理损坏"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的丧尸种类的最大等级。",
+    "label": "最大敌人等级"
+   },
+   "MaxTechType": {
+    "description": "全局设置武器和物品可达到的最高科技等级，让你可以控制进度和游戏节奏。参考下方分级：\\n\\n0级科技：石器、铁管\\n1级科技：铁器、AK-47\\n2级科技：钢材、战术突击步枪\\n3级科技：螺旋钻、M60",
+    "label": "最大科技类型"
+   },
+   "MedicalLootCount": {
+    "description": "战利品中找到的药品数量。",
+    "label": "药品丰富度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近战武器和工具造成的伤害。",
+    "label": "近战伤害"
+   },
+   "MeleeLootCount": {
+    "description": "战利品中找到的近战武器和部件数量。",
+    "label": "近战武器丰富度"
+   },
+   "MiningOutput": {
+    "description": "控制采矿获得的矿石数量。关闭后会提升生存难度。",
+    "label": "采矿产出"
+   },
+   "NewbieCoat": {
+    "description": "如果开启，新玩家出生时将获得新手保护增益。",
+    "label": "新玩家增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "是否在商人任务列表刷新目标点任务。如果关闭，则仅刷新埋藏任务。",
+    "label": "目标点任务"
+   },
+   "POITierLSModifier": {
+    "description": "基于目标点等级的战利品等级倍数。默认读取配置文件参数。",
+    "label": "目标点战利品等级"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "决定生命值和体力值是否每级增加。",
+    "label": "等级属性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "阅读技能杂志获得的进度。",
+    "label": "杂志进度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "计入商人进度的每日任务数量。额外的任务仍会给予经验值和奖励，但不会推进商人等级进度。",
+    "label": "每日任务数"
+   },
+   "QuestsEnabled": {
+    "description": "启用或禁用游戏内任务。",
+    "label": "任务"
+   },
+   "QuestsPerTier": {
+    "description": "解锁下一等级所需完成的任务数量。数值越高，升级的进度越慢。无 = 无限制，可直接访问全部任务等级。",
+    "label": "每级任务"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓箭、火器和其他远程武器造成的伤害。",
+    "label": "远程伤害"
+   },
+   "RangedLootCount": {
+    "description": "战利品中找到的远程武器和部件数量。",
+    "label": "远程武器丰富度"
+   },
+   "RepairTypes": {
+    "description": "决定物品的修理方式：\\n\\n无 = 不可修理\\n仅维修工具 = 仅可使用维修工具修理\\n仅合并工作站 = 仅可在合并工作站修理\\n两者皆可 = 可使用维修工具或合并工作站修理。",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "战利品中找到的资源物品数量。",
+    "label": "资源丰富度"
+   },
+   "RunSpeed": {
+    "description": "调整玩家奔跑时的移动速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "分解物品时获得的数量。",
+    "label": "分解产出"
+   },
+   "SeedDropOutput": {
+    "description": "玩家收获农作物获得的种子数量。不影响种子掉落几率或树木的种子。",
+    "label": "种子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在屏幕上显示天数和时间信息。如果关闭此选项，血月警告提示也会一同关闭。",
+    "label": "显示天数/时间"
+   },
+   "ShowEnemyDamage": {
+    "description": "当实体被击中时显示浮动的伤害数字。",
+    "label": "显示实体伤害"
+   },
+   "ShowHealthBars": {
+    "description": "显示或隐藏实体的生命值条。",
+    "label": "实体生命值条"
+   },
+   "ShowLocationInfo": {
+    "description": "显示环境和目标点的名称和难度。",
+    "label": "显示地点信息"
+   },
+   "ShowXP": {
+    "description": "隐藏或显示屏幕上的经验值条和经验值弹出提示。",
+    "label": "显示经验值"
+   },
+   "SillyBigHeads": {
+    "description": "开启丧尸、动物和商人的“大头模式”。",
+    "label": "大头"
+   },
+   "SillyBlackandWhite": {
+    "description": "启用经典黑白色调（灵感源自 20 世纪 60 年代的恐怖电影）。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "开启击杀实体时的庆祝五彩纸屑特效。“仅限爆头”选项仅会在爆头击杀时触发五彩纸屑特效，因此可以射击动物的身体以收集肉类。“仅限爆头”选项不适用于非敌对动物。",
+    "label": "庆祝击杀"
+   },
+   "SillyLowGravity": {
+    "description": "控制游戏内重力的大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "为游戏内的动作开启滑稽音效。",
+    "label": "滑稽声音"
+   },
+   "SillyTinyZombies": {
+    "description": "启用缩小版的丧尸。",
+    "label": "迷你丧尸"
+   },
+   "SkillGainRate": {
+    "description": "调整需要多少等级才能获得技能点。",
+    "label": "技能获得速率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制在获得技能点时会获得多少技能点。",
+    "label": "技能获得数量"
+   },
+   "SmeltingType": {
+    "description": "控制锻造炉制作的方式。是将物品放入锻造炉进行熔炼，还是直接使用你背包中的材料进行制作。",
+    "label": "熔炉类型"
+   },
+   "StackSizeMultiplier": {
+    "description": "调整所有可堆叠物品堆叠上限的倍率。最高堆叠上限为 30,000。",
+    "label": "堆叠上限倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制体力回复的速率。数值为近似值。",
+    "label": "体力值回复"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳跃和攻击等动作的体力消耗。数值为近似值。",
+    "label": "体力值消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成新手引导任务可获得的技能点数。如果关闭引导，则开局直接发放对应点数。",
+    "label": "基础技能点"
+   },
+   "StormFreq": {
+    "description": "调整风暴出现的频率。设为“无”将禁用风暴。",
+    "label": "风暴频率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否会听到风暴警报声和看到屏幕上的风暴警告提示。",
+    "label": "风暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "设置环境温度（高温和低温）是否对玩家造成影响。",
+    "label": "温度生存"
+   },
+   "TerrainDamage": {
+    "description": "玩家对地形造成的伤害量。",
+    "label": "地形伤害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水的速度。更高的数值会增加水的消耗量。",
+    "label": "口渴度倍数"
+   },
+   "TraderBuyLimit": {
+    "description": "商人收购玩家物品的数量上限，超过后将拒绝继续收购。该值决定了玩家每次卖出囤积物资的价格。",
+    "label": "商人收购上限"
+   },
+   "TraderBuyPrices": {
+    "description": "调整玩家向商人购买物品的价格。",
+    "label": "购买价格"
+   },
+   "TraderDialog": {
+    "description": "隐藏/显示商人的语音台词和屏幕上的对话。",
+    "label": "交易对话"
+   },
+   "TraderHours": {
+    "description": "控制商人的营业和打烊时间。24 小时周期和白昼时长不影响此设置。血月已关闭表示仅在血月期间关门。默认使用 XML 中的数值。\\n\\nXML 默认 = 04:00-22:00\\n 早晨 = 04:00-12:00\\n 日间 = 10:00-18:00\\n 晚上 = 16:00-22:00\\n 深夜 = 22:00-04:00",
+    "label": "商人营业时间"
+   },
+   "TraderItemAbundance": {
+    "description": "商人出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "商人物品数量"
+   },
+   "TraderMaxTier": {
+    "description": "设置可从商人处购买物品的最高品质。",
+    "label": "商人最高品质"
+   },
+   "TraderProtection": {
+    "description": "设置商人据点的伤害保护，以及玩家是否可以占领该区域。",
+    "label": "商人保护"
+   },
+   "TraderResetInterval": {
+    "description": "设置商人重置库存的频率。默认读取配置文件参数。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "调整玩家出售物品给商人的价格。",
+    "label": "出售价格"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "允许接受去找其他商人的任务。",
+    "label": "商贸路线"
+   },
+   "TradersEnabled": {
+    "description": "允许与 NPC 商人交易。",
+    "label": "交易开启"
+   },
+   "TreasureMapChance": {
+    "description": "战利品容器和敌人战利品袋中生成藏宝图的概率倍率。",
+    "label": "藏宝图生成概率"
+   },
+   "VehicleBlockDamage": {
+    "description": "载具对物块造成的伤害量。",
+    "label": "载具物块伤害"
+   },
+   "VehicleEntityDamage": {
+    "description": "载具对实体造成的伤害量。",
+    "label": "载具实体伤害"
+   },
+   "VehicleFuelUsage": {
+    "description": "调整载具消耗燃料的速率。",
+    "label": "载具燃料使用量"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的载具发生碰撞时自身受到的伤害量。",
+    "label": "载具自身伤害"
+   },
+   "VendingEnabled": {
+    "description": "启用或禁用自动贩卖机功能。",
+    "label": "贩卖机开启"
+   },
+   "VendingItemAbundance": {
+    "description": "自动贩卖机出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "贩卖机物品数量"
+   },
+   "VendingResetInterval": {
+    "description": "设置商人自动贩卖机重置库存的频率。默认读取配置文件参数。",
+    "label": "贩卖机重置"
+   },
+   "WalkSpeed": {
+    "description": "调整玩家行走时的移动速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "是：允许在工作台制作物品。否：玩家仅可进行背包制作。",
+    "label": "工作台制作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允许在世界中生成可用的工作站。在生成新的纳维戈恩或随机世界生成地图时生效。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "作用于所有获得的经验值的倍数。",
+    "label": "经验值倍数"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月尸群和风暴期间丧尸的移动速度。",
+    "label": "丧尸血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "设置凶残丧尸的移动速度。",
+    "label": "凶残丧尸速度"
+   },
+   "ZombieFeralSense": {
+    "description": "丧尸视觉和听觉感知玩家的灵敏度。",
+    "label": "凶残丧尸感知"
+   },
+   "ZombieMove": {
+    "description": "设置白天普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸白天速度"
+   },
+   "ZombieMoveNight": {
+    "description": "设置夜晚普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸夜间速度"
+   },
+   "ZombieRageChance": {
+    "description": "丧尸受到伤害时进入狂暴模式的几率。",
+    "label": "丧尸狂暴"
+   },
+   "ZombiesEatAnimals": {
+    "description": "决定丧尸是否会吃动物的尸体。",
+    "label": "丧尸吃动物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "难度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "默认/简单：末世对你会留有几分情面。",
+    "label": "冒险家"
+   },
+   "Almost Creative": {
+    "description": "去掉实际危机的和平末世，再也不用担惊受怕地死去。",
+    "label": "半创造模式"
+   },
+   "Bite Club": {
+    "description": "硬核永久死亡模式，死亡即删档，重生是懦夫的选择。仅有一次生存机会，请谨慎行事。",
+    "label": "噬咬俱乐部"
+   },
+   "Caveman Life": {
+    "description": "这个末世里仅能制作木棍等原始道具。",
+    "label": "穴居人生存"
+   },
+   "Chibi Mode": {
+    "description": "不仅造型小巧可爱，移速也更快，还好你自身的速度足够灵活。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "各类灾祸接踵而至，修复速度赶不上灾难爆发速度。",
+    "label": "灾难大片"
+   },
+   "Dumpster Diver": {
+    "description": "变废为宝！合理利用就不叫囤积癖。",
+    "label": "垃圾车司机"
+   },
+   "Dying World": {
+    "description": "资源正在枯竭，而你离死也不远了。",
+    "label": "枯竭的末世"
+   },
+   "Insane": {
+    "description": "疯狂：一步错步步错，每一次失误都会让你追悔莫及。",
+    "label": "疯狂"
+   },
+   "Legacy Survival": {
+    "description": "复古原版生存玩法，搭配现代化生存惩罚机制。",
+    "label": "经典旧版生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "补给更少，惩罚更重，压力永不停歇。疯狂鼹鼠……闻起来真香！",
+    "label": "疯狂鼹鼠大乱斗"
+   },
+   "Nomad": {
+    "description": "普通：选择这个难度，你的生存意志比黑带咖啡更浓烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末世休闲难度，全方位新手保护机制拉满。",
+    "label": "拾荒者"
+   },
+   "Seven days Later": {
+    "description": "现代丧尸电影风格模式，高速丧尸潮混乱席卷。",
+    "label": "七日之后"
+   },
+   "True Survivalist": {
+    "description": "幸存者：被丧尸重创本就是生存乐趣的一部分。",
+    "label": "幸存者"
+   },
+   "Undead Matinee": {
+    "description": "近战向复古电影风格模式，丧尸移速缓慢、成群来袭，弹药极度稀缺。",
+    "label": "丧尸午后影院"
+   },
+   "Warrior": {
+    "description": "战士：生存压迫感拉满，好在不会轻易触发脑震荡。",
+    "label": "战士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "无",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "冲刺",
+    "5": "噩梦"
+   },
+   "AirDropRandomTime": {
+    "0": "无",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "全天",
+    "6": "任何"
+   },
+   "AirDrops": {
+    "0": "关闭",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "无"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "仅工作台"
+   },
+   "BarterValues": {
+    "0": "无"
+   },
+   "BiomeEnemyDensity": {
+    "0": "无",
+    "1": "默认",
+    "2": "非常低",
+    "3": "低",
+    "4": "中等",
+    "5": "高",
+    "6": "非常高"
+   },
+   "BloodMoonCount": {
+    "0": "4 个敌人",
+    "1": "6 个敌人",
+    "2": "8 个敌人",
+    "3": "10 个敌人",
+    "4": "12 个敌人",
+    "5": "16 个敌人",
+    "6": "24 个敌人",
+    "7": "32 个敌人",
+    "8": "64 个敌人"
+   },
+   "BloodMoonFrequency": {
+    "0": "关闭",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "关闭",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "仅限爆头"
+   },
+   "CropGrowthSpeed": {
+    "0": "无",
+    "1": "立即"
+   },
+   "DamageValues": {
+    "0": "无"
+   },
+   "DayLightLength": {
+    "0": "总是夜晚",
+    "10": "总是白天"
+   },
+   "DeathPenalty": {
+    "0": "无",
+    "1": "仅经验值",
+    "2": "受伤",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "无",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "均可"
+   },
+   "DewCollectorInput": {
+    "0": "无"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "关闭",
+    "1": "非常低",
+    "2": "低",
+    "3": "默认",
+    "4": "高",
+    "5": "非常高"
+   },
+   "DropOnDeath": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的",
+    "6": "删除所有"
+   },
+   "DropOnQuit": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "Encumbrance": {
+    "0": "关闭",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高",
+    "5": "完整"
+   },
+   "FullChickenStressEvent": {
+    "0": "无",
+    "1": "随机",
+    "2": "鸡脱手",
+    "3": "愤怒的鸡",
+    "4": "丧尸群",
+    "5": "杀人鸡群"
+   },
+   "HeadshotMode": {
+    "0": "无",
+    "1": "仅限爆头",
+    "2": "爆头终结"
+   },
+   "JarRefund": {
+    "0": "无"
+   },
+   "JumpStrength": {
+    "0": "无"
+   },
+   "LootAbundanceValues": {
+    "0": "无"
+   },
+   "LootRespawnDays": {
+    "0": "关闭"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "LowDefaultHigh": {
+    "0": "非常低",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高"
+   },
+   "MaxChunkAge": {
+    "0": "关闭"
+   },
+   "MaxDegradationAmounts": {
+    "0": "无"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "强壮",
+    "2": "特殊",
+    "3": "凶残",
+    "4": "辐射",
+    "5": "精英"
+   },
+   "MaxTechType": {
+    "0": "无",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "无"
+   },
+   "PointsPer": {
+    "0": "无"
+   },
+   "QuestPerDay": {
+    "0": "无限制"
+   },
+   "QuestPerTier": {
+    "0": "无"
+   },
+   "RepairTypes": {
+    "0": "无",
+    "1": "仅修理",
+    "2": "仅合并",
+    "3": "均可"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "仅名称"
+   },
+   "ShowXP": {
+    "0": "全部",
+    "1": "仅显示条",
+    "2": "仅通知",
+    "3": "无"
+   },
+   "SlowToFast": {
+    "0": "默认",
+    "1": "非常慢",
+    "2": "慢速",
+    "3": "普通",
+    "4": "快速",
+    "5": "非常快"
+   },
+   "SmeltingType": {
+    "0": "熔炉",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "无"
+   },
+   "StaminaUsage": {
+    "0": "无"
+   },
+   "StarterSkillPoints": {
+    "0": "无"
+   },
+   "StormFrequency": {
+    "0": "无"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可占领",
+    "2": "不可占领"
+   },
+   "TraderHourPresets": {
+    "0": "默认",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "血月已关闭",
+    "6": "总是开门"
+   },
+   "TraderResetInterval": {
+    "0": "默认",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "无"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "关闭",
+    "1": "白天",
+    "2": "深夜",
+    "3": "全部"
+   },
+   "ZombieRageChance": {
+    "0": "无"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "冲刺",
+    "4": "噩梦"
+   }
+  }
+ },
+ "v3_2": {
+  "categories": {
+   "Crafting": "制作",
+   "Entities": "实体",
+   "General": "玩家",
+   "Misc": "其他",
+   "Resources": "资源",
+   "Tasks": "任务",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "启用或禁用丧尸气味追踪，并设置当它们嗅到气味时移动的速度。",
+    "label": "AI 嗅觉模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投补给的频率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地图和指南针上显示空投位置的标记。",
+    "label": "标记空投"
+   },
+   "AirDropRandomTime": {
+    "description": "允许控制空投出现的时间。选择一个特定的时间可使空投按时出现，或选择“任意”以实现完全随机。\\n\\n无 = 默认中午空投。\\n早晨 = 04:00 - 10:00\\n日间 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜间 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投变化"
+   },
+   "AllowCompass": {
+    "description": "显示玩家的指南针。",
+    "label": "允许指南针"
+   },
+   "AllowMap": {
+    "description": "开启游戏内地图。",
+    "label": "允许地图"
+   },
+   "AllowScreenMarkers": {
+    "description": "在屏幕上显示导航标记。地图标记保持可见。",
+    "label": "允许屏幕标记"
+   },
+   "AllowZombieDigging": {
+    "description": "允许丧尸向下挖掘地形。仍可横向挖掘。",
+    "label": "丧尸挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "战利品中找到的弹药数量。",
+    "label": "弹药丰富度"
+   },
+   "ApiaryInput": {
+    "description": "设置蜂箱产蜜所需的花朵数量。",
+    "label": "蜂箱原料"
+   },
+   "ApiaryOutput": {
+    "description": "蜂箱单次蜂蜜产出量。",
+    "label": "蜂箱产出"
+   },
+   "ApiaryTime": {
+    "description": "调整蜂箱产出蜂蜜所需的时长。",
+    "label": "蜂箱时长"
+   },
+   "ArmorLootCount": {
+    "description": "战利品中找到的护甲和护甲部件数量。",
+    "label": "护甲丰富度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包中制作什么物品。\\n\\n否：禁用背包制作。\\n是：允许在背包中制作。\\n少量：允许在背包中制作少量配方。\\n仅工作台：无法在背包中制作，所有制作仅能在工作台完成。",
+    "label": "背包制作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆盖各生态环境的白天动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "白天动物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高白天期间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "白天动物重新生成"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆盖各生态环境的白天敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "白天敌人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高白天期间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "白天敌人重新生成"
+   },
+   "BiomeGSModifier": {
+    "description": "基于环境的难度修正。更高难度的环境会提高敌人的强度和战利品等级，使其超出你的基础进度。默认读取配置文件参数。",
+    "label": "环境游戏阶段"
+   },
+   "BiomeLSModifier": {
+    "description": "按环境生效的战利品等级倍数。默认读取配置文件参数。",
+    "label": "环境战利品等级"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆盖各生态环境的夜间动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "夜间动物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "夜间动物重新生成"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆盖各生态环境的夜间敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "夜间敌人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "夜间敌人重新生成"
+   },
+   "BiomeProgression": {
+    "description": "启用环境危害。天气和风暴不受此设置影响。",
+    "label": "生态环境进度"
+   },
+   "BlockDamage": {
+    "description": "玩家对物块造成的伤害量。",
+    "label": "物块伤害"
+   },
+   "BlockDamageAI": {
+    "description": "敌人对物块造成的伤害量。",
+    "label": "敌人物块伤害"
+   },
+   "BlockDamageAIBM": {
+    "description": "血月期间敌人对物块造成的伤害量。",
+    "label": "血月物块伤害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期间每位玩家对应的最大存活丧尸数量。\\n\\n附近玩家共享最多30只丧尸的上限。若达到上限，将通过游戏阶段机制提升难度，而非继续生成丧尸。全局上限约为 MaxSpawnedZombies 的 1.9 倍。较低的游戏阶段会减少生成数量。\\n\\n提高该设置可能会显著影响性能。",
+    "label": "血月计数"
+   },
+   "BloodMoonFrequency": {
+    "description": "两次血月之间间隔的游戏内天数。禁用 = 没有血月。",
+    "label": "血月频率"
+   },
+   "BloodMoonRange": {
+    "description": "在血月基础间隔之上额外增加的随机天数范围。\\n\\n例如：若设定为基础间隔 7 天 + 随机范围 5 天，则血月会在第 7 天到第 12 天之间随机出现。\\n\\n0 天 = 无额外随机天数。",
+    "label": "血月范围"
+   },
+   "BloodMoonWarning": {
+    "description": "设置何时 HUD 上会出现血月警告，并且天数数字变成红色。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制战利品中找到的书籍和设计图数量。",
+    "label": "书籍丰富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "是否在商人任务列表刷新埋藏任务。如果关闭，则仅刷新目标点任务。",
+    "label": "埋藏任务"
+   },
+   "ChallengesEnabled": {
+    "description": "开启游戏内挑战系统。",
+    "label": "挑战"
+   },
+   "ChickenCoopInput": {
+    "description": "设置开始生产所需的饲料量。",
+    "label": "鸡舍投入量"
+   },
+   "ChickenCoopOutput": {
+    "description": "每个生产周期产出的鸡只、鸡蛋和羽毛数量。",
+    "label": "鸡舍产量"
+   },
+   "ChickenCoopTime": {
+    "description": "调整鸡舍产出鸡只、鸡蛋和羽毛所需的时间。",
+    "label": "鸡舍生产时间"
+   },
+   "CraftingInput": {
+    "description": "制作所需的材料数量（不包括资源组合包）。",
+    "label": "制作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制战利品中找到的制作杂志数量。",
+    "label": "杂志丰富度"
+   },
+   "CraftingMaxTier": {
+    "description": "设置制作物品的最高品质。",
+    "label": "制作最高品质"
+   },
+   "CraftingOutput": {
+    "description": "每次制作产出的物品数量（不包括资源组合包）。",
+    "label": "制作产出"
+   },
+   "CraftingProgression": {
+    "description": "启用或禁用基于杂志和设计图的制作进度。",
+    "label": "制作进度"
+   },
+   "CraftingTime": {
+    "description": "制作物品所需的时间。",
+    "label": "制作计时器"
+   },
+   "CropGrowthSpeed": {
+    "description": "调整玩家种植的作物和树木的生长速度。百分比数值越高，生长周期越长。注：现有存档内，作物需重新种植，修改才会生效。",
+    "label": "农作物生长"
+   },
+   "CropOutput": {
+    "description": "控制从野生和玩家种植的农作物收获到的资源数量。关闭后会提升生存难度。",
+    "label": "农作物产出"
+   },
+   "CrouchRunSpeed": {
+    "description": "调整玩家蹲伏奔跑时的移动速度。",
+    "label": "蹲伏奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "调整玩家蹲伏行走时的移动速度。",
+    "label": "蹲伏速度"
+   },
+   "DayLightLength": {
+    "description": "设置游戏内白昼的时长。总是夜晚和总是白天模式的运行逻辑不变。白昼时长参数：\\n\\n4 小时 = 10:00 - 14:00\\n6 小时 = 09:00 - 15:00\\n8 小时 = 08:00 - 16:00\\n10 小时 = 07:00 - 17:00\\n12 小时 = 06:00 - 18:00\\n14 小时 = 05:00 - 19:00\\n16 小时 = 04:00 - 20:00\\n18 小时 = 04:00 - 22:00\\n20 小时 = 02:00 - 22:00",
+    "label": "白昼时长"
+   },
+   "DayNightLength": {
+    "description": "游戏内的 24 小时在现实世界中需花费多少分钟。",
+    "label": "24 小时周期"
+   },
+   "DeathPenalty": {
+    "description": "决定死亡时的死亡惩罚。\\n\\n无 = 没有惩罚。\\n仅经验值 = 典型的经验值损失模式。\\n受伤 = 复活后会保留一些减益效果，并且食物/水会重置为 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡惩罚"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "当启用死亡损耗时，此项设置决定死亡时耐久度损失的百分比。",
+    "label": "死亡损耗量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "设置角色死亡时物品是否会发生损耗。\\n\\n无 = 没有损失。\\n耐久度 = 当前耐久度降低一部分，可通过修理恢复。\\n最大耐久度 = 减少最大耐久度，降低修理的上限。\\n两者 = 物品同时损失当前和最大耐久度。",
+    "label": "死亡损耗"
+   },
+   "DewCollectorInput": {
+    "description": "设置开始收集露水所需的空水罐数量。",
+    "label": "露水收集器原料"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器单次产出的水量。",
+    "label": "露水收集器产出"
+   },
+   "DewCollectorTime": {
+    "description": "调整露水收集器产出清水所需时间。",
+    "label": "露水收集器时间"
+   },
+   "DrinkLootCount": {
+    "description": "容器中找到的饮料数量。",
+    "label": "饮料丰富度"
+   },
+   "DropOnDeath": {
+    "description": "决定死亡时掉落哪些物品。\\n\\n无 = 不掉落任何物品。\\n全部 = 掉落背包和工具带中的物品。\\n仅工具带 = 掉落工具带中的物品。\\n仅背包 = 掉落背包中的物品。\\n全部删除 = 删除所有物品。",
+    "label": "死亡丢失物品"
+   },
+   "DropOnQuit": {
+    "description": "退出时会掉落什么物品。\\n\\n无 = 不掉落任何物品。\\n所有 = 掉落背包和工具带。\\n工具带 = 掉落工具带上的物品。\\n背包 = 掉落背包里的物品。",
+    "label": "退出丢失物品"
+   },
+   "DukesLootCount": {
+    "description": "战利品中找到的公爵币和旧钞票数量。",
+    "label": "货币丰富度"
+   },
+   "ElectricalOutput": {
+    "description": "控制发电量。",
+    "label": "电力输出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制负重背包栏位的数量。可选择“无负重”至“满负重”。默认读取配置文件参数。",
+    "label": "负重栏位"
+   },
+   "EnemySpawnMode": {
+    "description": "启用或禁用敌人生成。",
+    "label": "敌人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敌人对玩家造成的伤害量。这会与玩家受到的其他伤害叠加。",
+    "label": "敌人造成的伤害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敌人和动物等实体受到来自玩家的伤害。",
+    "label": "实体所受伤害"
+   },
+   "FoodLootCount": {
+    "description": "容器中找到的食物数量。",
+    "label": "食物丰富度"
+   },
+   "FullChickenStressEvent": {
+    "description": "设置手持鸡只的压力达到 100% 时触发的事件。“无”会禁用事件，“随机”则会从下列事件中随机选择一个。\\n\\n鸡脱手 = 鸡会从你手中挣脱。\\n愤怒的鸡 = 鸡会反过来攻击你。\\n丧尸群 = 鸡的压力会引来一群丧尸。\\n杀人鸡群 = 愤怒的鸡会联合起来攻击你。",
+    "label": "鸡只压力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根据你的等级和存活天数，决定敌人类型、难度升级、战利品品质和血月强度。数值越高，难度越高。默认读取配置文件参数。",
+    "label": "全局游戏阶段"
+   },
+   "GlobalLSModifier": {
+    "description": "作用于玩家战利品等级的全局倍数。默认读取配置文件参数。",
+    "label": "全局战利品等级"
+   },
+   "GlobalLootCount": {
+    "description": "全局调整地图内所有战利品产出总量。选择“无”将彻底关闭全部战利品，包含丧尸掉落袋和补给箱。",
+    "label": "掉落率"
+   },
+   "GlobalTSModifier": {
+    "description": "作用于商人阶段进程的全局修正。控制商人售卖道具的品质与种类丰富度。默认读取配置文件参数。",
+    "label": "全局商人阶段"
+   },
+   "HarvestingOutput": {
+    "description": "控制收获物块和物品获得的资源数量。不影响矿石、种子或农作物。关闭后会提升生存难度。",
+    "label": "资源产出"
+   },
+   "HeadshotMode": {
+    "description": "设置爆头伤害的规则。\\n\\n仅限爆头 = 只有爆头才能对敌人造成伤害。\\n爆头终结 = 射击身体可以造成伤害，但只有爆头才能终结敌人。\\n\\n对野生动物不生效。",
+    "label": "爆头模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家爆头实体所造成伤害的倍数。",
+    "label": "爆头倍数"
+   },
+   "HeatMapSensitivity": {
+    "description": "玩家活动对热力图的影响程度。热量越高，尖叫丧尸刷新概率越高。默认读取配置文件参数。",
+    "label": "热力图敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。更高的数值会增加食物的消耗量。",
+    "label": "饥饿度倍数"
+   },
+   "IncomingDamage": {
+    "description": "玩家受到所有来源的伤害量。",
+    "label": "玩家所受伤害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家感染的几率。",
+    "label": "感染几率"
+   },
+   "InfectionRate": {
+    "description": "调整感染进展的速度。",
+    "label": "感染速率"
+   },
+   "IntroChallengesEnabled": {
+    "description": "开启新手引导挑战任务。",
+    "label": "入门挑战"
+   },
+   "IntroQuestEnabled": {
+    "description": "跳过开头的埋藏补给任务，直接解锁完整任务流程。",
+    "label": "入门任务"
+   },
+   "ItemDegradation": {
+    "description": "武器和工具耐久度下降的速度。默认读取配置文件参数。",
+    "label": "物品损坏"
+   },
+   "JarRefund": {
+    "description": "消耗物品后归还罐子的几率。",
+    "label": "罐子退款"
+   },
+   "JumpStrength": {
+    "description": "修改玩家的跳跃高度。",
+    "label": "跳跃力量"
+   },
+   "LootBagChance": {
+    "description": "敌人死亡时掉落战利品袋的几率倍率。",
+    "label": "战利品袋掉落"
+   },
+   "LootMaxTier": {
+    "description": "设置战利品中出现的武器和物品的最高品质。",
+    "label": "最大战利品品质"
+   },
+   "LootRespawnDays": {
+    "description": "未访问区域内战利品容器重置所需的天数。",
+    "label": "战利品刷新天数"
+   },
+   "LootTimer": {
+    "description": "搜刮容器所需的时间。",
+    "label": "开箱时间"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "设置死亡时随机物品丢失的数量。",
+    "label": "死亡丢失数量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "设置哪些物品在死亡时会丢失。\\n\\n无 = 无物品\\n全部 = 所有物品。\\n工具带 = 仅工具带上的物品。\\n背包 = 仅背包里的物品。\\n装备 = 穿戴的护甲和衣物。\\n仅携带物品 = 工具带和背包中的物品。",
+    "label": "死亡时丢失"
+   },
+   "MaxDegradationAmount": {
+    "description": "决定物品修理后会损失多少耐久度。",
+    "label": "修理损坏"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的丧尸种类的最大等级。",
+    "label": "最大敌人等级"
+   },
+   "MaxTechType": {
+    "description": "全局设置武器和物品可达到的最高科技等级，让你可以控制进度和游戏节奏。参考下方分级：\\n\\n0级科技：石器、铁管\\n1级科技：铁器、AK-47\\n2级科技：钢材、战术突击步枪\\n3级科技：螺旋钻、M60",
+    "label": "最大科技类型"
+   },
+   "MedicalLootCount": {
+    "description": "战利品中找到的药品数量。",
+    "label": "药品丰富度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近战武器和工具造成的伤害。",
+    "label": "近战伤害"
+   },
+   "MeleeLootCount": {
+    "description": "战利品中找到的近战武器和部件数量。",
+    "label": "近战武器丰富度"
+   },
+   "MiningOutput": {
+    "description": "控制采矿获得的矿石数量。关闭后会提升生存难度。",
+    "label": "采矿产出"
+   },
+   "NewbieCoat": {
+    "description": "如果开启，新玩家出生时将获得新手保护增益。",
+    "label": "新玩家增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "是否在商人任务列表刷新目标点任务。如果关闭，则仅刷新埋藏任务。",
+    "label": "目标点任务"
+   },
+   "POITierLSModifier": {
+    "description": "基于目标点等级的战利品等级倍数。默认读取配置文件参数。",
+    "label": "目标点战利品等级"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "决定生命值和体力值是否每级增加。",
+    "label": "等级属性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "阅读技能杂志获得的进度。",
+    "label": "杂志进度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "计入商人进度的每日任务数量。额外的任务仍会给予经验值和奖励，但不会推进商人等级进度。",
+    "label": "每日任务数"
+   },
+   "QuestsEnabled": {
+    "description": "启用或禁用游戏内任务。",
+    "label": "任务"
+   },
+   "QuestsPerTier": {
+    "description": "解锁下一等级所需完成的任务数量。数值越高，升级的进度越慢。无 = 无限制，可直接访问全部任务等级。",
+    "label": "每级任务"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓箭、火器和其他远程武器造成的伤害。",
+    "label": "远程伤害"
+   },
+   "RangedLootCount": {
+    "description": "战利品中找到的远程武器和部件数量。",
+    "label": "远程武器丰富度"
+   },
+   "RepairTypes": {
+    "description": "决定物品的修理方式：\\n\\n无 = 不可修理\\n仅维修工具 = 仅可使用维修工具修理\\n仅合并工作站 = 仅可在合并工作站修理\\n两者皆可 = 可使用维修工具或合并工作站修理。",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "战利品中找到的资源物品数量。",
+    "label": "资源丰富度"
+   },
+   "RunSpeed": {
+    "description": "调整玩家奔跑时的移动速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "分解物品时获得的数量。",
+    "label": "分解产出"
+   },
+   "SeedDropOutput": {
+    "description": "玩家收获农作物获得的种子数量。不影响种子掉落几率或树木的种子。",
+    "label": "种子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在屏幕上显示天数和时间信息。如果关闭此选项，血月警告提示也会一同关闭。",
+    "label": "显示天数/时间"
+   },
+   "ShowEnemyDamage": {
+    "description": "当实体被击中时显示浮动的伤害数字。",
+    "label": "显示实体伤害"
+   },
+   "ShowHealthBars": {
+    "description": "显示或隐藏实体的生命值条。",
+    "label": "实体生命值条"
+   },
+   "ShowLocationInfo": {
+    "description": "显示环境和目标点的名称和难度。",
+    "label": "显示地点信息"
+   },
+   "ShowXP": {
+    "description": "隐藏或显示屏幕上的经验值条和经验值弹出提示。",
+    "label": "显示经验值"
+   },
+   "SillyBigHeads": {
+    "description": "开启丧尸、动物和商人的“大头模式”。",
+    "label": "大头"
+   },
+   "SillyBlackandWhite": {
+    "description": "启用经典黑白色调（灵感源自 20 世纪 60 年代的恐怖电影）。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "开启击杀实体时的庆祝五彩纸屑特效。“仅限爆头”选项仅会在爆头击杀时触发五彩纸屑特效，因此可以射击动物的身体以收集肉类。“仅限爆头”选项不适用于非敌对动物。",
+    "label": "庆祝击杀"
+   },
+   "SillyLowGravity": {
+    "description": "控制游戏内重力的大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "为游戏内的动作开启滑稽音效。",
+    "label": "滑稽声音"
+   },
+   "SillyTinyZombies": {
+    "description": "启用缩小版的丧尸。",
+    "label": "迷你丧尸"
+   },
+   "SkillGainRate": {
+    "description": "调整需要多少等级才能获得技能点。",
+    "label": "技能获得速率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制在获得技能点时会获得多少技能点。",
+    "label": "技能获得数量"
+   },
+   "SmeltingType": {
+    "description": "控制锻造炉制作的方式。是将物品放入锻造炉进行熔炼，还是直接使用你背包中的材料进行制作。",
+    "label": "熔炉类型"
+   },
+   "StackSizeMultiplier": {
+    "description": "调整所有可堆叠物品堆叠上限的倍率。最高堆叠上限为 30,000。",
+    "label": "堆叠上限倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制体力回复的速率。数值为近似值。",
+    "label": "体力值回复"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳跃和攻击等动作的体力消耗。数值为近似值。",
+    "label": "体力值消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成新手引导任务可获得的技能点数。如果关闭引导，则开局直接发放对应点数。",
+    "label": "基础技能点"
+   },
+   "StormFreq": {
+    "description": "调整风暴出现的频率。设为“无”将禁用风暴。",
+    "label": "风暴频率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否会听到风暴警报声和看到屏幕上的风暴警告提示。",
+    "label": "风暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "设置环境温度（高温和低温）是否对玩家造成影响。",
+    "label": "温度生存"
+   },
+   "TerrainDamage": {
+    "description": "玩家对地形造成的伤害量。",
+    "label": "地形伤害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水的速度。更高的数值会增加水的消耗量。",
+    "label": "口渴度倍数"
+   },
+   "TraderBuyLimit": {
+    "description": "商人收购玩家物品的数量上限，超过后将拒绝继续收购。该值决定了玩家每次卖出囤积物资的价格。",
+    "label": "商人收购上限"
+   },
+   "TraderBuyPrices": {
+    "description": "调整玩家向商人购买物品的价格。",
+    "label": "购买价格"
+   },
+   "TraderDialog": {
+    "description": "隐藏/显示商人的语音台词和屏幕上的对话。",
+    "label": "交易对话"
+   },
+   "TraderHours": {
+    "description": "控制商人的营业和打烊时间。24 小时周期和白昼时长不影响此设置。血月已关闭表示仅在血月期间关门。默认使用 XML 中的数值。\\n\\nXML 默认 = 04:00-22:00\\n 早晨 = 04:00-12:00\\n 日间 = 10:00-18:00\\n 晚上 = 16:00-22:00\\n 深夜 = 22:00-04:00",
+    "label": "商人营业时间"
+   },
+   "TraderItemAbundance": {
+    "description": "商人出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "商人物品数量"
+   },
+   "TraderMaxTier": {
+    "description": "设置可从商人处购买物品的最高品质。",
+    "label": "商人最高品质"
+   },
+   "TraderProtection": {
+    "description": "设置商人据点的伤害保护，以及玩家是否可以占领该区域。",
+    "label": "商人保护"
+   },
+   "TraderResetInterval": {
+    "description": "设置商人重置库存的频率。默认读取配置文件参数。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "调整玩家出售物品给商人的价格。",
+    "label": "出售价格"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "允许接受去找其他商人的任务。",
+    "label": "商贸路线"
+   },
+   "TradersEnabled": {
+    "description": "允许与 NPC 商人交易。",
+    "label": "交易开启"
+   },
+   "TreasureMapChance": {
+    "description": "战利品容器和敌人战利品袋中生成藏宝图的概率倍率。",
+    "label": "藏宝图生成概率"
+   },
+   "VehicleBlockDamage": {
+    "description": "载具对物块造成的伤害量。",
+    "label": "载具物块伤害"
+   },
+   "VehicleEntityDamage": {
+    "description": "载具对实体造成的伤害量。",
+    "label": "载具实体伤害"
+   },
+   "VehicleFuelUsage": {
+    "description": "调整载具消耗燃料的速率。",
+    "label": "载具燃料使用量"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的载具发生碰撞时自身受到的伤害量。",
+    "label": "载具自身伤害"
+   },
+   "VendingEnabled": {
+    "description": "启用或禁用自动贩卖机功能。",
+    "label": "贩卖机开启"
+   },
+   "VendingItemAbundance": {
+    "description": "自动贩卖机出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "贩卖机物品数量"
+   },
+   "VendingResetInterval": {
+    "description": "设置商人自动贩卖机重置库存的频率。默认读取配置文件参数。",
+    "label": "贩卖机重置"
+   },
+   "WalkSpeed": {
+    "description": "调整玩家行走时的移动速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "是：允许在工作台制作物品。否：玩家仅可进行背包制作。",
+    "label": "工作台制作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允许在世界中生成可用的工作站。在生成新的纳维戈恩或随机世界生成地图时生效。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "作用于所有获得的经验值的倍数。",
+    "label": "经验值倍数"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月尸群和风暴期间丧尸的移动速度。",
+    "label": "丧尸血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "设置凶残丧尸的移动速度。",
+    "label": "凶残丧尸速度"
+   },
+   "ZombieFeralSense": {
+    "description": "丧尸视觉和听觉感知玩家的灵敏度。",
+    "label": "凶残丧尸感知"
+   },
+   "ZombieMove": {
+    "description": "设置白天普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸白天速度"
+   },
+   "ZombieMoveNight": {
+    "description": "设置夜晚普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸夜间速度"
+   },
+   "ZombieRageChance": {
+    "description": "丧尸受到伤害时进入狂暴模式的几率。",
+    "label": "丧尸狂暴"
+   },
+   "ZombiesEatAnimals": {
+    "description": "决定丧尸是否会吃动物的尸体。",
+    "label": "丧尸吃动物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "难度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "默认/简单：末世对你会留有几分情面。",
+    "label": "冒险家"
+   },
+   "Almost Creative": {
+    "description": "去掉实际危机的和平末世，再也不用担惊受怕地死去。",
+    "label": "半创造模式"
+   },
+   "Bite Club": {
+    "description": "硬核永久死亡模式，死亡即删档，重生是懦夫的选择。仅有一次生存机会，请谨慎行事。",
+    "label": "噬咬俱乐部"
+   },
+   "Caveman Life": {
+    "description": "这个末世里仅能制作木棍等原始道具。",
+    "label": "穴居人生存"
+   },
+   "Chibi Mode": {
+    "description": "不仅造型小巧可爱，移速也更快，还好你自身的速度足够灵活。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "各类灾祸接踵而至，修复速度赶不上灾难爆发速度。",
+    "label": "灾难大片"
+   },
+   "Dumpster Diver": {
+    "description": "变废为宝！合理利用就不叫囤积癖。",
+    "label": "垃圾车司机"
+   },
+   "Dying World": {
+    "description": "资源正在枯竭，而你离死也不远了。",
+    "label": "枯竭的末世"
+   },
+   "Insane": {
+    "description": "疯狂：一步错步步错，每一次失误都会让你追悔莫及。",
+    "label": "疯狂"
+   },
+   "Legacy Survival": {
+    "description": "复古原版生存玩法，搭配现代化生存惩罚机制。",
+    "label": "经典旧版生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "补给更少，惩罚更重，压力永不停歇。疯狂鼹鼠……闻起来真香！",
+    "label": "疯狂鼹鼠大乱斗"
+   },
+   "Nomad": {
+    "description": "普通：选择这个难度，你的生存意志比黑带咖啡更浓烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末世休闲难度，全方位新手保护机制拉满。",
+    "label": "拾荒者"
+   },
+   "Seven days Later": {
+    "description": "现代丧尸电影风格模式，高速丧尸潮混乱席卷。",
+    "label": "七日之后"
+   },
+   "True Survivalist": {
+    "description": "幸存者：被丧尸重创本就是生存乐趣的一部分。",
+    "label": "幸存者"
+   },
+   "Undead Matinee": {
+    "description": "近战向复古电影风格模式，丧尸移速缓慢、成群来袭，弹药极度稀缺。",
+    "label": "丧尸午后影院"
+   },
+   "Warrior": {
+    "description": "战士：生存压迫感拉满，好在不会轻易触发脑震荡。",
+    "label": "战士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "无",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "冲刺",
+    "5": "噩梦"
+   },
+   "AirDropRandomTime": {
+    "0": "无",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "全天",
+    "6": "任何"
+   },
+   "AirDrops": {
+    "0": "关闭",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "无"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "仅工作台"
+   },
+   "BarterValues": {
+    "0": "无"
+   },
+   "BiomeEnemyDensity": {
+    "0": "无",
+    "1": "默认",
+    "2": "非常低",
+    "3": "低",
+    "4": "中等",
+    "5": "高",
+    "6": "非常高"
+   },
+   "BloodMoonCount": {
+    "0": "4 个敌人",
+    "1": "6 个敌人",
+    "2": "8 个敌人",
+    "3": "10 个敌人",
+    "4": "12 个敌人",
+    "5": "16 个敌人",
+    "6": "24 个敌人",
+    "7": "32 个敌人",
+    "8": "64 个敌人"
+   },
+   "BloodMoonFrequency": {
+    "0": "关闭",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "关闭",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "仅限爆头"
+   },
+   "CropGrowthSpeed": {
+    "0": "无",
+    "1": "立即"
+   },
+   "DamageValues": {
+    "0": "无"
+   },
+   "DayLightLength": {
+    "0": "总是夜晚",
+    "10": "总是白天"
+   },
+   "DeathPenalty": {
+    "0": "无",
+    "1": "仅经验值",
+    "2": "受伤",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "无",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "均可"
+   },
+   "DewCollectorInput": {
+    "0": "无"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "关闭",
+    "1": "非常低",
+    "2": "低",
+    "3": "默认",
+    "4": "高",
+    "5": "非常高"
+   },
+   "DropOnDeath": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的",
+    "6": "删除所有"
+   },
+   "DropOnQuit": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "Encumbrance": {
+    "0": "关闭",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高",
+    "5": "完整"
+   },
+   "FullChickenStressEvent": {
+    "0": "无",
+    "1": "随机",
+    "2": "鸡脱手",
+    "3": "愤怒的鸡",
+    "4": "丧尸群",
+    "5": "杀人鸡群"
+   },
+   "HeadshotMode": {
+    "0": "无",
+    "1": "仅限爆头",
+    "2": "爆头终结"
+   },
+   "ItemTierOptions": {
+    "0": "默认"
+   },
+   "JarRefund": {
+    "0": "无"
+   },
+   "JumpStrength": {
+    "0": "无"
+   },
+   "LootAbundanceValues": {
+    "0": "无"
+   },
+   "LootRespawnDays": {
+    "0": "关闭"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "LowDefaultHigh": {
+    "0": "非常低",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高"
+   },
+   "MaxChunkAge": {
+    "0": "关闭"
+   },
+   "MaxDegradationAmounts": {
+    "0": "无"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "强壮",
+    "2": "特殊",
+    "3": "凶残",
+    "4": "辐射",
+    "5": "精英"
+   },
+   "MaxTechType": {
+    "0": "无",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "无"
+   },
+   "PointsPer": {
+    "0": "无"
+   },
+   "QuestPerDay": {
+    "0": "无限制"
+   },
+   "QuestPerTier": {
+    "0": "无"
+   },
+   "RepairTypes": {
+    "0": "无",
+    "1": "仅修理",
+    "2": "仅合并",
+    "3": "均可"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "仅名称"
+   },
+   "ShowXP": {
+    "0": "全部",
+    "1": "仅显示条",
+    "2": "仅通知",
+    "3": "无"
+   },
+   "SlowToFast": {
+    "0": "默认",
+    "1": "非常慢",
+    "2": "慢速",
+    "3": "普通",
+    "4": "快速",
+    "5": "非常快"
+   },
+   "SmeltingType": {
+    "0": "熔炉",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "无"
+   },
+   "StaminaUsage": {
+    "0": "无"
+   },
+   "StarterSkillPoints": {
+    "0": "无"
+   },
+   "StormFrequency": {
+    "0": "无"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可占领",
+    "2": "不可占领"
+   },
+   "TraderHourPresets": {
+    "0": "默认",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "血月已关闭",
+    "6": "总是开门"
+   },
+   "TraderResetInterval": {
+    "0": "默认",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "无"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "关闭",
+    "1": "白天",
+    "2": "深夜",
+    "3": "全部"
+   },
+   "ZombieRageChance": {
+    "0": "无"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "冲刺",
+    "4": "噩梦"
+   }
+  }
+ },
+ "v3_3": {
+  "categories": {
+   "Crafting": "制作",
+   "Entities": "实体",
+   "General": "玩家",
+   "Misc": "其他",
+   "Resources": "资源",
+   "Tasks": "任务",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "启用或禁用丧尸气味追踪，并设置当它们嗅到气味时移动的速度。",
+    "label": "AI 嗅觉模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投补给的频率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地图和指南针上显示空投位置的标记。",
+    "label": "标记空投"
+   },
+   "AirDropRandomTime": {
+    "description": "允许控制空投出现的时间。选择一个特定的时间可使空投按时出现，或选择“任意”以实现完全随机。\\n\\n无 = 默认中午空投。\\n早晨 = 04:00 - 10:00\\n日间 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜间 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投变化"
+   },
+   "AllowCompass": {
+    "description": "显示玩家的指南针。",
+    "label": "允许指南针"
+   },
+   "AllowMap": {
+    "description": "开启游戏内地图。",
+    "label": "允许地图"
+   },
+   "AllowScreenMarkers": {
+    "description": "在屏幕上显示导航标记。地图标记保持可见。",
+    "label": "允许屏幕标记"
+   },
+   "AllowZombieDigging": {
+    "description": "允许丧尸向下挖掘地形。仍可横向挖掘。",
+    "label": "丧尸挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "战利品中找到的弹药数量。",
+    "label": "弹药丰富度"
+   },
+   "ApiaryInput": {
+    "description": "设置蜂箱产蜜所需的花朵数量。",
+    "label": "蜂箱原料"
+   },
+   "ApiaryOutput": {
+    "description": "蜂箱单次蜂蜜产出量。",
+    "label": "蜂箱产出"
+   },
+   "ApiaryTime": {
+    "description": "调整蜂箱产出蜂蜜所需的时长。",
+    "label": "蜂箱时长"
+   },
+   "ArmorLootCount": {
+    "description": "战利品中找到的护甲和护甲部件数量。",
+    "label": "护甲丰富度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包中制作什么物品。\\n\\n否：禁用背包制作。\\n是：允许在背包中制作。\\n少量：允许在背包中制作少量配方。\\n仅工作台：无法在背包中制作，所有制作仅能在工作台完成。",
+    "label": "背包制作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆盖各生态环境的白天动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "白天动物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高白天期间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "白天动物重新生成"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆盖各生态环境的白天敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "白天敌人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高白天期间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "白天敌人重新生成"
+   },
+   "BiomeGSModifier": {
+    "description": "基于环境的难度修正。更高难度的环境会提高敌人的强度和战利品等级，使其超出你的基础进度。默认读取配置文件参数。",
+    "label": "环境游戏阶段"
+   },
+   "BiomeLSModifier": {
+    "description": "按环境生效的战利品等级倍数。默认读取配置文件参数。",
+    "label": "环境战利品等级"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆盖各生态环境的夜间动物密度设置，并设定各生态环境中生成的动物数量。默认采用 XML 配置值。",
+    "label": "夜间动物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜间当前活跃生态环境中动物的重新生成率。此设置会影响非丧尸类、可作为食物来源的温顺动物和攻击性动物。默认采用 XML 配置值。",
+    "label": "夜间动物重新生成"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆盖各生态环境的夜间敌人密度设置，并设定各生态环境中生成的敌人数量。默认采用 XML 配置值。",
+    "label": "夜间敌人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜间当前活跃生态环境中敌人的重新生成率。默认采用 XML 配置值。",
+    "label": "夜间敌人重新生成"
+   },
+   "BiomeProgression": {
+    "description": "启用环境危害。天气和风暴不受此设置影响。",
+    "label": "生态环境进度"
+   },
+   "BlockDamage": {
+    "description": "玩家对物块造成的伤害量。",
+    "label": "物块伤害"
+   },
+   "BlockDamageAI": {
+    "description": "敌人对物块造成的伤害量。",
+    "label": "敌人物块伤害"
+   },
+   "BlockDamageAIBM": {
+    "description": "血月期间敌人对物块造成的伤害量。",
+    "label": "血月物块伤害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期间每位玩家对应的最大存活丧尸数量。\\n\\n附近玩家共享最多30只丧尸的上限。若达到上限，将通过游戏阶段机制提升难度，而非继续生成丧尸。全局上限约为 MaxSpawnedZombies 的 1.9 倍。较低的游戏阶段会减少生成数量。\\n\\n提高该设置可能会显著影响性能。",
+    "label": "血月计数"
+   },
+   "BloodMoonFrequency": {
+    "description": "两次血月之间间隔的游戏内天数。禁用 = 没有血月。",
+    "label": "血月频率"
+   },
+   "BloodMoonRange": {
+    "description": "在血月基础间隔之上额外增加的随机天数范围。\\n\\n例如：若设定为基础间隔 7 天 + 随机范围 5 天，则血月会在第 7 天到第 12 天之间随机出现。\\n\\n0 天 = 无额外随机天数。",
+    "label": "血月范围"
+   },
+   "BloodMoonWarning": {
+    "description": "设置何时 HUD 上会出现血月警告，并且天数数字变成红色。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制战利品中找到的书籍和设计图数量。",
+    "label": "书籍丰富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "是否在商人任务列表刷新埋藏任务。如果关闭，则仅刷新目标点任务。",
+    "label": "埋藏任务"
+   },
+   "ChallengesEnabled": {
+    "description": "开启游戏内挑战系统。",
+    "label": "挑战"
+   },
+   "ChickenCoopInput": {
+    "description": "设置开始生产所需的饲料量。",
+    "label": "鸡舍投入量"
+   },
+   "ChickenCoopOutput": {
+    "description": "每个生产周期产出的鸡只、鸡蛋和羽毛数量。",
+    "label": "鸡舍产量"
+   },
+   "ChickenCoopTime": {
+    "description": "调整鸡舍产出鸡只、鸡蛋和羽毛所需的时间。",
+    "label": "鸡舍生产时间"
+   },
+   "CraftingInput": {
+    "description": "制作所需的材料数量（不包括资源组合包）。",
+    "label": "制作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制战利品中找到的制作杂志数量。",
+    "label": "杂志丰富度"
+   },
+   "CraftingMaxTier": {
+    "description": "设置制作物品的最高品质。",
+    "label": "制作最高品质"
+   },
+   "CraftingOutput": {
+    "description": "每次制作产出的物品数量（不包括资源组合包）。",
+    "label": "制作产出"
+   },
+   "CraftingProgression": {
+    "description": "启用或禁用基于杂志和设计图的制作进度。",
+    "label": "制作进度"
+   },
+   "CraftingTime": {
+    "description": "制作物品所需的时间。",
+    "label": "制作计时器"
+   },
+   "CropGrowthSpeed": {
+    "description": "调整玩家种植的作物和树木的生长速度。百分比数值越高，生长周期越长。注：现有存档内，作物需重新种植，修改才会生效。",
+    "label": "农作物生长"
+   },
+   "CropOutput": {
+    "description": "控制从野生和玩家种植的农作物收获到的资源数量。关闭后会提升生存难度。",
+    "label": "农作物产出"
+   },
+   "CrouchRunSpeed": {
+    "description": "调整玩家蹲伏奔跑时的移动速度。",
+    "label": "蹲伏奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "调整玩家蹲伏行走时的移动速度。",
+    "label": "蹲伏速度"
+   },
+   "DayLightLength": {
+    "description": "设置游戏内白昼的时长。总是夜晚和总是白天模式的运行逻辑不变。白昼时长参数：\\n\\n4 小时 = 10:00 - 14:00\\n6 小时 = 09:00 - 15:00\\n8 小时 = 08:00 - 16:00\\n10 小时 = 07:00 - 17:00\\n12 小时 = 06:00 - 18:00\\n14 小时 = 05:00 - 19:00\\n16 小时 = 04:00 - 20:00\\n18 小时 = 04:00 - 22:00\\n20 小时 = 02:00 - 22:00",
+    "label": "白昼时长"
+   },
+   "DayNightLength": {
+    "description": "游戏内的 24 小时在现实世界中需花费多少分钟。",
+    "label": "24 小时周期"
+   },
+   "DeathPenalty": {
+    "description": "决定死亡时的死亡惩罚。\\n\\n无 = 没有惩罚。\\n仅经验值 = 典型的经验值损失模式。\\n受伤 = 复活后会保留一些减益效果，并且食物/水会重置为 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡惩罚"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "当启用死亡损耗时，此项设置决定死亡时耐久度损失的百分比。",
+    "label": "死亡损耗量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "设置角色死亡时物品是否会发生损耗。\\n\\n无 = 没有损失。\\n耐久度 = 当前耐久度降低一部分，可通过修理恢复。\\n最大耐久度 = 减少最大耐久度，降低修理的上限。\\n两者 = 物品同时损失当前和最大耐久度。",
+    "label": "死亡损耗"
+   },
+   "DewCollectorInput": {
+    "description": "设置开始收集露水所需的空水罐数量。",
+    "label": "露水收集器原料"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器单次产出的水量。",
+    "label": "露水收集器产出"
+   },
+   "DewCollectorTime": {
+    "description": "调整露水收集器产出清水所需时间。",
+    "label": "露水收集器时间"
+   },
+   "DrinkLootCount": {
+    "description": "容器中找到的饮料数量。",
+    "label": "饮料丰富度"
+   },
+   "DropOnDeath": {
+    "description": "决定死亡时掉落哪些物品。\\n\\n无 = 不掉落任何物品。\\n全部 = 掉落背包和工具带中的物品。\\n仅工具带 = 掉落工具带中的物品。\\n仅背包 = 掉落背包中的物品。\\n全部删除 = 删除所有物品。",
+    "label": "死亡丢失物品"
+   },
+   "DropOnQuit": {
+    "description": "退出时会掉落什么物品。\\n\\n无 = 不掉落任何物品。\\n所有 = 掉落背包和工具带。\\n工具带 = 掉落工具带上的物品。\\n背包 = 掉落背包里的物品。",
+    "label": "退出丢失物品"
+   },
+   "DukesLootCount": {
+    "description": "战利品中找到的公爵币和旧钞票数量。",
+    "label": "货币丰富度"
+   },
+   "ElectricalOutput": {
+    "description": "控制发电量。",
+    "label": "电力输出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制负重背包栏位的数量。可选择“无负重”至“满负重”。默认读取配置文件参数。",
+    "label": "负重栏位"
+   },
+   "EnemySpawnMode": {
+    "description": "启用或禁用敌人生成。",
+    "label": "敌人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敌人对玩家造成的伤害量。这会与玩家受到的其他伤害叠加。",
+    "label": "敌人造成的伤害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敌人和动物等实体受到来自玩家的伤害。",
+    "label": "实体所受伤害"
+   },
+   "FoodLootCount": {
+    "description": "容器中找到的食物数量。",
+    "label": "食物丰富度"
+   },
+   "FullChickenStressEvent": {
+    "description": "设置手持鸡只的压力达到 100% 时触发的事件。“无”会禁用事件，“随机”则会从下列事件中随机选择一个。\\n\\n鸡脱手 = 鸡会从你手中挣脱。\\n愤怒的鸡 = 鸡会反过来攻击你。\\n丧尸群 = 鸡的压力会引来一群丧尸。\\n杀人鸡群 = 愤怒的鸡会联合起来攻击你。",
+    "label": "鸡只压力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根据你的等级和存活天数，决定敌人类型、难度升级、战利品品质和血月强度。数值越高，难度越高。默认读取配置文件参数。",
+    "label": "全局游戏阶段"
+   },
+   "GlobalLSModifier": {
+    "description": "作用于玩家战利品等级的全局倍数。默认读取配置文件参数。",
+    "label": "全局战利品等级"
+   },
+   "GlobalLootCount": {
+    "description": "全局调整地图内所有战利品产出总量。选择“无”将彻底关闭全部战利品，包含丧尸掉落袋和补给箱。",
+    "label": "掉落率"
+   },
+   "GlobalTSModifier": {
+    "description": "作用于商人阶段进程的全局修正。控制商人售卖道具的品质与种类丰富度。默认读取配置文件参数。",
+    "label": "全局商人阶段"
+   },
+   "HarvestingOutput": {
+    "description": "控制收获物块和物品获得的资源数量。不影响矿石、种子或农作物。关闭后会提升生存难度。",
+    "label": "资源产出"
+   },
+   "HeadshotMode": {
+    "description": "设置爆头伤害的规则。\\n\\n仅限爆头 = 只有爆头才能对敌人造成伤害。\\n爆头终结 = 射击身体可以造成伤害，但只有爆头才能终结敌人。\\n\\n对野生动物不生效。",
+    "label": "爆头模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家爆头实体所造成伤害的倍数。",
+    "label": "爆头倍数"
+   },
+   "HeatMapSensitivity": {
+    "description": "玩家活动对热力图的影响程度。热量越高，尖叫丧尸刷新概率越高。默认读取配置文件参数。",
+    "label": "热力图敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。更高的数值会增加食物的消耗量。",
+    "label": "饥饿度倍数"
+   },
+   "IncomingDamage": {
+    "description": "玩家受到所有来源的伤害量。",
+    "label": "玩家所受伤害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家感染的几率。",
+    "label": "感染几率"
+   },
+   "InfectionRate": {
+    "description": "调整感染进展的速度。",
+    "label": "感染速率"
+   },
+   "IntroChallengesEnabled": {
+    "description": "开启新手引导挑战任务。",
+    "label": "入门挑战"
+   },
+   "IntroQuestEnabled": {
+    "description": "跳过开头的埋藏补给任务，直接解锁完整任务流程。",
+    "label": "入门任务"
+   },
+   "ItemDegradation": {
+    "description": "武器和工具耐久度下降的速度。默认读取配置文件参数。",
+    "label": "物品损坏"
+   },
+   "JarRefund": {
+    "description": "消耗物品后归还罐子的几率。",
+    "label": "罐子退款"
+   },
+   "JumpStrength": {
+    "description": "修改玩家的跳跃高度。",
+    "label": "跳跃力量"
+   },
+   "LootBagChance": {
+    "description": "敌人死亡时掉落战利品袋的几率倍率。",
+    "label": "战利品袋掉落"
+   },
+   "LootMaxTier": {
+    "description": "设置战利品中出现的武器和物品的最高品质。",
+    "label": "最大战利品品质"
+   },
+   "LootRespawnDays": {
+    "description": "未访问区域内战利品容器重置所需的天数。",
+    "label": "战利品刷新天数"
+   },
+   "LootTimer": {
+    "description": "搜刮容器所需的时间。",
+    "label": "开箱时间"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "设置死亡时随机物品丢失的数量。",
+    "label": "死亡丢失数量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "设置哪些物品在死亡时会丢失。\\n\\n无 = 无物品\\n全部 = 所有物品。\\n工具带 = 仅工具带上的物品。\\n背包 = 仅背包里的物品。\\n装备 = 穿戴的护甲和衣物。\\n仅携带物品 = 工具带和背包中的物品。",
+    "label": "死亡时丢失"
+   },
+   "MaxDegradationAmount": {
+    "description": "决定物品修理后会损失多少耐久度。",
+    "label": "修理损坏"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的丧尸种类的最大等级。",
+    "label": "最大敌人等级"
+   },
+   "MaxTechType": {
+    "description": "全局设置武器和物品可达到的最高科技等级，让你可以控制进度和游戏节奏。参考下方分级：\\n\\n0级科技：石器、铁管\\n1级科技：铁器、KV-47\\n2级科技：钢材、战术突击步枪\\n3级科技：螺旋钻、M60",
+    "label": "最大科技类型"
+   },
+   "MedicalLootCount": {
+    "description": "战利品中找到的药品数量。",
+    "label": "药品丰富度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近战武器和工具造成的伤害。",
+    "label": "近战伤害"
+   },
+   "MeleeLootCount": {
+    "description": "战利品中找到的近战武器和部件数量。",
+    "label": "近战武器丰富度"
+   },
+   "MiningOutput": {
+    "description": "控制采矿获得的矿石数量。关闭后会提升生存难度。",
+    "label": "采矿产出"
+   },
+   "NewbieCoat": {
+    "description": "如果开启，新玩家出生时将获得新手保护增益。",
+    "label": "新玩家增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "是否在商人任务列表刷新目标点任务。如果关闭，则仅刷新埋藏任务。",
+    "label": "目标点任务"
+   },
+   "POITierLSModifier": {
+    "description": "基于目标点等级的战利品等级倍数。默认读取配置文件参数。",
+    "label": "目标点战利品等级"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "决定生命值和体力值是否每级增加。",
+    "label": "等级属性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "阅读技能杂志获得的进度。",
+    "label": "杂志进度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "计入商人进度的每日任务数量。额外的任务仍会给予经验值和奖励，但不会推进商人等级进度。",
+    "label": "每日任务数"
+   },
+   "QuestsEnabled": {
+    "description": "启用或禁用游戏内任务。",
+    "label": "任务"
+   },
+   "QuestsPerTier": {
+    "description": "解锁下一等级所需完成的任务数量。数值越高，升级的进度越慢。无 = 无限制，可直接访问全部任务等级。",
+    "label": "每级任务"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓箭、火器和其他远程武器造成的伤害。",
+    "label": "远程伤害"
+   },
+   "RangedLootCount": {
+    "description": "战利品中找到的远程武器和部件数量。",
+    "label": "远程武器丰富度"
+   },
+   "RepairTypes": {
+    "description": "决定物品的修理方式：\\n\\n无 = 不可修理\\n仅维修工具 = 仅可使用维修工具修理\\n仅合并工作站 = 仅可在合并工作站修理\\n两者皆可 = 可使用维修工具或合并工作站修理。",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "战利品中找到的资源物品数量。",
+    "label": "资源丰富度"
+   },
+   "RunSpeed": {
+    "description": "调整玩家奔跑时的移动速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "分解物品时获得的数量。",
+    "label": "分解产出"
+   },
+   "SeedDropOutput": {
+    "description": "玩家收获农作物获得的种子数量。不影响种子掉落几率或树木的种子。",
+    "label": "种子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在屏幕上显示天数和时间信息。如果关闭此选项，血月警告提示也会一同关闭。",
+    "label": "显示天数/时间"
+   },
+   "ShowEnemyDamage": {
+    "description": "当实体被击中时显示浮动的伤害数字。",
+    "label": "显示实体伤害"
+   },
+   "ShowHealthBars": {
+    "description": "显示或隐藏实体的生命值条。",
+    "label": "实体生命值条"
+   },
+   "ShowLocationInfo": {
+    "description": "显示环境和目标点的名称和难度。",
+    "label": "显示地点信息"
+   },
+   "ShowXP": {
+    "description": "隐藏或显示屏幕上的经验值条和经验值弹出提示。",
+    "label": "显示经验值"
+   },
+   "SillyBigHeads": {
+    "description": "开启丧尸、动物和商人的“大头模式”。",
+    "label": "大头"
+   },
+   "SillyBlackandWhite": {
+    "description": "启用经典黑白色调（灵感源自 20 世纪 60 年代的恐怖电影）。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "开启击杀实体时的庆祝五彩纸屑特效。“仅限爆头”选项仅会在爆头击杀时触发五彩纸屑特效，因此可以射击动物的身体以收集肉类。“仅限爆头”选项不适用于非敌对动物。",
+    "label": "庆祝击杀"
+   },
+   "SillyLowGravity": {
+    "description": "控制游戏内重力的大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "为游戏内的动作开启滑稽音效。",
+    "label": "滑稽声音"
+   },
+   "SillyTinyZombies": {
+    "description": "启用缩小版的丧尸。",
+    "label": "迷你丧尸"
+   },
+   "SkillGainRate": {
+    "description": "调整需要多少等级才能获得技能点。",
+    "label": "技能获得速率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制在获得技能点时会获得多少技能点。",
+    "label": "技能获得数量"
+   },
+   "SmeltingType": {
+    "description": "控制锻造炉制作的方式。是将物品放入锻造炉进行熔炼，还是直接使用你背包中的材料进行制作。",
+    "label": "熔炉类型"
+   },
+   "StackSizeMultiplier": {
+    "description": "调整所有可堆叠物品堆叠上限的倍率。最高堆叠上限为 30,000。",
+    "label": "堆叠上限倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制体力回复的速率。数值为近似值。",
+    "label": "体力值回复"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳跃和攻击等动作的体力消耗。数值为近似值。",
+    "label": "体力值消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成新手引导任务可获得的技能点数。如果关闭引导，则开局直接发放对应点数。",
+    "label": "基础技能点"
+   },
+   "StormFreq": {
+    "description": "调整风暴出现的频率。设为“无”将禁用风暴。",
+    "label": "风暴频率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否会听到风暴警报声和看到屏幕上的风暴警告提示。",
+    "label": "风暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "设置环境温度（高温和低温）是否对玩家造成影响。",
+    "label": "温度生存"
+   },
+   "TerrainDamage": {
+    "description": "玩家对地形造成的伤害量。",
+    "label": "地形伤害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水的速度。更高的数值会增加水的消耗量。",
+    "label": "口渴度倍数"
+   },
+   "TraderBuyLimit": {
+    "description": "商人收购玩家物品的数量上限，超过后将拒绝继续收购。该值决定了玩家每次卖出囤积物资的价格。",
+    "label": "商人收购上限"
+   },
+   "TraderBuyPrices": {
+    "description": "调整玩家向商人购买物品的价格。",
+    "label": "购买价格"
+   },
+   "TraderDialog": {
+    "description": "隐藏/显示商人的语音台词和屏幕上的对话。",
+    "label": "交易对话"
+   },
+   "TraderHours": {
+    "description": "控制商人的营业和打烊时间。24 小时周期和白昼时长不影响此设置。血月已关闭表示仅在血月期间关门。默认使用 XML 中的数值。\\n\\nXML 默认 = 04:00-22:00\\n 早晨 = 04:00-12:00\\n 日间 = 10:00-18:00\\n 晚上 = 16:00-22:00\\n 深夜 = 22:00-04:00",
+    "label": "商人营业时间"
+   },
+   "TraderItemAbundance": {
+    "description": "商人出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "商人物品数量"
+   },
+   "TraderMaxTier": {
+    "description": "设置可从商人处购买物品的最高品质。",
+    "label": "商人最高品质"
+   },
+   "TraderProtection": {
+    "description": "设置商人据点的伤害保护，以及玩家是否可以占领该区域。",
+    "label": "商人保护"
+   },
+   "TraderResetInterval": {
+    "description": "设置商人重置库存的频率。默认读取配置文件参数。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "调整玩家出售物品给商人的价格。",
+    "label": "出售价格"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "允许接受去找其他商人的任务。",
+    "label": "商贸路线"
+   },
+   "TradersEnabled": {
+    "description": "允许与 NPC 商人交易。",
+    "label": "交易开启"
+   },
+   "TreasureMapChance": {
+    "description": "战利品容器和敌人战利品袋中生成藏宝图的概率倍率。",
+    "label": "藏宝图生成概率"
+   },
+   "VehicleBlockDamage": {
+    "description": "载具对物块造成的伤害量。",
+    "label": "载具物块伤害"
+   },
+   "VehicleEntityDamage": {
+    "description": "载具对实体造成的伤害量。",
+    "label": "载具实体伤害"
+   },
+   "VehicleFuelUsage": {
+    "description": "调整载具消耗燃料的速率。",
+    "label": "载具燃料使用量"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的载具发生碰撞时自身受到的伤害量。",
+    "label": "载具自身伤害"
+   },
+   "VendingEnabled": {
+    "description": "启用或禁用自动贩卖机功能。",
+    "label": "贩卖机开启"
+   },
+   "VendingItemAbundance": {
+    "description": "自动贩卖机出售物品的数量。数值越低，物资越有限和稀缺。默认读取配置文件参数。",
+    "label": "贩卖机物品数量"
+   },
+   "VendingResetInterval": {
+    "description": "设置商人自动贩卖机重置库存的频率。默认读取配置文件参数。",
+    "label": "贩卖机重置"
+   },
+   "WalkSpeed": {
+    "description": "调整玩家行走时的移动速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "是：允许在工作台制作物品。否：玩家仅可进行背包制作。",
+    "label": "工作台制作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允许在世界中生成可用的工作站。在生成新的纳维戈恩或随机世界生成地图时生效。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "作用于所有获得的经验值的倍数。",
+    "label": "经验值倍数"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月尸群和风暴期间丧尸的移动速度。",
+    "label": "丧尸血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "设置凶残丧尸的移动速度。",
+    "label": "凶残丧尸速度"
+   },
+   "ZombieFeralSense": {
+    "description": "丧尸视觉和听觉感知玩家的灵敏度。",
+    "label": "凶残丧尸感知"
+   },
+   "ZombieMove": {
+    "description": "设置白天普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸白天速度"
+   },
+   "ZombieMoveNight": {
+    "description": "设置夜晚普通丧尸的移动速度，不影响凶残丧尸与特殊丧尸。",
+    "label": "丧尸夜间速度"
+   },
+   "ZombieRageChance": {
+    "description": "丧尸受到伤害时进入狂暴模式的几率。",
+    "label": "丧尸狂暴"
+   },
+   "ZombiesEatAnimals": {
+    "description": "决定丧尸是否会吃动物的尸体。",
+    "label": "丧尸吃动物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "难度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "默认/简单：末世对你会留有几分情面。",
+    "label": "冒险家"
+   },
+   "Almost Creative": {
+    "description": "去掉实际危机的和平末世，再也不用担惊受怕地死去。",
+    "label": "半创造模式"
+   },
+   "Bite Club": {
+    "description": "硬核永久死亡模式，死亡即删档，重生是懦夫的选择。仅有一次生存机会，请谨慎行事。",
+    "label": "噬咬俱乐部"
+   },
+   "Caveman Life": {
+    "description": "这个末世里仅能制作木棍等原始道具。",
+    "label": "穴居人生存"
+   },
+   "Chibi Mode": {
+    "description": "不仅造型小巧可爱，移速也更快，还好你自身的速度足够灵活。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "各类灾祸接踵而至，修复速度赶不上灾难爆发速度。",
+    "label": "灾难大片"
+   },
+   "Dumpster Diver": {
+    "description": "变废为宝！合理利用就不叫囤积癖。",
+    "label": "垃圾车司机"
+   },
+   "Dying World": {
+    "description": "资源正在枯竭，而你离死也不远了。",
+    "label": "枯竭的末世"
+   },
+   "Insane": {
+    "description": "疯狂：一步错步步错，每一次失误都会让你追悔莫及。",
+    "label": "疯狂"
+   },
+   "Legacy Survival": {
+    "description": "复古原版生存玩法，搭配现代化生存惩罚机制。",
+    "label": "经典旧版生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "补给更少，惩罚更重，压力永不停歇。疯狂鼹鼠……闻起来真香！",
+    "label": "疯狂鼹鼠大乱斗"
+   },
+   "Nomad": {
+    "description": "普通：选择这个难度，你的生存意志比黑带咖啡更浓烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末世休闲难度，全方位新手保护机制拉满。",
+    "label": "拾荒者"
+   },
+   "Seven days Later": {
+    "description": "现代丧尸电影风格模式，高速丧尸潮混乱席卷。",
+    "label": "七日之后"
+   },
+   "True Survivalist": {
+    "description": "幸存者：被丧尸重创本就是生存乐趣的一部分。",
+    "label": "幸存者"
+   },
+   "Undead Matinee": {
+    "description": "近战向复古电影风格模式，丧尸移速缓慢、成群来袭，弹药极度稀缺。",
+    "label": "丧尸午后影院"
+   },
+   "Warrior": {
+    "description": "战士：生存压迫感拉满，好在不会轻易触发脑震荡。",
+    "label": "战士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "无",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "冲刺",
+    "5": "噩梦"
+   },
+   "AirDropRandomTime": {
+    "0": "无",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "全天",
+    "6": "任何"
+   },
+   "AirDrops": {
+    "0": "关闭",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "无"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "仅工作台"
+   },
+   "BarterValues": {
+    "0": "无"
+   },
+   "BiomeEnemyDensity": {
+    "0": "无",
+    "1": "默认",
+    "2": "非常低",
+    "3": "低",
+    "4": "中等",
+    "5": "高",
+    "6": "非常高"
+   },
+   "BloodMoonCount": {
+    "0": "4 个敌人",
+    "1": "6 个敌人",
+    "2": "8 个敌人",
+    "3": "10 个敌人",
+    "4": "12 个敌人",
+    "5": "16 个敌人",
+    "6": "24 个敌人",
+    "7": "32 个敌人",
+    "8": "64 个敌人"
+   },
+   "BloodMoonFrequency": {
+    "0": "关闭",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "关闭",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "仅限爆头"
+   },
+   "CropGrowthSpeed": {
+    "0": "无",
+    "1": "立即"
+   },
+   "DamageValues": {
+    "0": "无"
+   },
+   "DayLightLength": {
+    "0": "总是夜晚",
+    "10": "总是白天"
+   },
+   "DeathPenalty": {
+    "0": "无",
+    "1": "仅经验值",
+    "2": "受伤",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "无",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "均可"
+   },
+   "DewCollectorInput": {
+    "0": "无"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "关闭",
+    "1": "非常低",
+    "2": "低",
+    "3": "默认",
+    "4": "高",
+    "5": "非常高"
+   },
+   "DropOnDeath": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的",
+    "6": "删除所有"
+   },
+   "DropOnQuit": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "Encumbrance": {
+    "0": "关闭",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高",
+    "5": "完整"
+   },
+   "FullChickenStressEvent": {
+    "0": "无",
+    "1": "随机",
+    "2": "鸡脱手",
+    "3": "愤怒的鸡",
+    "4": "丧尸群",
+    "5": "杀人鸡群"
+   },
+   "HeadshotMode": {
+    "0": "无",
+    "1": "仅限爆头",
+    "2": "爆头终结"
+   },
+   "ItemTierOptions": {
+    "0": "默认"
+   },
+   "JarRefund": {
+    "0": "无"
+   },
+   "JumpStrength": {
+    "0": "无"
+   },
+   "LootAbundanceValues": {
+    "0": "无"
+   },
+   "LootRespawnDays": {
+    "0": "关闭"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "无",
+    "1": "全部",
+    "2": "仅工具带",
+    "3": "仅背包",
+    "4": "设备",
+    "5": "仅携带的"
+   },
+   "LowDefaultHigh": {
+    "0": "非常低",
+    "1": "低",
+    "2": "默认",
+    "3": "高",
+    "4": "非常高"
+   },
+   "MaxChunkAge": {
+    "0": "关闭"
+   },
+   "MaxDegradationAmounts": {
+    "0": "无"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "强壮",
+    "2": "特殊",
+    "3": "凶残",
+    "4": "辐射",
+    "5": "精英"
+   },
+   "MaxTechType": {
+    "0": "无",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "无"
+   },
+   "PointsPer": {
+    "0": "无"
+   },
+   "QuestPerDay": {
+    "0": "无限制"
+   },
+   "QuestPerTier": {
+    "0": "无"
+   },
+   "RepairTypes": {
+    "0": "无",
+    "1": "仅修理",
+    "2": "仅合并",
+    "3": "均可"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "仅名称"
+   },
+   "ShowXP": {
+    "0": "全部",
+    "1": "仅显示条",
+    "2": "仅通知",
+    "3": "无"
+   },
+   "SlowToFast": {
+    "0": "默认",
+    "1": "非常慢",
+    "2": "慢速",
+    "3": "普通",
+    "4": "快速",
+    "5": "非常快"
+   },
+   "SmeltingType": {
+    "0": "熔炉",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "无"
+   },
+   "StaminaUsage": {
+    "0": "无"
+   },
+   "StarterSkillPoints": {
+    "0": "无"
+   },
+   "StormFrequency": {
+    "0": "无"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可占领",
+    "2": "不可占领"
+   },
+   "TraderHourPresets": {
+    "0": "默认",
+    "1": "早晨",
+    "2": "日间",
+    "3": "晚上",
+    "4": "深夜",
+    "5": "血月已关闭",
+    "6": "总是开门"
+   },
+   "TraderResetInterval": {
+    "0": "默认",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "无"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "关闭",
+    "1": "白天",
+    "2": "深夜",
+    "3": "全部"
+   },
+   "ZombieRageChance": {
+    "0": "无"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "冲刺",
+    "4": "噩梦"
+   }
+  }
+ }
+}

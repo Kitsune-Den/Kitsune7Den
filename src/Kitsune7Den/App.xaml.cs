@@ -39,6 +39,7 @@ public partial class App : Application
         services.AddSingleton<TelnetService>();
         services.AddSingleton<LogWatcherService>();
         services.AddSingleton<ConfigService>();
+        services.AddSingleton<GameVersionService>();
         services.AddSingleton<ModManagerService>();
         services.AddSingleton<SteamCmdService>();
         services.AddSingleton<AdminService>();

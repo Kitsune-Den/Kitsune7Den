@@ -6,8 +6,6 @@ namespace Kitsune7Den.Views;
 
 public partial class ConfigView : UserControl
 {
-    private bool _loaded;
-
     public ConfigView()
     {
         InitializeComponent();
@@ -15,11 +13,10 @@ public partial class ConfigView : UserControl
 
     private void OnLoaded(object sender, System.Windows.RoutedEventArgs e)
     {
-        if (!_loaded && DataContext is ConfigViewModel vm)
-        {
+        // A new view is built every time the page is opened. Reload so edits made outside
+        // the app show up, but never over unsaved changes.
+        if (DataContext is ConfigViewModel { HasChanges: false } vm)
             vm.LoadCommand.Execute(null);
-            _loaded = true;
-        }
     }
 
     private void TotalCycleBox_KeyDown(object sender, KeyEventArgs e)
