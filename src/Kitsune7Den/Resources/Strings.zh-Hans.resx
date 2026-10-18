@@ -122,6 +122,7 @@
   <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>在 GitHub 上查看</value></data>
   <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>有可用更新：</value></data>
   <data name="Settings_AppearanceHeader" xml:space="preserve"><value>外观</value></data>
+  <data name="Settings_LanguageLabel" xml:space="preserve"><value>语言 / Language</value></data>
   <data name="Settings_ThemeLabel" xml:space="preserve"><value>主题</value></data>
   <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>深海军蓝 + 红色点缀（默认）</value></data>
   <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>深炭灰 + 冷蓝色点缀</value></data>

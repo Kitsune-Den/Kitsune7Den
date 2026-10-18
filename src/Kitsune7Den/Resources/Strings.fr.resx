@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Tableau de bord</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>Console</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>Joueurs</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>Configuration</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>Mods</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>Sauvegardes</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>Journaux</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Paramètres</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>Serveur : </value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet : </value></data>
+  <data name="Status_Players" xml:space="preserve"><value>Joueurs : </value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>Arrêté</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>Démarrage</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>En marche</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>Arrêt en cours</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>Connecté</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>Déconnecté</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Oui</value></data>
+  <data name="Common_No" xml:space="preserve"><value>Non</value></data>
+  <data name="Common_On" xml:space="preserve"><value>Activé</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>Désactivé</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Enregistrer</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Annuler</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>Actualiser</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Parcourir</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>Supprimer</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Erreur</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>Bienvenue dans Kitsune7Den</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>Configurons votre serveur. Choisissez une option :</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>Déjà installé ?</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value> Cliquez sur </value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value> ci-dessous et indiquez votre </value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>Nouvelle installation ?</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value> Allez dans </value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>Paramètres → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value> et Kitsune7Den installera le serveur pour vous</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>Emplacement du serveur</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>Indiquez votre 7DaysToDieServer.exe (ou installez-en un via les Paramètres)</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>Chemin vers 7DaysToDieServer.exe — utilisez Parcourir, ou configurez SteamCMD dans les Paramètres pour l'installer automatiquement</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>État du serveur</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>État</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>Temps de fonctionnement</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>Joueurs</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>Commandes</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>Démarrer</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>Arrêter</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>Connecter telnet</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>Connecter telnet manuellement — à utiliser quand le serveur tourne déjà</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>Redémarrer</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>Infos de connexion</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>Copier l'adresse LAN dans le presse-papiers</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>Copier l'adresse publique dans le presse-papiers</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>LAN</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>PUBLIQUE</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>Inconnue</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>Indisponible</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>Exécutable du serveur</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>Tous les exécutables</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>Sélectionner l'exécutable du serveur 7 Days to Die</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>Console</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>Effacer</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>Envoyer</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>{0} sauvegardé (protection contre les mises à jour Steam).</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>Impossible de sauvegarder la configuration : {0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>Recherche de mises à jour...</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>Recherche de mises à jour terminée.</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>Échec de la recherche de mises à jour — démarrage quand même.</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>{0} restauré depuis la sauvegarde.</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>Impossible de restaurer la sauvegarde de la configuration : {0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>Fichier journal : {0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>Démarrage du serveur : {0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>Impossible de démarrer le serveur : {0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>Envoi de la commande d'arrêt...</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>Arrêt forcé du processus du serveur...</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>Serveur arrêté.</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>Ancien journal supprimé : {0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>Joueurs en ligne</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>en ligne</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>Expulser</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>Bannir</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>NIVEAU</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>SANTÉ</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>SCORE</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>ZOMBIES</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>MORTS</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>PING</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP : </value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>Rendre admin</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>Retirer l'admin</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>Introuvable</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>Bannir « {0} » ?
+Le joueur sera ajouté à la liste noire.</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>Confirmer le bannissement</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>Impossible de déterminer l'identifiant de plateforme du joueur.</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>Retirer les droits d'admin de « {0} » ?</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>Confirmer</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>Propriétaire</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>Admin</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>Modérateur</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>Niveau {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>Journaux du serveur</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>Filtrer les journaux (ex. ERR, INF, nom de joueur...)</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>Ouvrir dans l'Explorateur</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>Dossier du serveur non défini</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>{0} fichiers journaux trouvés</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>Aucun fichier journal trouvé</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>Fichier introuvable</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- Affichage des 10 000 premières lignes sur {0} (filtrez pour affiner) ---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>{0} lignes correspondantes dans {1}</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>{0} lignes — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>Erreur de lecture du journal : {0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>Mises à jour</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>Recherche la dernière version de Kitsune7Den sur GitHub. Les mises à jour sont téléchargées et installées sur place — aucun installateur nécessaire.</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Rechercher des mises à jour</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>Installer la mise à jour</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>Voir sur GitHub</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>Mise à jour disponible : </value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>Apparence</value></data>
+  <data name="Settings_LanguageLabel" xml:space="preserve"><value>Langue / Language</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>Thème</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>Bleu marine profond + accent rouge (par défaut)</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>Anthracite + accent bleu froid</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>Tons vert foncé + accent ambre</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>Contraste élevé, adapté au daltonisme (bleu/orange, sans rouge/vert)</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>Soutenir le projet</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den est gratuit et open source. S'il vous fait gagner du temps ou vous simplifie la vie de gestionnaire de serveur, vous pouvez m'offrir un café. Aucune obligation, juste de la gratitude.</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>Ouvre ko-fi.com dans votre navigateur par défaut</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>Me soutenir sur Ko-fi</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>SteamCMD permet d'installer et de mettre à jour directement le serveur dédié 7D2D.</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>Chemin de SteamCMD</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>Télécharger</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>Télécharge SteamCMD automatiquement</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>Chemin vers steamcmd.exe</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>SteamCMD introuvable</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD prêt</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>Installation du serveur</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>Dossier d'installation</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>Où les fichiers du serveur 7D2D seront installés</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>Branche du serveur</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>Choisissez une branche connue ou saisissez-en une personnalisée (ex. alpha21.2)</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>Mettre à jour automatiquement au démarrage du serveur</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>Vérifier les fichiers</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>Vérifie les fichiers pendant la mise à jour (plus lent, mais répare les fichiers corrompus)</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>Installer / Mettre à jour le serveur</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Connexion telnet</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den lit le port et le mot de passe telnet dans votre serverconfig.xml à chaque connexion, et n'utilise les valeurs ci-dessous que si cela échoue. Telnet lui sert à envoyer des commandes et à lire les données des joueurs.</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Port telnet</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Mot de passe telnet</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>Enregistrer tous les paramètres</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>Conditions d'utilisation</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den est fourni tel quel, pour un usage personnel et non commercial uniquement. Aucune garantie d'aucune sorte n'est offerte. L'auteur n'est pas responsable des pertes de données, des problèmes de serveur ou de tout autre dommage résultant de l'utilisation de ce logiciel. Utilisation à vos risques et périls. Cet outil n'est ni affilié à The Fun Pimps ou Valve, ni approuvé par eux.</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>Opération réussie</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>Échec de l'opération — consultez le journal</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>Thème changé : {0}</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>Paramètres enregistrés</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>Tous les exécutables</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>Sélectionner steamcmd.exe</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>Sélectionner le dossier d'installation du serveur</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>Définissez d'abord un dossier d'installation du serveur — SteamCMD sera placé à côté</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>SteamCMD introuvable — téléchargez-le ou indiquez son emplacement d'abord</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>Définissez d'abord un dossier d'installation du serveur</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>Mise à jour...</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>Annulation...</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>Installer la mise à jour {0} ({1}) ?
+
+Kitsune7Den va télécharger la nouvelle version et redémarrer. Le serveur continuera de tourner.</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>Confirmer la mise à jour</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>Recherche de mises à jour...</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>Vous avez la dernière version ({0})</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>Mise à jour {0} disponible, mais aucun fichier exe/zip téléchargeable n'a été trouvé dans la version publiée</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>Mise à jour disponible : {0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>Échec de la recherche de mises à jour : {0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>Impossible de localiser le chemin de l'exe actuel</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>Téléchargement de {0} ({1})...</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>Extraction...</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>Le zip ne contenait pas {0}</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>Téléchargement terminé. Installation...</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>Mise à jour installée. Redémarrage...</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Échec de la mise à jour : {0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD existe déjà ici : {0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>Téléchargement de SteamCMD...</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>Extraction de SteamCMD...</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD installé ici : {0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>Erreur : steamcmd.exe introuvable après l'extraction</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>Erreur lors du téléchargement de SteamCMD : {0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>Erreur : chemin de SteamCMD non défini ou introuvable. Téléchargez-le d'abord.</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>Erreur : dossier d'installation du serveur non défini.</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>Exécution : steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>Branche : {0} | Vérification : {1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>La première installation peut prendre un moment...</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>Exe du serveur trouvé : {0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>Mise à jour réussie !</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD s'est terminé avec le code : {0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>Mise à jour annulée.</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>Erreur lors de l'exécution de SteamCMD : {0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>Ouvrir le dossier</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>Installer depuis un zip</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>{0} / {1} activés</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>Activé</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>Désactivé</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>Activer</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>Désactiver</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>par </value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>{0} mods ({1} activés)</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>{0} activé</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>{0} désactivé</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>Supprimer le mod « {0} » ?
+Tous ses fichiers seront supprimés, et c'est irréversible.</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>Confirmer la suppression</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>{0} supprimé</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>Archives de mods</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>Tous les fichiers</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>Sélectionner le fichier zip du mod</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>Erreur : impossible de détecter la structure du mod dans le zip. Un dossier contenant ModInfo.xml est attendu.</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>Erreur : nom de dossier de mod invalide.</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>Mod installé : {0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>Erreur lors de l'installation du mod : {0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>Partie : </value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>Introuvable</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>Ouvrir le dossier</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>Créer une sauvegarde</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>PLANIFIÉES</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>Activées</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>INTERVALLE</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>SAUVEGARDES MAX.</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>Enregistrer la planification</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>PROCHAINE SAUVEGARDE</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>Aucune sauvegarde pour l'instant</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>Cliquez sur </value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value> pour compresser votre partie actuelle dans un zip, ou activez la planification ci-dessus pour sauvegarder automatiquement à intervalle régulier.</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>Restaurer</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>manuelle</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>planifiée</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>avant restauration</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>Toutes les 30 minutes</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>Toutes les heures</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>Toutes les 2 heures</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>Toutes les 4 heures</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>Toutes les 6 heures</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>Toutes les 12 heures</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>Tous les jours</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>{0} sauvegarde(s) trouvée(s)</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>Restaurer la sauvegarde « {0} » ?
+
+Une sauvegarde de sécurité sera créée d'abord.
+Le serveur devrait être arrêté avant la restauration.</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>Confirmer la restauration</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>Supprimer la sauvegarde « {0} » ?
+C'est irréversible.</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>Confirmer la suppression</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>Planification enregistrée</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>à l'instant</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>il y a {0} min</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>il y a {0} h</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>il y a {0} j</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>Sauvegarde planifiée en cours...</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>Sauvegardes planifiées activées — toutes les {0}</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} minutes</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 heure</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} heures</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 jour</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} jours</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>Erreur : dossier de sauvegarde de la partie introuvable</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>Création d'une sauvegarde de {0}...</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>Sauvegarde créée : {0} ({1})</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>Échec de la sauvegarde : {0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>Erreur : dossier de la partie à restaurer introuvable</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>Création d'une sauvegarde de sécurité avant la restauration...</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>Restauration de {0}...</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>{0} restauré. Redémarrez le serveur pour appliquer les changements.</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>Échec de la restauration : {0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>{0} supprimé</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>Ancienne sauvegarde supprimée : {0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>Configuration du serveur</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>Formulaire</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>XML brut</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>Réinitialiser</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>Enregistrer les modifications</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>Aucun serveur configuré</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>Allez dans le Tableau de bord et indiquez votre </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value> — ou installez un nouveau serveur via SteamCMD depuis la page Paramètres.</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>Aucun serverconfig.xml trouvé — configurez un serveur dans le Tableau de bord</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>{0} propriétés chargées</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>Enregistré (sauvegarde créée)</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>Échec de l'enregistrement — vérifiez la validité du XML</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>Dernières valeurs enregistrées rétablies</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>CYCLE JOUR / NUIT</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>JOUR</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>NUIT</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> min</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> min au total</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>Cycle total :</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>min  (10 – 240)</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>Remplace DayNightLength ({0}) et DayLightLength ({1})</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>7 Days to Die {0} détecté (d'après le journal du serveur)</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>7 Days to Die {0} (d'après la branche SteamCMD choisie)</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>7 Days to Die 3.x (version exacte inconnue tant que le serveur n'a pas démarré une fois)</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>Ce serverconfig.xml date d'avant 7 Days to Die 3.0</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>La 3.x a déplacé les réglages de difficulté, de butin, de zombies, de lune sanglante et de durée du jour dans les options bac à sable du jeu, définies par un seul SandboxCode. Les anciennes propriétés ci-dessous, dans la section Ancien format, sont ignorées par le jeu. La mise à jour les met en commentaire (rien n'est supprimé), ajoute SandboxCode, Region et Language, et fait d'abord une sauvegarde.</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>Mettre à jour pour la 3.x</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>Mettre à jour serverconfig.xml pour la 3.x</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>Mettre en commentaire les réglages ignorés par la 3.x et ajouter SandboxCode, Region et Language ?
+
+Une sauvegarde horodatée de serverconfig.xml est faite d'abord. Les anciennes valeurs restent dans le fichier sous forme de commentaires.</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>Mis à jour pour la 3.x : {0} anciens réglages mis en commentaire, ajouts : {1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml est déjà au format 3.x</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>Échec de la mise à jour : {0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Enregistrez ou annulez d'abord vos modifications non enregistrées</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x les ignore et les prend dans le SandboxCode à la place. Modifiez-les dans l'éditeur bac à sable ci-dessus.</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Options bac à sable</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Modifier le bac à sable...</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>Difficulté, butin, zombies, lunes sanglantes, durée du jour, marchands et plus encore. Les mêmes options que l'écran bac à sable du jeu.</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>Préréglage : {0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>Règles personnalisées : {0} options modifiées par rapport aux valeurs par défaut</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>Ce SandboxCode est illisible. Ouvrez l'éditeur pour savoir pourquoi.</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode mis à jour. Cliquez sur Enregistrer les modifications pour l'écrire dans serverconfig.xml.</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>Table d'options {0} utilisée (serveur : 7 Days to Die {1}).</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>Ce serveur tourne sous 7 Days to Die {0}, mais la table d'options la plus récente de cette version de Kitsune7Den est {1}. Les options ajoutées ou modifiées depuis peuvent manquer ou être décalées. Recherchez une mise à jour de Kitsune7Den.</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>Impossible de savoir quelle version 3.x ce serveur utilise : la table la plus récente ({0}) est donc utilisée. Démarrez le serveur une fois pour que son journal enregistre la version ; un même code peut avoir un sens différent selon la version 3.x.</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>Préréglage</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>Correspond au préréglage {0}</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>Règles personnalisées</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>Rechercher des options...</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>Valeur par défaut</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>Tout réinitialiser</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>Appliquer</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>modifié par rapport à la valeur par défaut</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>Par défaut : {0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>Le code est vide.</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>Un SandboxCode ne contient que des lettres de A à Z.</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>Ce code commence par « {0} », mais les codes de cette version du jeu commencent par « {1} ».</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>{0} partie(s) de ce code ne correspondent à aucune option de cette version du jeu et seront conservées telles quelles : {1}</value></data>
+  <data name="CfgCat_Core" xml:space="preserve"><value>Essentiel</value></data>
+  <data name="CfgCat_Sandbox" xml:space="preserve"><value>Bac à sable</value></data>
+  <data name="CfgCat_World" xml:space="preserve"><value>Monde</value></data>
+  <data name="CfgCat_BlockDamage" xml:space="preserve"><value>Dégâts de bloc</value></data>
+  <data name="CfgCat_Gameplay" xml:space="preserve"><value>Jouabilité</value></data>
+  <data name="CfgCat_Player" xml:space="preserve"><value>Joueur</value></data>
+  <data name="CfgCat_Zombies" xml:space="preserve"><value>Zombies</value></data>
+  <data name="CfgCat_LootDrops" xml:space="preserve"><value>Butin et pertes</value></data>
+  <data name="CfgCat_LandClaims" xml:space="preserve"><value>Revendications de terrain</value></data>
+  <data name="CfgCat_Network" xml:space="preserve"><value>Réseau</value></data>
+  <data name="CfgCat_Admin" xml:space="preserve"><value>Administration</value></data>
+  <data name="CfgCat_Advanced" xml:space="preserve"><value>Avancé</value></data>
+  <data name="CfgCat_Legacy" xml:space="preserve"><value>Ancien format</value></data>
+  <data name="CfgCat_Other" xml:space="preserve"><value>Autre</value></data>
+  <data name="Cfg_ServerName_Name" xml:space="preserve"><value>Nom du serveur</value></data>
+  <data name="Cfg_ServerName_Desc" xml:space="preserve"><value>Nom affiché dans le navigateur de serveurs</value></data>
+  <data name="Cfg_ServerPassword_Name" xml:space="preserve"><value>Mot de passe du serveur</value></data>
+  <data name="Cfg_ServerPassword_Desc" xml:space="preserve"><value>Mot de passe requis pour rejoindre (vide = aucun mot de passe)</value></data>
+  <data name="Cfg_ServerDescription_Name" xml:space="preserve"><value>Description du serveur</value></data>
+  <data name="Cfg_ServerDescription_Desc" xml:space="preserve"><value>Description affichée dans la liste du navigateur de serveurs</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Name" xml:space="preserve"><value>Message de connexion</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Desc" xml:space="preserve"><value>Message que les joueurs doivent accepter avant de rejoindre</value></data>
+  <data name="Cfg_Region_Name" xml:space="preserve"><value>Région</value></data>
+  <data name="Cfg_Region_Desc" xml:space="preserve"><value>Région où se trouve le serveur, utilisée par le filtre de région du navigateur de serveurs (3.x)</value></data>
+  <data name="Cfg_Region_Opts" xml:space="preserve"><value>Amérique du Nord - Est|Amérique du Nord - Ouest|Amérique centrale|Amérique du Sud|Europe|Russie|Asie|Moyen-Orient|Afrique|Océanie</value></data>
+  <data name="Cfg_Language_Name" xml:space="preserve"><value>Langue</value></data>
+  <data name="Cfg_Language_Desc" xml:space="preserve"><value>Langue principale des joueurs, écrite avec son nom anglais (« French », pas « Français ») pour que la recherche du navigateur de serveurs la trouve (3.x)</value></data>
+  <data name="Cfg_SandboxCode_Name" xml:space="preserve"><value>Code bac à sable</value></data>
+  <data name="Cfg_SandboxCode_Desc" xml:space="preserve"><value>7D2D 3.x regroupe les règles de jeu (difficulté, butin, zombies, lunes sanglantes, durée du jour...) dans ce seul code. Utilisez l'éditeur bac à sable, ou collez un code copié depuis l'écran Options bac à sable du jeu.</value></data>
+  <data name="Cfg_GameWorld_Name" xml:space="preserve"><value>Monde du jeu</value></data>
+  <data name="Cfg_GameWorld_Desc" xml:space="preserve"><value>Rempli automatiquement depuis Data/Worlds et GeneratedWorlds. Choisissez un monde existant ou saisissez un nom personnalisé.</value></data>
+  <data name="Cfg_WorldGenSeed_Name" xml:space="preserve"><value>Graine du monde</value></data>
+  <data name="Cfg_WorldGenSeed_Desc" xml:space="preserve"><value>Graine (texte) utilisée pour la génération aléatoire du monde</value></data>
+  <data name="Cfg_WorldGenSize_Name" xml:space="preserve"><value>Taille du monde</value></data>
+  <data name="Cfg_WorldGenSize_Desc" xml:space="preserve"><value>Largeur/hauteur de la carte RWG en mètres. Valeurs officiellement prises en charge : de 6144 à 10240, multiple de 2048.</value></data>
+  <data name="Cfg_GameName_Name" xml:space="preserve"><value>Nom de la partie</value></data>
+  <data name="Cfg_GameName_Desc" xml:space="preserve"><value>Nom de la sauvegarde de la partie (lettres, chiffres, _ - . et espaces). Le modifier démarre une nouvelle partie.</value></data>
+  <data name="Cfg_GameMode_Name" xml:space="preserve"><value>Mode de jeu</value></data>
+  <data name="Cfg_GameMode_Desc" xml:space="preserve"><value>Mode de jeu du serveur</value></data>
+  <data name="Cfg_GameMode_Opts" xml:space="preserve"><value>Survie (GameModeSurvival)</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Name" xml:space="preserve"><value>Zone morte de sac de couchage</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Desc" xml:space="preserve"><value>Rayon en blocs dans lequel les autres ne peuvent pas poser de sac de couchage près du vôtre</value></data>
+  <data name="Cfg_BedrollExpiryTime_Name" xml:space="preserve"><value>Durée du sac de couchage</value></data>
+  <data name="Cfg_BedrollExpiryTime_Desc" xml:space="preserve"><value>Jours réels pendant lesquels un sac de couchage reste actif après la dernière connexion de son propriétaire</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Name" xml:space="preserve"><value>Portions de carte révélées max. par joueur</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Desc" xml:space="preserve"><value>Nombre max. de portions de carte révélées par joueur (131072 = carte entière)</value></data>
+  <data name="Cfg_BlockDamagePlayer_Name" xml:space="preserve"><value>Dégâts de bloc des joueurs</value></data>
+  <data name="Cfg_BlockDamagePlayer_Desc" xml:space="preserve"><value>Ajuste les dégâts infligés aux blocs par les joueurs (pourcentage). 300 % est populaire en solo pour réduire la corvée de récolte.</value></data>
+  <data name="Cfg_BlockDamageAI_Name" xml:space="preserve"><value>Dégâts de bloc ennemis</value></data>
+  <data name="Cfg_BlockDamageAI_Desc" xml:space="preserve"><value>Ajuste les dégâts infligés aux blocs par les zombies et animaux en temps normal. Baissez à 25-50 % pour éviter que les zombies griffent à travers les murs.</value></data>
+  <data name="Cfg_BlockDamageAIBM_Name" xml:space="preserve"><value>Dégâts de bloc en LS</value></data>
+  <data name="Cfg_BlockDamageAIBM_Desc" xml:space="preserve"><value>Ajuste les dégâts infligés aux blocs par les zombies pendant la lune sanglante uniquement. Distinct des dégâts ennemis normaux, pour que les hordes frappent plus fort (ou moins fort).</value></data>
+  <data name="Cfg_GameDifficulty_Name" xml:space="preserve"><value>Difficulté</value></data>
+  <data name="Cfg_GameDifficulty_Desc" xml:space="preserve"><value>Difficulté générale. En 3.x, c'est le préréglage de difficulté du bac à sable que les joueurs ressentent vraiment ; celui-ci relève surtout de l'ancien format.</value></data>
+  <data name="Cfg_GameDifficulty_Opts" xml:space="preserve"><value>0 - Glaneur|1 - Aventurier|2 - Nomade|3 - Guerrier|4 - Survivaliste|5 - Extrême</value></data>
+  <data name="Cfg_DayNightLength_Name" xml:space="preserve"><value>Cycle de 24 heures</value></data>
+  <data name="Cfg_DayNightLength_Desc" xml:space="preserve"><value>Minutes réelles par cycle de 24 h en jeu</value></data>
+  <data name="Cfg_DayLightLength_Name" xml:space="preserve"><value>Heures de clarté</value></data>
+  <data name="Cfg_DayLightLength_Desc" xml:space="preserve"><value>Heures de clarté en jeu (sur 24)</value></data>
+  <data name="Cfg_BuildCreate_Name" xml:space="preserve"><value>Mode création</value></data>
+  <data name="Cfg_BuildCreate_Desc" xml:space="preserve"><value>Autoriser la construction en mode création/triche</value></data>
+  <data name="Cfg_BuildCreate_Opts" xml:space="preserve"><value>Activé|Désactivé</value></data>
+  <data name="Cfg_BloodMoonFrequency_Name" xml:space="preserve"><value>Fréquence de la lune sanglante</value></data>
+  <data name="Cfg_BloodMoonFrequency_Desc" xml:space="preserve"><value>Horde de lune sanglante tous les N jours</value></data>
+  <data name="Cfg_BloodMoonRange_Name" xml:space="preserve"><value>Variation de la lune sanglante</value></data>
+  <data name="Cfg_BloodMoonRange_Desc" xml:space="preserve"><value>Jours aléatoires (+/-) ajoutés au calendrier de la lune sanglante (0 = exact)</value></data>
+  <data name="Cfg_BloodMoonWarning_Name" xml:space="preserve"><value>Indicateur de lune sanglante</value></data>
+  <data name="Cfg_BloodMoonWarning_Desc" xml:space="preserve"><value>Nombre d'heures avant la lune sanglante où l'avertissement apparaît</value></data>
+  <data name="Cfg_BiomeProgression_Name" xml:space="preserve"><value>Progression d'environnement</value></data>
+  <data name="Cfg_BiomeProgression_Desc" xml:space="preserve"><value>Les zombies sont plus coriaces dans les environnements plus lointains</value></data>
+  <data name="Cfg_BiomeProgression_Opts" xml:space="preserve"><value>Activé|Désactivé</value></data>
+  <data name="Cfg_StormFreq_Name" xml:space="preserve"><value>Fréquence des tempêtes</value></data>
+  <data name="Cfg_StormFreq_Desc" xml:space="preserve"><value>Fréquence des tempêtes météo. 0 % les désactive.</value></data>
+  <data name="Cfg_StormFreq_Opts" xml:space="preserve"><value>0 % - Désactivé|50 %|100 %|150 %|200 %|300 %|400 %|500 %</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Name" xml:space="preserve"><value>Quêtes par jour</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Desc" xml:space="preserve"><value>Nombre max. de quêtes par jour comptant pour la progression d'échelon. Les quêtes supplémentaires donnent toujours des récompenses. 0 = illimité.</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Name" xml:space="preserve"><value>Quantité de zombies (lune sanglante)</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Desc" xml:space="preserve"><value>Zombies en vie par joueur pendant la lune sanglante. Le niveau d'action et MaxSpawnedZombies peuvent prendre le dessus. Fort impact sur les performances.</value></data>
+  <data name="Cfg_XPMultiplier_Name" xml:space="preserve"><value>Multiplicateur d'EXP</value></data>
+  <data name="Cfg_XPMultiplier_Desc" xml:space="preserve"><value>Multiplicateur de gain d'EXP (%). Plus la valeur est élevée, plus on monte vite de niveau.</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Name" xml:space="preserve"><value>Niveau de zone sécurisée</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Desc" xml:space="preserve"><value>Niveau de joueur à partir duquel la protection de zone sécurisée prend fin. Les nouveaux joueurs sont protégés des zombies jusqu'à ce niveau.</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Name" xml:space="preserve"><value>Heures de zone sécurisée</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Desc" xml:space="preserve"><value>Heures de protection de zone sécurisée pour les nouveaux joueurs. Passé ce délai, la protection prend fin quel que soit le niveau.</value></data>
+  <data name="Cfg_PlayerKillingMode_Name" xml:space="preserve"><value>Tuer des joueurs</value></data>
+  <data name="Cfg_PlayerKillingMode_Desc" xml:space="preserve"><value>Règles JcJ pour les combats entre joueurs</value></data>
+  <data name="Cfg_PlayerKillingMode_Opts" xml:space="preserve"><value>0 - Non autorisé|1 - Tuer les alliés uniquement|2 - Tuer les étrangers uniquement|3 - Tuer tout le monde</value></data>
+  <data name="Cfg_PartySharedKillRange_Name" xml:space="preserve"><value>Portée du partage d'EXP</value></data>
+  <data name="Cfg_PartySharedKillRange_Desc" xml:space="preserve"><value>Distance en mètres dans laquelle les membres du groupe partagent l'EXP des éliminations. 0 = il faut être tout près.</value></data>
+  <data name="Cfg_DeathPenalty_Name" xml:space="preserve"><value>Pénalité de mort</value></data>
+  <data name="Cfg_DeathPenalty_Desc" xml:space="preserve"><value>Pénalité d'EXP quand un joueur meurt</value></data>
+  <data name="Cfg_DeathPenalty_Opts" xml:space="preserve"><value>0 - Aucune|1 - Par défaut|2 - Blessure|3 - Mort permanente</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Name" xml:space="preserve"><value>Apparaître près d'un ami</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Desc" xml:space="preserve"><value>Les nouveaux joueurs peuvent-ils choisir d'apparaître près d'un ami lors de leur première connexion ?</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Opts" xml:space="preserve"><value>0 - Désactivé|1 - Toujours|2 - Seulement près des amis en forêt</value></data>
+  <data name="Cfg_JarRefund_Name" xml:space="preserve"><value>Réutilisation de bocal</value></data>
+  <data name="Cfg_JarRefund_Desc" xml:space="preserve"><value>Pourcentage de bocaux en verre rendus en fabriquant de la nourriture ou des boissons (0 = aucun)</value></data>
+  <data name="Cfg_ZombieMove_Name" xml:space="preserve"><value>Vitesse des zombies de jour</value></data>
+  <data name="Cfg_ZombieMove_Desc" xml:space="preserve"><value>Vitesse de déplacement des zombies de jour</value></data>
+  <data name="Cfg_ZombieMove_Opts" xml:space="preserve"><value>0 - Marche|1 - Lent|2 - Trot|3 - Course|4 - Sprint</value></data>
+  <data name="Cfg_ZombieMoveNight_Name" xml:space="preserve"><value>Vitesse des zombies la nuit</value></data>
+  <data name="Cfg_ZombieMoveNight_Desc" xml:space="preserve"><value>Vitesse de déplacement des zombies la nuit</value></data>
+  <data name="Cfg_ZombieMoveNight_Opts" xml:space="preserve"><value>0 - Marche|1 - Lent|2 - Trot|3 - Course|4 - Sprint</value></data>
+  <data name="Cfg_ZombieFeralMove_Name" xml:space="preserve"><value>Vitesse des zombies féroces</value></data>
+  <data name="Cfg_ZombieFeralMove_Desc" xml:space="preserve"><value>Vitesse de déplacement des zombies féroces</value></data>
+  <data name="Cfg_ZombieFeralMove_Opts" xml:space="preserve"><value>0 - Marche|1 - Lent|2 - Trot|3 - Course|4 - Sprint</value></data>
+  <data name="Cfg_ZombieBMMove_Name" xml:space="preserve"><value>Vitesse des zombies lors de la LS</value></data>
+  <data name="Cfg_ZombieBMMove_Desc" xml:space="preserve"><value>Vitesse de déplacement des zombies pendant la lune sanglante</value></data>
+  <data name="Cfg_ZombieBMMove_Opts" xml:space="preserve"><value>0 - Marche|1 - Lent|2 - Trot|3 - Course|4 - Sprint</value></data>
+  <data name="Cfg_EnemyDifficulty_Name" xml:space="preserve"><value>Agressivité de l'ennemi</value></data>
+  <data name="Cfg_EnemyDifficulty_Desc" xml:space="preserve"><value>Féroce ajoute des types de zombies plus coriaces</value></data>
+  <data name="Cfg_EnemyDifficulty_Opts" xml:space="preserve"><value>0 - Normal|1 - Féroce</value></data>
+  <data name="Cfg_EnemySpawnMode_Name" xml:space="preserve"><value>Apparition des ennemis</value></data>
+  <data name="Cfg_EnemySpawnMode_Desc" xml:space="preserve"><value>Détermine si des ennemis apparaissent dans le monde. Désactivez pour construire en paix ou faire des tests.</value></data>
+  <data name="Cfg_EnemySpawnMode_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Name" xml:space="preserve"><value>Zombies max.</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Desc" xml:space="preserve"><value>Nombre max. de zombies en vie dans tout le monde (x1,9 pendant les lunes sanglantes, x2,1 pour les dormants). Fort impact sur les performances.</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Name" xml:space="preserve"><value>Animaux max.</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Desc" xml:space="preserve"><value>Nombre max. d'animaux en vie en même temps</value></data>
+  <data name="Cfg_ZombieFeralSense_Name" xml:space="preserve"><value>Sens des zombies féroces</value></data>
+  <data name="Cfg_ZombieFeralSense_Desc" xml:space="preserve"><value>Les zombies féroces peuvent sentir les joueurs à travers les murs et les obstacles</value></data>
+  <data name="Cfg_ZombieFeralSense_Opts" xml:space="preserve"><value>0 - Désactivé|1 - Jour uniquement|2 - Nuit uniquement|3 - Tout</value></data>
+  <data name="Cfg_AISmellMode_Name" xml:space="preserve"><value>Mode puanteur IA</value></data>
+  <data name="Cfg_AISmellMode_Desc" xml:space="preserve"><value>Vitesse des zombies lorsqu'ils suivent les joueurs à l'odeur. Les zombies sentent le sang, la nourriture et les forges. Plus la vitesse est élevée, plus cuisiner et fabriquer près des zombies devient dangereux.</value></data>
+  <data name="Cfg_AISmellMode_Opts" xml:space="preserve"><value>0 - Désactivé|1 - Marche|2 - Trot|3 - Course|4 - Sprint|5 - Cauchemar</value></data>
+  <data name="Cfg_LootAbundance_Name" xml:space="preserve"><value>Abondance de butin</value></data>
+  <data name="Cfg_LootAbundance_Desc" xml:space="preserve"><value>Multiplicateur de quantité de butin (%)</value></data>
+  <data name="Cfg_LootRespawnDays_Name" xml:space="preserve"><value>Réapparition du butin (jours)</value></data>
+  <data name="Cfg_LootRespawnDays_Desc" xml:space="preserve"><value>Jours avant que les dépôts de butin fouillés se remplissent à nouveau</value></data>
+  <data name="Cfg_AirDropFrequency_Name" xml:space="preserve"><value>Parachutages</value></data>
+  <data name="Cfg_AirDropFrequency_Desc" xml:space="preserve"><value>Intervalle entre les parachutages, en heures de jeu (0 = désactivé)</value></data>
+  <data name="Cfg_AirDropMarker_Name" xml:space="preserve"><value>Indicateur de parachutages</value></data>
+  <data name="Cfg_AirDropMarker_Desc" xml:space="preserve"><value>Afficher ou masquer le marqueur sur la carte et la boussole quand un parachutage atterrit</value></data>
+  <data name="Cfg_AirDropMarker_Opts" xml:space="preserve"><value>Afficher|Masquer</value></data>
+  <data name="Cfg_DropOnDeath_Name" xml:space="preserve"><value>Perte en cas de mort</value></data>
+  <data name="Cfg_DropOnDeath_Desc" xml:space="preserve"><value>Ce que les joueurs lâchent quand ils sont tués</value></data>
+  <data name="Cfg_DropOnDeath_Opts" xml:space="preserve"><value>0 - Rien|1 - Tout|2 - Ceinture à outils uniquement|3 - Sac à dos uniquement|4 - Tout supprimer</value></data>
+  <data name="Cfg_DropOnQuit_Name" xml:space="preserve"><value>Perte en cas d'abandon</value></data>
+  <data name="Cfg_DropOnQuit_Desc" xml:space="preserve"><value>Ce que les joueurs lâchent quand ils se déconnectent</value></data>
+  <data name="Cfg_DropOnQuit_Opts" xml:space="preserve"><value>0 - Rien|1 - Tout|2 - Ceinture à outils uniquement|3 - Sac à dos uniquement</value></data>
+  <data name="Cfg_LandClaimSize_Name" xml:space="preserve"><value>Taille de la revendication</value></data>
+  <data name="Cfg_LandClaimSize_Desc" xml:space="preserve"><value>Taille de la zone protégée en blocs (41 = 20 blocs dans chaque direction)</value></data>
+  <data name="Cfg_LandClaimDeadZone_Name" xml:space="preserve"><value>Zone morte de revendication</value></data>
+  <data name="Cfg_LandClaimDeadZone_Desc" xml:space="preserve"><value>Distance minimale entre deux revendications de terrain, en blocs</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Name" xml:space="preserve"><value>Durée de la revendication</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Desc" xml:space="preserve"><value>Jours réels pendant lesquels un joueur peut rester hors ligne avant que ses revendications n'expirent</value></data>
+  <data name="Cfg_LandClaimDecayMode_Name" xml:space="preserve"><value>Mode de déclin d'une revendication</value></data>
+  <data name="Cfg_LandClaimDecayMode_Desc" xml:space="preserve"><value>Comment décline la protection de la revendication de terrain d'un joueur hors ligne</value></data>
+  <data name="Cfg_LandClaimDecayMode_Opts" xml:space="preserve"><value>0 - Lent (linéaire)|1 - Rapide (exponentiel)|2 - Aucun (totale jusqu'à expiration)</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Name" xml:space="preserve"><value>Solidité de revendication en ligne</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Desc" xml:space="preserve"><value>Multiplicateur de solidité des blocs quand le propriétaire est en ligne (0 = indestructible)</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Name" xml:space="preserve"><value>Solidité de revendication hors ligne</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Desc" xml:space="preserve"><value>Multiplicateur de solidité des blocs quand le propriétaire est hors ligne (0 = indestructible)</value></data>
+  <data name="Cfg_LandClaimCount_Name" xml:space="preserve"><value>Nombre de revendications</value></data>
+  <data name="Cfg_LandClaimCount_Desc" xml:space="preserve"><value>Nombre maximal de revendications de terrain autorisées par joueur</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Name" xml:space="preserve"><value>Délai de revendication hors ligne</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Desc" xml:space="preserve"><value>Minutes après la déconnexion avant que la revendication passe de la solidité en ligne à la solidité hors ligne</value></data>
+  <data name="Cfg_ServerPort_Name" xml:space="preserve"><value>Port du serveur</value></data>
+  <data name="Cfg_ServerPort_Desc" xml:space="preserve"><value>Port principal du jeu (utilise aussi +1 et +2 pour les connexions auxiliaires)</value></data>
+  <data name="Cfg_ServerVisibility_Name" xml:space="preserve"><value>Visibilité du serveur</value></data>
+  <data name="Cfg_ServerVisibility_Desc" xml:space="preserve"><value>Qui peut voir ce serveur dans le navigateur de serveurs</value></data>
+  <data name="Cfg_ServerVisibility_Opts" xml:space="preserve"><value>0 - Non listé|1 - Amis uniquement|2 - Public</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Name" xml:space="preserve"><value>Joueurs max.</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Desc" xml:space="preserve"><value>Nombre maximal de joueurs simultanés</value></data>
+  <data name="Cfg_ServerReservedSlots_Name" xml:space="preserve"><value>Emplacements réservés</value></data>
+  <data name="Cfg_ServerReservedSlots_Desc" xml:space="preserve"><value>Sur le nombre max. de joueurs, ce nombre d'emplacements est gardé pour les joueurs ayant le niveau de permission des emplacements réservés</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Name" xml:space="preserve"><value>Vitesse max. de transfert du monde</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Desc" xml:space="preserve"><value>Vitesse max. de téléchargement du monde par nouveau client, en KiB/s (le jeu la plafonne vers 1300)</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Name" xml:space="preserve"><value>Protocoles réseau désactivés</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Desc" xml:space="preserve"><value>Protocoles à désactiver. Les serveurs dédiés devraient désactiver SteamNetworking s'il n'y a pas de routeur NAT ou si la redirection de ports est correctement configurée.</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Opts" xml:space="preserve"><value>Aucun|SteamNetworking|LiteNetLib|Les deux</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Name" xml:space="preserve"><value>Jeu inter-plateforme</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Desc" xml:space="preserve"><value>Activer le jeu inter-plateforme. Les serveurs inter-plateformes ne doivent pas ignorer les sanctions et doivent utiliser le nombre d'emplacements par défaut ou moins.</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Opts" xml:space="preserve"><value>Activé|Désactivé</value></data>
+  <data name="Cfg_TelnetEnabled_Name" xml:space="preserve"><value>Telnet activé</value></data>
+  <data name="Cfg_TelnetEnabled_Desc" xml:space="preserve"><value>Activer la console distante telnet</value></data>
+  <data name="Cfg_TelnetEnabled_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_TelnetPort_Name" xml:space="preserve"><value>Port telnet</value></data>
+  <data name="Cfg_TelnetPort_Desc" xml:space="preserve"><value>Port des connexions telnet</value></data>
+  <data name="Cfg_TelnetPassword_Name" xml:space="preserve"><value>Mot de passe telnet</value></data>
+  <data name="Cfg_TelnetPassword_Desc" xml:space="preserve"><value>Mot de passe pour l'accès telnet. S'il est vide, telnet n'écoute que sur cette machine (localhost).</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Name" xml:space="preserve"><value>Limite d'échecs de connexion telnet</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Desc" xml:space="preserve"><value>Tentatives de connexion échouées avant un bannissement temporaire</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Name" xml:space="preserve"><value>Durée de blocage telnet</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Desc" xml:space="preserve"><value>Secondes de blocage après trop d'échecs de connexion telnet</value></data>
+  <data name="Cfg_EACEnabled_Name" xml:space="preserve"><value>Protection EAC</value></data>
+  <data name="Cfg_EACEnabled_Desc" xml:space="preserve"><value>Easy Anti-Cheat — le désactiver permet aux clients moddés de se connecter</value></data>
+  <data name="Cfg_EACEnabled_Opts" xml:space="preserve"><value>Activé|Désactivé</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Name" xml:space="preserve"><value>Masquer le journal des commandes</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Desc" xml:space="preserve"><value>Masque la journalisation des commandes exécutées. Plus la valeur est élevée, plus de sources sont masquées.</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Opts" xml:space="preserve"><value>0 - Tout afficher|1 - Masquer pour telnet/panneau|2 - Masquer aussi pour les clients|3 - Tout masquer</value></data>
+  <data name="Cfg_AdminFileName_Name" xml:space="preserve"><value>Fichier des admins</value></data>
+  <data name="Cfg_AdminFileName_Desc" xml:space="preserve"><value>Nom du fichier des admins du serveur. Chemin relatif au dossier des sauvegardes de parties.</value></data>
+  <data name="Cfg_ServerAdminSlots_Name" xml:space="preserve"><value>Emplacements admin</value></data>
+  <data name="Cfg_ServerAdminSlots_Desc" xml:space="preserve"><value>Ce nombre d'admins peut encore rejoindre quand le serveur est plein</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Name" xml:space="preserve"><value>Permission des emplacements admin</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Desc" xml:space="preserve"><value>Niveau de permission requis pour utiliser les emplacements admin (0 = admin le plus élevé)</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Name" xml:space="preserve"><value>Permission des emplacements réservés</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Desc" xml:space="preserve"><value>Niveau de permission requis pour utiliser les emplacements réservés</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Name" xml:space="preserve"><value>Ignorer les sanctions EOS</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Desc" xml:space="preserve"><value>Ignorer les sanctions EOS lors de l'admission des joueurs</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Name" xml:space="preserve"><value>Profils persistants</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Desc" xml:space="preserve"><value>Si activé, les joueurs rejoignent toujours avec le dernier profil utilisé. Si désactivé, ils peuvent choisir n'importe quel profil.</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_CameraRestrictionMode_Name" xml:space="preserve"><value>Restreindre le mode de la caméra</value></data>
+  <data name="Cfg_CameraRestrictionMode_Desc" xml:space="preserve"><value>Restreindre la perspective de caméra que les joueurs peuvent utiliser</value></data>
+  <data name="Cfg_CameraRestrictionMode_Opts" xml:space="preserve"><value>0 - Libre (1re et 3e personne)|1 - Première personne uniquement|2 - Troisième personne uniquement</value></data>
+  <data name="Cfg_TwitchServerPermission_Name" xml:space="preserve"><value>Permission Twitch du serveur</value></data>
+  <data name="Cfg_TwitchServerPermission_Desc" xml:space="preserve"><value>Niveau de permission requis pour utiliser l'intégration Twitch sur le serveur</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Name" xml:space="preserve"><value>Twitch pendant la lune sanglante</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Desc" xml:space="preserve"><value>Autoriser les actions Twitch pendant la lune sanglante. Peut causer du lag à cause des zombies supplémentaires.</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_ServerWebsiteURL_Name" xml:space="preserve"><value>URL du site du serveur</value></data>
+  <data name="Cfg_ServerWebsiteURL_Desc" xml:space="preserve"><value>URL affichée dans le navigateur de serveurs comme site web du serveur</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Name" xml:space="preserve"><value>Distance de vision max. autorisée</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Desc" xml:space="preserve"><value>Distance de vision max. qu'un client peut demander (6-12). Fort impact sur la mémoire et les performances.</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Name" xml:space="preserve"><value>Fenêtre de terminal</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Desc" xml:space="preserve"><value>Afficher une fenêtre de terminal pour les journaux et les commandes (Windows uniquement)</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_WebDashboardEnabled_Name" xml:space="preserve"><value>Tableau de bord web activé</value></data>
+  <data name="Cfg_WebDashboardEnabled_Desc" xml:space="preserve"><value>Activer le tableau de bord web intégré de 7D2D</value></data>
+  <data name="Cfg_WebDashboardEnabled_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_WebDashboardPort_Name" xml:space="preserve"><value>Port du tableau de bord web</value></data>
+  <data name="Cfg_WebDashboardPort_Desc" xml:space="preserve"><value>Port du tableau de bord web intégré</value></data>
+  <data name="Cfg_WebDashboardUrl_Name" xml:space="preserve"><value>URL du tableau de bord web</value></data>
+  <data name="Cfg_WebDashboardUrl_Desc" xml:space="preserve"><value>URL externe du tableau de bord pour les configurations avec proxy inverse</value></data>
+  <data name="Cfg_EnableMapRendering_Name" xml:space="preserve"><value>Rendu de la carte</value></data>
+  <data name="Cfg_EnableMapRendering_Desc" xml:space="preserve"><value>Génère des images en tuiles de la carte pendant l'exploration. Utilisé par le tableau de bord web pour afficher la carte.</value></data>
+  <data name="Cfg_EnableMapRendering_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Name" xml:space="preserve"><value>Maillage dynamique activé</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Desc" xml:space="preserve"><value>Activer le système de maillage dynamique pour de meilleurs visuels</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Name" xml:space="preserve"><value>Maillage dynamique sur revendications uniquement</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Desc" xml:space="preserve"><value>N'utiliser le maillage dynamique que dans les zones de revendication de terrain</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Opts" xml:space="preserve"><value>Oui|Non</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Name" xml:space="preserve"><value>Marge de maillage dynamique des revendications</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Desc" xml:space="preserve"><value>Rayon en portions du maillage dynamique autour des revendications de terrain</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Name" xml:space="preserve"><value>Cache max. du maillage dynamique</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Desc" xml:space="preserve"><value>Nombre max. d'éléments traités simultanément. Plus la valeur est élevée, plus la RAM est sollicitée.</value></data>
+  <data name="Cfg_MaxChunkAge_Name" xml:space="preserve"><value>Durée avant réinitialisation de portion</value></data>
+  <data name="Cfg_MaxChunkAge_Desc" xml:space="preserve"><value>Jours en jeu avant que les portions non visitées ou non protégées soient réinitialisées. -1 = jamais.</value></data>
+  <data name="Cfg_SaveDataLimit_Name" xml:space="preserve"><value>Limite des données de sauvegarde</value></data>
+  <data name="Cfg_SaveDataLimit_Desc" xml:space="preserve"><value>Espace disque max. par sauvegarde de partie, en MB. Des portions peuvent être réinitialisées pour libérer de l'espace. -1 = sans limite.</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Name" xml:space="preserve"><value>Couches de maillage en file max.</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>Nombre max. de couches de maillage de portions en file d'attente pendant la génération. Plus bas = moins de mémoire, génération plus lente.</value></data>
+  <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>Dossier des données utilisateur</value></data>
+  <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>Chemin de remplacement pour toutes les données utilisateur, les sauvegardes de parties et les mondes RWG. Laissez vide pour la valeur par défaut.</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>Le serveur s'est arrêté de manière inattendue (code de sortie {0}).</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>Redémarrages automatiques</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>Redémarrer le serveur s'il plante</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>Redémarre 15 secondes après un arrêt spontané du serveur, jusqu'à 3 fois en 15 minutes, pour qu'un mod ou une configuration défectueux ne tourne pas en boucle indéfiniment. Un arrêt avec le bouton Arrêter de Kitsune7Den, ou la commande shutdown dans la Console, ne compte jamais comme un plantage.</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>Redémarrages planifiés</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>Tous les jours à</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>Format 24 h, heure de ce PC. Plusieurs : 04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>Toutes les</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>heures de fonctionnement</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>AVERTISSEMENTS EN JEU (MINUTES AVANT)</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>Vide = aucun avertissement</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>MESSAGE D'AVERTISSEMENT ({minutes} = minutes restantes)</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>MESSAGE FINAL</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>Les avertissements sont envoyés en jeu avec la commande say via telnet. À l'heure du redémarrage, le monde est sauvegardé, le serveur s'arrête proprement, puis redémarre. Kitsune7Den doit être ouvert pour que les redémarrages planifiés aient lieu.</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>Enregistrer</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>Les heures doivent être au format 04:00 ou 4:00, séparées par des virgules.</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>Les avertissements doivent être des nombres entiers de minutes entre 1 et 120, séparés par des virgules.</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>Annuler le redémarrage</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>Redémarrer avec avertissements</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>Lancer le compte à rebours des avertissements maintenant, puis sauvegarder, arrêter et redémarrer le serveur</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>Prochain redémarrage : {0} (dans {1})</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>Redémarrage à {0} (dans {1}). Les joueurs sont avertis.</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>Les redémarrages planifiés sont activés. La planification démarre quand le serveur est en marche.</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>Les redémarrages planifiés sont activés, mais aucun redémarrage n'est prévu. Vérifiez les heures.</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>Aucun redémarrage planifié.</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>moins d'une minute</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0} h {1} min</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>Redémarrage du serveur dans {minutes} minute(s). Mettez-vous à l'abri.</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>Le serveur redémarre maintenant. À tout de suite !</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>Le redémarrage planifié a été annulé.</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>Redémarrage annulé.</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>Redémarrage planifié à {0} : avertissement des joueurs.</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>Redémarrage à {0} : avertissement des joueurs.</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet n'est pas connecté : les joueurs ne verront pas les avertissements et l'arrêt ne pourra pas se faire proprement.</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>Sauvegarde du monde...</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>Redémarrage du serveur...</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>Le serveur ne tourne plus ; redémarrage planifié ignoré.</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>Le serveur n'a pas redémarré. Vérifiez la Console et le chemin du serveur dans le Tableau de bord.</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>Échec du redémarrage automatique : {0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>Redémarrage du serveur dans {0} secondes (redémarrage après plantage {1} sur {2}).</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>Le serveur a encore planté. Il a déjà redémarré {0} fois en {1} minutes, il reste donc arrêté. Consultez la Console et les Journaux pour en trouver la cause.</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>Rien n'écoute encore sur le port telnet {0}. Si le serveur est encore en train de démarrer, patientez une minute. Sinon, vérifiez TelnetEnabled et TelnetPort dans serverconfig.xml.</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>Le serveur a refusé le mot de passe telnet. Kitsune7Den utilise le TelnetPassword de serverconfig.xml. Si vous l'avez modifié pendant que le serveur tournait, redémarrez le serveur pour qu'il prenne en compte le nouveau.</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>Le serveur demande un mot de passe telnet, mais aucun n'est défini dans serverconfig.xml ni dans les Paramètres. Si vous venez d'en ajouter un dans serverconfig.xml, redémarrez le serveur.</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>Telnet est désactivé dans serverconfig.xml (TelnetEnabled = false). Kitsune7Den en a besoin pour la console, les joueurs et les redémarrages. Activez-le et redémarrez le serveur.</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>Mot de passe incorrect</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>Mot de passe requis</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>Désactivé dans la config</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>Lancement du serveur</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den lance 7DaysToDieServer.exe avec les mêmes arguments que startdedicated.bat. Ce que vous ajoutez ici se place là où vont les arguments supplémentaires du .bat, juste avant -dedicated. Utilisez -configfile=yourconfig.xml pour utiliser un autre fichier de configuration ; Kitsune7Den lira et modifiera alors ce fichier partout.</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>Arguments de lancement supplémentaires (facultatif)</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den exécutera :</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>Kitsune7Den définit lui-même ces arguments et les ignorera : {0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>Le serveur, la page Configuration, telnet et les sauvegardes utiliseront {0} au lieu de serverconfig.xml. Enregistrez, puis redémarrez le serveur pour appliquer le changement.</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>Argument de lancement {0} ignoré : Kitsune7Den le définit lui-même.</value></data>
+</root>

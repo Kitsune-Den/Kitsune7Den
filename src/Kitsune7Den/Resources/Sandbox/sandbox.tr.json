@@ -1,0 +1,4120 @@
+{
+ "v3_0": {
+  "categories": {
+   "Crafting": "Üretim",
+   "Entities": "Varlıklar",
+   "General": "Oyuncu",
+   "Misc": "Çeş.",
+   "Resources": "Kaynaklar",
+   "Tasks": "Görevler",
+   "Traders": "Tüccarlar",
+   "World": "Dünya"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Zombi koku takibini etkinleştirir veya devre dışı bırakır ve zombilerin koku aldığında ne kadar hızlı hareket edeceğini ayarlar.",
+    "label": "Yapay Zeka Koku Modu"
+   },
+   "AirDropFrequency": {
+    "description": "Yardım paketlerinin düşme sıklığı.",
+    "label": "Hava Yardımları"
+   },
+   "AirDropMarker": {
+    "description": "Yardım paketlerinin yerleri için haritayı ve pusula işaretlerini gösterir.",
+    "label": "Hava Yardımlarını İşaretle"
+   },
+   "AirDropRandomTime": {
+    "description": "Hava yardımlarının ne zaman ortaya çıkacağını kontrol edebilmeni sağlar. Tahmin edilebilir hava yardımları için belirli bir zaman seç veya tamamen rastgele ortaya çıkmaları için Herhangi seçeneğini işaretle.\\n\\nHiçbiri = Varsayılan öğlen hava yardımı.\\nSabah = 04.00 - 10.00\\nÖğlen = 10.00 - 14.00\\nAkşam = 15.00 - 20.00\\nGece = 20.00 - 24.00\\nTüm Gün = 04.00 - 20.00",
+    "label": "Hava Yardımı Değişikliği"
+   },
+   "AllowCompass": {
+    "description": "Oyuncu pusulasını gösterir.",
+    "label": "Pusulaya İzin Ver"
+   },
+   "AllowMap": {
+    "description": "Oyun içi haritayı etkinleştirir.",
+    "label": "Haritaya İzin Ver"
+   },
+   "AllowScreenMarkers": {
+    "description": "Ekranda gezinme işaretçilerini gösterir. Harita işaretçileri görünmeye devam eder.",
+    "label": "Ekran İşaretçilerine İzin Ver"
+   },
+   "AllowZombieDigging": {
+    "description": "Zombilerin araziyi kazabilmesine izin verir. Yanlara doğru kazmaya da devam edebilirler.",
+    "label": "Zombilerin Kazabilmesi"
+   },
+   "AmmoLootCount": {
+    "description": "Ganimette bulunan mühimmat miktarı.",
+    "label": "Mühimmat Bolluğu"
+   },
+   "ApiaryInput": {
+    "description": "Bal üretimine başlamak için gereken çiçek miktarını belirler.",
+    "label": "Kovanlık Girişi"
+   },
+   "ApiaryOutput": {
+    "description": "Her bir üretim döngüsünde üretilen bal miktarı.",
+    "label": "Kovanlık Verimi"
+   },
+   "ApiaryTime": {
+    "description": "Kovanlığın bal üretmesi için gereken süreyi ayarlar.",
+    "label": "Kovanlık Süresi"
+   },
+   "ArmorLootCount": {
+    "description": "Ganimette bulunan zırh ve zırh parçası miktarı.",
+    "label": "Zırh Bolluğu"
+   },
+   "BackpackCrafting": {
+    "description": "Oyuncunun doğrudan sırt çantasından hangi öğeleri üretebileceğini kontrol eder.\\n\\nHayır seçilirse sırt çantasından üretim yapma özelliği devre dışı bırakılır.\\nEvet seçilirse sırt çantasından üretim yapmaya izin verilir.\\nSınırlı seçilirse sırt çantasından sınırlı bir tarif listesi kullanılarak üretim yapmaya izin verilir.\\nSadece Çalışma Tezgâhı seçilirse çalışma tezgâhının üretilmesine izin verilir ama sırt çantasında başka hiçbir şey üretilemez.",
+    "label": "Sırt Çantası Üretimi"
+   },
+   "BiomeAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların yeniden doğma oranını artırır. Zombi dışı pasif ve agresif besin kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyomdaki Hayvanların Yeniden Doğması"
+   },
+   "BiomeEnemyDensity": {
+    "description": "Biyom düşman yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu"
+   },
+   "BiomeGSModifier": {
+    "description": "Biyom temelli zorluk seviyesi değiştirici. Daha zor biyomlar, düşman kuvvetini ve ganimet aşamasını temel ilerlemenin ötesinde artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Oyun Aşaması"
+   },
+   "BiomeLSModifier": {
+    "description": "Biyom başına uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Ganimet Aşaması"
+   },
+   "BiomeProgression": {
+    "description": "Biyom tehlikelerini etkinleştirir. Hava Durumu veya Fırtınalar bu ayardan etkilenmez.",
+    "label": "Biyom İlerlemesi"
+   },
+   "BiomeZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşmanın Yeniden Doğması"
+   },
+   "BlockDamage": {
+    "description": "Oyuncuların bloklara verdiği hasar miktarı.",
+    "label": "Blok Hasarı"
+   },
+   "BlockDamageAI": {
+    "description": "Düşmanların bloklara verdiği hasarın miktarı.",
+    "label": "Düşman Blok Hasarı"
+   },
+   "BlockDamageAIBM": {
+    "description": "Kanlı Aylar sırasında düşmanların bloklara verdiği hasar.",
+    "label": "Kanlı Ay Blok Hasarı"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Kanlı Ay sırasında Oyuncu Başına hayatta kalabilecek maksimum zombi sayısını kontrol eder.\\n\\nYakındaki oyuncular en fazla 30 zombilik bir grubu paylaşabilir. Bu sınır aşılırsa oyun aşaması ölçeklendirme bunun yerine zorluğu artırır. Dünya sınırı, MaxSpawnedZombies sayısının yaklaşık 1,9 katıdır. Daha düşük oyun aşamaları, doğan zombi sayısını azaltabilir.\\n\\nBu ayarı artırmak performansı büyük ölçüde etkileyebilir.",
+    "label": "Kanlı Ay Sayısı"
+   },
+   "BloodMoonFrequency": {
+    "description": "Kanlı Aylar arasındaki oyun içi gün sayısıdır. Devre dışı bırakılırsa Kanlı Ay olmaz.",
+    "label": "Kanlı Ay Sıklığı"
+   },
+   "BloodMoonRange": {
+    "description": "Kanlı Ay sıklığından sonra etkinliğin gerçekleşmesi için geçecek gün sayısı.\\n\\nÖrneğin: 7 sıklık + 5 gün durumunda Kanlı Ay 7. ile 12. günler arasında rastgele bir günde gerçekleşir.\\n\\n0 Gün = Rastgele gün belirlenmez.",
+    "label": "Kanlı Ay Aralığı"
+   },
+   "BloodMoonWarning": {
+    "description": "Kanlı Ay uyarısının baş üstü göstergesinde görüneceği zamanı ayarlar ve gün sayısı kırmızıya döner.",
+    "label": "Kanlı Ay Uyarısı"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde gömülü görevlerin görünmesine izin verir. Hayır = Yalnızca İlgi Alanı görevleri.",
+    "label": "Gömülü Görevler"
+   },
+   "ChallengesEnabled": {
+    "description": "Oyun içi mücadele sistemini etkinleştirir.",
+    "label": "Mücadeleler"
+   },
+   "CraftingInput": {
+    "description": "Üretim için gereken malzeme miktarı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Maliyeti"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Ganimette bulunan üretim dergisi miktarını kontrol eder.",
+    "label": "Dergi Bolluğu"
+   },
+   "CraftingMaxTier": {
+    "description": "Üretilen öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Üretim Kalitesi"
+   },
+   "CraftingOutput": {
+    "description": "Üretim başına üretilen öğe sayısı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Verimi"
+   },
+   "CraftingProgression": {
+    "description": "Dergi ve şema temelli üretim ilerlemesini etkinleştirir veya devre dışı bırakır.",
+    "label": "Üretim İlerlemesi"
+   },
+   "CraftingTime": {
+    "description": "Öğe üretmek için gereken süre.",
+    "label": "Üretim Zamanlayıcısı"
+   },
+   "CropGrowthSpeed": {
+    "description": "Oyuncunun ektiği mahsullerin ve ağaçların büyüme hızını ayarlar. Daha yüksek bir yüzde, daha uzun büyüme süresi anlamına gelir. Not: Değişikliklerin etkili olması için mevcut kayıt dosyalarında tekrar mahsul ekilmesi gerekir.",
+    "label": "Mahsul Büyümesi"
+   },
+   "CropOutput": {
+    "description": "Yabani mahsullerden ve oyuncunun ektiği ekinlerden elde edilen kaynak miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Mahsul Verimi"
+   },
+   "CrouchSpeed": {
+    "description": "Eğilme ve yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilme Hızı"
+   },
+   "DayLightLength": {
+    "description": "Oyun içi gündüz saatlerinin sayısını ayarlar. Her Zaman Gece ve Her Zaman Gündüz beklenildiği gibi çalışır. Gün ışığı süresi ayarları:\\n\\n 4 = 10.00 - 14.00\\n 6 = 09.00 - 15.00\\n 8 = 08.00 - 16.00\\n10 = 07.00 - 17.00\\n12 = 06.00 - 18.00\\n14 = 05.00 - 19.00\\n16 = 04.00 - 20.00\\n18 = 04.00 - 22.00\\n20 = 02.00 - 22.00",
+    "label": "Günışığı Süresi"
+   },
+   "DayNightLength": {
+    "description": "Oyundaki 24 saatin gerçek hayatta kaç dakika geçeceğini belirler.",
+    "label": "24 Saatlik Döngü"
+   },
+   "DeathPenalty": {
+    "description": "Ölümden sonra uygulanan ölüm cezasını belirler.\\n\\nYok = Ceza uygulanmaz.\\nYalnızca DP = Varsayılan DP kaybı.\\nYaralı = Yeniden doğunca bazı zayıflatmalar devam eder ve su/yiyecek %50'ye sıfırlanır.\\nKalıcı Ölüm = Karakter sıfırlanır.",
+    "label": "Ölüm Cezası"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Ölüm Yıpranması etkinleştirildiğinde bu ayar, ölümle birlikte kaybedilen sağlamlık yüzdesini belirler.",
+    "label": "Ölüm Yıpranması Miktarı"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Ölünce öğelerin yıpranıp yıpranmayacağını belirler.\\n\\nYok = Kayıp olmaz.\\nSağlamlık = Onarılabilecek mevcut sağlamlığın bir kısmını azaltır.\\nMaks. Sağlamlık = Maksimum sağlamlığı azaltır ve onarım sınırını düşürür.\\nHer İkisi = Öğeler hem mevcut hem de maksimum sağlamlığını kaybeder.",
+    "label": "Ölüm Yıpranması"
+   },
+   "DewCollectorInput": {
+    "description": "Çiy toplamaya başlamak için gereken kavanoz miktarını belirler.",
+    "label": "Çiy Toplayıcı Girişi"
+   },
+   "DewCollectorOutput": {
+    "description": "Çiy toplayıcının her döngüde ürettiği su miktarı.",
+    "label": "Çiy Toplayıcı Verimi"
+   },
+   "DewCollectorTime": {
+    "description": "Çiy toplayıcının su üretmesi için gereken süreyi ayarlar.",
+    "label": "Çiy Toplayıcı Süresi"
+   },
+   "DrinkLootCount": {
+    "description": "Kaplarda bulunan içecek miktarı.",
+    "label": "İçecek Bolluğu"
+   },
+   "DropOnDeath": {
+    "description": "Ölüm durumunda hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nYalnızca Alet Kemeri = Alet kemerindeki öğeler düşer.\\nYalnızca Sırt Çantası = Sırt çantasındaki öğeler düşer.\\nTümünü Sil = Tüm öğeler silinir.",
+    "label": "Ölünce Düşür"
+   },
+   "DropOnQuit": {
+    "description": "Çıkış yapıldığında hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nAlet kemeri = Alet kemerindeki öğeler düşer.\\nSırt çantası = Sırt çantasındaki öğeler düşer.",
+    "label": "Çıkınca Düşür"
+   },
+   "DukesLootCount": {
+    "description": "Ganimette bulunan Duke parası ve eski para miktarı.",
+    "label": "Para Bolluğu"
+   },
+   "ElectricalOutput": {
+    "description": "Ne kadar elektrik gücü üretileceğini kontrol eder.",
+    "label": "Elektrik Çıktısı"
+   },
+   "EncumbranceModifier": {
+    "description": "Ağır yük bindirilmiş sırt çantası yuvalarının sayısını kontrol eder. Değerler Devre Dışı (yük ağır gelmez) ile Tam (maksimum ağırlaşma) arasındadır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Ağır Yük Yuvaları"
+   },
+   "EnemySpawnMode": {
+    "description": "Düşman doğmasını etkinleştirir veya devre dışı bırakır.",
+    "label": "Düşman Doğması"
+   },
+   "EntityDamage": {
+    "description": "Düşmanların oyunculara ne kadar hasar vereceğini kontrol eder. Bu miktar, oyuncuların diğer gelen hasarlarıyla birleştirilir.",
+    "label": "Düşmanın Verdiği Hasar"
+   },
+   "EntityIncomingDamage": {
+    "description": "Düşmanlar ve hayvanlar gibi varlıkların oyunculardan aldığı hasar.",
+    "label": "Varlığın Aldığı Hasar"
+   },
+   "FoodLootCount": {
+    "description": "Kaplarda bulunan yiyecek miktarı.",
+    "label": "Yiyecek Bolluğu"
+   },
+   "GlobalGSModifier": {
+    "description": "Seviyene ve hayatta kaldığın gün sayısına bağlı olarak düşman türlerini, zorluk seviyesini, ganimet kalitesini ve Kanlı Ay yoğunluğunu belirler. Değer ne kadar yüksek olursa zorluk o kadar artar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Oyun Aşaması"
+   },
+   "GlobalLSModifier": {
+    "description": "Oyuncunun ganimet aşamasına uygulanan genel çarpan. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Ganimet Aşaması"
+   },
+   "GlobalLootCount": {
+    "description": "Genel anlamda dünyada bulunan toplam ganimet miktarını ayarlar. \"Yok\" seçeneği, zombi torbası düşüşleri ve malzeme kasaları dâhil tüm ganimeti devre dışı bırakır.",
+    "label": "Ganimet Bolluğu"
+   },
+   "GlobalTSModifier": {
+    "description": "Tüccar aşaması ilerlemesine uygulanan genel değiştirici. Tüccarlar tarafından satılan öğelerin kalitesini ve çeşitliliğini kontrol eder. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Tüccar Aşaması"
+   },
+   "HarvestingOutput": {
+    "description": "Blok ve öğe hasadından elde edilen kaynak miktarını kontrol eder. Cevherleri, tohumları veya mahsulleri etkilemez. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Kaynak Verimi"
+   },
+   "HeadshotMode": {
+    "description": "Kafadan vuruş hasarının nasıl işleneceğini belirler.\\n\\nSadece Kafadan Vuruş = Düşmanlara sadece kafadan vuruşla hasar verilebilir.\\nBitirici Kafadan Vuruş = Vücuda yapılan vuruşlar hasar verir fakat sadece kafadan vuruş öldürebilir.\\n\\nPasif hayvanlara karşı geçerli değildir.",
+    "label": "Kafadan Vuruş Modu"
+   },
+   "HeadshotMultiplier": {
+    "description": "Oyuncuların varlıklara verdiği kafadan vuruş hasarına uygulanan çarpan.",
+    "label": "Kafadan Vuruş Çarpanı"
+   },
+   "HeatMapSensitivity": {
+    "description": "Oyuncu aktivitesinin, ısı haritasını etkileme miktarını kontrol eder. Daha yüksek ısı, çığırtkanların doğma ihtimalini artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Isı Haritası Duyarlılığı"
+   },
+   "IncomingDamage": {
+    "description": "Oyuncunun tüm kaynaklardan aldığı hasar miktarı.",
+    "label": "Oyuncunun Aldığı Hasar"
+   },
+   "InfectionRate": {
+    "description": "Enfeksiyonun ilerleme hızını ayarlar.",
+    "label": "Enfeksiyon Hızı"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Yeni oyuncular için adım adım ilerleyen hazırlık mücadelesini etkinleştir.",
+    "label": "Hazırlık Mücadeleleri"
+   },
+   "IntroQuestEnabled": {
+    "description": "Tam görev ilerlemesine geçmek için başlangıçtaki gömülü malzeme bulma görevini atlar.",
+    "label": "Hazırlık Görevi"
+   },
+   "ItemDegradation": {
+    "description": "Silahların ve aletlerin sağlamlıklarını kaybetme hızı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Öğe Yıpranması"
+   },
+   "JarRefund": {
+    "description": "Öğeleri kullandıktan sonraki kavanoz iadesi ihtimali.",
+    "label": "Kavanoz İadesi"
+   },
+   "JumpStrength": {
+    "description": "Oyuncunun zıplama yüksekliğini değiştirir.",
+    "label": "Zıplama Kuvveti"
+   },
+   "LootBagChance": {
+    "description": "Düşmanların ölünce ganimet torbası düşürme ihtimaline uygulanan çarpan.",
+    "label": "Ganimet Torbası Düşüşü"
+   },
+   "LootMaxTier": {
+    "description": "Ganimette ortaya çıkabilecek silahların ve öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Ganimet Kalitesi"
+   },
+   "LootRespawnDays": {
+    "description": "Ziyaret edilmemiş alanlardaki ganimet kaplarının sıfırlanması için gereken oyun içi gün sayısı.",
+    "label": "Ganimet Yeniden Doğma Süresi (Gün)"
+   },
+   "LootTimer": {
+    "description": "Kapları yağmalamak için gereken süre.",
+    "label": "Yağmalama Sayacı"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Ölünce kaybedilen rastgele öğelerin sayısını belirler.",
+    "label": "Ölünce Kaybedilen Öğe Sayısı"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Ölünce hangi öğelerin kaybedileceğini belirler.\\n\\nHiçbiri = Hiçbir şey.\\nTümü = Tüm öğeler.\\nYalnızca Alet Kemeri = Yalnızca alet kemerindeki öğeler.\\nYalnızca Sırt Çantası = Yalnızca sırt çantasındaki öğeler.\\nEkipman = Giyilen zırh ve kıyafetler.\\nYalnızca Taşınanlar = Alet kemeri ile sırt çantasındaki öğeler.",
+    "label": "Ölünce Öğe Kaybetme"
+   },
+   "MaxDegradationAmount": {
+    "description": "Bir öğenin onarılınca ne kadar yıpranacağını belirler.",
+    "label": "Onarım Yıpranması"
+   },
+   "MaxEnemyTier": {
+    "description": "Doğabilen zombi türlerinin en üst kademesidir.",
+    "label": "Maks. Düşman Kademesi"
+   },
+   "MaxTechType": {
+    "description": "Genel anlamda silahlar ve öğeler için mevcut en yüksek teknoloji türünü ayarlayarak ilerlemeyi ve oynama temposunu kontrol etmene imkân tanır. Aşağıdaki örneklere göz atabilirsin.\\n\\nTeknoloji 0 = Taş ve boru\\nTeknoloji 1 = Demir ve AK\\nTeknoloji 2 = Çelik ve Taktik Saldırı\\nTeknoloji 3 = Delgi ve M60",
+    "label": "Maks. Teknoloji Türü"
+   },
+   "MedicalLootCount": {
+    "description": "Ganimette bulunan tıbbi malzeme miktarı.",
+    "label": "Tıbbi Malzeme Bolluğu"
+   },
+   "MeleeDamage": {
+    "description": "Oyuncunun yakın dövüş silahları ve aletler ile verdiği hasar.",
+    "label": "Yakın Dövüş Hasarı"
+   },
+   "MeleeLootCount": {
+    "description": "Ganimette bulunan yakın dövüş silahı ve yakın dövüş silahı parçası miktarı.",
+    "label": "Yakın Dövüş Bolluğu"
+   },
+   "MiningOutput": {
+    "description": "Madencilikten kazanılan cevher miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Madencilik Verimi"
+   },
+   "NewbieCoat": {
+    "description": "Etkinleştirilirse yeni oyuncular acemi koruması güçlendirmesiyle doğar.",
+    "label": "Yeni Oyuncu Güçlendirmesi"
+   },
+   "POIQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde İlgi Alanı görevlerinin görünmesine izin verir. Hayır = Yalnızca gömülü görevler.",
+    "label": "İlgi Alanı Görevleri"
+   },
+   "POITierLSModifier": {
+    "description": "İlgi Alanı kademesine göre uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "İlgi Alanı Ganimet Aşaması"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Sağlık ile dayanıklılığın seviyeye göre artıp artmayacağını belirler.",
+    "label": "Seviye İstatistiği Bonusu"
+   },
+   "PointsPerMagazine": {
+    "description": "Beceri dergilerini okumakla kazanılan ilerleme.",
+    "label": "Dergi İlerlemesi"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Tüccar ilerlemesine dâhil edilen günlük görev sayısı. Ek görevler, DP ve ödüller kazandırmaya devam eder fakat tüccar kademesini ilerletmez.",
+    "label": "Günlük Görev Sayısı"
+   },
+   "QuestsEnabled": {
+    "description": "Oyununda görevleri etkinleştirir veya devre dışı bırakır.",
+    "label": "Görevler"
+   },
+   "QuestsPerTier": {
+    "description": "Bir sonraki kademenin kilidini açmak için tamamlanması gereken görev sayısı. Değerler ne kadar yüksek olursa kademeler arası ilerleme o kadar yavaşlar. Hiçbiri = Sınır yoktur ve tüm görev kademelerine erişmeye izin verir.",
+    "label": "Kademe Başına Görev Sayısı"
+   },
+   "RangedDamage": {
+    "description": "Oyuncunun yay, ateşli silahlar ve diğer menzilli silahlar ile verdiği hasar.",
+    "label": "Menzilli Hasar"
+   },
+   "RangedLootCount": {
+    "description": "Ganimette bulunan menzilli silah ve menzilli silah parçası miktarı.",
+    "label": "Menzilli Bolluğu"
+   },
+   "RepairTypes": {
+    "description": "Öğelerin nasıl onarılacağını belirler:\\n\\nHiçbiri = Onarım yok\\nYalnızca Onarım = Yalnızca Onarım Kiti\\nYalnızca Birleştirme = Birleştirme İstasyonunda onarım\\nİkisi de = Onarım Kitleri ve Birleştirme İstasyonu",
+    "label": "Onarım Yöntemi"
+   },
+   "ResourceLootCount": {
+    "description": "Ganimette bulunan kaynak öğesi miktarı.",
+    "label": "Kaynak Bolluğu"
+   },
+   "RunSpeed": {
+    "description": "Koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Koşma Hızı"
+   },
+   "ScrappingOutput": {
+    "description": "Öğelerden hurda çıkarıldığında elde edilen miktar.",
+    "label": "Hurda Çıkarma Verimi"
+   },
+   "SeedDropOutput": {
+    "description": "Oyuncunun ektiği mahsul hasadından elde edilen tohum miktarı. Tohum düşme ihtimalini veya ağaçlardan düşen tohumları artırmaz.",
+    "label": "Tohum Düşüşü"
+   },
+   "ShowDayTime": {
+    "description": "Ekranda gün ve saat bilgisini gösterir. Hayır olarak belirlenmişse Kanlı Ay Uyarısı da devre dışı bırakılır.",
+    "label": "Günü/Saati Göster"
+   },
+   "ShowEnemyDamage": {
+    "description": "Varlıklara isabet edildiğinde havada hasar sayılarını gösterir.",
+    "label": "Varlık Hasarını Göster"
+   },
+   "ShowHealthBars": {
+    "description": "Varlık sağlığı çubuklarını gösterir veya gizler.",
+    "label": "Varlık Sağlığı Çubukları"
+   },
+   "ShowLocationInfo": {
+    "description": "Biyom ve İlgi Alanı adını ve zorluğunu gösterir.",
+    "label": "Konum Bilgisini Göster"
+   },
+   "ShowXP": {
+    "description": "DP çubuğunu ve DP açılır mesajını ekranda gösterir veya gizler.",
+    "label": "DP'yi Göster"
+   },
+   "SillyBigHeads": {
+    "description": "Zombiler, hayvanlar ve tüccarlar için \"koca kafa modunu\" etkinleştirir.",
+    "label": "Koca Kafalar"
+   },
+   "SillyBlackandWhite": {
+    "description": "1960'ların klasik korku filmlerinden ilham alınmış, gri tonlu klasik bir renk paletini etkinleştirir.",
+    "label": "Siyah - Beyaz"
+   },
+   "SillyCelebrate": {
+    "description": "Varlık öldürüldüğünde kutlama amaçlı konfeti atılma özelliğini etkinleştirir. \"Yalnızca Kafadan Vuruşlar\" seçeneği, sadece kafadan vuruşla öldürmelerde konfeti atılmasını sağlar ve böylece et hasat etmek için hayvanların gövdeden vurulabilmesini sağlar. \"Yalnızca Kafadan Vuruşlar\" seçeneği, pasif hayvanlara karşı geçerli değildir.",
+    "label": "Öldürme Kutlaması"
+   },
+   "SillyLowGravity": {
+    "description": "Oyun içi yer çekimi miktarını kontrol eder.",
+    "label": "Yer Çekimi"
+   },
+   "SillySounds": {
+    "description": "Oyun içi eylemler için komik sesleri etkinleştirir.",
+    "label": "Saçma Sesler"
+   },
+   "SillyTinyZombies": {
+    "description": "Zombilerin minik versiyonlarını etkinleştirir.",
+    "label": "Minik Zombiler"
+   },
+   "SkillGainRate": {
+    "description": "Beceri puanları kazanmak için kaç seviye gerektiğini ayarlar.",
+    "label": "Beceri Kazanma Hızı"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Beceri puanları verilince kaç beceri puanı kazanılacağını kontrol eder.",
+    "label": "Beceri Kazanma Miktarı"
+   },
+   "SmeltingType": {
+    "description": "Demirci ocağında üretimin nasıl yapılacağını kontrol eder. Öğeleri demirci ocağında eritebilir veya sırt çantandaki malzemeleri kullanarak doğrudan üretim yapabilirsin.",
+    "label": "Eritici Türü"
+   },
+   "StaminaRegen": {
+    "description": "Dayanıklılık yenileme miktarını kontrol eder. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Yenileme"
+   },
+   "StaminaUsage": {
+    "description": "Koşma, zıplama ve saldırma gibi eylemlerde harcanan dayanıklılık miktarı. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Kullanımı"
+   },
+   "StarterSkillPoints": {
+    "description": "Hazırlık mücadelelerini tamamladıktan sonra veya hazırlık mücadeleleri devre dışı bırakılmışsa oyun başlangıcında verilen beceri puanı sayısı.",
+    "label": "Temel Beceri Puanları"
+   },
+   "StormFreq": {
+    "description": "Fırtına sıklığını ayarlar. Hiçbiri seçilirse fırtınalar devre dışı bırakılır.",
+    "label": "Fırtına Sıklığı"
+   },
+   "StormWarning": {
+    "description": "Oyuncunun fırtına sirenini duyup duymayacağını ve ekranda fırtına uyarısı görüp görmeyeceğini kontrol eder.",
+    "label": "Fırtına Uyarısı"
+   },
+   "TemperatureSurvival": {
+    "description": "Ortam sıcaklığının (sıcak ve soğuk) oyuncuyu etkileyip etkilemeyeceğini kontrol eder.",
+    "label": "Sıcaklığa Bağlı Hayatta Kalma"
+   },
+   "TerrainDamage": {
+    "description": "Oyuncuların araziye verdiği hasarın miktarı.",
+    "label": "Arazi Hasarı"
+   },
+   "TraderBuyLimit": {
+    "description": "Tüccarın, daha fazlasını reddedene dek bir oyuncudan satın alabileceği maksimum öğe sayısı. Daha düşük değerler, her stok doldurma döngüsünde satabileceğin öğe sayısını sınırlar.",
+    "label": "Tüccarın Satın Alma Sınırı"
+   },
+   "TraderBuyPrices": {
+    "description": "Oyuncuların tüccarlardan satın aldığı öğelerin fiyatını ayarlar.",
+    "label": "Satın Alma Fiyatı"
+   },
+   "TraderDialog": {
+    "description": "Tüccar repliklerini ve ekrandaki diyalogları açıp kapatır.",
+    "label": "Ticaret Diyaloğu"
+   },
+   "TraderHours": {
+    "description": "Tüccarın açılış ve kapanış saatlerini kontrol eder. 24 Saatlik Döngü ve Gün Işığı Süresi bu ayarı etkilemez. Kanlı Ay Kapalı, yalnızca kanlı ay esnasında kapalı olacağı anlamına gelir. Varsayılan seçeneği, XML değerlerini kullanır.\\n\\nVarsayılan XML = 04.00 - 22.00\\n       Sabah = 04.00 - 12.00\\n       Öğlen = 10.00 - 18.00\\n       Akşam = 16.00 - 22.00\\n           Gece = 22.00 - 04.00",
+    "label": "Tüccar Çalışma Saatleri"
+   },
+   "TraderItemAbundance": {
+    "description": "Tüccardaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccardaki Öğe Sayısı"
+   },
+   "TraderMaxTier": {
+    "description": "Tüccardan satın alınabilecek öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Tüccar Kalitesi"
+   },
+   "TraderProtection": {
+    "description": "Tüccar bileşenleri için hasar korumasını ve oyuncuların o alanı elde edip edemeyeceğini belirler.",
+    "label": "Tüccar Koruması"
+   },
+   "TraderResetInterval": {
+    "description": "Tüccarların envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccar Sıfırlaması"
+   },
+   "TraderSellPrices": {
+    "description": "Oyuncuların tüccarlara sattığı öğelerin fiyatını ayarlar.",
+    "label": "Satış Fiyatı"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Diğer tüccarlardan görev alma seçeneğini etkinleştirir.",
+    "label": "Tüccar Rotaları"
+   },
+   "TradersEnabled": {
+    "description": "NPC tüccarlarla ticareti etkinleştirir.",
+    "label": "Ticaret Etkin"
+   },
+   "TreasureMapChance": {
+    "description": "Hazine Haritalarının ganimet kaplarında ve düşman ganimet torbalarında çıkma ihtimaline uygulanan çarpan.",
+    "label": "Hazine Haritası İhtimali"
+   },
+   "VehicleBlockDamage": {
+    "description": "Araçların bloklara verdiği hasar miktarı.",
+    "label": "Aracın Blok Hasarı"
+   },
+   "VehicleEntityDamage": {
+    "description": "Araçların varlıklara verdiği hasar miktarı.",
+    "label": "Aracın Varlık Hasarı"
+   },
+   "VehicleFuelUsage": {
+    "description": "Araçlar için yakıt tüketim hızını ayarlar.",
+    "label": "Araç Yakıt Kullanımı"
+   },
+   "VehicleSelfDamage": {
+    "description": "Aracının çarpışmalardan aldığı hasar miktarı.",
+    "label": "Aracın Kendi Hasarı"
+   },
+   "VendingEnabled": {
+    "description": "Otomat işlevini etkinleştirir veya devre dışı bırakır.",
+    "label": "Otomat Etkin"
+   },
+   "VendingItemAbundance": {
+    "description": "Tüccar otomatlarındaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomattaki Öğe Sayısı"
+   },
+   "VendingResetInterval": {
+    "description": "Tüccar otomatlarının envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomat Sıfırlaması"
+   },
+   "WalkSpeed": {
+    "description": "Yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Yürüme Hızı"
+   },
+   "WorkstationCrafting": {
+    "description": "Evet seçilirse çalışma istasyonunda üretim yapmaya izin verilir. Hayır seçilirse sadece oyuncunun sırt çantasından üretim yapmasına izin verilir.",
+    "label": "Çalışma İstasyonu Üretimi"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Dünyada işlevsel çalışma istasyonlarının ortaya çıkmasına izin verir. Yeni Navezgane veya rastgele dünya haritası oluşturmalarına uygulanır.",
+    "label": "Yabandaki Çalışma İstasyonları"
+   },
+   "XPMultiplier": {
+    "description": "Kazanılan tüm deneyime uygulanan çarpan.",
+    "label": "DP çarpanı"
+   },
+   "ZombieBMMove": {
+    "description": "Kanlı Ay sürüleri ve fırtınaları sırasında zombi hareket hızını kontrol eder.",
+    "label": "Zombi Kanlı Ay Hızı"
+   },
+   "ZombieFeralMove": {
+    "description": "Vahşi zombilerin hareket hızını ayarlar.",
+    "label": "Zombi Vahşi Hızı"
+   },
+   "ZombieFeralSense": {
+    "description": "Zombilerin oyuncuları duyma veya görme yoluyla tespit etme kolaylığı.",
+    "label": "Zombi Vahşi Duyusu"
+   },
+   "ZombieMove": {
+    "description": "Normal zombiler için gündüz vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gündüz Hızı"
+   },
+   "ZombieMoveNight": {
+    "description": "Normal zombiler için gece vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gece Hızı"
+   },
+   "ZombieRageChance": {
+    "description": "Zombilerin hasar aldığı zaman öfke moduna girme ihtimali.",
+    "label": "Zombi Öfkesi"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Zombilerin hayvan leşlerini yiyip yemeyeceğini belirler.",
+    "label": "Zombilerin Hayvanları Yemesi"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Yok",
+    "1": "Yürüme",
+    "2": "Koşu",
+    "3": "Koş",
+    "4": "Depar",
+    "5": "Kâbus"
+   },
+   "AirDropRandomTime": {
+    "0": "Yok",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Tüm Gün",
+    "6": "Tümü"
+   },
+   "AirDrops": {
+    "0": "Devre dışı",
+    "1": "Her gün",
+    "2": "1-3 Gün",
+    "3": "3 Gün",
+    "4": "3-7 Gün",
+    "5": "7 Gün",
+    "6": "1-7 Gün"
+   },
+   "ApiaryInput": {
+    "0": "Yok"
+   },
+   "BackpackCrafting": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Sınırlı",
+    "3": "Yalnızca Çalışma Tezgâhı"
+   },
+   "BarterValues": {
+    "0": "Yok"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Varsayılan",
+    "1": "Çok Düşük",
+    "2": "Düşük",
+    "3": "Orta",
+    "4": "Yüksek",
+    "5": "Çok Yüksek"
+   },
+   "BloodMoonCount": {
+    "0": "4 Düşmanlar",
+    "1": "6 Düşmanlar",
+    "2": "8 Düşmanlar",
+    "3": "10 Düşmanlar",
+    "4": "12 Düşmanlar",
+    "5": "16 Düşmanlar",
+    "6": "24 Düşmanlar",
+    "7": "32 Düşmanlar",
+    "8": "64 Düşmanlar"
+   },
+   "BloodMoonFrequency": {
+    "0": "Devre dışı",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "8 Gün",
+    "9": "9 Gün",
+    "10": "10 Gün",
+    "11": "14 Gün",
+    "12": "20 Gün",
+    "13": "30 Gün"
+   },
+   "BloodMoonRange": {
+    "0": "0 Gün",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "7 Gün",
+    "6": "10 Gün",
+    "7": "14 Gün",
+    "8": "20 Gün"
+   },
+   "BloodMoonWarning": {
+    "0": "Devre dışı",
+    "1": "Sabah",
+    "2": "Akşam"
+   },
+   "Celebrate": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Kafadan Vuruş"
+   },
+   "CropGrowthSpeed": {
+    "0": "Yok",
+    "1": "Anında"
+   },
+   "DamageValues": {
+    "0": "Yok"
+   },
+   "DayLightLength": {
+    "0": "Her Zaman Gece",
+    "10": "Her Zaman Gündüz"
+   },
+   "DeathPenalty": {
+    "0": "Yok",
+    "1": "Yalnızca DP",
+    "2": "Yaralı",
+    "3": "Kalıcı Ölüm"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Yok",
+    "1": "Sağlamlık",
+    "2": "Maks. Sağlamlık",
+    "3": "Her İkisi"
+   },
+   "DewCollectorInput": {
+    "0": "Yok"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Devre dışı",
+    "1": "Çok Düşük",
+    "2": "Düşük",
+    "3": "Varsayılan",
+    "4": "Yüksek",
+    "5": "Çok Yüksek"
+   },
+   "DropOnDeath": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Tümünü Sil"
+   },
+   "DropOnQuit": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası"
+   },
+   "Encumbrance": {
+    "0": "Devre dışı",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek",
+    "5": "Tam"
+   },
+   "HeadshotMode": {
+    "0": "Yok",
+    "1": "Yalnızca Kafadan Vuruş",
+    "2": "Bitirici Kafadan Vuruş"
+   },
+   "JarRefund": {
+    "0": "Yok"
+   },
+   "JumpStrength": {
+    "0": "Yok"
+   },
+   "LootAbundanceValues": {
+    "0": "Yok"
+   },
+   "LootRespawnDays": {
+    "0": "Devre dışı"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "LowDefaultHigh": {
+    "0": "Çok Düşük",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek"
+   },
+   "MaxChunkAge": {
+    "0": "Devre dışı"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Yok"
+   },
+   "MaxEnemyType": {
+    "0": "Normal Olanlar",
+    "1": "Güçlü Olanlar",
+    "2": "Özel Olanlar",
+    "3": "Vahşi Olanlar",
+    "4": "Radyasyonlu Olanlar",
+    "5": "Elitler"
+   },
+   "MaxTechType": {
+    "0": "Yok",
+    "1": "Teknoloji 0",
+    "2": "Teknoloji 1",
+    "3": "Teknoloji 2",
+    "4": "Teknoloji 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Yok"
+   },
+   "PointsPer": {
+    "0": "Yok"
+   },
+   "QuestPerDay": {
+    "0": "Sınırsız"
+   },
+   "QuestPerTier": {
+    "0": "Yok"
+   },
+   "RepairTypes": {
+    "0": "Yok",
+    "1": "Yalnızca Onar",
+    "2": "Yalnızca Birleştir",
+    "3": "Her İkisi"
+   },
+   "ShowXP": {
+    "0": "Tümü",
+    "1": "Yalnızca Çubuk",
+    "2": "Yalnızca Bildirimler",
+    "3": "Yok"
+   },
+   "SlowToFast": {
+    "0": "Varsayılan",
+    "1": "Çok Yavaş",
+    "2": "Yavaş",
+    "3": "Normal",
+    "4": "Hızlı",
+    "5": "Çok Hızlı"
+   },
+   "SmeltingType": {
+    "0": "Eritici",
+    "1": "Tarifler"
+   },
+   "SpeedValues": {
+    "0": "Yok"
+   },
+   "StaminaUsage": {
+    "0": "Yok"
+   },
+   "StarterSkillPoints": {
+    "0": "Yok"
+   },
+   "StormFrequency": {
+    "0": "Yok"
+   },
+   "TraderArea": {
+    "0": "Evet",
+    "1": "Alınabilir",
+    "2": "Alınamaz"
+   },
+   "TraderHourPresets": {
+    "0": "Varsayılan",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Kanlı Ay Kapalı",
+    "6": "Her Zaman Açık"
+   },
+   "TraderResetInterval": {
+    "0": "Varsayılan",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "14 Gün"
+   },
+   "XPGain": {
+    "0": "Yok"
+   },
+   "YesNo": {
+    "0": "Hayır",
+    "1": "Evet"
+   },
+   "ZombieFeralSense": {
+    "0": "Devre dışı",
+    "1": "Gündüz",
+    "2": "Gece",
+    "3": "Tümü"
+   },
+   "ZombieRageChance": {
+    "0": "Yok"
+   },
+   "ZombieSpeeds": {
+    "0": "Yürüme",
+    "1": "Koşu",
+    "2": "Koş",
+    "3": "Depar",
+    "4": "Kâbus"
+   }
+  }
+ },
+ "v3_1": {
+  "categories": {
+   "Crafting": "Üretim",
+   "Entities": "Varlıklar",
+   "General": "Oyuncu",
+   "Misc": "Çeş.",
+   "Resources": "Kaynaklar",
+   "Tasks": "Görevler",
+   "Traders": "Tüccarlar",
+   "World": "Dünya"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Zombi koku takibini etkinleştirir veya devre dışı bırakır ve zombilerin koku aldığında ne kadar hızlı hareket edeceğini ayarlar.",
+    "label": "Yapay Zeka Koku Modu"
+   },
+   "AirDropFrequency": {
+    "description": "Yardım paketlerinin düşme sıklığı.",
+    "label": "Hava Yardımları"
+   },
+   "AirDropMarker": {
+    "description": "Yardım paketlerinin yerleri için haritayı ve pusula işaretlerini gösterir.",
+    "label": "Hava Yardımlarını İşaretle"
+   },
+   "AirDropRandomTime": {
+    "description": "Hava yardımlarının ne zaman ortaya çıkacağını kontrol edebilmeni sağlar. Tahmin edilebilir hava yardımları için belirli bir zaman seç veya tamamen rastgele ortaya çıkmaları için Herhangi seçeneğini işaretle.\\n\\nHiçbiri = Varsayılan öğlen hava yardımı.\\nSabah = 04.00 - 10.00\\nÖğlen = 10.00 - 14.00\\nAkşam = 15.00 - 20.00\\nGece = 20.00 - 24.00\\nTüm Gün = 04.00 - 20.00",
+    "label": "Hava Yardımı Değişikliği"
+   },
+   "AllowCompass": {
+    "description": "Oyuncu pusulasını gösterir.",
+    "label": "Pusulaya İzin Ver"
+   },
+   "AllowMap": {
+    "description": "Oyun içi haritayı etkinleştirir.",
+    "label": "Haritaya İzin Ver"
+   },
+   "AllowScreenMarkers": {
+    "description": "Ekranda gezinme işaretçilerini gösterir. Harita işaretçileri görünmeye devam eder.",
+    "label": "Ekran İşaretçilerine İzin Ver"
+   },
+   "AllowZombieDigging": {
+    "description": "Zombilerin araziyi kazabilmesine izin verir. Yanlara doğru kazmaya da devam edebilirler.",
+    "label": "Zombilerin Kazabilmesi"
+   },
+   "AmmoLootCount": {
+    "description": "Ganimette bulunan mühimmat miktarı.",
+    "label": "Mühimmat Bolluğu"
+   },
+   "ApiaryInput": {
+    "description": "Bal üretimine başlamak için gereken çiçek miktarını belirler.",
+    "label": "Kovanlık Girişi"
+   },
+   "ApiaryOutput": {
+    "description": "Her bir üretim döngüsünde üretilen bal miktarı.",
+    "label": "Kovanlık Verimi"
+   },
+   "ApiaryTime": {
+    "description": "Kovanlığın bal üretmesi için gereken süreyi ayarlar.",
+    "label": "Kovanlık Süresi"
+   },
+   "ArmorLootCount": {
+    "description": "Ganimette bulunan zırh ve zırh parçası miktarı.",
+    "label": "Zırh Bolluğu"
+   },
+   "BackpackCrafting": {
+    "description": "Oyuncunun doğrudan sırt çantasından hangi öğeleri üretebileceğini kontrol eder.\\n\\nHayır seçilirse sırt çantasından üretim yapma özelliği devre dışı bırakılır.\\nEvet seçilirse sırt çantasından üretim yapmaya izin verilir.\\nSınırlı seçilirse sırt çantasından sınırlı bir tarif listesi kullanılarak üretim yapmaya izin verilir.\\nSadece Çalışma Tezgâhı seçilirse çalışma tezgâhının üretilmesine izin verilir ama sırt çantasında başka hiçbir şey üretilemez.",
+    "label": "Sırt Çantası Üretimi"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gündüz vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif yiyecek kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gündüz)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gündüz vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşmanın Yeniden Doğması (Gündüz)"
+   },
+   "BiomeGSModifier": {
+    "description": "Biyom temelli zorluk seviyesi değiştirici. Daha zor biyomlar, düşman kuvvetini ve ganimet aşamasını temel ilerlemenin ötesinde artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Oyun Aşaması"
+   },
+   "BiomeLSModifier": {
+    "description": "Biyom başına uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Ganimet Aşaması"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gece)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gece vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif besin kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gece)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gece)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gece vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Zombinin Yeniden Doğması (Gece)"
+   },
+   "BiomeProgression": {
+    "description": "Biyom tehlikelerini etkinleştirir. Hava Durumu veya Fırtınalar bu ayardan etkilenmez.",
+    "label": "Biyom İlerlemesi"
+   },
+   "BlockDamage": {
+    "description": "Oyuncuların bloklara verdiği hasar miktarı.",
+    "label": "Blok Hasarı"
+   },
+   "BlockDamageAI": {
+    "description": "Düşmanların bloklara verdiği hasarın miktarı.",
+    "label": "Düşman Blok Hasarı"
+   },
+   "BlockDamageAIBM": {
+    "description": "Kanlı Aylar sırasında düşmanların bloklara verdiği hasar.",
+    "label": "Kanlı Ay Blok Hasarı"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Kanlı Ay sırasında Oyuncu Başına hayatta kalabilecek maksimum zombi sayısını kontrol eder.\\n\\nYakındaki oyuncular en fazla 30 zombilik bir grubu paylaşabilir. Bu sınır aşılırsa oyun aşaması ölçeklendirme bunun yerine zorluğu artırır. Dünya sınırı, MaxSpawnedZombies sayısının yaklaşık 1,9 katıdır. Daha düşük oyun aşamaları, doğan zombi sayısını azaltabilir.\\n\\nBu ayarı artırmak performansı büyük ölçüde etkileyebilir.",
+    "label": "Kanlı Ay Sayısı"
+   },
+   "BloodMoonFrequency": {
+    "description": "Kanlı Aylar arasındaki oyun içi gün sayısıdır. Devre dışı bırakılırsa Kanlı Ay olmaz.",
+    "label": "Kanlı Ay Sıklığı"
+   },
+   "BloodMoonRange": {
+    "description": "Kanlı Ay sıklığından sonra etkinliğin gerçekleşmesi için geçecek gün sayısı.\\n\\nÖrneğin: 7 sıklık + 5 gün durumunda Kanlı Ay 7. ile 12. günler arasında rastgele bir günde gerçekleşir.\\n\\n0 Gün = Rastgele gün belirlenmez.",
+    "label": "Kanlı Ay Aralığı"
+   },
+   "BloodMoonWarning": {
+    "description": "Kanlı Ay uyarısının baş üstü göstergesinde görüneceği zamanı ayarlar ve gün sayısı kırmızıya döner.",
+    "label": "Kanlı Ay Uyarısı"
+   },
+   "BookLootCount": {
+    "description": "Ganimette bulunan kitap ve şema miktarını kontrol eder.",
+    "label": "Kitap Bolluğu"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde gömülü görevlerin görünmesine izin verir. Hayır = Yalnızca İlgi Alanı görevleri.",
+    "label": "Gömülü Görevler"
+   },
+   "ChallengesEnabled": {
+    "description": "Oyun içi mücadele sistemini etkinleştirir.",
+    "label": "Mücadeleler"
+   },
+   "ChickenCoopInput": {
+    "description": "Üretime başlamak için gereken yem miktarını ayarlar.",
+    "label": "Tavuk Kümesi Girdisi"
+   },
+   "ChickenCoopOutput": {
+    "description": "Her üretim döngüsünde üretilen tavuk, yumurta ve tüy miktarı.",
+    "label": "Tavuk Kümesi Verimi"
+   },
+   "ChickenCoopTime": {
+    "description": "Tavuk kümesinin tavuk, yumurta ve tüy üretmesi için gereken süreyi ayarlar.",
+    "label": "Tavuk Kümesi Süresi"
+   },
+   "CraftingInput": {
+    "description": "Üretim için gereken malzeme miktarı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Maliyeti"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Ganimette bulunan üretim dergisi miktarını kontrol eder.",
+    "label": "Dergi Bolluğu"
+   },
+   "CraftingMaxTier": {
+    "description": "Üretilen öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Üretim Kalitesi"
+   },
+   "CraftingOutput": {
+    "description": "Üretim başına üretilen öğe sayısı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Verimi"
+   },
+   "CraftingProgression": {
+    "description": "Dergi ve şema temelli üretim ilerlemesini etkinleştirir veya devre dışı bırakır.",
+    "label": "Üretim İlerlemesi"
+   },
+   "CraftingTime": {
+    "description": "Öğe üretmek için gereken süre.",
+    "label": "Üretim Zamanlayıcısı"
+   },
+   "CropGrowthSpeed": {
+    "description": "Oyuncunun ektiği mahsullerin ve ağaçların büyüme hızını ayarlar. Daha yüksek bir yüzde, daha uzun büyüme süresi anlamına gelir. Not: Değişikliklerin etkili olması için mevcut kayıt dosyalarında tekrar mahsul ekilmesi gerekir.",
+    "label": "Mahsul Büyümesi"
+   },
+   "CropOutput": {
+    "description": "Yabani mahsullerden ve oyuncunun ektiği ekinlerden elde edilen kaynak miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Mahsul Verimi"
+   },
+   "CrouchRunSpeed": {
+    "description": "Eğilme ve koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilerek Koşma Hızı"
+   },
+   "CrouchSpeed": {
+    "description": "Eğilme ve yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilme Hızı"
+   },
+   "DayLightLength": {
+    "description": "Oyun içi gündüz saatlerinin sayısını ayarlar. Her Zaman Gece ve Her Zaman Gündüz beklenildiği gibi çalışır. Gün ışığı süresi ayarları:\\n\\n 4 = 10.00 - 14.00\\n 6 = 09.00 - 15.00\\n 8 = 08.00 - 16.00\\n10 = 07.00 - 17.00\\n12 = 06.00 - 18.00\\n14 = 05.00 - 19.00\\n16 = 04.00 - 20.00\\n18 = 04.00 - 22.00\\n20 = 02.00 - 22.00",
+    "label": "Günışığı Süresi"
+   },
+   "DayNightLength": {
+    "description": "Oyundaki 24 saatin gerçek hayatta kaç dakika geçeceğini belirler.",
+    "label": "24 Saatlik Döngü"
+   },
+   "DeathPenalty": {
+    "description": "Ölümden sonra uygulanan ölüm cezasını belirler.\\n\\nYok = Ceza uygulanmaz.\\nYalnızca DP = Varsayılan DP kaybı.\\nYaralı = Yeniden doğunca bazı zayıflatmalar devam eder ve su/yiyecek %50'ye sıfırlanır.\\nKalıcı Ölüm = Karakter sıfırlanır.",
+    "label": "Ölüm Cezası"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Ölüm Yıpranması etkinleştirildiğinde bu ayar, ölümle birlikte kaybedilen sağlamlık yüzdesini belirler.",
+    "label": "Ölüm Yıpranması Miktarı"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Ölünce öğelerin yıpranıp yıpranmayacağını belirler.\\n\\nYok = Kayıp olmaz.\\nSağlamlık = Onarılabilecek mevcut sağlamlığın bir kısmını azaltır.\\nMaks. Sağlamlık = Maksimum sağlamlığı azaltır ve onarım sınırını düşürür.\\nHer İkisi = Öğeler hem mevcut hem de maksimum sağlamlığını kaybeder.",
+    "label": "Ölüm Yıpranması"
+   },
+   "DewCollectorInput": {
+    "description": "Çiy toplamaya başlamak için gereken kavanoz miktarını belirler.",
+    "label": "Çiy Toplayıcı Girişi"
+   },
+   "DewCollectorOutput": {
+    "description": "Çiy toplayıcının her döngüde ürettiği su miktarı.",
+    "label": "Çiy Toplayıcı Verimi"
+   },
+   "DewCollectorTime": {
+    "description": "Çiy toplayıcının su üretmesi için gereken süreyi ayarlar.",
+    "label": "Çiy Toplayıcı Süresi"
+   },
+   "DrinkLootCount": {
+    "description": "Kaplarda bulunan içecek miktarı.",
+    "label": "İçecek Bolluğu"
+   },
+   "DropOnDeath": {
+    "description": "Ölüm durumunda hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nYalnızca Alet Kemeri = Alet kemerindeki öğeler düşer.\\nYalnızca Sırt Çantası = Sırt çantasındaki öğeler düşer.\\nTümünü Sil = Tüm öğeler silinir.",
+    "label": "Ölünce Düşür"
+   },
+   "DropOnQuit": {
+    "description": "Çıkış yapıldığında hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nAlet kemeri = Alet kemerindeki öğeler düşer.\\nSırt çantası = Sırt çantasındaki öğeler düşer.",
+    "label": "Çıkınca Düşür"
+   },
+   "DukesLootCount": {
+    "description": "Ganimette bulunan Duke parası ve eski para miktarı.",
+    "label": "Para Bolluğu"
+   },
+   "ElectricalOutput": {
+    "description": "Ne kadar elektrik gücü üretileceğini kontrol eder.",
+    "label": "Elektrik Çıktısı"
+   },
+   "EncumbranceModifier": {
+    "description": "Ağır yük bindirilmiş sırt çantası yuvalarının sayısını kontrol eder. Değerler Devre Dışı (yük ağır gelmez) ile Tam (maksimum ağırlaşma) arasındadır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Ağır Yük Yuvaları"
+   },
+   "EnemySpawnMode": {
+    "description": "Düşman doğmasını etkinleştirir veya devre dışı bırakır.",
+    "label": "Düşman Doğması"
+   },
+   "EntityDamage": {
+    "description": "Düşmanların oyunculara ne kadar hasar vereceğini kontrol eder. Bu miktar, oyuncuların diğer gelen hasarlarıyla birleştirilir.",
+    "label": "Düşmanın Verdiği Hasar"
+   },
+   "EntityIncomingDamage": {
+    "description": "Düşmanlar ve hayvanlar gibi varlıkların oyunculardan aldığı hasar.",
+    "label": "Varlığın Aldığı Hasar"
+   },
+   "FoodLootCount": {
+    "description": "Kaplarda bulunan yiyecek miktarı.",
+    "label": "Yiyecek Bolluğu"
+   },
+   "FullChickenStressEvent": {
+    "description": "Tutulan tavukların stres seviyesi %100'e ulaştığında bir etkinliği etkinleştirir. \"Hiçbiri\" seçeneği, etkinlikleri devre dışı bırakır. \"Rastgele\" seçeneğinde aşağıdaki etkinliklerden biri rastgele seçilir:\\n\\nFirari Tavuk = Tavuk elinden kaçar.\\nÖfkeli Tavuk = Tavuğun sana düşman olur.\\nZombi Ordusu = Tavuğunun stresi, bir zombi ordusu çağırır.\\nKatil Tavuklar = Öfkeli tavuklar hep birlikte sana düşman olur.",
+    "label": "Tavuk Stresi Etkinliği"
+   },
+   "GlobalGSModifier": {
+    "description": "Seviyene ve hayatta kaldığın gün sayısına bağlı olarak düşman türlerini, zorluk seviyesini, ganimet kalitesini ve Kanlı Ay yoğunluğunu belirler. Değer ne kadar yüksek olursa zorluk o kadar artar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Oyun Aşaması"
+   },
+   "GlobalLSModifier": {
+    "description": "Oyuncunun ganimet aşamasına uygulanan genel çarpan. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Ganimet Aşaması"
+   },
+   "GlobalLootCount": {
+    "description": "Genel anlamda dünyada bulunan toplam ganimet miktarını ayarlar. \"Yok\" seçeneği, zombi torbası düşüşleri ve malzeme kasaları dâhil tüm ganimeti devre dışı bırakır.",
+    "label": "Ganimet Bolluğu"
+   },
+   "GlobalTSModifier": {
+    "description": "Tüccar aşaması ilerlemesine uygulanan genel değiştirici. Tüccarlar tarafından satılan öğelerin kalitesini ve çeşitliliğini kontrol eder. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Tüccar Aşaması"
+   },
+   "HarvestingOutput": {
+    "description": "Blok ve öğe hasadından elde edilen kaynak miktarını kontrol eder. Cevherleri, tohumları veya mahsulleri etkilemez. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Kaynak Verimi"
+   },
+   "HeadshotMode": {
+    "description": "Kafadan vuruş hasarının nasıl işleneceğini belirler.\\n\\nSadece Kafadan Vuruş = Düşmanlara sadece kafadan vuruşla hasar verilebilir.\\nBitirici Kafadan Vuruş = Vücuda yapılan vuruşlar hasar verir fakat sadece kafadan vuruş öldürebilir.\\n\\nPasif hayvanlara karşı geçerli değildir.",
+    "label": "Kafadan Vuruş Modu"
+   },
+   "HeadshotMultiplier": {
+    "description": "Oyuncuların varlıklara verdiği kafadan vuruş hasarına uygulanan çarpan.",
+    "label": "Kafadan Vuruş Çarpanı"
+   },
+   "HeatMapSensitivity": {
+    "description": "Oyuncu aktivitesinin, ısı haritasını etkileme miktarını kontrol eder. Daha yüksek ısı, çığırtkanların doğma ihtimalini artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Isı Haritası Duyarlılığı"
+   },
+   "HungerMultiplier": {
+    "description": "Oyuncuların yiyecekleri ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, yiyecek tüketimini artırır.",
+    "label": "Açlık Çarpanı"
+   },
+   "IncomingDamage": {
+    "description": "Oyuncunun tüm kaynaklardan aldığı hasar miktarı.",
+    "label": "Oyuncunun Aldığı Hasar"
+   },
+   "InfectionChance": {
+    "description": "Oyuncunun enfeksiyon geçirme ihtimalini artırır ya da azaltır.",
+    "label": "Enfeksiyon İhtimali"
+   },
+   "InfectionRate": {
+    "description": "Enfeksiyonun ilerleme hızını ayarlar.",
+    "label": "Enfeksiyon Hızı"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Yeni oyuncular için adım adım ilerleyen hazırlık mücadelesini etkinleştir.",
+    "label": "Hazırlık Mücadeleleri"
+   },
+   "IntroQuestEnabled": {
+    "description": "Tam görev ilerlemesine geçmek için başlangıçtaki gömülü malzeme bulma görevini atlar.",
+    "label": "Hazırlık Görevi"
+   },
+   "ItemDegradation": {
+    "description": "Silahların ve aletlerin sağlamlıklarını kaybetme hızı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Öğe Yıpranması"
+   },
+   "JarRefund": {
+    "description": "Öğeleri kullandıktan sonraki kavanoz iadesi ihtimali.",
+    "label": "Kavanoz İadesi"
+   },
+   "JumpStrength": {
+    "description": "Oyuncunun zıplama yüksekliğini değiştirir.",
+    "label": "Zıplama Kuvveti"
+   },
+   "LootBagChance": {
+    "description": "Düşmanların ölünce ganimet torbası düşürme ihtimaline uygulanan çarpan.",
+    "label": "Ganimet Torbası Düşüşü"
+   },
+   "LootMaxTier": {
+    "description": "Ganimette ortaya çıkabilecek silahların ve öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Ganimet Kalitesi"
+   },
+   "LootRespawnDays": {
+    "description": "Ziyaret edilmemiş alanlardaki ganimet kaplarının sıfırlanması için gereken oyun içi gün sayısı.",
+    "label": "Ganimet Yeniden Doğma Süresi (Gün)"
+   },
+   "LootTimer": {
+    "description": "Kapları yağmalamak için gereken süre.",
+    "label": "Yağmalama Sayacı"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Ölünce kaybedilen rastgele öğelerin sayısını belirler.",
+    "label": "Ölünce Kaybedilen Öğe Sayısı"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Ölünce hangi öğelerin kaybedileceğini belirler.\\n\\nHiçbiri = Hiçbir şey.\\nTümü = Tüm öğeler.\\nYalnızca Alet Kemeri = Yalnızca alet kemerindeki öğeler.\\nYalnızca Sırt Çantası = Yalnızca sırt çantasındaki öğeler.\\nEkipman = Giyilen zırh ve kıyafetler.\\nYalnızca Taşınanlar = Alet kemeri ile sırt çantasındaki öğeler.",
+    "label": "Ölünce Öğe Kaybetme"
+   },
+   "MaxDegradationAmount": {
+    "description": "Bir öğenin onarılınca ne kadar yıpranacağını belirler.",
+    "label": "Onarım Yıpranması"
+   },
+   "MaxEnemyTier": {
+    "description": "Doğabilen zombi türlerinin en üst kademesidir.",
+    "label": "Maks. Düşman Kademesi"
+   },
+   "MaxTechType": {
+    "description": "Genel anlamda silahlar ve öğeler için mevcut en yüksek teknoloji türünü ayarlayarak ilerlemeyi ve oynama temposunu kontrol etmene imkân tanır. Aşağıdaki örneklere göz atabilirsin.\\n\\nTeknoloji 0 = Taş ve boru\\nTeknoloji 1 = Demir ve AK\\nTeknoloji 2 = Çelik ve Taktik Saldırı\\nTeknoloji 3 = Delgi ve M60",
+    "label": "Maks. Teknoloji Türü"
+   },
+   "MedicalLootCount": {
+    "description": "Ganimette bulunan tıbbi malzeme miktarı.",
+    "label": "Tıbbi Malzeme Bolluğu"
+   },
+   "MeleeDamage": {
+    "description": "Oyuncunun yakın dövüş silahları ve aletler ile verdiği hasar.",
+    "label": "Yakın Dövüş Hasarı"
+   },
+   "MeleeLootCount": {
+    "description": "Ganimette bulunan yakın dövüş silahı ve yakın dövüş silahı parçası miktarı.",
+    "label": "Yakın Dövüş Bolluğu"
+   },
+   "MiningOutput": {
+    "description": "Madencilikten kazanılan cevher miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Madencilik Verimi"
+   },
+   "NewbieCoat": {
+    "description": "Etkinleştirilirse yeni oyuncular acemi koruması güçlendirmesiyle doğar.",
+    "label": "Yeni Oyuncu Güçlendirmesi"
+   },
+   "POIQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde İlgi Alanı görevlerinin görünmesine izin verir. Hayır = Yalnızca gömülü görevler.",
+    "label": "İlgi Alanı Görevleri"
+   },
+   "POITierLSModifier": {
+    "description": "İlgi Alanı kademesine göre uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "İlgi Alanı Ganimet Aşaması"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Sağlık ile dayanıklılığın seviyeye göre artıp artmayacağını belirler.",
+    "label": "Seviye İstatistiği Bonusu"
+   },
+   "PointsPerMagazine": {
+    "description": "Beceri dergilerini okumakla kazanılan ilerleme.",
+    "label": "Dergi İlerlemesi"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Tüccar ilerlemesine dâhil edilen günlük görev sayısı. Ek görevler, DP ve ödüller kazandırmaya devam eder fakat tüccar kademesini ilerletmez.",
+    "label": "Günlük Görev Sayısı"
+   },
+   "QuestsEnabled": {
+    "description": "Oyununda görevleri etkinleştirir veya devre dışı bırakır.",
+    "label": "Görevler"
+   },
+   "QuestsPerTier": {
+    "description": "Bir sonraki kademenin kilidini açmak için tamamlanması gereken görev sayısı. Değerler ne kadar yüksek olursa kademeler arası ilerleme o kadar yavaşlar. Hiçbiri = Sınır yoktur ve tüm görev kademelerine erişmeye izin verir.",
+    "label": "Kademe Başına Görev Sayısı"
+   },
+   "RangedDamage": {
+    "description": "Oyuncunun yay, ateşli silahlar ve diğer menzilli silahlar ile verdiği hasar.",
+    "label": "Menzilli Hasar"
+   },
+   "RangedLootCount": {
+    "description": "Ganimette bulunan menzilli silah ve menzilli silah parçası miktarı.",
+    "label": "Menzilli Bolluğu"
+   },
+   "RepairTypes": {
+    "description": "Öğelerin nasıl onarılacağını belirler:\\n\\nHiçbiri = Onarım yok\\nYalnızca Onarım = Yalnızca Onarım Kiti\\nYalnızca Birleştirme = Birleştirme İstasyonunda onarım\\nİkisi de = Onarım Kitleri ve Birleştirme İstasyonu",
+    "label": "Onarım Yöntemi"
+   },
+   "ResourceLootCount": {
+    "description": "Ganimette bulunan kaynak öğesi miktarı.",
+    "label": "Kaynak Bolluğu"
+   },
+   "RunSpeed": {
+    "description": "Koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Koşma Hızı"
+   },
+   "ScrappingOutput": {
+    "description": "Öğelerden hurda çıkarıldığında elde edilen miktar.",
+    "label": "Hurda Çıkarma Verimi"
+   },
+   "SeedDropOutput": {
+    "description": "Oyuncunun ektiği mahsul hasadından elde edilen tohum miktarı. Tohum düşme ihtimalini veya ağaçlardan düşen tohumları artırmaz.",
+    "label": "Tohum Düşüşü"
+   },
+   "ShowDayTime": {
+    "description": "Ekranda gün ve saat bilgisini gösterir. Hayır olarak belirlenmişse Kanlı Ay Uyarısı da devre dışı bırakılır.",
+    "label": "Günü/Saati Göster"
+   },
+   "ShowEnemyDamage": {
+    "description": "Varlıklara isabet edildiğinde havada hasar sayılarını gösterir.",
+    "label": "Varlık Hasarını Göster"
+   },
+   "ShowHealthBars": {
+    "description": "Varlık sağlığı çubuklarını gösterir veya gizler.",
+    "label": "Varlık Sağlığı Çubukları"
+   },
+   "ShowLocationInfo": {
+    "description": "Biyom ve İlgi Alanı adını ve zorluğunu gösterir.",
+    "label": "Konum Bilgisini Göster"
+   },
+   "ShowXP": {
+    "description": "DP çubuğunu ve DP açılır mesajını ekranda gösterir veya gizler.",
+    "label": "DP'yi Göster"
+   },
+   "SillyBigHeads": {
+    "description": "Zombiler, hayvanlar ve tüccarlar için \"koca kafa modunu\" etkinleştirir.",
+    "label": "Koca Kafalar"
+   },
+   "SillyBlackandWhite": {
+    "description": "1960'ların klasik korku filmlerinden ilham alınmış, gri tonlu klasik bir renk paletini etkinleştirir.",
+    "label": "Siyah - Beyaz"
+   },
+   "SillyCelebrate": {
+    "description": "Varlık öldürüldüğünde kutlama amaçlı konfeti atılma özelliğini etkinleştirir. \"Yalnızca Kafadan Vuruşlar\" seçeneği, sadece kafadan vuruşla öldürmelerde konfeti atılmasını sağlar ve böylece et hasat etmek için hayvanların gövdeden vurulabilmesini sağlar. \"Yalnızca Kafadan Vuruşlar\" seçeneği, pasif hayvanlara karşı geçerli değildir.",
+    "label": "Öldürme Kutlaması"
+   },
+   "SillyLowGravity": {
+    "description": "Oyun içi yer çekimi miktarını kontrol eder.",
+    "label": "Yer Çekimi"
+   },
+   "SillySounds": {
+    "description": "Oyun içi eylemler için komik sesleri etkinleştirir.",
+    "label": "Saçma Sesler"
+   },
+   "SillyTinyZombies": {
+    "description": "Zombilerin minik versiyonlarını etkinleştirir.",
+    "label": "Minik Zombiler"
+   },
+   "SkillGainRate": {
+    "description": "Beceri puanları kazanmak için kaç seviye gerektiğini ayarlar.",
+    "label": "Beceri Kazanma Hızı"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Beceri puanları verilince kaç beceri puanı kazanılacağını kontrol eder.",
+    "label": "Beceri Kazanma Miktarı"
+   },
+   "SmeltingType": {
+    "description": "Demirci ocağında üretimin nasıl yapılacağını kontrol eder. Öğeleri demirci ocağında eritebilir veya sırt çantandaki malzemeleri kullanarak doğrudan üretim yapabilirsin.",
+    "label": "Eritici Türü"
+   },
+   "StackSizeMultiplier": {
+    "description": "Birikebilen tüm öğelerin yığın miktarına uygulanan çarpan. Maksimum yığın miktarı 30.000'dir.",
+    "label": "Yığın Miktarı Çarpanı"
+   },
+   "StaminaRegen": {
+    "description": "Dayanıklılık yenileme miktarını kontrol eder. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Yenileme"
+   },
+   "StaminaUsage": {
+    "description": "Koşma, zıplama ve saldırma gibi eylemlerde harcanan dayanıklılık miktarı. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Kullanımı"
+   },
+   "StarterSkillPoints": {
+    "description": "Hazırlık mücadelelerini tamamladıktan sonra veya hazırlık mücadeleleri devre dışı bırakılmışsa oyun başlangıcında verilen beceri puanı sayısı.",
+    "label": "Temel Beceri Puanları"
+   },
+   "StormFreq": {
+    "description": "Fırtına sıklığını ayarlar. Hiçbiri seçilirse fırtınalar devre dışı bırakılır.",
+    "label": "Fırtına Sıklığı"
+   },
+   "StormWarning": {
+    "description": "Oyuncunun fırtına sirenini duyup duymayacağını ve ekranda fırtına uyarısı görüp görmeyeceğini kontrol eder.",
+    "label": "Fırtına Uyarısı"
+   },
+   "TemperatureSurvival": {
+    "description": "Ortam sıcaklığının (sıcak ve soğuk) oyuncuyu etkileyip etkilemeyeceğini kontrol eder.",
+    "label": "Sıcaklığa Bağlı Hayatta Kalma"
+   },
+   "TerrainDamage": {
+    "description": "Oyuncuların araziye verdiği hasarın miktarı.",
+    "label": "Arazi Hasarı"
+   },
+   "ThirstMultiplier": {
+    "description": "Oyuncuların suyu ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, su tüketimini artırır.",
+    "label": "Susuzluk Çarpanı"
+   },
+   "TraderBuyLimit": {
+    "description": "Tüccarın, daha fazlasını reddedene dek bir oyuncudan satın alabileceği maksimum öğe sayısı. Daha düşük değerler, her stok doldurma döngüsünde satabileceğin öğe sayısını sınırlar.",
+    "label": "Tüccarın Satın Alma Sınırı"
+   },
+   "TraderBuyPrices": {
+    "description": "Oyuncuların tüccarlardan satın aldığı öğelerin fiyatını ayarlar.",
+    "label": "Satın Alma Fiyatı"
+   },
+   "TraderDialog": {
+    "description": "Tüccar repliklerini ve ekrandaki diyalogları açıp kapatır.",
+    "label": "Ticaret Diyaloğu"
+   },
+   "TraderHours": {
+    "description": "Tüccarın açılış ve kapanış saatlerini kontrol eder. 24 Saatlik Döngü ve Gün Işığı Süresi bu ayarı etkilemez. Kanlı Ay Kapalı, yalnızca kanlı ay esnasında kapalı olacağı anlamına gelir. Varsayılan seçeneği, XML değerlerini kullanır.\\n\\nVarsayılan XML = 04.00 - 22.00\\n       Sabah = 04.00 - 12.00\\n       Öğlen = 10.00 - 18.00\\n       Akşam = 16.00 - 22.00\\n           Gece = 22.00 - 04.00",
+    "label": "Tüccar Çalışma Saatleri"
+   },
+   "TraderItemAbundance": {
+    "description": "Tüccardaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccardaki Öğe Sayısı"
+   },
+   "TraderMaxTier": {
+    "description": "Tüccardan satın alınabilecek öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Tüccar Kalitesi"
+   },
+   "TraderProtection": {
+    "description": "Tüccar bileşenleri için hasar korumasını ve oyuncuların o alanı elde edip edemeyeceğini belirler.",
+    "label": "Tüccar Koruması"
+   },
+   "TraderResetInterval": {
+    "description": "Tüccarların envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccar Sıfırlaması"
+   },
+   "TraderSellPrices": {
+    "description": "Oyuncuların tüccarlara sattığı öğelerin fiyatını ayarlar.",
+    "label": "Satış Fiyatı"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Diğer tüccarlardan görev alma seçeneğini etkinleştirir.",
+    "label": "Tüccar Rotaları"
+   },
+   "TradersEnabled": {
+    "description": "NPC tüccarlarla ticareti etkinleştirir.",
+    "label": "Ticaret Etkin"
+   },
+   "TreasureMapChance": {
+    "description": "Hazine Haritalarının ganimet kaplarında ve düşman ganimet torbalarında çıkma ihtimaline uygulanan çarpan.",
+    "label": "Hazine Haritası İhtimali"
+   },
+   "VehicleBlockDamage": {
+    "description": "Araçların bloklara verdiği hasar miktarı.",
+    "label": "Aracın Blok Hasarı"
+   },
+   "VehicleEntityDamage": {
+    "description": "Araçların varlıklara verdiği hasar miktarı.",
+    "label": "Aracın Varlık Hasarı"
+   },
+   "VehicleFuelUsage": {
+    "description": "Araçlar için yakıt tüketim hızını ayarlar.",
+    "label": "Araç Yakıt Kullanımı"
+   },
+   "VehicleSelfDamage": {
+    "description": "Aracının çarpışmalardan aldığı hasar miktarı.",
+    "label": "Aracın Kendi Hasarı"
+   },
+   "VendingEnabled": {
+    "description": "Otomat işlevini etkinleştirir veya devre dışı bırakır.",
+    "label": "Otomat Etkin"
+   },
+   "VendingItemAbundance": {
+    "description": "Tüccar otomatlarındaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomattaki Öğe Sayısı"
+   },
+   "VendingResetInterval": {
+    "description": "Tüccar otomatlarının envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomat Sıfırlaması"
+   },
+   "WalkSpeed": {
+    "description": "Yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Yürüme Hızı"
+   },
+   "WorkstationCrafting": {
+    "description": "Evet seçilirse çalışma istasyonunda üretim yapmaya izin verilir. Hayır seçilirse sadece oyuncunun sırt çantasından üretim yapmasına izin verilir.",
+    "label": "Çalışma İstasyonu Üretimi"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Dünyada işlevsel çalışma istasyonlarının ortaya çıkmasına izin verir. Yeni Navezgane veya rastgele dünya haritası oluşturmalarına uygulanır.",
+    "label": "Yabandaki Çalışma İstasyonları"
+   },
+   "XPMultiplier": {
+    "description": "Kazanılan tüm deneyime uygulanan çarpan.",
+    "label": "DP çarpanı"
+   },
+   "ZombieBMMove": {
+    "description": "Kanlı Ay sürüleri ve fırtınaları sırasında zombi hareket hızını kontrol eder.",
+    "label": "Zombi Kanlı Ay Hızı"
+   },
+   "ZombieFeralMove": {
+    "description": "Vahşi zombilerin hareket hızını ayarlar.",
+    "label": "Zombi Vahşi Hızı"
+   },
+   "ZombieFeralSense": {
+    "description": "Zombilerin oyuncuları duyma veya görme yoluyla tespit etme kolaylığı.",
+    "label": "Zombi Vahşi Duyusu"
+   },
+   "ZombieMove": {
+    "description": "Normal zombiler için gündüz vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gündüz Hızı"
+   },
+   "ZombieMoveNight": {
+    "description": "Normal zombiler için gece vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gece Hızı"
+   },
+   "ZombieRageChance": {
+    "description": "Zombilerin hasar aldığı zaman öfke moduna girme ihtimali.",
+    "label": "Zombi Öfkesi"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Zombilerin hayvan leşlerini yiyip yemeyeceğini belirler.",
+    "label": "Zombilerin Hayvanları Yemesi"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Zorluk",
+   "Official": "Resmî"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Varsayılan/Kolay: Kıyametin biraz daha merhametli olabilen hâli.",
+    "label": "Maceracı"
+   },
+   "Almost Creative": {
+    "description": "Gerçek kıyamet olmadan kıyamet. Çünkü ölmek hiç keyifli değil.",
+    "label": "Neredeyse Yaratıcı"
+   },
+   "Bite Club": {
+    "description": "Bu ekstrem, kalıcı ölüm modunda yeniden doğmak korkaklar içindir. Tek bir canın var, akıllıca kullan.",
+    "label": "Isırık Kulübü"
+   },
+   "Caveman Life": {
+    "description": "En son teknolojik aletin çubuk olduğu bir kıyamette hayatta kal.",
+    "label": "Mağara Yaşamı"
+   },
+   "Chibi Mode": {
+    "description": "Sadece tatlı değiller... Aynı zamanda hızlılar da! Neyse ki hız konusunda sen de fena değilsin.",
+    "label": "Chibi Modu!"
+   },
+   "Disaster Film": {
+    "description": "Felaketler, düzeltemeyeceğin kadar hızlı bir şekilde üst üste geliyor.",
+    "label": "Felaket Filmi"
+   },
+   "Dumpster Diver": {
+    "description": "Çöpten harikalar yaratmak gibisi yok! Kullanıyorsan istifliyor sayılmazsın.",
+    "label": "Çöplük Kuşu"
+   },
+   "Dying World": {
+    "description": "Kaynaklar yitip gidiyor. Sıranın sana gelmesi an meselesi.",
+    "label": "Ölen Dünya"
+   },
+   "Insane": {
+    "description": "Delicesine Zor: Yaptığın her hatanın pişmanlığını yaşayacağın kıyamet.",
+    "label": "Delicesine Zor"
+   },
+   "Legacy Survival": {
+    "description": "Modern sonuçlara sahip eski usul hayatta kalma mücadelesi.",
+    "label": "Eski Usul Hayatta Kalma"
+   },
+   "Madmoles Mayhem": {
+    "description": "Daha az malzeme, daha ağır cezalar ve daimî baskı. Madmole... Fena kokmuyor!",
+    "label": "Madmole'un Kargaşası"
+   },
+   "Nomad": {
+    "description": "Normal: Dağları delecek kadar azimlisin.",
+    "label": "Göçebe"
+   },
+   "Scavenger": {
+    "description": "Acemi: Destek tekerleriyle bisiklete biner gibi bir kıyamet deneyimi.",
+    "label": "Çöpçü"
+   },
+   "Seven days Later": {
+    "description": "Hızlı hareket eden zombilerden oluşan kaotik sürülere sahip, modern filmlerden esinlenilmiş bir mod.",
+    "label": "7 Gün Sonra"
+   },
+   "True Survivalist": {
+    "description": "Acımasız: Mahvolmak eğlencenin bir parçası.",
+    "label": "Hayatta Kalma Ustası"
+   },
+   "Undead Matinee": {
+    "description": "Zombilerin daha yavaş hareket ettiği ve sayıca fazla olduğu, mühimmat kıtlığına sahip, yakın dövüş odaklı ve eski filmlerden esinlenilmiş bir mod.",
+    "label": "Hortlak Matinesi"
+   },
+   "Warrior": {
+    "description": "Zor: Artık işler ciddiye biniyor ama en azından beyin sarsıntısı geçirmek bedava.",
+    "label": "Savaşçı"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Yok",
+    "1": "Yürüme",
+    "2": "Koşu",
+    "3": "Koş",
+    "4": "Depar",
+    "5": "Kâbus"
+   },
+   "AirDropRandomTime": {
+    "0": "Yok",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Tüm Gün",
+    "6": "Tümü"
+   },
+   "AirDrops": {
+    "0": "Devre dışı",
+    "1": "Her gün",
+    "2": "1-3 Gün",
+    "3": "3 Gün",
+    "4": "3-7 Gün",
+    "5": "7 Gün",
+    "6": "1-7 Gün"
+   },
+   "ApiaryInput": {
+    "0": "Yok"
+   },
+   "BackpackCrafting": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Sınırlı",
+    "3": "Yalnızca Çalışma Tezgâhı"
+   },
+   "BarterValues": {
+    "0": "Yok"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Yok",
+    "1": "Varsayılan",
+    "2": "Çok Düşük",
+    "3": "Düşük",
+    "4": "Orta",
+    "5": "Yüksek",
+    "6": "Çok Yüksek"
+   },
+   "BloodMoonCount": {
+    "0": "4 Düşmanlar",
+    "1": "6 Düşmanlar",
+    "2": "8 Düşmanlar",
+    "3": "10 Düşmanlar",
+    "4": "12 Düşmanlar",
+    "5": "16 Düşmanlar",
+    "6": "24 Düşmanlar",
+    "7": "32 Düşmanlar",
+    "8": "64 Düşmanlar"
+   },
+   "BloodMoonFrequency": {
+    "0": "Devre dışı",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "8 Gün",
+    "9": "9 Gün",
+    "10": "10 Gün",
+    "11": "14 Gün",
+    "12": "20 Gün",
+    "13": "30 Gün"
+   },
+   "BloodMoonRange": {
+    "0": "0 Gün",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "7 Gün",
+    "6": "10 Gün",
+    "7": "14 Gün",
+    "8": "20 Gün"
+   },
+   "BloodMoonWarning": {
+    "0": "Devre dışı",
+    "1": "Sabah",
+    "2": "Akşam"
+   },
+   "Celebrate": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Kafadan Vuruş"
+   },
+   "CropGrowthSpeed": {
+    "0": "Yok",
+    "1": "Anında"
+   },
+   "DamageValues": {
+    "0": "Yok"
+   },
+   "DayLightLength": {
+    "0": "Her Zaman Gece",
+    "10": "Her Zaman Gündüz"
+   },
+   "DeathPenalty": {
+    "0": "Yok",
+    "1": "Yalnızca DP",
+    "2": "Yaralı",
+    "3": "Kalıcı Ölüm"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Yok",
+    "1": "Sağlamlık",
+    "2": "Maks. Sağlamlık",
+    "3": "Her İkisi"
+   },
+   "DewCollectorInput": {
+    "0": "Yok"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Devre dışı",
+    "1": "Çok Düşük",
+    "2": "Düşük",
+    "3": "Varsayılan",
+    "4": "Yüksek",
+    "5": "Çok Yüksek"
+   },
+   "DropOnDeath": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar",
+    "6": "Tümünü Sil"
+   },
+   "DropOnQuit": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "Encumbrance": {
+    "0": "Devre dışı",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek",
+    "5": "Tam"
+   },
+   "FullChickenStressEvent": {
+    "0": "Yok",
+    "1": "Rastgele",
+    "2": "Firari Tavuk",
+    "3": "Öfkeli Tavuk",
+    "4": "Zombi Ordusu",
+    "5": "Katil Tavuklar"
+   },
+   "HeadshotMode": {
+    "0": "Yok",
+    "1": "Yalnızca Kafadan Vuruş",
+    "2": "Bitirici Kafadan Vuruş"
+   },
+   "JarRefund": {
+    "0": "Yok"
+   },
+   "JumpStrength": {
+    "0": "Yok"
+   },
+   "LootAbundanceValues": {
+    "0": "Yok"
+   },
+   "LootRespawnDays": {
+    "0": "Devre dışı"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "LowDefaultHigh": {
+    "0": "Çok Düşük",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek"
+   },
+   "MaxChunkAge": {
+    "0": "Devre dışı"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Yok"
+   },
+   "MaxEnemyType": {
+    "0": "Normal Olanlar",
+    "1": "Güçlü Olanlar",
+    "2": "Özel Olanlar",
+    "3": "Vahşi Olanlar",
+    "4": "Radyasyonlu Olanlar",
+    "5": "Elitler"
+   },
+   "MaxTechType": {
+    "0": "Yok",
+    "1": "Teknoloji 0",
+    "2": "Teknoloji 1",
+    "3": "Teknoloji 2",
+    "4": "Teknoloji 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Yok"
+   },
+   "PointsPer": {
+    "0": "Yok"
+   },
+   "QuestPerDay": {
+    "0": "Sınırsız"
+   },
+   "QuestPerTier": {
+    "0": "Yok"
+   },
+   "RepairTypes": {
+    "0": "Yok",
+    "1": "Yalnızca Onar",
+    "2": "Yalnızca Birleştir",
+    "3": "Her İkisi"
+   },
+   "ShowLocationTypes": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Ad"
+   },
+   "ShowXP": {
+    "0": "Tümü",
+    "1": "Yalnızca Çubuk",
+    "2": "Yalnızca Bildirimler",
+    "3": "Yok"
+   },
+   "SlowToFast": {
+    "0": "Varsayılan",
+    "1": "Çok Yavaş",
+    "2": "Yavaş",
+    "3": "Normal",
+    "4": "Hızlı",
+    "5": "Çok Hızlı"
+   },
+   "SmeltingType": {
+    "0": "Eritici",
+    "1": "Tarifler"
+   },
+   "SpeedValues": {
+    "0": "Yok"
+   },
+   "StaminaUsage": {
+    "0": "Yok"
+   },
+   "StarterSkillPoints": {
+    "0": "Yok"
+   },
+   "StormFrequency": {
+    "0": "Yok"
+   },
+   "TraderArea": {
+    "0": "Evet",
+    "1": "Alınabilir",
+    "2": "Alınamaz"
+   },
+   "TraderHourPresets": {
+    "0": "Varsayılan",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Kanlı Ay Kapalı",
+    "6": "Her Zaman Açık"
+   },
+   "TraderResetInterval": {
+    "0": "Varsayılan",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "14 Gün"
+   },
+   "XPGain": {
+    "0": "Yok"
+   },
+   "YesNo": {
+    "0": "Hayır",
+    "1": "Evet"
+   },
+   "ZombieFeralSense": {
+    "0": "Devre dışı",
+    "1": "Gündüz",
+    "2": "Gece",
+    "3": "Tümü"
+   },
+   "ZombieRageChance": {
+    "0": "Yok"
+   },
+   "ZombieSpeeds": {
+    "0": "Yürüme",
+    "1": "Koşu",
+    "2": "Koş",
+    "3": "Depar",
+    "4": "Kâbus"
+   }
+  }
+ },
+ "v3_2": {
+  "categories": {
+   "Crafting": "Üretim",
+   "Entities": "Varlıklar",
+   "General": "Oyuncu",
+   "Misc": "Çeş.",
+   "Resources": "Kaynaklar",
+   "Tasks": "Görevler",
+   "Traders": "Tüccarlar",
+   "World": "Dünya"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Zombi koku takibini etkinleştirir veya devre dışı bırakır ve zombilerin koku aldığında ne kadar hızlı hareket edeceğini ayarlar.",
+    "label": "Yapay Zeka Koku Modu"
+   },
+   "AirDropFrequency": {
+    "description": "Yardım paketlerinin düşme sıklığı.",
+    "label": "Hava Yardımları"
+   },
+   "AirDropMarker": {
+    "description": "Yardım paketlerinin yerleri için haritayı ve pusula işaretlerini gösterir.",
+    "label": "Hava Yardımlarını İşaretle"
+   },
+   "AirDropRandomTime": {
+    "description": "Hava yardımlarının ne zaman ortaya çıkacağını kontrol edebilmeni sağlar. Tahmin edilebilir hava yardımları için belirli bir zaman seç veya tamamen rastgele ortaya çıkmaları için Herhangi seçeneğini işaretle.\\n\\nHiçbiri = Varsayılan öğlen hava yardımı.\\nSabah = 04.00 - 10.00\\nÖğlen = 10.00 - 14.00\\nAkşam = 15.00 - 20.00\\nGece = 20.00 - 24.00\\nTüm Gün = 04.00 - 20.00",
+    "label": "Hava Yardımı Değişikliği"
+   },
+   "AllowCompass": {
+    "description": "Oyuncu pusulasını gösterir.",
+    "label": "Pusulaya İzin Ver"
+   },
+   "AllowMap": {
+    "description": "Oyun içi haritayı etkinleştirir.",
+    "label": "Haritaya İzin Ver"
+   },
+   "AllowScreenMarkers": {
+    "description": "Ekranda gezinme işaretçilerini gösterir. Harita işaretçileri görünmeye devam eder.",
+    "label": "Ekran İşaretçilerine İzin Ver"
+   },
+   "AllowZombieDigging": {
+    "description": "Zombilerin araziyi kazabilmesine izin verir. Yanlara doğru kazmaya da devam edebilirler.",
+    "label": "Zombilerin Kazabilmesi"
+   },
+   "AmmoLootCount": {
+    "description": "Ganimette bulunan mühimmat miktarı.",
+    "label": "Mühimmat Bolluğu"
+   },
+   "ApiaryInput": {
+    "description": "Bal üretimine başlamak için gereken çiçek miktarını belirler.",
+    "label": "Kovanlık Girişi"
+   },
+   "ApiaryOutput": {
+    "description": "Her bir üretim döngüsünde üretilen bal miktarı.",
+    "label": "Kovanlık Verimi"
+   },
+   "ApiaryTime": {
+    "description": "Kovanlığın bal üretmesi için gereken süreyi ayarlar.",
+    "label": "Kovanlık Süresi"
+   },
+   "ArmorLootCount": {
+    "description": "Ganimette bulunan zırh ve zırh parçası miktarı.",
+    "label": "Zırh Bolluğu"
+   },
+   "BackpackCrafting": {
+    "description": "Oyuncunun doğrudan sırt çantasından hangi öğeleri üretebileceğini kontrol eder.\\n\\nHayır seçilirse sırt çantasından üretim yapma özelliği devre dışı bırakılır.\\nEvet seçilirse sırt çantasından üretim yapmaya izin verilir.\\nSınırlı seçilirse sırt çantasından sınırlı bir tarif listesi kullanılarak üretim yapmaya izin verilir.\\nSadece Çalışma Tezgâhı seçilirse çalışma tezgâhının üretilmesine izin verilir ama sırt çantasında başka hiçbir şey üretilemez.",
+    "label": "Sırt Çantası Üretimi"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gündüz vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif yiyecek kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gündüz)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gündüz vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşmanın Yeniden Doğması (Gündüz)"
+   },
+   "BiomeGSModifier": {
+    "description": "Biyom temelli zorluk seviyesi değiştirici. Daha zor biyomlar, düşman kuvvetini ve ganimet aşamasını temel ilerlemenin ötesinde artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Oyun Aşaması"
+   },
+   "BiomeLSModifier": {
+    "description": "Biyom başına uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Ganimet Aşaması"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gece)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gece vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif besin kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gece)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gece)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gece vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Zombinin Yeniden Doğması (Gece)"
+   },
+   "BiomeProgression": {
+    "description": "Biyom tehlikelerini etkinleştirir. Hava Durumu veya Fırtınalar bu ayardan etkilenmez.",
+    "label": "Biyom İlerlemesi"
+   },
+   "BlockDamage": {
+    "description": "Oyuncuların bloklara verdiği hasar miktarı.",
+    "label": "Blok Hasarı"
+   },
+   "BlockDamageAI": {
+    "description": "Düşmanların bloklara verdiği hasarın miktarı.",
+    "label": "Düşman Blok Hasarı"
+   },
+   "BlockDamageAIBM": {
+    "description": "Kanlı Aylar sırasında düşmanların bloklara verdiği hasar.",
+    "label": "Kanlı Ay Blok Hasarı"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Kanlı Ay sırasında Oyuncu Başına hayatta kalabilecek maksimum zombi sayısını kontrol eder.\\n\\nYakındaki oyuncular en fazla 30 zombilik bir grubu paylaşabilir. Bu sınır aşılırsa oyun aşaması ölçeklendirme bunun yerine zorluğu artırır. Dünya sınırı, MaxSpawnedZombies sayısının yaklaşık 1,9 katıdır. Daha düşük oyun aşamaları, doğan zombi sayısını azaltabilir.\\n\\nBu ayarı artırmak performansı büyük ölçüde etkileyebilir.",
+    "label": "Kanlı Ay Sayısı"
+   },
+   "BloodMoonFrequency": {
+    "description": "Kanlı Aylar arasındaki oyun içi gün sayısıdır. Devre dışı bırakılırsa Kanlı Ay olmaz.",
+    "label": "Kanlı Ay Sıklığı"
+   },
+   "BloodMoonRange": {
+    "description": "Kanlı Ay sıklığından sonra etkinliğin gerçekleşmesi için geçecek gün sayısı.\\n\\nÖrneğin: 7 sıklık + 5 gün durumunda Kanlı Ay 7. ile 12. günler arasında rastgele bir günde gerçekleşir.\\n\\n0 Gün = Rastgele gün belirlenmez.",
+    "label": "Kanlı Ay Aralığı"
+   },
+   "BloodMoonWarning": {
+    "description": "Kanlı Ay uyarısının baş üstü göstergesinde görüneceği zamanı ayarlar ve gün sayısı kırmızıya döner.",
+    "label": "Kanlı Ay Uyarısı"
+   },
+   "BookLootCount": {
+    "description": "Ganimette bulunan kitap ve şema miktarını kontrol eder.",
+    "label": "Kitap Bolluğu"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde gömülü görevlerin görünmesine izin verir. Hayır = Yalnızca İlgi Alanı görevleri.",
+    "label": "Gömülü Görevler"
+   },
+   "ChallengesEnabled": {
+    "description": "Oyun içi mücadele sistemini etkinleştirir.",
+    "label": "Mücadeleler"
+   },
+   "ChickenCoopInput": {
+    "description": "Üretime başlamak için gereken yem miktarını ayarlar.",
+    "label": "Tavuk Kümesi Girdisi"
+   },
+   "ChickenCoopOutput": {
+    "description": "Her üretim döngüsünde üretilen tavuk, yumurta ve tüy miktarı.",
+    "label": "Tavuk Kümesi Verimi"
+   },
+   "ChickenCoopTime": {
+    "description": "Tavuk kümesinin tavuk, yumurta ve tüy üretmesi için gereken süreyi ayarlar.",
+    "label": "Tavuk Kümesi Süresi"
+   },
+   "CraftingInput": {
+    "description": "Üretim için gereken malzeme miktarı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Maliyeti"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Ganimette bulunan üretim dergisi miktarını kontrol eder.",
+    "label": "Dergi Bolluğu"
+   },
+   "CraftingMaxTier": {
+    "description": "Üretilen öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Üretim Kalitesi"
+   },
+   "CraftingOutput": {
+    "description": "Üretim başına üretilen öğe sayısı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Verimi"
+   },
+   "CraftingProgression": {
+    "description": "Dergi ve şema temelli üretim ilerlemesini etkinleştirir veya devre dışı bırakır.",
+    "label": "Üretim İlerlemesi"
+   },
+   "CraftingTime": {
+    "description": "Öğe üretmek için gereken süre.",
+    "label": "Üretim Zamanlayıcısı"
+   },
+   "CropGrowthSpeed": {
+    "description": "Oyuncunun ektiği mahsullerin ve ağaçların büyüme hızını ayarlar. Daha yüksek bir yüzde, daha uzun büyüme süresi anlamına gelir. Not: Değişikliklerin etkili olması için mevcut kayıt dosyalarında tekrar mahsul ekilmesi gerekir.",
+    "label": "Mahsul Büyümesi"
+   },
+   "CropOutput": {
+    "description": "Yabani mahsullerden ve oyuncunun ektiği ekinlerden elde edilen kaynak miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Mahsul Verimi"
+   },
+   "CrouchRunSpeed": {
+    "description": "Eğilme ve koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilerek Koşma Hızı"
+   },
+   "CrouchSpeed": {
+    "description": "Eğilme ve yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilme Hızı"
+   },
+   "DayLightLength": {
+    "description": "Oyun içi gündüz saatlerinin sayısını ayarlar. Her Zaman Gece ve Her Zaman Gündüz beklenildiği gibi çalışır. Gün ışığı süresi ayarları:\\n\\n 4 = 10.00 - 14.00\\n 6 = 09.00 - 15.00\\n 8 = 08.00 - 16.00\\n10 = 07.00 - 17.00\\n12 = 06.00 - 18.00\\n14 = 05.00 - 19.00\\n16 = 04.00 - 20.00\\n18 = 04.00 - 22.00\\n20 = 02.00 - 22.00",
+    "label": "Günışığı Süresi"
+   },
+   "DayNightLength": {
+    "description": "Oyundaki 24 saatin gerçek hayatta kaç dakika geçeceğini belirler.",
+    "label": "24 Saatlik Döngü"
+   },
+   "DeathPenalty": {
+    "description": "Ölümden sonra uygulanan ölüm cezasını belirler.\\n\\nYok = Ceza uygulanmaz.\\nYalnızca DP = Varsayılan DP kaybı.\\nYaralı = Yeniden doğunca bazı zayıflatmalar devam eder ve su/yiyecek %50'ye sıfırlanır.\\nKalıcı Ölüm = Karakter sıfırlanır.",
+    "label": "Ölüm Cezası"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Ölüm Yıpranması etkinleştirildiğinde bu ayar, ölümle birlikte kaybedilen sağlamlık yüzdesini belirler.",
+    "label": "Ölüm Yıpranması Miktarı"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Ölünce öğelerin yıpranıp yıpranmayacağını belirler.\\n\\nYok = Kayıp olmaz.\\nSağlamlık = Onarılabilecek mevcut sağlamlığın bir kısmını azaltır.\\nMaks. Sağlamlık = Maksimum sağlamlığı azaltır ve onarım sınırını düşürür.\\nHer İkisi = Öğeler hem mevcut hem de maksimum sağlamlığını kaybeder.",
+    "label": "Ölüm Yıpranması"
+   },
+   "DewCollectorInput": {
+    "description": "Çiy toplamaya başlamak için gereken kavanoz miktarını belirler.",
+    "label": "Çiy Toplayıcı Girişi"
+   },
+   "DewCollectorOutput": {
+    "description": "Çiy toplayıcının her döngüde ürettiği su miktarı.",
+    "label": "Çiy Toplayıcı Verimi"
+   },
+   "DewCollectorTime": {
+    "description": "Çiy toplayıcının su üretmesi için gereken süreyi ayarlar.",
+    "label": "Çiy Toplayıcı Süresi"
+   },
+   "DrinkLootCount": {
+    "description": "Kaplarda bulunan içecek miktarı.",
+    "label": "İçecek Bolluğu"
+   },
+   "DropOnDeath": {
+    "description": "Ölüm durumunda hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nYalnızca Alet Kemeri = Alet kemerindeki öğeler düşer.\\nYalnızca Sırt Çantası = Sırt çantasındaki öğeler düşer.\\nTümünü Sil = Tüm öğeler silinir.",
+    "label": "Ölünce Düşür"
+   },
+   "DropOnQuit": {
+    "description": "Çıkış yapıldığında hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nAlet kemeri = Alet kemerindeki öğeler düşer.\\nSırt çantası = Sırt çantasındaki öğeler düşer.",
+    "label": "Çıkınca Düşür"
+   },
+   "DukesLootCount": {
+    "description": "Ganimette bulunan Duke parası ve eski para miktarı.",
+    "label": "Para Bolluğu"
+   },
+   "ElectricalOutput": {
+    "description": "Ne kadar elektrik gücü üretileceğini kontrol eder.",
+    "label": "Elektrik Çıktısı"
+   },
+   "EncumbranceModifier": {
+    "description": "Ağır yük bindirilmiş sırt çantası yuvalarının sayısını kontrol eder. Değerler Devre Dışı (yük ağır gelmez) ile Tam (maksimum ağırlaşma) arasındadır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Ağır Yük Yuvaları"
+   },
+   "EnemySpawnMode": {
+    "description": "Düşman doğmasını etkinleştirir veya devre dışı bırakır.",
+    "label": "Düşman Doğması"
+   },
+   "EntityDamage": {
+    "description": "Düşmanların oyunculara ne kadar hasar vereceğini kontrol eder. Bu miktar, oyuncuların diğer gelen hasarlarıyla birleştirilir.",
+    "label": "Düşmanın Verdiği Hasar"
+   },
+   "EntityIncomingDamage": {
+    "description": "Düşmanlar ve hayvanlar gibi varlıkların oyunculardan aldığı hasar.",
+    "label": "Varlığın Aldığı Hasar"
+   },
+   "FoodLootCount": {
+    "description": "Kaplarda bulunan yiyecek miktarı.",
+    "label": "Yiyecek Bolluğu"
+   },
+   "FullChickenStressEvent": {
+    "description": "Tutulan tavukların stres seviyesi %100'e ulaştığında bir etkinliği etkinleştirir. \"Hiçbiri\" seçeneği, etkinlikleri devre dışı bırakır. \"Rastgele\" seçeneğinde aşağıdaki etkinliklerden biri rastgele seçilir:\\n\\nFirari Tavuk = Tavuk elinden kaçar.\\nÖfkeli Tavuk = Tavuğun sana düşman olur.\\nZombi Ordusu = Tavuğunun stresi, bir zombi ordusu çağırır.\\nKatil Tavuklar = Öfkeli tavuklar hep birlikte sana düşman olur.",
+    "label": "Tavuk Stresi Etkinliği"
+   },
+   "GlobalGSModifier": {
+    "description": "Seviyene ve hayatta kaldığın gün sayısına bağlı olarak düşman türlerini, zorluk seviyesini, ganimet kalitesini ve Kanlı Ay yoğunluğunu belirler. Değer ne kadar yüksek olursa zorluk o kadar artar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Oyun Aşaması"
+   },
+   "GlobalLSModifier": {
+    "description": "Oyuncunun ganimet aşamasına uygulanan genel çarpan. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Ganimet Aşaması"
+   },
+   "GlobalLootCount": {
+    "description": "Genel anlamda dünyada bulunan toplam ganimet miktarını ayarlar. \"Yok\" seçeneği, zombi torbası düşüşleri ve malzeme kasaları dâhil tüm ganimeti devre dışı bırakır.",
+    "label": "Ganimet Bolluğu"
+   },
+   "GlobalTSModifier": {
+    "description": "Tüccar aşaması ilerlemesine uygulanan genel değiştirici. Tüccarlar tarafından satılan öğelerin kalitesini ve çeşitliliğini kontrol eder. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Tüccar Aşaması"
+   },
+   "HarvestingOutput": {
+    "description": "Blok ve öğe hasadından elde edilen kaynak miktarını kontrol eder. Cevherleri, tohumları veya mahsulleri etkilemez. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Kaynak Verimi"
+   },
+   "HeadshotMode": {
+    "description": "Kafadan vuruş hasarının nasıl işleneceğini belirler.\\n\\nSadece Kafadan Vuruş = Düşmanlara sadece kafadan vuruşla hasar verilebilir.\\nBitirici Kafadan Vuruş = Vücuda yapılan vuruşlar hasar verir fakat sadece kafadan vuruş öldürebilir.\\n\\nPasif hayvanlara karşı geçerli değildir.",
+    "label": "Kafadan Vuruş Modu"
+   },
+   "HeadshotMultiplier": {
+    "description": "Oyuncuların varlıklara verdiği kafadan vuruş hasarına uygulanan çarpan.",
+    "label": "Kafadan Vuruş Çarpanı"
+   },
+   "HeatMapSensitivity": {
+    "description": "Oyuncu aktivitesinin, ısı haritasını etkileme miktarını kontrol eder. Daha yüksek ısı, çığırtkanların doğma ihtimalini artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Isı Haritası Duyarlılığı"
+   },
+   "HungerMultiplier": {
+    "description": "Oyuncuların yiyecekleri ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, yiyecek tüketimini artırır.",
+    "label": "Açlık Çarpanı"
+   },
+   "IncomingDamage": {
+    "description": "Oyuncunun tüm kaynaklardan aldığı hasar miktarı.",
+    "label": "Oyuncunun Aldığı Hasar"
+   },
+   "InfectionChance": {
+    "description": "Oyuncunun enfeksiyon geçirme ihtimalini artırır ya da azaltır.",
+    "label": "Enfeksiyon İhtimali"
+   },
+   "InfectionRate": {
+    "description": "Enfeksiyonun ilerleme hızını ayarlar.",
+    "label": "Enfeksiyon Hızı"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Yeni oyuncular için adım adım ilerleyen hazırlık mücadelesini etkinleştir.",
+    "label": "Hazırlık Mücadeleleri"
+   },
+   "IntroQuestEnabled": {
+    "description": "Tam görev ilerlemesine geçmek için başlangıçtaki gömülü malzeme bulma görevini atlar.",
+    "label": "Hazırlık Görevi"
+   },
+   "ItemDegradation": {
+    "description": "Silahların ve aletlerin sağlamlıklarını kaybetme hızı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Öğe Yıpranması"
+   },
+   "JarRefund": {
+    "description": "Öğeleri kullandıktan sonraki kavanoz iadesi ihtimali.",
+    "label": "Kavanoz İadesi"
+   },
+   "JumpStrength": {
+    "description": "Oyuncunun zıplama yüksekliğini değiştirir.",
+    "label": "Zıplama Kuvveti"
+   },
+   "LootBagChance": {
+    "description": "Düşmanların ölünce ganimet torbası düşürme ihtimaline uygulanan çarpan.",
+    "label": "Ganimet Torbası Düşüşü"
+   },
+   "LootMaxTier": {
+    "description": "Ganimette ortaya çıkabilecek silahların ve öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Ganimet Kalitesi"
+   },
+   "LootRespawnDays": {
+    "description": "Ziyaret edilmemiş alanlardaki ganimet kaplarının sıfırlanması için gereken oyun içi gün sayısı.",
+    "label": "Ganimet Yeniden Doğma Süresi (Gün)"
+   },
+   "LootTimer": {
+    "description": "Kapları yağmalamak için gereken süre.",
+    "label": "Yağmalama Sayacı"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Ölünce kaybedilen rastgele öğelerin sayısını belirler.",
+    "label": "Ölünce Kaybedilen Öğe Sayısı"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Ölünce hangi öğelerin kaybedileceğini belirler.\\n\\nHiçbiri = Hiçbir şey.\\nTümü = Tüm öğeler.\\nYalnızca Alet Kemeri = Yalnızca alet kemerindeki öğeler.\\nYalnızca Sırt Çantası = Yalnızca sırt çantasındaki öğeler.\\nEkipman = Giyilen zırh ve kıyafetler.\\nYalnızca Taşınanlar = Alet kemeri ile sırt çantasındaki öğeler.",
+    "label": "Ölünce Öğe Kaybetme"
+   },
+   "MaxDegradationAmount": {
+    "description": "Bir öğenin onarılınca ne kadar yıpranacağını belirler.",
+    "label": "Onarım Yıpranması"
+   },
+   "MaxEnemyTier": {
+    "description": "Doğabilen zombi türlerinin en üst kademesidir.",
+    "label": "Maks. Düşman Kademesi"
+   },
+   "MaxTechType": {
+    "description": "Genel anlamda silahlar ve öğeler için mevcut en yüksek teknoloji türünü ayarlayarak ilerlemeyi ve oynama temposunu kontrol etmene imkân tanır. Aşağıdaki örneklere göz atabilirsin.\\n\\nTeknoloji 0 = Taş ve boru\\nTeknoloji 1 = Demir ve AK\\nTeknoloji 2 = Çelik ve Taktik Saldırı\\nTeknoloji 3 = Delgi ve M60",
+    "label": "Maks. Teknoloji Türü"
+   },
+   "MedicalLootCount": {
+    "description": "Ganimette bulunan tıbbi malzeme miktarı.",
+    "label": "Tıbbi Malzeme Bolluğu"
+   },
+   "MeleeDamage": {
+    "description": "Oyuncunun yakın dövüş silahları ve aletler ile verdiği hasar.",
+    "label": "Yakın Dövüş Hasarı"
+   },
+   "MeleeLootCount": {
+    "description": "Ganimette bulunan yakın dövüş silahı ve yakın dövüş silahı parçası miktarı.",
+    "label": "Yakın Dövüş Bolluğu"
+   },
+   "MiningOutput": {
+    "description": "Madencilikten kazanılan cevher miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Madencilik Verimi"
+   },
+   "NewbieCoat": {
+    "description": "Etkinleştirilirse yeni oyuncular acemi koruması güçlendirmesiyle doğar.",
+    "label": "Yeni Oyuncu Güçlendirmesi"
+   },
+   "POIQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde İlgi Alanı görevlerinin görünmesine izin verir. Hayır = Yalnızca gömülü görevler.",
+    "label": "İlgi Alanı Görevleri"
+   },
+   "POITierLSModifier": {
+    "description": "İlgi Alanı kademesine göre uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "İlgi Alanı Ganimet Aşaması"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Sağlık ile dayanıklılığın seviyeye göre artıp artmayacağını belirler.",
+    "label": "Seviye İstatistiği Bonusu"
+   },
+   "PointsPerMagazine": {
+    "description": "Beceri dergilerini okumakla kazanılan ilerleme.",
+    "label": "Dergi İlerlemesi"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Tüccar ilerlemesine dâhil edilen günlük görev sayısı. Ek görevler, DP ve ödüller kazandırmaya devam eder fakat tüccar kademesini ilerletmez.",
+    "label": "Günlük Görev Sayısı"
+   },
+   "QuestsEnabled": {
+    "description": "Oyununda görevleri etkinleştirir veya devre dışı bırakır.",
+    "label": "Görevler"
+   },
+   "QuestsPerTier": {
+    "description": "Bir sonraki kademenin kilidini açmak için tamamlanması gereken görev sayısı. Değerler ne kadar yüksek olursa kademeler arası ilerleme o kadar yavaşlar. Hiçbiri = Sınır yoktur ve tüm görev kademelerine erişmeye izin verir.",
+    "label": "Kademe Başına Görev Sayısı"
+   },
+   "RangedDamage": {
+    "description": "Oyuncunun yay, ateşli silahlar ve diğer menzilli silahlar ile verdiği hasar.",
+    "label": "Menzilli Hasar"
+   },
+   "RangedLootCount": {
+    "description": "Ganimette bulunan menzilli silah ve menzilli silah parçası miktarı.",
+    "label": "Menzilli Bolluğu"
+   },
+   "RepairTypes": {
+    "description": "Öğelerin nasıl onarılacağını belirler:\\n\\nHiçbiri = Onarım yok\\nYalnızca Onarım = Yalnızca Onarım Kiti\\nYalnızca Birleştirme = Birleştirme İstasyonunda onarım\\nİkisi de = Onarım Kitleri ve Birleştirme İstasyonu",
+    "label": "Onarım Yöntemi"
+   },
+   "ResourceLootCount": {
+    "description": "Ganimette bulunan kaynak öğesi miktarı.",
+    "label": "Kaynak Bolluğu"
+   },
+   "RunSpeed": {
+    "description": "Koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Koşma Hızı"
+   },
+   "ScrappingOutput": {
+    "description": "Öğelerden hurda çıkarıldığında elde edilen miktar.",
+    "label": "Hurda Çıkarma Verimi"
+   },
+   "SeedDropOutput": {
+    "description": "Oyuncunun ektiği mahsul hasadından elde edilen tohum miktarı. Tohum düşme ihtimalini veya ağaçlardan düşen tohumları artırmaz.",
+    "label": "Tohum Düşüşü"
+   },
+   "ShowDayTime": {
+    "description": "Ekranda gün ve saat bilgisini gösterir. Hayır olarak belirlenmişse Kanlı Ay Uyarısı da devre dışı bırakılır.",
+    "label": "Günü/Saati Göster"
+   },
+   "ShowEnemyDamage": {
+    "description": "Varlıklara isabet edildiğinde havada hasar sayılarını gösterir.",
+    "label": "Varlık Hasarını Göster"
+   },
+   "ShowHealthBars": {
+    "description": "Varlık sağlığı çubuklarını gösterir veya gizler.",
+    "label": "Varlık Sağlığı Çubukları"
+   },
+   "ShowLocationInfo": {
+    "description": "Biyom ve İlgi Alanı adını ve zorluğunu gösterir.",
+    "label": "Konum Bilgisini Göster"
+   },
+   "ShowXP": {
+    "description": "DP çubuğunu ve DP açılır mesajını ekranda gösterir veya gizler.",
+    "label": "DP'yi Göster"
+   },
+   "SillyBigHeads": {
+    "description": "Zombiler, hayvanlar ve tüccarlar için \"koca kafa modunu\" etkinleştirir.",
+    "label": "Koca Kafalar"
+   },
+   "SillyBlackandWhite": {
+    "description": "1960'ların klasik korku filmlerinden ilham alınmış, gri tonlu klasik bir renk paletini etkinleştirir.",
+    "label": "Siyah - Beyaz"
+   },
+   "SillyCelebrate": {
+    "description": "Varlık öldürüldüğünde kutlama amaçlı konfeti atılma özelliğini etkinleştirir. \"Yalnızca Kafadan Vuruşlar\" seçeneği, sadece kafadan vuruşla öldürmelerde konfeti atılmasını sağlar ve böylece et hasat etmek için hayvanların gövdeden vurulabilmesini sağlar. \"Yalnızca Kafadan Vuruşlar\" seçeneği, pasif hayvanlara karşı geçerli değildir.",
+    "label": "Öldürme Kutlaması"
+   },
+   "SillyLowGravity": {
+    "description": "Oyun içi yer çekimi miktarını kontrol eder.",
+    "label": "Yer Çekimi"
+   },
+   "SillySounds": {
+    "description": "Oyun içi eylemler için komik sesleri etkinleştirir.",
+    "label": "Saçma Sesler"
+   },
+   "SillyTinyZombies": {
+    "description": "Zombilerin minik versiyonlarını etkinleştirir.",
+    "label": "Minik Zombiler"
+   },
+   "SkillGainRate": {
+    "description": "Beceri puanları kazanmak için kaç seviye gerektiğini ayarlar.",
+    "label": "Beceri Kazanma Hızı"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Beceri puanları verilince kaç beceri puanı kazanılacağını kontrol eder.",
+    "label": "Beceri Kazanma Miktarı"
+   },
+   "SmeltingType": {
+    "description": "Demirci ocağında üretimin nasıl yapılacağını kontrol eder. Öğeleri demirci ocağında eritebilir veya sırt çantandaki malzemeleri kullanarak doğrudan üretim yapabilirsin.",
+    "label": "Eritici Türü"
+   },
+   "StackSizeMultiplier": {
+    "description": "Birikebilen tüm öğelerin yığın miktarına uygulanan çarpan. Maksimum yığın miktarı 30.000'dir.",
+    "label": "Yığın Miktarı Çarpanı"
+   },
+   "StaminaRegen": {
+    "description": "Dayanıklılık yenileme miktarını kontrol eder. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Yenileme"
+   },
+   "StaminaUsage": {
+    "description": "Koşma, zıplama ve saldırma gibi eylemlerde harcanan dayanıklılık miktarı. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Kullanımı"
+   },
+   "StarterSkillPoints": {
+    "description": "Hazırlık mücadelelerini tamamladıktan sonra veya hazırlık mücadeleleri devre dışı bırakılmışsa oyun başlangıcında verilen beceri puanı sayısı.",
+    "label": "Temel Beceri Puanları"
+   },
+   "StormFreq": {
+    "description": "Fırtına sıklığını ayarlar. Hiçbiri seçilirse fırtınalar devre dışı bırakılır.",
+    "label": "Fırtına Sıklığı"
+   },
+   "StormWarning": {
+    "description": "Oyuncunun fırtına sirenini duyup duymayacağını ve ekranda fırtına uyarısı görüp görmeyeceğini kontrol eder.",
+    "label": "Fırtına Uyarısı"
+   },
+   "TemperatureSurvival": {
+    "description": "Ortam sıcaklığının (sıcak ve soğuk) oyuncuyu etkileyip etkilemeyeceğini kontrol eder.",
+    "label": "Sıcaklığa Bağlı Hayatta Kalma"
+   },
+   "TerrainDamage": {
+    "description": "Oyuncuların araziye verdiği hasarın miktarı.",
+    "label": "Arazi Hasarı"
+   },
+   "ThirstMultiplier": {
+    "description": "Oyuncuların suyu ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, su tüketimini artırır.",
+    "label": "Susuzluk Çarpanı"
+   },
+   "TraderBuyLimit": {
+    "description": "Tüccarın, daha fazlasını reddedene dek bir oyuncudan satın alabileceği maksimum öğe sayısı. Daha düşük değerler, her stok doldurma döngüsünde satabileceğin öğe sayısını sınırlar.",
+    "label": "Tüccarın Satın Alma Sınırı"
+   },
+   "TraderBuyPrices": {
+    "description": "Oyuncuların tüccarlardan satın aldığı öğelerin fiyatını ayarlar.",
+    "label": "Satın Alma Fiyatı"
+   },
+   "TraderDialog": {
+    "description": "Tüccar repliklerini ve ekrandaki diyalogları açıp kapatır.",
+    "label": "Ticaret Diyaloğu"
+   },
+   "TraderHours": {
+    "description": "Tüccarın açılış ve kapanış saatlerini kontrol eder. 24 Saatlik Döngü ve Gün Işığı Süresi bu ayarı etkilemez. Kanlı Ay Kapalı, yalnızca kanlı ay esnasında kapalı olacağı anlamına gelir. Varsayılan seçeneği, XML değerlerini kullanır.\\n\\nVarsayılan XML = 04.00 - 22.00\\n       Sabah = 04.00 - 12.00\\n       Öğlen = 10.00 - 18.00\\n       Akşam = 16.00 - 22.00\\n           Gece = 22.00 - 04.00",
+    "label": "Tüccar Çalışma Saatleri"
+   },
+   "TraderItemAbundance": {
+    "description": "Tüccardaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccardaki Öğe Sayısı"
+   },
+   "TraderMaxTier": {
+    "description": "Tüccardan satın alınabilecek öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Tüccar Kalitesi"
+   },
+   "TraderProtection": {
+    "description": "Tüccar bileşenleri için hasar korumasını ve oyuncuların o alanı elde edip edemeyeceğini belirler.",
+    "label": "Tüccar Koruması"
+   },
+   "TraderResetInterval": {
+    "description": "Tüccarların envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccar Sıfırlaması"
+   },
+   "TraderSellPrices": {
+    "description": "Oyuncuların tüccarlara sattığı öğelerin fiyatını ayarlar.",
+    "label": "Satış Fiyatı"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Diğer tüccarlardan görev alma seçeneğini etkinleştirir.",
+    "label": "Tüccar Rotaları"
+   },
+   "TradersEnabled": {
+    "description": "NPC tüccarlarla ticareti etkinleştirir.",
+    "label": "Ticaret Etkin"
+   },
+   "TreasureMapChance": {
+    "description": "Hazine Haritalarının ganimet kaplarında ve düşman ganimet torbalarında çıkma ihtimaline uygulanan çarpan.",
+    "label": "Hazine Haritası İhtimali"
+   },
+   "VehicleBlockDamage": {
+    "description": "Araçların bloklara verdiği hasar miktarı.",
+    "label": "Aracın Blok Hasarı"
+   },
+   "VehicleEntityDamage": {
+    "description": "Araçların varlıklara verdiği hasar miktarı.",
+    "label": "Aracın Varlık Hasarı"
+   },
+   "VehicleFuelUsage": {
+    "description": "Araçlar için yakıt tüketim hızını ayarlar.",
+    "label": "Araç Yakıt Kullanımı"
+   },
+   "VehicleSelfDamage": {
+    "description": "Aracının çarpışmalardan aldığı hasar miktarı.",
+    "label": "Aracın Kendi Hasarı"
+   },
+   "VendingEnabled": {
+    "description": "Otomat işlevini etkinleştirir veya devre dışı bırakır.",
+    "label": "Otomat Etkin"
+   },
+   "VendingItemAbundance": {
+    "description": "Tüccar otomatlarındaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomattaki Öğe Sayısı"
+   },
+   "VendingResetInterval": {
+    "description": "Tüccar otomatlarının envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomat Sıfırlaması"
+   },
+   "WalkSpeed": {
+    "description": "Yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Yürüme Hızı"
+   },
+   "WorkstationCrafting": {
+    "description": "Evet seçilirse çalışma istasyonunda üretim yapmaya izin verilir. Hayır seçilirse sadece oyuncunun sırt çantasından üretim yapmasına izin verilir.",
+    "label": "Çalışma İstasyonu Üretimi"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Dünyada işlevsel çalışma istasyonlarının ortaya çıkmasına izin verir. Yeni Navezgane veya rastgele dünya haritası oluşturmalarına uygulanır.",
+    "label": "Yabandaki Çalışma İstasyonları"
+   },
+   "XPMultiplier": {
+    "description": "Kazanılan tüm deneyime uygulanan çarpan.",
+    "label": "DP çarpanı"
+   },
+   "ZombieBMMove": {
+    "description": "Kanlı Ay sürüleri ve fırtınaları sırasında zombi hareket hızını kontrol eder.",
+    "label": "Zombi Kanlı Ay Hızı"
+   },
+   "ZombieFeralMove": {
+    "description": "Vahşi zombilerin hareket hızını ayarlar.",
+    "label": "Zombi Vahşi Hızı"
+   },
+   "ZombieFeralSense": {
+    "description": "Zombilerin oyuncuları duyma veya görme yoluyla tespit etme kolaylığı.",
+    "label": "Zombi Vahşi Duyusu"
+   },
+   "ZombieMove": {
+    "description": "Normal zombiler için gündüz vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gündüz Hızı"
+   },
+   "ZombieMoveNight": {
+    "description": "Normal zombiler için gece vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gece Hızı"
+   },
+   "ZombieRageChance": {
+    "description": "Zombilerin hasar aldığı zaman öfke moduna girme ihtimali.",
+    "label": "Zombi Öfkesi"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Zombilerin hayvan leşlerini yiyip yemeyeceğini belirler.",
+    "label": "Zombilerin Hayvanları Yemesi"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Zorluk",
+   "Official": "Resmî"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Varsayılan/Kolay: Kıyametin biraz daha merhametli olabilen hâli.",
+    "label": "Maceracı"
+   },
+   "Almost Creative": {
+    "description": "Gerçek kıyamet olmadan kıyamet. Çünkü ölmek hiç keyifli değil.",
+    "label": "Neredeyse Yaratıcı"
+   },
+   "Bite Club": {
+    "description": "Bu ekstrem, kalıcı ölüm modunda yeniden doğmak korkaklar içindir. Tek bir canın var, akıllıca kullan.",
+    "label": "Isırık Kulübü"
+   },
+   "Caveman Life": {
+    "description": "En son teknolojik aletin çubuk olduğu bir kıyamette hayatta kal.",
+    "label": "Mağara Yaşamı"
+   },
+   "Chibi Mode": {
+    "description": "Sadece tatlı değiller... Aynı zamanda hızlılar da! Neyse ki hız konusunda sen de fena değilsin.",
+    "label": "Chibi Modu!"
+   },
+   "Disaster Film": {
+    "description": "Felaketler, düzeltemeyeceğin kadar hızlı bir şekilde üst üste geliyor.",
+    "label": "Felaket Filmi"
+   },
+   "Dumpster Diver": {
+    "description": "Çöpten harikalar yaratmak gibisi yok! Kullanıyorsan istifliyor sayılmazsın.",
+    "label": "Çöplük Kuşu"
+   },
+   "Dying World": {
+    "description": "Kaynaklar yitip gidiyor. Sıranın sana gelmesi an meselesi.",
+    "label": "Ölen Dünya"
+   },
+   "Insane": {
+    "description": "Delicesine Zor: Yaptığın her hatanın pişmanlığını yaşayacağın kıyamet.",
+    "label": "Delicesine Zor"
+   },
+   "Legacy Survival": {
+    "description": "Modern sonuçlara sahip eski usul hayatta kalma mücadelesi.",
+    "label": "Eski Usul Hayatta Kalma"
+   },
+   "Madmoles Mayhem": {
+    "description": "Daha az malzeme, daha ağır cezalar ve daimî baskı. Madmole... Fena kokmuyor!",
+    "label": "Madmole'un Kargaşası"
+   },
+   "Nomad": {
+    "description": "Normal: Dağları delecek kadar azimlisin.",
+    "label": "Göçebe"
+   },
+   "Scavenger": {
+    "description": "Acemi: Destek tekerleriyle bisiklete biner gibi bir kıyamet deneyimi.",
+    "label": "Çöpçü"
+   },
+   "Seven days Later": {
+    "description": "Hızlı hareket eden zombilerden oluşan kaotik sürülere sahip, modern filmlerden esinlenilmiş bir mod.",
+    "label": "7 Gün Sonra"
+   },
+   "True Survivalist": {
+    "description": "Acımasız: Mahvolmak eğlencenin bir parçası.",
+    "label": "Hayatta Kalma Ustası"
+   },
+   "Undead Matinee": {
+    "description": "Zombilerin daha yavaş hareket ettiği ve sayıca fazla olduğu, mühimmat kıtlığına sahip, yakın dövüş odaklı ve eski filmlerden esinlenilmiş bir mod.",
+    "label": "Hortlak Matinesi"
+   },
+   "Warrior": {
+    "description": "Zor: Artık işler ciddiye biniyor ama en azından beyin sarsıntısı geçirmek bedava.",
+    "label": "Savaşçı"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Yok",
+    "1": "Yürüme",
+    "2": "Koşu",
+    "3": "Koş",
+    "4": "Depar",
+    "5": "Kâbus"
+   },
+   "AirDropRandomTime": {
+    "0": "Yok",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Tüm Gün",
+    "6": "Tümü"
+   },
+   "AirDrops": {
+    "0": "Devre dışı",
+    "1": "Her gün",
+    "2": "1-3 Gün",
+    "3": "3 Gün",
+    "4": "3-7 Gün",
+    "5": "7 Gün",
+    "6": "1-7 Gün"
+   },
+   "ApiaryInput": {
+    "0": "Yok"
+   },
+   "BackpackCrafting": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Sınırlı",
+    "3": "Yalnızca Çalışma Tezgâhı"
+   },
+   "BarterValues": {
+    "0": "Yok"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Yok",
+    "1": "Varsayılan",
+    "2": "Çok Düşük",
+    "3": "Düşük",
+    "4": "Orta",
+    "5": "Yüksek",
+    "6": "Çok Yüksek"
+   },
+   "BloodMoonCount": {
+    "0": "4 Düşmanlar",
+    "1": "6 Düşmanlar",
+    "2": "8 Düşmanlar",
+    "3": "10 Düşmanlar",
+    "4": "12 Düşmanlar",
+    "5": "16 Düşmanlar",
+    "6": "24 Düşmanlar",
+    "7": "32 Düşmanlar",
+    "8": "64 Düşmanlar"
+   },
+   "BloodMoonFrequency": {
+    "0": "Devre dışı",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "8 Gün",
+    "9": "9 Gün",
+    "10": "10 Gün",
+    "11": "14 Gün",
+    "12": "20 Gün",
+    "13": "30 Gün"
+   },
+   "BloodMoonRange": {
+    "0": "0 Gün",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "7 Gün",
+    "6": "10 Gün",
+    "7": "14 Gün",
+    "8": "20 Gün"
+   },
+   "BloodMoonWarning": {
+    "0": "Devre dışı",
+    "1": "Sabah",
+    "2": "Akşam"
+   },
+   "Celebrate": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Kafadan Vuruş"
+   },
+   "CropGrowthSpeed": {
+    "0": "Yok",
+    "1": "Anında"
+   },
+   "DamageValues": {
+    "0": "Yok"
+   },
+   "DayLightLength": {
+    "0": "Her Zaman Gece",
+    "10": "Her Zaman Gündüz"
+   },
+   "DeathPenalty": {
+    "0": "Yok",
+    "1": "Yalnızca DP",
+    "2": "Yaralı",
+    "3": "Kalıcı Ölüm"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Yok",
+    "1": "Sağlamlık",
+    "2": "Maks. Sağlamlık",
+    "3": "Her İkisi"
+   },
+   "DewCollectorInput": {
+    "0": "Yok"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Devre dışı",
+    "1": "Çok Düşük",
+    "2": "Düşük",
+    "3": "Varsayılan",
+    "4": "Yüksek",
+    "5": "Çok Yüksek"
+   },
+   "DropOnDeath": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar",
+    "6": "Tümünü Sil"
+   },
+   "DropOnQuit": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "Encumbrance": {
+    "0": "Devre dışı",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek",
+    "5": "Tam"
+   },
+   "FullChickenStressEvent": {
+    "0": "Yok",
+    "1": "Rastgele",
+    "2": "Firari Tavuk",
+    "3": "Öfkeli Tavuk",
+    "4": "Zombi Ordusu",
+    "5": "Katil Tavuklar"
+   },
+   "HeadshotMode": {
+    "0": "Yok",
+    "1": "Yalnızca Kafadan Vuruş",
+    "2": "Bitirici Kafadan Vuruş"
+   },
+   "ItemTierOptions": {
+    "0": "Varsayılan"
+   },
+   "JarRefund": {
+    "0": "Yok"
+   },
+   "JumpStrength": {
+    "0": "Yok"
+   },
+   "LootAbundanceValues": {
+    "0": "Yok"
+   },
+   "LootRespawnDays": {
+    "0": "Devre dışı"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "LowDefaultHigh": {
+    "0": "Çok Düşük",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek"
+   },
+   "MaxChunkAge": {
+    "0": "Devre dışı"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Yok"
+   },
+   "MaxEnemyType": {
+    "0": "Normal Olanlar",
+    "1": "Güçlü Olanlar",
+    "2": "Özel Olanlar",
+    "3": "Vahşi Olanlar",
+    "4": "Radyasyonlu Olanlar",
+    "5": "Elitler"
+   },
+   "MaxTechType": {
+    "0": "Yok",
+    "1": "Teknoloji 0",
+    "2": "Teknoloji 1",
+    "3": "Teknoloji 2",
+    "4": "Teknoloji 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Yok"
+   },
+   "PointsPer": {
+    "0": "Yok"
+   },
+   "QuestPerDay": {
+    "0": "Sınırsız"
+   },
+   "QuestPerTier": {
+    "0": "Yok"
+   },
+   "RepairTypes": {
+    "0": "Yok",
+    "1": "Yalnızca Onar",
+    "2": "Yalnızca Birleştir",
+    "3": "Her İkisi"
+   },
+   "ShowLocationTypes": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Ad"
+   },
+   "ShowXP": {
+    "0": "Tümü",
+    "1": "Yalnızca Çubuk",
+    "2": "Yalnızca Bildirimler",
+    "3": "Yok"
+   },
+   "SlowToFast": {
+    "0": "Varsayılan",
+    "1": "Çok Yavaş",
+    "2": "Yavaş",
+    "3": "Normal",
+    "4": "Hızlı",
+    "5": "Çok Hızlı"
+   },
+   "SmeltingType": {
+    "0": "Eritici",
+    "1": "Tarifler"
+   },
+   "SpeedValues": {
+    "0": "Yok"
+   },
+   "StaminaUsage": {
+    "0": "Yok"
+   },
+   "StarterSkillPoints": {
+    "0": "Yok"
+   },
+   "StormFrequency": {
+    "0": "Yok"
+   },
+   "TraderArea": {
+    "0": "Evet",
+    "1": "Alınabilir",
+    "2": "Alınamaz"
+   },
+   "TraderHourPresets": {
+    "0": "Varsayılan",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Kanlı Ay Kapalı",
+    "6": "Her Zaman Açık"
+   },
+   "TraderResetInterval": {
+    "0": "Varsayılan",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "14 Gün"
+   },
+   "XPGain": {
+    "0": "Yok"
+   },
+   "YesNo": {
+    "0": "Hayır",
+    "1": "Evet"
+   },
+   "ZombieFeralSense": {
+    "0": "Devre dışı",
+    "1": "Gündüz",
+    "2": "Gece",
+    "3": "Tümü"
+   },
+   "ZombieRageChance": {
+    "0": "Yok"
+   },
+   "ZombieSpeeds": {
+    "0": "Yürüme",
+    "1": "Koşu",
+    "2": "Koş",
+    "3": "Depar",
+    "4": "Kâbus"
+   }
+  }
+ },
+ "v3_3": {
+  "categories": {
+   "Crafting": "Üretim",
+   "Entities": "Varlıklar",
+   "General": "Oyuncu",
+   "Misc": "Çeş.",
+   "Resources": "Kaynaklar",
+   "Tasks": "Görevler",
+   "Traders": "Tüccarlar",
+   "World": "Dünya"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Zombi koku takibini etkinleştirir veya devre dışı bırakır ve zombilerin koku aldığında ne kadar hızlı hareket edeceğini ayarlar.",
+    "label": "Yapay Zeka Koku Modu"
+   },
+   "AirDropFrequency": {
+    "description": "Yardım paketlerinin düşme sıklığı.",
+    "label": "Hava Yardımları"
+   },
+   "AirDropMarker": {
+    "description": "Yardım paketlerinin yerleri için haritayı ve pusula işaretlerini gösterir.",
+    "label": "Hava Yardımlarını İşaretle"
+   },
+   "AirDropRandomTime": {
+    "description": "Hava yardımlarının ne zaman ortaya çıkacağını kontrol edebilmeni sağlar. Tahmin edilebilir hava yardımları için belirli bir zaman seç veya tamamen rastgele ortaya çıkmaları için Herhangi seçeneğini işaretle.\\n\\nHiçbiri = Varsayılan öğlen hava yardımı.\\nSabah = 04.00 - 10.00\\nÖğlen = 10.00 - 14.00\\nAkşam = 15.00 - 20.00\\nGece = 20.00 - 24.00\\nTüm Gün = 04.00 - 20.00",
+    "label": "Hava Yardımı Değişikliği"
+   },
+   "AllowCompass": {
+    "description": "Oyuncu pusulasını gösterir.",
+    "label": "Pusulaya İzin Ver"
+   },
+   "AllowMap": {
+    "description": "Oyun içi haritayı etkinleştirir.",
+    "label": "Haritaya İzin Ver"
+   },
+   "AllowScreenMarkers": {
+    "description": "Ekranda gezinme işaretçilerini gösterir. Harita işaretçileri görünmeye devam eder.",
+    "label": "Ekran İşaretçilerine İzin Ver"
+   },
+   "AllowZombieDigging": {
+    "description": "Zombilerin araziyi kazabilmesine izin verir. Yanlara doğru kazmaya da devam edebilirler.",
+    "label": "Zombilerin Kazabilmesi"
+   },
+   "AmmoLootCount": {
+    "description": "Ganimette bulunan mühimmat miktarı.",
+    "label": "Mühimmat Bolluğu"
+   },
+   "ApiaryInput": {
+    "description": "Bal üretimine başlamak için gereken çiçek miktarını belirler.",
+    "label": "Kovanlık Girişi"
+   },
+   "ApiaryOutput": {
+    "description": "Her bir üretim döngüsünde üretilen bal miktarı.",
+    "label": "Kovanlık Verimi"
+   },
+   "ApiaryTime": {
+    "description": "Kovanlığın bal üretmesi için gereken süreyi ayarlar.",
+    "label": "Kovanlık Süresi"
+   },
+   "ArmorLootCount": {
+    "description": "Ganimette bulunan zırh ve zırh parçası miktarı.",
+    "label": "Zırh Bolluğu"
+   },
+   "BackpackCrafting": {
+    "description": "Oyuncunun doğrudan sırt çantasından hangi öğeleri üretebileceğini kontrol eder.\\n\\nHayır seçilirse sırt çantasından üretim yapma özelliği devre dışı bırakılır.\\nEvet seçilirse sırt çantasından üretim yapmaya izin verilir.\\nSınırlı seçilirse sırt çantasından sınırlı bir tarif listesi kullanılarak üretim yapmaya izin verilir.\\nSadece Çalışma Tezgâhı seçilirse çalışma tezgâhının üretilmesine izin verilir ama sırt çantasında başka hiçbir şey üretilemez.",
+    "label": "Sırt Çantası Üretimi"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gündüz vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif yiyecek kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gündüz)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gündüz vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gündüz)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gündüz vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşmanın Yeniden Doğması (Gündüz)"
+   },
+   "BiomeGSModifier": {
+    "description": "Biyom temelli zorluk seviyesi değiştirici. Daha zor biyomlar, düşman kuvvetini ve ganimet aşamasını temel ilerlemenin ötesinde artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Oyun Aşaması"
+   },
+   "BiomeLSModifier": {
+    "description": "Biyom başına uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Biyom Ganimet Aşaması"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Biyomlardaki hayvanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç hayvan doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvan Yoğunluğu (Gece)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Aktif biyomlardaki hayvanların gece vakti yeniden doğma oranını artırır. Zombi dışı pasif ve agresif besin kaynaklarını etkiler. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Hayvanların Yeniden Doğması (Gece)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Biyomlardaki düşmanların gece vakti yoğunluğunu geçersiz kılar ve her biyomda kaç düşman doğacağını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Düşman Yoğunluğu (Gece)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Aktif biyomlardaki düşmanların gece vakti yeniden doğma oranını artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Zombinin Yeniden Doğması (Gece)"
+   },
+   "BiomeProgression": {
+    "description": "Biyom tehlikelerini etkinleştirir. Hava Durumu veya Fırtınalar bu ayardan etkilenmez.",
+    "label": "Biyom İlerlemesi"
+   },
+   "BlockDamage": {
+    "description": "Oyuncuların bloklara verdiği hasar miktarı.",
+    "label": "Blok Hasarı"
+   },
+   "BlockDamageAI": {
+    "description": "Düşmanların bloklara verdiği hasarın miktarı.",
+    "label": "Düşman Blok Hasarı"
+   },
+   "BlockDamageAIBM": {
+    "description": "Kanlı Aylar sırasında düşmanların bloklara verdiği hasar.",
+    "label": "Kanlı Ay Blok Hasarı"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Kanlı Ay sırasında Oyuncu Başına hayatta kalabilecek maksimum zombi sayısını kontrol eder.\\n\\nYakındaki oyuncular en fazla 30 zombilik bir grubu paylaşabilir. Bu sınır aşılırsa oyun aşaması ölçeklendirme bunun yerine zorluğu artırır. Dünya sınırı, MaxSpawnedZombies sayısının yaklaşık 1,9 katıdır. Daha düşük oyun aşamaları, doğan zombi sayısını azaltabilir.\\n\\nBu ayarı artırmak performansı büyük ölçüde etkileyebilir.",
+    "label": "Kanlı Ay Sayısı"
+   },
+   "BloodMoonFrequency": {
+    "description": "Kanlı Aylar arasındaki oyun içi gün sayısıdır. Devre dışı bırakılırsa Kanlı Ay olmaz.",
+    "label": "Kanlı Ay Sıklığı"
+   },
+   "BloodMoonRange": {
+    "description": "Kanlı Ay sıklığından sonra etkinliğin gerçekleşmesi için geçecek gün sayısı.\\n\\nÖrneğin: 7 sıklık + 5 gün durumunda Kanlı Ay 7. ile 12. günler arasında rastgele bir günde gerçekleşir.\\n\\n0 Gün = Rastgele gün belirlenmez.",
+    "label": "Kanlı Ay Aralığı"
+   },
+   "BloodMoonWarning": {
+    "description": "Kanlı Ay uyarısının baş üstü göstergesinde görüneceği zamanı ayarlar ve gün sayısı kırmızıya döner.",
+    "label": "Kanlı Ay Uyarısı"
+   },
+   "BookLootCount": {
+    "description": "Ganimette bulunan kitap ve şema miktarını kontrol eder.",
+    "label": "Kitap Bolluğu"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde gömülü görevlerin görünmesine izin verir. Hayır = Yalnızca İlgi Alanı görevleri.",
+    "label": "Gömülü Görevler"
+   },
+   "ChallengesEnabled": {
+    "description": "Oyun içi mücadele sistemini etkinleştirir.",
+    "label": "Mücadeleler"
+   },
+   "ChickenCoopInput": {
+    "description": "Üretime başlamak için gereken yem miktarını ayarlar.",
+    "label": "Tavuk Kümesi Girdisi"
+   },
+   "ChickenCoopOutput": {
+    "description": "Her üretim döngüsünde üretilen tavuk, yumurta ve tüy miktarı.",
+    "label": "Tavuk Kümesi Verimi"
+   },
+   "ChickenCoopTime": {
+    "description": "Tavuk kümesinin tavuk, yumurta ve tüy üretmesi için gereken süreyi ayarlar.",
+    "label": "Tavuk Kümesi Süresi"
+   },
+   "CraftingInput": {
+    "description": "Üretim için gereken malzeme miktarı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Maliyeti"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Ganimette bulunan üretim dergisi miktarını kontrol eder.",
+    "label": "Dergi Bolluğu"
+   },
+   "CraftingMaxTier": {
+    "description": "Üretilen öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Üretim Kalitesi"
+   },
+   "CraftingOutput": {
+    "description": "Üretim başına üretilen öğe sayısı (kaynak paketleri hariç tutulur).",
+    "label": "Üretim Verimi"
+   },
+   "CraftingProgression": {
+    "description": "Dergi ve şema temelli üretim ilerlemesini etkinleştirir veya devre dışı bırakır.",
+    "label": "Üretim İlerlemesi"
+   },
+   "CraftingTime": {
+    "description": "Öğe üretmek için gereken süre.",
+    "label": "Üretim Zamanlayıcısı"
+   },
+   "CropGrowthSpeed": {
+    "description": "Oyuncunun ektiği mahsullerin ve ağaçların büyüme hızını ayarlar. Daha yüksek bir yüzde, daha uzun büyüme süresi anlamına gelir. Not: Değişikliklerin etkili olması için mevcut kayıt dosyalarında tekrar mahsul ekilmesi gerekir.",
+    "label": "Mahsul Büyümesi"
+   },
+   "CropOutput": {
+    "description": "Yabani mahsullerden ve oyuncunun ektiği ekinlerden elde edilen kaynak miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Mahsul Verimi"
+   },
+   "CrouchRunSpeed": {
+    "description": "Eğilme ve koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilerek Koşma Hızı"
+   },
+   "CrouchSpeed": {
+    "description": "Eğilme ve yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Eğilme Hızı"
+   },
+   "DayLightLength": {
+    "description": "Oyun içi gündüz saatlerinin sayısını ayarlar. Her Zaman Gece ve Her Zaman Gündüz beklenildiği gibi çalışır. Gün ışığı süresi ayarları:\\n\\n 4 = 10.00 - 14.00\\n 6 = 09.00 - 15.00\\n 8 = 08.00 - 16.00\\n10 = 07.00 - 17.00\\n12 = 06.00 - 18.00\\n14 = 05.00 - 19.00\\n16 = 04.00 - 20.00\\n18 = 04.00 - 22.00\\n20 = 02.00 - 22.00",
+    "label": "Günışığı Süresi"
+   },
+   "DayNightLength": {
+    "description": "Oyundaki 24 saatin gerçek hayatta kaç dakika geçeceğini belirler.",
+    "label": "24 Saatlik Döngü"
+   },
+   "DeathPenalty": {
+    "description": "Ölümden sonra uygulanan ölüm cezasını belirler.\\n\\nYok = Ceza uygulanmaz.\\nYalnızca DP = Varsayılan DP kaybı.\\nYaralı = Yeniden doğunca bazı zayıflatmalar devam eder ve su/yiyecek %50'ye sıfırlanır.\\nKalıcı Ölüm = Karakter sıfırlanır.",
+    "label": "Ölüm Cezası"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Ölüm Yıpranması etkinleştirildiğinde bu ayar, ölümle birlikte kaybedilen sağlamlık yüzdesini belirler.",
+    "label": "Ölüm Yıpranması Miktarı"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Ölünce öğelerin yıpranıp yıpranmayacağını belirler.\\n\\nYok = Kayıp olmaz.\\nSağlamlık = Onarılabilecek mevcut sağlamlığın bir kısmını azaltır.\\nMaks. Sağlamlık = Maksimum sağlamlığı azaltır ve onarım sınırını düşürür.\\nHer İkisi = Öğeler hem mevcut hem de maksimum sağlamlığını kaybeder.",
+    "label": "Ölüm Yıpranması"
+   },
+   "DewCollectorInput": {
+    "description": "Çiy toplamaya başlamak için gereken kavanoz miktarını belirler.",
+    "label": "Çiy Toplayıcı Girişi"
+   },
+   "DewCollectorOutput": {
+    "description": "Çiy toplayıcının her döngüde ürettiği su miktarı.",
+    "label": "Çiy Toplayıcı Verimi"
+   },
+   "DewCollectorTime": {
+    "description": "Çiy toplayıcının su üretmesi için gereken süreyi ayarlar.",
+    "label": "Çiy Toplayıcı Süresi"
+   },
+   "DrinkLootCount": {
+    "description": "Kaplarda bulunan içecek miktarı.",
+    "label": "İçecek Bolluğu"
+   },
+   "DropOnDeath": {
+    "description": "Ölüm durumunda hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nYalnızca Alet Kemeri = Alet kemerindeki öğeler düşer.\\nYalnızca Sırt Çantası = Sırt çantasındaki öğeler düşer.\\nTümünü Sil = Tüm öğeler silinir.",
+    "label": "Ölünce Düşür"
+   },
+   "DropOnQuit": {
+    "description": "Çıkış yapıldığında hangi öğelerin düşeceğini belirler.\\n\\nHiçbiri = Hiçbir öğe düşmez.\\nHepsi = Hem sırt çantası hem de alet kemeri düşer.\\nAlet kemeri = Alet kemerindeki öğeler düşer.\\nSırt çantası = Sırt çantasındaki öğeler düşer.",
+    "label": "Çıkınca Düşür"
+   },
+   "DukesLootCount": {
+    "description": "Ganimette bulunan Duke parası ve eski para miktarı.",
+    "label": "Para Bolluğu"
+   },
+   "ElectricalOutput": {
+    "description": "Ne kadar elektrik gücü üretileceğini kontrol eder.",
+    "label": "Elektrik Çıktısı"
+   },
+   "EncumbranceModifier": {
+    "description": "Ağır yük bindirilmiş sırt çantası yuvalarının sayısını kontrol eder. Değerler Devre Dışı (yük ağır gelmez) ile Tam (maksimum ağırlaşma) arasındadır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Ağır Yük Yuvaları"
+   },
+   "EnemySpawnMode": {
+    "description": "Düşman doğmasını etkinleştirir veya devre dışı bırakır.",
+    "label": "Düşman Doğması"
+   },
+   "EntityDamage": {
+    "description": "Düşmanların oyunculara ne kadar hasar vereceğini kontrol eder. Bu miktar, oyuncuların diğer gelen hasarlarıyla birleştirilir.",
+    "label": "Düşmanın Verdiği Hasar"
+   },
+   "EntityIncomingDamage": {
+    "description": "Düşmanlar ve hayvanlar gibi varlıkların oyunculardan aldığı hasar.",
+    "label": "Varlığın Aldığı Hasar"
+   },
+   "FoodLootCount": {
+    "description": "Kaplarda bulunan yiyecek miktarı.",
+    "label": "Yiyecek Bolluğu"
+   },
+   "FullChickenStressEvent": {
+    "description": "Tutulan tavukların stres seviyesi %100'e ulaştığında bir etkinliği etkinleştirir. \"Hiçbiri\" seçeneği, etkinlikleri devre dışı bırakır. \"Rastgele\" seçeneğinde aşağıdaki etkinliklerden biri rastgele seçilir:\\n\\nFirari Tavuk = Tavuk elinden kaçar.\\nÖfkeli Tavuk = Tavuğun sana düşman olur.\\nZombi Ordusu = Tavuğunun stresi, bir zombi ordusu çağırır.\\nKatil Tavuklar = Öfkeli tavuklar hep birlikte sana düşman olur.",
+    "label": "Tavuk Stresi Etkinliği"
+   },
+   "GlobalGSModifier": {
+    "description": "Seviyene ve hayatta kaldığın gün sayısına bağlı olarak düşman türlerini, zorluk seviyesini, ganimet kalitesini ve Kanlı Ay yoğunluğunu belirler. Değer ne kadar yüksek olursa zorluk o kadar artar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Oyun Aşaması"
+   },
+   "GlobalLSModifier": {
+    "description": "Oyuncunun ganimet aşamasına uygulanan genel çarpan. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Ganimet Aşaması"
+   },
+   "GlobalLootCount": {
+    "description": "Genel anlamda dünyada bulunan toplam ganimet miktarını ayarlar. \"Yok\" seçeneği, zombi torbası düşüşleri ve malzeme kasaları dâhil tüm ganimeti devre dışı bırakır.",
+    "label": "Ganimet Bolluğu"
+   },
+   "GlobalTSModifier": {
+    "description": "Tüccar aşaması ilerlemesine uygulanan genel değiştirici. Tüccarlar tarafından satılan öğelerin kalitesini ve çeşitliliğini kontrol eder. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Küresel Tüccar Aşaması"
+   },
+   "HarvestingOutput": {
+    "description": "Blok ve öğe hasadından elde edilen kaynak miktarını kontrol eder. Cevherleri, tohumları veya mahsulleri etkilemez. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Kaynak Verimi"
+   },
+   "HeadshotMode": {
+    "description": "Kafadan vuruş hasarının nasıl işleneceğini belirler.\\n\\nSadece Kafadan Vuruş = Düşmanlara sadece kafadan vuruşla hasar verilebilir.\\nBitirici Kafadan Vuruş = Vücuda yapılan vuruşlar hasar verir fakat sadece kafadan vuruş öldürebilir.\\n\\nPasif hayvanlara karşı geçerli değildir.",
+    "label": "Kafadan Vuruş Modu"
+   },
+   "HeadshotMultiplier": {
+    "description": "Oyuncuların varlıklara verdiği kafadan vuruş hasarına uygulanan çarpan.",
+    "label": "Kafadan Vuruş Çarpanı"
+   },
+   "HeatMapSensitivity": {
+    "description": "Oyuncu aktivitesinin, ısı haritasını etkileme miktarını kontrol eder. Daha yüksek ısı, çığırtkanların doğma ihtimalini artırır. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Isı Haritası Duyarlılığı"
+   },
+   "HungerMultiplier": {
+    "description": "Oyuncuların yiyecekleri ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, yiyecek tüketimini artırır.",
+    "label": "Açlık Çarpanı"
+   },
+   "IncomingDamage": {
+    "description": "Oyuncunun tüm kaynaklardan aldığı hasar miktarı.",
+    "label": "Oyuncunun Aldığı Hasar"
+   },
+   "InfectionChance": {
+    "description": "Oyuncunun enfeksiyon geçirme ihtimalini artırır ya da azaltır.",
+    "label": "Enfeksiyon İhtimali"
+   },
+   "InfectionRate": {
+    "description": "Enfeksiyonun ilerleme hızını ayarlar.",
+    "label": "Enfeksiyon Hızı"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Yeni oyuncular için adım adım ilerleyen hazırlık mücadelesini etkinleştir.",
+    "label": "Hazırlık Mücadeleleri"
+   },
+   "IntroQuestEnabled": {
+    "description": "Tam görev ilerlemesine geçmek için başlangıçtaki gömülü malzeme bulma görevini atlar.",
+    "label": "Hazırlık Görevi"
+   },
+   "ItemDegradation": {
+    "description": "Silahların ve aletlerin sağlamlıklarını kaybetme hızı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Öğe Yıpranması"
+   },
+   "JarRefund": {
+    "description": "Öğeleri kullandıktan sonraki kavanoz iadesi ihtimali.",
+    "label": "Kavanoz İadesi"
+   },
+   "JumpStrength": {
+    "description": "Oyuncunun zıplama yüksekliğini değiştirir.",
+    "label": "Zıplama Kuvveti"
+   },
+   "LootBagChance": {
+    "description": "Düşmanların ölünce ganimet torbası düşürme ihtimaline uygulanan çarpan.",
+    "label": "Ganimet Torbası Düşüşü"
+   },
+   "LootMaxTier": {
+    "description": "Ganimette ortaya çıkabilecek silahların ve öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Ganimet Kalitesi"
+   },
+   "LootRespawnDays": {
+    "description": "Ziyaret edilmemiş alanlardaki ganimet kaplarının sıfırlanması için gereken oyun içi gün sayısı.",
+    "label": "Ganimet Yeniden Doğma Süresi (Gün)"
+   },
+   "LootTimer": {
+    "description": "Kapları yağmalamak için gereken süre.",
+    "label": "Yağmalama Sayacı"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Ölünce kaybedilen rastgele öğelerin sayısını belirler.",
+    "label": "Ölünce Kaybedilen Öğe Sayısı"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Ölünce hangi öğelerin kaybedileceğini belirler.\\n\\nHiçbiri = Hiçbir şey.\\nTümü = Tüm öğeler.\\nYalnızca Alet Kemeri = Yalnızca alet kemerindeki öğeler.\\nYalnızca Sırt Çantası = Yalnızca sırt çantasındaki öğeler.\\nEkipman = Giyilen zırh ve kıyafetler.\\nYalnızca Taşınanlar = Alet kemeri ile sırt çantasındaki öğeler.",
+    "label": "Ölünce Öğe Kaybetme"
+   },
+   "MaxDegradationAmount": {
+    "description": "Bir öğenin onarılınca ne kadar yıpranacağını belirler.",
+    "label": "Onarım Yıpranması"
+   },
+   "MaxEnemyTier": {
+    "description": "Doğabilen zombi türlerinin en üst kademesidir.",
+    "label": "Maks. Düşman Kademesi"
+   },
+   "MaxTechType": {
+    "description": "Genel anlamda silahlar ve öğeler için mevcut en yüksek teknoloji türünü ayarlayarak ilerlemeyi ve oynama temposunu kontrol etmene imkân tanır. Aşağıdaki örneklere göz atabilirsin.\\n\\nTeknoloji 0 = Taş ve boru\\nTeknoloji 1 = Demir ve KV-47\\nTeknoloji 2 = Çelik ve Taktik Saldırı\\nTeknoloji 3 = Delgi ve M60",
+    "label": "Maks. Teknoloji Türü"
+   },
+   "MedicalLootCount": {
+    "description": "Ganimette bulunan tıbbi malzeme miktarı.",
+    "label": "Tıbbi Malzeme Bolluğu"
+   },
+   "MeleeDamage": {
+    "description": "Oyuncunun yakın dövüş silahları ve aletler ile verdiği hasar.",
+    "label": "Yakın Dövüş Hasarı"
+   },
+   "MeleeLootCount": {
+    "description": "Ganimette bulunan yakın dövüş silahı ve yakın dövüş silahı parçası miktarı.",
+    "label": "Yakın Dövüş Bolluğu"
+   },
+   "MiningOutput": {
+    "description": "Madencilikten kazanılan cevher miktarını kontrol eder. Devre dışı bırakılması, oyun içi mücadeleleri etkileyebilir.",
+    "label": "Madencilik Verimi"
+   },
+   "NewbieCoat": {
+    "description": "Etkinleştirilirse yeni oyuncular acemi koruması güçlendirmesiyle doğar.",
+    "label": "Yeni Oyuncu Güçlendirmesi"
+   },
+   "POIQuestsEnabled": {
+    "description": "Tüccar görevi listelerinde İlgi Alanı görevlerinin görünmesine izin verir. Hayır = Yalnızca gömülü görevler.",
+    "label": "İlgi Alanı Görevleri"
+   },
+   "POITierLSModifier": {
+    "description": "İlgi Alanı kademesine göre uygulanan ganimet aşaması çarpanı. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "İlgi Alanı Ganimet Aşaması"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Sağlık ile dayanıklılığın seviyeye göre artıp artmayacağını belirler.",
+    "label": "Seviye İstatistiği Bonusu"
+   },
+   "PointsPerMagazine": {
+    "description": "Beceri dergilerini okumakla kazanılan ilerleme.",
+    "label": "Dergi İlerlemesi"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Tüccar ilerlemesine dâhil edilen günlük görev sayısı. Ek görevler, DP ve ödüller kazandırmaya devam eder fakat tüccar kademesini ilerletmez.",
+    "label": "Günlük Görev Sayısı"
+   },
+   "QuestsEnabled": {
+    "description": "Oyununda görevleri etkinleştirir veya devre dışı bırakır.",
+    "label": "Görevler"
+   },
+   "QuestsPerTier": {
+    "description": "Bir sonraki kademenin kilidini açmak için tamamlanması gereken görev sayısı. Değerler ne kadar yüksek olursa kademeler arası ilerleme o kadar yavaşlar. Hiçbiri = Sınır yoktur ve tüm görev kademelerine erişmeye izin verir.",
+    "label": "Kademe Başına Görev Sayısı"
+   },
+   "RangedDamage": {
+    "description": "Oyuncunun yay, ateşli silahlar ve diğer menzilli silahlar ile verdiği hasar.",
+    "label": "Menzilli Hasar"
+   },
+   "RangedLootCount": {
+    "description": "Ganimette bulunan menzilli silah ve menzilli silah parçası miktarı.",
+    "label": "Menzilli Bolluğu"
+   },
+   "RepairTypes": {
+    "description": "Öğelerin nasıl onarılacağını belirler:\\n\\nHiçbiri = Onarım yok\\nYalnızca Onarım = Yalnızca Onarım Kiti\\nYalnızca Birleştirme = Birleştirme İstasyonunda onarım\\nİkisi de = Onarım Kitleri ve Birleştirme İstasyonu",
+    "label": "Onarım Yöntemi"
+   },
+   "ResourceLootCount": {
+    "description": "Ganimette bulunan kaynak öğesi miktarı.",
+    "label": "Kaynak Bolluğu"
+   },
+   "RunSpeed": {
+    "description": "Koşma sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Koşma Hızı"
+   },
+   "ScrappingOutput": {
+    "description": "Öğelerden hurda çıkarıldığında elde edilen miktar.",
+    "label": "Hurda Çıkarma Verimi"
+   },
+   "SeedDropOutput": {
+    "description": "Oyuncunun ektiği mahsul hasadından elde edilen tohum miktarı. Tohum düşme ihtimalini veya ağaçlardan düşen tohumları artırmaz.",
+    "label": "Tohum Düşüşü"
+   },
+   "ShowDayTime": {
+    "description": "Ekranda gün ve saat bilgisini gösterir. Hayır olarak belirlenmişse Kanlı Ay Uyarısı da devre dışı bırakılır.",
+    "label": "Günü/Saati Göster"
+   },
+   "ShowEnemyDamage": {
+    "description": "Varlıklara isabet edildiğinde havada hasar sayılarını gösterir.",
+    "label": "Varlık Hasarını Göster"
+   },
+   "ShowHealthBars": {
+    "description": "Varlık sağlığı çubuklarını gösterir veya gizler.",
+    "label": "Varlık Sağlığı Çubukları"
+   },
+   "ShowLocationInfo": {
+    "description": "Biyom ve İlgi Alanı adını ve zorluğunu gösterir.",
+    "label": "Konum Bilgisini Göster"
+   },
+   "ShowXP": {
+    "description": "DP çubuğunu ve DP açılır mesajını ekranda gösterir veya gizler.",
+    "label": "DP'yi Göster"
+   },
+   "SillyBigHeads": {
+    "description": "Zombiler, hayvanlar ve tüccarlar için \"koca kafa modunu\" etkinleştirir.",
+    "label": "Koca Kafalar"
+   },
+   "SillyBlackandWhite": {
+    "description": "1960'ların klasik korku filmlerinden ilham alınmış, gri tonlu klasik bir renk paletini etkinleştirir.",
+    "label": "Siyah - Beyaz"
+   },
+   "SillyCelebrate": {
+    "description": "Varlık öldürüldüğünde kutlama amaçlı konfeti atılma özelliğini etkinleştirir. \"Yalnızca Kafadan Vuruşlar\" seçeneği, sadece kafadan vuruşla öldürmelerde konfeti atılmasını sağlar ve böylece et hasat etmek için hayvanların gövdeden vurulabilmesini sağlar. \"Yalnızca Kafadan Vuruşlar\" seçeneği, pasif hayvanlara karşı geçerli değildir.",
+    "label": "Öldürme Kutlaması"
+   },
+   "SillyLowGravity": {
+    "description": "Oyun içi yer çekimi miktarını kontrol eder.",
+    "label": "Yer Çekimi"
+   },
+   "SillySounds": {
+    "description": "Oyun içi eylemler için komik sesleri etkinleştirir.",
+    "label": "Saçma Sesler"
+   },
+   "SillyTinyZombies": {
+    "description": "Zombilerin minik versiyonlarını etkinleştirir.",
+    "label": "Minik Zombiler"
+   },
+   "SkillGainRate": {
+    "description": "Beceri puanları kazanmak için kaç seviye gerektiğini ayarlar.",
+    "label": "Beceri Kazanma Hızı"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Beceri puanları verilince kaç beceri puanı kazanılacağını kontrol eder.",
+    "label": "Beceri Kazanma Miktarı"
+   },
+   "SmeltingType": {
+    "description": "Demirci ocağında üretimin nasıl yapılacağını kontrol eder. Öğeleri demirci ocağında eritebilir veya sırt çantandaki malzemeleri kullanarak doğrudan üretim yapabilirsin.",
+    "label": "Eritici Türü"
+   },
+   "StackSizeMultiplier": {
+    "description": "Birikebilen tüm öğelerin yığın miktarına uygulanan çarpan. Maksimum yığın miktarı 30.000'dir.",
+    "label": "Yığın Miktarı Çarpanı"
+   },
+   "StaminaRegen": {
+    "description": "Dayanıklılık yenileme miktarını kontrol eder. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Yenileme"
+   },
+   "StaminaUsage": {
+    "description": "Koşma, zıplama ve saldırma gibi eylemlerde harcanan dayanıklılık miktarı. Değerler yaklaşıktır.",
+    "label": "Dayanıklılık Kullanımı"
+   },
+   "StarterSkillPoints": {
+    "description": "Hazırlık mücadelelerini tamamladıktan sonra veya hazırlık mücadeleleri devre dışı bırakılmışsa oyun başlangıcında verilen beceri puanı sayısı.",
+    "label": "Temel Beceri Puanları"
+   },
+   "StormFreq": {
+    "description": "Fırtına sıklığını ayarlar. Hiçbiri seçilirse fırtınalar devre dışı bırakılır.",
+    "label": "Fırtına Sıklığı"
+   },
+   "StormWarning": {
+    "description": "Oyuncunun fırtına sirenini duyup duymayacağını ve ekranda fırtına uyarısı görüp görmeyeceğini kontrol eder.",
+    "label": "Fırtına Uyarısı"
+   },
+   "TemperatureSurvival": {
+    "description": "Ortam sıcaklığının (sıcak ve soğuk) oyuncuyu etkileyip etkilemeyeceğini kontrol eder.",
+    "label": "Sıcaklığa Bağlı Hayatta Kalma"
+   },
+   "TerrainDamage": {
+    "description": "Oyuncuların araziye verdiği hasarın miktarı.",
+    "label": "Arazi Hasarı"
+   },
+   "ThirstMultiplier": {
+    "description": "Oyuncuların suyu ne kadar hızlı tüketeceğini kontrol eder. Daha yüksek değerler, su tüketimini artırır.",
+    "label": "Susuzluk Çarpanı"
+   },
+   "TraderBuyLimit": {
+    "description": "Tüccarın, daha fazlasını reddedene dek bir oyuncudan satın alabileceği maksimum öğe sayısı. Daha düşük değerler, her stok doldurma döngüsünde satabileceğin öğe sayısını sınırlar.",
+    "label": "Tüccarın Satın Alma Sınırı"
+   },
+   "TraderBuyPrices": {
+    "description": "Oyuncuların tüccarlardan satın aldığı öğelerin fiyatını ayarlar.",
+    "label": "Satın Alma Fiyatı"
+   },
+   "TraderDialog": {
+    "description": "Tüccar repliklerini ve ekrandaki diyalogları açıp kapatır.",
+    "label": "Ticaret Diyaloğu"
+   },
+   "TraderHours": {
+    "description": "Tüccarın açılış ve kapanış saatlerini kontrol eder. 24 Saatlik Döngü ve Gün Işığı Süresi bu ayarı etkilemez. Kanlı Ay Kapalı, yalnızca kanlı ay esnasında kapalı olacağı anlamına gelir. Varsayılan seçeneği, XML değerlerini kullanır.\\n\\nVarsayılan XML = 04.00 - 22.00\\n       Sabah = 04.00 - 12.00\\n       Öğlen = 10.00 - 18.00\\n       Akşam = 16.00 - 22.00\\n           Gece = 22.00 - 04.00",
+    "label": "Tüccar Çalışma Saatleri"
+   },
+   "TraderItemAbundance": {
+    "description": "Tüccardaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccardaki Öğe Sayısı"
+   },
+   "TraderMaxTier": {
+    "description": "Tüccardan satın alınabilecek öğelerin kalitesi için en yüksek seviyeyi ayarlar.",
+    "label": "Maks. Tüccar Kalitesi"
+   },
+   "TraderProtection": {
+    "description": "Tüccar bileşenleri için hasar korumasını ve oyuncuların o alanı elde edip edemeyeceğini belirler.",
+    "label": "Tüccar Koruması"
+   },
+   "TraderResetInterval": {
+    "description": "Tüccarların envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Tüccar Sıfırlaması"
+   },
+   "TraderSellPrices": {
+    "description": "Oyuncuların tüccarlara sattığı öğelerin fiyatını ayarlar.",
+    "label": "Satış Fiyatı"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Diğer tüccarlardan görev alma seçeneğini etkinleştirir.",
+    "label": "Tüccar Rotaları"
+   },
+   "TradersEnabled": {
+    "description": "NPC tüccarlarla ticareti etkinleştirir.",
+    "label": "Ticaret Etkin"
+   },
+   "TreasureMapChance": {
+    "description": "Hazine Haritalarının ganimet kaplarında ve düşman ganimet torbalarında çıkma ihtimaline uygulanan çarpan.",
+    "label": "Hazine Haritası İhtimali"
+   },
+   "VehicleBlockDamage": {
+    "description": "Araçların bloklara verdiği hasar miktarı.",
+    "label": "Aracın Blok Hasarı"
+   },
+   "VehicleEntityDamage": {
+    "description": "Araçların varlıklara verdiği hasar miktarı.",
+    "label": "Aracın Varlık Hasarı"
+   },
+   "VehicleFuelUsage": {
+    "description": "Araçlar için yakıt tüketim hızını ayarlar.",
+    "label": "Araç Yakıt Kullanımı"
+   },
+   "VehicleSelfDamage": {
+    "description": "Aracının çarpışmalardan aldığı hasar miktarı.",
+    "label": "Aracın Kendi Hasarı"
+   },
+   "VendingEnabled": {
+    "description": "Otomat işlevini etkinleştirir veya devre dışı bırakır.",
+    "label": "Otomat Etkin"
+   },
+   "VendingItemAbundance": {
+    "description": "Tüccar otomatlarındaki satılık öğe miktarı. Daha düşük değerler, malzemeleri daha sınırlı ve kıt hâle getirir. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomattaki Öğe Sayısı"
+   },
+   "VendingResetInterval": {
+    "description": "Tüccar otomatlarının envanteri sıfırlama sıklığını ayarlar. Varsayılan seçeneği, XML yapılandırma değerlerini kullanır.",
+    "label": "Otomat Sıfırlaması"
+   },
+   "WalkSpeed": {
+    "description": "Yürüme sırasında oyuncunun hareket hızını ayarlar.",
+    "label": "Yürüme Hızı"
+   },
+   "WorkstationCrafting": {
+    "description": "Evet seçilirse çalışma istasyonunda üretim yapmaya izin verilir. Hayır seçilirse sadece oyuncunun sırt çantasından üretim yapmasına izin verilir.",
+    "label": "Çalışma İstasyonu Üretimi"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Dünyada işlevsel çalışma istasyonlarının ortaya çıkmasına izin verir. Yeni Navezgane veya rastgele dünya haritası oluşturmalarına uygulanır.",
+    "label": "Yabandaki Çalışma İstasyonları"
+   },
+   "XPMultiplier": {
+    "description": "Kazanılan tüm deneyime uygulanan çarpan.",
+    "label": "DP çarpanı"
+   },
+   "ZombieBMMove": {
+    "description": "Kanlı Ay sürüleri ve fırtınaları sırasında zombi hareket hızını kontrol eder.",
+    "label": "Zombi Kanlı Ay Hızı"
+   },
+   "ZombieFeralMove": {
+    "description": "Vahşi zombilerin hareket hızını ayarlar.",
+    "label": "Zombi Vahşi Hızı"
+   },
+   "ZombieFeralSense": {
+    "description": "Zombilerin oyuncuları duyma veya görme yoluyla tespit etme kolaylığı.",
+    "label": "Zombi Vahşi Duyusu"
+   },
+   "ZombieMove": {
+    "description": "Normal zombiler için gündüz vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gündüz Hızı"
+   },
+   "ZombieMoveNight": {
+    "description": "Normal zombiler için gece vakitlerindeki zombi hareket hızını ayarlar. Vahşi olanları ve özel olanları etkilemez.",
+    "label": "Zombi Gece Hızı"
+   },
+   "ZombieRageChance": {
+    "description": "Zombilerin hasar aldığı zaman öfke moduna girme ihtimali.",
+    "label": "Zombi Öfkesi"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Zombilerin hayvan leşlerini yiyip yemeyeceğini belirler.",
+    "label": "Zombilerin Hayvanları Yemesi"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Zorluk",
+   "Official": "Resmî"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Varsayılan/Kolay: Kıyametin biraz daha merhametli olabilen hâli.",
+    "label": "Maceracı"
+   },
+   "Almost Creative": {
+    "description": "Gerçek kıyamet olmadan kıyamet. Çünkü ölmek hiç keyifli değil.",
+    "label": "Neredeyse Yaratıcı"
+   },
+   "Bite Club": {
+    "description": "Bu ekstrem, kalıcı ölüm modunda yeniden doğmak korkaklar içindir. Tek bir canın var, akıllıca kullan.",
+    "label": "Isırık Kulübü"
+   },
+   "Caveman Life": {
+    "description": "En son teknolojik aletin çubuk olduğu bir kıyamette hayatta kal.",
+    "label": "Mağara Yaşamı"
+   },
+   "Chibi Mode": {
+    "description": "Sadece tatlı değiller... Aynı zamanda hızlılar da! Neyse ki hız konusunda sen de fena değilsin.",
+    "label": "Chibi Modu!"
+   },
+   "Disaster Film": {
+    "description": "Felaketler, düzeltemeyeceğin kadar hızlı bir şekilde üst üste geliyor.",
+    "label": "Felaket Filmi"
+   },
+   "Dumpster Diver": {
+    "description": "Çöpten harikalar yaratmak gibisi yok! Kullanıyorsan istifliyor sayılmazsın.",
+    "label": "Çöplük Kuşu"
+   },
+   "Dying World": {
+    "description": "Kaynaklar yitip gidiyor. Sıranın sana gelmesi an meselesi.",
+    "label": "Ölen Dünya"
+   },
+   "Insane": {
+    "description": "Delicesine Zor: Yaptığın her hatanın pişmanlığını yaşayacağın kıyamet.",
+    "label": "Delicesine Zor"
+   },
+   "Legacy Survival": {
+    "description": "Modern sonuçlara sahip eski usul hayatta kalma mücadelesi.",
+    "label": "Eski Usul Hayatta Kalma"
+   },
+   "Madmoles Mayhem": {
+    "description": "Daha az malzeme, daha ağır cezalar ve daimî baskı. Madmole... Fena kokmuyor!",
+    "label": "Madmole'un Kargaşası"
+   },
+   "Nomad": {
+    "description": "Normal: Dağları delecek kadar azimlisin.",
+    "label": "Göçebe"
+   },
+   "Scavenger": {
+    "description": "Acemi: Destek tekerleriyle bisiklete biner gibi bir kıyamet deneyimi.",
+    "label": "Çöpçü"
+   },
+   "Seven days Later": {
+    "description": "Hızlı hareket eden zombilerden oluşan kaotik sürülere sahip, modern filmlerden esinlenilmiş bir mod.",
+    "label": "7 Gün Sonra"
+   },
+   "True Survivalist": {
+    "description": "Acımasız: Mahvolmak eğlencenin bir parçası.",
+    "label": "Hayatta Kalma Ustası"
+   },
+   "Undead Matinee": {
+    "description": "Zombilerin daha yavaş hareket ettiği ve sayıca fazla olduğu, mühimmat kıtlığına sahip, yakın dövüş odaklı ve eski filmlerden esinlenilmiş bir mod.",
+    "label": "Hortlak Matinesi"
+   },
+   "Warrior": {
+    "description": "Zor: Artık işler ciddiye biniyor ama en azından beyin sarsıntısı geçirmek bedava.",
+    "label": "Savaşçı"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Yok",
+    "1": "Yürüme",
+    "2": "Koşu",
+    "3": "Koş",
+    "4": "Depar",
+    "5": "Kâbus"
+   },
+   "AirDropRandomTime": {
+    "0": "Yok",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Tüm Gün",
+    "6": "Tümü"
+   },
+   "AirDrops": {
+    "0": "Devre dışı",
+    "1": "Her gün",
+    "2": "1-3 Gün",
+    "3": "3 Gün",
+    "4": "3-7 Gün",
+    "5": "7 Gün",
+    "6": "1-7 Gün"
+   },
+   "ApiaryInput": {
+    "0": "Yok"
+   },
+   "BackpackCrafting": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Sınırlı",
+    "3": "Yalnızca Çalışma Tezgâhı"
+   },
+   "BarterValues": {
+    "0": "Yok"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Yok",
+    "1": "Varsayılan",
+    "2": "Çok Düşük",
+    "3": "Düşük",
+    "4": "Orta",
+    "5": "Yüksek",
+    "6": "Çok Yüksek"
+   },
+   "BloodMoonCount": {
+    "0": "4 Düşmanlar",
+    "1": "6 Düşmanlar",
+    "2": "8 Düşmanlar",
+    "3": "10 Düşmanlar",
+    "4": "12 Düşmanlar",
+    "5": "16 Düşmanlar",
+    "6": "24 Düşmanlar",
+    "7": "32 Düşmanlar",
+    "8": "64 Düşmanlar"
+   },
+   "BloodMoonFrequency": {
+    "0": "Devre dışı",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "8 Gün",
+    "9": "9 Gün",
+    "10": "10 Gün",
+    "11": "14 Gün",
+    "12": "20 Gün",
+    "13": "30 Gün"
+   },
+   "BloodMoonRange": {
+    "0": "0 Gün",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "7 Gün",
+    "6": "10 Gün",
+    "7": "14 Gün",
+    "8": "20 Gün"
+   },
+   "BloodMoonWarning": {
+    "0": "Devre dışı",
+    "1": "Sabah",
+    "2": "Akşam"
+   },
+   "Celebrate": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Kafadan Vuruş"
+   },
+   "CropGrowthSpeed": {
+    "0": "Yok",
+    "1": "Anında"
+   },
+   "DamageValues": {
+    "0": "Yok"
+   },
+   "DayLightLength": {
+    "0": "Her Zaman Gece",
+    "10": "Her Zaman Gündüz"
+   },
+   "DeathPenalty": {
+    "0": "Yok",
+    "1": "Yalnızca DP",
+    "2": "Yaralı",
+    "3": "Kalıcı Ölüm"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Yok",
+    "1": "Sağlamlık",
+    "2": "Maks. Sağlamlık",
+    "3": "Her İkisi"
+   },
+   "DewCollectorInput": {
+    "0": "Yok"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Devre dışı",
+    "1": "Çok Düşük",
+    "2": "Düşük",
+    "3": "Varsayılan",
+    "4": "Yüksek",
+    "5": "Çok Yüksek"
+   },
+   "DropOnDeath": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar",
+    "6": "Tümünü Sil"
+   },
+   "DropOnQuit": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "Encumbrance": {
+    "0": "Devre dışı",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek",
+    "5": "Tam"
+   },
+   "FullChickenStressEvent": {
+    "0": "Yok",
+    "1": "Rastgele",
+    "2": "Firari Tavuk",
+    "3": "Öfkeli Tavuk",
+    "4": "Zombi Ordusu",
+    "5": "Katil Tavuklar"
+   },
+   "HeadshotMode": {
+    "0": "Yok",
+    "1": "Yalnızca Kafadan Vuruş",
+    "2": "Bitirici Kafadan Vuruş"
+   },
+   "ItemTierOptions": {
+    "0": "Varsayılan"
+   },
+   "JarRefund": {
+    "0": "Yok"
+   },
+   "JumpStrength": {
+    "0": "Yok"
+   },
+   "LootAbundanceValues": {
+    "0": "Yok"
+   },
+   "LootRespawnDays": {
+    "0": "Devre dışı"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Yok",
+    "1": "Tümü",
+    "2": "Yalnızca Alet Kemeri",
+    "3": "Yalnızca Sırt Çantası",
+    "4": "Ekipman",
+    "5": "Yalnızca Taşınanlar"
+   },
+   "LowDefaultHigh": {
+    "0": "Çok Düşük",
+    "1": "Düşük",
+    "2": "Varsayılan",
+    "3": "Yüksek",
+    "4": "Çok Yüksek"
+   },
+   "MaxChunkAge": {
+    "0": "Devre dışı"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Yok"
+   },
+   "MaxEnemyType": {
+    "0": "Normal Olanlar",
+    "1": "Güçlü Olanlar",
+    "2": "Özel Olanlar",
+    "3": "Vahşi Olanlar",
+    "4": "Radyasyonlu Olanlar",
+    "5": "Elitler"
+   },
+   "MaxTechType": {
+    "0": "Yok",
+    "1": "Teknoloji 0",
+    "2": "Teknoloji 1",
+    "3": "Teknoloji 2",
+    "4": "Teknoloji 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Yok"
+   },
+   "PointsPer": {
+    "0": "Yok"
+   },
+   "QuestPerDay": {
+    "0": "Sınırsız"
+   },
+   "QuestPerTier": {
+    "0": "Yok"
+   },
+   "RepairTypes": {
+    "0": "Yok",
+    "1": "Yalnızca Onar",
+    "2": "Yalnızca Birleştir",
+    "3": "Her İkisi"
+   },
+   "ShowLocationTypes": {
+    "0": "Hayır",
+    "1": "Evet",
+    "2": "Yalnızca Ad"
+   },
+   "ShowXP": {
+    "0": "Tümü",
+    "1": "Yalnızca Çubuk",
+    "2": "Yalnızca Bildirimler",
+    "3": "Yok"
+   },
+   "SlowToFast": {
+    "0": "Varsayılan",
+    "1": "Çok Yavaş",
+    "2": "Yavaş",
+    "3": "Normal",
+    "4": "Hızlı",
+    "5": "Çok Hızlı"
+   },
+   "SmeltingType": {
+    "0": "Eritici",
+    "1": "Tarifler"
+   },
+   "SpeedValues": {
+    "0": "Yok"
+   },
+   "StaminaUsage": {
+    "0": "Yok"
+   },
+   "StarterSkillPoints": {
+    "0": "Yok"
+   },
+   "StormFrequency": {
+    "0": "Yok"
+   },
+   "TraderArea": {
+    "0": "Evet",
+    "1": "Alınabilir",
+    "2": "Alınamaz"
+   },
+   "TraderHourPresets": {
+    "0": "Varsayılan",
+    "1": "Sabah",
+    "2": "Gün Ortası",
+    "3": "Akşam",
+    "4": "Gece",
+    "5": "Kanlı Ay Kapalı",
+    "6": "Her Zaman Açık"
+   },
+   "TraderResetInterval": {
+    "0": "Varsayılan",
+    "1": "1 Gün",
+    "2": "2 Gün",
+    "3": "3 Gün",
+    "4": "4 Gün",
+    "5": "5 Gün",
+    "6": "6 Gün",
+    "7": "7 Gün",
+    "8": "14 Gün"
+   },
+   "XPGain": {
+    "0": "Yok"
+   },
+   "YesNo": {
+    "0": "Hayır",
+    "1": "Evet"
+   },
+   "ZombieFeralSense": {
+    "0": "Devre dışı",
+    "1": "Gündüz",
+    "2": "Gece",
+    "3": "Tümü"
+   },
+   "ZombieRageChance": {
+    "0": "Yok"
+   },
+   "ZombieSpeeds": {
+    "0": "Yürüme",
+    "1": "Koşu",
+    "2": "Koş",
+    "3": "Depar",
+    "4": "Kâbus"
+   }
+  }
+ }
+}

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>ダッシュボード</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>コンソール</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>プレイヤー</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>サーバー設定</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>MOD</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>バックアップ</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>ログ</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>設定</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>サーバー：</value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet：</value></data>
+  <data name="Status_Players" xml:space="preserve"><value>プレイヤー：</value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>停止中</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>起動中</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>実行中</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>停止処理中</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>接続済み</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>未接続</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>はい</value></data>
+  <data name="Common_No" xml:space="preserve"><value>いいえ</value></data>
+  <data name="Common_On" xml:space="preserve"><value>オン</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>オフ</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>更新</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>参照</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>削除</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>エラー</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>Kitsune7Den へようこそ</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>まずはサーバーをつなぎましょう。どちらかを選んでください：</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>インストール済みですか？</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value> 下の「</value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value>」をクリックして、次のファイルを指定してください：</value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>これから始めますか？</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value>「</value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>設定 → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value>」を開くと、Kitsune7Den がサーバーをインストールします</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>サーバーの場所</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>7DaysToDieServer.exe を指定してください（設定からインストールすることもできます）</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>7DaysToDieServer.exe のパス。「参照」で選択するか、設定で SteamCMD をセットアップすると自動でインストールされます</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>サーバーの状態</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>状態</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>稼働時間</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>プレイヤー</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>操作</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>起動</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>Telnet に接続</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>Telnet に手動で接続します。サーバーがすでに実行中のときに使います</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>再起動</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>接続情報</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>LAN アドレスをクリップボードにコピー</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>公開アドレスをクリップボードにコピー</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>LAN</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>公開</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>不明</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>取得できません</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>サーバーの実行ファイル</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>すべての実行ファイル</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>7 Days to Die サーバーの実行ファイルを選択</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>コンソール</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>クリア</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>送信</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>{0} をバックアップしました（Steam の更新で上書きされるのを防ぐため）。</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>設定をバックアップできませんでした：{0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>更新を確認しています…</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>更新の確認が完了しました。</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>更新の確認に失敗しました。このまま起動します。</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>バックアップから {0} を復元しました。</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>設定のバックアップを復元できませんでした：{0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>ログファイル：{0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>サーバーを起動しています：{0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>サーバーを起動できませんでした：{0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>shutdown コマンドを送信しています…</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>サーバープロセスを強制終了しています…</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>サーバーを停止しました。</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>古いログを削除しました：{0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>オンラインのプレイヤー</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>人がオンライン</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>キック</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>BAN</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>レベル</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>体力</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>スコア</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>ゾンビキル</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>死亡</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>PING</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP：</value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>管理者にする</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>管理者を解除</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>見つかりません</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>「{0}」を BAN しますか？
+ブラックリストに追加されます。</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>BAN の確認</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>プレイヤーのプラットフォーム ID を特定できませんでした。</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>「{0}」の管理者権限を解除しますか？</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>確認</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>オーナー</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>管理者</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>モデレーター</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>権限レベル {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>サーバーログ</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>ログを絞り込み（例：ERR、INF、プレイヤー名…）</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>エクスプローラーで開く</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>サーバーのフォルダーが設定されていません</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>ログファイルが {0} 件見つかりました</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>ログファイルが見つかりません</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>ファイルが見つかりません</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- {0} 行中、最初の 10,000 行を表示しています（絞り込みで範囲を狭めてください） ---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>{1} 内で {0} 行が一致</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>{0} 行 — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>ログの読み込みエラー：{0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>アップデート</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>GitHub で Kitsune7Den の最新リリースを確認します。アップデートはその場でダウンロード・インストールされるので、インストーラーは不要です。</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>アップデートを確認</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>アップデートをインストール</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>GitHub で見る</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>アップデートがあります：</value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>外観</value></data>
+  <data name="Settings_LanguageLabel" xml:space="preserve"><value>言語 / Language</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>テーマ</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>ディープネイビー + 赤のアクセント（デフォルト）</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>ダークチャコール + クールなブルーのアクセント</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>ダークグリーン系 + アンバーのアクセント</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>高コントラスト、色覚に配慮（青／オレンジ、赤／緑なし）</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>プロジェクトを支援</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den は無料のオープンソースです。時間の節約になったり、サーバー運営が少しでも楽になったりしたら、コーヒーを一杯おごってもらえるとうれしいです。無理せず、気持ちだけでも十分です。</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>既定のブラウザーで ko-fi.com を開きます</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>Ko-fi で支援する</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>SteamCMD を使うと、7D2D の専用サーバーを直接インストール・更新できます。</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>SteamCMD のパス</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>ダウンロード</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>SteamCMD を自動でダウンロードします</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>steamcmd.exe のパス</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>SteamCMD が見つかりません</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD の準備ができました</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>サーバーのインストール</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>インストール先フォルダー</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>7D2D サーバーのファイルをインストールする場所</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>サーバーのブランチ</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>既知のブランチを選ぶか、カスタムのブランチを入力します（例：alpha21.2）</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>サーバー起動時に自動更新</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>ファイルを検証</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>更新時にファイルの検証を行います（時間はかかりますが、破損したファイルを修復できます）</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>サーバーをインストール／更新</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet 接続</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den は接続のたびに serverconfig.xml から Telnet のポートとパスワードを読み取り、それがうまくいかない場合にだけここの値を使います。Telnet はコマンドの送信やプレイヤーデータの取得に使われます。</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet ポート</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet パスワード</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>すべての設定を保存</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>利用規約</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den は現状のまま、個人的かつ非商用の利用に限り提供されます。いかなる種類の保証もありません。本ソフトウェアの使用によって生じたデータの損失、サーバーの不具合、その他いかなる損害についても、作者は責任を負いません。ご利用は自己責任でお願いします。本ツールは The Fun Pimps および Valve とは無関係であり、両社の承認を受けたものではありません。</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>操作が正常に完了しました</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>操作に失敗しました。ログを確認してください</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>テーマを {0} に変更しました</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>設定を保存しました</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>すべての実行ファイル</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>steamcmd.exe を選択</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>サーバーのインストール先フォルダーを選択</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>先にサーバーのインストール先フォルダーを設定してください。SteamCMD はその近くに配置されます</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>SteamCMD が見つかりません。先にダウンロードするか、参照で場所を指定してください</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>先にサーバーのインストール先フォルダーを設定してください</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>更新中…</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>キャンセル中…</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>アップデート {0}（{1}）をインストールしますか？
+
+Kitsune7Den は新しいバージョンをダウンロードして再起動します。サーバーは実行されたままです。</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>アップデートの確認</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>アップデートを確認しています…</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>最新バージョンです（{0}）</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>アップデート {0} がありますが、リリースにダウンロード可能な exe/zip ファイルが見つかりませんでした</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>アップデートがあります：{0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>アップデートの確認に失敗しました：{0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>現在の exe のパスを特定できませんでした</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>{0}（{1}）をダウンロードしています…</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>展開しています…</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>Zip に {0} が含まれていませんでした</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>ダウンロードが完了しました。インストールしています…</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>アップデートをインストールしました。再起動しています…</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>アップデートに失敗しました：{0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD はすでに存在します：{0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>SteamCMD をダウンロードしています…</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>SteamCMD を展開しています…</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD をインストールしました：{0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>エラー：展開後に steamcmd.exe が見つかりません</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>SteamCMD のダウンロード中にエラーが発生しました：{0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>エラー：SteamCMD のパスが設定されていないか、見つかりません。先にダウンロードしてください。</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>エラー：サーバーのインストール先フォルダーが設定されていません。</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>実行中：steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>ブランチ：{0} | 検証：{1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>初回のインストールには時間がかかることがあります…</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>サーバーの exe が見つかりました：{0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>更新が正常に完了しました！</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD が終了しました。終了コード：{0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>更新をキャンセルしました。</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>SteamCMD の実行中にエラーが発生しました：{0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>フォルダーを開く</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>Zip からインストール</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>{0} / {1} 有効</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>有効</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>無効</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>有効にする</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>無効にする</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>作者：</value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>MOD {0} 個（{1} 個が有効）</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>{0} を有効にしました</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>{0} を無効にしました</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>MOD「{0}」を削除しますか？
+すべてのファイルが削除され、元に戻せません。</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>削除の確認</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>{0} を削除しました</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>MOD アーカイブ</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>すべてのファイル</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>MOD の Zip ファイルを選択</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>エラー：Zip 内に MOD の構成が見つかりませんでした。ModInfo.xml を含むフォルダーが必要です。</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>エラー：MOD のフォルダー名が無効です。</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>MOD をインストールしました：{0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>MOD のインストール中にエラーが発生しました：{0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>セーブ：</value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>見つかりません</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>フォルダーを開く</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>バックアップを作成</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>定期バックアップ</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>有効</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>間隔</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>最大保存数</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>スケジュールを保存</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>次回のバックアップ</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>バックアップはまだありません</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>「</value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value>」で現在のセーブを zip にまとめるか、上のスケジュールを有効にして一定間隔で自動バックアップできます。</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>復元</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>手動</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>定期</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>復元前</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>30 分ごと</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>1 時間ごと</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>2 時間ごと</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>4 時間ごと</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>6 時間ごと</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>12 時間ごと</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>毎日</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>バックアップが {0} 件見つかりました</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>バックアップ「{0}」を復元しますか？
+
+先に安全のためのバックアップが作成されます。
+復元する前にサーバーを停止してください。</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>復元の確認</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>バックアップ「{0}」を削除しますか？
+この操作は元に戻せません。</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>削除の確認</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>スケジュール設定を保存しました</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>たった今</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>{0} 分前</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>{0} 時間前</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>{0} 日前</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>定期バックアップを実行しています…</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>定期バックアップを有効にしました（{0}ごと）</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} 分</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 時間</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} 時間</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 日</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} 日</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>エラー：セーブフォルダーが見つかりません</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>{0} のバックアップを作成しています…</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>バックアップを作成しました：{0}（{1}）</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>バックアップに失敗しました：{0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>エラー：復元先のセーブフォルダーが見つかりません</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>復元前に安全のためのバックアップを作成しています…</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>{0} を復元しています…</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>{0} を復元しました。変更を反映するにはサーバーを再起動してください。</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>復元に失敗しました：{0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>{0} を削除しました</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>古いバックアップを整理しました：{0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>サーバー設定</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>フォーム表示</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>XML を直接編集</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>リセット</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>変更を保存</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>サーバーが設定されていません</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>ダッシュボードを開いて </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value> を指定してください。または、設定ページから SteamCMD で新しいサーバーをインストールできます。</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>serverconfig.xml が見つかりません。ダッシュボードでサーバーを設定してください</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>{0} 個のプロパティを読み込みました</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>保存しました（バックアップを作成済み）</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>保存に失敗しました。XML が正しいか確認してください</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>最後に保存した値に戻しました</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>昼／夜サイクル</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>昼</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>夜</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> 分</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> 分（合計）</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>サイクル全体：</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>分（10～240）</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>DayNightLength（{0}）と DayLightLength（{1}）を置き換えます</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>7 Days to Die {0} を検出しました（サーバーログより）</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>7 Days to Die {0}（SteamCMD のブランチ設定より）</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>7 Days to Die 3.x（正確なバージョンはサーバーを一度起動するまで不明です）</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>この serverconfig.xml は 7 Days to Die 3.0 より前のものです</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>3.x では、難易度、略奪品、ゾンビ、ブラッドムーン、1日の長さの設定がゲーム内のサンドボックスに移り、1つの SandboxCode で設定されるようになりました。下の「レガシー」にある古いプロパティはゲームでは無視されます。更新すると、それらはコメントアウトされ（何も削除されません）、SandboxCode、Region、Language が追加されます。更新前にバックアップも作成されます。</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>3.x 向けに更新</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>serverconfig.xml を 3.x 向けに更新</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>3.x で無視される設定をコメントアウトし、SandboxCode、Region、Language を追加しますか？
+
+先にタイムスタンプ付きの serverconfig.xml のバックアップが作成されます。古い値はコメントとしてファイルに残ります。</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>3.x 向けに更新しました：レガシー設定 {0} 件をコメントアウト、追加：{1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml はすでに 3.x 形式です</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>更新に失敗しました：{0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>先に未保存の変更を保存するか、リセットしてください</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ではこれらは無視され、代わりに SandboxCode の値が使われます。上のサンドボックスエディターで変更してください。</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>サンドボックス設定</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>サンドボックスを編集…</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>難易度、略奪品、ゾンビ、ブラッドムーン、1日の長さ、トレーダーなど。ゲームのサンドボックス画面と同じオプションです。</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>プリセット：{0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>カスタムルール：{0} 個のオプションがデフォルトから変更されています</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>この SandboxCode は読み取れません。エディターを開いて理由を確認してください。</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode を更新しました。「変更を保存」で serverconfig.xml に書き込まれます。</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>{0} のオプション表を使用しています（サーバー：7 Days to Die {1}）。</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>このサーバーは 7 Days to Die {0} で動作していますが、このバージョンの Kitsune7Den にある最新のオプション表は {1} です。それ以降に追加・変更されたオプションは、欠けていたりずれていたりする可能性があります。Kitsune7Den のアップデートを確認してください。</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>このサーバーがどの 3.x バージョンで動作しているか判別できなかったため、最新の表（{0}）を使用しています。一度サーバーを起動して、ログにバージョンを記録させてください。同じコードでも 3.x のバージョンによって意味が異なる場合があります。</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>プリセット</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>プリセット「{0}」と一致</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>カスタムルール</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>オプションを検索…</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>デフォルトに戻す</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>すべてリセット</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>適用</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>件がデフォルトから変更</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>デフォルト：{0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>コードが空です。</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>SandboxCode に使えるのは A～Z の英字だけです。</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>このコードは「{0}」で始まっていますが、このゲームバージョンのコードは「{1}」で始まります。</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>このコードのうち {0} か所は、このゲームバージョンのオプションではないため、そのまま保持されます：{1}</value></data>
+  <data name="CfgCat_Core" xml:space="preserve"><value>基本</value></data>
+  <data name="CfgCat_Sandbox" xml:space="preserve"><value>サンドボックス</value></data>
+  <data name="CfgCat_World" xml:space="preserve"><value>ワールド</value></data>
+  <data name="CfgCat_BlockDamage" xml:space="preserve"><value>対物ダメージ</value></data>
+  <data name="CfgCat_Gameplay" xml:space="preserve"><value>ゲームプレイ</value></data>
+  <data name="CfgCat_Player" xml:space="preserve"><value>プレイヤー</value></data>
+  <data name="CfgCat_Zombies" xml:space="preserve"><value>ゾンビ</value></data>
+  <data name="CfgCat_LootDrops" xml:space="preserve"><value>略奪品とドロップ</value></data>
+  <data name="CfgCat_LandClaims" xml:space="preserve"><value>土地主張</value></data>
+  <data name="CfgCat_Network" xml:space="preserve"><value>ネットワーク</value></data>
+  <data name="CfgCat_Admin" xml:space="preserve"><value>管理</value></data>
+  <data name="CfgCat_Advanced" xml:space="preserve"><value>詳細</value></data>
+  <data name="CfgCat_Legacy" xml:space="preserve"><value>レガシー</value></data>
+  <data name="CfgCat_Other" xml:space="preserve"><value>その他</value></data>
+  <data name="Cfg_ServerName_Name" xml:space="preserve"><value>サーバー名</value></data>
+  <data name="Cfg_ServerName_Desc" xml:space="preserve"><value>サーバーブラウザに表示される名前</value></data>
+  <data name="Cfg_ServerPassword_Name" xml:space="preserve"><value>サーバーパスワード</value></data>
+  <data name="Cfg_ServerPassword_Desc" xml:space="preserve"><value>参加に必要なパスワード（空欄 = パスワードなし）</value></data>
+  <data name="Cfg_ServerDescription_Name" xml:space="preserve"><value>サーバーの説明</value></data>
+  <data name="Cfg_ServerDescription_Desc" xml:space="preserve"><value>サーバーブラウザの一覧に表示される説明</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Name" xml:space="preserve"><value>ログイン確認テキスト</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Desc" xml:space="preserve"><value>プレイヤーが参加前に同意する必要があるメッセージ</value></data>
+  <data name="Cfg_Region_Name" xml:space="preserve"><value>地域</value></data>
+  <data name="Cfg_Region_Desc" xml:space="preserve"><value>サーバーのある地域。サーバーブラウザの地域フィルターで使われます（3.x）</value></data>
+  <data name="Cfg_Region_Opts" xml:space="preserve"><value>北アメリカ - 東|北アメリカ - 西|中央アメリカ|南アメリカ|ヨーロッパ|ロシア|アジア|中東|アフリカ|オセアニア</value></data>
+  <data name="Cfg_Language_Name" xml:space="preserve"><value>言語</value></data>
+  <data name="Cfg_Language_Desc" xml:space="preserve"><value>プレイヤーの主な言語。サーバーブラウザの検索で見つかるよう、英語名で入力してください（「日本語」ではなく "Japanese"）（3.x）</value></data>
+  <data name="Cfg_SandboxCode_Name" xml:space="preserve"><value>サンドボックスコード</value></data>
+  <data name="Cfg_SandboxCode_Desc" xml:space="preserve"><value>7D2D 3.x では、ゲームプレイのルール（難易度、略奪品、ゾンビ、ブラッドムーン、1日の長さなど）がこの 1 つのコードにまとめられています。サンドボックスエディターを使うか、ゲームの「サンドボックス設定」画面からコピーしたコードを貼り付けてください。</value></data>
+  <data name="Cfg_GameWorld_Name" xml:space="preserve"><value>ゲームワールド</value></data>
+  <data name="Cfg_GameWorld_Desc" xml:space="preserve"><value>Data/Worlds と GeneratedWorlds から自動で取得されます。既存のワールドを選ぶか、カスタムの名前を入力してください。</value></data>
+  <data name="Cfg_WorldGenSeed_Name" xml:space="preserve"><value>ワールド生成シード</value></data>
+  <data name="Cfg_WorldGenSeed_Desc" xml:space="preserve"><value>ランダムワールド生成に使うシード文字列</value></data>
+  <data name="Cfg_WorldGenSize_Name" xml:space="preserve"><value>ワールド生成サイズ</value></data>
+  <data name="Cfg_WorldGenSize_Desc" xml:space="preserve"><value>RWG マップの幅／高さ（メートル）。公式サポートは 6144～10240 で、2048 の倍数です。</value></data>
+  <data name="Cfg_GameName_Name" xml:space="preserve"><value>ゲーム名</value></data>
+  <data name="Cfg_GameName_Desc" xml:space="preserve"><value>セーブデータの名前（英字、数字、_ - . とスペース）。変更すると新しいセーブが始まります。</value></data>
+  <data name="Cfg_GameMode_Name" xml:space="preserve"><value>ゲームモード</value></data>
+  <data name="Cfg_GameMode_Desc" xml:space="preserve"><value>サーバーのゲームモード</value></data>
+  <data name="Cfg_GameMode_Opts" xml:space="preserve"><value>サバイバル（GameModeSurvival）</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Name" xml:space="preserve"><value>寝袋デッドゾーン</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Desc" xml:space="preserve"><value>自分の寝袋の近くに他の人が寝袋を置けない範囲の半径（ブロック）</value></data>
+  <data name="Cfg_BedrollExpiryTime_Name" xml:space="preserve"><value>寝袋期間</value></data>
+  <data name="Cfg_BedrollExpiryTime_Desc" xml:space="preserve"><value>持ち主が最後にオンラインになってから、寝袋がアクティブ状態を保つ現実の日数</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Name" xml:space="preserve"><value>プレイヤーごとの最大公開マップチャンク数</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Desc" xml:space="preserve"><value>プレイヤーごとにマップで明らかにできるチャンクの最大数（131072 = マップ全体）</value></data>
+  <data name="Cfg_BlockDamagePlayer_Name" xml:space="preserve"><value>プレイヤーの対物ダメージ</value></data>
+  <data name="Cfg_BlockDamagePlayer_Desc" xml:space="preserve"><value>プレイヤーがブロックに与えるダメージの倍率（パーセント）。ソロプレイでは資材集めの手間を減らすため 300% がよく使われます。</value></data>
+  <data name="Cfg_BlockDamageAI_Name" xml:space="preserve"><value>敵の対物ダメージ</value></data>
+  <data name="Cfg_BlockDamageAI_Desc" xml:space="preserve"><value>通常時にゾンビや動物がブロックに与えるダメージの倍率。ゾンビに壁を壊されにくくするには 25-50% に下げてください。</value></data>
+  <data name="Cfg_BlockDamageAIBM_Name" xml:space="preserve"><value>BM対物ダメージ</value></data>
+  <data name="Cfg_BlockDamageAIBM_Desc" xml:space="preserve"><value>ブラッドムーン中だけ、ゾンビがブロックに与えるダメージの倍率。通常時の AI ダメージとは別なので、ホードをより強く（または弱く）できます。</value></data>
+  <data name="Cfg_GameDifficulty_Name" xml:space="preserve"><value>ゲームの難易度</value></data>
+  <data name="Cfg_GameDifficulty_Desc" xml:space="preserve"><value>全体の難易度。3.x では、プレイヤーが実際に感じる難易度はサンドボックスの難易度プリセットで決まり、こちらはほぼレガシーです。</value></data>
+  <data name="Cfg_GameDifficulty_Opts" xml:space="preserve"><value>0 - スカベンジャー|1 - 冒険者|2 - 遊牧民|3 - 戦士|4 - サバイバリスト|5 - 狂気</value></data>
+  <data name="Cfg_DayNightLength_Name" xml:space="preserve"><value>24時間サイクル</value></data>
+  <data name="Cfg_DayNightLength_Desc" xml:space="preserve"><value>ゲーム内の 24 時間にかかる現実の分数</value></data>
+  <data name="Cfg_DayLightLength_Name" xml:space="preserve"><value>日照時間</value></data>
+  <data name="Cfg_DayLightLength_Desc" xml:space="preserve"><value>ゲーム内で昼が続く時間（24 時間中）</value></data>
+  <data name="Cfg_BuildCreate_Name" xml:space="preserve"><value>創造モード</value></data>
+  <data name="Cfg_BuildCreate_Desc" xml:space="preserve"><value>創造／チートモードでの建築を許可</value></data>
+  <data name="Cfg_BuildCreate_Opts" xml:space="preserve"><value>オン|オフ</value></data>
+  <data name="Cfg_BloodMoonFrequency_Name" xml:space="preserve"><value>ブラッドムーン頻度</value></data>
+  <data name="Cfg_BloodMoonFrequency_Desc" xml:space="preserve"><value>N 日ごとにブラッドムーンのホードが発生</value></data>
+  <data name="Cfg_BloodMoonRange_Name" xml:space="preserve"><value>ブラッドムーン範囲</value></data>
+  <data name="Cfg_BloodMoonRange_Desc" xml:space="preserve"><value>ブラッドムーンの予定日にランダムで前後させる日数（0 = 予定どおり）</value></data>
+  <data name="Cfg_BloodMoonWarning_Name" xml:space="preserve"><value>ブラッドムーン警告</value></data>
+  <data name="Cfg_BloodMoonWarning_Desc" xml:space="preserve"><value>ブラッドムーンの何時間前に警告を表示するか</value></data>
+  <data name="Cfg_BiomeProgression_Name" xml:space="preserve"><value>バイオームによる段階的な進行</value></data>
+  <data name="Cfg_BiomeProgression_Desc" xml:space="preserve"><value>危険なバイオームほどゾンビが強くなります</value></data>
+  <data name="Cfg_BiomeProgression_Opts" xml:space="preserve"><value>オン|オフ</value></data>
+  <data name="Cfg_StormFreq_Name" xml:space="preserve"><value>嵐の頻度</value></data>
+  <data name="Cfg_StormFreq_Desc" xml:space="preserve"><value>嵐が発生する頻度。0% で嵐はなくなります。</value></data>
+  <data name="Cfg_StormFreq_Opts" xml:space="preserve"><value>0% - オフ|50%|100%|150%|200%|300%|400%|500%</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Name" xml:space="preserve"><value>一日当たりのクエスト数</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Desc" xml:space="preserve"><value>ティアの進行にカウントされる 1 日あたりの最大クエスト数。それ以上のクエストでも報酬はもらえます。0 で無制限です。</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Name" xml:space="preserve"><value>ブラッドムーン敵数</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Desc" xml:space="preserve"><value>ブラッドムーン中、プレイヤー 1 人あたりに同時に存在するゾンビの数。ゲームステージや MaxSpawnedZombies によって上書きされることがあります。パフォーマンスへの影響が大きい設定です。</value></data>
+  <data name="Cfg_XPMultiplier_Name" xml:space="preserve"><value>経験値倍率</value></data>
+  <data name="Cfg_XPMultiplier_Desc" xml:space="preserve"><value>経験値の獲得倍率（%）。値が高いほど早くレベルが上がります。</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Name" xml:space="preserve"><value>プレイヤーのセーフゾーンレベル</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Desc" xml:space="preserve"><value>セーフゾーンの保護が終わるプレイヤーレベル。新規プレイヤーはこのレベルになるまでゾンビから守られます。</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Name" xml:space="preserve"><value>プレイヤーのセーフゾーン時間</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Desc" xml:space="preserve"><value>新規プレイヤーがセーフゾーンで保護される時間。この時間が過ぎると、レベルに関係なく保護は終わります。</value></data>
+  <data name="Cfg_PlayerKillingMode_Name" xml:space="preserve"><value>プレイヤーのキル</value></data>
+  <data name="Cfg_PlayerKillingMode_Desc" xml:space="preserve"><value>プレイヤー同士の戦闘（PvP）のルール</value></data>
+  <data name="Cfg_PlayerKillingMode_Opts" xml:space="preserve"><value>0 - キルなし|1 - 同盟のみキル|2 - 他人のみキル|3 - 全員キル</value></data>
+  <data name="Cfg_PartySharedKillRange_Name" xml:space="preserve"><value>パーティーでキルを共有する範囲</value></data>
+  <data name="Cfg_PartySharedKillRange_Desc" xml:space="preserve"><value>パーティーメンバーがキルの経験値を共有できる距離（メートル）。0 = かなり近くにいる必要があります。</value></data>
+  <data name="Cfg_DeathPenalty_Name" xml:space="preserve"><value>死亡ペナルティ</value></data>
+  <data name="Cfg_DeathPenalty_Desc" xml:space="preserve"><value>プレイヤーが死亡したときの経験値ペナルティ</value></data>
+  <data name="Cfg_DeathPenalty_Opts" xml:space="preserve"><value>0 - なし|1 - デフォルト（経験値ペナルティ）|2 - 負傷|3 - 永久死亡</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Name" xml:space="preserve"><value>友達の近くでのスポーンを許可</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Desc" xml:space="preserve"><value>新規プレイヤーが初回接続時に、友達の近くに参加することを選べるかどうか</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Opts" xml:space="preserve"><value>0 - 無効|1 - 常に許可|2 - 森林にいる友達の近くのみ</value></data>
+  <data name="Cfg_JarRefund_Name" xml:space="preserve"><value>瓶の返却</value></data>
+  <data name="Cfg_JarRefund_Desc" xml:space="preserve"><value>食料・飲料を作ったときにガラス瓶が戻ってくる割合（0 = 戻らない）</value></data>
+  <data name="Cfg_ZombieMove_Name" xml:space="preserve"><value>日中のゾンビ移動速度</value></data>
+  <data name="Cfg_ZombieMove_Desc" xml:space="preserve"><value>日中のゾンビの移動速度</value></data>
+  <data name="Cfg_ZombieMove_Opts" xml:space="preserve"><value>0 - 歩き|1 - 低速|2 - 早歩き|3 - 走る|4 - 全力疾走</value></data>
+  <data name="Cfg_ZombieMoveNight_Name" xml:space="preserve"><value>夜間のゾンビ移動速度</value></data>
+  <data name="Cfg_ZombieMoveNight_Desc" xml:space="preserve"><value>夜間のゾンビの移動速度</value></data>
+  <data name="Cfg_ZombieMoveNight_Opts" xml:space="preserve"><value>0 - 歩き|1 - 低速|2 - 早歩き|3 - 走る|4 - 全力疾走</value></data>
+  <data name="Cfg_ZombieFeralMove_Name" xml:space="preserve"><value>残忍ゾンビ移動速度</value></data>
+  <data name="Cfg_ZombieFeralMove_Desc" xml:space="preserve"><value>残忍ゾンビの移動速度</value></data>
+  <data name="Cfg_ZombieFeralMove_Opts" xml:space="preserve"><value>0 - 歩き|1 - 低速|2 - 早歩き|3 - 走る|4 - 全力疾走</value></data>
+  <data name="Cfg_ZombieBMMove_Name" xml:space="preserve"><value>ゾンビのBM移動速度</value></data>
+  <data name="Cfg_ZombieBMMove_Desc" xml:space="preserve"><value>ブラッドムーン中のゾンビの移動速度</value></data>
+  <data name="Cfg_ZombieBMMove_Opts" xml:space="preserve"><value>0 - 歩き|1 - 低速|2 - 早歩き|3 - 走る|4 - 全力疾走</value></data>
+  <data name="Cfg_EnemyDifficulty_Name" xml:space="preserve"><value>敵の攻撃性</value></data>
+  <data name="Cfg_EnemyDifficulty_Desc" xml:space="preserve"><value>「残忍」にすると、より手強いタイプのゾンビが加わります</value></data>
+  <data name="Cfg_EnemyDifficulty_Opts" xml:space="preserve"><value>0 - ノーマル|1 - 残忍</value></data>
+  <data name="Cfg_EnemySpawnMode_Name" xml:space="preserve"><value>敵の出現</value></data>
+  <data name="Cfg_EnemySpawnMode_Desc" xml:space="preserve"><value>ワールドに敵を出現させるかどうか。落ち着いて建築やテストをしたいときはオフにします。</value></data>
+  <data name="Cfg_EnemySpawnMode_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Name" xml:space="preserve"><value>最大ゾンビ数</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Desc" xml:space="preserve"><value>ワールド全体で同時に存在できるゾンビの最大数（ブラッドムーン中は x1.9、スリーパーは x2.1）。パフォーマンスへの影響が大きい設定です。</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Name" xml:space="preserve"><value>最大動物数</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Desc" xml:space="preserve"><value>同時に存在できる動物の最大数</value></data>
+  <data name="Cfg_ZombieFeralSense_Name" xml:space="preserve"><value>ゾンビ感知能力</value></data>
+  <data name="Cfg_ZombieFeralSense_Desc" xml:space="preserve"><value>残忍ゾンビが壁や障害物越しにプレイヤーを感知できるようになります</value></data>
+  <data name="Cfg_ZombieFeralSense_Opts" xml:space="preserve"><value>0 - オフ|1 - 日中のみ|2 - 夜間のみ|3 - 常時</value></data>
+  <data name="Cfg_AISmellMode_Name" xml:space="preserve"><value>AI匂いモード</value></data>
+  <data name="Cfg_AISmellMode_Desc" xml:space="preserve"><value>ゾンビが匂いでプレイヤーを追うときの移動速度。ゾンビは血、食べ物、炉の匂いを嗅ぎつけます。速いほど、ゾンビの近くでの料理やクラフトが危険になります。</value></data>
+  <data name="Cfg_AISmellMode_Opts" xml:space="preserve"><value>0 - オフ|1 - 歩き|2 - 早歩き|3 - 走る|4 - 全力疾走|5 - 最高速</value></data>
+  <data name="Cfg_LootAbundance_Name" xml:space="preserve"><value>略奪品の量</value></data>
+  <data name="Cfg_LootAbundance_Desc" xml:space="preserve"><value>略奪品の量の倍率（%）</value></data>
+  <data name="Cfg_LootRespawnDays_Name" xml:space="preserve"><value>略奪品リスポーン日数</value></data>
+  <data name="Cfg_LootRespawnDays_Desc" xml:space="preserve"><value>略奪済みのコンテナが再び補充されるまでの日数</value></data>
+  <data name="Cfg_AirDropFrequency_Name" xml:space="preserve"><value>エアドロップ</value></data>
+  <data name="Cfg_AirDropFrequency_Desc" xml:space="preserve"><value>エアドロップの間隔（ゲーム内の時間、0 = 無効）</value></data>
+  <data name="Cfg_AirDropMarker_Name" xml:space="preserve"><value>エアドロップの落下地点表示</value></data>
+  <data name="Cfg_AirDropMarker_Desc" xml:space="preserve"><value>エアドロップが着地したときに、マップとコンパスにマーカーを表示するかどうか</value></data>
+  <data name="Cfg_AirDropMarker_Opts" xml:space="preserve"><value>表示|非表示</value></data>
+  <data name="Cfg_DropOnDeath_Name" xml:space="preserve"><value>死亡時のドロップ</value></data>
+  <data name="Cfg_DropOnDeath_Desc" xml:space="preserve"><value>プレイヤーが倒されたときに落とすもの</value></data>
+  <data name="Cfg_DropOnDeath_Opts" xml:space="preserve"><value>0 - なし|1 - すべて|2 - 装備ベルトのみ|3 - バックパックのみ|4 - すべて削除</value></data>
+  <data name="Cfg_DropOnQuit_Name" xml:space="preserve"><value>終了時のドロップ</value></data>
+  <data name="Cfg_DropOnQuit_Desc" xml:space="preserve"><value>プレイヤーが切断したときに落とすもの</value></data>
+  <data name="Cfg_DropOnQuit_Opts" xml:space="preserve"><value>0 - なし|1 - すべて|2 - 装備ベルトのみ|3 - バックパックのみ</value></data>
+  <data name="Cfg_LandClaimSize_Name" xml:space="preserve"><value>主張サイズ</value></data>
+  <data name="Cfg_LandClaimSize_Desc" xml:space="preserve"><value>保護される範囲の大きさ（ブロック数、41 = 各方向に 20 ブロック）</value></data>
+  <data name="Cfg_LandClaimDeadZone_Name" xml:space="preserve"><value>主張デッドゾーン</value></data>
+  <data name="Cfg_LandClaimDeadZone_Desc" xml:space="preserve"><value>土地主張同士の最小距離（ブロック）</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Name" xml:space="preserve"><value>主張期間</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Desc" xml:space="preserve"><value>土地主張が失効するまでに、プレイヤーがオフラインでいられる現実の日数</value></data>
+  <data name="Cfg_LandClaimDecayMode_Name" xml:space="preserve"><value>主張風化モード</value></data>
+  <data name="Cfg_LandClaimDecayMode_Desc" xml:space="preserve"><value>オフラインのプレイヤーの土地主張による保護がどのように弱まるか</value></data>
+  <data name="Cfg_LandClaimDecayMode_Opts" xml:space="preserve"><value>0 - 遅い（線形）|1 - 速い（指数）|2 - なし（失効まで完全）</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Name" xml:space="preserve"><value>オンライン時の主張硬度</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Desc" xml:space="preserve"><value>持ち主がオンラインのときのブロック硬度の倍率（0 = 破壊不能）</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Name" xml:space="preserve"><value>オフライン時の主張硬度</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Desc" xml:space="preserve"><value>持ち主がオフラインのときのブロック硬度の倍率（0 = 破壊不能）</value></data>
+  <data name="Cfg_LandClaimCount_Name" xml:space="preserve"><value>土地主張の数</value></data>
+  <data name="Cfg_LandClaimCount_Desc" xml:space="preserve"><value>プレイヤー 1 人あたりに許可される土地主張の最大数</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Name" xml:space="preserve"><value>主張オフライン遅延</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Desc" xml:space="preserve"><value>ログアウト後、土地主張がオンライン時の硬度からオフライン時の硬度に切り替わるまでの分数</value></data>
+  <data name="Cfg_ServerPort_Name" xml:space="preserve"><value>サーバーポート</value></data>
+  <data name="Cfg_ServerPort_Desc" xml:space="preserve"><value>メインのゲームポート（補助的な接続用に +1 と +2 も使用します）</value></data>
+  <data name="Cfg_ServerVisibility_Name" xml:space="preserve"><value>サーバー可視性</value></data>
+  <data name="Cfg_ServerVisibility_Desc" xml:space="preserve"><value>サーバーブラウザでこのサーバーを見られる人</value></data>
+  <data name="Cfg_ServerVisibility_Opts" xml:space="preserve"><value>0 - リストに記載しない|1 - 友達のみ|2 - 公開</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Name" xml:space="preserve"><value>最大プレイヤー数</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Desc" xml:space="preserve"><value>同時に接続できるプレイヤーの最大数</value></data>
+  <data name="Cfg_ServerReservedSlots_Name" xml:space="preserve"><value>予約スロット</value></data>
+  <data name="Cfg_ServerReservedSlots_Desc" xml:space="preserve"><value>最大プレイヤー数のうち、予約スロット用の権限レベルを持つプレイヤーのために確保しておくスロット数</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Name" xml:space="preserve"><value>ワールド転送速度の上限</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Desc" xml:space="preserve"><value>新しいクライアント 1 台あたりのワールドのダウンロード速度の上限（KiB/s、ゲーム側で 1300 前後に制限されます）</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Name" xml:space="preserve"><value>無効にするネットワークプロトコル</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Desc" xml:space="preserve"><value>無効にするプロトコル。NAT ルーターがない場合や、ポート開放が正しく設定されている場合、専用サーバーでは SteamNetworking を無効にしてください。</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Opts" xml:space="preserve"><value>なし|SteamNetworking|LiteNetLib|両方</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Name" xml:space="preserve"><value>クロスプレイを許可</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Desc" xml:space="preserve"><value>プラットフォーム間のクロスプレイを有効にします。クロスプレイのサーバーは制裁を無視してはならず、プレイヤースロットはデフォルト以下にする必要があります。</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Opts" xml:space="preserve"><value>オン|オフ</value></data>
+  <data name="Cfg_TelnetEnabled_Name" xml:space="preserve"><value>Telnet を有効化</value></data>
+  <data name="Cfg_TelnetEnabled_Desc" xml:space="preserve"><value>Telnet のリモートコンソールを有効にします</value></data>
+  <data name="Cfg_TelnetEnabled_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_TelnetPort_Name" xml:space="preserve"><value>Telnet ポート</value></data>
+  <data name="Cfg_TelnetPort_Desc" xml:space="preserve"><value>Telnet 接続用のポート</value></data>
+  <data name="Cfg_TelnetPassword_Name" xml:space="preserve"><value>Telnet パスワード</value></data>
+  <data name="Cfg_TelnetPassword_Desc" xml:space="preserve"><value>Telnet アクセス用のパスワード。空欄の場合、Telnet はこの PC（localhost）からの接続のみ受け付けます。</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Name" xml:space="preserve"><value>Telnet ログイン失敗の上限</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Desc" xml:space="preserve"><value>一時的に BAN されるまでのログイン失敗回数</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Name" xml:space="preserve"><value>Telnet ブロック時間</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Desc" xml:space="preserve"><value>Telnet のログイン失敗が多すぎたときにブロックする秒数</value></data>
+  <data name="Cfg_EACEnabled_Name" xml:space="preserve"><value>EAC 有効</value></data>
+  <data name="Cfg_EACEnabled_Desc" xml:space="preserve"><value>Easy Anti-Cheat。無効にすると、MOD を導入したクライアントが接続できるようになります</value></data>
+  <data name="Cfg_EACEnabled_Opts" xml:space="preserve"><value>オン|オフ</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Name" xml:space="preserve"><value>コマンド実行ログを隠す</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Desc" xml:space="preserve"><value>コマンド実行のログ記録を隠します。値が大きいほど、より多くの場所から隠されます。</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Opts" xml:space="preserve"><value>0 - すべて表示|1 - Telnet／パネルから隠す|2 - クライアントからも隠す|3 - すべて隠す</value></data>
+  <data name="Cfg_AdminFileName_Name" xml:space="preserve"><value>管理者ファイル名</value></data>
+  <data name="Cfg_AdminFileName_Desc" xml:space="preserve"><value>サーバーの管理者ファイル名。パスはセーブフォルダーからの相対パスです。</value></data>
+  <data name="Cfg_ServerAdminSlots_Name" xml:space="preserve"><value>管理者スロット</value></data>
+  <data name="Cfg_ServerAdminSlots_Desc" xml:space="preserve"><value>サーバーが満員でも参加できる管理者の人数</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Name" xml:space="preserve"><value>管理者スロットの権限</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Desc" xml:space="preserve"><value>管理者スロットを使うのに必要な権限レベル（0 = 最上位の管理者）</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Name" xml:space="preserve"><value>予約スロットの権限</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Desc" xml:space="preserve"><value>予約スロットを使うのに必要な権限レベル</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Name" xml:space="preserve"><value>EOS の制裁を無視</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Desc" xml:space="preserve"><value>プレイヤーの参加を許可するときに EOS の制裁を無視します</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Name" xml:space="preserve"><value>永久プロフィール</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Desc" xml:space="preserve"><value>有効にすると、プレイヤーは常に前回使ったプロフィールで参加します。無効にすると、好きなプロフィールを選べます。</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_CameraRestrictionMode_Name" xml:space="preserve"><value>カメラモード制限</value></data>
+  <data name="Cfg_CameraRestrictionMode_Desc" xml:space="preserve"><value>プレイヤーが使えるカメラの視点を制限します</value></data>
+  <data name="Cfg_CameraRestrictionMode_Opts" xml:space="preserve"><value>0 - 自由（一人称・三人称）|1 - 一人称視点のみ|2 - 三人称視点のみ</value></data>
+  <data name="Cfg_TwitchServerPermission_Name" xml:space="preserve"><value>Twitch のサーバー権限</value></data>
+  <data name="Cfg_TwitchServerPermission_Desc" xml:space="preserve"><value>サーバーで Twitch 連携を使うのに必要な権限レベル</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Name" xml:space="preserve"><value>ブラッドムーン中の Twitch を許可</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Desc" xml:space="preserve"><value>ブラッドムーン中の Twitch アクションを許可します。追加で出現するゾンビによってラグが発生することがあります。</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_ServerWebsiteURL_Name" xml:space="preserve"><value>サーバーのウェブサイト URL</value></data>
+  <data name="Cfg_ServerWebsiteURL_Desc" xml:space="preserve"><value>サーバーブラウザにサーバーのウェブサイトとして表示される URL</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Name" xml:space="preserve"><value>最大視距離</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Desc" xml:space="preserve"><value>クライアントが要求できる最大の視距離（6-12）。メモリとパフォーマンスへの影響が大きい設定です。</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Name" xml:space="preserve"><value>ターミナルウィンドウ</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Desc" xml:space="preserve"><value>ログ出力とコマンド入力用のターミナルウィンドウを表示します（Windows のみ）</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_WebDashboardEnabled_Name" xml:space="preserve"><value>Web ダッシュボードを有効化</value></data>
+  <data name="Cfg_WebDashboardEnabled_Desc" xml:space="preserve"><value>7D2D 内蔵の Web ダッシュボードを有効にします</value></data>
+  <data name="Cfg_WebDashboardEnabled_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_WebDashboardPort_Name" xml:space="preserve"><value>Web ダッシュボードのポート</value></data>
+  <data name="Cfg_WebDashboardPort_Desc" xml:space="preserve"><value>内蔵 Web ダッシュボード用のポート</value></data>
+  <data name="Cfg_WebDashboardUrl_Name" xml:space="preserve"><value>Web ダッシュボードの URL</value></data>
+  <data name="Cfg_WebDashboardUrl_Desc" xml:space="preserve"><value>リバースプロキシ構成で使う、ダッシュボードの外部 URL</value></data>
+  <data name="Cfg_EnableMapRendering_Name" xml:space="preserve"><value>マップのレンダリング</value></data>
+  <data name="Cfg_EnableMapRendering_Desc" xml:space="preserve"><value>探索中にマップをタイル画像としてレンダリングします。Web ダッシュボードでマップを表示するのに使われます。</value></data>
+  <data name="Cfg_EnableMapRendering_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Name" xml:space="preserve"><value>ダイナミックメッシュを有効化</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Desc" xml:space="preserve"><value>見た目を向上させるダイナミックメッシュシステムを有効にします</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Name" xml:space="preserve"><value>ダイナミックメッシュを土地主張内のみに</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Desc" xml:space="preserve"><value>土地主張の範囲内でのみダイナミックメッシュを使います</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Opts" xml:space="preserve"><value>はい|いいえ</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Name" xml:space="preserve"><value>ダイナミックメッシュの土地主張バッファ</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Desc" xml:space="preserve"><value>土地主張まわりのダイナミックメッシュのチャンク半径</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Name" xml:space="preserve"><value>ダイナミックメッシュの最大アイテムキャッシュ</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Desc" xml:space="preserve"><value>同時に処理するアイテムの最大数。値が大きいほど多くの RAM を使います。</value></data>
+  <data name="Cfg_MaxChunkAge_Name" xml:space="preserve"><value>チャンクリセット時間</value></data>
+  <data name="Cfg_MaxChunkAge_Desc" xml:space="preserve"><value>訪問されていない／保護されていないチャンクがリセットされるまでのゲーム内日数。-1 = リセットしない。</value></data>
+  <data name="Cfg_SaveDataLimit_Name" xml:space="preserve"><value>セーブデータの上限</value></data>
+  <data name="Cfg_SaveDataLimit_Desc" xml:space="preserve"><value>セーブ 1 つあたりの最大ディスク容量（MB）。空き容量を確保するためにチャンクがリセットされることがあります。-1 = 無制限。</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Name" xml:space="preserve"><value>キューに入れるメッシュレイヤーの最大数</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>生成中にキューに入れるチャンクメッシュレイヤーの最大数。低いほどメモリ使用量は減りますが、生成は遅くなります。</value></data>
+  <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>ユーザーデータフォルダー</value></data>
+  <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>すべてのユーザーデータ、セーブ、RWG ワールドの保存先を上書きします。デフォルトにする場合は空欄のままにしてください。</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>サーバーが予期せず終了しました（終了コード {0}）。</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>自動再起動</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>サーバーがクラッシュしたら再起動する</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>サーバーが自分で終了してから 15 秒後に再起動します。壊れた MOD や設定で無限ループにならないよう、15 分間に最大 3 回までです。Kitsune7Den の「停止」ボタンで止めた場合や、コンソールで shutdown と入力した場合はクラッシュとして扱いません。</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>定期再起動</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>毎日、次の時刻に</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>24 時間表記、この PC の時刻。複数指定：04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>稼働</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>時間ごと</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>ゲーム内の警告（何分前）</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>空欄 = 警告なし</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>警告メッセージ（{minutes} = 残り分数）</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>最終メッセージ</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>警告は Telnet 経由でゲーム内の say コマンドを使って送信されます。再起動の時刻になると、ワールドを保存し、サーバーを正常にシャットダウンしてから再び起動します。定期再起動を行うには Kitsune7Den が実行されている必要があります。</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>時刻は 04:00 や 4:00 のように入力し、カンマで区切ってください。</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>警告は 1～120 の整数（分）で入力し、カンマで区切ってください。</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>再起動をキャンセル</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>警告してから再起動</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>今すぐ警告のカウントダウンを開始し、その後サーバーを保存・停止・起動します</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>次回の再起動：{0}（あと {1}）</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>{0} に再起動します（あと {1}）。プレイヤーに警告しています。</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>定期再起動はオンです。スケジュールはサーバーの実行中に開始されます。</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>定期再起動はオンですが、予定されている再起動がありません。時刻を確認してください。</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>定期再起動はありません。</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>1 分未満</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0} 時間 {1} 分</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} 分</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>サーバーはあと {minutes} 分で再起動します。安全な場所に移動してください。</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>サーバーを再起動します。またすぐに会いましょう！</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>予定されていた再起動はキャンセルされました。</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>再起動をキャンセルしました。</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>{0} の定期再起動：プレイヤーに警告しています。</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>{0} に再起動：プレイヤーに警告しています。</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet が接続されていないため、プレイヤーに警告が表示されず、正常なシャットダウンもできません。</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>ワールドを保存しています…</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>サーバーを再起動しています…</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>サーバーはすでに実行されていないため、定期再起動をスキップします。</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>サーバーが再び起動しませんでした。コンソールと、ダッシュボードのサーバーのパスを確認してください。</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>自動再起動に失敗しました：{0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>{0} 秒後にサーバーを再起動します（クラッシュ後の再起動 {1}/{2} 回目）。</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>サーバーが再びクラッシュしました。{1} 分間にすでに {0} 回再起動しているため、停止したままにします。原因はコンソールとログで確認してください。</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>Telnet ポート {0} はまだ応答していません。サーバーが起動中なら、少し待ってください。そうでなければ、serverconfig.xml の TelnetEnabled と TelnetPort を確認してください。</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>サーバーが Telnet パスワードを拒否しました。Kitsune7Den は serverconfig.xml の TelnetPassword を使います。サーバーの実行中に変更した場合は、新しいパスワードを反映させるためにサーバーを再起動してください。</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>サーバーは Telnet パスワードを要求していますが、serverconfig.xml にも設定にも入力されていません。serverconfig.xml に追加したばかりなら、サーバーを再起動してください。</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>serverconfig.xml で Telnet がオフになっています（TelnetEnabled = false）。Kitsune7Den のコンソール、プレイヤー、再起動の機能には Telnet が必要です。オンにしてサーバーを再起動してください。</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>パスワードが違います</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>パスワードが必要です</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>設定でオフ</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>サーバーの起動</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den は startdedicated.bat と同じ引数で 7DaysToDieServer.exe を起動します。ここで追加したものは、.bat の追加引数と同じ位置、つまり -dedicated の直前に入ります。別の設定ファイルで実行するには -configfile=yourconfig.xml を使ってください。Kitsune7Den もあらゆる場所でそのファイルを読み込み・編集するようになります。</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>追加の起動引数（任意）</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den が実行するコマンド：</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>次の引数は Kitsune7Den が自分で設定するため無視されます：{0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>サーバー、サーバー設定ページ、Telnet、バックアップは serverconfig.xml の代わりに {0} を使います。保存してからサーバーを再起動すると反映されます。</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>起動引数 {0} を無視しました：Kitsune7Den が自分で設定します。</value></data>
+</root>

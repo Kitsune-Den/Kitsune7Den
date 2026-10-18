@@ -1,0 +1,4120 @@
+{
+ "v3_0": {
+  "categories": {
+   "Crafting": "製作",
+   "Entities": "實體",
+   "General": "玩家",
+   "Misc": "雜項",
+   "Resources": "資源",
+   "Tasks": "任務",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "啟用或停用殭屍的氣味追蹤功能，並設定牠們聞到氣味時的移動速度。",
+    "label": "AI 氣味模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投補給出現的頻率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地圖與指南針上顯示空投補給位置的標記。",
+    "label": "標記空投地點"
+   },
+   "AirDropRandomTime": {
+    "description": "允許控制空投出現的時間。選擇特定時間讓空投規律出現，或選擇「任意」使其完全隨機。\\n\\n無 = 預設的正午空投。\\n早晨 = 04:00 - 10:00中\\n午 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜間 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投時間變數"
+   },
+   "AllowCompass": {
+    "description": "顯示玩家的指南針。",
+    "label": "允許使用指南針"
+   },
+   "AllowMap": {
+    "description": "啟用遊戲內地圖。",
+    "label": "允許使用地圖"
+   },
+   "AllowScreenMarkers": {
+    "description": "在畫面上顯示導航標記。地圖標記依然可見。",
+    "label": "允許使用畫面標記"
+   },
+   "AllowZombieDigging": {
+    "description": "允許殭屍向下挖掘地形。殭屍依然可以橫向挖掘。",
+    "label": "殭屍挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "在戰利品中找到的彈藥數量。",
+    "label": "彈藥豐度"
+   },
+   "ApiaryInput": {
+    "description": "設定開始蜂蜜生產所需的花卉數量。",
+    "label": "養蜂箱輸入"
+   },
+   "ApiaryOutput": {
+    "description": "每個生產週期生成的蜂蜜量。",
+    "label": "養蜂箱產量"
+   },
+   "ApiaryTime": {
+    "description": "調整養蜂箱生產蜂蜜所需的時間。",
+    "label": "養蜂箱時間"
+   },
+   "ArmorLootCount": {
+    "description": "在戰利品中找到的護甲與護甲零件數量。",
+    "label": "護甲豐度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包內製作哪些物品。\\n\\n「否」停用背包製作。\\n「是」允許在背包內製作。\\n「有限」只允許在背包內製作有限數量的配方。\\n「僅限工作臺」只允許製作工作臺，無法在背包內製作其他物品。",
+    "label": "背包製作"
+   },
+   "BiomeAnimalRespawn": {
+    "description": "提升活躍生物群系中動物的重生頻率。會影響非殭屍的被動與主動食物來源。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系動物重生"
+   },
+   "BiomeEnemyDensity": {
+    "description": "覆寫生物群系敵人密度，並設定每個生物群系生成的敵人數量。預設使用 XML 設定檔中的數值。",
+    "label": "敵人密度"
+   },
+   "BiomeGSModifier": {
+    "description": "基於生物群系的難度加成。較困難的生物群系會使敵人強度與戰利品等級超越你目前的基礎進度。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系遊戲等級"
+   },
+   "BiomeLSModifier": {
+    "description": "適用於各個生物群系的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系戰利品等級"
+   },
+   "BiomeProgression": {
+    "description": "啟用或停用生物群系危害。天氣與風暴不受此設定影響。",
+    "label": "生物群落進度"
+   },
+   "BiomeZombieRespawn": {
+    "description": "提升活躍生物群系中敵人的重生頻率。預設使用 XML 設定檔中的數值。",
+    "label": "敵人重生"
+   },
+   "BlockDamage": {
+    "description": "玩家對方塊造成的傷害量。",
+    "label": "玩家塊傷害"
+   },
+   "BlockDamageAI": {
+    "description": "敵人對方塊造成的傷害量。",
+    "label": "敵人塊傷害"
+   },
+   "BlockDamageAIBM": {
+    "description": "敵人在血月期間對方塊造成的傷害。",
+    "label": "血月塊傷害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期間每位玩家周圍同時存活的殭屍數量上限。\\n\\n附近玩家共享最多 30 隻殭屍的群體上限。若超過此上限，系統將改為透過提升遊戲階段來增加難度。世界數量上限約為 MaxSpawnedZombies 的 1.9 倍。較低的遊戲階段可能會減少生成數量。\\n\\n調高此設定會大幅影響遊戲效能。",
+    "label": "血月計數"
+   },
+   "BloodMoonFrequency": {
+    "description": "兩次血月之間相隔的遊戲天數。停用 = 不會發生血月。",
+    "label": "血月頻率"
+   },
+   "BloodMoonRange": {
+    "description": "血月頻率過後，該事件可能發生的天數範圍。\\n\\n例如：頻率設為 7 + 範圍設為 5，血月就會隨機在第 7 天到第 12 天之間發生。\\n\\n0 天 = 不會隨機發生。",
+    "label": "血月範圍"
+   },
+   "BloodMoonWarning": {
+    "description": "設定血月警告顯示於畫面上，且天數變成紅色的時間點。",
+    "label": "血月警告"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "允許埋藏任務出現在商人任務清單中。若設為「否」，則僅顯示資訊點任務。",
+    "label": "埋藏任務"
+   },
+   "ChallengesEnabled": {
+    "description": "啟用遊戲內的挑戰系統。",
+    "label": "挑戰"
+   },
+   "CraftingInput": {
+    "description": "製作所需的材料數量（不包含資源包）。",
+    "label": "製作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制從戰利品中取得的製作技能雜誌數量。",
+    "label": "雜誌豐度"
+   },
+   "CraftingMaxTier": {
+    "description": "設定製作物品的最高品質。",
+    "label": "最高製作品質"
+   },
+   "CraftingOutput": {
+    "description": "每次製作所產出的物品數量（不包含資源包）。",
+    "label": "製作產量"
+   },
+   "CraftingProgression": {
+    "description": "啟用或停用基於雜誌與原理圖的製作進度系統。",
+    "label": "製作進度"
+   },
+   "CraftingTime": {
+    "description": "製作物品所需的時間。",
+    "label": "製作時間"
+   },
+   "CropGrowthSpeed": {
+    "description": "調整玩家種植的農作物與樹木的生長速度。百分比越高，生長時間越長。注意：若要使變更生效，現有存檔中的農作物需重新種植。",
+    "label": "農作物生長"
+   },
+   "CropOutput": {
+    "description": "控制從野生與玩家種植的農作物上採收到的資源數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "農作物產量"
+   },
+   "CrouchSpeed": {
+    "description": "調整玩家蹲下與行走時的移動速度。",
+    "label": "下蹲速度"
+   },
+   "DayLightLength": {
+    "description": "設定遊戲內的日照時數。「永遠黑夜」和「永遠白天」運作正常。日照持續時間設定：\\n\\n 4 = 10:00 - 14:00\\n 6 = 09:00 - 15:00\\n 8 = 08:00 - 16:00\\n10 = 07:00 - 17:00\\n12 = 06:00 - 18:00\\n14 = 05:00 - 19:00\\n16 = 04:00 - 20:00\\n18 = 04:00 - 22:00\\n20 = 02:00 - 22:00",
+    "label": "白天時長"
+   },
+   "DayNightLength": {
+    "description": "遊戲中經過 24 小時所需的現實時間（分鐘）。",
+    "label": "24 小時週期"
+   },
+   "DeathPenalty": {
+    "description": "決定角色死亡後的懲罰機制。\\n\\n無 = 不受懲罰。\\n\\n僅經驗值 = 經典的損失經驗值設定。\\n受傷 = 身上會保留部分減益效果，且重生時飽食度與水分會重置為 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡懲罰"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "啟用「死亡耗損」後，此設定決定死亡時損失耐久度的百分比。",
+    "label": "死亡耗損量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "設定死亡時物品是否會耗損。\\n\\n無 = 不會耗損。\\n耐久度 = 降低目前的耐久度，可透過修理恢復。\\n最大耐久度 = 降低最大耐久度，從而降低修理上限。\\n兩者 = 物品同時流失目前與最大耐久度。",
+    "label": "死亡耗損"
+   },
+   "DewCollectorInput": {
+    "description": "設定開始收集露水所需的罐子數量。",
+    "label": "露水收集器輸入"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器每個週期產出的水量。",
+    "label": "露水收集器產量"
+   },
+   "DewCollectorTime": {
+    "description": "調整露水收集器產出水所需的時間。",
+    "label": "露水收集器時間"
+   },
+   "DrinkLootCount": {
+    "description": "在容器中找到的飲料數量。",
+    "label": "飲料豐度"
+   },
+   "DropOnDeath": {
+    "description": "設定死亡時會掉落哪些物品。\\n\\n無 = 不掉落任何物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n僅工具皮帶 = 掉落工具皮帶上的物品。\\n僅背包 = 掉落背包內的物品。\\n全部刪除 = 刪除所有物品。",
+    "label": "死亡時掉落"
+   },
+   "DropOnQuit": {
+    "description": "決定退出遊戲時會掉落哪些物品。\\n\\n無 = 不掉落物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n工具皮帶 = 掉落工具皮帶上的物品。\\n背包 = 掉落背包內的物品。",
+    "label": "死亡時退出"
+   },
+   "DukesLootCount": {
+    "description": "在戰利品中找到的杜克幣與舊錢數量。",
+    "label": "貨幣豐度"
+   },
+   "ElectricalOutput": {
+    "description": "控制產生的電力量。",
+    "label": "電力輸出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制背包內會造成負重的欄位數量。數值範圍從停用（無負重）到全部（最大負重）。預設使用 XML 設定檔中的數值。",
+    "label": "負重欄位"
+   },
+   "EnemySpawnMode": {
+    "description": "啟用或停用敵人生成。",
+    "label": "敵人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敵人對玩家造成的傷害量。此數值會與玩家受到的其他傷害疊加。",
+    "label": "敵人造成傷害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敵人與動物等實體從玩家受到的傷害量。",
+    "label": "實體承受傷害"
+   },
+   "FoodLootCount": {
+    "description": "在容器中找到的食物數量。",
+    "label": "食物豐度"
+   },
+   "GlobalGSModifier": {
+    "description": "根據你的等級與存活天數，決定敵人種類、難度縮放、戰利品品質以及血月強度。數值越高，難度越高。預設使用 XML 設定檔中的數值。",
+    "label": "全局遊戲等級"
+   },
+   "GlobalLSModifier": {
+    "description": "適用於玩家戰利品等級的全局倍率。預設使用 XML 設定檔中的數值。",
+    "label": "全局戰利品等級"
+   },
+   "GlobalLootCount": {
+    "description": "全面調整在世界中找到的戰利品總量。「無」停用所有戰利品，包括殭屍包掉落物品和補給箱。",
+    "label": "戰利品豐度"
+   },
+   "GlobalTSModifier": {
+    "description": "適用於商人等級進度的全局倍率。控制商人販賣的物品品質和種類。預設使用 XML 設定檔中的數值。",
+    "label": "全局商人等級"
+   },
+   "HarvestingOutput": {
+    "description": "控制採集方塊與物品時獲得的資源數量。不會影響礦石、種子或農作物。若停用，可能會影響遊戲內挑戰。",
+    "label": "資源產量"
+   },
+   "HeadshotMode": {
+    "description": "決定爆頭傷害的處理方式。\\n\\n僅限爆頭 = 只有爆頭能對敵人造成傷害。\\n爆頭終結 = 攻擊身體會造成傷害，但只有爆頭才能擊殺敵人。\\n\\n不適用於被動的動物。",
+    "label": "爆頭模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家對實體造成爆頭傷害時的加成倍率。",
+    "label": "爆頭倍率"
+   },
+   "HeatMapSensitivity": {
+    "description": "控制玩家活動產生的熱力累積。熱力越高，尖叫者生成的機率就越高。預設使用 XML 設定檔中的數值。",
+    "label": "熱力圖敏感度"
+   },
+   "IncomingDamage": {
+    "description": "玩家從所有來源受到的傷害量。",
+    "label": "玩家承受傷害"
+   },
+   "InfectionRate": {
+    "description": "調整感染惡化的速度。",
+    "label": "感染速度"
+   },
+   "IntroChallengesEnabled": {
+    "description": "為新玩家啟用逐步引導的初期挑戰。",
+    "label": "新手挑戰"
+   },
+   "IntroQuestEnabled": {
+    "description": "略過開局的掩埋補給任務，直接解鎖完整的任務進度。",
+    "label": "新手任務"
+   },
+   "ItemDegradation": {
+    "description": "武器與工具消耗耐久度的速度。預設使用 XML 設定檔中的數值。",
+    "label": "物品磨損"
+   },
+   "JarRefund": {
+    "description": "消耗物品後退還空罐的機率。",
+    "label": "空罐退還"
+   },
+   "JumpStrength": {
+    "description": "調整玩家的跳躍高度。",
+    "label": "彈跳力"
+   },
+   "LootBagChance": {
+    "description": "適用於敵人死亡時掉落戰利品袋機率的加成倍率。",
+    "label": "掉落戰利品袋"
+   },
+   "LootMaxTier": {
+    "description": "設定戰利品中可出現的武器與物品的最高品質。",
+    "label": "最高戰利品品質"
+   },
+   "LootRespawnDays": {
+    "description": "未造訪區域內的戰利品容器重置所需經過的遊戲天數。",
+    "label": "戰利品重生天數"
+   },
+   "LootTimer": {
+    "description": "搜刮戰利品容器所需的時間。",
+    "label": "戰利品計時器"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "設定死亡時隨機遺失的物品數量。",
+    "label": "死亡遺失數量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "設定死亡時會遺失哪些物品。\\n\\n無 = 不遺失物品。\\n全部 = 所有物品。\\n工具皮帶 = 僅限工具皮帶上的物品。\\n背包 = 僅限背包內的物品。\\n裝備 = 身上穿著的護甲與服裝。\\n僅限攜帶物品 = 僅限工具皮帶與背包內的物品。",
+    "label": "死亡遺失物品"
+   },
+   "MaxDegradationAmount": {
+    "description": "決定修理物品時造成的耗損程度。",
+    "label": "修理耗損"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的最高殭屍層級。",
+    "label": "最高敵人層級"
+   },
+   "MaxTechType": {
+    "description": "全面設定武器與物品可使用的最高科技階級，讓你掌控遊戲進度與節奏。請查看以下範例。\\n\\n科技 0 = 石頭和管子\\n科技 1 = 鐵和 AK\\n科技 2 = 鋼和戰術突擊\\n科技 3 = 螺旋鑽和 M60",
+    "label": "最高科技階段"
+   },
+   "MedicalLootCount": {
+    "description": "在戰利品中找到的醫療用品數量。",
+    "label": "醫療用品豐度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近戰武器與工具造成的傷害。",
+    "label": "近戰傷害"
+   },
+   "MeleeLootCount": {
+    "description": "在戰利品中找到的近戰武器與零件數量。",
+    "label": "近戰武器豐度"
+   },
+   "MiningOutput": {
+    "description": "控制採礦時獲得的礦石數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "採礦產量"
+   },
+   "NewbieCoat": {
+    "description": "啟用後，新玩家生成時會帶有新手保護的增益效果。",
+    "label": "新手增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "允許資訊點任務出現在商人任務清單中。若設為「否」，則僅顯示埋藏任務。",
+    "label": "資訊點任務"
+   },
+   "POITierLSModifier": {
+    "description": "基於資訊點層級的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "資訊點戰利品等級"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "決定生命值與耐力是否會隨等級提升。",
+    "label": "等級屬性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "閱讀技能雜誌所獲得的進度。",
+    "label": "雜誌進度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "可計入商人進度的每日任務數量。超過此上限後完成的任務依然會給予經驗值與獎勵，但不會推進商人階級進度。",
+    "label": "每日任務上限"
+   },
+   "QuestsEnabled": {
+    "description": "啟用或停用遊戲內的任務系統。",
+    "label": "任務"
+   },
+   "QuestsPerTier": {
+    "description": "解鎖下一階級所需的完成任務數量。數值越高，階級間的進度就越慢。「無」= 無限制，可直接接取所有階級的任務。",
+    "label": "每個層級的任務需求數"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓、槍械與其他遠程武器造成的傷害。",
+    "label": "遠程傷害"
+   },
+   "RangedLootCount": {
+    "description": "在戰利品中找到的遠程武器與零件數量。",
+    "label": "遠程武器豐度"
+   },
+   "RepairTypes": {
+    "description": "決定物品的修理方式：\\n\\n無 = 無法修理\\n僅限修理 = 僅能使用維修工具包\\n僅限合併 = 僅能在合併工作站修理\\n兩者皆可 = 可使用維修工具包與合併工作站",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "在戰利品中找到的資源物品數量。",
+    "label": "資源豐度"
+   },
+   "RunSpeed": {
+    "description": "調整玩家奔跑時的移動速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "報廢物品時所獲得的數量。",
+    "label": "報廢產量"
+   },
+   "SeedDropOutput": {
+    "description": "採收玩家種植的農作物時獲得的種子數量。不會增加種子掉落機率或從樹木上獲得的種子。",
+    "label": "種子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在畫面上顯示日期與時間資訊。若設為「否」，則「血月警告」也停用。",
+    "label": "顯示日期／時間"
+   },
+   "ShowEnemyDamage": {
+    "description": "實體受到攻擊時顯示浮動傷害數字。",
+    "label": "顯示實體傷害"
+   },
+   "ShowHealthBars": {
+    "description": "顯示或隱藏實體血條。",
+    "label": "實體血條"
+   },
+   "ShowLocationInfo": {
+    "description": "顯示生物群系與資訊點名稱及難度。",
+    "label": "顯示地點資訊"
+   },
+   "ShowXP": {
+    "description": "在畫面上隱藏或顯示經驗值條與經驗值跳字。",
+    "label": "顯示經驗值"
+   },
+   "SillyBigHeads": {
+    "description": "讓殭屍、動物與商人啟用「大頭模式」。",
+    "label": "大頭"
+   },
+   "SillyBlackandWhite": {
+    "description": "啟用靈感來自 1960 年代經典恐怖片的復古灰階畫面。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "啟用擊殺目標時的慶祝碎紙花特效。「僅限爆頭」選項只有在爆頭擊殺時才會觸發碎紙花，讓你可以透過射擊動物身體來安全獲取肉類。「僅限爆頭」選項不適用於被動的動物。",
+    "label": "擊殺慶祝"
+   },
+   "SillyLowGravity": {
+    "description": "控制遊戲內的重力大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "為遊戲內的動作啟用搞笑音效。",
+    "label": "搞笑音效"
+   },
+   "SillyTinyZombies": {
+    "description": "啟用體型較小的殭屍。",
+    "label": "迷你殭屍"
+   },
+   "SkillGainRate": {
+    "description": "調整每升幾級才能獲得技能點。",
+    "label": "技能點獲取率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制每次獲得技能點時所給予的數量。",
+    "label": "技能點獲得數量"
+   },
+   "SmeltingType": {
+    "description": "控制鍛造爐的運作方式。可以將物品熔煉進鍛造爐內，或是直接使用背包內的材料進行製作。",
+    "label": "熔爐類型"
+   },
+   "StaminaRegen": {
+    "description": "控制耐力恢復的速度。此為概略數值。",
+    "label": "耐力恢復"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳躍與攻擊等動作的耐力消耗。此為概略數值。",
+    "label": "耐力消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成入門挑戰後獲得的技能點數；若已停用入門挑戰，則於遊戲開始時獲得。",
+    "label": "基礎技能點數"
+   },
+   "StormFreq": {
+    "description": "調整風暴發生的頻率。設為「無」可停用風暴。",
+    "label": "風暴頻率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否會聽見風暴警報聲，並在畫面上看到風暴警告。",
+    "label": "風暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "控制環境溫度（冷和熱）是否會影響玩家。",
+    "label": "溫度生存系統"
+   },
+   "TerrainDamage": {
+    "description": "玩家對地形造成的傷害量。",
+    "label": "地形傷害"
+   },
+   "TraderBuyLimit": {
+    "description": "在拒收之前，商人願意收購的每種物品數量上限。數值越低，每次補貨週期可出售商品的數量就越少。",
+    "label": "商人收購上限"
+   },
+   "TraderBuyPrices": {
+    "description": "調整玩家向商人購買物品的價格。",
+    "label": "購買價"
+   },
+   "TraderDialog": {
+    "description": "切換是否開啟商人語音與畫面上的對話。",
+    "label": "商人對話"
+   },
+   "TraderHours": {
+    "description": "控制商人的營業與打烊時間。此設定不受「24小時週期」與「白晝長度」影響。「血月公休」代表僅在血月期間不營業。預設將使用 XML 設定檔中的數值。\\n\\nXML 預設 = 04:00-22:00\\n早晨 = 04:00-12:00\\n中午 = 10:00-18:00\\n傍晚 = 16:00-22:00\\n夜間 = 22:00-04:00",
+    "label": "商人營業時間"
+   },
+   "TraderItemAbundance": {
+    "description": "商人販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "商人商品數量"
+   },
+   "TraderMaxTier": {
+    "description": "設定向商人購買時可出現的最高物品品質。",
+    "label": "商人最高商品品質"
+   },
+   "TraderProtection": {
+    "description": "設定商人營地的傷害保護，以及玩家是否能宣告該區域為領地。",
+    "label": "商人保護"
+   },
+   "TraderResetInterval": {
+    "description": "商人重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "調整玩家將物品賣給商人的價格。",
+    "label": "出售價"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "啟用可接取前往其他商人處的任務選項。",
+    "label": "貿易路線"
+   },
+   "TradersEnabled": {
+    "description": "啟用與 NPC 商人的交易功能。",
+    "label": "啟用交易"
+   },
+   "TreasureMapChance": {
+    "description": "適用於藏寶圖在戰利品容器和敵方戰利品袋中生成機率的加成倍率。",
+    "label": "藏寶圖機率"
+   },
+   "VehicleBlockDamage": {
+    "description": "車輛對方塊造成的傷害量。",
+    "label": "車輛塊傷害"
+   },
+   "VehicleEntityDamage": {
+    "description": "車輛對實體造成的傷害量。",
+    "label": "車輛實體傷害"
+   },
+   "VehicleFuelUsage": {
+    "description": "調整車輛的燃料消耗速度。",
+    "label": "車輛油耗"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的車輛在碰撞時受到的傷害量。",
+    "label": "車輛自身傷害"
+   },
+   "VendingEnabled": {
+    "description": "啟用或停用販賣機功能。",
+    "label": "啟用販賣機"
+   },
+   "VendingItemAbundance": {
+    "description": "販賣機販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機商品數量"
+   },
+   "VendingResetInterval": {
+    "description": "商人販賣機重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機重置"
+   },
+   "WalkSpeed": {
+    "description": "調整玩家行走時的移動速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "「是」允許在工作站製作物品。「否」則只允許玩家進行背包製作。",
+    "label": "工作站製作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允許世界上生成具備功能的工作站。套用於新生成的暗黑伊甸園或隨機生成（RWG）地圖。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "適用於所有獲得經驗值的加成倍率。",
+    "label": "經驗倍數"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月屍潮與風暴期間的殭屍移動速度。",
+    "label": "殭屍血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "設定兇猛殭屍的移動速度。",
+    "label": "殭屍發狂速度"
+   },
+   "ZombieFeralSense": {
+    "description": "殭屍透過視覺與聽覺發現玩家的難易度。",
+    "label": "殭屍發狂感知"
+   },
+   "ZombieMove": {
+    "description": "設定普通殭屍的白天移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍日速度"
+   },
+   "ZombieMoveNight": {
+    "description": "設定普通殭屍的夜間移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍夜速度"
+   },
+   "ZombieRageChance": {
+    "description": "殭屍受到傷害時進入暴怒模式的機率。",
+    "label": "殭屍暴怒"
+   },
+   "ZombiesEatAnimals": {
+    "description": "決定殭屍是否會啃食動物屍體。",
+    "label": "殭屍啃食動物"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "無",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "衝刺",
+    "5": "噩夢"
+   },
+   "AirDropRandomTime": {
+    "0": "無",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "全天",
+    "6": "任何物品"
+   },
+   "AirDrops": {
+    "0": "禁用",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "無"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "僅限工作臺"
+   },
+   "BarterValues": {
+    "0": "無"
+   },
+   "BiomeEnemyDensity": {
+    "0": "預設",
+    "1": "極低",
+    "2": "低",
+    "3": "中",
+    "4": "高",
+    "5": "極高"
+   },
+   "BloodMoonCount": {
+    "0": "4 敵人",
+    "1": "6 敵人",
+    "2": "8 敵人",
+    "3": "10 敵人",
+    "4": "12 敵人",
+    "5": "16 敵人",
+    "6": "24 敵人",
+    "7": "32 敵人",
+    "8": "64 敵人"
+   },
+   "BloodMoonFrequency": {
+    "0": "禁用",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "禁用",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "僅限爆頭"
+   },
+   "CropGrowthSpeed": {
+    "0": "無",
+    "1": "瞬間"
+   },
+   "DamageValues": {
+    "0": "無"
+   },
+   "DayLightLength": {
+    "0": "永遠黑夜",
+    "10": "永遠白天"
+   },
+   "DeathPenalty": {
+    "0": "無",
+    "1": "僅經驗值",
+    "2": "受傷",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "無",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "兩者"
+   },
+   "DewCollectorInput": {
+    "0": "無"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "禁用",
+    "1": "極低",
+    "2": "低",
+    "3": "預設",
+    "4": "高",
+    "5": "極高"
+   },
+   "DropOnDeath": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "全部刪除"
+   },
+   "DropOnQuit": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包"
+   },
+   "Encumbrance": {
+    "0": "禁用",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高",
+    "5": "全部"
+   },
+   "HeadshotMode": {
+    "0": "無",
+    "1": "僅限爆頭",
+    "2": "爆頭終結"
+   },
+   "JarRefund": {
+    "0": "無"
+   },
+   "JumpStrength": {
+    "0": "無"
+   },
+   "LootAbundanceValues": {
+    "0": "無"
+   },
+   "LootRespawnDays": {
+    "0": "禁用"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "LowDefaultHigh": {
+    "0": "極低",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高"
+   },
+   "MaxChunkAge": {
+    "0": "禁用"
+   },
+   "MaxDegradationAmounts": {
+    "0": "無"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "強悍",
+    "2": "特殊",
+    "3": "兇猛",
+    "4": "輻射",
+    "5": "菁英"
+   },
+   "MaxTechType": {
+    "0": "無",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "無"
+   },
+   "PointsPer": {
+    "0": "無"
+   },
+   "QuestPerDay": {
+    "0": "無限制"
+   },
+   "QuestPerTier": {
+    "0": "無"
+   },
+   "RepairTypes": {
+    "0": "無",
+    "1": "僅限修理",
+    "2": "僅限合併",
+    "3": "兩者"
+   },
+   "ShowXP": {
+    "0": "所有",
+    "1": "僅顯示狀態條",
+    "2": "僅顯示通知",
+    "3": "無"
+   },
+   "SlowToFast": {
+    "0": "預設",
+    "1": "極慢",
+    "2": "緩慢",
+    "3": "正常",
+    "4": "快",
+    "5": "極快"
+   },
+   "SmeltingType": {
+    "0": "熔爐",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "無"
+   },
+   "StaminaUsage": {
+    "0": "無"
+   },
+   "StarterSkillPoints": {
+    "0": "無"
+   },
+   "StormFrequency": {
+    "0": "無"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可宣告領地",
+    "2": "不可宣告領地"
+   },
+   "TraderHourPresets": {
+    "0": "預設",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "血月已關閉",
+    "6": "全天開放"
+   },
+   "TraderResetInterval": {
+    "0": "預設",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "無"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "禁用",
+    "1": "日",
+    "2": "夜間",
+    "3": "所有"
+   },
+   "ZombieRageChance": {
+    "0": "無"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "衝刺",
+    "4": "噩夢"
+   }
+  }
+ },
+ "v3_1": {
+  "categories": {
+   "Crafting": "製作",
+   "Entities": "實體",
+   "General": "玩家",
+   "Misc": "雜項",
+   "Resources": "資源",
+   "Tasks": "任務",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "啟用或停用殭屍的氣味追蹤功能，並設定牠們聞到氣味時的移動速度。",
+    "label": "AI 氣味模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投補給出現的頻率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地圖與指南針上顯示空投補給位置的標記。",
+    "label": "標記空投地點"
+   },
+   "AirDropRandomTime": {
+    "description": "允許控制空投出現的時間。選擇特定時間讓空投規律出現，或選擇「任意」使其完全隨機。\\n\\n無 = 預設的正午空投。\\n早晨 = 04:00 - 10:00中\\n午 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜間 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投時間變數"
+   },
+   "AllowCompass": {
+    "description": "顯示玩家的指南針。",
+    "label": "允許使用指南針"
+   },
+   "AllowMap": {
+    "description": "啟用遊戲內地圖。",
+    "label": "允許使用地圖"
+   },
+   "AllowScreenMarkers": {
+    "description": "在畫面上顯示導航標記。地圖標記依然可見。",
+    "label": "允許使用畫面標記"
+   },
+   "AllowZombieDigging": {
+    "description": "允許殭屍向下挖掘地形。殭屍依然可以橫向挖掘。",
+    "label": "殭屍挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "在戰利品中找到的彈藥數量。",
+    "label": "彈藥豐度"
+   },
+   "ApiaryInput": {
+    "description": "設定開始蜂蜜生產所需的花卉數量。",
+    "label": "養蜂箱輸入"
+   },
+   "ApiaryOutput": {
+    "description": "每個生產週期生成的蜂蜜量。",
+    "label": "養蜂箱產量"
+   },
+   "ApiaryTime": {
+    "description": "調整養蜂箱生產蜂蜜所需的時間。",
+    "label": "養蜂箱時間"
+   },
+   "ArmorLootCount": {
+    "description": "在戰利品中找到的護甲與護甲零件數量。",
+    "label": "護甲豐度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包內製作哪些物品。\\n\\n「否」停用背包製作。\\n「是」允許在背包內製作。\\n「有限」只允許在背包內製作有限數量的配方。\\n「僅限工作臺」只允許製作工作臺，無法在背包內製作其他物品。",
+    "label": "背包製作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆蓋生態系預設的日間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高日間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物重生率"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆蓋生態系預設的日間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高日間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人重生率"
+   },
+   "BiomeGSModifier": {
+    "description": "基於生物群系的難度加成。較困難的生物群系會使敵人強度與戰利品等級超越你目前的基礎進度。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系遊戲等級"
+   },
+   "BiomeLSModifier": {
+    "description": "適用於各個生物群系的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系戰利品等級"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆蓋生態系預設的夜間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物重生率"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆蓋生態系預設的夜間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人重生率"
+   },
+   "BiomeProgression": {
+    "description": "啟用或停用生物群系危害。天氣與風暴不受此設定影響。",
+    "label": "生物群落進度"
+   },
+   "BlockDamage": {
+    "description": "玩家對方塊造成的傷害量。",
+    "label": "玩家塊傷害"
+   },
+   "BlockDamageAI": {
+    "description": "敵人對方塊造成的傷害量。",
+    "label": "敵人塊傷害"
+   },
+   "BlockDamageAIBM": {
+    "description": "敵人在血月期間對方塊造成的傷害。",
+    "label": "血月塊傷害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期間每位玩家周圍同時存活的殭屍數量上限。\\n\\n附近玩家共享最多 30 隻殭屍的群體上限。若超過此上限，系統將改為透過提升遊戲階段來增加難度。世界數量上限約為 MaxSpawnedZombies 的 1.9 倍。較低的遊戲階段可能會減少生成數量。\\n\\n調高此設定會大幅影響遊戲效能。",
+    "label": "血月計數"
+   },
+   "BloodMoonFrequency": {
+    "description": "兩次血月之間相隔的遊戲天數。停用 = 不會發生血月。",
+    "label": "血月頻率"
+   },
+   "BloodMoonRange": {
+    "description": "血月頻率過後，該事件可能發生的天數範圍。\\n\\n例如：頻率設為 7 + 範圍設為 5，血月就會隨機在第 7 天到第 12 天之間發生。\\n\\n0 天 = 不會隨機發生。",
+    "label": "血月範圍"
+   },
+   "BloodMoonWarning": {
+    "description": "設定血月警告顯示於畫面上，且天數變成紅色的時間點。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制從戰利品中取得的書籍與原理圖數量。",
+    "label": "書籍豐富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "允許埋藏任務出現在商人任務清單中。若設為「否」，則僅顯示資訊點任務。",
+    "label": "埋藏任務"
+   },
+   "ChallengesEnabled": {
+    "description": "啟用遊戲內的挑戰系統。",
+    "label": "挑戰"
+   },
+   "ChickenCoopInput": {
+    "description": "設定開始生產所需的飼料數量。",
+    "label": "雞舍需求"
+   },
+   "ChickenCoopOutput": {
+    "description": "每個生產週期所產出的雞隻、雞蛋與羽毛數量。",
+    "label": "雞舍產量"
+   },
+   "ChickenCoopTime": {
+    "description": "調整雞舍生產雞隻、雞蛋與羽毛所需的時間。",
+    "label": "雞舍生產時間"
+   },
+   "CraftingInput": {
+    "description": "製作所需的材料數量（不包含資源包）。",
+    "label": "製作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制從戰利品中取得的製作技能雜誌數量。",
+    "label": "雜誌豐度"
+   },
+   "CraftingMaxTier": {
+    "description": "設定製作物品的最高品質。",
+    "label": "最高製作品質"
+   },
+   "CraftingOutput": {
+    "description": "每次製作所產出的物品數量（不包含資源包）。",
+    "label": "製作產量"
+   },
+   "CraftingProgression": {
+    "description": "啟用或停用基於雜誌與原理圖的製作進度系統。",
+    "label": "製作進度"
+   },
+   "CraftingTime": {
+    "description": "製作物品所需的時間。",
+    "label": "製作時間"
+   },
+   "CropGrowthSpeed": {
+    "description": "調整玩家種植的農作物與樹木的生長速度。百分比越高，生長時間越長。注意：若要使變更生效，現有存檔中的農作物需重新種植。",
+    "label": "農作物生長"
+   },
+   "CropOutput": {
+    "description": "控制從野生與玩家種植的農作物上採收到的資源數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "農作物產量"
+   },
+   "CrouchRunSpeed": {
+    "description": "調整玩家蹲下並奔跑時的移動速度。",
+    "label": "蹲姿奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "調整玩家蹲下與行走時的移動速度。",
+    "label": "下蹲速度"
+   },
+   "DayLightLength": {
+    "description": "設定遊戲內的日照時數。「永遠黑夜」和「永遠白天」運作正常。日照持續時間設定：\\n\\n 4 = 10:00 - 14:00\\n 6 = 09:00 - 15:00\\n 8 = 08:00 - 16:00\\n10 = 07:00 - 17:00\\n12 = 06:00 - 18:00\\n14 = 05:00 - 19:00\\n16 = 04:00 - 20:00\\n18 = 04:00 - 22:00\\n20 = 02:00 - 22:00",
+    "label": "白天時長"
+   },
+   "DayNightLength": {
+    "description": "遊戲中經過 24 小時所需的現實時間（分鐘）。",
+    "label": "24 小時週期"
+   },
+   "DeathPenalty": {
+    "description": "決定角色死亡後的懲罰機制。\\n\\n無 = 不受懲罰。\\n\\n僅經驗值 = 經典的損失經驗值設定。\\n受傷 = 身上會保留部分減益效果，且重生時飽食度與水分會重置為 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡懲罰"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "啟用「死亡耗損」後，此設定決定死亡時損失耐久度的百分比。",
+    "label": "死亡耗損量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "設定死亡時物品是否會耗損。\\n\\n無 = 不會耗損。\\n耐久度 = 降低目前的耐久度，可透過修理恢復。\\n最大耐久度 = 降低最大耐久度，從而降低修理上限。\\n兩者 = 物品同時流失目前與最大耐久度。",
+    "label": "死亡耗損"
+   },
+   "DewCollectorInput": {
+    "description": "設定開始收集露水所需的罐子數量。",
+    "label": "露水收集器輸入"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器每個週期產出的水量。",
+    "label": "露水收集器產量"
+   },
+   "DewCollectorTime": {
+    "description": "調整露水收集器產出水所需的時間。",
+    "label": "露水收集器時間"
+   },
+   "DrinkLootCount": {
+    "description": "在容器中找到的飲料數量。",
+    "label": "飲料豐度"
+   },
+   "DropOnDeath": {
+    "description": "設定死亡時會掉落哪些物品。\\n\\n無 = 不掉落任何物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n僅工具皮帶 = 掉落工具皮帶上的物品。\\n僅背包 = 掉落背包內的物品。\\n全部刪除 = 刪除所有物品。",
+    "label": "死亡時掉落"
+   },
+   "DropOnQuit": {
+    "description": "決定退出遊戲時會掉落哪些物品。\\n\\n無 = 不掉落物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n工具皮帶 = 掉落工具皮帶上的物品。\\n背包 = 掉落背包內的物品。",
+    "label": "死亡時退出"
+   },
+   "DukesLootCount": {
+    "description": "在戰利品中找到的杜克幣與舊錢數量。",
+    "label": "貨幣豐度"
+   },
+   "ElectricalOutput": {
+    "description": "控制產生的電力量。",
+    "label": "電力輸出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制背包內會造成負重的欄位數量。數值範圍從停用（無負重）到全部（最大負重）。預設使用 XML 設定檔中的數值。",
+    "label": "負重欄位"
+   },
+   "EnemySpawnMode": {
+    "description": "啟用或停用敵人生成。",
+    "label": "敵人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敵人對玩家造成的傷害量。此數值會與玩家受到的其他傷害疊加。",
+    "label": "敵人造成傷害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敵人與動物等實體從玩家受到的傷害量。",
+    "label": "實體承受傷害"
+   },
+   "FoodLootCount": {
+    "description": "在容器中找到的食物數量。",
+    "label": "食物豐度"
+   },
+   "FullChickenStressEvent": {
+    "description": "啟用當手中雞隻壓力值達到 100% 時觸發的事件。選擇「無」將關閉事件，「隨機」則會從下列事件中隨機挑選一項。\\n\\n雞隻掉落 = 雞隻從你手中掙脫。\\n發狂的雞 = 雞隻反過來攻擊你。\\n殭屍屍潮 = 雞隻的壓力引來殭屍屍潮。\\n殺人雞群 = 憤怒的雞群聯手圍攻你。",
+    "label": "雞隻壓力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根據你的等級與存活天數，決定敵人種類、難度縮放、戰利品品質以及血月強度。數值越高，難度越高。預設使用 XML 設定檔中的數值。",
+    "label": "全局遊戲等級"
+   },
+   "GlobalLSModifier": {
+    "description": "適用於玩家戰利品等級的全局倍率。預設使用 XML 設定檔中的數值。",
+    "label": "全局戰利品等級"
+   },
+   "GlobalLootCount": {
+    "description": "全面調整在世界中找到的戰利品總量。「無」停用所有戰利品，包括殭屍包掉落物品和補給箱。",
+    "label": "戰利品豐度"
+   },
+   "GlobalTSModifier": {
+    "description": "適用於商人等級進度的全局倍率。控制商人販賣的物品品質和種類。預設使用 XML 設定檔中的數值。",
+    "label": "全局商人等級"
+   },
+   "HarvestingOutput": {
+    "description": "控制採集方塊與物品時獲得的資源數量。不會影響礦石、種子或農作物。若停用，可能會影響遊戲內挑戰。",
+    "label": "資源產量"
+   },
+   "HeadshotMode": {
+    "description": "決定爆頭傷害的處理方式。\\n\\n僅限爆頭 = 只有爆頭能對敵人造成傷害。\\n爆頭終結 = 攻擊身體會造成傷害，但只有爆頭才能擊殺敵人。\\n\\n不適用於被動的動物。",
+    "label": "爆頭模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家對實體造成爆頭傷害時的加成倍率。",
+    "label": "爆頭倍率"
+   },
+   "HeatMapSensitivity": {
+    "description": "控制玩家活動產生的熱力累積。熱力越高，尖叫者生成的機率就越高。預設使用 XML 設定檔中的數值。",
+    "label": "熱力圖敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。數值越高，食物消耗量越大。",
+    "label": "飢餓倍率"
+   },
+   "IncomingDamage": {
+    "description": "玩家從所有來源受到的傷害量。",
+    "label": "玩家承受傷害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家遭到感染的機率。",
+    "label": "感染機率"
+   },
+   "InfectionRate": {
+    "description": "調整感染惡化的速度。",
+    "label": "感染速度"
+   },
+   "IntroChallengesEnabled": {
+    "description": "為新玩家啟用逐步引導的初期挑戰。",
+    "label": "新手挑戰"
+   },
+   "IntroQuestEnabled": {
+    "description": "略過開局的掩埋補給任務，直接解鎖完整的任務進度。",
+    "label": "新手任務"
+   },
+   "ItemDegradation": {
+    "description": "武器與工具消耗耐久度的速度。預設使用 XML 設定檔中的數值。",
+    "label": "物品磨損"
+   },
+   "JarRefund": {
+    "description": "消耗物品後退還空罐的機率。",
+    "label": "空罐退還"
+   },
+   "JumpStrength": {
+    "description": "調整玩家的跳躍高度。",
+    "label": "彈跳力"
+   },
+   "LootBagChance": {
+    "description": "適用於敵人死亡時掉落戰利品袋機率的加成倍率。",
+    "label": "掉落戰利品袋"
+   },
+   "LootMaxTier": {
+    "description": "設定戰利品中可出現的武器與物品的最高品質。",
+    "label": "最高戰利品品質"
+   },
+   "LootRespawnDays": {
+    "description": "未造訪區域內的戰利品容器重置所需經過的遊戲天數。",
+    "label": "戰利品重生天數"
+   },
+   "LootTimer": {
+    "description": "搜刮戰利品容器所需的時間。",
+    "label": "戰利品計時器"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "設定死亡時隨機遺失的物品數量。",
+    "label": "死亡遺失數量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "設定死亡時會遺失哪些物品。\\n\\n無 = 不遺失物品。\\n全部 = 所有物品。\\n工具皮帶 = 僅限工具皮帶上的物品。\\n背包 = 僅限背包內的物品。\\n裝備 = 身上穿著的護甲與服裝。\\n僅限攜帶物品 = 僅限工具皮帶與背包內的物品。",
+    "label": "死亡遺失物品"
+   },
+   "MaxDegradationAmount": {
+    "description": "決定修理物品時造成的耗損程度。",
+    "label": "修理耗損"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的最高殭屍層級。",
+    "label": "最高敵人層級"
+   },
+   "MaxTechType": {
+    "description": "全面設定武器與物品可使用的最高科技階級，讓你掌控遊戲進度與節奏。請查看以下範例。\\n\\n科技 0 = 石頭和管子\\n科技 1 = 鐵和 AK\\n科技 2 = 鋼和戰術突擊\\n科技 3 = 螺旋鑽和 M60",
+    "label": "最高科技階段"
+   },
+   "MedicalLootCount": {
+    "description": "在戰利品中找到的醫療用品數量。",
+    "label": "醫療用品豐度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近戰武器與工具造成的傷害。",
+    "label": "近戰傷害"
+   },
+   "MeleeLootCount": {
+    "description": "在戰利品中找到的近戰武器與零件數量。",
+    "label": "近戰武器豐度"
+   },
+   "MiningOutput": {
+    "description": "控制採礦時獲得的礦石數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "採礦產量"
+   },
+   "NewbieCoat": {
+    "description": "啟用後，新玩家生成時會帶有新手保護的增益效果。",
+    "label": "新手增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "允許資訊點任務出現在商人任務清單中。若設為「否」，則僅顯示埋藏任務。",
+    "label": "資訊點任務"
+   },
+   "POITierLSModifier": {
+    "description": "基於資訊點層級的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "資訊點戰利品等級"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "決定生命值與耐力是否會隨等級提升。",
+    "label": "等級屬性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "閱讀技能雜誌所獲得的進度。",
+    "label": "雜誌進度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "可計入商人進度的每日任務數量。超過此上限後完成的任務依然會給予經驗值與獎勵，但不會推進商人階級進度。",
+    "label": "每日任務上限"
+   },
+   "QuestsEnabled": {
+    "description": "啟用或停用遊戲內的任務系統。",
+    "label": "任務"
+   },
+   "QuestsPerTier": {
+    "description": "解鎖下一階級所需的完成任務數量。數值越高，階級間的進度就越慢。「無」= 無限制，可直接接取所有階級的任務。",
+    "label": "每個層級的任務需求數"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓、槍械與其他遠程武器造成的傷害。",
+    "label": "遠程傷害"
+   },
+   "RangedLootCount": {
+    "description": "在戰利品中找到的遠程武器與零件數量。",
+    "label": "遠程武器豐度"
+   },
+   "RepairTypes": {
+    "description": "決定物品的修理方式：\\n\\n無 = 無法修理\\n僅限修理 = 僅能使用維修工具包\\n僅限合併 = 僅能在合併工作站修理\\n兩者皆可 = 可使用維修工具包與合併工作站",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "在戰利品中找到的資源物品數量。",
+    "label": "資源豐度"
+   },
+   "RunSpeed": {
+    "description": "調整玩家奔跑時的移動速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "報廢物品時所獲得的數量。",
+    "label": "報廢產量"
+   },
+   "SeedDropOutput": {
+    "description": "採收玩家種植的農作物時獲得的種子數量。不會增加種子掉落機率或從樹木上獲得的種子。",
+    "label": "種子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在畫面上顯示日期與時間資訊。若設為「否」，則「血月警告」也停用。",
+    "label": "顯示日期／時間"
+   },
+   "ShowEnemyDamage": {
+    "description": "實體受到攻擊時顯示浮動傷害數字。",
+    "label": "顯示實體傷害"
+   },
+   "ShowHealthBars": {
+    "description": "顯示或隱藏實體血條。",
+    "label": "實體血條"
+   },
+   "ShowLocationInfo": {
+    "description": "顯示生物群系與資訊點名稱及難度。",
+    "label": "顯示地點資訊"
+   },
+   "ShowXP": {
+    "description": "在畫面上隱藏或顯示經驗值條與經驗值跳字。",
+    "label": "顯示經驗值"
+   },
+   "SillyBigHeads": {
+    "description": "讓殭屍、動物與商人啟用「大頭模式」。",
+    "label": "大頭"
+   },
+   "SillyBlackandWhite": {
+    "description": "啟用靈感來自 1960 年代經典恐怖片的復古灰階畫面。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "啟用擊殺目標時的慶祝碎紙花特效。「僅限爆頭」選項只有在爆頭擊殺時才會觸發碎紙花，讓你可以透過射擊動物身體來安全獲取肉類。「僅限爆頭」選項不適用於被動的動物。",
+    "label": "擊殺慶祝"
+   },
+   "SillyLowGravity": {
+    "description": "控制遊戲內的重力大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "為遊戲內的動作啟用搞笑音效。",
+    "label": "搞笑音效"
+   },
+   "SillyTinyZombies": {
+    "description": "啟用體型較小的殭屍。",
+    "label": "迷你殭屍"
+   },
+   "SkillGainRate": {
+    "description": "調整每升幾級才能獲得技能點。",
+    "label": "技能點獲取率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制每次獲得技能點時所給予的數量。",
+    "label": "技能點獲得數量"
+   },
+   "SmeltingType": {
+    "description": "控制鍛造爐的運作方式。可以將物品熔煉進鍛造爐內，或是直接使用背包內的材料進行製作。",
+    "label": "熔爐類型"
+   },
+   "StackSizeMultiplier": {
+    "description": "套用於所有可堆疊物品的堆疊數量倍率。最大堆疊數量為 30,000。",
+    "label": "堆疊數量倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制耐力恢復的速度。此為概略數值。",
+    "label": "耐力恢復"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳躍與攻擊等動作的耐力消耗。此為概略數值。",
+    "label": "耐力消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成入門挑戰後獲得的技能點數；若已停用入門挑戰，則於遊戲開始時獲得。",
+    "label": "基礎技能點數"
+   },
+   "StormFreq": {
+    "description": "調整風暴發生的頻率。設為「無」可停用風暴。",
+    "label": "風暴頻率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否會聽見風暴警報聲，並在畫面上看到風暴警告。",
+    "label": "風暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "控制環境溫度（冷和熱）是否會影響玩家。",
+    "label": "溫度生存系統"
+   },
+   "TerrainDamage": {
+    "description": "玩家對地形造成的傷害量。",
+    "label": "地形傷害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水分的速度。數值越高，水分消耗量越大。",
+    "label": "口渴倍率"
+   },
+   "TraderBuyLimit": {
+    "description": "在拒收之前，商人願意收購的每種物品數量上限。數值越低，每次補貨週期可出售商品的數量就越少。",
+    "label": "商人收購上限"
+   },
+   "TraderBuyPrices": {
+    "description": "調整玩家向商人購買物品的價格。",
+    "label": "購買價"
+   },
+   "TraderDialog": {
+    "description": "切換是否開啟商人語音與畫面上的對話。",
+    "label": "商人對話"
+   },
+   "TraderHours": {
+    "description": "控制商人的營業與打烊時間。此設定不受「24小時週期」與「白晝長度」影響。「血月公休」代表僅在血月期間不營業。預設將使用 XML 設定檔中的數值。\\n\\nXML 預設 = 04:00-22:00\\n早晨 = 04:00-12:00\\n中午 = 10:00-18:00\\n傍晚 = 16:00-22:00\\n夜間 = 22:00-04:00",
+    "label": "商人營業時間"
+   },
+   "TraderItemAbundance": {
+    "description": "商人販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "商人商品數量"
+   },
+   "TraderMaxTier": {
+    "description": "設定向商人購買時可出現的最高物品品質。",
+    "label": "商人最高商品品質"
+   },
+   "TraderProtection": {
+    "description": "設定商人營地的傷害保護，以及玩家是否能宣告該區域為領地。",
+    "label": "商人保護"
+   },
+   "TraderResetInterval": {
+    "description": "商人重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "調整玩家將物品賣給商人的價格。",
+    "label": "出售價"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "啟用可接取前往其他商人處的任務選項。",
+    "label": "貿易路線"
+   },
+   "TradersEnabled": {
+    "description": "啟用與 NPC 商人的交易功能。",
+    "label": "啟用交易"
+   },
+   "TreasureMapChance": {
+    "description": "適用於藏寶圖在戰利品容器和敵方戰利品袋中生成機率的加成倍率。",
+    "label": "藏寶圖機率"
+   },
+   "VehicleBlockDamage": {
+    "description": "車輛對方塊造成的傷害量。",
+    "label": "車輛塊傷害"
+   },
+   "VehicleEntityDamage": {
+    "description": "車輛對實體造成的傷害量。",
+    "label": "車輛實體傷害"
+   },
+   "VehicleFuelUsage": {
+    "description": "調整車輛的燃料消耗速度。",
+    "label": "車輛油耗"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的車輛在碰撞時受到的傷害量。",
+    "label": "車輛自身傷害"
+   },
+   "VendingEnabled": {
+    "description": "啟用或停用販賣機功能。",
+    "label": "啟用販賣機"
+   },
+   "VendingItemAbundance": {
+    "description": "販賣機販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機商品數量"
+   },
+   "VendingResetInterval": {
+    "description": "商人販賣機重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機重置"
+   },
+   "WalkSpeed": {
+    "description": "調整玩家行走時的移動速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "「是」允許在工作站製作物品。「否」則只允許玩家進行背包製作。",
+    "label": "工作站製作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允許世界上生成具備功能的工作站。套用於新生成的暗黑伊甸園或隨機生成（RWG）地圖。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "適用於所有獲得經驗值的加成倍率。",
+    "label": "經驗倍數"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月屍潮與風暴期間的殭屍移動速度。",
+    "label": "殭屍血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "設定兇猛殭屍的移動速度。",
+    "label": "殭屍發狂速度"
+   },
+   "ZombieFeralSense": {
+    "description": "殭屍透過視覺與聽覺發現玩家的難易度。",
+    "label": "殭屍發狂感知"
+   },
+   "ZombieMove": {
+    "description": "設定普通殭屍的白天移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍日速度"
+   },
+   "ZombieMoveNight": {
+    "description": "設定普通殭屍的夜間移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍夜速度"
+   },
+   "ZombieRageChance": {
+    "description": "殭屍受到傷害時進入暴怒模式的機率。",
+    "label": "殭屍暴怒"
+   },
+   "ZombiesEatAnimals": {
+    "description": "決定殭屍是否會啃食動物屍體。",
+    "label": "殭屍啃食動物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "難度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "預設/簡單：末日降臨，仍保有一絲仁慈。",
+    "label": "冒險家"
+   },
+   "Almost Creative": {
+    "description": "末日，卻又不是真正的末日。畢竟死亡太麻煩了。",
+    "label": "近乎創意"
+   },
+   "Bite Club": {
+    "description": "在這個硬派的永久死亡模式中，重生是懦夫的選擇。只剩一條命；請善加利用。",
+    "label": "咬咬俱樂部"
+   },
+   "Caveman Life": {
+    "description": "在頂多只能使用棍子當工具的末日世界中生存下來。",
+    "label": "穴居人生活"
+   },
+   "Chibi Mode": {
+    "description": "他們不只可愛……速度還很快！幸好你自己的速度也不慢。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "災難接連不斷，你根本來不及解決。",
+    "label": "災難電影"
+   },
+   "Dumpster Diver": {
+    "description": "垃圾也能變黃金！只要派上用場，就不是囤積。",
+    "label": "垃圾桶尋寶"
+   },
+   "Dying World": {
+    "description": "資源正在枯竭，而你也離死不遠了。",
+    "label": "垂死世界"
+   },
+   "Insane": {
+    "description": "瘋狂：末日浩劫，你會為自己犯下的每一個錯誤感到懊悔。",
+    "label": "極難"
+   },
+   "Legacy Survival": {
+    "description": "傳統生存法則，卻帶來現代後果。",
+    "label": "傳統生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "補給品短缺、懲罰更嚴厲，還有無止盡的壓力。麥摩爾……聞起來真香！",
+    "label": "麥摩爾的混亂"
+   },
+   "Nomad": {
+    "description": "一般：你的決心比黑糖咖啡還要濃烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末日求生，輕鬆過關，還附帶輔助輪。",
+    "label": "清道夫"
+   },
+   "Seven days Later": {
+    "description": "一種以現代電影為靈感的模式，充滿成群結隊且行動迅捷的殭屍。",
+    "label": "七天毀滅倒數"
+   },
+   "True Survivalist": {
+    "description": "殘酷：被壓著打也是樂趣的一部分。",
+    "label": "倖存者"
+   },
+   "Undead Matinee": {
+    "description": "以近戰為主，靈感源自復古電影的模式，殭屍移動速度較慢，數量眾多，彈藥稀少。",
+    "label": "不死族午後場"
+   },
+   "Warrior": {
+    "description": "困難：現在真的會痛了，但至少腦震盪是免費的。",
+    "label": "勇士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "無",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "衝刺",
+    "5": "噩夢"
+   },
+   "AirDropRandomTime": {
+    "0": "無",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "全天",
+    "6": "任何物品"
+   },
+   "AirDrops": {
+    "0": "禁用",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "無"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "僅限工作臺"
+   },
+   "BarterValues": {
+    "0": "無"
+   },
+   "BiomeEnemyDensity": {
+    "0": "無",
+    "1": "預設",
+    "2": "極低",
+    "3": "低",
+    "4": "中",
+    "5": "高",
+    "6": "極高"
+   },
+   "BloodMoonCount": {
+    "0": "4 敵人",
+    "1": "6 敵人",
+    "2": "8 敵人",
+    "3": "10 敵人",
+    "4": "12 敵人",
+    "5": "16 敵人",
+    "6": "24 敵人",
+    "7": "32 敵人",
+    "8": "64 敵人"
+   },
+   "BloodMoonFrequency": {
+    "0": "禁用",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "禁用",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "僅限爆頭"
+   },
+   "CropGrowthSpeed": {
+    "0": "無",
+    "1": "瞬間"
+   },
+   "DamageValues": {
+    "0": "無"
+   },
+   "DayLightLength": {
+    "0": "永遠黑夜",
+    "10": "永遠白天"
+   },
+   "DeathPenalty": {
+    "0": "無",
+    "1": "僅經驗值",
+    "2": "受傷",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "無",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "兩者"
+   },
+   "DewCollectorInput": {
+    "0": "無"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "禁用",
+    "1": "極低",
+    "2": "低",
+    "3": "預設",
+    "4": "高",
+    "5": "極高"
+   },
+   "DropOnDeath": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品",
+    "6": "全部刪除"
+   },
+   "DropOnQuit": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "Encumbrance": {
+    "0": "禁用",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高",
+    "5": "全部"
+   },
+   "FullChickenStressEvent": {
+    "0": "無",
+    "1": "隨機",
+    "2": "雞隻掉落",
+    "3": "發狂的雞",
+    "4": "殭屍屍潮",
+    "5": "殺人雞群"
+   },
+   "HeadshotMode": {
+    "0": "無",
+    "1": "僅限爆頭",
+    "2": "爆頭終結"
+   },
+   "JarRefund": {
+    "0": "無"
+   },
+   "JumpStrength": {
+    "0": "無"
+   },
+   "LootAbundanceValues": {
+    "0": "無"
+   },
+   "LootRespawnDays": {
+    "0": "禁用"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "LowDefaultHigh": {
+    "0": "極低",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高"
+   },
+   "MaxChunkAge": {
+    "0": "禁用"
+   },
+   "MaxDegradationAmounts": {
+    "0": "無"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "強悍",
+    "2": "特殊",
+    "3": "兇猛",
+    "4": "輻射",
+    "5": "菁英"
+   },
+   "MaxTechType": {
+    "0": "無",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "無"
+   },
+   "PointsPer": {
+    "0": "無"
+   },
+   "QuestPerDay": {
+    "0": "無限制"
+   },
+   "QuestPerTier": {
+    "0": "無"
+   },
+   "RepairTypes": {
+    "0": "無",
+    "1": "僅限修理",
+    "2": "僅限合併",
+    "3": "兩者"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "僅顯示名稱"
+   },
+   "ShowXP": {
+    "0": "所有",
+    "1": "僅顯示狀態條",
+    "2": "僅顯示通知",
+    "3": "無"
+   },
+   "SlowToFast": {
+    "0": "預設",
+    "1": "極慢",
+    "2": "緩慢",
+    "3": "正常",
+    "4": "快",
+    "5": "極快"
+   },
+   "SmeltingType": {
+    "0": "熔爐",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "無"
+   },
+   "StaminaUsage": {
+    "0": "無"
+   },
+   "StarterSkillPoints": {
+    "0": "無"
+   },
+   "StormFrequency": {
+    "0": "無"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可宣告領地",
+    "2": "不可宣告領地"
+   },
+   "TraderHourPresets": {
+    "0": "預設",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "血月已關閉",
+    "6": "全天開放"
+   },
+   "TraderResetInterval": {
+    "0": "預設",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "無"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "禁用",
+    "1": "日",
+    "2": "夜間",
+    "3": "所有"
+   },
+   "ZombieRageChance": {
+    "0": "無"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "衝刺",
+    "4": "噩夢"
+   }
+  }
+ },
+ "v3_2": {
+  "categories": {
+   "Crafting": "製作",
+   "Entities": "實體",
+   "General": "玩家",
+   "Misc": "雜項",
+   "Resources": "資源",
+   "Tasks": "任務",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "啟用或停用殭屍的氣味追蹤功能，並設定牠們聞到氣味時的移動速度。",
+    "label": "AI 氣味模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投補給出現的頻率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地圖與指南針上顯示空投補給位置的標記。",
+    "label": "標記空投地點"
+   },
+   "AirDropRandomTime": {
+    "description": "允許控制空投出現的時間。選擇特定時間讓空投規律出現，或選擇「任意」使其完全隨機。\\n\\n無 = 預設的正午空投。\\n早晨 = 04:00 - 10:00中\\n午 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜間 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投時間變數"
+   },
+   "AllowCompass": {
+    "description": "顯示玩家的指南針。",
+    "label": "允許使用指南針"
+   },
+   "AllowMap": {
+    "description": "啟用遊戲內地圖。",
+    "label": "允許使用地圖"
+   },
+   "AllowScreenMarkers": {
+    "description": "在畫面上顯示導航標記。地圖標記依然可見。",
+    "label": "允許使用畫面標記"
+   },
+   "AllowZombieDigging": {
+    "description": "允許殭屍向下挖掘地形。殭屍依然可以橫向挖掘。",
+    "label": "殭屍挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "在戰利品中找到的彈藥數量。",
+    "label": "彈藥豐度"
+   },
+   "ApiaryInput": {
+    "description": "設定開始蜂蜜生產所需的花卉數量。",
+    "label": "養蜂箱輸入"
+   },
+   "ApiaryOutput": {
+    "description": "每個生產週期生成的蜂蜜量。",
+    "label": "養蜂箱產量"
+   },
+   "ApiaryTime": {
+    "description": "調整養蜂箱生產蜂蜜所需的時間。",
+    "label": "養蜂箱時間"
+   },
+   "ArmorLootCount": {
+    "description": "在戰利品中找到的護甲與護甲零件數量。",
+    "label": "護甲豐度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包內製作哪些物品。\\n\\n「否」停用背包製作。\\n「是」允許在背包內製作。\\n「有限」只允許在背包內製作有限數量的配方。\\n「僅限工作臺」只允許製作工作臺，無法在背包內製作其他物品。",
+    "label": "背包製作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆蓋生態系預設的日間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高日間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物重生率"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆蓋生態系預設的日間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高日間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人重生率"
+   },
+   "BiomeGSModifier": {
+    "description": "基於生物群系的難度加成。較困難的生物群系會使敵人強度與戰利品等級超越你目前的基礎進度。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系遊戲等級"
+   },
+   "BiomeLSModifier": {
+    "description": "適用於各個生物群系的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系戰利品等級"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆蓋生態系預設的夜間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物重生率"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆蓋生態系預設的夜間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人重生率"
+   },
+   "BiomeProgression": {
+    "description": "啟用或停用生物群系危害。天氣與風暴不受此設定影響。",
+    "label": "生物群落進度"
+   },
+   "BlockDamage": {
+    "description": "玩家對方塊造成的傷害量。",
+    "label": "玩家塊傷害"
+   },
+   "BlockDamageAI": {
+    "description": "敵人對方塊造成的傷害量。",
+    "label": "敵人塊傷害"
+   },
+   "BlockDamageAIBM": {
+    "description": "敵人在血月期間對方塊造成的傷害。",
+    "label": "血月塊傷害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期間每位玩家周圍同時存活的殭屍數量上限。\\n\\n附近玩家共享最多 30 隻殭屍的群體上限。若超過此上限，系統將改為透過提升遊戲階段來增加難度。世界數量上限約為 MaxSpawnedZombies 的 1.9 倍。較低的遊戲階段可能會減少生成數量。\\n\\n調高此設定會大幅影響遊戲效能。",
+    "label": "血月計數"
+   },
+   "BloodMoonFrequency": {
+    "description": "兩次血月之間相隔的遊戲天數。停用 = 不會發生血月。",
+    "label": "血月頻率"
+   },
+   "BloodMoonRange": {
+    "description": "血月頻率過後，該事件可能發生的天數範圍。\\n\\n例如：頻率設為 7 + 範圍設為 5，血月就會隨機在第 7 天到第 12 天之間發生。\\n\\n0 天 = 不會隨機發生。",
+    "label": "血月範圍"
+   },
+   "BloodMoonWarning": {
+    "description": "設定血月警告顯示於畫面上，且天數變成紅色的時間點。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制從戰利品中取得的書籍與原理圖數量。",
+    "label": "書籍豐富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "允許埋藏任務出現在商人任務清單中。若設為「否」，則僅顯示資訊點任務。",
+    "label": "埋藏任務"
+   },
+   "ChallengesEnabled": {
+    "description": "啟用遊戲內的挑戰系統。",
+    "label": "挑戰"
+   },
+   "ChickenCoopInput": {
+    "description": "設定開始生產所需的飼料數量。",
+    "label": "雞舍需求"
+   },
+   "ChickenCoopOutput": {
+    "description": "每個生產週期所產出的雞隻、雞蛋與羽毛數量。",
+    "label": "雞舍產量"
+   },
+   "ChickenCoopTime": {
+    "description": "調整雞舍生產雞隻、雞蛋與羽毛所需的時間。",
+    "label": "雞舍生產時間"
+   },
+   "CraftingInput": {
+    "description": "製作所需的材料數量（不包含資源包）。",
+    "label": "製作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制從戰利品中取得的製作技能雜誌數量。",
+    "label": "雜誌豐度"
+   },
+   "CraftingMaxTier": {
+    "description": "設定製作物品的最高品質。",
+    "label": "最高製作品質"
+   },
+   "CraftingOutput": {
+    "description": "每次製作所產出的物品數量（不包含資源包）。",
+    "label": "製作產量"
+   },
+   "CraftingProgression": {
+    "description": "啟用或停用基於雜誌與原理圖的製作進度系統。",
+    "label": "製作進度"
+   },
+   "CraftingTime": {
+    "description": "製作物品所需的時間。",
+    "label": "製作時間"
+   },
+   "CropGrowthSpeed": {
+    "description": "調整玩家種植的農作物與樹木的生長速度。百分比越高，生長時間越長。注意：若要使變更生效，現有存檔中的農作物需重新種植。",
+    "label": "農作物生長"
+   },
+   "CropOutput": {
+    "description": "控制從野生與玩家種植的農作物上採收到的資源數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "農作物產量"
+   },
+   "CrouchRunSpeed": {
+    "description": "調整玩家蹲下並奔跑時的移動速度。",
+    "label": "蹲姿奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "調整玩家蹲下與行走時的移動速度。",
+    "label": "下蹲速度"
+   },
+   "DayLightLength": {
+    "description": "設定遊戲內的日照時數。「永遠黑夜」和「永遠白天」運作正常。日照持續時間設定：\\n\\n 4 = 10:00 - 14:00\\n 6 = 09:00 - 15:00\\n 8 = 08:00 - 16:00\\n10 = 07:00 - 17:00\\n12 = 06:00 - 18:00\\n14 = 05:00 - 19:00\\n16 = 04:00 - 20:00\\n18 = 04:00 - 22:00\\n20 = 02:00 - 22:00",
+    "label": "白天時長"
+   },
+   "DayNightLength": {
+    "description": "遊戲中經過 24 小時所需的現實時間（分鐘）。",
+    "label": "24 小時週期"
+   },
+   "DeathPenalty": {
+    "description": "決定角色死亡後的懲罰機制。\\n\\n無 = 不受懲罰。\\n\\n僅經驗值 = 經典的損失經驗值設定。\\n受傷 = 身上會保留部分減益效果，且重生時飽食度與水分會重置為 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡懲罰"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "啟用「死亡耗損」後，此設定決定死亡時損失耐久度的百分比。",
+    "label": "死亡耗損量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "設定死亡時物品是否會耗損。\\n\\n無 = 不會耗損。\\n耐久度 = 降低目前的耐久度，可透過修理恢復。\\n最大耐久度 = 降低最大耐久度，從而降低修理上限。\\n兩者 = 物品同時流失目前與最大耐久度。",
+    "label": "死亡耗損"
+   },
+   "DewCollectorInput": {
+    "description": "設定開始收集露水所需的罐子數量。",
+    "label": "露水收集器輸入"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器每個週期產出的水量。",
+    "label": "露水收集器產量"
+   },
+   "DewCollectorTime": {
+    "description": "調整露水收集器產出水所需的時間。",
+    "label": "露水收集器時間"
+   },
+   "DrinkLootCount": {
+    "description": "在容器中找到的飲料數量。",
+    "label": "飲料豐度"
+   },
+   "DropOnDeath": {
+    "description": "設定死亡時會掉落哪些物品。\\n\\n無 = 不掉落任何物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n僅工具皮帶 = 掉落工具皮帶上的物品。\\n僅背包 = 掉落背包內的物品。\\n全部刪除 = 刪除所有物品。",
+    "label": "死亡時掉落"
+   },
+   "DropOnQuit": {
+    "description": "決定退出遊戲時會掉落哪些物品。\\n\\n無 = 不掉落物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n工具皮帶 = 掉落工具皮帶上的物品。\\n背包 = 掉落背包內的物品。",
+    "label": "死亡時退出"
+   },
+   "DukesLootCount": {
+    "description": "在戰利品中找到的杜克幣與舊錢數量。",
+    "label": "貨幣豐度"
+   },
+   "ElectricalOutput": {
+    "description": "控制產生的電力量。",
+    "label": "電力輸出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制背包內會造成負重的欄位數量。數值範圍從停用（無負重）到全部（最大負重）。預設使用 XML 設定檔中的數值。",
+    "label": "負重欄位"
+   },
+   "EnemySpawnMode": {
+    "description": "啟用或停用敵人生成。",
+    "label": "敵人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敵人對玩家造成的傷害量。此數值會與玩家受到的其他傷害疊加。",
+    "label": "敵人造成傷害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敵人與動物等實體從玩家受到的傷害量。",
+    "label": "實體承受傷害"
+   },
+   "FoodLootCount": {
+    "description": "在容器中找到的食物數量。",
+    "label": "食物豐度"
+   },
+   "FullChickenStressEvent": {
+    "description": "啟用當手中雞隻壓力值達到 100% 時觸發的事件。選擇「無」將關閉事件，「隨機」則會從下列事件中隨機挑選一項。\\n\\n雞隻掉落 = 雞隻從你手中掙脫。\\n發狂的雞 = 雞隻反過來攻擊你。\\n殭屍屍潮 = 雞隻的壓力引來殭屍屍潮。\\n殺人雞群 = 憤怒的雞群聯手圍攻你。",
+    "label": "雞隻壓力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根據你的等級與存活天數，決定敵人種類、難度縮放、戰利品品質以及血月強度。數值越高，難度越高。預設使用 XML 設定檔中的數值。",
+    "label": "全局遊戲等級"
+   },
+   "GlobalLSModifier": {
+    "description": "適用於玩家戰利品等級的全局倍率。預設使用 XML 設定檔中的數值。",
+    "label": "全局戰利品等級"
+   },
+   "GlobalLootCount": {
+    "description": "全面調整在世界中找到的戰利品總量。「無」停用所有戰利品，包括殭屍包掉落物品和補給箱。",
+    "label": "戰利品豐度"
+   },
+   "GlobalTSModifier": {
+    "description": "適用於商人等級進度的全局倍率。控制商人販賣的物品品質和種類。預設使用 XML 設定檔中的數值。",
+    "label": "全局商人等級"
+   },
+   "HarvestingOutput": {
+    "description": "控制採集方塊與物品時獲得的資源數量。不會影響礦石、種子或農作物。若停用，可能會影響遊戲內挑戰。",
+    "label": "資源產量"
+   },
+   "HeadshotMode": {
+    "description": "決定爆頭傷害的處理方式。\\n\\n僅限爆頭 = 只有爆頭能對敵人造成傷害。\\n爆頭終結 = 攻擊身體會造成傷害，但只有爆頭才能擊殺敵人。\\n\\n不適用於被動的動物。",
+    "label": "爆頭模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家對實體造成爆頭傷害時的加成倍率。",
+    "label": "爆頭倍率"
+   },
+   "HeatMapSensitivity": {
+    "description": "控制玩家活動產生的熱力累積。熱力越高，尖叫者生成的機率就越高。預設使用 XML 設定檔中的數值。",
+    "label": "熱力圖敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。數值越高，食物消耗量越大。",
+    "label": "飢餓倍率"
+   },
+   "IncomingDamage": {
+    "description": "玩家從所有來源受到的傷害量。",
+    "label": "玩家承受傷害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家遭到感染的機率。",
+    "label": "感染機率"
+   },
+   "InfectionRate": {
+    "description": "調整感染惡化的速度。",
+    "label": "感染速度"
+   },
+   "IntroChallengesEnabled": {
+    "description": "為新玩家啟用逐步引導的初期挑戰。",
+    "label": "新手挑戰"
+   },
+   "IntroQuestEnabled": {
+    "description": "略過開局的掩埋補給任務，直接解鎖完整的任務進度。",
+    "label": "新手任務"
+   },
+   "ItemDegradation": {
+    "description": "武器與工具消耗耐久度的速度。預設使用 XML 設定檔中的數值。",
+    "label": "物品磨損"
+   },
+   "JarRefund": {
+    "description": "消耗物品後退還空罐的機率。",
+    "label": "空罐退還"
+   },
+   "JumpStrength": {
+    "description": "調整玩家的跳躍高度。",
+    "label": "彈跳力"
+   },
+   "LootBagChance": {
+    "description": "適用於敵人死亡時掉落戰利品袋機率的加成倍率。",
+    "label": "掉落戰利品袋"
+   },
+   "LootMaxTier": {
+    "description": "設定戰利品中可出現的武器與物品的最高品質。",
+    "label": "最高戰利品品質"
+   },
+   "LootRespawnDays": {
+    "description": "未造訪區域內的戰利品容器重置所需經過的遊戲天數。",
+    "label": "戰利品重生天數"
+   },
+   "LootTimer": {
+    "description": "搜刮戰利品容器所需的時間。",
+    "label": "戰利品計時器"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "設定死亡時隨機遺失的物品數量。",
+    "label": "死亡遺失數量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "設定死亡時會遺失哪些物品。\\n\\n無 = 不遺失物品。\\n全部 = 所有物品。\\n工具皮帶 = 僅限工具皮帶上的物品。\\n背包 = 僅限背包內的物品。\\n裝備 = 身上穿著的護甲與服裝。\\n僅限攜帶物品 = 僅限工具皮帶與背包內的物品。",
+    "label": "死亡遺失物品"
+   },
+   "MaxDegradationAmount": {
+    "description": "決定修理物品時造成的耗損程度。",
+    "label": "修理耗損"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的最高殭屍層級。",
+    "label": "最高敵人層級"
+   },
+   "MaxTechType": {
+    "description": "全面設定武器與物品可使用的最高科技階級，讓你掌控遊戲進度與節奏。請查看以下範例。\\n\\n科技 0 = 石頭和管子\\n科技 1 = 鐵和 AK\\n科技 2 = 鋼和戰術突擊\\n科技 3 = 螺旋鑽和 M60",
+    "label": "最高科技階段"
+   },
+   "MedicalLootCount": {
+    "description": "在戰利品中找到的醫療用品數量。",
+    "label": "醫療用品豐度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近戰武器與工具造成的傷害。",
+    "label": "近戰傷害"
+   },
+   "MeleeLootCount": {
+    "description": "在戰利品中找到的近戰武器與零件數量。",
+    "label": "近戰武器豐度"
+   },
+   "MiningOutput": {
+    "description": "控制採礦時獲得的礦石數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "採礦產量"
+   },
+   "NewbieCoat": {
+    "description": "啟用後，新玩家生成時會帶有新手保護的增益效果。",
+    "label": "新手增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "允許資訊點任務出現在商人任務清單中。若設為「否」，則僅顯示埋藏任務。",
+    "label": "資訊點任務"
+   },
+   "POITierLSModifier": {
+    "description": "基於資訊點層級的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "資訊點戰利品等級"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "決定生命值與耐力是否會隨等級提升。",
+    "label": "等級屬性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "閱讀技能雜誌所獲得的進度。",
+    "label": "雜誌進度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "可計入商人進度的每日任務數量。超過此上限後完成的任務依然會給予經驗值與獎勵，但不會推進商人階級進度。",
+    "label": "每日任務上限"
+   },
+   "QuestsEnabled": {
+    "description": "啟用或停用遊戲內的任務系統。",
+    "label": "任務"
+   },
+   "QuestsPerTier": {
+    "description": "解鎖下一階級所需的完成任務數量。數值越高，階級間的進度就越慢。「無」= 無限制，可直接接取所有階級的任務。",
+    "label": "每個層級的任務需求數"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓、槍械與其他遠程武器造成的傷害。",
+    "label": "遠程傷害"
+   },
+   "RangedLootCount": {
+    "description": "在戰利品中找到的遠程武器與零件數量。",
+    "label": "遠程武器豐度"
+   },
+   "RepairTypes": {
+    "description": "決定物品的修理方式：\\n\\n無 = 無法修理\\n僅限修理 = 僅能使用維修工具包\\n僅限合併 = 僅能在合併工作站修理\\n兩者皆可 = 可使用維修工具包與合併工作站",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "在戰利品中找到的資源物品數量。",
+    "label": "資源豐度"
+   },
+   "RunSpeed": {
+    "description": "調整玩家奔跑時的移動速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "報廢物品時所獲得的數量。",
+    "label": "報廢產量"
+   },
+   "SeedDropOutput": {
+    "description": "採收玩家種植的農作物時獲得的種子數量。不會增加種子掉落機率或從樹木上獲得的種子。",
+    "label": "種子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在畫面上顯示日期與時間資訊。若設為「否」，則「血月警告」也停用。",
+    "label": "顯示日期／時間"
+   },
+   "ShowEnemyDamage": {
+    "description": "實體受到攻擊時顯示浮動傷害數字。",
+    "label": "顯示實體傷害"
+   },
+   "ShowHealthBars": {
+    "description": "顯示或隱藏實體血條。",
+    "label": "實體血條"
+   },
+   "ShowLocationInfo": {
+    "description": "顯示生物群系與資訊點名稱及難度。",
+    "label": "顯示地點資訊"
+   },
+   "ShowXP": {
+    "description": "在畫面上隱藏或顯示經驗值條與經驗值跳字。",
+    "label": "顯示經驗值"
+   },
+   "SillyBigHeads": {
+    "description": "讓殭屍、動物與商人啟用「大頭模式」。",
+    "label": "大頭"
+   },
+   "SillyBlackandWhite": {
+    "description": "啟用靈感來自 1960 年代經典恐怖片的復古灰階畫面。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "啟用擊殺目標時的慶祝碎紙花特效。「僅限爆頭」選項只有在爆頭擊殺時才會觸發碎紙花，讓你可以透過射擊動物身體來安全獲取肉類。「僅限爆頭」選項不適用於被動的動物。",
+    "label": "擊殺慶祝"
+   },
+   "SillyLowGravity": {
+    "description": "控制遊戲內的重力大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "為遊戲內的動作啟用搞笑音效。",
+    "label": "搞笑音效"
+   },
+   "SillyTinyZombies": {
+    "description": "啟用體型較小的殭屍。",
+    "label": "迷你殭屍"
+   },
+   "SkillGainRate": {
+    "description": "調整每升幾級才能獲得技能點。",
+    "label": "技能點獲取率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制每次獲得技能點時所給予的數量。",
+    "label": "技能點獲得數量"
+   },
+   "SmeltingType": {
+    "description": "控制鍛造爐的運作方式。可以將物品熔煉進鍛造爐內，或是直接使用背包內的材料進行製作。",
+    "label": "熔爐類型"
+   },
+   "StackSizeMultiplier": {
+    "description": "套用於所有可堆疊物品的堆疊數量倍率。最大堆疊數量為 30,000。",
+    "label": "堆疊數量倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制耐力恢復的速度。此為概略數值。",
+    "label": "耐力恢復"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳躍與攻擊等動作的耐力消耗。此為概略數值。",
+    "label": "耐力消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成入門挑戰後獲得的技能點數；若已停用入門挑戰，則於遊戲開始時獲得。",
+    "label": "基礎技能點數"
+   },
+   "StormFreq": {
+    "description": "調整風暴發生的頻率。設為「無」可停用風暴。",
+    "label": "風暴頻率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否會聽見風暴警報聲，並在畫面上看到風暴警告。",
+    "label": "風暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "控制環境溫度（冷和熱）是否會影響玩家。",
+    "label": "溫度生存系統"
+   },
+   "TerrainDamage": {
+    "description": "玩家對地形造成的傷害量。",
+    "label": "地形傷害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水分的速度。數值越高，水分消耗量越大。",
+    "label": "口渴倍率"
+   },
+   "TraderBuyLimit": {
+    "description": "在拒收之前，商人願意收購的每種物品數量上限。數值越低，每次補貨週期可出售商品的數量就越少。",
+    "label": "商人收購上限"
+   },
+   "TraderBuyPrices": {
+    "description": "調整玩家向商人購買物品的價格。",
+    "label": "購買價"
+   },
+   "TraderDialog": {
+    "description": "切換是否開啟商人語音與畫面上的對話。",
+    "label": "商人對話"
+   },
+   "TraderHours": {
+    "description": "控制商人的營業與打烊時間。此設定不受「24小時週期」與「白晝長度」影響。「血月公休」代表僅在血月期間不營業。預設將使用 XML 設定檔中的數值。\\n\\nXML 預設 = 04:00-22:00\\n早晨 = 04:00-12:00\\n中午 = 10:00-18:00\\n傍晚 = 16:00-22:00\\n夜間 = 22:00-04:00",
+    "label": "商人營業時間"
+   },
+   "TraderItemAbundance": {
+    "description": "商人販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "商人商品數量"
+   },
+   "TraderMaxTier": {
+    "description": "設定向商人購買時可出現的最高物品品質。",
+    "label": "商人最高商品品質"
+   },
+   "TraderProtection": {
+    "description": "設定商人營地的傷害保護，以及玩家是否能宣告該區域為領地。",
+    "label": "商人保護"
+   },
+   "TraderResetInterval": {
+    "description": "商人重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "調整玩家將物品賣給商人的價格。",
+    "label": "出售價"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "啟用可接取前往其他商人處的任務選項。",
+    "label": "貿易路線"
+   },
+   "TradersEnabled": {
+    "description": "啟用與 NPC 商人的交易功能。",
+    "label": "啟用交易"
+   },
+   "TreasureMapChance": {
+    "description": "適用於藏寶圖在戰利品容器和敵方戰利品袋中生成機率的加成倍率。",
+    "label": "藏寶圖機率"
+   },
+   "VehicleBlockDamage": {
+    "description": "車輛對方塊造成的傷害量。",
+    "label": "車輛塊傷害"
+   },
+   "VehicleEntityDamage": {
+    "description": "車輛對實體造成的傷害量。",
+    "label": "車輛實體傷害"
+   },
+   "VehicleFuelUsage": {
+    "description": "調整車輛的燃料消耗速度。",
+    "label": "車輛油耗"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的車輛在碰撞時受到的傷害量。",
+    "label": "車輛自身傷害"
+   },
+   "VendingEnabled": {
+    "description": "啟用或停用販賣機功能。",
+    "label": "啟用販賣機"
+   },
+   "VendingItemAbundance": {
+    "description": "販賣機販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機商品數量"
+   },
+   "VendingResetInterval": {
+    "description": "商人販賣機重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機重置"
+   },
+   "WalkSpeed": {
+    "description": "調整玩家行走時的移動速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "「是」允許在工作站製作物品。「否」則只允許玩家進行背包製作。",
+    "label": "工作站製作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允許世界上生成具備功能的工作站。套用於新生成的暗黑伊甸園或隨機生成（RWG）地圖。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "適用於所有獲得經驗值的加成倍率。",
+    "label": "經驗倍數"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月屍潮與風暴期間的殭屍移動速度。",
+    "label": "殭屍血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "設定兇猛殭屍的移動速度。",
+    "label": "殭屍發狂速度"
+   },
+   "ZombieFeralSense": {
+    "description": "殭屍透過視覺與聽覺發現玩家的難易度。",
+    "label": "殭屍發狂感知"
+   },
+   "ZombieMove": {
+    "description": "設定普通殭屍的白天移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍日速度"
+   },
+   "ZombieMoveNight": {
+    "description": "設定普通殭屍的夜間移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍夜速度"
+   },
+   "ZombieRageChance": {
+    "description": "殭屍受到傷害時進入暴怒模式的機率。",
+    "label": "殭屍暴怒"
+   },
+   "ZombiesEatAnimals": {
+    "description": "決定殭屍是否會啃食動物屍體。",
+    "label": "殭屍啃食動物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "難度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "預設/簡單：末日降臨，仍保有一絲仁慈。",
+    "label": "冒險家"
+   },
+   "Almost Creative": {
+    "description": "末日，卻又不是真正的末日。畢竟死亡太麻煩了。",
+    "label": "近乎創意"
+   },
+   "Bite Club": {
+    "description": "在這個硬派的永久死亡模式中，重生是懦夫的選擇。只剩一條命；請善加利用。",
+    "label": "咬咬俱樂部"
+   },
+   "Caveman Life": {
+    "description": "在頂多只能使用棍子當工具的末日世界中生存下來。",
+    "label": "穴居人生活"
+   },
+   "Chibi Mode": {
+    "description": "他們不只可愛……速度還很快！幸好你自己的速度也不慢。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "災難接連不斷，你根本來不及解決。",
+    "label": "災難電影"
+   },
+   "Dumpster Diver": {
+    "description": "垃圾也能變黃金！只要派上用場，就不是囤積。",
+    "label": "垃圾桶尋寶"
+   },
+   "Dying World": {
+    "description": "資源正在枯竭，而你也離死不遠了。",
+    "label": "垂死世界"
+   },
+   "Insane": {
+    "description": "瘋狂：末日浩劫，你會為自己犯下的每一個錯誤感到懊悔。",
+    "label": "極難"
+   },
+   "Legacy Survival": {
+    "description": "傳統生存法則，卻帶來現代後果。",
+    "label": "傳統生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "補給品短缺、懲罰更嚴厲，還有無止盡的壓力。麥摩爾……聞起來真香！",
+    "label": "麥摩爾的混亂"
+   },
+   "Nomad": {
+    "description": "一般：你的決心比黑糖咖啡還要濃烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末日求生，輕鬆過關，還附帶輔助輪。",
+    "label": "清道夫"
+   },
+   "Seven days Later": {
+    "description": "一種以現代電影為靈感的模式，充滿成群結隊且行動迅捷的殭屍。",
+    "label": "七天毀滅倒數"
+   },
+   "True Survivalist": {
+    "description": "殘酷：被壓著打也是樂趣的一部分。",
+    "label": "倖存者"
+   },
+   "Undead Matinee": {
+    "description": "以近戰為主，靈感源自復古電影的模式，殭屍移動速度較慢，數量眾多，彈藥稀少。",
+    "label": "不死族午後場"
+   },
+   "Warrior": {
+    "description": "困難：現在真的會痛了，但至少腦震盪是免費的。",
+    "label": "勇士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "無",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "衝刺",
+    "5": "噩夢"
+   },
+   "AirDropRandomTime": {
+    "0": "無",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "全天",
+    "6": "任何物品"
+   },
+   "AirDrops": {
+    "0": "禁用",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "無"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "僅限工作臺"
+   },
+   "BarterValues": {
+    "0": "無"
+   },
+   "BiomeEnemyDensity": {
+    "0": "無",
+    "1": "預設",
+    "2": "極低",
+    "3": "低",
+    "4": "中",
+    "5": "高",
+    "6": "極高"
+   },
+   "BloodMoonCount": {
+    "0": "4 敵人",
+    "1": "6 敵人",
+    "2": "8 敵人",
+    "3": "10 敵人",
+    "4": "12 敵人",
+    "5": "16 敵人",
+    "6": "24 敵人",
+    "7": "32 敵人",
+    "8": "64 敵人"
+   },
+   "BloodMoonFrequency": {
+    "0": "禁用",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "禁用",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "僅限爆頭"
+   },
+   "CropGrowthSpeed": {
+    "0": "無",
+    "1": "瞬間"
+   },
+   "DamageValues": {
+    "0": "無"
+   },
+   "DayLightLength": {
+    "0": "永遠黑夜",
+    "10": "永遠白天"
+   },
+   "DeathPenalty": {
+    "0": "無",
+    "1": "僅經驗值",
+    "2": "受傷",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "無",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "兩者"
+   },
+   "DewCollectorInput": {
+    "0": "無"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "禁用",
+    "1": "極低",
+    "2": "低",
+    "3": "預設",
+    "4": "高",
+    "5": "極高"
+   },
+   "DropOnDeath": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品",
+    "6": "全部刪除"
+   },
+   "DropOnQuit": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "Encumbrance": {
+    "0": "禁用",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高",
+    "5": "全部"
+   },
+   "FullChickenStressEvent": {
+    "0": "無",
+    "1": "隨機",
+    "2": "雞隻掉落",
+    "3": "發狂的雞",
+    "4": "殭屍屍潮",
+    "5": "殺人雞群"
+   },
+   "HeadshotMode": {
+    "0": "無",
+    "1": "僅限爆頭",
+    "2": "爆頭終結"
+   },
+   "ItemTierOptions": {
+    "0": "預設"
+   },
+   "JarRefund": {
+    "0": "無"
+   },
+   "JumpStrength": {
+    "0": "無"
+   },
+   "LootAbundanceValues": {
+    "0": "無"
+   },
+   "LootRespawnDays": {
+    "0": "禁用"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "LowDefaultHigh": {
+    "0": "極低",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高"
+   },
+   "MaxChunkAge": {
+    "0": "禁用"
+   },
+   "MaxDegradationAmounts": {
+    "0": "無"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "強悍",
+    "2": "特殊",
+    "3": "兇猛",
+    "4": "輻射",
+    "5": "菁英"
+   },
+   "MaxTechType": {
+    "0": "無",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "無"
+   },
+   "PointsPer": {
+    "0": "無"
+   },
+   "QuestPerDay": {
+    "0": "無限制"
+   },
+   "QuestPerTier": {
+    "0": "無"
+   },
+   "RepairTypes": {
+    "0": "無",
+    "1": "僅限修理",
+    "2": "僅限合併",
+    "3": "兩者"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "僅顯示名稱"
+   },
+   "ShowXP": {
+    "0": "所有",
+    "1": "僅顯示狀態條",
+    "2": "僅顯示通知",
+    "3": "無"
+   },
+   "SlowToFast": {
+    "0": "預設",
+    "1": "極慢",
+    "2": "緩慢",
+    "3": "正常",
+    "4": "快",
+    "5": "極快"
+   },
+   "SmeltingType": {
+    "0": "熔爐",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "無"
+   },
+   "StaminaUsage": {
+    "0": "無"
+   },
+   "StarterSkillPoints": {
+    "0": "無"
+   },
+   "StormFrequency": {
+    "0": "無"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可宣告領地",
+    "2": "不可宣告領地"
+   },
+   "TraderHourPresets": {
+    "0": "預設",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "血月已關閉",
+    "6": "全天開放"
+   },
+   "TraderResetInterval": {
+    "0": "預設",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "無"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "禁用",
+    "1": "日",
+    "2": "夜間",
+    "3": "所有"
+   },
+   "ZombieRageChance": {
+    "0": "無"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "衝刺",
+    "4": "噩夢"
+   }
+  }
+ },
+ "v3_3": {
+  "categories": {
+   "Crafting": "製作",
+   "Entities": "實體",
+   "General": "玩家",
+   "Misc": "雜項",
+   "Resources": "資源",
+   "Tasks": "任務",
+   "Traders": "商人",
+   "World": "世界"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "啟用或停用殭屍的氣味追蹤功能，並設定牠們聞到氣味時的移動速度。",
+    "label": "AI 氣味模式"
+   },
+   "AirDropFrequency": {
+    "description": "空投補給出現的頻率。",
+    "label": "空投"
+   },
+   "AirDropMarker": {
+    "description": "在地圖與指南針上顯示空投補給位置的標記。",
+    "label": "標記空投地點"
+   },
+   "AirDropRandomTime": {
+    "description": "允許控制空投出現的時間。選擇特定時間讓空投規律出現，或選擇「任意」使其完全隨機。\\n\\n無 = 預設的正午空投。\\n早晨 = 04:00 - 10:00中\\n午 = 10:00 - 14:00\\n傍晚 = 15:00 - 20:00\\n夜間 = 20:00 - 24:00\\n全天 = 04:00 - 20:00",
+    "label": "空投時間變數"
+   },
+   "AllowCompass": {
+    "description": "顯示玩家的指南針。",
+    "label": "允許使用指南針"
+   },
+   "AllowMap": {
+    "description": "啟用遊戲內地圖。",
+    "label": "允許使用地圖"
+   },
+   "AllowScreenMarkers": {
+    "description": "在畫面上顯示導航標記。地圖標記依然可見。",
+    "label": "允許使用畫面標記"
+   },
+   "AllowZombieDigging": {
+    "description": "允許殭屍向下挖掘地形。殭屍依然可以橫向挖掘。",
+    "label": "殭屍挖掘"
+   },
+   "AmmoLootCount": {
+    "description": "在戰利品中找到的彈藥數量。",
+    "label": "彈藥豐度"
+   },
+   "ApiaryInput": {
+    "description": "設定開始蜂蜜生產所需的花卉數量。",
+    "label": "養蜂箱輸入"
+   },
+   "ApiaryOutput": {
+    "description": "每個生產週期生成的蜂蜜量。",
+    "label": "養蜂箱產量"
+   },
+   "ApiaryTime": {
+    "description": "調整養蜂箱生產蜂蜜所需的時間。",
+    "label": "養蜂箱時間"
+   },
+   "ArmorLootCount": {
+    "description": "在戰利品中找到的護甲與護甲零件數量。",
+    "label": "護甲豐度"
+   },
+   "BackpackCrafting": {
+    "description": "控制玩家可直接在背包內製作哪些物品。\\n\\n「否」停用背包製作。\\n「是」允許在背包內製作。\\n「有限」只允許在背包內製作有限數量的配方。\\n「僅限工作臺」只允許製作工作臺，無法在背包內製作其他物品。",
+    "label": "背包製作"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "覆蓋生態系預設的日間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物密度"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "提高日間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "日間動物重生率"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "覆蓋生態系預設的日間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人密度"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "提高日間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "日間敵人重生率"
+   },
+   "BiomeGSModifier": {
+    "description": "基於生物群系的難度加成。較困難的生物群系會使敵人強度與戰利品等級超越你目前的基礎進度。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系遊戲等級"
+   },
+   "BiomeLSModifier": {
+    "description": "適用於各個生物群系的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "生物群系戰利品等級"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "覆蓋生態系預設的夜間動物密度，並設定每個生態系生成的動物數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物密度"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "提高夜間活躍生態系中的動物重生率。會影響非喪屍的被動與主動食物來源。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間動物重生率"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "覆蓋生態系預設的夜間敵人密度，並設定每個生態系生成的敵人數量。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人密度"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "提高夜間活躍生態系中的敵人重生率。預設將使用 XML 設定檔中的數值。",
+    "label": "夜間敵人重生率"
+   },
+   "BiomeProgression": {
+    "description": "啟用或停用生物群系危害。天氣與風暴不受此設定影響。",
+    "label": "生物群落進度"
+   },
+   "BlockDamage": {
+    "description": "玩家對方塊造成的傷害量。",
+    "label": "玩家塊傷害"
+   },
+   "BlockDamageAI": {
+    "description": "敵人對方塊造成的傷害量。",
+    "label": "敵人塊傷害"
+   },
+   "BlockDamageAIBM": {
+    "description": "敵人在血月期間對方塊造成的傷害。",
+    "label": "血月塊傷害"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "控制血月期間每位玩家周圍同時存活的殭屍數量上限。\\n\\n附近玩家共享最多 30 隻殭屍的群體上限。若超過此上限，系統將改為透過提升遊戲階段來增加難度。世界數量上限約為 MaxSpawnedZombies 的 1.9 倍。較低的遊戲階段可能會減少生成數量。\\n\\n調高此設定會大幅影響遊戲效能。",
+    "label": "血月計數"
+   },
+   "BloodMoonFrequency": {
+    "description": "兩次血月之間相隔的遊戲天數。停用 = 不會發生血月。",
+    "label": "血月頻率"
+   },
+   "BloodMoonRange": {
+    "description": "血月頻率過後，該事件可能發生的天數範圍。\\n\\n例如：頻率設為 7 + 範圍設為 5，血月就會隨機在第 7 天到第 12 天之間發生。\\n\\n0 天 = 不會隨機發生。",
+    "label": "血月範圍"
+   },
+   "BloodMoonWarning": {
+    "description": "設定血月警告顯示於畫面上，且天數變成紅色的時間點。",
+    "label": "血月警告"
+   },
+   "BookLootCount": {
+    "description": "控制從戰利品中取得的書籍與原理圖數量。",
+    "label": "書籍豐富度"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "允許埋藏任務出現在商人任務清單中。若設為「否」，則僅顯示資訊點任務。",
+    "label": "埋藏任務"
+   },
+   "ChallengesEnabled": {
+    "description": "啟用遊戲內的挑戰系統。",
+    "label": "挑戰"
+   },
+   "ChickenCoopInput": {
+    "description": "設定開始生產所需的飼料數量。",
+    "label": "雞舍需求"
+   },
+   "ChickenCoopOutput": {
+    "description": "每個生產週期所產出的雞隻、雞蛋與羽毛數量。",
+    "label": "雞舍產量"
+   },
+   "ChickenCoopTime": {
+    "description": "調整雞舍生產雞隻、雞蛋與羽毛所需的時間。",
+    "label": "雞舍生產時間"
+   },
+   "CraftingInput": {
+    "description": "製作所需的材料數量（不包含資源包）。",
+    "label": "製作消耗"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "控制從戰利品中取得的製作技能雜誌數量。",
+    "label": "雜誌豐度"
+   },
+   "CraftingMaxTier": {
+    "description": "設定製作物品的最高品質。",
+    "label": "最高製作品質"
+   },
+   "CraftingOutput": {
+    "description": "每次製作所產出的物品數量（不包含資源包）。",
+    "label": "製作產量"
+   },
+   "CraftingProgression": {
+    "description": "啟用或停用基於雜誌與原理圖的製作進度系統。",
+    "label": "製作進度"
+   },
+   "CraftingTime": {
+    "description": "製作物品所需的時間。",
+    "label": "製作時間"
+   },
+   "CropGrowthSpeed": {
+    "description": "調整玩家種植的農作物與樹木的生長速度。百分比越高，生長時間越長。注意：若要使變更生效，現有存檔中的農作物需重新種植。",
+    "label": "農作物生長"
+   },
+   "CropOutput": {
+    "description": "控制從野生與玩家種植的農作物上採收到的資源數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "農作物產量"
+   },
+   "CrouchRunSpeed": {
+    "description": "調整玩家蹲下並奔跑時的移動速度。",
+    "label": "蹲姿奔跑速度"
+   },
+   "CrouchSpeed": {
+    "description": "調整玩家蹲下與行走時的移動速度。",
+    "label": "下蹲速度"
+   },
+   "DayLightLength": {
+    "description": "設定遊戲內的日照時數。「永遠黑夜」和「永遠白天」運作正常。日照持續時間設定：\\n\\n 4 = 10:00 - 14:00\\n 6 = 09:00 - 15:00\\n 8 = 08:00 - 16:00\\n10 = 07:00 - 17:00\\n12 = 06:00 - 18:00\\n14 = 05:00 - 19:00\\n16 = 04:00 - 20:00\\n18 = 04:00 - 22:00\\n20 = 02:00 - 22:00",
+    "label": "白天時長"
+   },
+   "DayNightLength": {
+    "description": "遊戲中經過 24 小時所需的現實時間（分鐘）。",
+    "label": "24 小時週期"
+   },
+   "DeathPenalty": {
+    "description": "決定角色死亡後的懲罰機制。\\n\\n無 = 不受懲罰。\\n\\n僅經驗值 = 經典的損失經驗值設定。\\n受傷 = 身上會保留部分減益效果，且重生時飽食度與水分會重置為 50%。\\n永久死亡 = 角色重置。",
+    "label": "死亡懲罰"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "啟用「死亡耗損」後，此設定決定死亡時損失耐久度的百分比。",
+    "label": "死亡耗損量"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "設定死亡時物品是否會耗損。\\n\\n無 = 不會耗損。\\n耐久度 = 降低目前的耐久度，可透過修理恢復。\\n最大耐久度 = 降低最大耐久度，從而降低修理上限。\\n兩者 = 物品同時流失目前與最大耐久度。",
+    "label": "死亡耗損"
+   },
+   "DewCollectorInput": {
+    "description": "設定開始收集露水所需的罐子數量。",
+    "label": "露水收集器輸入"
+   },
+   "DewCollectorOutput": {
+    "description": "露水收集器每個週期產出的水量。",
+    "label": "露水收集器產量"
+   },
+   "DewCollectorTime": {
+    "description": "調整露水收集器產出水所需的時間。",
+    "label": "露水收集器時間"
+   },
+   "DrinkLootCount": {
+    "description": "在容器中找到的飲料數量。",
+    "label": "飲料豐度"
+   },
+   "DropOnDeath": {
+    "description": "設定死亡時會掉落哪些物品。\\n\\n無 = 不掉落任何物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n僅工具皮帶 = 掉落工具皮帶上的物品。\\n僅背包 = 掉落背包內的物品。\\n全部刪除 = 刪除所有物品。",
+    "label": "死亡時掉落"
+   },
+   "DropOnQuit": {
+    "description": "決定退出遊戲時會掉落哪些物品。\\n\\n無 = 不掉落物品。\\n全部 = 同時掉落背包與工具皮帶上的物品。\\n工具皮帶 = 掉落工具皮帶上的物品。\\n背包 = 掉落背包內的物品。",
+    "label": "死亡時退出"
+   },
+   "DukesLootCount": {
+    "description": "在戰利品中找到的杜克幣與舊錢數量。",
+    "label": "貨幣豐度"
+   },
+   "ElectricalOutput": {
+    "description": "控制產生的電力量。",
+    "label": "電力輸出"
+   },
+   "EncumbranceModifier": {
+    "description": "控制背包內會造成負重的欄位數量。數值範圍從停用（無負重）到全部（最大負重）。預設使用 XML 設定檔中的數值。",
+    "label": "負重欄位"
+   },
+   "EnemySpawnMode": {
+    "description": "啟用或停用敵人生成。",
+    "label": "敵人生成"
+   },
+   "EntityDamage": {
+    "description": "控制敵人對玩家造成的傷害量。此數值會與玩家受到的其他傷害疊加。",
+    "label": "敵人造成傷害"
+   },
+   "EntityIncomingDamage": {
+    "description": "敵人與動物等實體從玩家受到的傷害量。",
+    "label": "實體承受傷害"
+   },
+   "FoodLootCount": {
+    "description": "在容器中找到的食物數量。",
+    "label": "食物豐度"
+   },
+   "FullChickenStressEvent": {
+    "description": "啟用當手中雞隻壓力值達到 100% 時觸發的事件。選擇「無」將關閉事件，「隨機」則會從下列事件中隨機挑選一項。\\n\\n雞隻掉落 = 雞隻從你手中掙脫。\\n發狂的雞 = 雞隻反過來攻擊你。\\n殭屍屍潮 = 雞隻的壓力引來殭屍屍潮。\\n殺人雞群 = 憤怒的雞群聯手圍攻你。",
+    "label": "雞隻壓力事件"
+   },
+   "GlobalGSModifier": {
+    "description": "根據你的等級與存活天數，決定敵人種類、難度縮放、戰利品品質以及血月強度。數值越高，難度越高。預設使用 XML 設定檔中的數值。",
+    "label": "全局遊戲等級"
+   },
+   "GlobalLSModifier": {
+    "description": "適用於玩家戰利品等級的全局倍率。預設使用 XML 設定檔中的數值。",
+    "label": "全局戰利品等級"
+   },
+   "GlobalLootCount": {
+    "description": "全面調整在世界中找到的戰利品總量。「無」停用所有戰利品，包括殭屍包掉落物品和補給箱。",
+    "label": "戰利品豐度"
+   },
+   "GlobalTSModifier": {
+    "description": "適用於商人等級進度的全局倍率。控制商人販賣的物品品質和種類。預設使用 XML 設定檔中的數值。",
+    "label": "全局商人等級"
+   },
+   "HarvestingOutput": {
+    "description": "控制採集方塊與物品時獲得的資源數量。不會影響礦石、種子或農作物。若停用，可能會影響遊戲內挑戰。",
+    "label": "資源產量"
+   },
+   "HeadshotMode": {
+    "description": "決定爆頭傷害的處理方式。\\n\\n僅限爆頭 = 只有爆頭能對敵人造成傷害。\\n爆頭終結 = 攻擊身體會造成傷害，但只有爆頭才能擊殺敵人。\\n\\n不適用於被動的動物。",
+    "label": "爆頭模式"
+   },
+   "HeadshotMultiplier": {
+    "description": "玩家對實體造成爆頭傷害時的加成倍率。",
+    "label": "爆頭倍率"
+   },
+   "HeatMapSensitivity": {
+    "description": "控制玩家活動產生的熱力累積。熱力越高，尖叫者生成的機率就越高。預設使用 XML 設定檔中的數值。",
+    "label": "熱力圖敏感度"
+   },
+   "HungerMultiplier": {
+    "description": "控制玩家消耗食物的速度。數值越高，食物消耗量越大。",
+    "label": "飢餓倍率"
+   },
+   "IncomingDamage": {
+    "description": "玩家從所有來源受到的傷害量。",
+    "label": "玩家承受傷害"
+   },
+   "InfectionChance": {
+    "description": "提高或降低玩家遭到感染的機率。",
+    "label": "感染機率"
+   },
+   "InfectionRate": {
+    "description": "調整感染惡化的速度。",
+    "label": "感染速度"
+   },
+   "IntroChallengesEnabled": {
+    "description": "為新玩家啟用逐步引導的初期挑戰。",
+    "label": "新手挑戰"
+   },
+   "IntroQuestEnabled": {
+    "description": "略過開局的掩埋補給任務，直接解鎖完整的任務進度。",
+    "label": "新手任務"
+   },
+   "ItemDegradation": {
+    "description": "武器與工具消耗耐久度的速度。預設使用 XML 設定檔中的數值。",
+    "label": "物品磨損"
+   },
+   "JarRefund": {
+    "description": "消耗物品後退還空罐的機率。",
+    "label": "空罐退還"
+   },
+   "JumpStrength": {
+    "description": "調整玩家的跳躍高度。",
+    "label": "彈跳力"
+   },
+   "LootBagChance": {
+    "description": "適用於敵人死亡時掉落戰利品袋機率的加成倍率。",
+    "label": "掉落戰利品袋"
+   },
+   "LootMaxTier": {
+    "description": "設定戰利品中可出現的武器與物品的最高品質。",
+    "label": "最高戰利品品質"
+   },
+   "LootRespawnDays": {
+    "description": "未造訪區域內的戰利品容器重置所需經過的遊戲天數。",
+    "label": "戰利品重生天數"
+   },
+   "LootTimer": {
+    "description": "搜刮戰利品容器所需的時間。",
+    "label": "戰利品計時器"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "設定死亡時隨機遺失的物品數量。",
+    "label": "死亡遺失數量"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "設定死亡時會遺失哪些物品。\\n\\n無 = 不遺失物品。\\n全部 = 所有物品。\\n工具皮帶 = 僅限工具皮帶上的物品。\\n背包 = 僅限背包內的物品。\\n裝備 = 身上穿著的護甲與服裝。\\n僅限攜帶物品 = 僅限工具皮帶與背包內的物品。",
+    "label": "死亡遺失物品"
+   },
+   "MaxDegradationAmount": {
+    "description": "決定修理物品時造成的耗損程度。",
+    "label": "修理耗損"
+   },
+   "MaxEnemyTier": {
+    "description": "可生成的最高殭屍層級。",
+    "label": "最高敵人層級"
+   },
+   "MaxTechType": {
+    "description": "全面設定武器與物品可使用的最高科技階級，讓你掌控遊戲進度與節奏。請查看以下範例。\\n\\n科技 0 = 石頭和管子\\n科技 1 = 鐵和 KV-47\\n科技 2 = 鋼和戰術突擊\\n科技 3 = 螺旋鑽和 M60",
+    "label": "最高科技階段"
+   },
+   "MedicalLootCount": {
+    "description": "在戰利品中找到的醫療用品數量。",
+    "label": "醫療用品豐度"
+   },
+   "MeleeDamage": {
+    "description": "玩家使用近戰武器與工具造成的傷害。",
+    "label": "近戰傷害"
+   },
+   "MeleeLootCount": {
+    "description": "在戰利品中找到的近戰武器與零件數量。",
+    "label": "近戰武器豐度"
+   },
+   "MiningOutput": {
+    "description": "控制採礦時獲得的礦石數量。若停用，可能會影響遊戲內挑戰。",
+    "label": "採礦產量"
+   },
+   "NewbieCoat": {
+    "description": "啟用後，新玩家生成時會帶有新手保護的增益效果。",
+    "label": "新手增益"
+   },
+   "POIQuestsEnabled": {
+    "description": "允許資訊點任務出現在商人任務清單中。若設為「否」，則僅顯示埋藏任務。",
+    "label": "資訊點任務"
+   },
+   "POITierLSModifier": {
+    "description": "基於資訊點層級的戰利品等級倍率。預設使用 XML 設定檔中的數值。",
+    "label": "資訊點戰利品等級"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "決定生命值與耐力是否會隨等級提升。",
+    "label": "等級屬性加成"
+   },
+   "PointsPerMagazine": {
+    "description": "閱讀技能雜誌所獲得的進度。",
+    "label": "雜誌進度"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "可計入商人進度的每日任務數量。超過此上限後完成的任務依然會給予經驗值與獎勵，但不會推進商人階級進度。",
+    "label": "每日任務上限"
+   },
+   "QuestsEnabled": {
+    "description": "啟用或停用遊戲內的任務系統。",
+    "label": "任務"
+   },
+   "QuestsPerTier": {
+    "description": "解鎖下一階級所需的完成任務數量。數值越高，階級間的進度就越慢。「無」= 無限制，可直接接取所有階級的任務。",
+    "label": "每個層級的任務需求數"
+   },
+   "RangedDamage": {
+    "description": "玩家使用弓、槍械與其他遠程武器造成的傷害。",
+    "label": "遠程傷害"
+   },
+   "RangedLootCount": {
+    "description": "在戰利品中找到的遠程武器與零件數量。",
+    "label": "遠程武器豐度"
+   },
+   "RepairTypes": {
+    "description": "決定物品的修理方式：\\n\\n無 = 無法修理\\n僅限修理 = 僅能使用維修工具包\\n僅限合併 = 僅能在合併工作站修理\\n兩者皆可 = 可使用維修工具包與合併工作站",
+    "label": "修理方式"
+   },
+   "ResourceLootCount": {
+    "description": "在戰利品中找到的資源物品數量。",
+    "label": "資源豐度"
+   },
+   "RunSpeed": {
+    "description": "調整玩家奔跑時的移動速度。",
+    "label": "奔跑速度"
+   },
+   "ScrappingOutput": {
+    "description": "報廢物品時所獲得的數量。",
+    "label": "報廢產量"
+   },
+   "SeedDropOutput": {
+    "description": "採收玩家種植的農作物時獲得的種子數量。不會增加種子掉落機率或從樹木上獲得的種子。",
+    "label": "種子掉落"
+   },
+   "ShowDayTime": {
+    "description": "在畫面上顯示日期與時間資訊。若設為「否」，則「血月警告」也停用。",
+    "label": "顯示日期／時間"
+   },
+   "ShowEnemyDamage": {
+    "description": "實體受到攻擊時顯示浮動傷害數字。",
+    "label": "顯示實體傷害"
+   },
+   "ShowHealthBars": {
+    "description": "顯示或隱藏實體血條。",
+    "label": "實體血條"
+   },
+   "ShowLocationInfo": {
+    "description": "顯示生物群系與資訊點名稱及難度。",
+    "label": "顯示地點資訊"
+   },
+   "ShowXP": {
+    "description": "在畫面上隱藏或顯示經驗值條與經驗值跳字。",
+    "label": "顯示經驗值"
+   },
+   "SillyBigHeads": {
+    "description": "讓殭屍、動物與商人啟用「大頭模式」。",
+    "label": "大頭"
+   },
+   "SillyBlackandWhite": {
+    "description": "啟用靈感來自 1960 年代經典恐怖片的復古灰階畫面。",
+    "label": "黑白"
+   },
+   "SillyCelebrate": {
+    "description": "啟用擊殺目標時的慶祝碎紙花特效。「僅限爆頭」選項只有在爆頭擊殺時才會觸發碎紙花，讓你可以透過射擊動物身體來安全獲取肉類。「僅限爆頭」選項不適用於被動的動物。",
+    "label": "擊殺慶祝"
+   },
+   "SillyLowGravity": {
+    "description": "控制遊戲內的重力大小。",
+    "label": "重力"
+   },
+   "SillySounds": {
+    "description": "為遊戲內的動作啟用搞笑音效。",
+    "label": "搞笑音效"
+   },
+   "SillyTinyZombies": {
+    "description": "啟用體型較小的殭屍。",
+    "label": "迷你殭屍"
+   },
+   "SkillGainRate": {
+    "description": "調整每升幾級才能獲得技能點。",
+    "label": "技能點獲取率"
+   },
+   "SkillPointsPerLevel": {
+    "description": "控制每次獲得技能點時所給予的數量。",
+    "label": "技能點獲得數量"
+   },
+   "SmeltingType": {
+    "description": "控制鍛造爐的運作方式。可以將物品熔煉進鍛造爐內，或是直接使用背包內的材料進行製作。",
+    "label": "熔爐類型"
+   },
+   "StackSizeMultiplier": {
+    "description": "套用於所有可堆疊物品的堆疊數量倍率。最大堆疊數量為 30,000。",
+    "label": "堆疊數量倍率"
+   },
+   "StaminaRegen": {
+    "description": "控制耐力恢復的速度。此為概略數值。",
+    "label": "耐力恢復"
+   },
+   "StaminaUsage": {
+    "description": "奔跑、跳躍與攻擊等動作的耐力消耗。此為概略數值。",
+    "label": "耐力消耗"
+   },
+   "StarterSkillPoints": {
+    "description": "完成入門挑戰後獲得的技能點數；若已停用入門挑戰，則於遊戲開始時獲得。",
+    "label": "基礎技能點數"
+   },
+   "StormFreq": {
+    "description": "調整風暴發生的頻率。設為「無」可停用風暴。",
+    "label": "風暴頻率"
+   },
+   "StormWarning": {
+    "description": "控制玩家是否會聽見風暴警報聲，並在畫面上看到風暴警告。",
+    "label": "風暴警告"
+   },
+   "TemperatureSurvival": {
+    "description": "控制環境溫度（冷和熱）是否會影響玩家。",
+    "label": "溫度生存系統"
+   },
+   "TerrainDamage": {
+    "description": "玩家對地形造成的傷害量。",
+    "label": "地形傷害"
+   },
+   "ThirstMultiplier": {
+    "description": "控制玩家消耗水分的速度。數值越高，水分消耗量越大。",
+    "label": "口渴倍率"
+   },
+   "TraderBuyLimit": {
+    "description": "在拒收之前，商人願意收購的每種物品數量上限。數值越低，每次補貨週期可出售商品的數量就越少。",
+    "label": "商人收購上限"
+   },
+   "TraderBuyPrices": {
+    "description": "調整玩家向商人購買物品的價格。",
+    "label": "購買價"
+   },
+   "TraderDialog": {
+    "description": "切換是否開啟商人語音與畫面上的對話。",
+    "label": "商人對話"
+   },
+   "TraderHours": {
+    "description": "控制商人的營業與打烊時間。此設定不受「24小時週期」與「白晝長度」影響。「血月公休」代表僅在血月期間不營業。預設將使用 XML 設定檔中的數值。\\n\\nXML 預設 = 04:00-22:00\\n早晨 = 04:00-12:00\\n中午 = 10:00-18:00\\n傍晚 = 16:00-22:00\\n夜間 = 22:00-04:00",
+    "label": "商人營業時間"
+   },
+   "TraderItemAbundance": {
+    "description": "商人販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "商人商品數量"
+   },
+   "TraderMaxTier": {
+    "description": "設定向商人購買時可出現的最高物品品質。",
+    "label": "商人最高商品品質"
+   },
+   "TraderProtection": {
+    "description": "設定商人營地的傷害保護，以及玩家是否能宣告該區域為領地。",
+    "label": "商人保護"
+   },
+   "TraderResetInterval": {
+    "description": "商人重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "商人重置"
+   },
+   "TraderSellPrices": {
+    "description": "調整玩家將物品賣給商人的價格。",
+    "label": "出售價"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "啟用可接取前往其他商人處的任務選項。",
+    "label": "貿易路線"
+   },
+   "TradersEnabled": {
+    "description": "啟用與 NPC 商人的交易功能。",
+    "label": "啟用交易"
+   },
+   "TreasureMapChance": {
+    "description": "適用於藏寶圖在戰利品容器和敵方戰利品袋中生成機率的加成倍率。",
+    "label": "藏寶圖機率"
+   },
+   "VehicleBlockDamage": {
+    "description": "車輛對方塊造成的傷害量。",
+    "label": "車輛塊傷害"
+   },
+   "VehicleEntityDamage": {
+    "description": "車輛對實體造成的傷害量。",
+    "label": "車輛實體傷害"
+   },
+   "VehicleFuelUsage": {
+    "description": "調整車輛的燃料消耗速度。",
+    "label": "車輛油耗"
+   },
+   "VehicleSelfDamage": {
+    "description": "你的車輛在碰撞時受到的傷害量。",
+    "label": "車輛自身傷害"
+   },
+   "VendingEnabled": {
+    "description": "啟用或停用販賣機功能。",
+    "label": "啟用販賣機"
+   },
+   "VendingItemAbundance": {
+    "description": "販賣機販售的物品數量。數值越低，物資就越有限且稀缺。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機商品數量"
+   },
+   "VendingResetInterval": {
+    "description": "商人販賣機重置物品欄的頻率。預設使用 XML 設定檔中的數值。",
+    "label": "販賣機重置"
+   },
+   "WalkSpeed": {
+    "description": "調整玩家行走時的移動速度。",
+    "label": "行走速度"
+   },
+   "WorkstationCrafting": {
+    "description": "「是」允許在工作站製作物品。「否」則只允許玩家進行背包製作。",
+    "label": "工作站製作"
+   },
+   "WorkstationsInTheWild": {
+    "description": "允許世界上生成具備功能的工作站。套用於新生成的暗黑伊甸園或隨機生成（RWG）地圖。",
+    "label": "野外工作站"
+   },
+   "XPMultiplier": {
+    "description": "適用於所有獲得經驗值的加成倍率。",
+    "label": "經驗倍數"
+   },
+   "ZombieBMMove": {
+    "description": "控制血月屍潮與風暴期間的殭屍移動速度。",
+    "label": "殭屍血月速度"
+   },
+   "ZombieFeralMove": {
+    "description": "設定兇猛殭屍的移動速度。",
+    "label": "殭屍發狂速度"
+   },
+   "ZombieFeralSense": {
+    "description": "殭屍透過視覺與聽覺發現玩家的難易度。",
+    "label": "殭屍發狂感知"
+   },
+   "ZombieMove": {
+    "description": "設定普通殭屍的白天移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍日速度"
+   },
+   "ZombieMoveNight": {
+    "description": "設定普通殭屍的夜間移動速度。不影響兇猛和特殊殭屍。",
+    "label": "殭屍夜速度"
+   },
+   "ZombieRageChance": {
+    "description": "殭屍受到傷害時進入暴怒模式的機率。",
+    "label": "殭屍暴怒"
+   },
+   "ZombiesEatAnimals": {
+    "description": "決定殭屍是否會啃食動物屍體。",
+    "label": "殭屍啃食動物"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "難度",
+   "Official": "官方"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "預設/簡單：末日降臨，仍保有一絲仁慈。",
+    "label": "冒險家"
+   },
+   "Almost Creative": {
+    "description": "末日，卻又不是真正的末日。畢竟死亡太麻煩了。",
+    "label": "近乎創意"
+   },
+   "Bite Club": {
+    "description": "在這個硬派的永久死亡模式中，重生是懦夫的選擇。只剩一條命；請善加利用。",
+    "label": "咬咬俱樂部"
+   },
+   "Caveman Life": {
+    "description": "在頂多只能使用棍子當工具的末日世界中生存下來。",
+    "label": "穴居人生活"
+   },
+   "Chibi Mode": {
+    "description": "他們不只可愛……速度還很快！幸好你自己的速度也不慢。",
+    "label": "Q版模式！"
+   },
+   "Disaster Film": {
+    "description": "災難接連不斷，你根本來不及解決。",
+    "label": "災難電影"
+   },
+   "Dumpster Diver": {
+    "description": "垃圾也能變黃金！只要派上用場，就不是囤積。",
+    "label": "垃圾桶尋寶"
+   },
+   "Dying World": {
+    "description": "資源正在枯竭，而你也離死不遠了。",
+    "label": "垂死世界"
+   },
+   "Insane": {
+    "description": "瘋狂：末日浩劫，你會為自己犯下的每一個錯誤感到懊悔。",
+    "label": "極難"
+   },
+   "Legacy Survival": {
+    "description": "傳統生存法則，卻帶來現代後果。",
+    "label": "傳統生存"
+   },
+   "Madmoles Mayhem": {
+    "description": "補給品短缺、懲罰更嚴厲，還有無止盡的壓力。麥摩爾……聞起來真香！",
+    "label": "麥摩爾的混亂"
+   },
+   "Nomad": {
+    "description": "一般：你的決心比黑糖咖啡還要濃烈。",
+    "label": "流浪者"
+   },
+   "Scavenger": {
+    "description": "新手：末日求生，輕鬆過關，還附帶輔助輪。",
+    "label": "清道夫"
+   },
+   "Seven days Later": {
+    "description": "一種以現代電影為靈感的模式，充滿成群結隊且行動迅捷的殭屍。",
+    "label": "七天毀滅倒數"
+   },
+   "True Survivalist": {
+    "description": "殘酷：被壓著打也是樂趣的一部分。",
+    "label": "倖存者"
+   },
+   "Undead Matinee": {
+    "description": "以近戰為主，靈感源自復古電影的模式，殭屍移動速度較慢，數量眾多，彈藥稀少。",
+    "label": "不死族午後場"
+   },
+   "Warrior": {
+    "description": "困難：現在真的會痛了，但至少腦震盪是免費的。",
+    "label": "勇士"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "無",
+    "1": "行走",
+    "2": "慢跑",
+    "3": "奔跑",
+    "4": "衝刺",
+    "5": "噩夢"
+   },
+   "AirDropRandomTime": {
+    "0": "無",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "全天",
+    "6": "任何物品"
+   },
+   "AirDrops": {
+    "0": "禁用",
+    "1": "每天",
+    "2": "1-3 天",
+    "3": "3 天",
+    "4": "3-7 天",
+    "5": "7 天",
+    "6": "1-7 天"
+   },
+   "ApiaryInput": {
+    "0": "無"
+   },
+   "BackpackCrafting": {
+    "0": "否",
+    "1": "是",
+    "2": "有限",
+    "3": "僅限工作臺"
+   },
+   "BarterValues": {
+    "0": "無"
+   },
+   "BiomeEnemyDensity": {
+    "0": "無",
+    "1": "預設",
+    "2": "極低",
+    "3": "低",
+    "4": "中",
+    "5": "高",
+    "6": "極高"
+   },
+   "BloodMoonCount": {
+    "0": "4 敵人",
+    "1": "6 敵人",
+    "2": "8 敵人",
+    "3": "10 敵人",
+    "4": "12 敵人",
+    "5": "16 敵人",
+    "6": "24 敵人",
+    "7": "32 敵人",
+    "8": "64 敵人"
+   },
+   "BloodMoonFrequency": {
+    "0": "禁用",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "8 天",
+    "9": "9 天",
+    "10": "10 天",
+    "11": "14 天",
+    "12": "20 天",
+    "13": "30 天"
+   },
+   "BloodMoonRange": {
+    "0": "0 天",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "7 天",
+    "6": "10 天",
+    "7": "14 天",
+    "8": "20 天"
+   },
+   "BloodMoonWarning": {
+    "0": "禁用",
+    "1": "早晨",
+    "2": "晚上"
+   },
+   "Celebrate": {
+    "0": "否",
+    "1": "是",
+    "2": "僅限爆頭"
+   },
+   "CropGrowthSpeed": {
+    "0": "無",
+    "1": "瞬間"
+   },
+   "DamageValues": {
+    "0": "無"
+   },
+   "DayLightLength": {
+    "0": "永遠黑夜",
+    "10": "永遠白天"
+   },
+   "DeathPenalty": {
+    "0": "無",
+    "1": "僅經驗值",
+    "2": "受傷",
+    "3": "永久死亡"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "無",
+    "1": "耐久度",
+    "2": "最大耐久度",
+    "3": "兩者"
+   },
+   "DewCollectorInput": {
+    "0": "無"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "禁用",
+    "1": "極低",
+    "2": "低",
+    "3": "預設",
+    "4": "高",
+    "5": "極高"
+   },
+   "DropOnDeath": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品",
+    "6": "全部刪除"
+   },
+   "DropOnQuit": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "Encumbrance": {
+    "0": "禁用",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高",
+    "5": "全部"
+   },
+   "FullChickenStressEvent": {
+    "0": "無",
+    "1": "隨機",
+    "2": "雞隻掉落",
+    "3": "發狂的雞",
+    "4": "殭屍屍潮",
+    "5": "殺人雞群"
+   },
+   "HeadshotMode": {
+    "0": "無",
+    "1": "僅限爆頭",
+    "2": "爆頭終結"
+   },
+   "ItemTierOptions": {
+    "0": "預設"
+   },
+   "JarRefund": {
+    "0": "無"
+   },
+   "JumpStrength": {
+    "0": "無"
+   },
+   "LootAbundanceValues": {
+    "0": "無"
+   },
+   "LootRespawnDays": {
+    "0": "禁用"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "無",
+    "1": "所有",
+    "2": "僅工具皮帶",
+    "3": "僅背包",
+    "4": "裝備",
+    "5": "僅限攜帶物品"
+   },
+   "LowDefaultHigh": {
+    "0": "極低",
+    "1": "低",
+    "2": "預設",
+    "3": "高",
+    "4": "極高"
+   },
+   "MaxChunkAge": {
+    "0": "禁用"
+   },
+   "MaxDegradationAmounts": {
+    "0": "無"
+   },
+   "MaxEnemyType": {
+    "0": "普通",
+    "1": "強悍",
+    "2": "特殊",
+    "3": "兇猛",
+    "4": "輻射",
+    "5": "菁英"
+   },
+   "MaxTechType": {
+    "0": "無",
+    "1": "科技 0",
+    "2": "科技 1",
+    "3": "科技 2",
+    "4": "科技 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "無"
+   },
+   "PointsPer": {
+    "0": "無"
+   },
+   "QuestPerDay": {
+    "0": "無限制"
+   },
+   "QuestPerTier": {
+    "0": "無"
+   },
+   "RepairTypes": {
+    "0": "無",
+    "1": "僅限修理",
+    "2": "僅限合併",
+    "3": "兩者"
+   },
+   "ShowLocationTypes": {
+    "0": "否",
+    "1": "是",
+    "2": "僅顯示名稱"
+   },
+   "ShowXP": {
+    "0": "所有",
+    "1": "僅顯示狀態條",
+    "2": "僅顯示通知",
+    "3": "無"
+   },
+   "SlowToFast": {
+    "0": "預設",
+    "1": "極慢",
+    "2": "緩慢",
+    "3": "正常",
+    "4": "快",
+    "5": "極快"
+   },
+   "SmeltingType": {
+    "0": "熔爐",
+    "1": "配方"
+   },
+   "SpeedValues": {
+    "0": "無"
+   },
+   "StaminaUsage": {
+    "0": "無"
+   },
+   "StarterSkillPoints": {
+    "0": "無"
+   },
+   "StormFrequency": {
+    "0": "無"
+   },
+   "TraderArea": {
+    "0": "是",
+    "1": "可宣告領地",
+    "2": "不可宣告領地"
+   },
+   "TraderHourPresets": {
+    "0": "預設",
+    "1": "早晨",
+    "2": "中午",
+    "3": "晚上",
+    "4": "夜間",
+    "5": "血月已關閉",
+    "6": "全天開放"
+   },
+   "TraderResetInterval": {
+    "0": "預設",
+    "1": "1 天",
+    "2": "2 天",
+    "3": "3 天",
+    "4": "4 天",
+    "5": "5 天",
+    "6": "6 天",
+    "7": "7 天",
+    "8": "14 天"
+   },
+   "XPGain": {
+    "0": "無"
+   },
+   "YesNo": {
+    "0": "否",
+    "1": "是"
+   },
+   "ZombieFeralSense": {
+    "0": "禁用",
+    "1": "日",
+    "2": "夜間",
+    "3": "所有"
+   },
+   "ZombieRageChance": {
+    "0": "無"
+   },
+   "ZombieSpeeds": {
+    "0": "行走",
+    "1": "慢跑",
+    "2": "奔跑",
+    "3": "衝刺",
+    "4": "噩夢"
+   }
+  }
+ }
+}
