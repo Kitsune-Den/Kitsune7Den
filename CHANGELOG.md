@@ -2,7 +2,7 @@
 
 All notable changes to Kitsune7Den are documented here.
 
-## [Unreleased]
+## [1.3.0] - 2026-10-18
 
 ### Added
 - **12 more languages**, so Kitsune7Den now speaks all 13 that 7 Days to Die does: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Brazilian Portuguese, Russian, Turkish, and Simplified and Traditional Chinese. It follows the Windows display language on first run (Taiwan and Hong Kong get Traditional Chinese, any Portuguese gets Brazilian), and you can switch live in **Settings → Appearance → Language**.
