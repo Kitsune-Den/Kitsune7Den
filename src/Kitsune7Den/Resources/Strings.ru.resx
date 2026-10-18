@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Главная</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>Консоль</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>Игроки</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>Конфигурация</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>Моды</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>Резервные копии</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>Журналы</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Настройки</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>Сервер: </value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet: </value></data>
+  <data name="Status_Players" xml:space="preserve"><value>Игроки: </value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>Остановлен</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>Запускается</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>Работает</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>Останавливается</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>Подключён</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>Отключён</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Да</value></data>
+  <data name="Common_No" xml:space="preserve"><value>Нет</value></data>
+  <data name="Common_On" xml:space="preserve"><value>Вкл.</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>Выкл.</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Сохранить</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Отмена</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>Обновить</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Обзор</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>Удалить</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Ошибка</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>Добро пожаловать в Kitsune7Den</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>Давайте подключим ваш сервер. Выберите вариант:</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>Уже установлен?</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value> Нажмите </value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value> ниже и укажите путь к </value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>Начинаете с нуля?</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value> Откройте </value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>Настройки → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value> — и Kitsune7Den установит сервер за вас</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>Расположение сервера</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>Укажите путь к 7DaysToDieServer.exe (или установите сервер в настройках)</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>Путь к 7DaysToDieServer.exe — нажмите «Обзор» или настройте SteamCMD в настройках для автоматической установки</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>Состояние сервера</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>Состояние</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>Время работы</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>Игроки</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>Управление</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>Запустить</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>Остановить</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>Подключить telnet</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>Подключиться к telnet вручную — если сервер уже запущен</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>Перезапустить</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>Подключение</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>Скопировать адрес в локальной сети</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>Скопировать публичный адрес</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>ЛОКАЛЬНЫЙ</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>ПУБЛИЧНЫЙ</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>Неизвестно</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>Недоступно</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>Исполняемый файл сервера</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>Все исполняемые файлы</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>Выберите исполняемый файл сервера 7 Days to Die</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>Консоль</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>Очистить</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>Отправить</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>Создана резервная копия {0} (защита от обновлений Steam).</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>Не удалось создать резервную копию конфигурации: {0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>Проверка обновлений...</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>Проверка обновлений завершена.</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>Не удалось проверить обновления — запускаем всё равно.</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>{0} восстановлен из резервной копии.</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>Не удалось восстановить конфигурацию из резервной копии: {0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>Файл журнала: {0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>Запуск сервера: {0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>Не удалось запустить сервер: {0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>Отправка команды завершения работы...</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>Принудительное завершение процесса сервера...</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>Сервер остановлен.</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>Удалён старый журнал: {0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>Игроки в сети</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>в сети</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>Выгнать</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>Забанить</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>УРОВЕНЬ</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>ЗДОРОВЬЕ</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>ОЧКИ</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>ЗОМБИ</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>СМЕРТИ</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>ПИНГ</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP: </value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>Сделать админом</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>Снять админа</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>Не найден</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>Забанить «{0}»?
+Игрок будет добавлен в чёрный список.</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>Подтверждение бана</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>Не удалось определить ID платформы игрока.</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>Снять права администратора с «{0}»?</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>Подтверждение</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>Владелец</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>Администратор</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>Модератор</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>Уровень {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>Журналы сервера</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>Фильтр журналов (например, ERR, INF, имя игрока...)</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>Открыть в проводнике</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>Папка сервера не указана</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>Найдено файлов журнала: {0}</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>Файлы журнала не найдены</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>Файл не найден</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- Показаны первые 10 000 из {0} (сузьте с помощью фильтра) ---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>Совпадающих строк: {0} в {1}</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>Строк: {0} — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>Ошибка чтения журнала: {0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>Обновления</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>Проверяет GitHub на наличие нового выпуска Kitsune7Den. Обновления скачиваются и устанавливаются на месте — установщик не нужен.</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Проверить обновления</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>Установить обновление</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>Открыть на GitHub</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>Доступно обновление: </value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>Внешний вид</value></data>
+  <data name="Settings_LanguageLabel" xml:space="preserve"><value>Язык / Language</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>Тема</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>Тёмно-синий + красный акцент (по умолчанию)</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>Тёмный графит + холодный синий акцент</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>Тёмно-зелёные тона + янтарный акцент</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>Высокий контраст, удобно для дальтоников (синий/оранжевый, без красного/зелёного)</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>Поддержать проект</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den бесплатный и с открытым исходным кодом. Если он экономит вам время или упрощает жизнь с сервером, можете угостить меня кофе. Никакого давления, только благодарность.</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>Открывает ko-fi.com в браузере по умолчанию</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>Поддержать на Ko-fi</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>SteamCMD позволяет напрямую устанавливать и обновлять выделенный сервер 7D2D.</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>Путь к SteamCMD</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>Скачать</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>Автоматически скачивает SteamCMD</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>Путь к steamcmd.exe</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>SteamCMD не найден</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD готов</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>Установка сервера</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>Папка установки</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>Куда будут установлены файлы сервера 7D2D</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>Ветка сервера</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>Выберите известную ветку или введите свою (например, alpha21.2)</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>Автообновление при запуске сервера</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>Проверять файлы</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>Проверяет целостность файлов при обновлении (дольше, но исправляет повреждённые файлы)</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>Установить / обновить сервер</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Подключение Telnet</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den берёт порт и пароль telnet из вашего serverconfig.xml при каждом подключении, а указанные здесь значения использует, только если это не сработало. Через telnet приложение отправляет команды и получает данные игроков.</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Порт Telnet</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Пароль Telnet</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>Сохранить все настройки</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>Условия использования</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den предоставляется «как есть» и только для личного некоммерческого использования. Никаких гарантий не предоставляется. Автор не несёт ответственности за потерю данных, проблемы с сервером или любой иной ущерб, возникший в результате использования этой программы. Используйте на свой страх и риск. Этот инструмент не связан с The Fun Pimps или Valve и не одобрен ими.</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>Операция успешно завершена</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>Операция не удалась — проверьте журнал</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>Тема изменена: {0}</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>Настройки сохранены</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>Все исполняемые файлы</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>Выберите steamcmd.exe</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>Выберите папку установки сервера</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>Сначала укажите папку установки сервера — SteamCMD будет размещён рядом</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>SteamCMD не найден — сначала скачайте его или укажите путь к нему</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>Сначала укажите папку установки сервера</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>Обновление...</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>Отмена...</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>Установить обновление {0} ({1})?
+
+Kitsune7Den скачает новую версию и перезапустится. Сервер продолжит работать.</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>Подтверждение обновления</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>Проверка обновлений...</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>У вас последняя версия ({0})</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>Доступно обновление {0}, но в выпуске нет файла exe/zip для скачивания</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>Доступно обновление: {0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>Не удалось проверить обновления: {0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>Не удалось определить путь к текущему exe</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>Скачивание {0} ({1})...</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>Распаковка...</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>В архиве zip нет {0}</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>Скачивание завершено. Установка...</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>Обновление установлено. Перезапуск...</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Ошибка обновления: {0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD уже есть: {0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>Скачивание SteamCMD...</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>Распаковка SteamCMD...</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD установлен: {0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>Ошибка: steamcmd.exe не найден после распаковки</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>Ошибка скачивания SteamCMD: {0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>Ошибка: путь к SteamCMD не указан или не найден. Сначала скачайте его.</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>Ошибка: папка установки сервера не указана.</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>Выполняется: steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>Ветка: {0} | Проверка файлов: {1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>Первая установка может занять некоторое время...</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>Найден exe сервера: {0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>Обновление успешно завершено!</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD завершился с кодом: {0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>Обновление отменено.</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>Ошибка запуска SteamCMD: {0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>Открыть папку</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>Установить из zip</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>Включено: {0} / {1}</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>Включён</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>Отключён</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>Включить</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>Отключить</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>Автор: </value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>Модов: {0} (включено: {1})</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>Мод {0} включён</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>Мод {0} отключён</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>Удалить мод «{0}»?
+Все его файлы будут удалены, и отменить это нельзя.</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>Подтверждение удаления</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>Удалено: {0}</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>Архивы модов</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>Все файлы</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>Выберите zip-файл мода</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>Ошибка: не удалось распознать структуру мода в архиве. Ожидалась папка с ModInfo.xml.</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>Ошибка: недопустимое имя папки мода.</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>Мод установлен: {0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>Ошибка установки мода: {0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>Сохранение: </value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>Не найдено</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>Открыть папку</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>Создать резервную копию</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>ПО РАСПИСАНИЮ</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>Включено</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>ИНТЕРВАЛ</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>МАКС. КОПИЙ</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>Сохранить расписание</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>СЛЕДУЮЩАЯ КОПИЯ</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>Резервных копий пока нет</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>Нажмите </value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value> — и текущее сохранение будет упаковано в zip. Или включите расписание выше, чтобы копии создавались автоматически через равные промежутки времени.</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>Восстановить</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>вручную</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>по расписанию</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>перед восстановлением</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>Каждые 30 минут</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>Каждый час</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>Каждые 2 часа</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>Каждые 4 часа</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>Каждые 6 часов</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>Каждые 12 часов</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>Каждый день</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>Найдено резервных копий: {0}</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>Восстановить резервную копию «{0}»?
+
+Сначала будет создана страховочная копия.
+Перед восстановлением сервер нужно остановить.</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>Подтверждение восстановления</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>Удалить резервную копию «{0}»?
+Отменить это нельзя.</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>Подтверждение удаления</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>Настройки расписания сохранены</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>только что</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>{0} мин назад</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>{0} ч назад</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>{0} дн. назад</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>Создание резервной копии по расписанию...</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>Резервное копирование по расписанию включено — интервал: {0}</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} мин</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 час</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} ч</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 день</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} дн.</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>Ошибка: не удалось найти папку сохранения</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>Создание резервной копии {0}...</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>Резервная копия создана: {0} ({1})</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>Ошибка резервного копирования: {0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>Ошибка: не удалось найти папку сохранения для восстановления</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>Создание страховочной копии перед восстановлением...</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>Восстановление {0}...</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>{0}: восстановление успешно завершено. Перезапустите сервер, чтобы изменения вступили в силу.</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>Ошибка восстановления: {0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>Удалено: {0}</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>Удалена старая резервная копия: {0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>Конфигурация сервера</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>Форма</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>Исходный XML</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>Сбросить</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>Сохранить изменения</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>Сервер не настроен</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>Откройте вкладку «Главная» и укажите путь к </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value> — или установите новый сервер через SteamCMD на странице «Настройки».</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>serverconfig.xml не найден — настройте сервер на вкладке «Главная»</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>Загружено параметров: {0}</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>Сохранено (создана резервная копия)</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>Не удалось сохранить — проверьте корректность XML</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>Восстановлены последние сохранённые значения</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>ЦИКЛ ДНЯ И НОЧИ</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>ДЕНЬ</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>НОЧЬ</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> мин</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> мин всего</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>Весь цикл:</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>мин  (10 – 240)</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>Заменяет DayNightLength ({0}) и DayLightLength ({1})</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>Обнаружена 7 Days to Die {0} (по журналу сервера)</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>7 Days to Die {0} (по ветке SteamCMD в настройках)</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>7 Days to Die 3.x (точная версия неизвестна, пока сервер не запустится хотя бы раз)</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>Этот serverconfig.xml создан до 7 Days to Die 3.0</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>В 3.x настройки сложности, добычи, зомби, кровавой луны и длительности дня перенесены во внутриигровую песочницу и задаются одним SandboxCode. Старые параметры ниже, в разделе «Устаревшие», игра игнорирует. Обновление закомментирует их (ничего не удаляется), добавит SandboxCode, Region и Language и предварительно создаст резервную копию.</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>Обновить для 3.x</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>Обновление serverconfig.xml для 3.x</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>Закомментировать настройки, которые 3.x игнорирует, и добавить SandboxCode, Region и Language?
+
+Сначала будет создана резервная копия serverconfig.xml с отметкой времени. Старые значения останутся в файле в виде комментариев.</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>Обновлено для 3.x. Закомментировано устаревших настроек: {0}. Добавлено: {1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml уже в формате 3.x</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>Не удалось обновить: {0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Сначала сохраните или сбросьте несохранённые изменения</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x игнорирует эти параметры и берёт их из SandboxCode. Меняйте их в редакторе песочницы выше.</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Настройки песочницы</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Изменить песочницу...</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>Сложность, добыча, зомби, кровавые луны, длительность дня, торговцы и многое другое. Те же параметры, что и на экране настроек песочницы в игре.</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>Предустановка: {0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>Свои правила. Изменено параметров: {0}</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>Не удаётся прочитать этот SandboxCode. Откройте редактор, чтобы узнать причину.</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode обновлён. Нажмите «Сохранить изменения», чтобы записать его в serverconfig.xml.</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>Используется таблица параметров {0} (сервер: 7 Days to Die {1}).</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>Этот сервер работает на 7 Days to Die {0}, а самая новая таблица параметров в этой версии Kitsune7Den — {1}. Параметры, добавленные или изменённые с тех пор, могут отсутствовать или быть смещены. Проверьте наличие обновления Kitsune7Den.</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>Не удалось определить, на какой версии 3.x работает этот сервер, поэтому используется самая новая таблица ({0}). Запустите сервер хотя бы раз, чтобы версия попала в журнал: в разных версиях 3.x коды могут означать разное.</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>Предустановка</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>Совпадает с предустановкой «{0}»</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>Свои правила</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>Поиск параметров...</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>Вернуть по умолчанию</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>Сбросить всё</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>Применить</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>изм. (не по умолчанию)</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>По умолчанию: {0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>Код пуст.</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>SandboxCode состоит только из букв A–Z.</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>Этот код начинается с «{0}», а коды этой версии игры начинаются с «{1}».</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>Частей кода, которых нет среди параметров этой версии игры: {0}. Они сохранятся как есть: {1}</value></data>
+  <data name="CfgCat_Core" xml:space="preserve"><value>Основное</value></data>
+  <data name="CfgCat_Sandbox" xml:space="preserve"><value>Песочница</value></data>
+  <data name="CfgCat_World" xml:space="preserve"><value>Мир</value></data>
+  <data name="CfgCat_BlockDamage" xml:space="preserve"><value>Урон по блокам</value></data>
+  <data name="CfgCat_Gameplay" xml:space="preserve"><value>Игровой процесс</value></data>
+  <data name="CfgCat_Player" xml:space="preserve"><value>Игрок</value></data>
+  <data name="CfgCat_Zombies" xml:space="preserve"><value>Зомби</value></data>
+  <data name="CfgCat_LootDrops" xml:space="preserve"><value>Добыча и сбросы</value></data>
+  <data name="CfgCat_LandClaims" xml:space="preserve"><value>Притязания на землю</value></data>
+  <data name="CfgCat_Network" xml:space="preserve"><value>Сеть</value></data>
+  <data name="CfgCat_Admin" xml:space="preserve"><value>Администрирование</value></data>
+  <data name="CfgCat_Advanced" xml:space="preserve"><value>Дополнительно</value></data>
+  <data name="CfgCat_Legacy" xml:space="preserve"><value>Устаревшие</value></data>
+  <data name="CfgCat_Other" xml:space="preserve"><value>Прочее</value></data>
+  <data name="Cfg_ServerName_Name" xml:space="preserve"><value>Название сервера</value></data>
+  <data name="Cfg_ServerName_Desc" xml:space="preserve"><value>Название, которое видно в списке серверов</value></data>
+  <data name="Cfg_ServerPassword_Name" xml:space="preserve"><value>Пароль сервера</value></data>
+  <data name="Cfg_ServerPassword_Desc" xml:space="preserve"><value>Пароль для входа (пусто — без пароля)</value></data>
+  <data name="Cfg_ServerDescription_Name" xml:space="preserve"><value>Описание сервера</value></data>
+  <data name="Cfg_ServerDescription_Desc" xml:space="preserve"><value>Описание в списке серверов</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Name" xml:space="preserve"><value>Текст подтверждения при входе</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Desc" xml:space="preserve"><value>Сообщение, которое игроки должны принять перед входом</value></data>
+  <data name="Cfg_Region_Name" xml:space="preserve"><value>Регион</value></data>
+  <data name="Cfg_Region_Desc" xml:space="preserve"><value>Регион, где находится сервер; используется фильтром по регионам в списке серверов (3.x)</value></data>
+  <data name="Cfg_Region_Opts" xml:space="preserve"><value>Северная Америка — восток|Северная Америка — запад|Центральная Америка|Южная Америка|Европа|Россия|Азия|Ближний Восток|Африка|Океания</value></data>
+  <data name="Cfg_Language_Name" xml:space="preserve"><value>Язык</value></data>
+  <data name="Cfg_Language_Desc" xml:space="preserve"><value>Основной язык игроков, записанный по-английски («Russian», а не «Русский»), чтобы его находил поиск в списке серверов (3.x)</value></data>
+  <data name="Cfg_SandboxCode_Name" xml:space="preserve"><value>Код песочницы</value></data>
+  <data name="Cfg_SandboxCode_Desc" xml:space="preserve"><value>В 7D2D 3.x правила игры (сложность, добыча, зомби, кровавые луны, длительность дня...) хранятся в этом одном коде. Используйте редактор песочницы или вставьте код, скопированный на экране настроек песочницы в игре.</value></data>
+  <data name="Cfg_GameWorld_Name" xml:space="preserve"><value>Игровой мир</value></data>
+  <data name="Cfg_GameWorld_Desc" xml:space="preserve"><value>Заполняется автоматически из Data/Worlds и GeneratedWorlds. Выберите существующий мир или введите своё название.</value></data>
+  <data name="Cfg_WorldGenSeed_Name" xml:space="preserve"><value>Основа мира</value></data>
+  <data name="Cfg_WorldGenSeed_Desc" xml:space="preserve"><value>Строка-основа для случайной генерации мира</value></data>
+  <data name="Cfg_WorldGenSize_Name" xml:space="preserve"><value>Размер мира</value></data>
+  <data name="Cfg_WorldGenSize_Desc" xml:space="preserve"><value>Ширина/высота карты RWG в метрах. Официально поддерживается от 6144 до 10240, кратно 2048.</value></data>
+  <data name="Cfg_GameName_Name" xml:space="preserve"><value>Название игры</value></data>
+  <data name="Cfg_GameName_Desc" xml:space="preserve"><value>Название сохранения (буквы, цифры, _ - . и пробелы). Если его изменить, начнётся новое сохранение.</value></data>
+  <data name="Cfg_GameMode_Name" xml:space="preserve"><value>Игровой режим</value></data>
+  <data name="Cfg_GameMode_Desc" xml:space="preserve"><value>Игровой режим сервера</value></data>
+  <data name="Cfg_GameMode_Opts" xml:space="preserve"><value>Выживание (GameModeSurvival)</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Name" xml:space="preserve"><value>Мёртвая зона спальника</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Desc" xml:space="preserve"><value>Радиус в блоках, в котором другие игроки не могут ставить спальники рядом с вашим</value></data>
+  <data name="Cfg_BedrollExpiryTime_Name" xml:space="preserve"><value>Время действия спальника</value></data>
+  <data name="Cfg_BedrollExpiryTime_Desc" xml:space="preserve"><value>Сколько реальных дней спальник остаётся активным после последнего входа владельца</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Name" xml:space="preserve"><value>Макс. открытых фрагментов карты на игрока</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Desc" xml:space="preserve"><value>Сколько фрагментов карты может открыть один игрок (131072 — вся карта)</value></data>
+  <data name="Cfg_BlockDamagePlayer_Name" xml:space="preserve"><value>Урон по блоку от игроков</value></data>
+  <data name="Cfg_BlockDamagePlayer_Desc" xml:space="preserve"><value>Сколько урона игроки наносят блокам (в процентах). 300% популярно в одиночной игре, чтобы меньше гриндить ресурсы.</value></data>
+  <data name="Cfg_BlockDamageAI_Name" xml:space="preserve"><value>Урон по блоку от врагов</value></data>
+  <data name="Cfg_BlockDamageAI_Desc" xml:space="preserve"><value>Урон зомби и животных по блокам в обычное время. Снизьте до 25–50%, чтобы зомби не прорывались сквозь стены.</value></data>
+  <data name="Cfg_BlockDamageAIBM_Name" xml:space="preserve"><value>Урон по блоку во время кровавой луны</value></data>
+  <data name="Cfg_BlockDamageAIBM_Desc" xml:space="preserve"><value>Урон зомби по блокам только во время кровавой луны. Задаётся отдельно от обычного урона, чтобы орды били сильнее (или слабее).</value></data>
+  <data name="Cfg_GameDifficulty_Name" xml:space="preserve"><value>Сложность игры</value></data>
+  <data name="Cfg_GameDifficulty_Desc" xml:space="preserve"><value>Общая сложность. В 3.x на игру реально влияет предустановка сложности в песочнице, а этот параметр в основном устаревший.</value></data>
+  <data name="Cfg_GameDifficulty_Opts" xml:space="preserve"><value>0 - Мусорщик|1 - Путешественник|2 - Бродяга|3 - Воин|4 - Специалист по выживанию|5 - Безумец</value></data>
+  <data name="Cfg_DayNightLength_Name" xml:space="preserve"><value>24-часовой цикл</value></data>
+  <data name="Cfg_DayNightLength_Desc" xml:space="preserve"><value>Сколько реальных минут длятся игровые сутки</value></data>
+  <data name="Cfg_DayLightLength_Name" xml:space="preserve"><value>Длительность светлого времени дня</value></data>
+  <data name="Cfg_DayLightLength_Desc" xml:space="preserve"><value>Сколько игровых часов длится светлое время (из 24)</value></data>
+  <data name="Cfg_BuildCreate_Name" xml:space="preserve"><value>Творческий режим</value></data>
+  <data name="Cfg_BuildCreate_Desc" xml:space="preserve"><value>Разрешить строительство в творческом/читерском режиме</value></data>
+  <data name="Cfg_BuildCreate_Opts" xml:space="preserve"><value>Вкл.|Выкл.</value></data>
+  <data name="Cfg_BloodMoonFrequency_Name" xml:space="preserve"><value>Частота кровавой луны</value></data>
+  <data name="Cfg_BloodMoonFrequency_Desc" xml:space="preserve"><value>Орда кровавой луны каждые N дней</value></data>
+  <data name="Cfg_BloodMoonRange_Name" xml:space="preserve"><value>Диапазон кровавой луны</value></data>
+  <data name="Cfg_BloodMoonRange_Desc" xml:space="preserve"><value>Случайный сдвиг на ± дней в расписании кровавой луны (0 — точно по графику)</value></data>
+  <data name="Cfg_BloodMoonWarning_Name" xml:space="preserve"><value>Предупреждение о кровавой луне</value></data>
+  <data name="Cfg_BloodMoonWarning_Desc" xml:space="preserve"><value>За сколько часов до кровавой луны появляется предупреждение</value></data>
+  <data name="Cfg_BiomeProgression_Name" xml:space="preserve"><value>Прогресс в биоме</value></data>
+  <data name="Cfg_BiomeProgression_Desc" xml:space="preserve"><value>Зомби становятся сильнее в более дальних биомах</value></data>
+  <data name="Cfg_BiomeProgression_Opts" xml:space="preserve"><value>Вкл.|Выкл.</value></data>
+  <data name="Cfg_StormFreq_Name" xml:space="preserve"><value>Частота бурь</value></data>
+  <data name="Cfg_StormFreq_Desc" xml:space="preserve"><value>Частота бурь. 0% отключает их.</value></data>
+  <data name="Cfg_StormFreq_Opts" xml:space="preserve"><value>0% - Выкл.|50%|100%|150%|200%|300%|400%|500%</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Name" xml:space="preserve"><value>Заданий в день</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Desc" xml:space="preserve"><value>Сколько заданий в день засчитывается для перехода на следующий уровень заданий. Дополнительные задания всё равно дают награды. 0 — без ограничений.</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Name" xml:space="preserve"><value>Число врагов в кровавую луну</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Desc" xml:space="preserve"><value>Сколько зомби одновременно живы на каждого игрока во время кровавой луны. Этап игры и MaxSpawnedZombies могут переопределить это значение. Сильно влияет на производительность.</value></data>
+  <data name="Cfg_XPMultiplier_Name" xml:space="preserve"><value>Коэффициент опыта</value></data>
+  <data name="Cfg_XPMultiplier_Desc" xml:space="preserve"><value>Множитель получаемого опыта (%). Чем выше, тем быстрее растёт уровень.</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Name" xml:space="preserve"><value>Уровень безопасной зоны игрока</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Desc" xml:space="preserve"><value>Уровень игрока, на котором заканчивается защита безопасной зоны. До этого уровня новые игроки защищены от зомби.</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Name" xml:space="preserve"><value>Часы безопасной зоны игрока</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Desc" xml:space="preserve"><value>Сколько часов действует защита безопасной зоны для новых игроков. По истечении этого времени защита заканчивается независимо от уровня.</value></data>
+  <data name="Cfg_PlayerKillingMode_Name" xml:space="preserve"><value>Убийство игрока</value></data>
+  <data name="Cfg_PlayerKillingMode_Desc" xml:space="preserve"><value>Правила PvP для боёв между игроками</value></data>
+  <data name="Cfg_PlayerKillingMode_Opts" xml:space="preserve"><value>0 - Без убийств|1 - Убивать только союзников|2 - Убивать только незнакомцев|3 - Убивать всех</value></data>
+  <data name="Cfg_PartySharedKillRange_Name" xml:space="preserve"><value>Дистанция общих убийств группы</value></data>
+  <data name="Cfg_PartySharedKillRange_Desc" xml:space="preserve"><value>Расстояние в метрах, на котором члены группы делят опыт за убийства. 0 — нужно быть совсем рядом.</value></data>
+  <data name="Cfg_DeathPenalty_Name" xml:space="preserve"><value>Штраф смерти</value></data>
+  <data name="Cfg_DeathPenalty_Desc" xml:space="preserve"><value>Штраф к опыту, когда игрок умирает</value></data>
+  <data name="Cfg_DeathPenalty_Opts" xml:space="preserve"><value>0 - Нет|1 - По умолчанию|2 - Ранение|3 - Смерть без возрождения</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Name" xml:space="preserve"><value>Появление рядом с другом</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Desc" xml:space="preserve"><value>Могут ли новые игроки при первом подключении выбрать появление рядом с другом?</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Opts" xml:space="preserve"><value>0 - Отключено|1 - Всегда|2 - Только рядом с друзьями в лесу</value></data>
+  <data name="Cfg_JarRefund_Name" xml:space="preserve"><value>Возврат за банку</value></data>
+  <data name="Cfg_JarRefund_Desc" xml:space="preserve"><value>Процент стеклянных банок, возвращаемых при приготовлении еды/напитков (0 — без возврата)</value></data>
+  <data name="Cfg_ZombieMove_Name" xml:space="preserve"><value>Дневная скорость зомби</value></data>
+  <data name="Cfg_ZombieMove_Desc" xml:space="preserve"><value>Скорость передвижения зомби днём</value></data>
+  <data name="Cfg_ZombieMove_Opts" xml:space="preserve"><value>0 - Ходьба|1 - Медленно|2 - Бег трусцой|3 - Бег|4 - Спринт</value></data>
+  <data name="Cfg_ZombieMoveNight_Name" xml:space="preserve"><value>Ночная скорость зомби</value></data>
+  <data name="Cfg_ZombieMoveNight_Desc" xml:space="preserve"><value>Скорость передвижения зомби ночью</value></data>
+  <data name="Cfg_ZombieMoveNight_Opts" xml:space="preserve"><value>0 - Ходьба|1 - Медленно|2 - Бег трусцой|3 - Бег|4 - Спринт</value></data>
+  <data name="Cfg_ZombieFeralMove_Name" xml:space="preserve"><value>Скорость диких зомби</value></data>
+  <data name="Cfg_ZombieFeralMove_Desc" xml:space="preserve"><value>Скорость передвижения диких зомби</value></data>
+  <data name="Cfg_ZombieFeralMove_Opts" xml:space="preserve"><value>0 - Ходьба|1 - Медленно|2 - Бег трусцой|3 - Бег|4 - Спринт</value></data>
+  <data name="Cfg_ZombieBMMove_Name" xml:space="preserve"><value>Скорость зомби в кровавую луну</value></data>
+  <data name="Cfg_ZombieBMMove_Desc" xml:space="preserve"><value>Скорость передвижения зомби во время кровавой луны</value></data>
+  <data name="Cfg_ZombieBMMove_Opts" xml:space="preserve"><value>0 - Ходьба|1 - Медленно|2 - Бег трусцой|3 - Бег|4 - Спринт</value></data>
+  <data name="Cfg_EnemyDifficulty_Name" xml:space="preserve"><value>Агрессия врагов</value></data>
+  <data name="Cfg_EnemyDifficulty_Desc" xml:space="preserve"><value>«Дикий» добавляет более опасные типы зомби</value></data>
+  <data name="Cfg_EnemyDifficulty_Opts" xml:space="preserve"><value>0 - Обычный|1 - Дикий</value></data>
+  <data name="Cfg_EnemySpawnMode_Name" xml:space="preserve"><value>Появление врагов</value></data>
+  <data name="Cfg_EnemySpawnMode_Desc" xml:space="preserve"><value>Появляются ли враги в мире. Отключите для мирного строительства или тестов.</value></data>
+  <data name="Cfg_EnemySpawnMode_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Name" xml:space="preserve"><value>Макс. кол-во зомби</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Desc" xml:space="preserve"><value>Сколько зомби одновременно может быть живо во всём мире (×1,9 в кровавые луны, ×2,1 для спящих). Сильно влияет на производительность.</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Name" xml:space="preserve"><value>Макс. кол-во животных</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Desc" xml:space="preserve"><value>Сколько животных одновременно может быть живо</value></data>
+  <data name="Cfg_ZombieFeralSense_Name" xml:space="preserve"><value>Чутьё диких зомби</value></data>
+  <data name="Cfg_ZombieFeralSense_Desc" xml:space="preserve"><value>Дикие зомби чуют игроков сквозь стены и препятствия</value></data>
+  <data name="Cfg_ZombieFeralSense_Opts" xml:space="preserve"><value>0 - Выкл.|1 - Только днём|2 - Только ночью|3 - Всегда</value></data>
+  <data name="Cfg_AISmellMode_Name" xml:space="preserve"><value>Режим запаха ИИ</value></data>
+  <data name="Cfg_AISmellMode_Desc" xml:space="preserve"><value>Как быстро зомби движутся, когда идут по запаху игрока. Зомби чуют кровь, еду и кузницы. Чем выше скорость, тем опаснее готовить и создавать предметы рядом с зомби.</value></data>
+  <data name="Cfg_AISmellMode_Opts" xml:space="preserve"><value>0 - Выкл.|1 - Ходьба|2 - Бег трусцой|3 - Бег|4 - Спринт|5 - Кошмар</value></data>
+  <data name="Cfg_LootAbundance_Name" xml:space="preserve"><value>Количество добычи</value></data>
+  <data name="Cfg_LootAbundance_Desc" xml:space="preserve"><value>Множитель количества добычи (%)</value></data>
+  <data name="Cfg_LootRespawnDays_Name" xml:space="preserve"><value>Дней до повторного появления добычи</value></data>
+  <data name="Cfg_LootRespawnDays_Desc" xml:space="preserve"><value>Через сколько дней обысканные контейнеры снова наполняются</value></data>
+  <data name="Cfg_AirDropFrequency_Name" xml:space="preserve"><value>Частота сброса груза</value></data>
+  <data name="Cfg_AirDropFrequency_Desc" xml:space="preserve"><value>Интервал сброса груза с самолёта в игровых часах (0 — отключено)</value></data>
+  <data name="Cfg_AirDropMarker_Name" xml:space="preserve"><value>Метка сброса груза</value></data>
+  <data name="Cfg_AirDropMarker_Desc" xml:space="preserve"><value>Показывать или скрывать метку на карте/компасе, когда груз приземлился</value></data>
+  <data name="Cfg_AirDropMarker_Opts" xml:space="preserve"><value>Показать|Скрыть</value></data>
+  <data name="Cfg_DropOnDeath_Name" xml:space="preserve"><value>Потери при смерти</value></data>
+  <data name="Cfg_DropOnDeath_Desc" xml:space="preserve"><value>Что игроки теряют при смерти</value></data>
+  <data name="Cfg_DropOnDeath_Opts" xml:space="preserve"><value>0 - Ничего|1 - Всё|2 - Только пояс с инструментами|3 - Только рюкзак|4 - Удалить всё</value></data>
+  <data name="Cfg_DropOnQuit_Name" xml:space="preserve"><value>Потери при выходе</value></data>
+  <data name="Cfg_DropOnQuit_Desc" xml:space="preserve"><value>Что игроки теряют при отключении</value></data>
+  <data name="Cfg_DropOnQuit_Opts" xml:space="preserve"><value>0 - Ничего|1 - Всё|2 - Только пояс с инструментами|3 - Только рюкзак</value></data>
+  <data name="Cfg_LandClaimSize_Name" xml:space="preserve"><value>Размер притязания</value></data>
+  <data name="Cfg_LandClaimSize_Desc" xml:space="preserve"><value>Размер защищённой области в блоках (41 = по 20 блоков в каждую сторону)</value></data>
+  <data name="Cfg_LandClaimDeadZone_Name" xml:space="preserve"><value>Мёртвая зона притязания</value></data>
+  <data name="Cfg_LandClaimDeadZone_Desc" xml:space="preserve"><value>Минимальное расстояние между притязаниями на землю в блоках</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Name" xml:space="preserve"><value>Продолжительность притязания</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Desc" xml:space="preserve"><value>Сколько реальных дней игрок может отсутствовать, прежде чем его притязания истекут</value></data>
+  <data name="Cfg_LandClaimDecayMode_Name" xml:space="preserve"><value>Режим затухания притязания</value></data>
+  <data name="Cfg_LandClaimDecayMode_Desc" xml:space="preserve"><value>Как ослабевает защита притязания на землю, пока игрок не в сети</value></data>
+  <data name="Cfg_LandClaimDecayMode_Opts" xml:space="preserve"><value>0 - Медленно (линейно)|1 - Быстро (экспоненциально)|2 - Нет (полная до истечения)</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Name" xml:space="preserve"><value>Прочность притязания в сети</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Desc" xml:space="preserve"><value>Множитель прочности блоков, пока владелец в сети (0 — неразрушимы)</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Name" xml:space="preserve"><value>Прочность притязания вне сети</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Desc" xml:space="preserve"><value>Множитель прочности блоков, пока владелец не в сети (0 — неразрушимы)</value></data>
+  <data name="Cfg_LandClaimCount_Name" xml:space="preserve"><value>Число притязаний</value></data>
+  <data name="Cfg_LandClaimCount_Desc" xml:space="preserve"><value>Максимум притязаний на землю на одного игрока</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Name" xml:space="preserve"><value>Задержка притязания вне сети</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Desc" xml:space="preserve"><value>Через сколько минут после выхода притязание переключается с прочности «в сети» на прочность «вне сети»</value></data>
+  <data name="Cfg_ServerPort_Name" xml:space="preserve"><value>Порт сервера</value></data>
+  <data name="Cfg_ServerPort_Desc" xml:space="preserve"><value>Основной игровой порт (для дополнительных подключений также используются +1 и +2)</value></data>
+  <data name="Cfg_ServerVisibility_Name" xml:space="preserve"><value>Видимость сервера</value></data>
+  <data name="Cfg_ServerVisibility_Desc" xml:space="preserve"><value>Кто видит этот сервер в списке серверов</value></data>
+  <data name="Cfg_ServerVisibility_Opts" xml:space="preserve"><value>0 - Не в списке|1 - Только друзья|2 - Публичный</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Name" xml:space="preserve"><value>Макс. кол-во игроков</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Desc" xml:space="preserve"><value>Максимум игроков одновременно</value></data>
+  <data name="Cfg_ServerReservedSlots_Name" xml:space="preserve"><value>Зарезервированные места</value></data>
+  <data name="Cfg_ServerReservedSlots_Desc" xml:space="preserve"><value>Сколько мест из максимального числа игроков оставлено для игроков с уровнем прав на зарезервированное место</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Name" xml:space="preserve"><value>Макс. скорость передачи мира (KiB/s)</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Desc" xml:space="preserve"><value>Макс. скорость загрузки мира для каждого нового клиента в KiB/s (игра ограничивает её примерно 1300)</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Name" xml:space="preserve"><value>Отключённые сетевые протоколы</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Desc" xml:space="preserve"><value>Какие протоколы отключить. На выделенном сервере стоит отключить SteamNetworking, если нет NAT-роутера или проброс портов настроен правильно.</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Opts" xml:space="preserve"><value>Нет|SteamNetworking|LiteNetLib|Оба</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Name" xml:space="preserve"><value>Кросс-платформенная игра</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Desc" xml:space="preserve"><value>Включить кросс-платформенную игру. Такие серверы не должны игнорировать ограничения и должны использовать стандартное или меньшее число мест для игроков.</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Opts" xml:space="preserve"><value>Вкл.|Выкл.</value></data>
+  <data name="Cfg_TelnetEnabled_Name" xml:space="preserve"><value>Telnet включён</value></data>
+  <data name="Cfg_TelnetEnabled_Desc" xml:space="preserve"><value>Включить удалённую консоль telnet</value></data>
+  <data name="Cfg_TelnetEnabled_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_TelnetPort_Name" xml:space="preserve"><value>Порт Telnet</value></data>
+  <data name="Cfg_TelnetPort_Desc" xml:space="preserve"><value>Порт для подключений telnet</value></data>
+  <data name="Cfg_TelnetPassword_Name" xml:space="preserve"><value>Пароль Telnet</value></data>
+  <data name="Cfg_TelnetPassword_Desc" xml:space="preserve"><value>Пароль для доступа к telnet. Если пусто, telnet слушает только на этом компьютере (localhost).</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Name" xml:space="preserve"><value>Лимит неудачных входов в Telnet</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Desc" xml:space="preserve"><value>Число неудачных попыток входа до временной блокировки</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Name" xml:space="preserve"><value>Время блокировки Telnet</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Desc" xml:space="preserve"><value>На сколько секунд блокировать после слишком многих неудачных входов в telnet</value></data>
+  <data name="Cfg_EACEnabled_Name" xml:space="preserve"><value>EAC включён</value></data>
+  <data name="Cfg_EACEnabled_Desc" xml:space="preserve"><value>Easy Anti-Cheat — если отключить, смогут подключаться клиенты с модами</value></data>
+  <data name="Cfg_EACEnabled_Opts" xml:space="preserve"><value>Вкл.|Выкл.</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Name" xml:space="preserve"><value>Скрывать журнал выполнения команд</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Desc" xml:space="preserve"><value>Скрывает записи о выполнении команд. Чем выше значение, тем от большего числа источников они скрыты.</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Opts" xml:space="preserve"><value>0 - Показывать всё|1 - Скрыть от Telnet/панели|2 - Также скрыть от клиентов|3 - Скрыть всё</value></data>
+  <data name="Cfg_AdminFileName_Name" xml:space="preserve"><value>Имя файла администраторов</value></data>
+  <data name="Cfg_AdminFileName_Desc" xml:space="preserve"><value>Имя файла администраторов сервера. Путь относительно папки сохранений.</value></data>
+  <data name="Cfg_ServerAdminSlots_Name" xml:space="preserve"><value>Места для администраторов</value></data>
+  <data name="Cfg_ServerAdminSlots_Desc" xml:space="preserve"><value>Столько администраторов смогут зайти, даже когда сервер заполнен</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Name" xml:space="preserve"><value>Права для мест администраторов</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Desc" xml:space="preserve"><value>Уровень прав, необходимый для мест администраторов (0 — высший администратор)</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Name" xml:space="preserve"><value>Права для зарезервированных мест</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Desc" xml:space="preserve"><value>Уровень прав, необходимый для зарезервированных мест</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Name" xml:space="preserve"><value>Игнорировать ограничения EOS</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Desc" xml:space="preserve"><value>Игнорировать ограничения EOS при допуске игроков на сервер</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Name" xml:space="preserve"><value>Постоянные профили</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Desc" xml:space="preserve"><value>Если включено, игроки всегда заходят с последним использованным профилем. Если выключено, могут выбрать любой профиль.</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_CameraRestrictionMode_Name" xml:space="preserve"><value>Ограничение режима камеры</value></data>
+  <data name="Cfg_CameraRestrictionMode_Desc" xml:space="preserve"><value>Ограничивает, какой вид камеры могут использовать игроки</value></data>
+  <data name="Cfg_CameraRestrictionMode_Opts" xml:space="preserve"><value>0 - Свободно (1-е и 3-е лицо)|1 - Только от первого лица|2 - Только от третьего лица</value></data>
+  <data name="Cfg_TwitchServerPermission_Name" xml:space="preserve"><value>Права на Twitch на сервере</value></data>
+  <data name="Cfg_TwitchServerPermission_Desc" xml:space="preserve"><value>Уровень прав, необходимый для использования интеграции с Twitch на сервере</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Name" xml:space="preserve"><value>Twitch в кровавую луну</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Desc" xml:space="preserve"><value>Разрешить действия Twitch во время кровавой луны. Дополнительные зомби могут вызывать лаги.</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_ServerWebsiteURL_Name" xml:space="preserve"><value>Сайт сервера</value></data>
+  <data name="Cfg_ServerWebsiteURL_Desc" xml:space="preserve"><value>URL, который отображается в списке серверов как сайт сервера</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Name" xml:space="preserve"><value>Макс. дальность видимости</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Desc" xml:space="preserve"><value>Максимальная дальность видимости, которую может запросить клиент (6–12). Сильно влияет на память и производительность.</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Name" xml:space="preserve"><value>Окно терминала</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Desc" xml:space="preserve"><value>Показывать окно терминала с журналом и командами (только Windows)</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_WebDashboardEnabled_Name" xml:space="preserve"><value>Веб-панель включена</value></data>
+  <data name="Cfg_WebDashboardEnabled_Desc" xml:space="preserve"><value>Включить встроенную веб-панель 7D2D</value></data>
+  <data name="Cfg_WebDashboardEnabled_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_WebDashboardPort_Name" xml:space="preserve"><value>Порт веб-панели</value></data>
+  <data name="Cfg_WebDashboardPort_Desc" xml:space="preserve"><value>Порт встроенной веб-панели</value></data>
+  <data name="Cfg_WebDashboardUrl_Name" xml:space="preserve"><value>URL веб-панели</value></data>
+  <data name="Cfg_WebDashboardUrl_Desc" xml:space="preserve"><value>Внешний URL панели для схем с обратным прокси</value></data>
+  <data name="Cfg_EnableMapRendering_Name" xml:space="preserve"><value>Отрисовка карты</value></data>
+  <data name="Cfg_EnableMapRendering_Desc" xml:space="preserve"><value>Отрисовывать карту в изображения-тайлы во время исследования. Используется веб-панелью для показа карты.</value></data>
+  <data name="Cfg_EnableMapRendering_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Name" xml:space="preserve"><value>Динамическая сетка включена</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Desc" xml:space="preserve"><value>Включить систему динамической сетки для улучшенной графики</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Name" xml:space="preserve"><value>Динамическая сетка только в притязаниях</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Desc" xml:space="preserve"><value>Использовать динамическую сетку только в областях притязания на землю</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Opts" xml:space="preserve"><value>Да|Нет</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Name" xml:space="preserve"><value>Буфер притязаний для динамической сетки</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Desc" xml:space="preserve"><value>Радиус в фрагментах вокруг притязания на землю для динамической сетки</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Name" xml:space="preserve"><value>Макс. кэш элементов динамической сетки</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Desc" xml:space="preserve"><value>Сколько элементов обрабатывается одновременно. Чем больше, тем выше расход RAM.</value></data>
+  <data name="Cfg_MaxChunkAge_Name" xml:space="preserve"><value>Время сброса фрагмента</value></data>
+  <data name="Cfg_MaxChunkAge_Desc" xml:space="preserve"><value>Через сколько игровых дней непосещаемые/незащищённые фрагменты сбрасываются. -1 — никогда.</value></data>
+  <data name="Cfg_SaveDataLimit_Name" xml:space="preserve"><value>Лимит данных сохранения</value></data>
+  <data name="Cfg_SaveDataLimit_Desc" xml:space="preserve"><value>Макс. место на диске для одного сохранения в MB. Для освобождения места фрагменты могут сбрасываться. -1 — без ограничения.</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Name" xml:space="preserve"><value>Макс. слоёв сетки в очереди</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>Макс. число слоёв сетки фрагментов в очереди при генерации. Меньше — меньше памяти, но генерация медленнее.</value></data>
+  <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>Папка пользовательских данных</value></data>
+  <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>Другой путь для всех пользовательских данных, сохранений и миров RWG. Оставьте пустым для пути по умолчанию.</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>Сервер неожиданно завершил работу (код выхода {0}).</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>Автоматические перезапуски</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>Перезапускать сервер при сбое</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>Перезапуск через 15 секунд после того, как сервер завершится сам, — не более 3 раз за 15 минут, чтобы сломанный мод или конфигурация не зациклили его навсегда. Остановка кнопкой «Остановить» в Kitsune7Den или командой shutdown в консоли сбоем не считается.</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>Перезапуски по расписанию</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>Ежедневно в</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>24-часовой формат, время этого ПК. Несколько значений: 04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>Каждые</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>ч работы сервера</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>ПРЕДУПРЕЖДЕНИЯ В ИГРЕ (ЗА СКОЛЬКО МИНУТ)</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>Пусто — без предупреждений</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>ТЕКСТ ПРЕДУПРЕЖДЕНИЯ ({minutes} — сколько минут осталось)</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>ПОСЛЕДНЕЕ СООБЩЕНИЕ</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>Предупреждения отправляются внутриигровой командой say через telnet. В момент перезапуска мир сохраняется, сервер корректно завершает работу и запускается снова. Чтобы перезапуски по расписанию срабатывали, Kitsune7Den должен быть запущен.</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>Сохранить</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>Время указывается в виде 04:00 или 4:00, через запятую.</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>Предупреждения — целые минуты от 1 до 120, через запятую.</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>Отменить перезапуск</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>Перезапуск с предупреждениями</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>Сразу начать отсчёт с предупреждениями, затем сохранить, остановить и запустить сервер</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>Следующий перезапуск: {0} (через {1})</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>Перезапуск в {0} (через {1}). Игроки получают предупреждения.</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>Перезапуски по расписанию включены. Расписание начнёт действовать, когда сервер будет запущен.</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>Перезапуски по расписанию включены, но ни один не запланирован. Проверьте время.</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>Перезапусков по расписанию нет.</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>&lt; 1 мин</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0} ч {1} мин</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} мин</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>Перезапуск сервера через {minutes} мин. Найдите безопасное место.</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>Сервер перезапускается. Увидимся через минуту!</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>Запланированный перезапуск отменён.</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>Перезапуск отменён.</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>Перезапуск по расписанию в {0}: предупреждаем игроков.</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>Перезапуск в {0}: предупреждаем игроков.</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet не подключён, поэтому игроки не увидят предупреждений, а корректно завершить работу сервера не получится.</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>Сохранение мира...</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>Перезапуск сервера...</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>Сервер уже не работает; перезапуск по расписанию пропущен.</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>Сервер не запустился снова. Проверьте консоль и путь к серверу на вкладке «Главная».</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>Ошибка автоматического перезапуска: {0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>Перезапуск сервера через {0} с (перезапуск после сбоя: {1} из {2}).</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>Сервер снова упал. Перезапусков за {1} мин уже было: {0}, поэтому он остаётся остановленным. Причину ищите в консоли и журналах.</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>На порту telnet {0} пока никто не отвечает. Если сервер ещё запускается, подождите минуту. Иначе проверьте TelnetEnabled и TelnetPort в serverconfig.xml.</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>Сервер отклонил пароль telnet. Kitsune7Den использует TelnetPassword из serverconfig.xml. Если вы изменили его, пока сервер работал, перезапустите сервер, чтобы он подхватил новый пароль.</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>Сервер требует пароль telnet, но он не задан ни в serverconfig.xml, ни в настройках. Если вы только что добавили его в serverconfig.xml, перезапустите сервер.</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>Telnet выключен в serverconfig.xml (TelnetEnabled = false). Kitsune7Den нужен telnet для консоли, игроков и перезапусков. Включите его и перезапустите сервер.</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>Неверный пароль</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>Нужен пароль</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>Выкл. в конфиге</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>Запуск сервера</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den запускает 7DaysToDieServer.exe с теми же аргументами, что и startdedicated.bat. Всё, что вы добавите здесь, попадёт туда же, куда и дополнительные аргументы .bat, — прямо перед -dedicated. Используйте -configfile=yourconfig.xml, чтобы запускать сервер с другим файлом конфигурации; тогда Kitsune7Den будет везде читать и редактировать этот файл.</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>Дополнительные аргументы запуска (необязательно)</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den выполнит:</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>Эти аргументы Kitsune7Den задаёт сам и проигнорирует: {0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>Сервер, страница конфигурации, telnet и резервные копии будут использовать {0} вместо serverconfig.xml. Сохраните и перезапустите сервер, чтобы изменения вступили в силу.</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>Аргумент запуска {0} проигнорирован: Kitsune7Den задаёт его сам.</value></data>
+</root>

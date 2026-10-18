@@ -1,0 +1,4120 @@
+{
+ "v3_0": {
+  "categories": {
+   "Crafting": "Fertigung",
+   "Entities": "Wesen",
+   "General": "Spieler",
+   "Misc": "Divers",
+   "Resources": "Rohstoffe",
+   "Tasks": "Aufgaben",
+   "Traders": "Händler",
+   "World": "Welt"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Aktiviert oder deaktiviert die Geruchswahrnehmung der Zombies und legt fest, wie schnell sich Zombies bewegen, wenn sie einen Geruch wahrnehmen.",
+    "label": "KI-Geruchsmodus"
+   },
+   "AirDropFrequency": {
+    "description": "Zeigt an, wie oft Abwürfe von Vorräten erfolgen.",
+    "label": "Abwurf aus der Luft"
+   },
+   "AirDropMarker": {
+    "description": "Bestimmt, ob existierende Abwürfe aus der Luft auf der Karte und dem Kompass angezeigt werden.",
+    "label": "Abwürfe aus der Luft markieren"
+   },
+   "AirDropRandomTime": {
+    "description": "Legt fest, wann Abwürfe aus der Luft erscheinen. Wähle eine bestimmte Zeit für vorhersehbare Abwürfe aus der Luft oder Beliebig für zufälligen Abwurf.\\n\\nKeine = Der standardmäßige Abwurf zur Mittagszeit.\\nMorgen = 04:00 bis 10:00\\nTag = 10:00 bis 14:00\\nAbend = 15:00 bis 20:00\\nNacht = 20:00 bis 24:00\\nGanztägig = 04:00 bis 20:00",
+    "label": "Varianz bei Abwurf aus der Luft"
+   },
+   "AllowCompass": {
+    "description": "Zeigt den Spieler-Kompass.",
+    "label": "Kompass erlauben"
+   },
+   "AllowMap": {
+    "description": "Aktiviert die Karte im Spiel.",
+    "label": "Karte erlauben"
+   },
+   "AllowScreenMarkers": {
+    "description": "Zeigt Navigationsmarkierungen auf dem Bildschirm. Kartenmarkierungen bleiben sichtbar.",
+    "label": "Bildschirmmarkierungen erlauben"
+   },
+   "AllowZombieDigging": {
+    "description": "Erlaubt Zombies, sich nach unten durch Gelände zu graben. Können trotzdem zur Seite graben.",
+    "label": "Grabende Zombies"
+   },
+   "AmmoLootCount": {
+    "description": "Menge der in Beute gefundenen Munition.",
+    "label": "Munitionsmenge"
+   },
+   "ApiaryInput": {
+    "description": "Legt die Zahl der Blumen fest, die erforderlich sind, um die Honigproduktion zu beginnen.",
+    "label": "Bienenhaus-Eingabe"
+   },
+   "ApiaryOutput": {
+    "description": "Menge des pro Produktionszyklus erzeugten Honigs.",
+    "label": "Bienenhausertrag"
+   },
+   "ApiaryTime": {
+    "description": "Legt die Zeit fest, die das Bienenhaus braucht, um Honig zu produzieren.",
+    "label": "Bienenhauszeit"
+   },
+   "ArmorLootCount": {
+    "description": "Menge der in Beute gefundenen Rüstung und Rüstungsteile.",
+    "label": "Rüstungsmenge"
+   },
+   "BackpackCrafting": {
+    "description": "Bestimmt, welche Gegenstände der Spieler direkt aus dem Rucksack fertigen kann.\\n\\nNein deaktiviert Rucksackfertigung.\\nJa erlaubt Rucksackfertigung.\\nBegrenzt erlaubt Fertigung einer begrenzten Zahl von Rezepten im Rucksack.\\nNur Werkbank erlaubt Fertigung der Werkbank, aber sonst wird nichts im Rucksack gefertigt.",
+    "label": "Rucksackfertigung"
+   },
+   "BiomeAnimalRespawn": {
+    "description": "Erhöht die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung in Biomen"
+   },
+   "BiomeEnemyDensity": {
+    "description": "Überschreibt die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte"
+   },
+   "BiomeGSModifier": {
+    "description": "Modifikator des Schwierigkeitsgrads basierend auf Biomen. Schwierigere Biome erhöhen die Gegnerstärke und das Beutestadium über deinen Basisfortschritt hinaus. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Spielstufe"
+   },
+   "BiomeLSModifier": {
+    "description": "Beutestadium-Multiplikator angewandt pro Biom. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Beutestadium"
+   },
+   "BiomeProgression": {
+    "description": "Aktiviert oder deaktiviert Biomgefahren. Wetter und Stürme sind von dieser Einstellung nicht betroffen.",
+    "label": "Biomfortschritt"
+   },
+   "BiomeZombieRespawn": {
+    "description": "Erhöht die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Wiedererscheinen von Gegnern"
+   },
+   "BlockDamage": {
+    "description": "Wie viel Blockschaden Spieler verursachen.",
+    "label": "Blockschaden"
+   },
+   "BlockDamageAI": {
+    "description": "Wie viel Blockschaden Feinde verursachen.",
+    "label": "Feind-Blockschaden"
+   },
+   "BlockDamageAIBM": {
+    "description": "Feindlicher Blockschaden während eines Blutmondes.",
+    "label": "BM-Blockschaden"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Bestimmt die maximale Menge der Zombies, die pro Spieler während eines Blutmondes lebendig sein können.\\n\\nSpieler in der Nähe teilen die Gruppenobergrenze von max. 30 Zombies. Sollte diese Obergrenze überschritten werden, wird der Schwierigkeitsgrad stattdessen skaliert, indem die Spielstufe erhöht wird. Die weltweite Obergrenze beträgt etwa das 1,9-fache der max. erschienenen Zombies. In niedrigeren Spielstufen kann die Anzahl der erschienenen Zombies reduziert werden.\\n\\nEine Änderung dieser Einstellung hat einen großen Einfluss auf die Leistung.",
+    "label": "Blutmondanzahl"
+   },
+   "BloodMoonFrequency": {
+    "description": "Anzahl der Tage im Spiel zwischen zwei Blutmonden. Deaktiviert = keine Blutmonde.",
+    "label": "Blutmondhäufigkeit"
+   },
+   "BloodMoonRange": {
+    "description": "Anzahl der Tage nach dem Blutmond, in denen das Ereignis eintreten kann.\\n\\nBeispiel: Eine Häufigkeit von 7 plus eine Spanne von 5 würde bedeuten, dass ein Blutmond zwischen Tag 7 und 12 auftreten kann.\\n\\n0 Tage = keine zufällige Häufigkeit.",
+    "label": "Blutmonddauer"
+   },
+   "BloodMoonWarning": {
+    "description": "Legt fest, wann die Blutmondwarnung auf deinem HUD angezeigt wird und die Tageszahl rot wird.",
+    "label": "Blutmondwarnung"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Macht es möglich, dass vergrabene Quests in den Questlisten der Händler erscheinen. Nein = nur Sehenswürdigkeiten-Quests.",
+    "label": "Vergrabene Quests"
+   },
+   "ChallengesEnabled": {
+    "description": "Aktiviert das Herausforderungssystem im Spiel.",
+    "label": "Herausforderungen"
+   },
+   "CraftingInput": {
+    "description": "Benötigte Materialmenge für die Fertigung (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungskosten"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Legt fest, wie viele Handwerkszeitschriften in der Beute gefunden werden.",
+    "label": "Zeitschriftenmenge"
+   },
+   "CraftingMaxTier": {
+    "description": "Höchste Qualität gefertigter Gegenstände.",
+    "label": "Max. Fertigungsqualität"
+   },
+   "CraftingOutput": {
+    "description": "Anzahl der pro Fertigung hergestellten Gegenstände (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungsertrag"
+   },
+   "CraftingProgression": {
+    "description": "Aktivere oder deaktiviere den Fertigungsfortschritt basierend auf Magazinen oder Bauplänen.",
+    "label": "Fertigungsfortschritt"
+   },
+   "CraftingTime": {
+    "description": "Erforderliche Zeit für die Fertigung von Gegenständen.",
+    "label": "Fertigungstimer"
+   },
+   "CropGrowthSpeed": {
+    "description": "Legt die Wachstumsgeschwindigkeit von Feldfrüchten und Bäumen fest, die Spieler gepflanzt haben. Ein höherer Prozentsatz führt zu einer längeren Wachstumszeit. Hinweis: Bei existierenden Spielständen müssen Feldfrüchte neu gepflanzt werden, um die Änderungen anzuwenden.",
+    "label": "Pflanzenwachstum"
+   },
+   "CropOutput": {
+    "description": "Legt die Menge der Rohstoffe fest, die aus wilden und von Spielern angebauten Feldfrüchten erhalten werden. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Ernteerträge"
+   },
+   "CrouchSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Gehen an.",
+    "label": "Kriechgeschwindigkeit"
+   },
+   "DayLightLength": {
+    "description": "Zeigt an, wie viele Stunden die Sonne jeden Tag im Spiel scheint. Immer Nacht und Immer Tag funktionieren wie erwartet. Dauer des Tageslichts:\\n\\n4= 10:00 bis 14:00\\n6 = 09:00 bis 15:00\\n8 = 08:00 bis 16:00\\n10 = 07:00 bis 17:00\\n12 = 06:00 bis 18:00\\n14= 05:00 bis 19:00\\n16 = 04:00 bis 20:00\\n18 = 04:00 bis 22:00\\n20 = 02:00 bis 22:00",
+    "label": "Dauer des Tageslichts"
+   },
+   "DayNightLength": {
+    "description": "Wie viele Minuten in der realen Welt vergehen, bis im Spiel 24 Stunden vergangen sind.",
+    "label": "24-Stunden-Zyklus"
+   },
+   "DeathPenalty": {
+    "description": "Nach dem Tod angewendeter Malus.\\n\\nNichts = Kein Malus.\\nNur EP = Standard-EP-Defizit.\\nVerletzt = Behält einige Debuffs und erhält nach dem Wiedererscheinen nur 50 % Wasser und Nahrung.\\nEndgültiger Tod = Setzt den Fortschritt des Spielers komplett zurück.",
+    "label": "Todesmalus"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Wenn Todesabnutzung aktiv ist, bestimmt diese Einstellung den Prozentsatz verlorener Haltbarkeit beim Tod.",
+    "label": "Menge der Todesabnutzung"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Legt fest, ob Gegenstände beim Tod Haltbarkeit verlieren.\\n\\nKeine = kein Verlust.\\nHaltbarkeit = Verringert die aktuelle Haltbarkeit, kann repariert werden.\\nMax. Haltbarkeit = Verringert max. Haltbarkeit, senkt Reparaturobergrenze.\\nBeide = Gegenstände verlieren aktuelle und max. Haltbarkeit.",
+    "label": "Todesabnutzung"
+   },
+   "DewCollectorInput": {
+    "description": "Legt die Zahl der Krüge fest, die erforderlich sind, um die Tausammlung zu beginnen.",
+    "label": "Tausammler-Eingabe"
+   },
+   "DewCollectorOutput": {
+    "description": "Die Wassermenge, die der Tausammler pro Zyklus generiert.",
+    "label": "Tausammlerertrag"
+   },
+   "DewCollectorTime": {
+    "description": "Legt die Zeit fest, die der Tausammler braucht, um Wasser zu produzieren.",
+    "label": "Tausammlerzeit"
+   },
+   "DrinkLootCount": {
+    "description": "Menge der in Behältern gefundenen Getränke.",
+    "label": "Getränkemenge"
+   },
+   "DropOnDeath": {
+    "description": "Welche Gegenstände beim Tod fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nNur Werkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nNur Rucksack = Du lässt die Gegenstände in deinem Rucksack fallen.\\nAlles löschen = Lösche alle Gegenstände.",
+    "label": "Fallenlassen bei Tod"
+   },
+   "DropOnQuit": {
+    "description": "Welche Gegenstände beim Verlassen fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nWerkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nRucksack = Du lässt die Gegenstände in deinem Rucksack fallen.",
+    "label": "Fallenlassen bei verlassen des Spiels"
+   },
+   "DukesLootCount": {
+    "description": "Menge der in Beute gefundenen Duke-Jetons und altem Geld.",
+    "label": "Währungsmenge"
+   },
+   "ElectricalOutput": {
+    "description": "Legt fest, wie viel elektrische Leistung produziert wird.",
+    "label": "Elektrische Leistung"
+   },
+   "EncumbranceModifier": {
+    "description": "Bestimmt die Zahl der Überlastungsplätze im Rucksack. Werte reichen von Deaktiviert (keine Überlastung) bis Voll (maximale Überlastung). Standard verwendet XML-Konfigurationswerte.",
+    "label": "Überbelastungsplätze"
+   },
+   "EnemySpawnMode": {
+    "description": "Aktiviere oder deaktiviere Erscheinen der Gegner.",
+    "label": "Erscheinen der Gegner"
+   },
+   "EntityDamage": {
+    "description": "Bestimmt, wie viel Schaden Gegner bei Spielern verursachen. Stapelt sich mit anderem eingehenden Schaden, den Spieler erleiden.",
+    "label": "Schaden durch Gegner"
+   },
+   "EntityIncomingDamage": {
+    "description": "Schaden, den Wesen wie Gegner und Tiere durch Spieler erleiden.",
+    "label": "Erlittener Wesen-Schaden"
+   },
+   "FoodLootCount": {
+    "description": "Menge der in Behältern gefundenen Nahrung.",
+    "label": "Nahrungsmenge"
+   },
+   "GlobalGSModifier": {
+    "description": "Legt die Gegnerarten, Skalierung des Schwierigkeitsgrads, Beutequalität und Blutmond-Intensität basierend auf deinem Level und überlebten Tagen fest. Höhere Werte erhöhen den Schwierigkeitsgrad. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globale Spielstufe"
+   },
+   "GlobalLSModifier": {
+    "description": "Globaler Multiplikator angewandt auf das Spieler-Beutestadium. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Beutestadium"
+   },
+   "GlobalLootCount": {
+    "description": "Passt global die Gesamtmenge der Beute an, die in der Welt gefunden werden kann. „Keine“ deaktiviert die gesamte Beute, einschließlich fallengelassener Zombietaschen und Versorgungskisten.",
+    "label": "Beutemenge"
+   },
+   "GlobalTSModifier": {
+    "description": "Globaler Modifikator des Fortschritts des Händlerstadiums. Legt die Qualität und Vielfalt der Gegenstände fest, die Händler anbieten. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Händlerstadium"
+   },
+   "HarvestingOutput": {
+    "description": "Bestimmt die Menge an Rohstoffen, die beim Abbauen von Blöcken und beim Sammeln von Gegenständen gewonnen wird. Hat keinen Einfluss auf Erze, Samen oder Feldfrüchte. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Rohstoffertrag"
+   },
+   "HeadshotMode": {
+    "description": "Bestimmt, wie sich Kopftrefferschaden auswirkt.\\n\\nNur Kopftreffer = Gegner erleiden nur durch Kopftreffer Schaden.\\nKopftreffer-Finisher: Körpertreffer verursachen Schaden, aber nur Kopftreffer können sie erledigen.\\n\\nGilt nicht für passive Tiere.",
+    "label": "Kopftreffer-Modus"
+   },
+   "HeadshotMultiplier": {
+    "description": "Der Multiplikator angewendet auf den Kopftrefferschaden von Spielern bei Wesen.",
+    "label": "Kopftreffer-Multiplikator"
+   },
+   "HeatMapSensitivity": {
+    "description": "Bestimmt, wie sich Spieleraktivität auf die Wärme auswirkt. Größere Wärme bedeutet höhere Chancen auf Schreier-Spawns. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Wärmebild-Empfindlichkeit"
+   },
+   "IncomingDamage": {
+    "description": "Wie viel Schaden der Spieler aus allen Quellen erleidet.",
+    "label": "Erlittener Spielerschaden"
+   },
+   "InfectionRate": {
+    "description": "Passt an, wie schnell Infektionen fortschreiten.",
+    "label": "Infektionsrate"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Aktiviert die mehrphasige Einführungsherausforderung für neue Spieler.",
+    "label": "Einführungsherausforderungen"
+   },
+   "IntroQuestEnabled": {
+    "description": "Überspringe die Einführungsquest mit den vergrabenen Vorräten, um auf den vollen Questfortschritt zuzugreifen.",
+    "label": "Einführungsquest"
+   },
+   "ItemDegradation": {
+    "description": "Wie schnell Waffen und Werkzeug Haltbarkeit verlieren. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Abnutzung von Gegenständen"
+   },
+   "JarRefund": {
+    "description": "Chance der Rückerstattung für Krüge nach dem Verzehr eines Gegenstands.",
+    "label": "Krug-Rückerstattung"
+   },
+   "JumpStrength": {
+    "description": "Modifiziert die Sprunghöhe des Spielers.",
+    "label": "Sprungstärke"
+   },
+   "LootBagChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Gegner beim Tod Beutetaschen fallenlassen.",
+    "label": "Fallengelassene Beutetaschen"
+   },
+   "LootMaxTier": {
+    "description": "Legt die höchste Qualität von Waffen und Gegenständen fest, die in Beute erscheinen können.",
+    "label": "Max. Beutequalität"
+   },
+   "LootRespawnDays": {
+    "description": "Die Anzahl an Tagen im Spiel, bis Beutebehälter in nicht besuchten Gebieten zurückgesetzt werden.",
+    "label": "Tage bis zum Wiedererscheinen von Beute"
+   },
+   "LootTimer": {
+    "description": "Zeigt an, wie lange das Öffnen von Behältern mit Beute dauert.",
+    "label": "Beute-Timer"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Legt die Zahl der zufälligen verlorenen Gegenstände beim Tod fest.",
+    "label": "Verlustmenge bei Tod"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Legt fest, welche Gegenstände beim Tod verloren gehen.\\n\\nKeine = Nichts\\nAlle = Alle Gegenstände.\\nWerkzeuggürtel = Nur Werkzeuggürtel-Gegenstände.\\nRucksack = Nur Rucksack-Gegenstände.\\nAusrüstung = Getragene Rüstung und Kleidung.\\nNur getragene = Gegenstände aus Werkzeuggürtel und Rucksack.",
+    "label": "Verlust bei Tod"
+   },
+   "MaxDegradationAmount": {
+    "description": "Legt den Grad der Abnutzung bei der Reparatur eines Gegenstands fest.",
+    "label": "Reparaturabnutzung"
+   },
+   "MaxEnemyTier": {
+    "description": "Höchste Stufe von Zombiearten, die erscheinen können.",
+    "label": "Max. Gegnerstufe"
+   },
+   "MaxTechType": {
+    "description": "Legt global die höchste verfügbare Technologieart für Waffen und Gegenstände fest, was erlaubt, den Fortschritt und den Spielfluss zu steuern. Siehe Beispiele unten.\\n\\nTech 0 = Stein und Rohr\\nTech 1 = Eisen und AK\\nTech 2 = Stahl und Taktisches Sturmgewehr\\nTech 3 = Erdbohrer und M60",
+    "label": "Max. Technologiearten"
+   },
+   "MedicalLootCount": {
+    "description": "Menge der in Beute gefundenen medizinischen Vorräte.",
+    "label": "Medizinmenge"
+   },
+   "MeleeDamage": {
+    "description": "Mit Nahkampfwaffen und Werkzeugen durch den Spieler verursachter Schaden.",
+    "label": "Nahkampfschaden"
+   },
+   "MeleeLootCount": {
+    "description": "Menge der in Beute gefundenen Nahkampfwaffen und Teile.",
+    "label": "Nahkampfmenge"
+   },
+   "MiningOutput": {
+    "description": "Bestimmt die Menge an Erz, die beim Bergbau gewonnen wird. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Bergbauertrag"
+   },
+   "NewbieCoat": {
+    "description": "Wenn aktiv, erscheinen neue Spieler mit einem Anfänger-Schutz-Buff.",
+    "label": "Buff für neue Spieler"
+   },
+   "POIQuestsEnabled": {
+    "description": "Macht es möglich, dass Sehenswürdigkeiten-Quests in den Questlisten der Händler erscheinen. Nein = nur vergrabene Quests.",
+    "label": "Sehenswürdigkeiten-Quests"
+   },
+   "POITierLSModifier": {
+    "description": "Beutestadium-Multiplikator basierend auf Sehenswürdigkeit-Stufe. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Sehenswürdigkeit-Beutestadium"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Bestimmt, ob Gesundheit und Ausdauer mit jedem Level steigen.",
+    "label": "Wertebonus pro Level"
+   },
+   "PointsPerMagazine": {
+    "description": "Der durch das Lesen von Fachzeitschriften erhaltene Fortschritt.",
+    "label": "Magazinfortschritt"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Begrenzt die Anzahl der täglichen Quests, die zum Händlerfortschritt zählen. Zusätzliche Quests gewähren weiterhin EP und Belohnungen, aber zählen nicht zum Stufenfortschritt des Händlers.",
+    "label": "Quests pro Tag"
+   },
+   "QuestsEnabled": {
+    "description": "Aktiviert oder deaktiviert Quests in deinem Spiel.",
+    "label": "Quests"
+   },
+   "QuestsPerTier": {
+    "description": "Die Zahl abgeschlossener Quests, die nötig ist, um die nächste Stufe freizuschalten. Höhere Werte verlangsamen den Fortschritt zwischen Stufen. Keine = kein Limit und erlaubt Zugriff auf alle Quest-Stufen.",
+    "label": "Quests pro Stufe"
+   },
+   "RangedDamage": {
+    "description": "Mit Bogen, Schusswaffen und anderen Fernkampfwaffen durch den Spieler verursachter Schaden.",
+    "label": "Fernkampfschaden"
+   },
+   "RangedLootCount": {
+    "description": "Menge der in Beute gefundenen Fernkampfwaffen und Teile.",
+    "label": "Fernkampfmenge"
+   },
+   "RepairTypes": {
+    "description": "Legt fest, wie Gegenstände repariert werden:\\n\\nKeine = Keine Reparatur\\nNur Reparatur = Nur Reparaturkits\\nNur kombinieren = Reparatur mit der Kombinationsstation\\nBeide = Reparaturkits und Kombinationsstation",
+    "label": "Reparaturmethode"
+   },
+   "ResourceLootCount": {
+    "description": "Menge der in Beute gefundenen Rohstoffgegenstände.",
+    "label": "Rohstoffmenge"
+   },
+   "RunSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Laufen an.",
+    "label": "Laufgeschwindigkeit"
+   },
+   "ScrappingOutput": {
+    "description": "Erhaltene Menge beim Zerlegen von Gegenständen.",
+    "label": "Zerlegungsertrag"
+   },
+   "SeedDropOutput": {
+    "description": "Die Menge der Samen, die bei der Ernte von Feldfrüchten erhalten wird, die Spieler gepflanzt haben. Hat keinen Einfluss auf die Chance, dass Samen fallen gelassen werden oder auf Samen von Bäumen.",
+    "label": "Samenertrag"
+   },
+   "ShowDayTime": {
+    "description": "Zeigt Tag- und Zeitinformationen auf dem Bildschirm an. Auf Nein gesetzt, wird die Blutmond-Warnung ebenfalls deaktiviert.",
+    "label": "Tag/Zeit anzeigen"
+   },
+   "ShowEnemyDamage": {
+    "description": "Zeigt schwebende Schadenszahlen, wenn Wesen getroffen werden.",
+    "label": "Wesen-Schaden anzeigen"
+   },
+   "ShowHealthBars": {
+    "description": "Wesen-Gesundheitsbalken zeigen oder verbergen.",
+    "label": "Wesen-Gesundheitsbalken"
+   },
+   "ShowLocationInfo": {
+    "description": "Zeigt Namen und Schwierigkeitsgrad von Biomen und Sehenswürdigkeiten.",
+    "label": "Ortsinformationen anzeigen"
+   },
+   "ShowXP": {
+    "description": "EP-Leiste und EP-Pop-up-Fenster verbergen oder zeigen.",
+    "label": "EP anzeigen"
+   },
+   "SillyBigHeads": {
+    "description": "Aktiviert den „Riesenköpfe-Modus“ bei Zombies, Tieren und Händlern.",
+    "label": "Riesenköpfe"
+   },
+   "SillyBlackandWhite": {
+    "description": "Aktiviert eine klassische Graustufen-Farbgebung inspiriert von Horror-Klassikern der 1960er.",
+    "label": "Schwarzweiß"
+   },
+   "SillyCelebrate": {
+    "description": "Aktiviert die feierlichen Konfetti-Partikel bei Wesen-Kills. Die Option „Nur Kopftreffer“ löst Konfetti nur bei Kills durch Kopfschüsse aus; Körpertreffer bei Tieren zum Fleischsammeln sind weiterhin möglich. „Nur Kopftreffer“ gilt nicht für passive Tiere.",
+    "label": "Kill-Konfetti"
+   },
+   "SillyLowGravity": {
+    "description": "Legt die Stärke der Schwerkraft im Spiel fest.",
+    "label": "Schwerkraft"
+   },
+   "SillySounds": {
+    "description": "Aktiviert humorvolle Geräusche für Aktionen im Spiel.",
+    "label": "Klamauk"
+   },
+   "SillyTinyZombies": {
+    "description": "Aktiviert kleiner Versionen der Zombies.",
+    "label": "Winzige Zombies"
+   },
+   "SkillGainRate": {
+    "description": "Passt an, wie viele Level nötig sind, um Fertigkeitspunkte zu erhalten.",
+    "label": "Fertigkeit-Erhaltrate"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Bestimmt, wie viele Fertigkeitspunkte beim Erhalt von Fertigkeitspunkten gewährt werden.",
+    "label": "Fertigkeit-Erhaltmenge"
+   },
+   "SmeltingType": {
+    "description": "Legt fest, wie die Schmiedefertigung funktioniert. Schmelze Gegenstände in der Schmiede oder fertige sie direkt mit Rohstoffen aus deinem Rucksack.",
+    "label": "Schmelzart"
+   },
+   "StaminaRegen": {
+    "description": "Bestimmt die Rate der Ausdauerwiederherstellung. Werte sind nicht exakt.",
+    "label": "Ausdauerwiederherstellung"
+   },
+   "StaminaUsage": {
+    "description": "Ausdauerkosten für Aktionen wie Laufen, Springen und Angreifen. Werte sind nicht exakt.",
+    "label": "Ausdauerverbrauch"
+   },
+   "StarterSkillPoints": {
+    "description": "Die Zahl der Fertigkeitspunkte, die nach Abschluss der Einführungsherausforderungen oder, wenn die Einführungsherausforderungen deaktiviert sind, zum Spielstart gewährt werden.",
+    "label": "Basis-Fertigkeitspunkte"
+   },
+   "StormFreq": {
+    "description": "Passt die Sturmhäufigkeit an. Keine bedeutet keine Stürme.",
+    "label": "Sturmhäufigkeit"
+   },
+   "StormWarning": {
+    "description": "Legt fest, ob der Spieler die Sturmsirene hört und die Sturmwarnung auf dem Bildschirm sieht.",
+    "label": "Sturmwarnung"
+   },
+   "TemperatureSurvival": {
+    "description": "Bestimmt, ob sich die Umgebungstemperatur (heiß und kalt) auf Spieler auswirkt.",
+    "label": "Temperatur im Überlebensmodus"
+   },
+   "TerrainDamage": {
+    "description": "Wie viel Schaden Spieler bei Gelände verursachen.",
+    "label": "Geländeschaden"
+   },
+   "TraderBuyLimit": {
+    "description": "Maximale Anzahl jedes Gegenstands, die der Händler kauft, bevor er weitere ablehnt. Niedrigere Werte begrenzen, wie viel du pro Wiederauffüllen-Zyklus verkaufen kannst.",
+    "label": "Händler-Kauflimit"
+   },
+   "TraderBuyPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler von Händlern kaufen.",
+    "label": "Kaufpreis"
+   },
+   "TraderDialog": {
+    "description": "Sprachausgabe und Bildschirm-Dialoge des Händlers an/aus.",
+    "label": "Händlerdialog"
+   },
+   "TraderHours": {
+    "description": "Legt die Geschäftszeiten der Händler fest. 24-Stunden-Zyklus und Dauer des Tageslichts haben keinen Einfluss auf diese Einstellung. „BM geschlossen“ bedeutet, dass der Laden nur während des Blutmondes schließt. Standard verwendet XML-Konfigurationswerte..\\n\\nXML-Standard = 04:00 bis 22:00\\n       Morgen = 04:00 bis 12:00\\n       Tag = 10:00 bis 18:00\\n       Abend = 16:00 bis 22:00\\n           Nacht = 22:00 bis 04:00",
+    "label": "Händlerzeiten"
+   },
+   "TraderItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Händler-Gegenstandsmenge"
+   },
+   "TraderMaxTier": {
+    "description": "Legt die höchste Qualität fest, die Händler im Angebot haben.",
+    "label": "Max. Qualität bei Händlern"
+   },
+   "TraderProtection": {
+    "description": "Legt Schadensschutz für Händlergelände fest und bestimmt, ob Spieler das Gebiet sichern können.",
+    "label": "Händlerschutz"
+   },
+   "TraderResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händlern zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Händlern"
+   },
+   "TraderSellPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler Händlern verkaufen.",
+    "label": "Verkaufspreis"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Aktivieren, um Quests von anderen Händlern zu erhalten.",
+    "label": "Handelsrouten"
+   },
+   "TradersEnabled": {
+    "description": "Aktiviert den Handel mit NPC-Händlern.",
+    "label": "Handel aktiviert"
+   },
+   "TreasureMapChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Schatzkarten in Behältern mit Beute und gegnerischen Beutetaschen erscheinen.",
+    "label": "Chance auf Schatzkarten"
+   },
+   "VehicleBlockDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Blöcken verursachen.",
+    "label": "Blockschaden durch Fahrzeuge"
+   },
+   "VehicleEntityDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Wesen verursachen.",
+    "label": "Wesen-Schaden durch Fahrzeuge"
+   },
+   "VehicleFuelUsage": {
+    "description": "Legt den Brennstoffverbraucht von Fahrzeugen fest.",
+    "label": "Fahrzeug-Brennstoffverbrauch"
+   },
+   "VehicleSelfDamage": {
+    "description": "Wie viel Schaden Fahrzeuge durch Kollisionen erleiden.",
+    "label": "Fahrzeug-Selbstschaden"
+   },
+   "VendingEnabled": {
+    "description": "Aktiviert oder deaktiviert Funktionalität von Automaten.",
+    "label": "Automaten aktiviert"
+   },
+   "VendingItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler-Automaten im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Automat-Gegenstandsmenge"
+   },
+   "VendingResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händler-Automaten zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Automaten"
+   },
+   "WalkSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Gehen an.",
+    "label": "Gehgeschwindigkeit"
+   },
+   "WorkstationCrafting": {
+    "description": "Ja erlaubt Fertigung an Arbeitsstationen. Nein erlaubt nur Rucksackfertigung.",
+    "label": "Arbeitsstationsfertigung"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Erlaubt das Erscheinen von funktionstüchtigen Arbeitsstationen in der Welt. Gilt für neue Navezgane oder RWG-Kartengenerierung.",
+    "label": "Arbeitsstationen in der Wildnis"
+   },
+   "XPMultiplier": {
+    "description": "Multiplikator, der auf alle gesammelten Erfahrungspunkte angewendet wird.",
+    "label": "EP-Multiplikator"
+   },
+   "ZombieBMMove": {
+    "description": "Bestimmt die Bewegungsgeschwindigkeit der Zombies während Blutmond-Horden und Stürmen.",
+    "label": "Blutmond-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von wilden Zombies fest.",
+    "label": "Wild-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralSense": {
+    "description": "Wie gut Zombies Spieler sehen oder hören können.",
+    "label": "Wild-Zombie-Gespür"
+   },
+   "ZombieMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies zur Tageszeit fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Tag-Zombiegeschwindigkeit"
+   },
+   "ZombieMoveNight": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies während der Nacht fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Nacht-Zombiegeschwindigkeit"
+   },
+   "ZombieRageChance": {
+    "description": "Chance, dass Zombies den Wut-Modus aktivieren, wenn sie Schaden erleiden.",
+    "label": "Zombie-Wut"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Legt fest, ob Zombies Tierkadaver essen.",
+    "label": "Zombies essen Tiere"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Keiner",
+    "1": "Gehen",
+    "2": "Joggen",
+    "3": "Rennen",
+    "4": "Sprinten",
+    "5": "Albtraum"
+   },
+   "AirDropRandomTime": {
+    "0": "Keiner",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "Ganztägig",
+    "6": "Beliebig"
+   },
+   "AirDrops": {
+    "0": "Deaktiviert",
+    "1": "Jeden Tag",
+    "2": "1-3 Tage",
+    "3": "3 Tage",
+    "4": "3-7 Tage",
+    "5": "7 Tage",
+    "6": "1-7 Tage"
+   },
+   "ApiaryInput": {
+    "0": "Keiner"
+   },
+   "BackpackCrafting": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Begrenzt",
+    "3": "Nur Werkbank"
+   },
+   "BarterValues": {
+    "0": "Keiner"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Standard",
+    "1": "Sehr niedrig",
+    "2": "Niedrig",
+    "3": "Mittel",
+    "4": "Hoch",
+    "5": "Sehr hoch"
+   },
+   "BloodMoonCount": {
+    "0": "4 Feinde",
+    "1": "6 Feinde",
+    "2": "8 Feinde",
+    "3": "10 Feinde",
+    "4": "12 Feinde",
+    "5": "16 Feinde",
+    "6": "24 Feinde",
+    "7": "32 Feinde",
+    "8": "64 Feinde"
+   },
+   "BloodMoonFrequency": {
+    "0": "Deaktiviert",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "8 Tage",
+    "9": "9 Tage",
+    "10": "10 Tage",
+    "11": "14 Tage",
+    "12": "20 Tage",
+    "13": "30 Tage"
+   },
+   "BloodMoonRange": {
+    "0": "0 Tage",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "7 Tage",
+    "6": "10 Tage",
+    "7": "14 Tage",
+    "8": "20 Tage"
+   },
+   "BloodMoonWarning": {
+    "0": "Deaktiviert",
+    "1": "Morgen",
+    "2": "Abend"
+   },
+   "Celebrate": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Kopftreffer"
+   },
+   "CropGrowthSpeed": {
+    "0": "Keiner",
+    "1": "Sofort"
+   },
+   "DamageValues": {
+    "0": "Keiner"
+   },
+   "DayLightLength": {
+    "0": "Immer Nacht",
+    "10": "Immer Tag"
+   },
+   "DeathPenalty": {
+    "0": "Keiner",
+    "1": "Nur EP",
+    "2": "Verletzt",
+    "3": "Endgültiger Tod"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Keiner",
+    "1": "Haltbarkeit",
+    "2": "Max. Haltbarkeit",
+    "3": "Beide"
+   },
+   "DewCollectorInput": {
+    "0": "Keiner"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Deaktiviert",
+    "1": "Sehr niedrig",
+    "2": "Niedrig",
+    "3": "Standard",
+    "4": "Hoch",
+    "5": "Sehr hoch"
+   },
+   "DropOnDeath": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Alles löschen"
+   },
+   "DropOnQuit": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack"
+   },
+   "Encumbrance": {
+    "0": "Deaktiviert",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch",
+    "5": "Ganz"
+   },
+   "HeadshotMode": {
+    "0": "Keiner",
+    "1": "Nur Kopftreffer",
+    "2": "Kopftreffer-Finisher"
+   },
+   "JarRefund": {
+    "0": "Keiner"
+   },
+   "JumpStrength": {
+    "0": "Keiner"
+   },
+   "LootAbundanceValues": {
+    "0": "Keiner"
+   },
+   "LootRespawnDays": {
+    "0": "Deaktiviert"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "LowDefaultHigh": {
+    "0": "Sehr niedrig",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch"
+   },
+   "MaxChunkAge": {
+    "0": "Deaktiviert"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Keiner"
+   },
+   "MaxEnemyType": {
+    "0": "Normale",
+    "1": "Starke",
+    "2": "Besondere",
+    "3": "Wilde",
+    "4": "Verstrahlte",
+    "5": "Elite"
+   },
+   "MaxTechType": {
+    "0": "Keiner",
+    "1": "Tech 0",
+    "2": "Tech 1",
+    "3": "Tech 2",
+    "4": "Tech 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Keiner"
+   },
+   "PointsPer": {
+    "0": "Keiner"
+   },
+   "QuestPerDay": {
+    "0": "Unbegrenzt"
+   },
+   "QuestPerTier": {
+    "0": "Keiner"
+   },
+   "RepairTypes": {
+    "0": "Keiner",
+    "1": "Nur reparieren",
+    "2": "Nur kombinieren",
+    "3": "Beide"
+   },
+   "ShowXP": {
+    "0": "Alle",
+    "1": "Nur Balken",
+    "2": "Nur Benachrichtigungen",
+    "3": "Keiner"
+   },
+   "SlowToFast": {
+    "0": "Standard",
+    "1": "Sehr langsam",
+    "2": "Langsam",
+    "3": "Normal",
+    "4": "Schnell",
+    "5": "Sehr schnell"
+   },
+   "SmeltingType": {
+    "0": "Schmelzer",
+    "1": "Rezepte"
+   },
+   "SpeedValues": {
+    "0": "Keiner"
+   },
+   "StaminaUsage": {
+    "0": "Keiner"
+   },
+   "StarterSkillPoints": {
+    "0": "Keiner"
+   },
+   "StormFrequency": {
+    "0": "Keiner"
+   },
+   "TraderArea": {
+    "0": "Ja",
+    "1": "Sicherbar",
+    "2": "Nicht sicherbar"
+   },
+   "TraderHourPresets": {
+    "0": "Standard",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "BM geschlossen",
+    "6": "Immer offen"
+   },
+   "TraderResetInterval": {
+    "0": "Standard",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "14 Tage"
+   },
+   "XPGain": {
+    "0": "Keiner"
+   },
+   "YesNo": {
+    "0": "Nein",
+    "1": "Ja"
+   },
+   "ZombieFeralSense": {
+    "0": "Deaktiviert",
+    "1": "Tag",
+    "2": "Nacht",
+    "3": "Alle"
+   },
+   "ZombieRageChance": {
+    "0": "Keiner"
+   },
+   "ZombieSpeeds": {
+    "0": "Gehen",
+    "1": "Joggen",
+    "2": "Rennen",
+    "3": "Sprinten",
+    "4": "Albtraum"
+   }
+  }
+ },
+ "v3_1": {
+  "categories": {
+   "Crafting": "Fertigung",
+   "Entities": "Wesen",
+   "General": "Spieler",
+   "Misc": "Divers",
+   "Resources": "Rohstoffe",
+   "Tasks": "Aufgaben",
+   "Traders": "Händler",
+   "World": "Welt"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Aktiviert oder deaktiviert die Geruchswahrnehmung der Zombies und legt fest, wie schnell sich Zombies bewegen, wenn sie einen Geruch wahrnehmen.",
+    "label": "KI-Geruchsmodus"
+   },
+   "AirDropFrequency": {
+    "description": "Zeigt an, wie oft Abwürfe von Vorräten erfolgen.",
+    "label": "Abwurf aus der Luft"
+   },
+   "AirDropMarker": {
+    "description": "Bestimmt, ob existierende Abwürfe aus der Luft auf der Karte und dem Kompass angezeigt werden.",
+    "label": "Abwürfe aus der Luft markieren"
+   },
+   "AirDropRandomTime": {
+    "description": "Legt fest, wann Abwürfe aus der Luft erscheinen. Wähle eine bestimmte Zeit für vorhersehbare Abwürfe aus der Luft oder Beliebig für zufälligen Abwurf.\\n\\nKeine = Der standardmäßige Abwurf zur Mittagszeit.\\nMorgen = 04:00 bis 10:00\\nTag = 10:00 bis 14:00\\nAbend = 15:00 bis 20:00\\nNacht = 20:00 bis 24:00\\nGanztägig = 04:00 bis 20:00",
+    "label": "Varianz bei Abwurf aus der Luft"
+   },
+   "AllowCompass": {
+    "description": "Zeigt den Spieler-Kompass.",
+    "label": "Kompass erlauben"
+   },
+   "AllowMap": {
+    "description": "Aktiviert die Karte im Spiel.",
+    "label": "Karte erlauben"
+   },
+   "AllowScreenMarkers": {
+    "description": "Zeigt Navigationsmarkierungen auf dem Bildschirm. Kartenmarkierungen bleiben sichtbar.",
+    "label": "Bildschirmmarkierungen erlauben"
+   },
+   "AllowZombieDigging": {
+    "description": "Erlaubt Zombies, sich nach unten durch Gelände zu graben. Können trotzdem zur Seite graben.",
+    "label": "Grabende Zombies"
+   },
+   "AmmoLootCount": {
+    "description": "Menge der in Beute gefundenen Munition.",
+    "label": "Munitionsmenge"
+   },
+   "ApiaryInput": {
+    "description": "Legt die Zahl der Blumen fest, die erforderlich sind, um die Honigproduktion zu beginnen.",
+    "label": "Bienenhaus-Eingabe"
+   },
+   "ApiaryOutput": {
+    "description": "Menge des pro Produktionszyklus erzeugten Honigs.",
+    "label": "Bienenhausertrag"
+   },
+   "ApiaryTime": {
+    "description": "Legt die Zeit fest, die das Bienenhaus braucht, um Honig zu produzieren.",
+    "label": "Bienenhauszeit"
+   },
+   "ArmorLootCount": {
+    "description": "Menge der in Beute gefundenen Rüstung und Rüstungsteile.",
+    "label": "Rüstungsmenge"
+   },
+   "BackpackCrafting": {
+    "description": "Bestimmt, welche Gegenstände der Spieler direkt aus dem Rucksack fertigen kann.\\n\\nNein deaktiviert Rucksackfertigung.\\nJa erlaubt Rucksackfertigung.\\nBegrenzt erlaubt Fertigung einer begrenzten Zahl von Rezepten im Rucksack.\\nNur Werkbank erlaubt Fertigung der Werkbank, aber sonst wird nichts im Rucksack gefertigt.",
+    "label": "Rucksackfertigung"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Überschreibt tagsüber die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (tagsüber)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Überschreibt tagsüber die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (tagsüber)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeGSModifier": {
+    "description": "Modifikator des Schwierigkeitsgrads basierend auf Biomen. Schwierigere Biome erhöhen die Gegnerstärke und das Beutestadium über deinen Basisfortschritt hinaus. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Spielstufe"
+   },
+   "BiomeLSModifier": {
+    "description": "Beutestadium-Multiplikator angewandt pro Biom. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Beutestadium"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Überschreibt nachts die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (nachts)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (nachts)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Überschreibt nachts die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (nachts)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (nachts)"
+   },
+   "BiomeProgression": {
+    "description": "Aktiviert oder deaktiviert Biomgefahren. Wetter und Stürme sind von dieser Einstellung nicht betroffen.",
+    "label": "Biomfortschritt"
+   },
+   "BlockDamage": {
+    "description": "Wie viel Blockschaden Spieler verursachen.",
+    "label": "Blockschaden"
+   },
+   "BlockDamageAI": {
+    "description": "Wie viel Blockschaden Feinde verursachen.",
+    "label": "Feind-Blockschaden"
+   },
+   "BlockDamageAIBM": {
+    "description": "Feindlicher Blockschaden während eines Blutmondes.",
+    "label": "BM-Blockschaden"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Bestimmt die maximale Menge der Zombies, die pro Spieler während eines Blutmondes lebendig sein können.\\n\\nSpieler in der Nähe teilen die Gruppenobergrenze von max. 30 Zombies. Sollte diese Obergrenze überschritten werden, wird der Schwierigkeitsgrad stattdessen skaliert, indem die Spielstufe erhöht wird. Die weltweite Obergrenze beträgt etwa das 1,9-fache der max. erschienenen Zombies. In niedrigeren Spielstufen kann die Anzahl der erschienenen Zombies reduziert werden.\\n\\nEine Änderung dieser Einstellung hat einen großen Einfluss auf die Leistung.",
+    "label": "Blutmondanzahl"
+   },
+   "BloodMoonFrequency": {
+    "description": "Anzahl der Tage im Spiel zwischen zwei Blutmonden. Deaktiviert = keine Blutmonde.",
+    "label": "Blutmondhäufigkeit"
+   },
+   "BloodMoonRange": {
+    "description": "Anzahl der Tage nach dem Blutmond, in denen das Ereignis eintreten kann.\\n\\nBeispiel: Eine Häufigkeit von 7 plus eine Spanne von 5 würde bedeuten, dass ein Blutmond zwischen Tag 7 und 12 auftreten kann.\\n\\n0 Tage = keine zufällige Häufigkeit.",
+    "label": "Blutmonddauer"
+   },
+   "BloodMoonWarning": {
+    "description": "Legt fest, wann die Blutmondwarnung auf deinem HUD angezeigt wird und die Tageszahl rot wird.",
+    "label": "Blutmondwarnung"
+   },
+   "BookLootCount": {
+    "description": "Legt fest, wie viele Bücher und Baupläne in der Beute gefunden werden.",
+    "label": "Büchermenge"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Macht es möglich, dass vergrabene Quests in den Questlisten der Händler erscheinen. Nein = nur Sehenswürdigkeiten-Quests.",
+    "label": "Vergrabene Quests"
+   },
+   "ChallengesEnabled": {
+    "description": "Aktiviert das Herausforderungssystem im Spiel.",
+    "label": "Herausforderungen"
+   },
+   "ChickenCoopInput": {
+    "description": "Legt die Futtermenge fest, die für den Produktionsstart benötigt wird.",
+    "label": "Hühnerstall-Materialeinsatz"
+   },
+   "ChickenCoopOutput": {
+    "description": "Die Menge an Hühnern, Eiern und Federn, die pro Produktionszyklus erzeugt wird.",
+    "label": "Hühnerstallerträge"
+   },
+   "ChickenCoopTime": {
+    "description": "Passt die Zeit an, die der Hühnerstall benötigt, um Hühner, Eier und Federn zu produzieren.",
+    "label": "Hühnerstall-Zeit"
+   },
+   "CraftingInput": {
+    "description": "Benötigte Materialmenge für die Fertigung (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungskosten"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Legt fest, wie viele Handwerkszeitschriften in der Beute gefunden werden.",
+    "label": "Zeitschriftenmenge"
+   },
+   "CraftingMaxTier": {
+    "description": "Höchste Qualität gefertigter Gegenstände.",
+    "label": "Max. Fertigungsqualität"
+   },
+   "CraftingOutput": {
+    "description": "Anzahl der pro Fertigung hergestellten Gegenstände (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungsertrag"
+   },
+   "CraftingProgression": {
+    "description": "Aktivere oder deaktiviere den Fertigungsfortschritt basierend auf Magazinen oder Bauplänen.",
+    "label": "Fertigungsfortschritt"
+   },
+   "CraftingTime": {
+    "description": "Erforderliche Zeit für die Fertigung von Gegenständen.",
+    "label": "Fertigungstimer"
+   },
+   "CropGrowthSpeed": {
+    "description": "Legt die Wachstumsgeschwindigkeit von Feldfrüchten und Bäumen fest, die Spieler gepflanzt haben. Ein höherer Prozentsatz führt zu einer längeren Wachstumszeit. Hinweis: Bei existierenden Spielständen müssen Feldfrüchte neu gepflanzt werden, um die Änderungen anzuwenden.",
+    "label": "Pflanzenwachstum"
+   },
+   "CropOutput": {
+    "description": "Legt die Menge der Rohstoffe fest, die aus wilden und von Spielern angebauten Feldfrüchten erhalten werden. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Ernteerträge"
+   },
+   "CrouchRunSpeed": {
+    "description": "Legt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Rennen fest.",
+    "label": "Kriechen-Rennen-Geschwindigkeit"
+   },
+   "CrouchSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Gehen an.",
+    "label": "Kriechgeschwindigkeit"
+   },
+   "DayLightLength": {
+    "description": "Zeigt an, wie viele Stunden die Sonne jeden Tag im Spiel scheint. Immer Nacht und Immer Tag funktionieren wie erwartet. Dauer des Tageslichts:\\n\\n4= 10:00 bis 14:00\\n6 = 09:00 bis 15:00\\n8 = 08:00 bis 16:00\\n10 = 07:00 bis 17:00\\n12 = 06:00 bis 18:00\\n14= 05:00 bis 19:00\\n16 = 04:00 bis 20:00\\n18 = 04:00 bis 22:00\\n20 = 02:00 bis 22:00",
+    "label": "Dauer des Tageslichts"
+   },
+   "DayNightLength": {
+    "description": "Wie viele Minuten in der realen Welt vergehen, bis im Spiel 24 Stunden vergangen sind.",
+    "label": "24-Stunden-Zyklus"
+   },
+   "DeathPenalty": {
+    "description": "Nach dem Tod angewendeter Malus.\\n\\nNichts = Kein Malus.\\nNur EP = Standard-EP-Defizit.\\nVerletzt = Behält einige Debuffs und erhält nach dem Wiedererscheinen nur 50 % Wasser und Nahrung.\\nEndgültiger Tod = Setzt den Fortschritt des Spielers komplett zurück.",
+    "label": "Todesmalus"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Wenn Todesabnutzung aktiv ist, bestimmt diese Einstellung den Prozentsatz verlorener Haltbarkeit beim Tod.",
+    "label": "Menge der Todesabnutzung"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Legt fest, ob Gegenstände beim Tod Haltbarkeit verlieren.\\n\\nKeine = kein Verlust.\\nHaltbarkeit = Verringert die aktuelle Haltbarkeit, kann repariert werden.\\nMax. Haltbarkeit = Verringert max. Haltbarkeit, senkt Reparaturobergrenze.\\nBeide = Gegenstände verlieren aktuelle und max. Haltbarkeit.",
+    "label": "Todesabnutzung"
+   },
+   "DewCollectorInput": {
+    "description": "Legt die Zahl der Krüge fest, die erforderlich sind, um die Tausammlung zu beginnen.",
+    "label": "Tausammler-Eingabe"
+   },
+   "DewCollectorOutput": {
+    "description": "Die Wassermenge, die der Tausammler pro Zyklus generiert.",
+    "label": "Tausammlerertrag"
+   },
+   "DewCollectorTime": {
+    "description": "Legt die Zeit fest, die der Tausammler braucht, um Wasser zu produzieren.",
+    "label": "Tausammlerzeit"
+   },
+   "DrinkLootCount": {
+    "description": "Menge der in Behältern gefundenen Getränke.",
+    "label": "Getränkemenge"
+   },
+   "DropOnDeath": {
+    "description": "Welche Gegenstände beim Tod fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nNur Werkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nNur Rucksack = Du lässt die Gegenstände in deinem Rucksack fallen.\\nAlles löschen = Lösche alle Gegenstände.",
+    "label": "Fallenlassen bei Tod"
+   },
+   "DropOnQuit": {
+    "description": "Welche Gegenstände beim Verlassen fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nWerkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nRucksack = Du lässt die Gegenstände in deinem Rucksack fallen.",
+    "label": "Fallenlassen bei verlassen des Spiels"
+   },
+   "DukesLootCount": {
+    "description": "Menge der in Beute gefundenen Duke-Jetons und altem Geld.",
+    "label": "Währungsmenge"
+   },
+   "ElectricalOutput": {
+    "description": "Legt fest, wie viel elektrische Leistung produziert wird.",
+    "label": "Elektrische Leistung"
+   },
+   "EncumbranceModifier": {
+    "description": "Bestimmt die Zahl der Überlastungsplätze im Rucksack. Werte reichen von Deaktiviert (keine Überlastung) bis Voll (maximale Überlastung). Standard verwendet XML-Konfigurationswerte.",
+    "label": "Überbelastungsplätze"
+   },
+   "EnemySpawnMode": {
+    "description": "Aktiviere oder deaktiviere Erscheinen der Gegner.",
+    "label": "Erscheinen der Gegner"
+   },
+   "EntityDamage": {
+    "description": "Bestimmt, wie viel Schaden Gegner bei Spielern verursachen. Stapelt sich mit anderem eingehenden Schaden, den Spieler erleiden.",
+    "label": "Schaden durch Gegner"
+   },
+   "EntityIncomingDamage": {
+    "description": "Schaden, den Wesen wie Gegner und Tiere durch Spieler erleiden.",
+    "label": "Erlittener Wesen-Schaden"
+   },
+   "FoodLootCount": {
+    "description": "Menge der in Behältern gefundenen Nahrung.",
+    "label": "Nahrungsmenge"
+   },
+   "FullChickenStressEvent": {
+    "description": "Aktiviert ein Ereignis, wenn festgehaltene Hühner 100 % Stress erreichen. „Keine“ deaktiviert Ereignisse, „Zufällig“ wählt eines der folgenden Ereignisse zufällig aus.\\n\\nHuhn fallen lassen = Dein Huhn entkommt deinem Griff.\\nWütendes Huhn = Dein Huhn wendet sich gegen dich.\\nZombiehorde = Der Stress deines Huhns beschwört eine Zombiehorde.\\nMordhühner = Wütende Hühner verbünden sich gegen dich.",
+    "label": "Event „Stress des Huhns“"
+   },
+   "GlobalGSModifier": {
+    "description": "Legt die Gegnerarten, Skalierung des Schwierigkeitsgrads, Beutequalität und Blutmond-Intensität basierend auf deinem Level und überlebten Tagen fest. Höhere Werte erhöhen den Schwierigkeitsgrad. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globale Spielstufe"
+   },
+   "GlobalLSModifier": {
+    "description": "Globaler Multiplikator angewandt auf das Spieler-Beutestadium. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Beutestadium"
+   },
+   "GlobalLootCount": {
+    "description": "Passt global die Gesamtmenge der Beute an, die in der Welt gefunden werden kann. „Keine“ deaktiviert die gesamte Beute, einschließlich fallengelassener Zombietaschen und Versorgungskisten.",
+    "label": "Beutemenge"
+   },
+   "GlobalTSModifier": {
+    "description": "Globaler Modifikator des Fortschritts des Händlerstadiums. Legt die Qualität und Vielfalt der Gegenstände fest, die Händler anbieten. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Händlerstadium"
+   },
+   "HarvestingOutput": {
+    "description": "Bestimmt die Menge an Rohstoffen, die beim Abbauen von Blöcken und beim Sammeln von Gegenständen gewonnen wird. Hat keinen Einfluss auf Erze, Samen oder Feldfrüchte. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Rohstoffertrag"
+   },
+   "HeadshotMode": {
+    "description": "Bestimmt, wie sich Kopftrefferschaden auswirkt.\\n\\nNur Kopftreffer = Gegner erleiden nur durch Kopftreffer Schaden.\\nKopftreffer-Finisher: Körpertreffer verursachen Schaden, aber nur Kopftreffer können sie erledigen.\\n\\nGilt nicht für passive Tiere.",
+    "label": "Kopftreffer-Modus"
+   },
+   "HeadshotMultiplier": {
+    "description": "Der Multiplikator angewendet auf den Kopftrefferschaden von Spielern bei Wesen.",
+    "label": "Kopftreffer-Multiplikator"
+   },
+   "HeatMapSensitivity": {
+    "description": "Bestimmt, wie sich Spieleraktivität auf die Wärme auswirkt. Größere Wärme bedeutet höhere Chancen auf Schreier-Spawns. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Wärmebild-Empfindlichkeit"
+   },
+   "HungerMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Nahrung verbrauchen. Höhere Werte erhöhen den Nahrungsverbrauch.",
+    "label": "Hunger-Multiplikator"
+   },
+   "IncomingDamage": {
+    "description": "Wie viel Schaden der Spieler aus allen Quellen erleidet.",
+    "label": "Erlittener Spielerschaden"
+   },
+   "InfectionChance": {
+    "description": "Erhöht oder verringert die Infektionschance des Spielers.",
+    "label": "Infektionschance"
+   },
+   "InfectionRate": {
+    "description": "Passt an, wie schnell Infektionen fortschreiten.",
+    "label": "Infektionsrate"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Aktiviert die mehrphasige Einführungsherausforderung für neue Spieler.",
+    "label": "Einführungsherausforderungen"
+   },
+   "IntroQuestEnabled": {
+    "description": "Überspringe die Einführungsquest mit den vergrabenen Vorräten, um auf den vollen Questfortschritt zuzugreifen.",
+    "label": "Einführungsquest"
+   },
+   "ItemDegradation": {
+    "description": "Wie schnell Waffen und Werkzeug Haltbarkeit verlieren. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Abnutzung von Gegenständen"
+   },
+   "JarRefund": {
+    "description": "Chance der Rückerstattung für Krüge nach dem Verzehr eines Gegenstands.",
+    "label": "Krug-Rückerstattung"
+   },
+   "JumpStrength": {
+    "description": "Modifiziert die Sprunghöhe des Spielers.",
+    "label": "Sprungstärke"
+   },
+   "LootBagChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Gegner beim Tod Beutetaschen fallenlassen.",
+    "label": "Fallengelassene Beutetaschen"
+   },
+   "LootMaxTier": {
+    "description": "Legt die höchste Qualität von Waffen und Gegenständen fest, die in Beute erscheinen können.",
+    "label": "Max. Beutequalität"
+   },
+   "LootRespawnDays": {
+    "description": "Die Anzahl an Tagen im Spiel, bis Beutebehälter in nicht besuchten Gebieten zurückgesetzt werden.",
+    "label": "Tage bis zum Wiedererscheinen von Beute"
+   },
+   "LootTimer": {
+    "description": "Zeigt an, wie lange das Öffnen von Behältern mit Beute dauert.",
+    "label": "Beute-Timer"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Legt die Zahl der zufälligen verlorenen Gegenstände beim Tod fest.",
+    "label": "Verlustmenge bei Tod"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Legt fest, welche Gegenstände beim Tod verloren gehen.\\n\\nKeine = Nichts\\nAlle = Alle Gegenstände.\\nWerkzeuggürtel = Nur Werkzeuggürtel-Gegenstände.\\nRucksack = Nur Rucksack-Gegenstände.\\nAusrüstung = Getragene Rüstung und Kleidung.\\nNur getragene = Gegenstände aus Werkzeuggürtel und Rucksack.",
+    "label": "Verlust bei Tod"
+   },
+   "MaxDegradationAmount": {
+    "description": "Legt den Grad der Abnutzung bei der Reparatur eines Gegenstands fest.",
+    "label": "Reparaturabnutzung"
+   },
+   "MaxEnemyTier": {
+    "description": "Höchste Stufe von Zombiearten, die erscheinen können.",
+    "label": "Max. Gegnerstufe"
+   },
+   "MaxTechType": {
+    "description": "Legt global die höchste verfügbare Technologieart für Waffen und Gegenstände fest, was erlaubt, den Fortschritt und den Spielfluss zu steuern. Siehe Beispiele unten.\\n\\nTech 0 = Stein und Rohr\\nTech 1 = Eisen und AK\\nTech 2 = Stahl und Taktisches Sturmgewehr\\nTech 3 = Erdbohrer und M60",
+    "label": "Max. Technologiearten"
+   },
+   "MedicalLootCount": {
+    "description": "Menge der in Beute gefundenen medizinischen Vorräte.",
+    "label": "Medizinmenge"
+   },
+   "MeleeDamage": {
+    "description": "Mit Nahkampfwaffen und Werkzeugen durch den Spieler verursachter Schaden.",
+    "label": "Nahkampfschaden"
+   },
+   "MeleeLootCount": {
+    "description": "Menge der in Beute gefundenen Nahkampfwaffen und Teile.",
+    "label": "Nahkampfmenge"
+   },
+   "MiningOutput": {
+    "description": "Bestimmt die Menge an Erz, die beim Bergbau gewonnen wird. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Bergbauertrag"
+   },
+   "NewbieCoat": {
+    "description": "Wenn aktiv, erscheinen neue Spieler mit einem Anfänger-Schutz-Buff.",
+    "label": "Buff für neue Spieler"
+   },
+   "POIQuestsEnabled": {
+    "description": "Macht es möglich, dass Sehenswürdigkeiten-Quests in den Questlisten der Händler erscheinen. Nein = nur vergrabene Quests.",
+    "label": "Sehenswürdigkeiten-Quests"
+   },
+   "POITierLSModifier": {
+    "description": "Beutestadium-Multiplikator basierend auf Sehenswürdigkeit-Stufe. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Sehenswürdigkeit-Beutestadium"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Bestimmt, ob Gesundheit und Ausdauer mit jedem Level steigen.",
+    "label": "Wertebonus pro Level"
+   },
+   "PointsPerMagazine": {
+    "description": "Der durch das Lesen von Fachzeitschriften erhaltene Fortschritt.",
+    "label": "Magazinfortschritt"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Begrenzt die Anzahl der täglichen Quests, die zum Händlerfortschritt zählen. Zusätzliche Quests gewähren weiterhin EP und Belohnungen, aber zählen nicht zum Stufenfortschritt des Händlers.",
+    "label": "Quests pro Tag"
+   },
+   "QuestsEnabled": {
+    "description": "Aktiviert oder deaktiviert Quests in deinem Spiel.",
+    "label": "Quests"
+   },
+   "QuestsPerTier": {
+    "description": "Die Zahl abgeschlossener Quests, die nötig ist, um die nächste Stufe freizuschalten. Höhere Werte verlangsamen den Fortschritt zwischen Stufen. Keine = kein Limit und erlaubt Zugriff auf alle Quest-Stufen.",
+    "label": "Quests pro Stufe"
+   },
+   "RangedDamage": {
+    "description": "Mit Bogen, Schusswaffen und anderen Fernkampfwaffen durch den Spieler verursachter Schaden.",
+    "label": "Fernkampfschaden"
+   },
+   "RangedLootCount": {
+    "description": "Menge der in Beute gefundenen Fernkampfwaffen und Teile.",
+    "label": "Fernkampfmenge"
+   },
+   "RepairTypes": {
+    "description": "Legt fest, wie Gegenstände repariert werden:\\n\\nKeine = Keine Reparatur\\nNur Reparatur = Nur Reparaturkits\\nNur kombinieren = Reparatur mit der Kombinationsstation\\nBeide = Reparaturkits und Kombinationsstation",
+    "label": "Reparaturmethode"
+   },
+   "ResourceLootCount": {
+    "description": "Menge der in Beute gefundenen Rohstoffgegenstände.",
+    "label": "Rohstoffmenge"
+   },
+   "RunSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Laufen an.",
+    "label": "Laufgeschwindigkeit"
+   },
+   "ScrappingOutput": {
+    "description": "Erhaltene Menge beim Zerlegen von Gegenständen.",
+    "label": "Zerlegungsertrag"
+   },
+   "SeedDropOutput": {
+    "description": "Die Menge der Samen, die bei der Ernte von Feldfrüchten erhalten wird, die Spieler gepflanzt haben. Hat keinen Einfluss auf die Chance, dass Samen fallen gelassen werden oder auf Samen von Bäumen.",
+    "label": "Samenertrag"
+   },
+   "ShowDayTime": {
+    "description": "Zeigt Tag- und Zeitinformationen auf dem Bildschirm an. Auf Nein gesetzt, wird die Blutmond-Warnung ebenfalls deaktiviert.",
+    "label": "Tag/Zeit anzeigen"
+   },
+   "ShowEnemyDamage": {
+    "description": "Zeigt schwebende Schadenszahlen, wenn Wesen getroffen werden.",
+    "label": "Wesen-Schaden anzeigen"
+   },
+   "ShowHealthBars": {
+    "description": "Wesen-Gesundheitsbalken zeigen oder verbergen.",
+    "label": "Wesen-Gesundheitsbalken"
+   },
+   "ShowLocationInfo": {
+    "description": "Zeigt Namen und Schwierigkeitsgrad von Biomen und Sehenswürdigkeiten.",
+    "label": "Ortsinformationen anzeigen"
+   },
+   "ShowXP": {
+    "description": "EP-Leiste und EP-Pop-up-Fenster verbergen oder zeigen.",
+    "label": "EP anzeigen"
+   },
+   "SillyBigHeads": {
+    "description": "Aktiviert den „Riesenköpfe-Modus“ bei Zombies, Tieren und Händlern.",
+    "label": "Riesenköpfe"
+   },
+   "SillyBlackandWhite": {
+    "description": "Aktiviert eine klassische Graustufen-Farbgebung inspiriert von Horror-Klassikern der 1960er.",
+    "label": "Schwarzweiß"
+   },
+   "SillyCelebrate": {
+    "description": "Aktiviert die feierlichen Konfetti-Partikel bei Wesen-Kills. Die Option „Nur Kopftreffer“ löst Konfetti nur bei Kills durch Kopfschüsse aus; Körpertreffer bei Tieren zum Fleischsammeln sind weiterhin möglich. „Nur Kopftreffer“ gilt nicht für passive Tiere.",
+    "label": "Kill-Konfetti"
+   },
+   "SillyLowGravity": {
+    "description": "Legt die Stärke der Schwerkraft im Spiel fest.",
+    "label": "Schwerkraft"
+   },
+   "SillySounds": {
+    "description": "Aktiviert humorvolle Geräusche für Aktionen im Spiel.",
+    "label": "Klamauk"
+   },
+   "SillyTinyZombies": {
+    "description": "Aktiviert kleiner Versionen der Zombies.",
+    "label": "Winzige Zombies"
+   },
+   "SkillGainRate": {
+    "description": "Passt an, wie viele Level nötig sind, um Fertigkeitspunkte zu erhalten.",
+    "label": "Fertigkeit-Erhaltrate"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Bestimmt, wie viele Fertigkeitspunkte beim Erhalt von Fertigkeitspunkten gewährt werden.",
+    "label": "Fertigkeit-Erhaltmenge"
+   },
+   "SmeltingType": {
+    "description": "Legt fest, wie die Schmiedefertigung funktioniert. Schmelze Gegenstände in der Schmiede oder fertige sie direkt mit Rohstoffen aus deinem Rucksack.",
+    "label": "Schmelzart"
+   },
+   "StackSizeMultiplier": {
+    "description": "Multiplikator, der auf die Stapelgröße aller stapelbaren Gegenstände angewendet wird. Die maximale Stapelgröße beträgt 30.000.",
+    "label": "Stapelgröße-Multiplikator"
+   },
+   "StaminaRegen": {
+    "description": "Bestimmt die Rate der Ausdauerwiederherstellung. Werte sind nicht exakt.",
+    "label": "Ausdauerwiederherstellung"
+   },
+   "StaminaUsage": {
+    "description": "Ausdauerkosten für Aktionen wie Laufen, Springen und Angreifen. Werte sind nicht exakt.",
+    "label": "Ausdauerverbrauch"
+   },
+   "StarterSkillPoints": {
+    "description": "Die Zahl der Fertigkeitspunkte, die nach Abschluss der Einführungsherausforderungen oder, wenn die Einführungsherausforderungen deaktiviert sind, zum Spielstart gewährt werden.",
+    "label": "Basis-Fertigkeitspunkte"
+   },
+   "StormFreq": {
+    "description": "Passt die Sturmhäufigkeit an. Keine bedeutet keine Stürme.",
+    "label": "Sturmhäufigkeit"
+   },
+   "StormWarning": {
+    "description": "Legt fest, ob der Spieler die Sturmsirene hört und die Sturmwarnung auf dem Bildschirm sieht.",
+    "label": "Sturmwarnung"
+   },
+   "TemperatureSurvival": {
+    "description": "Bestimmt, ob sich die Umgebungstemperatur (heiß und kalt) auf Spieler auswirkt.",
+    "label": "Temperatur im Überlebensmodus"
+   },
+   "TerrainDamage": {
+    "description": "Wie viel Schaden Spieler bei Gelände verursachen.",
+    "label": "Geländeschaden"
+   },
+   "ThirstMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Wasser verbrauchen. Höhere Werte erhöhen den Wasserverbrauch.",
+    "label": "Durst-Multiplikator"
+   },
+   "TraderBuyLimit": {
+    "description": "Maximale Anzahl jedes Gegenstands, die der Händler kauft, bevor er weitere ablehnt. Niedrigere Werte begrenzen, wie viel du pro Wiederauffüllen-Zyklus verkaufen kannst.",
+    "label": "Händler-Kauflimit"
+   },
+   "TraderBuyPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler von Händlern kaufen.",
+    "label": "Kaufpreis"
+   },
+   "TraderDialog": {
+    "description": "Sprachausgabe und Bildschirm-Dialoge des Händlers an/aus.",
+    "label": "Händlerdialog"
+   },
+   "TraderHours": {
+    "description": "Legt die Geschäftszeiten der Händler fest. 24-Stunden-Zyklus und Dauer des Tageslichts haben keinen Einfluss auf diese Einstellung. „BM geschlossen“ bedeutet, dass der Laden nur während des Blutmondes schließt. Standard verwendet XML-Konfigurationswerte..\\n\\nXML-Standard = 04:00 bis 22:00\\n       Morgen = 04:00 bis 12:00\\n       Tag = 10:00 bis 18:00\\n       Abend = 16:00 bis 22:00\\n           Nacht = 22:00 bis 04:00",
+    "label": "Händlerzeiten"
+   },
+   "TraderItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Händler-Gegenstandsmenge"
+   },
+   "TraderMaxTier": {
+    "description": "Legt die höchste Qualität fest, die Händler im Angebot haben.",
+    "label": "Max. Qualität bei Händlern"
+   },
+   "TraderProtection": {
+    "description": "Legt Schadensschutz für Händlergelände fest und bestimmt, ob Spieler das Gebiet sichern können.",
+    "label": "Händlerschutz"
+   },
+   "TraderResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händlern zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Händlern"
+   },
+   "TraderSellPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler Händlern verkaufen.",
+    "label": "Verkaufspreis"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Aktivieren, um Quests von anderen Händlern zu erhalten.",
+    "label": "Handelsrouten"
+   },
+   "TradersEnabled": {
+    "description": "Aktiviert den Handel mit NPC-Händlern.",
+    "label": "Handel aktiviert"
+   },
+   "TreasureMapChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Schatzkarten in Behältern mit Beute und gegnerischen Beutetaschen erscheinen.",
+    "label": "Chance auf Schatzkarten"
+   },
+   "VehicleBlockDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Blöcken verursachen.",
+    "label": "Blockschaden durch Fahrzeuge"
+   },
+   "VehicleEntityDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Wesen verursachen.",
+    "label": "Wesen-Schaden durch Fahrzeuge"
+   },
+   "VehicleFuelUsage": {
+    "description": "Legt den Brennstoffverbraucht von Fahrzeugen fest.",
+    "label": "Fahrzeug-Brennstoffverbrauch"
+   },
+   "VehicleSelfDamage": {
+    "description": "Wie viel Schaden Fahrzeuge durch Kollisionen erleiden.",
+    "label": "Fahrzeug-Selbstschaden"
+   },
+   "VendingEnabled": {
+    "description": "Aktiviert oder deaktiviert Funktionalität von Automaten.",
+    "label": "Automaten aktiviert"
+   },
+   "VendingItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler-Automaten im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Automat-Gegenstandsmenge"
+   },
+   "VendingResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händler-Automaten zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Automaten"
+   },
+   "WalkSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Gehen an.",
+    "label": "Gehgeschwindigkeit"
+   },
+   "WorkstationCrafting": {
+    "description": "Ja erlaubt Fertigung an Arbeitsstationen. Nein erlaubt nur Rucksackfertigung.",
+    "label": "Arbeitsstationsfertigung"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Erlaubt das Erscheinen von funktionstüchtigen Arbeitsstationen in der Welt. Gilt für neue Navezgane oder RWG-Kartengenerierung.",
+    "label": "Arbeitsstationen in der Wildnis"
+   },
+   "XPMultiplier": {
+    "description": "Multiplikator, der auf alle gesammelten Erfahrungspunkte angewendet wird.",
+    "label": "EP-Multiplikator"
+   },
+   "ZombieBMMove": {
+    "description": "Bestimmt die Bewegungsgeschwindigkeit der Zombies während Blutmond-Horden und Stürmen.",
+    "label": "Blutmond-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von wilden Zombies fest.",
+    "label": "Wild-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralSense": {
+    "description": "Wie gut Zombies Spieler sehen oder hören können.",
+    "label": "Wild-Zombie-Gespür"
+   },
+   "ZombieMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies zur Tageszeit fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Tag-Zombiegeschwindigkeit"
+   },
+   "ZombieMoveNight": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies während der Nacht fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Nacht-Zombiegeschwindigkeit"
+   },
+   "ZombieRageChance": {
+    "description": "Chance, dass Zombies den Wut-Modus aktivieren, wenn sie Schaden erleiden.",
+    "label": "Zombie-Wut"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Legt fest, ob Zombies Tierkadaver essen.",
+    "label": "Zombies essen Tiere"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Schwierigkeitsgrad",
+   "Official": "Offiziell"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Standard/Einfach: Die Apokalypse zeigt noch etwas Gnade.",
+    "label": "Abenteurer"
+   },
+   "Almost Creative": {
+    "description": "Die Apokalypse, nur ohne die Apokalypse. Sterben ist nämlich nicht so toll.",
+    "label": "Nahezu kreativ"
+   },
+   "Bite Club": {
+    "description": "In diesem Hardcore-Modus mit permanentem Tod gibt es keine Respawns. Du hast ein Leben, nutze es weise.",
+    "label": "Bite Club"
+   },
+   "Caveman Life": {
+    "description": "Überlebe die Apokalypse mit kaum mehr als einfachen Stöcken.",
+    "label": "Höhlenmenschenleben"
+   },
+   "Chibi Mode": {
+    "description": "Sie sind nicht nur niedlich … Sondern auch noch schnell! Zum Glück bist du selbst nicht so langsam.",
+    "label": "Chibi-Modus!"
+   },
+   "Disaster Film": {
+    "description": "Die Katastrophen kommen schneller als du sie lösen kannst.",
+    "label": "Katastrophenfilm"
+   },
+   "Dumpster Diver": {
+    "description": "Aus Müll werden Schätze! Ist kein Horten, wenn du was daraus machst.",
+    "label": "Müllcontainer-Taucher"
+   },
+   "Dying World": {
+    "description": "Die Rohstoffe schwinden und du wirst es bald auch.",
+    "label": "Sterbende Welt"
+   },
+   "Insane": {
+    "description": "Irre: In dieser Apokalypse bereust du jeden Fehler.",
+    "label": "Irre"
+   },
+   "Legacy Survival": {
+    "description": "Überleben alter Schule mit modernen Konsequenzen.",
+    "label": "Klassischer Überlebensmodus"
+   },
+   "Madmoles Mayhem": {
+    "description": "Weniger Vorräte, strenge Strafen und ständiger Druck. Madmole … Das riecht gut!",
+    "label": "Madmoles Chaos"
+   },
+   "Nomad": {
+    "description": "Normal: Deine Entschlossenheit ist stärker als Melasse-Kaffee.",
+    "label": "Nomade"
+   },
+   "Scavenger": {
+    "description": "Anfänger: Die Apokalypse ist ein Kinderspiel und Stützräder gibt es gratis.",
+    "label": "Plünderer"
+   },
+   "Seven days Later": {
+    "description": "Ein moderner, von Filmen inspirierter Modus, mit chaotischen Horden flinker Zombies.",
+    "label": "7 Tage später"
+   },
+   "True Survivalist": {
+    "description": "Brutal: Vermöbelt werden gehört zum Spaß dazu.",
+    "label": "Überlebenskünstler"
+   },
+   "Undead Matinee": {
+    "description": "Ein von Filmklassikern inspirierter Modus mit Fokus auf Nahkampf, der langsamere Zombies, Schwärme von Gegnern und limitierte Munition bietet.",
+    "label": "Matinée der Untoten"
+   },
+   "Warrior": {
+    "description": "Schwierig: Jetzt kommt der Schmerz, aber immerhin ist die Gehirnerschütterung kostenlos.",
+    "label": "Krieger"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Keiner",
+    "1": "Gehen",
+    "2": "Joggen",
+    "3": "Rennen",
+    "4": "Sprinten",
+    "5": "Albtraum"
+   },
+   "AirDropRandomTime": {
+    "0": "Keiner",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "Ganztägig",
+    "6": "Beliebig"
+   },
+   "AirDrops": {
+    "0": "Deaktiviert",
+    "1": "Jeden Tag",
+    "2": "1-3 Tage",
+    "3": "3 Tage",
+    "4": "3-7 Tage",
+    "5": "7 Tage",
+    "6": "1-7 Tage"
+   },
+   "ApiaryInput": {
+    "0": "Keiner"
+   },
+   "BackpackCrafting": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Begrenzt",
+    "3": "Nur Werkbank"
+   },
+   "BarterValues": {
+    "0": "Keiner"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Keiner",
+    "1": "Standard",
+    "2": "Sehr niedrig",
+    "3": "Niedrig",
+    "4": "Mittel",
+    "5": "Hoch",
+    "6": "Sehr hoch"
+   },
+   "BloodMoonCount": {
+    "0": "4 Feinde",
+    "1": "6 Feinde",
+    "2": "8 Feinde",
+    "3": "10 Feinde",
+    "4": "12 Feinde",
+    "5": "16 Feinde",
+    "6": "24 Feinde",
+    "7": "32 Feinde",
+    "8": "64 Feinde"
+   },
+   "BloodMoonFrequency": {
+    "0": "Deaktiviert",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "8 Tage",
+    "9": "9 Tage",
+    "10": "10 Tage",
+    "11": "14 Tage",
+    "12": "20 Tage",
+    "13": "30 Tage"
+   },
+   "BloodMoonRange": {
+    "0": "0 Tage",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "7 Tage",
+    "6": "10 Tage",
+    "7": "14 Tage",
+    "8": "20 Tage"
+   },
+   "BloodMoonWarning": {
+    "0": "Deaktiviert",
+    "1": "Morgen",
+    "2": "Abend"
+   },
+   "Celebrate": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Kopftreffer"
+   },
+   "CropGrowthSpeed": {
+    "0": "Keiner",
+    "1": "Sofort"
+   },
+   "DamageValues": {
+    "0": "Keiner"
+   },
+   "DayLightLength": {
+    "0": "Immer Nacht",
+    "10": "Immer Tag"
+   },
+   "DeathPenalty": {
+    "0": "Keiner",
+    "1": "Nur EP",
+    "2": "Verletzt",
+    "3": "Endgültiger Tod"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Keiner",
+    "1": "Haltbarkeit",
+    "2": "Max. Haltbarkeit",
+    "3": "Beide"
+   },
+   "DewCollectorInput": {
+    "0": "Keiner"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Deaktiviert",
+    "1": "Sehr niedrig",
+    "2": "Niedrig",
+    "3": "Standard",
+    "4": "Hoch",
+    "5": "Sehr hoch"
+   },
+   "DropOnDeath": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene",
+    "6": "Alles löschen"
+   },
+   "DropOnQuit": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "Encumbrance": {
+    "0": "Deaktiviert",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch",
+    "5": "Ganz"
+   },
+   "FullChickenStressEvent": {
+    "0": "Keiner",
+    "1": "Zufall",
+    "2": "Huhn fallen lassen",
+    "3": "Wütendes Huhn",
+    "4": "Zombiehorde",
+    "5": "Mordhühner"
+   },
+   "HeadshotMode": {
+    "0": "Keiner",
+    "1": "Nur Kopftreffer",
+    "2": "Kopftreffer-Finisher"
+   },
+   "JarRefund": {
+    "0": "Keiner"
+   },
+   "JumpStrength": {
+    "0": "Keiner"
+   },
+   "LootAbundanceValues": {
+    "0": "Keiner"
+   },
+   "LootRespawnDays": {
+    "0": "Deaktiviert"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "LowDefaultHigh": {
+    "0": "Sehr niedrig",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch"
+   },
+   "MaxChunkAge": {
+    "0": "Deaktiviert"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Keiner"
+   },
+   "MaxEnemyType": {
+    "0": "Normale",
+    "1": "Starke",
+    "2": "Besondere",
+    "3": "Wilde",
+    "4": "Verstrahlte",
+    "5": "Elite"
+   },
+   "MaxTechType": {
+    "0": "Keiner",
+    "1": "Tech 0",
+    "2": "Tech 1",
+    "3": "Tech 2",
+    "4": "Tech 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Keiner"
+   },
+   "PointsPer": {
+    "0": "Keiner"
+   },
+   "QuestPerDay": {
+    "0": "Unbegrenzt"
+   },
+   "QuestPerTier": {
+    "0": "Keiner"
+   },
+   "RepairTypes": {
+    "0": "Keiner",
+    "1": "Nur reparieren",
+    "2": "Nur kombinieren",
+    "3": "Beide"
+   },
+   "ShowLocationTypes": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Name"
+   },
+   "ShowXP": {
+    "0": "Alle",
+    "1": "Nur Balken",
+    "2": "Nur Benachrichtigungen",
+    "3": "Keiner"
+   },
+   "SlowToFast": {
+    "0": "Standard",
+    "1": "Sehr langsam",
+    "2": "Langsam",
+    "3": "Normal",
+    "4": "Schnell",
+    "5": "Sehr schnell"
+   },
+   "SmeltingType": {
+    "0": "Schmelzer",
+    "1": "Rezepte"
+   },
+   "SpeedValues": {
+    "0": "Keiner"
+   },
+   "StaminaUsage": {
+    "0": "Keiner"
+   },
+   "StarterSkillPoints": {
+    "0": "Keiner"
+   },
+   "StormFrequency": {
+    "0": "Keiner"
+   },
+   "TraderArea": {
+    "0": "Ja",
+    "1": "Sicherbar",
+    "2": "Nicht sicherbar"
+   },
+   "TraderHourPresets": {
+    "0": "Standard",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "BM geschlossen",
+    "6": "Immer offen"
+   },
+   "TraderResetInterval": {
+    "0": "Standard",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "14 Tage"
+   },
+   "XPGain": {
+    "0": "Keiner"
+   },
+   "YesNo": {
+    "0": "Nein",
+    "1": "Ja"
+   },
+   "ZombieFeralSense": {
+    "0": "Deaktiviert",
+    "1": "Tag",
+    "2": "Nacht",
+    "3": "Alle"
+   },
+   "ZombieRageChance": {
+    "0": "Keiner"
+   },
+   "ZombieSpeeds": {
+    "0": "Gehen",
+    "1": "Joggen",
+    "2": "Rennen",
+    "3": "Sprinten",
+    "4": "Albtraum"
+   }
+  }
+ },
+ "v3_2": {
+  "categories": {
+   "Crafting": "Fertigung",
+   "Entities": "Wesen",
+   "General": "Spieler",
+   "Misc": "Divers",
+   "Resources": "Rohstoffe",
+   "Tasks": "Aufgaben",
+   "Traders": "Händler",
+   "World": "Welt"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Aktiviert oder deaktiviert die Geruchswahrnehmung der Zombies und legt fest, wie schnell sich Zombies bewegen, wenn sie einen Geruch wahrnehmen.",
+    "label": "KI-Geruchsmodus"
+   },
+   "AirDropFrequency": {
+    "description": "Zeigt an, wie oft Abwürfe von Vorräten erfolgen.",
+    "label": "Abwurf aus der Luft"
+   },
+   "AirDropMarker": {
+    "description": "Bestimmt, ob existierende Abwürfe aus der Luft auf der Karte und dem Kompass angezeigt werden.",
+    "label": "Abwürfe aus der Luft markieren"
+   },
+   "AirDropRandomTime": {
+    "description": "Legt fest, wann Abwürfe aus der Luft erscheinen. Wähle eine bestimmte Zeit für vorhersehbare Abwürfe aus der Luft oder Beliebig für zufälligen Abwurf.\\n\\nKeine = Der standardmäßige Abwurf zur Mittagszeit.\\nMorgen = 04:00 bis 10:00\\nTag = 10:00 bis 14:00\\nAbend = 15:00 bis 20:00\\nNacht = 20:00 bis 24:00\\nGanztägig = 04:00 bis 20:00",
+    "label": "Varianz bei Abwurf aus der Luft"
+   },
+   "AllowCompass": {
+    "description": "Zeigt den Spieler-Kompass.",
+    "label": "Kompass erlauben"
+   },
+   "AllowMap": {
+    "description": "Aktiviert die Karte im Spiel.",
+    "label": "Karte erlauben"
+   },
+   "AllowScreenMarkers": {
+    "description": "Zeigt Navigationsmarkierungen auf dem Bildschirm. Kartenmarkierungen bleiben sichtbar.",
+    "label": "Bildschirmmarkierungen erlauben"
+   },
+   "AllowZombieDigging": {
+    "description": "Erlaubt Zombies, sich nach unten durch Gelände zu graben. Können trotzdem zur Seite graben.",
+    "label": "Grabende Zombies"
+   },
+   "AmmoLootCount": {
+    "description": "Menge der in Beute gefundenen Munition.",
+    "label": "Munitionsmenge"
+   },
+   "ApiaryInput": {
+    "description": "Legt die Zahl der Blumen fest, die erforderlich sind, um die Honigproduktion zu beginnen.",
+    "label": "Bienenhaus-Eingabe"
+   },
+   "ApiaryOutput": {
+    "description": "Menge des pro Produktionszyklus erzeugten Honigs.",
+    "label": "Bienenhausertrag"
+   },
+   "ApiaryTime": {
+    "description": "Legt die Zeit fest, die das Bienenhaus braucht, um Honig zu produzieren.",
+    "label": "Bienenhauszeit"
+   },
+   "ArmorLootCount": {
+    "description": "Menge der in Beute gefundenen Rüstung und Rüstungsteile.",
+    "label": "Rüstungsmenge"
+   },
+   "BackpackCrafting": {
+    "description": "Bestimmt, welche Gegenstände der Spieler direkt aus dem Rucksack fertigen kann.\\n\\nNein deaktiviert Rucksackfertigung.\\nJa erlaubt Rucksackfertigung.\\nBegrenzt erlaubt Fertigung einer begrenzten Zahl von Rezepten im Rucksack.\\nNur Werkbank erlaubt Fertigung der Werkbank, aber sonst wird nichts im Rucksack gefertigt.",
+    "label": "Rucksackfertigung"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Überschreibt tagsüber die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (tagsüber)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Überschreibt tagsüber die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (tagsüber)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeGSModifier": {
+    "description": "Modifikator des Schwierigkeitsgrads basierend auf Biomen. Schwierigere Biome erhöhen die Gegnerstärke und das Beutestadium über deinen Basisfortschritt hinaus. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Spielstufe"
+   },
+   "BiomeLSModifier": {
+    "description": "Beutestadium-Multiplikator angewandt pro Biom. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Beutestadium"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Überschreibt nachts die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (nachts)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (nachts)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Überschreibt nachts die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (nachts)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (nachts)"
+   },
+   "BiomeProgression": {
+    "description": "Aktiviert oder deaktiviert Biomgefahren. Wetter und Stürme sind von dieser Einstellung nicht betroffen.",
+    "label": "Biomfortschritt"
+   },
+   "BlockDamage": {
+    "description": "Wie viel Blockschaden Spieler verursachen.",
+    "label": "Blockschaden"
+   },
+   "BlockDamageAI": {
+    "description": "Wie viel Blockschaden Feinde verursachen.",
+    "label": "Feind-Blockschaden"
+   },
+   "BlockDamageAIBM": {
+    "description": "Feindlicher Blockschaden während eines Blutmondes.",
+    "label": "BM-Blockschaden"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Bestimmt die maximale Menge der Zombies, die pro Spieler während eines Blutmondes lebendig sein können.\\n\\nSpieler in der Nähe teilen die Gruppenobergrenze von max. 30 Zombies. Sollte diese Obergrenze überschritten werden, wird der Schwierigkeitsgrad stattdessen skaliert, indem die Spielstufe erhöht wird. Die weltweite Obergrenze beträgt etwa das 1,9-fache der max. erschienenen Zombies. In niedrigeren Spielstufen kann die Anzahl der erschienenen Zombies reduziert werden.\\n\\nEine Änderung dieser Einstellung hat einen großen Einfluss auf die Leistung.",
+    "label": "Blutmondanzahl"
+   },
+   "BloodMoonFrequency": {
+    "description": "Anzahl der Tage im Spiel zwischen zwei Blutmonden. Deaktiviert = keine Blutmonde.",
+    "label": "Blutmondhäufigkeit"
+   },
+   "BloodMoonRange": {
+    "description": "Anzahl der Tage nach dem Blutmond, in denen das Ereignis eintreten kann.\\n\\nBeispiel: Eine Häufigkeit von 7 plus eine Spanne von 5 würde bedeuten, dass ein Blutmond zwischen Tag 7 und 12 auftreten kann.\\n\\n0 Tage = keine zufällige Häufigkeit.",
+    "label": "Blutmonddauer"
+   },
+   "BloodMoonWarning": {
+    "description": "Legt fest, wann die Blutmondwarnung auf deinem HUD angezeigt wird und die Tageszahl rot wird.",
+    "label": "Blutmondwarnung"
+   },
+   "BookLootCount": {
+    "description": "Legt fest, wie viele Bücher und Baupläne in der Beute gefunden werden.",
+    "label": "Büchermenge"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Macht es möglich, dass vergrabene Quests in den Questlisten der Händler erscheinen. Nein = nur Sehenswürdigkeiten-Quests.",
+    "label": "Vergrabene Quests"
+   },
+   "ChallengesEnabled": {
+    "description": "Aktiviert das Herausforderungssystem im Spiel.",
+    "label": "Herausforderungen"
+   },
+   "ChickenCoopInput": {
+    "description": "Legt die Futtermenge fest, die für den Produktionsstart benötigt wird.",
+    "label": "Hühnerstall-Materialeinsatz"
+   },
+   "ChickenCoopOutput": {
+    "description": "Die Menge an Hühnern, Eiern und Federn, die pro Produktionszyklus erzeugt wird.",
+    "label": "Hühnerstallerträge"
+   },
+   "ChickenCoopTime": {
+    "description": "Passt die Zeit an, die der Hühnerstall benötigt, um Hühner, Eier und Federn zu produzieren.",
+    "label": "Hühnerstall-Zeit"
+   },
+   "CraftingInput": {
+    "description": "Benötigte Materialmenge für die Fertigung (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungskosten"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Legt fest, wie viele Handwerkszeitschriften in der Beute gefunden werden.",
+    "label": "Zeitschriftenmenge"
+   },
+   "CraftingMaxTier": {
+    "description": "Höchste Qualität gefertigter Gegenstände.",
+    "label": "Max. Fertigungsqualität"
+   },
+   "CraftingOutput": {
+    "description": "Anzahl der pro Fertigung hergestellten Gegenstände (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungsertrag"
+   },
+   "CraftingProgression": {
+    "description": "Aktivere oder deaktiviere den Fertigungsfortschritt basierend auf Magazinen oder Bauplänen.",
+    "label": "Fertigungsfortschritt"
+   },
+   "CraftingTime": {
+    "description": "Erforderliche Zeit für die Fertigung von Gegenständen.",
+    "label": "Fertigungstimer"
+   },
+   "CropGrowthSpeed": {
+    "description": "Legt die Wachstumsgeschwindigkeit von Feldfrüchten und Bäumen fest, die Spieler gepflanzt haben. Ein höherer Prozentsatz führt zu einer längeren Wachstumszeit. Hinweis: Bei existierenden Spielständen müssen Feldfrüchte neu gepflanzt werden, um die Änderungen anzuwenden.",
+    "label": "Pflanzenwachstum"
+   },
+   "CropOutput": {
+    "description": "Legt die Menge der Rohstoffe fest, die aus wilden und von Spielern angebauten Feldfrüchten erhalten werden. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Ernteerträge"
+   },
+   "CrouchRunSpeed": {
+    "description": "Legt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Rennen fest.",
+    "label": "Kriechen-Rennen-Geschwindigkeit"
+   },
+   "CrouchSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Gehen an.",
+    "label": "Kriechgeschwindigkeit"
+   },
+   "DayLightLength": {
+    "description": "Zeigt an, wie viele Stunden die Sonne jeden Tag im Spiel scheint. Immer Nacht und Immer Tag funktionieren wie erwartet. Dauer des Tageslichts:\\n\\n4= 10:00 bis 14:00\\n6 = 09:00 bis 15:00\\n8 = 08:00 bis 16:00\\n10 = 07:00 bis 17:00\\n12 = 06:00 bis 18:00\\n14= 05:00 bis 19:00\\n16 = 04:00 bis 20:00\\n18 = 04:00 bis 22:00\\n20 = 02:00 bis 22:00",
+    "label": "Dauer des Tageslichts"
+   },
+   "DayNightLength": {
+    "description": "Wie viele Minuten in der realen Welt vergehen, bis im Spiel 24 Stunden vergangen sind.",
+    "label": "24-Stunden-Zyklus"
+   },
+   "DeathPenalty": {
+    "description": "Nach dem Tod angewendeter Malus.\\n\\nNichts = Kein Malus.\\nNur EP = Standard-EP-Defizit.\\nVerletzt = Behält einige Debuffs und erhält nach dem Wiedererscheinen nur 50 % Wasser und Nahrung.\\nEndgültiger Tod = Setzt den Fortschritt des Spielers komplett zurück.",
+    "label": "Todesmalus"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Wenn Todesabnutzung aktiv ist, bestimmt diese Einstellung den Prozentsatz verlorener Haltbarkeit beim Tod.",
+    "label": "Menge der Todesabnutzung"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Legt fest, ob Gegenstände beim Tod Haltbarkeit verlieren.\\n\\nKeine = kein Verlust.\\nHaltbarkeit = Verringert die aktuelle Haltbarkeit, kann repariert werden.\\nMax. Haltbarkeit = Verringert max. Haltbarkeit, senkt Reparaturobergrenze.\\nBeide = Gegenstände verlieren aktuelle und max. Haltbarkeit.",
+    "label": "Todesabnutzung"
+   },
+   "DewCollectorInput": {
+    "description": "Legt die Zahl der Krüge fest, die erforderlich sind, um die Tausammlung zu beginnen.",
+    "label": "Tausammler-Eingabe"
+   },
+   "DewCollectorOutput": {
+    "description": "Die Wassermenge, die der Tausammler pro Zyklus generiert.",
+    "label": "Tausammlerertrag"
+   },
+   "DewCollectorTime": {
+    "description": "Legt die Zeit fest, die der Tausammler braucht, um Wasser zu produzieren.",
+    "label": "Tausammlerzeit"
+   },
+   "DrinkLootCount": {
+    "description": "Menge der in Behältern gefundenen Getränke.",
+    "label": "Getränkemenge"
+   },
+   "DropOnDeath": {
+    "description": "Welche Gegenstände beim Tod fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nNur Werkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nNur Rucksack = Du lässt die Gegenstände in deinem Rucksack fallen.\\nAlles löschen = Lösche alle Gegenstände.",
+    "label": "Fallenlassen bei Tod"
+   },
+   "DropOnQuit": {
+    "description": "Welche Gegenstände beim Verlassen fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nWerkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nRucksack = Du lässt die Gegenstände in deinem Rucksack fallen.",
+    "label": "Fallenlassen bei verlassen des Spiels"
+   },
+   "DukesLootCount": {
+    "description": "Menge der in Beute gefundenen Duke-Jetons und altem Geld.",
+    "label": "Währungsmenge"
+   },
+   "ElectricalOutput": {
+    "description": "Legt fest, wie viel elektrische Leistung produziert wird.",
+    "label": "Elektrische Leistung"
+   },
+   "EncumbranceModifier": {
+    "description": "Bestimmt die Zahl der Überlastungsplätze im Rucksack. Werte reichen von Deaktiviert (keine Überlastung) bis Voll (maximale Überlastung). Standard verwendet XML-Konfigurationswerte.",
+    "label": "Überbelastungsplätze"
+   },
+   "EnemySpawnMode": {
+    "description": "Aktiviere oder deaktiviere Erscheinen der Gegner.",
+    "label": "Erscheinen der Gegner"
+   },
+   "EntityDamage": {
+    "description": "Bestimmt, wie viel Schaden Gegner bei Spielern verursachen. Stapelt sich mit anderem eingehenden Schaden, den Spieler erleiden.",
+    "label": "Schaden durch Gegner"
+   },
+   "EntityIncomingDamage": {
+    "description": "Schaden, den Wesen wie Gegner und Tiere durch Spieler erleiden.",
+    "label": "Erlittener Wesen-Schaden"
+   },
+   "FoodLootCount": {
+    "description": "Menge der in Behältern gefundenen Nahrung.",
+    "label": "Nahrungsmenge"
+   },
+   "FullChickenStressEvent": {
+    "description": "Aktiviert ein Ereignis, wenn festgehaltene Hühner 100 % Stress erreichen. „Keine“ deaktiviert Ereignisse, „Zufällig“ wählt eines der folgenden Ereignisse zufällig aus.\\n\\nHuhn fallen lassen = Dein Huhn entkommt deinem Griff.\\nWütendes Huhn = Dein Huhn wendet sich gegen dich.\\nZombiehorde = Der Stress deines Huhns beschwört eine Zombiehorde.\\nMordhühner = Wütende Hühner verbünden sich gegen dich.",
+    "label": "Event „Stress des Huhns“"
+   },
+   "GlobalGSModifier": {
+    "description": "Legt die Gegnerarten, Skalierung des Schwierigkeitsgrads, Beutequalität und Blutmond-Intensität basierend auf deinem Level und überlebten Tagen fest. Höhere Werte erhöhen den Schwierigkeitsgrad. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globale Spielstufe"
+   },
+   "GlobalLSModifier": {
+    "description": "Globaler Multiplikator angewandt auf das Spieler-Beutestadium. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Beutestadium"
+   },
+   "GlobalLootCount": {
+    "description": "Passt global die Gesamtmenge der Beute an, die in der Welt gefunden werden kann. „Keine“ deaktiviert die gesamte Beute, einschließlich fallengelassener Zombietaschen und Versorgungskisten.",
+    "label": "Beutemenge"
+   },
+   "GlobalTSModifier": {
+    "description": "Globaler Modifikator des Fortschritts des Händlerstadiums. Legt die Qualität und Vielfalt der Gegenstände fest, die Händler anbieten. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Händlerstadium"
+   },
+   "HarvestingOutput": {
+    "description": "Bestimmt die Menge an Rohstoffen, die beim Abbauen von Blöcken und beim Sammeln von Gegenständen gewonnen wird. Hat keinen Einfluss auf Erze, Samen oder Feldfrüchte. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Rohstoffertrag"
+   },
+   "HeadshotMode": {
+    "description": "Bestimmt, wie sich Kopftrefferschaden auswirkt.\\n\\nNur Kopftreffer = Gegner erleiden nur durch Kopftreffer Schaden.\\nKopftreffer-Finisher: Körpertreffer verursachen Schaden, aber nur Kopftreffer können sie erledigen.\\n\\nGilt nicht für passive Tiere.",
+    "label": "Kopftreffer-Modus"
+   },
+   "HeadshotMultiplier": {
+    "description": "Der Multiplikator angewendet auf den Kopftrefferschaden von Spielern bei Wesen.",
+    "label": "Kopftreffer-Multiplikator"
+   },
+   "HeatMapSensitivity": {
+    "description": "Bestimmt, wie sich Spieleraktivität auf die Wärme auswirkt. Größere Wärme bedeutet höhere Chancen auf Schreier-Spawns. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Wärmebild-Empfindlichkeit"
+   },
+   "HungerMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Nahrung verbrauchen. Höhere Werte erhöhen den Nahrungsverbrauch.",
+    "label": "Hunger-Multiplikator"
+   },
+   "IncomingDamage": {
+    "description": "Wie viel Schaden der Spieler aus allen Quellen erleidet.",
+    "label": "Erlittener Spielerschaden"
+   },
+   "InfectionChance": {
+    "description": "Erhöht oder verringert die Infektionschance des Spielers.",
+    "label": "Infektionschance"
+   },
+   "InfectionRate": {
+    "description": "Passt an, wie schnell Infektionen fortschreiten.",
+    "label": "Infektionsrate"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Aktiviert die mehrphasige Einführungsherausforderung für neue Spieler.",
+    "label": "Einführungsherausforderungen"
+   },
+   "IntroQuestEnabled": {
+    "description": "Überspringe die Einführungsquest mit den vergrabenen Vorräten, um auf den vollen Questfortschritt zuzugreifen.",
+    "label": "Einführungsquest"
+   },
+   "ItemDegradation": {
+    "description": "Wie schnell Waffen und Werkzeug Haltbarkeit verlieren. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Abnutzung von Gegenständen"
+   },
+   "JarRefund": {
+    "description": "Chance der Rückerstattung für Krüge nach dem Verzehr eines Gegenstands.",
+    "label": "Krug-Rückerstattung"
+   },
+   "JumpStrength": {
+    "description": "Modifiziert die Sprunghöhe des Spielers.",
+    "label": "Sprungstärke"
+   },
+   "LootBagChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Gegner beim Tod Beutetaschen fallenlassen.",
+    "label": "Fallengelassene Beutetaschen"
+   },
+   "LootMaxTier": {
+    "description": "Legt die höchste Qualität von Waffen und Gegenständen fest, die in Beute erscheinen können.",
+    "label": "Max. Beutequalität"
+   },
+   "LootRespawnDays": {
+    "description": "Die Anzahl an Tagen im Spiel, bis Beutebehälter in nicht besuchten Gebieten zurückgesetzt werden.",
+    "label": "Tage bis zum Wiedererscheinen von Beute"
+   },
+   "LootTimer": {
+    "description": "Zeigt an, wie lange das Öffnen von Behältern mit Beute dauert.",
+    "label": "Beute-Timer"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Legt die Zahl der zufälligen verlorenen Gegenstände beim Tod fest.",
+    "label": "Verlustmenge bei Tod"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Legt fest, welche Gegenstände beim Tod verloren gehen.\\n\\nKeine = Nichts\\nAlle = Alle Gegenstände.\\nWerkzeuggürtel = Nur Werkzeuggürtel-Gegenstände.\\nRucksack = Nur Rucksack-Gegenstände.\\nAusrüstung = Getragene Rüstung und Kleidung.\\nNur getragene = Gegenstände aus Werkzeuggürtel und Rucksack.",
+    "label": "Verlust bei Tod"
+   },
+   "MaxDegradationAmount": {
+    "description": "Legt den Grad der Abnutzung bei der Reparatur eines Gegenstands fest.",
+    "label": "Reparaturabnutzung"
+   },
+   "MaxEnemyTier": {
+    "description": "Höchste Stufe von Zombiearten, die erscheinen können.",
+    "label": "Max. Gegnerstufe"
+   },
+   "MaxTechType": {
+    "description": "Legt global die höchste verfügbare Technologieart für Waffen und Gegenstände fest, was erlaubt, den Fortschritt und den Spielfluss zu steuern. Siehe Beispiele unten.\\n\\nTech 0 = Stein und Rohr\\nTech 1 = Eisen und AK\\nTech 2 = Stahl und Taktisches Sturmgewehr\\nTech 3 = Erdbohrer und M60",
+    "label": "Max. Technologiearten"
+   },
+   "MedicalLootCount": {
+    "description": "Menge der in Beute gefundenen medizinischen Vorräte.",
+    "label": "Medizinmenge"
+   },
+   "MeleeDamage": {
+    "description": "Mit Nahkampfwaffen und Werkzeugen durch den Spieler verursachter Schaden.",
+    "label": "Nahkampfschaden"
+   },
+   "MeleeLootCount": {
+    "description": "Menge der in Beute gefundenen Nahkampfwaffen und Teile.",
+    "label": "Nahkampfmenge"
+   },
+   "MiningOutput": {
+    "description": "Bestimmt die Menge an Erz, die beim Bergbau gewonnen wird. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Bergbauertrag"
+   },
+   "NewbieCoat": {
+    "description": "Wenn aktiv, erscheinen neue Spieler mit einem Anfänger-Schutz-Buff.",
+    "label": "Buff für neue Spieler"
+   },
+   "POIQuestsEnabled": {
+    "description": "Macht es möglich, dass Sehenswürdigkeiten-Quests in den Questlisten der Händler erscheinen. Nein = nur vergrabene Quests.",
+    "label": "Sehenswürdigkeiten-Quests"
+   },
+   "POITierLSModifier": {
+    "description": "Beutestadium-Multiplikator basierend auf Sehenswürdigkeit-Stufe. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Sehenswürdigkeit-Beutestadium"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Bestimmt, ob Gesundheit und Ausdauer mit jedem Level steigen.",
+    "label": "Wertebonus pro Level"
+   },
+   "PointsPerMagazine": {
+    "description": "Der durch das Lesen von Fachzeitschriften erhaltene Fortschritt.",
+    "label": "Magazinfortschritt"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Begrenzt die Anzahl der täglichen Quests, die zum Händlerfortschritt zählen. Zusätzliche Quests gewähren weiterhin EP und Belohnungen, aber zählen nicht zum Stufenfortschritt des Händlers.",
+    "label": "Quests pro Tag"
+   },
+   "QuestsEnabled": {
+    "description": "Aktiviert oder deaktiviert Quests in deinem Spiel.",
+    "label": "Quests"
+   },
+   "QuestsPerTier": {
+    "description": "Die Zahl abgeschlossener Quests, die nötig ist, um die nächste Stufe freizuschalten. Höhere Werte verlangsamen den Fortschritt zwischen Stufen. Keine = kein Limit und erlaubt Zugriff auf alle Quest-Stufen.",
+    "label": "Quests pro Stufe"
+   },
+   "RangedDamage": {
+    "description": "Mit Bogen, Schusswaffen und anderen Fernkampfwaffen durch den Spieler verursachter Schaden.",
+    "label": "Fernkampfschaden"
+   },
+   "RangedLootCount": {
+    "description": "Menge der in Beute gefundenen Fernkampfwaffen und Teile.",
+    "label": "Fernkampfmenge"
+   },
+   "RepairTypes": {
+    "description": "Legt fest, wie Gegenstände repariert werden:\\n\\nKeine = Keine Reparatur\\nNur Reparatur = Nur Reparaturkits\\nNur kombinieren = Reparatur mit der Kombinationsstation\\nBeide = Reparaturkits und Kombinationsstation",
+    "label": "Reparaturmethode"
+   },
+   "ResourceLootCount": {
+    "description": "Menge der in Beute gefundenen Rohstoffgegenstände.",
+    "label": "Rohstoffmenge"
+   },
+   "RunSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Laufen an.",
+    "label": "Laufgeschwindigkeit"
+   },
+   "ScrappingOutput": {
+    "description": "Erhaltene Menge beim Zerlegen von Gegenständen.",
+    "label": "Zerlegungsertrag"
+   },
+   "SeedDropOutput": {
+    "description": "Die Menge der Samen, die bei der Ernte von Feldfrüchten erhalten wird, die Spieler gepflanzt haben. Hat keinen Einfluss auf die Chance, dass Samen fallen gelassen werden oder auf Samen von Bäumen.",
+    "label": "Samenertrag"
+   },
+   "ShowDayTime": {
+    "description": "Zeigt Tag- und Zeitinformationen auf dem Bildschirm an. Auf Nein gesetzt, wird die Blutmond-Warnung ebenfalls deaktiviert.",
+    "label": "Tag/Zeit anzeigen"
+   },
+   "ShowEnemyDamage": {
+    "description": "Zeigt schwebende Schadenszahlen, wenn Wesen getroffen werden.",
+    "label": "Wesen-Schaden anzeigen"
+   },
+   "ShowHealthBars": {
+    "description": "Wesen-Gesundheitsbalken zeigen oder verbergen.",
+    "label": "Wesen-Gesundheitsbalken"
+   },
+   "ShowLocationInfo": {
+    "description": "Zeigt Namen und Schwierigkeitsgrad von Biomen und Sehenswürdigkeiten.",
+    "label": "Ortsinformationen anzeigen"
+   },
+   "ShowXP": {
+    "description": "EP-Leiste und EP-Pop-up-Fenster verbergen oder zeigen.",
+    "label": "EP anzeigen"
+   },
+   "SillyBigHeads": {
+    "description": "Aktiviert den „Riesenköpfe-Modus“ bei Zombies, Tieren und Händlern.",
+    "label": "Riesenköpfe"
+   },
+   "SillyBlackandWhite": {
+    "description": "Aktiviert eine klassische Graustufen-Farbgebung inspiriert von Horror-Klassikern der 1960er.",
+    "label": "Schwarzweiß"
+   },
+   "SillyCelebrate": {
+    "description": "Aktiviert die feierlichen Konfetti-Partikel bei Wesen-Kills. Die Option „Nur Kopftreffer“ löst Konfetti nur bei Kills durch Kopfschüsse aus; Körpertreffer bei Tieren zum Fleischsammeln sind weiterhin möglich. „Nur Kopftreffer“ gilt nicht für passive Tiere.",
+    "label": "Kill-Konfetti"
+   },
+   "SillyLowGravity": {
+    "description": "Legt die Stärke der Schwerkraft im Spiel fest.",
+    "label": "Schwerkraft"
+   },
+   "SillySounds": {
+    "description": "Aktiviert humorvolle Geräusche für Aktionen im Spiel.",
+    "label": "Klamauk"
+   },
+   "SillyTinyZombies": {
+    "description": "Aktiviert kleiner Versionen der Zombies.",
+    "label": "Winzige Zombies"
+   },
+   "SkillGainRate": {
+    "description": "Passt an, wie viele Level nötig sind, um Fertigkeitspunkte zu erhalten.",
+    "label": "Fertigkeit-Erhaltrate"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Bestimmt, wie viele Fertigkeitspunkte beim Erhalt von Fertigkeitspunkten gewährt werden.",
+    "label": "Fertigkeit-Erhaltmenge"
+   },
+   "SmeltingType": {
+    "description": "Legt fest, wie die Schmiedefertigung funktioniert. Schmelze Gegenstände in der Schmiede oder fertige sie direkt mit Rohstoffen aus deinem Rucksack.",
+    "label": "Schmelzart"
+   },
+   "StackSizeMultiplier": {
+    "description": "Multiplikator, der auf die Stapelgröße aller stapelbaren Gegenstände angewendet wird. Die maximale Stapelgröße beträgt 30.000.",
+    "label": "Stapelgröße-Multiplikator"
+   },
+   "StaminaRegen": {
+    "description": "Bestimmt die Rate der Ausdauerwiederherstellung. Werte sind nicht exakt.",
+    "label": "Ausdauerwiederherstellung"
+   },
+   "StaminaUsage": {
+    "description": "Ausdauerkosten für Aktionen wie Laufen, Springen und Angreifen. Werte sind nicht exakt.",
+    "label": "Ausdauerverbrauch"
+   },
+   "StarterSkillPoints": {
+    "description": "Die Zahl der Fertigkeitspunkte, die nach Abschluss der Einführungsherausforderungen oder, wenn die Einführungsherausforderungen deaktiviert sind, zum Spielstart gewährt werden.",
+    "label": "Basis-Fertigkeitspunkte"
+   },
+   "StormFreq": {
+    "description": "Passt die Sturmhäufigkeit an. Keine bedeutet keine Stürme.",
+    "label": "Sturmhäufigkeit"
+   },
+   "StormWarning": {
+    "description": "Legt fest, ob der Spieler die Sturmsirene hört und die Sturmwarnung auf dem Bildschirm sieht.",
+    "label": "Sturmwarnung"
+   },
+   "TemperatureSurvival": {
+    "description": "Bestimmt, ob sich die Umgebungstemperatur (heiß und kalt) auf Spieler auswirkt.",
+    "label": "Temperatur im Überlebensmodus"
+   },
+   "TerrainDamage": {
+    "description": "Wie viel Schaden Spieler bei Gelände verursachen.",
+    "label": "Geländeschaden"
+   },
+   "ThirstMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Wasser verbrauchen. Höhere Werte erhöhen den Wasserverbrauch.",
+    "label": "Durst-Multiplikator"
+   },
+   "TraderBuyLimit": {
+    "description": "Maximale Anzahl jedes Gegenstands, die der Händler kauft, bevor er weitere ablehnt. Niedrigere Werte begrenzen, wie viel du pro Wiederauffüllen-Zyklus verkaufen kannst.",
+    "label": "Händler-Kauflimit"
+   },
+   "TraderBuyPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler von Händlern kaufen.",
+    "label": "Kaufpreis"
+   },
+   "TraderDialog": {
+    "description": "Sprachausgabe und Bildschirm-Dialoge des Händlers an/aus.",
+    "label": "Händlerdialog"
+   },
+   "TraderHours": {
+    "description": "Legt die Geschäftszeiten der Händler fest. 24-Stunden-Zyklus und Dauer des Tageslichts haben keinen Einfluss auf diese Einstellung. „BM geschlossen“ bedeutet, dass der Laden nur während des Blutmondes schließt. Standard verwendet XML-Konfigurationswerte..\\n\\nXML-Standard = 04:00 bis 22:00\\n       Morgen = 04:00 bis 12:00\\n       Tag = 10:00 bis 18:00\\n       Abend = 16:00 bis 22:00\\n           Nacht = 22:00 bis 04:00",
+    "label": "Händlerzeiten"
+   },
+   "TraderItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Händler-Gegenstandsmenge"
+   },
+   "TraderMaxTier": {
+    "description": "Legt die höchste Qualität fest, die Händler im Angebot haben.",
+    "label": "Max. Qualität bei Händlern"
+   },
+   "TraderProtection": {
+    "description": "Legt Schadensschutz für Händlergelände fest und bestimmt, ob Spieler das Gebiet sichern können.",
+    "label": "Händlerschutz"
+   },
+   "TraderResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händlern zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Händlern"
+   },
+   "TraderSellPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler Händlern verkaufen.",
+    "label": "Verkaufspreis"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Aktivieren, um Quests von anderen Händlern zu erhalten.",
+    "label": "Handelsrouten"
+   },
+   "TradersEnabled": {
+    "description": "Aktiviert den Handel mit NPC-Händlern.",
+    "label": "Handel aktiviert"
+   },
+   "TreasureMapChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Schatzkarten in Behältern mit Beute und gegnerischen Beutetaschen erscheinen.",
+    "label": "Chance auf Schatzkarten"
+   },
+   "VehicleBlockDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Blöcken verursachen.",
+    "label": "Blockschaden durch Fahrzeuge"
+   },
+   "VehicleEntityDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Wesen verursachen.",
+    "label": "Wesen-Schaden durch Fahrzeuge"
+   },
+   "VehicleFuelUsage": {
+    "description": "Legt den Brennstoffverbraucht von Fahrzeugen fest.",
+    "label": "Fahrzeug-Brennstoffverbrauch"
+   },
+   "VehicleSelfDamage": {
+    "description": "Wie viel Schaden Fahrzeuge durch Kollisionen erleiden.",
+    "label": "Fahrzeug-Selbstschaden"
+   },
+   "VendingEnabled": {
+    "description": "Aktiviert oder deaktiviert Funktionalität von Automaten.",
+    "label": "Automaten aktiviert"
+   },
+   "VendingItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler-Automaten im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Automat-Gegenstandsmenge"
+   },
+   "VendingResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händler-Automaten zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Automaten"
+   },
+   "WalkSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Gehen an.",
+    "label": "Gehgeschwindigkeit"
+   },
+   "WorkstationCrafting": {
+    "description": "Ja erlaubt Fertigung an Arbeitsstationen. Nein erlaubt nur Rucksackfertigung.",
+    "label": "Arbeitsstationsfertigung"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Erlaubt das Erscheinen von funktionstüchtigen Arbeitsstationen in der Welt. Gilt für neue Navezgane oder RWG-Kartengenerierung.",
+    "label": "Arbeitsstationen in der Wildnis"
+   },
+   "XPMultiplier": {
+    "description": "Multiplikator, der auf alle gesammelten Erfahrungspunkte angewendet wird.",
+    "label": "EP-Multiplikator"
+   },
+   "ZombieBMMove": {
+    "description": "Bestimmt die Bewegungsgeschwindigkeit der Zombies während Blutmond-Horden und Stürmen.",
+    "label": "Blutmond-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von wilden Zombies fest.",
+    "label": "Wild-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralSense": {
+    "description": "Wie gut Zombies Spieler sehen oder hören können.",
+    "label": "Wild-Zombie-Gespür"
+   },
+   "ZombieMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies zur Tageszeit fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Tag-Zombiegeschwindigkeit"
+   },
+   "ZombieMoveNight": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies während der Nacht fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Nacht-Zombiegeschwindigkeit"
+   },
+   "ZombieRageChance": {
+    "description": "Chance, dass Zombies den Wut-Modus aktivieren, wenn sie Schaden erleiden.",
+    "label": "Zombie-Wut"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Legt fest, ob Zombies Tierkadaver essen.",
+    "label": "Zombies essen Tiere"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Schwierigkeitsgrad",
+   "Official": "Offiziell"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Standard/Einfach: Die Apokalypse zeigt noch etwas Gnade.",
+    "label": "Abenteurer"
+   },
+   "Almost Creative": {
+    "description": "Die Apokalypse, nur ohne die Apokalypse. Sterben ist nämlich nicht so toll.",
+    "label": "Nahezu kreativ"
+   },
+   "Bite Club": {
+    "description": "In diesem Hardcore-Modus mit permanentem Tod gibt es keine Respawns. Du hast ein Leben, nutze es weise.",
+    "label": "Bite Club"
+   },
+   "Caveman Life": {
+    "description": "Überlebe die Apokalypse mit kaum mehr als einfachen Stöcken.",
+    "label": "Höhlenmenschenleben"
+   },
+   "Chibi Mode": {
+    "description": "Sie sind nicht nur niedlich … Sondern auch noch schnell! Zum Glück bist du selbst nicht so langsam.",
+    "label": "Chibi-Modus!"
+   },
+   "Disaster Film": {
+    "description": "Die Katastrophen kommen schneller als du sie lösen kannst.",
+    "label": "Katastrophenfilm"
+   },
+   "Dumpster Diver": {
+    "description": "Aus Müll werden Schätze! Ist kein Horten, wenn du was daraus machst.",
+    "label": "Müllcontainer-Taucher"
+   },
+   "Dying World": {
+    "description": "Die Rohstoffe schwinden und du wirst es bald auch.",
+    "label": "Sterbende Welt"
+   },
+   "Insane": {
+    "description": "Irre: In dieser Apokalypse bereust du jeden Fehler.",
+    "label": "Irre"
+   },
+   "Legacy Survival": {
+    "description": "Überleben alter Schule mit modernen Konsequenzen.",
+    "label": "Klassischer Überlebensmodus"
+   },
+   "Madmoles Mayhem": {
+    "description": "Weniger Vorräte, strenge Strafen und ständiger Druck. Madmole … Das riecht gut!",
+    "label": "Madmoles Chaos"
+   },
+   "Nomad": {
+    "description": "Normal: Deine Entschlossenheit ist stärker als Melasse-Kaffee.",
+    "label": "Nomade"
+   },
+   "Scavenger": {
+    "description": "Anfänger: Die Apokalypse ist ein Kinderspiel und Stützräder gibt es gratis.",
+    "label": "Plünderer"
+   },
+   "Seven days Later": {
+    "description": "Ein moderner, von Filmen inspirierter Modus, mit chaotischen Horden flinker Zombies.",
+    "label": "7 Tage später"
+   },
+   "True Survivalist": {
+    "description": "Brutal: Vermöbelt werden gehört zum Spaß dazu.",
+    "label": "Überlebenskünstler"
+   },
+   "Undead Matinee": {
+    "description": "Ein von Filmklassikern inspirierter Modus mit Fokus auf Nahkampf, der langsamere Zombies, Schwärme von Gegnern und limitierte Munition bietet.",
+    "label": "Matinée der Untoten"
+   },
+   "Warrior": {
+    "description": "Schwierig: Jetzt kommt der Schmerz, aber immerhin ist die Gehirnerschütterung kostenlos.",
+    "label": "Krieger"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Keiner",
+    "1": "Gehen",
+    "2": "Joggen",
+    "3": "Rennen",
+    "4": "Sprinten",
+    "5": "Albtraum"
+   },
+   "AirDropRandomTime": {
+    "0": "Keiner",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "Ganztägig",
+    "6": "Beliebig"
+   },
+   "AirDrops": {
+    "0": "Deaktiviert",
+    "1": "Jeden Tag",
+    "2": "1-3 Tage",
+    "3": "3 Tage",
+    "4": "3-7 Tage",
+    "5": "7 Tage",
+    "6": "1-7 Tage"
+   },
+   "ApiaryInput": {
+    "0": "Keiner"
+   },
+   "BackpackCrafting": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Begrenzt",
+    "3": "Nur Werkbank"
+   },
+   "BarterValues": {
+    "0": "Keiner"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Keiner",
+    "1": "Standard",
+    "2": "Sehr niedrig",
+    "3": "Niedrig",
+    "4": "Mittel",
+    "5": "Hoch",
+    "6": "Sehr hoch"
+   },
+   "BloodMoonCount": {
+    "0": "4 Feinde",
+    "1": "6 Feinde",
+    "2": "8 Feinde",
+    "3": "10 Feinde",
+    "4": "12 Feinde",
+    "5": "16 Feinde",
+    "6": "24 Feinde",
+    "7": "32 Feinde",
+    "8": "64 Feinde"
+   },
+   "BloodMoonFrequency": {
+    "0": "Deaktiviert",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "8 Tage",
+    "9": "9 Tage",
+    "10": "10 Tage",
+    "11": "14 Tage",
+    "12": "20 Tage",
+    "13": "30 Tage"
+   },
+   "BloodMoonRange": {
+    "0": "0 Tage",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "7 Tage",
+    "6": "10 Tage",
+    "7": "14 Tage",
+    "8": "20 Tage"
+   },
+   "BloodMoonWarning": {
+    "0": "Deaktiviert",
+    "1": "Morgen",
+    "2": "Abend"
+   },
+   "Celebrate": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Kopftreffer"
+   },
+   "CropGrowthSpeed": {
+    "0": "Keiner",
+    "1": "Sofort"
+   },
+   "DamageValues": {
+    "0": "Keiner"
+   },
+   "DayLightLength": {
+    "0": "Immer Nacht",
+    "10": "Immer Tag"
+   },
+   "DeathPenalty": {
+    "0": "Keiner",
+    "1": "Nur EP",
+    "2": "Verletzt",
+    "3": "Endgültiger Tod"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Keiner",
+    "1": "Haltbarkeit",
+    "2": "Max. Haltbarkeit",
+    "3": "Beide"
+   },
+   "DewCollectorInput": {
+    "0": "Keiner"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Deaktiviert",
+    "1": "Sehr niedrig",
+    "2": "Niedrig",
+    "3": "Standard",
+    "4": "Hoch",
+    "5": "Sehr hoch"
+   },
+   "DropOnDeath": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene",
+    "6": "Alles löschen"
+   },
+   "DropOnQuit": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "Encumbrance": {
+    "0": "Deaktiviert",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch",
+    "5": "Ganz"
+   },
+   "FullChickenStressEvent": {
+    "0": "Keiner",
+    "1": "Zufall",
+    "2": "Huhn fallen lassen",
+    "3": "Wütendes Huhn",
+    "4": "Zombiehorde",
+    "5": "Mordhühner"
+   },
+   "HeadshotMode": {
+    "0": "Keiner",
+    "1": "Nur Kopftreffer",
+    "2": "Kopftreffer-Finisher"
+   },
+   "ItemTierOptions": {
+    "0": "Standard"
+   },
+   "JarRefund": {
+    "0": "Keiner"
+   },
+   "JumpStrength": {
+    "0": "Keiner"
+   },
+   "LootAbundanceValues": {
+    "0": "Keiner"
+   },
+   "LootRespawnDays": {
+    "0": "Deaktiviert"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "LowDefaultHigh": {
+    "0": "Sehr niedrig",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch"
+   },
+   "MaxChunkAge": {
+    "0": "Deaktiviert"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Keiner"
+   },
+   "MaxEnemyType": {
+    "0": "Normale",
+    "1": "Starke",
+    "2": "Besondere",
+    "3": "Wilde",
+    "4": "Verstrahlte",
+    "5": "Elite"
+   },
+   "MaxTechType": {
+    "0": "Keiner",
+    "1": "Tech 0",
+    "2": "Tech 1",
+    "3": "Tech 2",
+    "4": "Tech 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Keiner"
+   },
+   "PointsPer": {
+    "0": "Keiner"
+   },
+   "QuestPerDay": {
+    "0": "Unbegrenzt"
+   },
+   "QuestPerTier": {
+    "0": "Keiner"
+   },
+   "RepairTypes": {
+    "0": "Keiner",
+    "1": "Nur reparieren",
+    "2": "Nur kombinieren",
+    "3": "Beide"
+   },
+   "ShowLocationTypes": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Name"
+   },
+   "ShowXP": {
+    "0": "Alle",
+    "1": "Nur Balken",
+    "2": "Nur Benachrichtigungen",
+    "3": "Keiner"
+   },
+   "SlowToFast": {
+    "0": "Standard",
+    "1": "Sehr langsam",
+    "2": "Langsam",
+    "3": "Normal",
+    "4": "Schnell",
+    "5": "Sehr schnell"
+   },
+   "SmeltingType": {
+    "0": "Schmelzer",
+    "1": "Rezepte"
+   },
+   "SpeedValues": {
+    "0": "Keiner"
+   },
+   "StaminaUsage": {
+    "0": "Keiner"
+   },
+   "StarterSkillPoints": {
+    "0": "Keiner"
+   },
+   "StormFrequency": {
+    "0": "Keiner"
+   },
+   "TraderArea": {
+    "0": "Ja",
+    "1": "Sicherbar",
+    "2": "Nicht sicherbar"
+   },
+   "TraderHourPresets": {
+    "0": "Standard",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "BM geschlossen",
+    "6": "Immer offen"
+   },
+   "TraderResetInterval": {
+    "0": "Standard",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "14 Tage"
+   },
+   "XPGain": {
+    "0": "Keiner"
+   },
+   "YesNo": {
+    "0": "Nein",
+    "1": "Ja"
+   },
+   "ZombieFeralSense": {
+    "0": "Deaktiviert",
+    "1": "Tag",
+    "2": "Nacht",
+    "3": "Alle"
+   },
+   "ZombieRageChance": {
+    "0": "Keiner"
+   },
+   "ZombieSpeeds": {
+    "0": "Gehen",
+    "1": "Joggen",
+    "2": "Rennen",
+    "3": "Sprinten",
+    "4": "Albtraum"
+   }
+  }
+ },
+ "v3_3": {
+  "categories": {
+   "Crafting": "Fertigung",
+   "Entities": "Wesen",
+   "General": "Spieler",
+   "Misc": "Divers",
+   "Resources": "Rohstoffe",
+   "Tasks": "Aufgaben",
+   "Traders": "Händler",
+   "World": "Welt"
+  },
+  "options": {
+   "AISmellMode": {
+    "description": "Aktiviert oder deaktiviert die Geruchswahrnehmung der Zombies und legt fest, wie schnell sich Zombies bewegen, wenn sie einen Geruch wahrnehmen.",
+    "label": "KI-Geruchsmodus"
+   },
+   "AirDropFrequency": {
+    "description": "Zeigt an, wie oft Abwürfe von Vorräten erfolgen.",
+    "label": "Abwurf aus der Luft"
+   },
+   "AirDropMarker": {
+    "description": "Bestimmt, ob existierende Abwürfe aus der Luft auf der Karte und dem Kompass angezeigt werden.",
+    "label": "Abwürfe aus der Luft markieren"
+   },
+   "AirDropRandomTime": {
+    "description": "Legt fest, wann Abwürfe aus der Luft erscheinen. Wähle eine bestimmte Zeit für vorhersehbare Abwürfe aus der Luft oder Beliebig für zufälligen Abwurf.\\n\\nKeine = Der standardmäßige Abwurf zur Mittagszeit.\\nMorgen = 04:00 bis 10:00\\nTag = 10:00 bis 14:00\\nAbend = 15:00 bis 20:00\\nNacht = 20:00 bis 24:00\\nGanztägig = 04:00 bis 20:00",
+    "label": "Varianz bei Abwurf aus der Luft"
+   },
+   "AllowCompass": {
+    "description": "Zeigt den Spieler-Kompass.",
+    "label": "Kompass erlauben"
+   },
+   "AllowMap": {
+    "description": "Aktiviert die Karte im Spiel.",
+    "label": "Karte erlauben"
+   },
+   "AllowScreenMarkers": {
+    "description": "Zeigt Navigationsmarkierungen auf dem Bildschirm. Kartenmarkierungen bleiben sichtbar.",
+    "label": "Bildschirmmarkierungen erlauben"
+   },
+   "AllowZombieDigging": {
+    "description": "Erlaubt Zombies, sich nach unten durch Gelände zu graben. Können trotzdem zur Seite graben.",
+    "label": "Grabende Zombies"
+   },
+   "AmmoLootCount": {
+    "description": "Menge der in Beute gefundenen Munition.",
+    "label": "Munitionsmenge"
+   },
+   "ApiaryInput": {
+    "description": "Legt die Zahl der Blumen fest, die erforderlich sind, um die Honigproduktion zu beginnen.",
+    "label": "Bienenhaus-Eingabe"
+   },
+   "ApiaryOutput": {
+    "description": "Menge des pro Produktionszyklus erzeugten Honigs.",
+    "label": "Bienenhausertrag"
+   },
+   "ApiaryTime": {
+    "description": "Legt die Zeit fest, die das Bienenhaus braucht, um Honig zu produzieren.",
+    "label": "Bienenhauszeit"
+   },
+   "ArmorLootCount": {
+    "description": "Menge der in Beute gefundenen Rüstung und Rüstungsteile.",
+    "label": "Rüstungsmenge"
+   },
+   "BackpackCrafting": {
+    "description": "Bestimmt, welche Gegenstände der Spieler direkt aus dem Rucksack fertigen kann.\\n\\nNein deaktiviert Rucksackfertigung.\\nJa erlaubt Rucksackfertigung.\\nBegrenzt erlaubt Fertigung einer begrenzten Zahl von Rezepten im Rucksack.\\nNur Werkbank erlaubt Fertigung der Werkbank, aber sonst wird nichts im Rucksack gefertigt.",
+    "label": "Rucksackfertigung"
+   },
+   "BiomeDayAnimalDensity": {
+    "description": "Überschreibt tagsüber die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (tagsüber)"
+   },
+   "BiomeDayAnimalRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeDayEnemyDensity": {
+    "description": "Überschreibt tagsüber die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (tagsüber)"
+   },
+   "BiomeDayZombieRespawn": {
+    "description": "Erhöht tagsüber die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (tagsüber)"
+   },
+   "BiomeGSModifier": {
+    "description": "Modifikator des Schwierigkeitsgrads basierend auf Biomen. Schwierigere Biome erhöhen die Gegnerstärke und das Beutestadium über deinen Basisfortschritt hinaus. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Spielstufe"
+   },
+   "BiomeLSModifier": {
+    "description": "Beutestadium-Multiplikator angewandt pro Biom. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Biom-Beutestadium"
+   },
+   "BiomeNightAnimalDensity": {
+    "description": "Überschreibt nachts die Biom-Tierdichte und legt fest, wie viele Tiere in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tierdichte (nachts)"
+   },
+   "BiomeNightAnimalRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Tieren in aktiven Biomen. Beeinflusst passive und aggressive Nahrungsquellen, die keine Zombies sind. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Tier-Wiedererscheinung (nachts)"
+   },
+   "BiomeNightEnemyDensity": {
+    "description": "Überschreibt nachts die Biom-Gegnerdichte und legt fest, wie viele Gegner in jedem Biom erscheinen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegnerdichte (nachts)"
+   },
+   "BiomeNightZombieRespawn": {
+    "description": "Erhöht nachts die Wiedererscheinungsrate von Gegnern in aktiven Biomen. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Gegner-Wiedererscheinung (nachts)"
+   },
+   "BiomeProgression": {
+    "description": "Aktiviert oder deaktiviert Biomgefahren. Wetter und Stürme sind von dieser Einstellung nicht betroffen.",
+    "label": "Biomfortschritt"
+   },
+   "BlockDamage": {
+    "description": "Wie viel Blockschaden Spieler verursachen.",
+    "label": "Blockschaden"
+   },
+   "BlockDamageAI": {
+    "description": "Wie viel Blockschaden Feinde verursachen.",
+    "label": "Feind-Blockschaden"
+   },
+   "BlockDamageAIBM": {
+    "description": "Feindlicher Blockschaden während eines Blutmondes.",
+    "label": "BM-Blockschaden"
+   },
+   "BloodMoonEnemyCount": {
+    "description": "Bestimmt die maximale Menge der Zombies, die pro Spieler während eines Blutmondes lebendig sein können.\\n\\nSpieler in der Nähe teilen die Gruppenobergrenze von max. 30 Zombies. Sollte diese Obergrenze überschritten werden, wird der Schwierigkeitsgrad stattdessen skaliert, indem die Spielstufe erhöht wird. Die weltweite Obergrenze beträgt etwa das 1,9-fache der max. erschienenen Zombies. In niedrigeren Spielstufen kann die Anzahl der erschienenen Zombies reduziert werden.\\n\\nEine Änderung dieser Einstellung hat einen großen Einfluss auf die Leistung.",
+    "label": "Blutmondanzahl"
+   },
+   "BloodMoonFrequency": {
+    "description": "Anzahl der Tage im Spiel zwischen zwei Blutmonden. Deaktiviert = keine Blutmonde.",
+    "label": "Blutmondhäufigkeit"
+   },
+   "BloodMoonRange": {
+    "description": "Anzahl der Tage nach dem Blutmond, in denen das Ereignis eintreten kann.\\n\\nBeispiel: Eine Häufigkeit von 7 plus eine Spanne von 5 würde bedeuten, dass ein Blutmond zwischen Tag 7 und 12 auftreten kann.\\n\\n0 Tage = keine zufällige Häufigkeit.",
+    "label": "Blutmonddauer"
+   },
+   "BloodMoonWarning": {
+    "description": "Legt fest, wann die Blutmondwarnung auf deinem HUD angezeigt wird und die Tageszahl rot wird.",
+    "label": "Blutmondwarnung"
+   },
+   "BookLootCount": {
+    "description": "Legt fest, wie viele Bücher und Baupläne in der Beute gefunden werden.",
+    "label": "Büchermenge"
+   },
+   "BuriedQuestsEnabled": {
+    "description": "Macht es möglich, dass vergrabene Quests in den Questlisten der Händler erscheinen. Nein = nur Sehenswürdigkeiten-Quests.",
+    "label": "Vergrabene Quests"
+   },
+   "ChallengesEnabled": {
+    "description": "Aktiviert das Herausforderungssystem im Spiel.",
+    "label": "Herausforderungen"
+   },
+   "ChickenCoopInput": {
+    "description": "Legt die Futtermenge fest, die für den Produktionsstart benötigt wird.",
+    "label": "Hühnerstall-Materialeinsatz"
+   },
+   "ChickenCoopOutput": {
+    "description": "Die Menge an Hühnern, Eiern und Federn, die pro Produktionszyklus erzeugt wird.",
+    "label": "Hühnerstallerträge"
+   },
+   "ChickenCoopTime": {
+    "description": "Passt die Zeit an, die der Hühnerstall benötigt, um Hühner, Eier und Federn zu produzieren.",
+    "label": "Hühnerstall-Zeit"
+   },
+   "CraftingInput": {
+    "description": "Benötigte Materialmenge für die Fertigung (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungskosten"
+   },
+   "CraftingMagazinesLootCount": {
+    "description": "Legt fest, wie viele Handwerkszeitschriften in der Beute gefunden werden.",
+    "label": "Zeitschriftenmenge"
+   },
+   "CraftingMaxTier": {
+    "description": "Höchste Qualität gefertigter Gegenstände.",
+    "label": "Max. Fertigungsqualität"
+   },
+   "CraftingOutput": {
+    "description": "Anzahl der pro Fertigung hergestellten Gegenstände (Rohstoffpakete ausgeschlossen).",
+    "label": "Fertigungsertrag"
+   },
+   "CraftingProgression": {
+    "description": "Aktivere oder deaktiviere den Fertigungsfortschritt basierend auf Magazinen oder Bauplänen.",
+    "label": "Fertigungsfortschritt"
+   },
+   "CraftingTime": {
+    "description": "Erforderliche Zeit für die Fertigung von Gegenständen.",
+    "label": "Fertigungstimer"
+   },
+   "CropGrowthSpeed": {
+    "description": "Legt die Wachstumsgeschwindigkeit von Feldfrüchten und Bäumen fest, die Spieler gepflanzt haben. Ein höherer Prozentsatz führt zu einer längeren Wachstumszeit. Hinweis: Bei existierenden Spielständen müssen Feldfrüchte neu gepflanzt werden, um die Änderungen anzuwenden.",
+    "label": "Pflanzenwachstum"
+   },
+   "CropOutput": {
+    "description": "Legt die Menge der Rohstoffe fest, die aus wilden und von Spielern angebauten Feldfrüchten erhalten werden. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Ernteerträge"
+   },
+   "CrouchRunSpeed": {
+    "description": "Legt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Rennen fest.",
+    "label": "Kriechen-Rennen-Geschwindigkeit"
+   },
+   "CrouchSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Kriechen und Gehen an.",
+    "label": "Kriechgeschwindigkeit"
+   },
+   "DayLightLength": {
+    "description": "Zeigt an, wie viele Stunden die Sonne jeden Tag im Spiel scheint. Immer Nacht und Immer Tag funktionieren wie erwartet. Dauer des Tageslichts:\\n\\n4= 10:00 bis 14:00\\n6 = 09:00 bis 15:00\\n8 = 08:00 bis 16:00\\n10 = 07:00 bis 17:00\\n12 = 06:00 bis 18:00\\n14= 05:00 bis 19:00\\n16 = 04:00 bis 20:00\\n18 = 04:00 bis 22:00\\n20 = 02:00 bis 22:00",
+    "label": "Dauer des Tageslichts"
+   },
+   "DayNightLength": {
+    "description": "Wie viele Minuten in der realen Welt vergehen, bis im Spiel 24 Stunden vergangen sind.",
+    "label": "24-Stunden-Zyklus"
+   },
+   "DeathPenalty": {
+    "description": "Nach dem Tod angewendeter Malus.\\n\\nNichts = Kein Malus.\\nNur EP = Standard-EP-Defizit.\\nVerletzt = Behält einige Debuffs und erhält nach dem Wiedererscheinen nur 50 % Wasser und Nahrung.\\nEndgültiger Tod = Setzt den Fortschritt des Spielers komplett zurück.",
+    "label": "Todesmalus"
+   },
+   "DegradeAmountOnDeath": {
+    "description": "Wenn Todesabnutzung aktiv ist, bestimmt diese Einstellung den Prozentsatz verlorener Haltbarkeit beim Tod.",
+    "label": "Menge der Todesabnutzung"
+   },
+   "DegradeItemsOnDeath": {
+    "description": "Legt fest, ob Gegenstände beim Tod Haltbarkeit verlieren.\\n\\nKeine = kein Verlust.\\nHaltbarkeit = Verringert die aktuelle Haltbarkeit, kann repariert werden.\\nMax. Haltbarkeit = Verringert max. Haltbarkeit, senkt Reparaturobergrenze.\\nBeide = Gegenstände verlieren aktuelle und max. Haltbarkeit.",
+    "label": "Todesabnutzung"
+   },
+   "DewCollectorInput": {
+    "description": "Legt die Zahl der Krüge fest, die erforderlich sind, um die Tausammlung zu beginnen.",
+    "label": "Tausammler-Eingabe"
+   },
+   "DewCollectorOutput": {
+    "description": "Die Wassermenge, die der Tausammler pro Zyklus generiert.",
+    "label": "Tausammlerertrag"
+   },
+   "DewCollectorTime": {
+    "description": "Legt die Zeit fest, die der Tausammler braucht, um Wasser zu produzieren.",
+    "label": "Tausammlerzeit"
+   },
+   "DrinkLootCount": {
+    "description": "Menge der in Behältern gefundenen Getränke.",
+    "label": "Getränkemenge"
+   },
+   "DropOnDeath": {
+    "description": "Welche Gegenstände beim Tod fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nNur Werkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nNur Rucksack = Du lässt die Gegenstände in deinem Rucksack fallen.\\nAlles löschen = Lösche alle Gegenstände.",
+    "label": "Fallenlassen bei Tod"
+   },
+   "DropOnQuit": {
+    "description": "Welche Gegenstände beim Verlassen fallengelassen werden.\\n\\nNichts = Du lässt nichts fallen.\\nAlles = Du lässt deinen Rucksack und Werkzeuggürtel fallen.\\nWerkzeuggürtel = Du lässt die Gegenstände von deinem Werkzeuggürtel fallen.\\nRucksack = Du lässt die Gegenstände in deinem Rucksack fallen.",
+    "label": "Fallenlassen bei verlassen des Spiels"
+   },
+   "DukesLootCount": {
+    "description": "Menge der in Beute gefundenen Duke-Jetons und altem Geld.",
+    "label": "Währungsmenge"
+   },
+   "ElectricalOutput": {
+    "description": "Legt fest, wie viel elektrische Leistung produziert wird.",
+    "label": "Elektrische Leistung"
+   },
+   "EncumbranceModifier": {
+    "description": "Bestimmt die Zahl der Überlastungsplätze im Rucksack. Werte reichen von Deaktiviert (keine Überlastung) bis Voll (maximale Überlastung). Standard verwendet XML-Konfigurationswerte.",
+    "label": "Überbelastungsplätze"
+   },
+   "EnemySpawnMode": {
+    "description": "Aktiviere oder deaktiviere Erscheinen der Gegner.",
+    "label": "Erscheinen der Gegner"
+   },
+   "EntityDamage": {
+    "description": "Bestimmt, wie viel Schaden Gegner bei Spielern verursachen. Stapelt sich mit anderem eingehenden Schaden, den Spieler erleiden.",
+    "label": "Schaden durch Gegner"
+   },
+   "EntityIncomingDamage": {
+    "description": "Schaden, den Wesen wie Gegner und Tiere durch Spieler erleiden.",
+    "label": "Erlittener Wesen-Schaden"
+   },
+   "FoodLootCount": {
+    "description": "Menge der in Behältern gefundenen Nahrung.",
+    "label": "Nahrungsmenge"
+   },
+   "FullChickenStressEvent": {
+    "description": "Aktiviert ein Ereignis, wenn festgehaltene Hühner 100 % Stress erreichen. „Keine“ deaktiviert Ereignisse, „Zufällig“ wählt eines der folgenden Ereignisse zufällig aus.\\n\\nHuhn fallen lassen = Dein Huhn entkommt deinem Griff.\\nWütendes Huhn = Dein Huhn wendet sich gegen dich.\\nZombiehorde = Der Stress deines Huhns beschwört eine Zombiehorde.\\nMordhühner = Wütende Hühner verbünden sich gegen dich.",
+    "label": "Event „Stress des Huhns“"
+   },
+   "GlobalGSModifier": {
+    "description": "Legt die Gegnerarten, Skalierung des Schwierigkeitsgrads, Beutequalität und Blutmond-Intensität basierend auf deinem Level und überlebten Tagen fest. Höhere Werte erhöhen den Schwierigkeitsgrad. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globale Spielstufe"
+   },
+   "GlobalLSModifier": {
+    "description": "Globaler Multiplikator angewandt auf das Spieler-Beutestadium. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Beutestadium"
+   },
+   "GlobalLootCount": {
+    "description": "Passt global die Gesamtmenge der Beute an, die in der Welt gefunden werden kann. „Keine“ deaktiviert die gesamte Beute, einschließlich fallengelassener Zombietaschen und Versorgungskisten.",
+    "label": "Beutemenge"
+   },
+   "GlobalTSModifier": {
+    "description": "Globaler Modifikator des Fortschritts des Händlerstadiums. Legt die Qualität und Vielfalt der Gegenstände fest, die Händler anbieten. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Globales Händlerstadium"
+   },
+   "HarvestingOutput": {
+    "description": "Bestimmt die Menge an Rohstoffen, die beim Abbauen von Blöcken und beim Sammeln von Gegenständen gewonnen wird. Hat keinen Einfluss auf Erze, Samen oder Feldfrüchte. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Rohstoffertrag"
+   },
+   "HeadshotMode": {
+    "description": "Bestimmt, wie sich Kopftrefferschaden auswirkt.\\n\\nNur Kopftreffer = Gegner erleiden nur durch Kopftreffer Schaden.\\nKopftreffer-Finisher: Körpertreffer verursachen Schaden, aber nur Kopftreffer können sie erledigen.\\n\\nGilt nicht für passive Tiere.",
+    "label": "Kopftreffer-Modus"
+   },
+   "HeadshotMultiplier": {
+    "description": "Der Multiplikator angewendet auf den Kopftrefferschaden von Spielern bei Wesen.",
+    "label": "Kopftreffer-Multiplikator"
+   },
+   "HeatMapSensitivity": {
+    "description": "Bestimmt, wie sich Spieleraktivität auf die Wärme auswirkt. Größere Wärme bedeutet höhere Chancen auf Schreier-Spawns. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Wärmebild-Empfindlichkeit"
+   },
+   "HungerMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Nahrung verbrauchen. Höhere Werte erhöhen den Nahrungsverbrauch.",
+    "label": "Hunger-Multiplikator"
+   },
+   "IncomingDamage": {
+    "description": "Wie viel Schaden der Spieler aus allen Quellen erleidet.",
+    "label": "Erlittener Spielerschaden"
+   },
+   "InfectionChance": {
+    "description": "Erhöht oder verringert die Infektionschance des Spielers.",
+    "label": "Infektionschance"
+   },
+   "InfectionRate": {
+    "description": "Passt an, wie schnell Infektionen fortschreiten.",
+    "label": "Infektionsrate"
+   },
+   "IntroChallengesEnabled": {
+    "description": "Aktiviert die mehrphasige Einführungsherausforderung für neue Spieler.",
+    "label": "Einführungsherausforderungen"
+   },
+   "IntroQuestEnabled": {
+    "description": "Überspringe die Einführungsquest mit den vergrabenen Vorräten, um auf den vollen Questfortschritt zuzugreifen.",
+    "label": "Einführungsquest"
+   },
+   "ItemDegradation": {
+    "description": "Wie schnell Waffen und Werkzeug Haltbarkeit verlieren. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Abnutzung von Gegenständen"
+   },
+   "JarRefund": {
+    "description": "Chance der Rückerstattung für Krüge nach dem Verzehr eines Gegenstands.",
+    "label": "Krug-Rückerstattung"
+   },
+   "JumpStrength": {
+    "description": "Modifiziert die Sprunghöhe des Spielers.",
+    "label": "Sprungstärke"
+   },
+   "LootBagChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Gegner beim Tod Beutetaschen fallenlassen.",
+    "label": "Fallengelassene Beutetaschen"
+   },
+   "LootMaxTier": {
+    "description": "Legt die höchste Qualität von Waffen und Gegenständen fest, die in Beute erscheinen können.",
+    "label": "Max. Beutequalität"
+   },
+   "LootRespawnDays": {
+    "description": "Die Anzahl an Tagen im Spiel, bis Beutebehälter in nicht besuchten Gebieten zurückgesetzt werden.",
+    "label": "Tage bis zum Wiedererscheinen von Beute"
+   },
+   "LootTimer": {
+    "description": "Zeigt an, wie lange das Öffnen von Behältern mit Beute dauert.",
+    "label": "Beute-Timer"
+   },
+   "LoseItemsOnDeathCount": {
+    "description": "Legt die Zahl der zufälligen verlorenen Gegenstände beim Tod fest.",
+    "label": "Verlustmenge bei Tod"
+   },
+   "LoseItemsOnDeathType": {
+    "description": "Legt fest, welche Gegenstände beim Tod verloren gehen.\\n\\nKeine = Nichts\\nAlle = Alle Gegenstände.\\nWerkzeuggürtel = Nur Werkzeuggürtel-Gegenstände.\\nRucksack = Nur Rucksack-Gegenstände.\\nAusrüstung = Getragene Rüstung und Kleidung.\\nNur getragene = Gegenstände aus Werkzeuggürtel und Rucksack.",
+    "label": "Verlust bei Tod"
+   },
+   "MaxDegradationAmount": {
+    "description": "Legt den Grad der Abnutzung bei der Reparatur eines Gegenstands fest.",
+    "label": "Reparaturabnutzung"
+   },
+   "MaxEnemyTier": {
+    "description": "Höchste Stufe von Zombiearten, die erscheinen können.",
+    "label": "Max. Gegnerstufe"
+   },
+   "MaxTechType": {
+    "description": "Legt global die höchste verfügbare Technologieart für Waffen und Gegenstände fest, was erlaubt, den Fortschritt und den Spielfluss zu steuern. Siehe Beispiele unten.\\n\\nTech 0 = Stein und Rohr\\nTech 1 = Eisen und KV-47\\nTech 2 = Stahl und Taktisches Sturmgewehr\\nTech 3 = Erdbohrer und M60",
+    "label": "Max. Technologiearten"
+   },
+   "MedicalLootCount": {
+    "description": "Menge der in Beute gefundenen medizinischen Vorräte.",
+    "label": "Medizinmenge"
+   },
+   "MeleeDamage": {
+    "description": "Mit Nahkampfwaffen und Werkzeugen durch den Spieler verursachter Schaden.",
+    "label": "Nahkampfschaden"
+   },
+   "MeleeLootCount": {
+    "description": "Menge der in Beute gefundenen Nahkampfwaffen und Teile.",
+    "label": "Nahkampfmenge"
+   },
+   "MiningOutput": {
+    "description": "Bestimmt die Menge an Erz, die beim Bergbau gewonnen wird. Kann sich, wenn deaktiviert, auf Herausforderungen im Spiel auswirken.",
+    "label": "Bergbauertrag"
+   },
+   "NewbieCoat": {
+    "description": "Wenn aktiv, erscheinen neue Spieler mit einem Anfänger-Schutz-Buff.",
+    "label": "Buff für neue Spieler"
+   },
+   "POIQuestsEnabled": {
+    "description": "Macht es möglich, dass Sehenswürdigkeiten-Quests in den Questlisten der Händler erscheinen. Nein = nur vergrabene Quests.",
+    "label": "Sehenswürdigkeiten-Quests"
+   },
+   "POITierLSModifier": {
+    "description": "Beutestadium-Multiplikator basierend auf Sehenswürdigkeit-Stufe. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Sehenswürdigkeit-Beutestadium"
+   },
+   "PlayerLevelBonusApplied": {
+    "description": "Bestimmt, ob Gesundheit und Ausdauer mit jedem Level steigen.",
+    "label": "Wertebonus pro Level"
+   },
+   "PointsPerMagazine": {
+    "description": "Der durch das Lesen von Fachzeitschriften erhaltene Fortschritt.",
+    "label": "Magazinfortschritt"
+   },
+   "QuestProgressionDailyLimit": {
+    "description": "Begrenzt die Anzahl der täglichen Quests, die zum Händlerfortschritt zählen. Zusätzliche Quests gewähren weiterhin EP und Belohnungen, aber zählen nicht zum Stufenfortschritt des Händlers.",
+    "label": "Quests pro Tag"
+   },
+   "QuestsEnabled": {
+    "description": "Aktiviert oder deaktiviert Quests in deinem Spiel.",
+    "label": "Quests"
+   },
+   "QuestsPerTier": {
+    "description": "Die Zahl abgeschlossener Quests, die nötig ist, um die nächste Stufe freizuschalten. Höhere Werte verlangsamen den Fortschritt zwischen Stufen. Keine = kein Limit und erlaubt Zugriff auf alle Quest-Stufen.",
+    "label": "Quests pro Stufe"
+   },
+   "RangedDamage": {
+    "description": "Mit Bogen, Schusswaffen und anderen Fernkampfwaffen durch den Spieler verursachter Schaden.",
+    "label": "Fernkampfschaden"
+   },
+   "RangedLootCount": {
+    "description": "Menge der in Beute gefundenen Fernkampfwaffen und Teile.",
+    "label": "Fernkampfmenge"
+   },
+   "RepairTypes": {
+    "description": "Legt fest, wie Gegenstände repariert werden:\\n\\nKeine = Keine Reparatur\\nNur Reparatur = Nur Reparaturkits\\nNur kombinieren = Reparatur mit der Kombinationsstation\\nBeide = Reparaturkits und Kombinationsstation",
+    "label": "Reparaturmethode"
+   },
+   "ResourceLootCount": {
+    "description": "Menge der in Beute gefundenen Rohstoffgegenstände.",
+    "label": "Rohstoffmenge"
+   },
+   "RunSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Laufen an.",
+    "label": "Laufgeschwindigkeit"
+   },
+   "ScrappingOutput": {
+    "description": "Erhaltene Menge beim Zerlegen von Gegenständen.",
+    "label": "Zerlegungsertrag"
+   },
+   "SeedDropOutput": {
+    "description": "Die Menge der Samen, die bei der Ernte von Feldfrüchten erhalten wird, die Spieler gepflanzt haben. Hat keinen Einfluss auf die Chance, dass Samen fallen gelassen werden oder auf Samen von Bäumen.",
+    "label": "Samenertrag"
+   },
+   "ShowDayTime": {
+    "description": "Zeigt Tag- und Zeitinformationen auf dem Bildschirm an. Auf Nein gesetzt, wird die Blutmond-Warnung ebenfalls deaktiviert.",
+    "label": "Tag/Zeit anzeigen"
+   },
+   "ShowEnemyDamage": {
+    "description": "Zeigt schwebende Schadenszahlen, wenn Wesen getroffen werden.",
+    "label": "Wesen-Schaden anzeigen"
+   },
+   "ShowHealthBars": {
+    "description": "Wesen-Gesundheitsbalken zeigen oder verbergen.",
+    "label": "Wesen-Gesundheitsbalken"
+   },
+   "ShowLocationInfo": {
+    "description": "Zeigt Namen und Schwierigkeitsgrad von Biomen und Sehenswürdigkeiten.",
+    "label": "Ortsinformationen anzeigen"
+   },
+   "ShowXP": {
+    "description": "EP-Leiste und EP-Pop-up-Fenster verbergen oder zeigen.",
+    "label": "EP anzeigen"
+   },
+   "SillyBigHeads": {
+    "description": "Aktiviert den „Riesenköpfe-Modus“ bei Zombies, Tieren und Händlern.",
+    "label": "Riesenköpfe"
+   },
+   "SillyBlackandWhite": {
+    "description": "Aktiviert eine klassische Graustufen-Farbgebung inspiriert von Horror-Klassikern der 1960er.",
+    "label": "Schwarzweiß"
+   },
+   "SillyCelebrate": {
+    "description": "Aktiviert die feierlichen Konfetti-Partikel bei Wesen-Kills. Die Option „Nur Kopftreffer“ löst Konfetti nur bei Kills durch Kopfschüsse aus; Körpertreffer bei Tieren zum Fleischsammeln sind weiterhin möglich. „Nur Kopftreffer“ gilt nicht für passive Tiere.",
+    "label": "Kill-Konfetti"
+   },
+   "SillyLowGravity": {
+    "description": "Legt die Stärke der Schwerkraft im Spiel fest.",
+    "label": "Schwerkraft"
+   },
+   "SillySounds": {
+    "description": "Aktiviert humorvolle Geräusche für Aktionen im Spiel.",
+    "label": "Klamauk"
+   },
+   "SillyTinyZombies": {
+    "description": "Aktiviert kleiner Versionen der Zombies.",
+    "label": "Winzige Zombies"
+   },
+   "SkillGainRate": {
+    "description": "Passt an, wie viele Level nötig sind, um Fertigkeitspunkte zu erhalten.",
+    "label": "Fertigkeit-Erhaltrate"
+   },
+   "SkillPointsPerLevel": {
+    "description": "Bestimmt, wie viele Fertigkeitspunkte beim Erhalt von Fertigkeitspunkten gewährt werden.",
+    "label": "Fertigkeit-Erhaltmenge"
+   },
+   "SmeltingType": {
+    "description": "Legt fest, wie die Schmiedefertigung funktioniert. Schmelze Gegenstände in der Schmiede oder fertige sie direkt mit Rohstoffen aus deinem Rucksack.",
+    "label": "Schmelzart"
+   },
+   "StackSizeMultiplier": {
+    "description": "Multiplikator, der auf die Stapelgröße aller stapelbaren Gegenstände angewendet wird. Die maximale Stapelgröße beträgt 30.000.",
+    "label": "Stapelgröße-Multiplikator"
+   },
+   "StaminaRegen": {
+    "description": "Bestimmt die Rate der Ausdauerwiederherstellung. Werte sind nicht exakt.",
+    "label": "Ausdauerwiederherstellung"
+   },
+   "StaminaUsage": {
+    "description": "Ausdauerkosten für Aktionen wie Laufen, Springen und Angreifen. Werte sind nicht exakt.",
+    "label": "Ausdauerverbrauch"
+   },
+   "StarterSkillPoints": {
+    "description": "Die Zahl der Fertigkeitspunkte, die nach Abschluss der Einführungsherausforderungen oder, wenn die Einführungsherausforderungen deaktiviert sind, zum Spielstart gewährt werden.",
+    "label": "Basis-Fertigkeitspunkte"
+   },
+   "StormFreq": {
+    "description": "Passt die Sturmhäufigkeit an. Keine bedeutet keine Stürme.",
+    "label": "Sturmhäufigkeit"
+   },
+   "StormWarning": {
+    "description": "Legt fest, ob der Spieler die Sturmsirene hört und die Sturmwarnung auf dem Bildschirm sieht.",
+    "label": "Sturmwarnung"
+   },
+   "TemperatureSurvival": {
+    "description": "Bestimmt, ob sich die Umgebungstemperatur (heiß und kalt) auf Spieler auswirkt.",
+    "label": "Temperatur im Überlebensmodus"
+   },
+   "TerrainDamage": {
+    "description": "Wie viel Schaden Spieler bei Gelände verursachen.",
+    "label": "Geländeschaden"
+   },
+   "ThirstMultiplier": {
+    "description": "Legt fest, wie schnell Spieler Wasser verbrauchen. Höhere Werte erhöhen den Wasserverbrauch.",
+    "label": "Durst-Multiplikator"
+   },
+   "TraderBuyLimit": {
+    "description": "Maximale Anzahl jedes Gegenstands, die der Händler kauft, bevor er weitere ablehnt. Niedrigere Werte begrenzen, wie viel du pro Wiederauffüllen-Zyklus verkaufen kannst.",
+    "label": "Händler-Kauflimit"
+   },
+   "TraderBuyPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler von Händlern kaufen.",
+    "label": "Kaufpreis"
+   },
+   "TraderDialog": {
+    "description": "Sprachausgabe und Bildschirm-Dialoge des Händlers an/aus.",
+    "label": "Händlerdialog"
+   },
+   "TraderHours": {
+    "description": "Legt die Geschäftszeiten der Händler fest. 24-Stunden-Zyklus und Dauer des Tageslichts haben keinen Einfluss auf diese Einstellung. „BM geschlossen“ bedeutet, dass der Laden nur während des Blutmondes schließt. Standard verwendet XML-Konfigurationswerte..\\n\\nXML-Standard = 04:00 bis 22:00\\n       Morgen = 04:00 bis 12:00\\n       Tag = 10:00 bis 18:00\\n       Abend = 16:00 bis 22:00\\n           Nacht = 22:00 bis 04:00",
+    "label": "Händlerzeiten"
+   },
+   "TraderItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Händler-Gegenstandsmenge"
+   },
+   "TraderMaxTier": {
+    "description": "Legt die höchste Qualität fest, die Händler im Angebot haben.",
+    "label": "Max. Qualität bei Händlern"
+   },
+   "TraderProtection": {
+    "description": "Legt Schadensschutz für Händlergelände fest und bestimmt, ob Spieler das Gebiet sichern können.",
+    "label": "Händlerschutz"
+   },
+   "TraderResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händlern zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Händlern"
+   },
+   "TraderSellPrices": {
+    "description": "Bestimmt den Preis von Gegenständen, die Spieler Händlern verkaufen.",
+    "label": "Verkaufspreis"
+   },
+   "TraderToTraderQuestsEnabled": {
+    "description": "Aktivieren, um Quests von anderen Händlern zu erhalten.",
+    "label": "Handelsrouten"
+   },
+   "TradersEnabled": {
+    "description": "Aktiviert den Handel mit NPC-Händlern.",
+    "label": "Handel aktiviert"
+   },
+   "TreasureMapChance": {
+    "description": "Multiplikator angewandt auf die Chance, dass Schatzkarten in Behältern mit Beute und gegnerischen Beutetaschen erscheinen.",
+    "label": "Chance auf Schatzkarten"
+   },
+   "VehicleBlockDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Blöcken verursachen.",
+    "label": "Blockschaden durch Fahrzeuge"
+   },
+   "VehicleEntityDamage": {
+    "description": "Wie viel Schaden Fahrzeuge bei Wesen verursachen.",
+    "label": "Wesen-Schaden durch Fahrzeuge"
+   },
+   "VehicleFuelUsage": {
+    "description": "Legt den Brennstoffverbraucht von Fahrzeugen fest.",
+    "label": "Fahrzeug-Brennstoffverbrauch"
+   },
+   "VehicleSelfDamage": {
+    "description": "Wie viel Schaden Fahrzeuge durch Kollisionen erleiden.",
+    "label": "Fahrzeug-Selbstschaden"
+   },
+   "VendingEnabled": {
+    "description": "Aktiviert oder deaktiviert Funktionalität von Automaten.",
+    "label": "Automaten aktiviert"
+   },
+   "VendingItemAbundance": {
+    "description": "Die Menge der Gegenstände, die Händler-Automaten im Angebot haben. Mit niedrigeren Werten sind Vorräte limitierter. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Automat-Gegenstandsmenge"
+   },
+   "VendingResetInterval": {
+    "description": "Legt fest, wie oft das Inventar von Händler-Automaten zurückgesetzt wird. Standard verwendet XML-Konfigurationswerte.",
+    "label": "Zurücksetzen von Automaten"
+   },
+   "WalkSpeed": {
+    "description": "Passt die Bewegungsgeschwindigkeit des Spielers beim Gehen an.",
+    "label": "Gehgeschwindigkeit"
+   },
+   "WorkstationCrafting": {
+    "description": "Ja erlaubt Fertigung an Arbeitsstationen. Nein erlaubt nur Rucksackfertigung.",
+    "label": "Arbeitsstationsfertigung"
+   },
+   "WorkstationsInTheWild": {
+    "description": "Erlaubt das Erscheinen von funktionstüchtigen Arbeitsstationen in der Welt. Gilt für neue Navezgane oder RWG-Kartengenerierung.",
+    "label": "Arbeitsstationen in der Wildnis"
+   },
+   "XPMultiplier": {
+    "description": "Multiplikator, der auf alle gesammelten Erfahrungspunkte angewendet wird.",
+    "label": "EP-Multiplikator"
+   },
+   "ZombieBMMove": {
+    "description": "Bestimmt die Bewegungsgeschwindigkeit der Zombies während Blutmond-Horden und Stürmen.",
+    "label": "Blutmond-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von wilden Zombies fest.",
+    "label": "Wild-Zombiegeschwindigkeit"
+   },
+   "ZombieFeralSense": {
+    "description": "Wie gut Zombies Spieler sehen oder hören können.",
+    "label": "Wild-Zombie-Gespür"
+   },
+   "ZombieMove": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies zur Tageszeit fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Tag-Zombiegeschwindigkeit"
+   },
+   "ZombieMoveNight": {
+    "description": "Legt die Bewegungsgeschwindigkeit von normalen Zombies während der Nacht fest. Hat keinen Einfluss auf wilde oder besondere Zombies.",
+    "label": "Nacht-Zombiegeschwindigkeit"
+   },
+   "ZombieRageChance": {
+    "description": "Chance, dass Zombies den Wut-Modus aktivieren, wenn sie Schaden erleiden.",
+    "label": "Zombie-Wut"
+   },
+   "ZombiesEatAnimals": {
+    "description": "Legt fest, ob Zombies Tierkadaver essen.",
+    "label": "Zombies essen Tiere"
+   }
+  },
+  "presetGroups": {
+   "Difficulty": "Schwierigkeitsgrad",
+   "Official": "Offiziell"
+  },
+  "presets": {
+   "Adventurer": {
+    "description": "Standard/Einfach: Die Apokalypse zeigt noch etwas Gnade.",
+    "label": "Abenteurer"
+   },
+   "Almost Creative": {
+    "description": "Die Apokalypse, nur ohne die Apokalypse. Sterben ist nämlich nicht so toll.",
+    "label": "Nahezu kreativ"
+   },
+   "Bite Club": {
+    "description": "In diesem Hardcore-Modus mit permanentem Tod gibt es keine Respawns. Du hast ein Leben, nutze es weise.",
+    "label": "Bite Club"
+   },
+   "Caveman Life": {
+    "description": "Überlebe die Apokalypse mit kaum mehr als einfachen Stöcken.",
+    "label": "Höhlenmenschenleben"
+   },
+   "Chibi Mode": {
+    "description": "Sie sind nicht nur niedlich … Sondern auch noch schnell! Zum Glück bist du selbst nicht so langsam.",
+    "label": "Chibi-Modus!"
+   },
+   "Disaster Film": {
+    "description": "Die Katastrophen kommen schneller als du sie lösen kannst.",
+    "label": "Katastrophenfilm"
+   },
+   "Dumpster Diver": {
+    "description": "Aus Müll werden Schätze! Ist kein Horten, wenn du was daraus machst.",
+    "label": "Müllcontainer-Taucher"
+   },
+   "Dying World": {
+    "description": "Die Rohstoffe schwinden und du wirst es bald auch.",
+    "label": "Sterbende Welt"
+   },
+   "Insane": {
+    "description": "Irre: In dieser Apokalypse bereust du jeden Fehler.",
+    "label": "Irre"
+   },
+   "Legacy Survival": {
+    "description": "Überleben alter Schule mit modernen Konsequenzen.",
+    "label": "Klassischer Überlebensmodus"
+   },
+   "Madmoles Mayhem": {
+    "description": "Weniger Vorräte, strenge Strafen und ständiger Druck. Madmole … Das riecht gut!",
+    "label": "Madmoles Chaos"
+   },
+   "Nomad": {
+    "description": "Normal: Deine Entschlossenheit ist stärker als Melasse-Kaffee.",
+    "label": "Nomade"
+   },
+   "Scavenger": {
+    "description": "Anfänger: Die Apokalypse ist ein Kinderspiel und Stützräder gibt es gratis.",
+    "label": "Plünderer"
+   },
+   "Seven days Later": {
+    "description": "Ein moderner, von Filmen inspirierter Modus, mit chaotischen Horden flinker Zombies.",
+    "label": "7 Tage später"
+   },
+   "True Survivalist": {
+    "description": "Brutal: Vermöbelt werden gehört zum Spaß dazu.",
+    "label": "Überlebenskünstler"
+   },
+   "Undead Matinee": {
+    "description": "Ein von Filmklassikern inspirierter Modus mit Fokus auf Nahkampf, der langsamere Zombies, Schwärme von Gegnern und limitierte Munition bietet.",
+    "label": "Matinée der Untoten"
+   },
+   "Warrior": {
+    "description": "Schwierig: Jetzt kommt der Schmerz, aber immerhin ist die Gehirnerschütterung kostenlos.",
+    "label": "Krieger"
+   }
+  },
+  "values": {
+   "AISmellMode": {
+    "0": "Keiner",
+    "1": "Gehen",
+    "2": "Joggen",
+    "3": "Rennen",
+    "4": "Sprinten",
+    "5": "Albtraum"
+   },
+   "AirDropRandomTime": {
+    "0": "Keiner",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "Ganztägig",
+    "6": "Beliebig"
+   },
+   "AirDrops": {
+    "0": "Deaktiviert",
+    "1": "Jeden Tag",
+    "2": "1-3 Tage",
+    "3": "3 Tage",
+    "4": "3-7 Tage",
+    "5": "7 Tage",
+    "6": "1-7 Tage"
+   },
+   "ApiaryInput": {
+    "0": "Keiner"
+   },
+   "BackpackCrafting": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Begrenzt",
+    "3": "Nur Werkbank"
+   },
+   "BarterValues": {
+    "0": "Keiner"
+   },
+   "BiomeEnemyDensity": {
+    "0": "Keiner",
+    "1": "Standard",
+    "2": "Sehr niedrig",
+    "3": "Niedrig",
+    "4": "Mittel",
+    "5": "Hoch",
+    "6": "Sehr hoch"
+   },
+   "BloodMoonCount": {
+    "0": "4 Feinde",
+    "1": "6 Feinde",
+    "2": "8 Feinde",
+    "3": "10 Feinde",
+    "4": "12 Feinde",
+    "5": "16 Feinde",
+    "6": "24 Feinde",
+    "7": "32 Feinde",
+    "8": "64 Feinde"
+   },
+   "BloodMoonFrequency": {
+    "0": "Deaktiviert",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "8 Tage",
+    "9": "9 Tage",
+    "10": "10 Tage",
+    "11": "14 Tage",
+    "12": "20 Tage",
+    "13": "30 Tage"
+   },
+   "BloodMoonRange": {
+    "0": "0 Tage",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "7 Tage",
+    "6": "10 Tage",
+    "7": "14 Tage",
+    "8": "20 Tage"
+   },
+   "BloodMoonWarning": {
+    "0": "Deaktiviert",
+    "1": "Morgen",
+    "2": "Abend"
+   },
+   "Celebrate": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Kopftreffer"
+   },
+   "CropGrowthSpeed": {
+    "0": "Keiner",
+    "1": "Sofort"
+   },
+   "DamageValues": {
+    "0": "Keiner"
+   },
+   "DayLightLength": {
+    "0": "Immer Nacht",
+    "10": "Immer Tag"
+   },
+   "DeathPenalty": {
+    "0": "Keiner",
+    "1": "Nur EP",
+    "2": "Verletzt",
+    "3": "Endgültiger Tod"
+   },
+   "DegradeItemsOnDeath": {
+    "0": "Keiner",
+    "1": "Haltbarkeit",
+    "2": "Max. Haltbarkeit",
+    "3": "Beide"
+   },
+   "DewCollectorInput": {
+    "0": "Keiner"
+   },
+   "DisabledLowDefaultHigh": {
+    "0": "Deaktiviert",
+    "1": "Sehr niedrig",
+    "2": "Niedrig",
+    "3": "Standard",
+    "4": "Hoch",
+    "5": "Sehr hoch"
+   },
+   "DropOnDeath": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene",
+    "6": "Alles löschen"
+   },
+   "DropOnQuit": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "Encumbrance": {
+    "0": "Deaktiviert",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch",
+    "5": "Ganz"
+   },
+   "FullChickenStressEvent": {
+    "0": "Keiner",
+    "1": "Zufall",
+    "2": "Huhn fallen lassen",
+    "3": "Wütendes Huhn",
+    "4": "Zombiehorde",
+    "5": "Mordhühner"
+   },
+   "HeadshotMode": {
+    "0": "Keiner",
+    "1": "Nur Kopftreffer",
+    "2": "Kopftreffer-Finisher"
+   },
+   "ItemTierOptions": {
+    "0": "Standard"
+   },
+   "JarRefund": {
+    "0": "Keiner"
+   },
+   "JumpStrength": {
+    "0": "Keiner"
+   },
+   "LootAbundanceValues": {
+    "0": "Keiner"
+   },
+   "LootRespawnDays": {
+    "0": "Deaktiviert"
+   },
+   "LoseItemsOnDeathType": {
+    "0": "Keiner",
+    "1": "Alle",
+    "2": "Nur Werkzeuggürtel",
+    "3": "Nur Rucksack",
+    "4": "Ausrüstung",
+    "5": "Nur getragene"
+   },
+   "LowDefaultHigh": {
+    "0": "Sehr niedrig",
+    "1": "Niedrig",
+    "2": "Standard",
+    "3": "Hoch",
+    "4": "Sehr hoch"
+   },
+   "MaxChunkAge": {
+    "0": "Deaktiviert"
+   },
+   "MaxDegradationAmounts": {
+    "0": "Keiner"
+   },
+   "MaxEnemyType": {
+    "0": "Normale",
+    "1": "Starke",
+    "2": "Besondere",
+    "3": "Wilde",
+    "4": "Verstrahlte",
+    "5": "Elite"
+   },
+   "MaxTechType": {
+    "0": "Keiner",
+    "1": "Tech 0",
+    "2": "Tech 1",
+    "3": "Tech 2",
+    "4": "Tech 3"
+   },
+   "PlayerSpeedValues": {
+    "0": "Keiner"
+   },
+   "PointsPer": {
+    "0": "Keiner"
+   },
+   "QuestPerDay": {
+    "0": "Unbegrenzt"
+   },
+   "QuestPerTier": {
+    "0": "Keiner"
+   },
+   "RepairTypes": {
+    "0": "Keiner",
+    "1": "Nur reparieren",
+    "2": "Nur kombinieren",
+    "3": "Beide"
+   },
+   "ShowLocationTypes": {
+    "0": "Nein",
+    "1": "Ja",
+    "2": "Nur Name"
+   },
+   "ShowXP": {
+    "0": "Alle",
+    "1": "Nur Balken",
+    "2": "Nur Benachrichtigungen",
+    "3": "Keiner"
+   },
+   "SlowToFast": {
+    "0": "Standard",
+    "1": "Sehr langsam",
+    "2": "Langsam",
+    "3": "Normal",
+    "4": "Schnell",
+    "5": "Sehr schnell"
+   },
+   "SmeltingType": {
+    "0": "Schmelzer",
+    "1": "Rezepte"
+   },
+   "SpeedValues": {
+    "0": "Keiner"
+   },
+   "StaminaUsage": {
+    "0": "Keiner"
+   },
+   "StarterSkillPoints": {
+    "0": "Keiner"
+   },
+   "StormFrequency": {
+    "0": "Keiner"
+   },
+   "TraderArea": {
+    "0": "Ja",
+    "1": "Sicherbar",
+    "2": "Nicht sicherbar"
+   },
+   "TraderHourPresets": {
+    "0": "Standard",
+    "1": "Morgen",
+    "2": "Mittag",
+    "3": "Abend",
+    "4": "Nacht",
+    "5": "BM geschlossen",
+    "6": "Immer offen"
+   },
+   "TraderResetInterval": {
+    "0": "Standard",
+    "1": "1 Tag",
+    "2": "2 Tage",
+    "3": "3 Tage",
+    "4": "4 Tage",
+    "5": "5 Tage",
+    "6": "6 Tage",
+    "7": "7 Tage",
+    "8": "14 Tage"
+   },
+   "XPGain": {
+    "0": "Keiner"
+   },
+   "YesNo": {
+    "0": "Nein",
+    "1": "Ja"
+   },
+   "ZombieFeralSense": {
+    "0": "Deaktiviert",
+    "1": "Tag",
+    "2": "Nacht",
+    "3": "Alle"
+   },
+   "ZombieRageChance": {
+    "0": "Keiner"
+   },
+   "ZombieSpeeds": {
+    "0": "Gehen",
+    "1": "Joggen",
+    "2": "Rennen",
+    "3": "Sprinten",
+    "4": "Albtraum"
+   }
+  }
+ }
+}

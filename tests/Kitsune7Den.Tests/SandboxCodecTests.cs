@@ -238,5 +238,35 @@ public class SandboxCodecTests : IDisposable
         Assert.Equal("行走", Table33.ValueLabel(option, 0));
         Assert.Equal("玩家", Table33.CategoryLabel("General"));
         Assert.Equal("冒险家", Table33.PresetLabel(Table33.Presets.Single(p => p.Name == "Adventurer")));
+
+        Loc.Instance.SetLanguage("de");
+        Assert.Equal("Abenteurer", Table33.PresetLabel(Table33.Presets.Single(p => p.Name == "Adventurer")));
+    }
+
+    [Theory]
+    [MemberData(nameof(LocalizationTests.Translations), MemberType = typeof(LocalizationTests))]
+    public void EveryLanguage_TranslatesEveryOptionInEveryTable(string code)
+    {
+        try
+        {
+            foreach (var table in SandboxTables.All)
+            {
+                Loc.Instance.SetLanguage(Loc.English);
+                var english = table.Options.ToDictionary(o => o.Name, table.OptionLabel);
+
+                Loc.Instance.SetLanguage(code);
+                var untranslated = table.Options
+                    .Where(o => table.OptionLabel(o) == english[o.Name] || string.IsNullOrWhiteSpace(table.OptionDescription(o)))
+                    .Select(o => o.Name)
+                    .ToList();
+                // A few labels are legitimately the same word in some languages ("Sandbox", "AI")
+                Assert.True(untranslated.Count < table.Options.Count / 10,
+                    $"{code} {table.Version}: {untranslated.Count} options still English: {string.Join(", ", untranslated)}");
+            }
+        }
+        finally
+        {
+            Loc.Instance.SetLanguage(Loc.English);
+        }
     }
 }

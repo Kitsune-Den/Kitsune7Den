@@ -26,8 +26,8 @@ public sealed class SandboxTable
     public List<SandboxOptionDef> Options { get; init; } = [];
     public List<SandboxPreset> Presets { get; init; } = [];
 
-    /// <summary>zh-Hans strings for this table, keyed like PackRelay's games.json (may be null).</summary>
-    internal JsonElement? Chinese { get; set; }
+    /// <summary>"v3_3" — this table's section in the sandbox.&lt;lang&gt;.json translation files.</summary>
+    internal string TranslationKey => "v" + Version.Replace('.', '_');
 
     private Dictionary<int, SandboxOptionDef>? _byIndex;
     private Dictionary<string, SandboxOptionDef>? _byName;
@@ -42,36 +42,38 @@ public sealed class SandboxTable
         ValueSets.TryGetValue(option.ValueSet, out var set) ? set.Values : [];
 
     // ── Display text, in the active UI language ──
-    // Chinese comes from the game's own Localization.csv (via PackRelay), so it
-    // matches what players see in-game. Anything untranslated falls back to English.
+    // Translations come from the game's own Localization.csv (scripts/gen-sandbox-i18n.mjs),
+    // so they match what players see in-game. Anything untranslated falls back to English.
 
     public string CategoryLabel(string category) =>
-        Zh("categories", category) ?? CategoryLabels.GetValueOrDefault(category) ?? category;
+        Tr("categories", category) ?? CategoryLabels.GetValueOrDefault(category) ?? category;
 
     public string OptionLabel(SandboxOptionDef option) =>
-        Zh("options", option.Name, "label") ?? option.Label;
+        Tr("options", option.Name, "label") ?? option.Label;
 
     public string OptionDescription(SandboxOptionDef option) =>
-        (Zh("options", option.Name, "description") ?? option.Description).Replace("\\n", "\n");
+        (Tr("options", option.Name, "description") ?? option.Description).Replace("\\n", "\n");
 
     public string ValueLabel(SandboxOptionDef option, int valueIndex)
     {
         var values = ValuesOf(option);
         if (valueIndex < 0 || valueIndex >= values.Count) return "?";
-        return Zh("values", option.ValueSet, valueIndex.ToString()) ?? values[valueIndex].Label;
+        return Tr("values", option.ValueSet, valueIndex.ToString()) ?? values[valueIndex].Label;
     }
 
-    public string PresetLabel(SandboxPreset preset) => Zh("presets", preset.Name, "label") ?? preset.Label;
+    public string PresetLabel(SandboxPreset preset) => Tr("presets", preset.Name, "label") ?? preset.Label;
 
     public string PresetDescription(SandboxPreset preset) =>
-        Zh("presets", preset.Name, "description") ?? preset.Description;
+        Tr("presets", preset.Name, "description") ?? preset.Description;
 
     public string PresetGroupLabel(SandboxPreset preset) =>
-        Zh("presetGroups", preset.Group) ?? preset.GroupLabel;
+        Tr("presetGroups", preset.Group) ?? preset.GroupLabel;
 
-    private string? Zh(params string[] path)
+    private string? Tr(params string[] path)
     {
-        if (!Loc.Instance.IsChinese || Chinese is not { } node) return null;
+        if (SandboxTables.Translations(Loc.Instance.Code) is not { } root ||
+            !root.TryGetProperty(TranslationKey, out var node))
+            return null;
         foreach (var part in path)
         {
             if (node.ValueKind != JsonValueKind.Object || !node.TryGetProperty(part, out node))
@@ -130,6 +132,8 @@ public static class SandboxTables
 
     private static readonly Lazy<IReadOnlyList<SandboxTable>> Loaded = new(Load);
 
+    private static readonly Dictionary<string, JsonElement?> TranslationCache = [];
+
     public static IReadOnlyList<SandboxTable> All => Loaded.Value;
 
     public static SandboxTable Latest => All[^1];
@@ -162,17 +166,28 @@ public static class SandboxTables
         return version.Major > tv.Major || (version.Major == tv.Major && version.Minor > tv.Minor);
     }
 
+    /// <summary>
+    /// The sandbox.&lt;lang&gt;.json overlay for a UI language (one section per table version),
+    /// or null for English or a language without one. Loaded on first use, then cached.
+    /// </summary>
+    internal static JsonElement? Translations(string code)
+    {
+        if (code == Loc.English) return null;
+        lock (TranslationCache)
+        {
+            if (TranslationCache.TryGetValue(code, out var cached)) return cached;
+            using var stream = typeof(SandboxTables).Assembly
+                .GetManifestResourceStream($"Kitsune7Den.sandbox.{code}.json");
+            JsonElement? root = stream is null ? null : JsonDocument.Parse(stream).RootElement.Clone();
+            TranslationCache[code] = root;
+            return root;
+        }
+    }
+
     private static IReadOnlyList<SandboxTable> Load()
     {
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         var asm = typeof(SandboxTables).Assembly;
-
-        JsonElement? chinese = null;
-        using (var zh = asm.GetManifestResourceStream("Kitsune7Den.Sandbox.zh-Hans.json"))
-        {
-            if (zh is not null)
-                chinese = JsonDocument.Parse(zh).RootElement.Clone();
-        }
 
         var tables = new List<SandboxTable>();
         foreach (var v in Versions)
@@ -181,10 +196,6 @@ public static class SandboxTables
                 ?? throw new InvalidOperationException($"Missing embedded sandbox table {v}");
             var table = JsonSerializer.Deserialize<SandboxTable>(stream, options)
                 ?? throw new InvalidDataException($"Unreadable sandbox table {v}");
-
-            var key = "v" + v.Replace('.', '_');
-            if (chinese is { } zhRoot && zhRoot.TryGetProperty(key, out var zhTable))
-                table.Chinese = zhTable;
             tables.Add(table);
         }
         return tables;

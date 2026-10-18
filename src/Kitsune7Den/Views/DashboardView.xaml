@@ -115,17 +115,17 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Content="{l:Tr Dash_Start}" Style="{StaticResource ActionButton}"
                                 Command="{Binding StartCommand}" IsEnabled="{Binding CanStart}"
-                                Width="120" Margin="0,0,8,0" />
+                                MinWidth="120" Margin="0,0,8,0" />
                         <Button Content="{l:Tr Dash_Stop}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding StopCommand}" IsEnabled="{Binding CanStop}"
-                                Width="120" Margin="0,0,8,0" />
+                                MinWidth="120" Margin="0,0,8,0" />
                         <Button Content="{l:Tr Dash_ConnectTelnet}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding ConnectTelnetCommand}"
-                                Width="130" Margin="0,0,8,0"
+                                MinWidth="130" Margin="0,0,8,0"
                                 ToolTip="{l:Tr Dash_ConnectTelnetTooltip}" />
                         <Button Content="{l:Tr Dash_Restart}" Style="{StaticResource SecondaryButton}"
                                 Command="{Binding RestartCommand}" IsEnabled="{Binding CanStop}"
-                                Width="120" />
+                                MinWidth="120" />
                     </StackPanel>
                 </StackPanel>
             </Border>

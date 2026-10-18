@@ -324,16 +324,17 @@ public class ConfigServiceTests : IDisposable
         }
     }
 
-    [Fact]
-    public void EveryField_HasAChineseNameAndDescription_AndMatchingOptionCounts()
+    [Theory]
+    [MemberData(nameof(LocalizationTests.Translations), MemberType = typeof(LocalizationTests))]
+    public void EveryField_HasATranslatedNameAndDescription_AndMatchingOptionCounts(string code)
     {
         try
         {
-            Loc.Instance.SetLanguage(Loc.SimplifiedChinese);
+            Loc.Instance.SetLanguage(code);
             foreach (var name in FieldDefinitions.DefinedNames)
             {
-                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Name")), $"{name}: no zh name");
-                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Desc")), $"{name}: no zh description");
+                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Name")), $"{name}: no {code} name");
+                Assert.False(string.IsNullOrWhiteSpace(Loc.TryGet($"Cfg_{name}_Desc")), $"{name}: no {code} description");
 
                 var opts = Loc.TryGet($"Cfg_{name}_Opts");
                 if (opts is not null)

@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Kontrol Paneli</value></data>
+  <data name="Nav_Console" xml:space="preserve"><value>Konsol</value></data>
+  <data name="Nav_Players" xml:space="preserve"><value>Oyuncular</value></data>
+  <data name="Nav_Configuration" xml:space="preserve"><value>Yapılandırma</value></data>
+  <data name="Nav_Mods" xml:space="preserve"><value>Modlar</value></data>
+  <data name="Nav_Backups" xml:space="preserve"><value>Yedekler</value></data>
+  <data name="Nav_Logs" xml:space="preserve"><value>Günlükler</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Ayarlar</value></data>
+  <data name="Status_Server" xml:space="preserve"><value>Sunucu: </value></data>
+  <data name="Status_Telnet" xml:space="preserve"><value>Telnet: </value></data>
+  <data name="Status_Players" xml:space="preserve"><value>Oyuncular: </value></data>
+  <data name="ServerState_Stopped" xml:space="preserve"><value>Durduruldu</value></data>
+  <data name="ServerState_Starting" xml:space="preserve"><value>Başlatılıyor</value></data>
+  <data name="ServerState_Running" xml:space="preserve"><value>Çalışıyor</value></data>
+  <data name="ServerState_Stopping" xml:space="preserve"><value>Durduruluyor</value></data>
+  <data name="Telnet_Connected" xml:space="preserve"><value>Bağlı</value></data>
+  <data name="Telnet_Disconnected" xml:space="preserve"><value>Bağlı değil</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Evet</value></data>
+  <data name="Common_No" xml:space="preserve"><value>Hayır</value></data>
+  <data name="Common_On" xml:space="preserve"><value>Açık</value></data>
+  <data name="Common_Off" xml:space="preserve"><value>Kapalı</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Kaydet</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>İptal</value></data>
+  <data name="Common_Refresh" xml:space="preserve"><value>Yenile</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Gözat</value></data>
+  <data name="Common_Delete" xml:space="preserve"><value>Sil</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Hata</value></data>
+  <data name="Dash_WelcomeTitle" xml:space="preserve"><value>Kitsune7Den'e hoş geldin</value></data>
+  <data name="Dash_WelcomeIntro" xml:space="preserve"><value>Hadi sunucunu kuralım. Birini seç:</value></data>
+  <data name="Dash_FirstRun_Installed" xml:space="preserve"><value>Zaten kurulu mu?</value></data>
+  <data name="Dash_FirstRun_Click" xml:space="preserve"><value> Aşağıdaki </value></data>
+  <data name="Dash_FirstRun_PointTo" xml:space="preserve"><value> düğmesiyle şu dosyayı göster: </value></data>
+  <data name="Dash_FirstRun_Fresh" xml:space="preserve"><value>Sıfırdan mı başlıyorsun?</value></data>
+  <data name="Dash_FirstRun_HeadTo" xml:space="preserve"><value> Şuraya git: </value></data>
+  <data name="Dash_FirstRun_SettingsSteamCmd" xml:space="preserve"><value>Ayarlar → SteamCMD</value></data>
+  <data name="Dash_FirstRun_WillInstall" xml:space="preserve"><value> — Kitsune7Den sunucuyu senin için kursun</value></data>
+  <data name="Dash_ServerLocation" xml:space="preserve"><value>Sunucu Konumu</value></data>
+  <data name="Dash_ServerLocationHint" xml:space="preserve"><value>7DaysToDieServer.exe dosyanı göster (ya da Ayarlar'dan bir sunucu kur)</value></data>
+  <data name="Dash_ServerPathTooltip" xml:space="preserve"><value>7DaysToDieServer.exe yolu — Gözat'ı kullan ya da otomatik kurulum için Ayarlar'da SteamCMD'yi ayarla</value></data>
+  <data name="Dash_ServerStatus" xml:space="preserve"><value>Sunucu Durumu</value></data>
+  <data name="Dash_State" xml:space="preserve"><value>Durum</value></data>
+  <data name="Dash_Uptime" xml:space="preserve"><value>Çalışma Süresi</value></data>
+  <data name="Dash_Players" xml:space="preserve"><value>Oyuncular</value></data>
+  <data name="Dash_Controls" xml:space="preserve"><value>Kontroller</value></data>
+  <data name="Dash_Start" xml:space="preserve"><value>Başlat</value></data>
+  <data name="Dash_Stop" xml:space="preserve"><value>Durdur</value></data>
+  <data name="Dash_ConnectTelnet" xml:space="preserve"><value>Telnet'e Bağlan</value></data>
+  <data name="Dash_ConnectTelnetTooltip" xml:space="preserve"><value>Telnet'e elle bağlan — sunucu zaten çalışıyorsa kullan</value></data>
+  <data name="Dash_Restart" xml:space="preserve"><value>Yeniden Başlat</value></data>
+  <data name="Dash_ConnectionInfo" xml:space="preserve"><value>Bağlantı Bilgisi</value></data>
+  <data name="Dash_CopyLanTooltip" xml:space="preserve"><value>LAN adresini panoya kopyala</value></data>
+  <data name="Dash_CopyPublicTooltip" xml:space="preserve"><value>Genel adresi panoya kopyala</value></data>
+  <data name="Dash_Lan" xml:space="preserve"><value>LAN</value></data>
+  <data name="Dash_Public" xml:space="preserve"><value>GENEL</value></data>
+  <data name="Dash_IpUnknown" xml:space="preserve"><value>Bilinmiyor</value></data>
+  <data name="Dash_IpUnavailable" xml:space="preserve"><value>Kullanılamıyor</value></data>
+  <data name="Dash_ExeFilterServer" xml:space="preserve"><value>Sunucu Programı</value></data>
+  <data name="Dash_ExeFilterAll" xml:space="preserve"><value>Tüm Programlar</value></data>
+  <data name="Dash_BrowseExeTitle" xml:space="preserve"><value>7 Days to Die Sunucu Programını Seç</value></data>
+  <data name="Console_Title" xml:space="preserve"><value>Konsol</value></data>
+  <data name="Console_Clear" xml:space="preserve"><value>Temizle</value></data>
+  <data name="Console_Send" xml:space="preserve"><value>Gönder</value></data>
+  <data name="Server_ConfigBackedUp" xml:space="preserve"><value>{0} yedeklendi (Steam güncellemelerine karşı koruma).</value></data>
+  <data name="Server_ConfigBackupFailed" xml:space="preserve"><value>Yapılandırma yedeklenemedi: {0}</value></data>
+  <data name="Server_CheckingUpdates" xml:space="preserve"><value>Güncellemeler denetleniyor...</value></data>
+  <data name="Server_UpdateCheckComplete" xml:space="preserve"><value>Güncelleme denetimi tamamlandı.</value></data>
+  <data name="Server_UpdateCheckFailed" xml:space="preserve"><value>Güncelleme denetimi başarısız — yine de başlatılıyor.</value></data>
+  <data name="Server_ConfigRestored" xml:space="preserve"><value>{0} yedekten geri yüklendi.</value></data>
+  <data name="Server_ConfigRestoreFailed" xml:space="preserve"><value>Yapılandırma yedeği geri yüklenemedi: {0}</value></data>
+  <data name="Server_LogFile" xml:space="preserve"><value>Günlük dosyası: {0}</value></data>
+  <data name="Server_StartingCommand" xml:space="preserve"><value>Sunucu başlatılıyor: {0} {1}</value></data>
+  <data name="Server_StartFailed" xml:space="preserve"><value>Sunucu başlatılamadı: {0}</value></data>
+  <data name="Server_SendingShutdown" xml:space="preserve"><value>Kapatma komutu gönderiliyor...</value></data>
+  <data name="Server_ForceKilling" xml:space="preserve"><value>Sunucu işlemi zorla sonlandırılıyor...</value></data>
+  <data name="Server_Stopped" xml:space="preserve"><value>Sunucu durduruldu.</value></data>
+  <data name="Server_CleanedOldLog" xml:space="preserve"><value>Eski günlük temizlendi: {0}</value></data>
+  <data name="Players_Title" xml:space="preserve"><value>Çevrimiçi Oyuncular</value></data>
+  <data name="Players_OnlineSuffix" xml:space="preserve"><value>çevrimiçi</value></data>
+  <data name="Players_Kick" xml:space="preserve"><value>At</value></data>
+  <data name="Players_Ban" xml:space="preserve"><value>Engelle</value></data>
+  <data name="Players_StatLevel" xml:space="preserve"><value>SEVİYE</value></data>
+  <data name="Players_StatHealth" xml:space="preserve"><value>SAĞLIK</value></data>
+  <data name="Players_StatScore" xml:space="preserve"><value>SKOR</value></data>
+  <data name="Players_StatZombies" xml:space="preserve"><value>ZOMBİLER</value></data>
+  <data name="Players_StatDeaths" xml:space="preserve"><value>ÖLÜMLER</value></data>
+  <data name="Players_StatPing" xml:space="preserve"><value>PING</value></data>
+  <data name="Players_IpLabel" xml:space="preserve"><value>IP: </value></data>
+  <data name="Players_GiveAdmin" xml:space="preserve"><value>Yönetici Yap</value></data>
+  <data name="Players_RemoveAdmin" xml:space="preserve"><value>Yöneticiliği Al</value></data>
+  <data name="Players_AdminFileNotFound" xml:space="preserve"><value>Bulunamadı</value></data>
+  <data name="Players_BanConfirm" xml:space="preserve"><value>'{0}' engellensin mi?
+Oyuncu kara listeye eklenecek.</value></data>
+  <data name="Players_BanConfirmTitle" xml:space="preserve"><value>Engellemeyi Onayla</value></data>
+  <data name="Players_NoPlatformId" xml:space="preserve"><value>Oyuncunun platform kimliği belirlenemedi.</value></data>
+  <data name="Players_RemoveAdminConfirm" xml:space="preserve"><value>'{0}' adlı oyuncunun yöneticiliği alınsın mı?</value></data>
+  <data name="Players_ConfirmTitle" xml:space="preserve"><value>Onayla</value></data>
+  <data name="Perm_Owner" xml:space="preserve"><value>Sahip</value></data>
+  <data name="Perm_Admin" xml:space="preserve"><value>Yönetici</value></data>
+  <data name="Perm_Moderator" xml:space="preserve"><value>Moderatör</value></data>
+  <data name="Perm_Level" xml:space="preserve"><value>Seviye {0}</value></data>
+  <data name="Logs_Title" xml:space="preserve"><value>Sunucu Günlükleri</value></data>
+  <data name="Logs_FilterPlaceholder" xml:space="preserve"><value>Günlükleri filtrele (ör. ERR, INF, oyuncu adı...)</value></data>
+  <data name="Logs_OpenInExplorer" xml:space="preserve"><value>Gezgin'de Aç</value></data>
+  <data name="Logs_ServerDirNotSet" xml:space="preserve"><value>Sunucu klasörü ayarlanmadı</value></data>
+  <data name="Logs_FilesFound" xml:space="preserve"><value>{0} günlük dosyası bulundu</value></data>
+  <data name="Logs_NoFilesFound" xml:space="preserve"><value>Günlük dosyası bulunamadı</value></data>
+  <data name="Logs_FileNotFound" xml:space="preserve"><value>Dosya bulunamadı</value></data>
+  <data name="Logs_Truncated" xml:space="preserve"><value>--- Toplam {0} satırın ilk 10.000 satırı gösteriliyor (daraltmak için filtre kullan) ---</value></data>
+  <data name="Logs_MatchingLines" xml:space="preserve"><value>{1} içinde eşleşen {0} satır</value></data>
+  <data name="Logs_LineCount" xml:space="preserve"><value>{0} satır — {1}</value></data>
+  <data name="Logs_ReadError" xml:space="preserve"><value>Günlük okunurken hata: {0}</value></data>
+  <data name="Settings_UpdatesHeader" xml:space="preserve"><value>Güncellemeler</value></data>
+  <data name="Settings_UpdatesDescription" xml:space="preserve"><value>Kitsune7Den'in en son sürümü için GitHub'ı denetler. Güncellemeler indirilip yerinde kurulur — yükleyici gerekmez.</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Güncellemeleri Denetle</value></data>
+  <data name="Settings_InstallUpdate" xml:space="preserve"><value>Güncellemeyi Kur</value></data>
+  <data name="Settings_ViewOnGitHub" xml:space="preserve"><value>GitHub'da Görüntüle</value></data>
+  <data name="Settings_UpdateAvailableLabel" xml:space="preserve"><value>Güncelleme mevcut: </value></data>
+  <data name="Settings_AppearanceHeader" xml:space="preserve"><value>Görünüm</value></data>
+  <data name="Settings_LanguageLabel" xml:space="preserve"><value>Dil / Language</value></data>
+  <data name="Settings_ThemeLabel" xml:space="preserve"><value>Tema</value></data>
+  <data name="Settings_ThemeDescKitsune" xml:space="preserve"><value>Koyu lacivert + kırmızı vurgu (varsayılan)</value></data>
+  <data name="Settings_ThemeDescMidnight" xml:space="preserve"><value>Koyu antrasit + soğuk mavi vurgu</value></data>
+  <data name="Settings_ThemeDescForest" xml:space="preserve"><value>Koyu yeşil tonlar + kehribar vurgu</value></data>
+  <data name="Settings_ThemeDescAccessible" xml:space="preserve"><value>Yüksek kontrast, renk körlüğü dostu (mavi/turuncu, kırmızı/yeşil yok)</value></data>
+  <data name="Settings_SupportHeader" xml:space="preserve"><value>Projeyi Destekle</value></data>
+  <data name="Settings_SupportDescription" xml:space="preserve"><value>Kitsune7Den ücretsiz ve açık kaynaklıdır. Sana zaman kazandırıyor ya da sunucu hayatını kolaylaştırıyorsa bana bir kahve ısmarlayabilirsin. Hiçbir baskı yok, sadece teşekkür.</value></data>
+  <data name="Settings_KofiTooltip" xml:space="preserve"><value>ko-fi.com'u varsayılan tarayıcında açar</value></data>
+  <data name="Settings_KofiButton" xml:space="preserve"><value>Ko-fi'da Destek Ol</value></data>
+  <data name="Settings_SteamCmdDescription" xml:space="preserve"><value>SteamCMD ile 7D2D ayrılmış sunucusunu doğrudan kurup güncelleyebilirsin.</value></data>
+  <data name="Settings_SteamCmdPathLabel" xml:space="preserve"><value>SteamCMD Yolu</value></data>
+  <data name="Settings_Download" xml:space="preserve"><value>İndir</value></data>
+  <data name="Settings_DownloadSteamCmdTooltip" xml:space="preserve"><value>SteamCMD'yi otomatik olarak indirir</value></data>
+  <data name="Settings_SteamCmdPathTooltip" xml:space="preserve"><value>steamcmd.exe yolu</value></data>
+  <data name="Settings_SteamCmdNotFound" xml:space="preserve"><value>SteamCMD bulunamadı</value></data>
+  <data name="Settings_SteamCmdReady" xml:space="preserve"><value>SteamCMD hazır</value></data>
+  <data name="Settings_ServerInstallHeader" xml:space="preserve"><value>Sunucu Kurulumu</value></data>
+  <data name="Settings_InstallDirLabel" xml:space="preserve"><value>Kurulum Klasörü</value></data>
+  <data name="Settings_InstallDirTooltip" xml:space="preserve"><value>7D2D sunucu dosyalarının kurulacağı yer</value></data>
+  <data name="Settings_BranchLabel" xml:space="preserve"><value>Sunucu Dalı</value></data>
+  <data name="Settings_BranchTooltip" xml:space="preserve"><value>Bilinen bir dalı seç ya da özel bir dal adı yaz (ör. alpha21.2)</value></data>
+  <data name="Settings_AutoUpdateOnStart" xml:space="preserve"><value>Sunucu başlarken otomatik güncelle</value></data>
+  <data name="Settings_ValidateFiles" xml:space="preserve"><value>Dosyaları doğrula</value></data>
+  <data name="Settings_ValidateFilesTooltip" xml:space="preserve"><value>Güncelleme sırasında dosya doğrulaması yapar (daha yavaştır ama bozuk dosyaları onarır)</value></data>
+  <data name="Settings_InstallOrUpdateServer" xml:space="preserve"><value>Sunucuyu Kur / Güncelle</value></data>
+  <data name="Settings_TelnetHeader" xml:space="preserve"><value>Telnet Bağlantısı</value></data>
+  <data name="Settings_TelnetDescription" xml:space="preserve"><value>Kitsune7Den her bağlandığında telnet portunu ve şifresini serverconfig.xml dosyasından okur; buradaki değerleri yalnızca bu işe yaramazsa kullanır. Komutları göndermek ve oyuncu verilerini okumak için telnet kullanılır.</value></data>
+  <data name="Settings_TelnetPortLabel" xml:space="preserve"><value>Telnet Portu</value></data>
+  <data name="Settings_TelnetPasswordLabel" xml:space="preserve"><value>Telnet Şifresi</value></data>
+  <data name="Settings_SaveAll" xml:space="preserve"><value>Tüm Ayarları Kaydet</value></data>
+  <data name="Settings_TermsHeader" xml:space="preserve"><value>Kullanım Koşulları</value></data>
+  <data name="Settings_TermsText" xml:space="preserve"><value>Kitsune7Den yalnızca kişisel ve ticari olmayan kullanım için "olduğu gibi" sunulur. Hiçbir garanti veya güvence verilmez. Yazar; veri kaybından, sunucu sorunlarından veya bu yazılımın kullanımından doğan diğer zararlardan sorumlu değildir. Kullanım riski sana aittir. Bu araç The Fun Pimps veya Valve ile bağlantılı değildir ve onlar tarafından onaylanmamıştır.</value></data>
+  <data name="Settings_OperationSucceeded" xml:space="preserve"><value>İşlem başarıyla tamamlandı</value></data>
+  <data name="Settings_OperationFailed" xml:space="preserve"><value>İşlem başarısız — günlüğe bak</value></data>
+  <data name="Settings_ThemeChanged" xml:space="preserve"><value>Tema değiştirildi: {0}</value></data>
+  <data name="Settings_Saved" xml:space="preserve"><value>Ayarlar kaydedildi</value></data>
+  <data name="Settings_FilterAllExecutables" xml:space="preserve"><value>Tüm Programlar</value></data>
+  <data name="Settings_SelectSteamCmdTitle" xml:space="preserve"><value>steamcmd.exe Dosyasını Seç</value></data>
+  <data name="Settings_SelectInstallDirTitle" xml:space="preserve"><value>Sunucu Kurulum Klasörünü Seç</value></data>
+  <data name="Settings_SetInstallDirFirstSteamCmd" xml:space="preserve"><value>Önce bir sunucu kurulum klasörü ayarla — SteamCMD onun yanına yerleştirilecek</value></data>
+  <data name="Settings_SteamCmdNotFoundDownloadFirst" xml:space="preserve"><value>SteamCMD bulunamadı — önce indir ya da konumunu göster</value></data>
+  <data name="Settings_SetInstallDirFirst" xml:space="preserve"><value>Önce bir sunucu kurulum klasörü ayarla</value></data>
+  <data name="Settings_Updating" xml:space="preserve"><value>Güncelleniyor...</value></data>
+  <data name="Settings_Cancelling" xml:space="preserve"><value>İptal ediliyor...</value></data>
+  <data name="Settings_ConfirmUpdateMessage" xml:space="preserve"><value>{0} güncellemesi ({1}) kurulsun mu?
+
+Kitsune7Den yeni sürümü indirip yeniden başlayacak. Sunucu çalışmaya devam edecek.</value></data>
+  <data name="Settings_ConfirmUpdateTitle" xml:space="preserve"><value>Güncellemeyi Onayla</value></data>
+  <data name="Update_Checking" xml:space="preserve"><value>Güncellemeler denetleniyor...</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>En son sürümü kullanıyorsun ({0})</value></data>
+  <data name="Update_NoAsset" xml:space="preserve"><value>{0} güncellemesi mevcut ama sürümde indirilebilir exe/zip dosyası bulunamadı</value></data>
+  <data name="Update_Available" xml:space="preserve"><value>Güncelleme mevcut: {0}</value></data>
+  <data name="Update_CheckFailed" xml:space="preserve"><value>Güncelleme denetimi başarısız: {0}</value></data>
+  <data name="Update_ExeNotFound" xml:space="preserve"><value>Geçerli exe yolu bulunamadı</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>İndiriliyor: {0} ({1})...</value></data>
+  <data name="Update_Extracting" xml:space="preserve"><value>Ayıklanıyor...</value></data>
+  <data name="Update_ZipMissingExe" xml:space="preserve"><value>Zip dosyasında {0} yok</value></data>
+  <data name="Update_DownloadComplete" xml:space="preserve"><value>İndirme tamamlandı. Kuruluyor...</value></data>
+  <data name="Update_Installed" xml:space="preserve"><value>Güncelleme kuruldu. Yeniden başlatılıyor...</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Güncelleme başarısız: {0}</value></data>
+  <data name="Steam_AlreadyExists" xml:space="preserve"><value>SteamCMD zaten şu konumda var: {0}</value></data>
+  <data name="Steam_Downloading" xml:space="preserve"><value>SteamCMD indiriliyor...</value></data>
+  <data name="Steam_Extracting" xml:space="preserve"><value>SteamCMD ayıklanıyor...</value></data>
+  <data name="Steam_Installed" xml:space="preserve"><value>SteamCMD şu konuma kuruldu: {0}</value></data>
+  <data name="Steam_ExeMissingAfterExtract" xml:space="preserve"><value>Hata: Ayıklamadan sonra steamcmd.exe bulunamadı</value></data>
+  <data name="Steam_DownloadError" xml:space="preserve"><value>SteamCMD indirilirken hata: {0}</value></data>
+  <data name="Steam_PathNotSet" xml:space="preserve"><value>Hata: SteamCMD yolu ayarlanmadı ya da bulunamadı. Önce indir.</value></data>
+  <data name="Steam_InstallDirNotSet" xml:space="preserve"><value>Hata: Sunucu kurulum klasörü ayarlanmadı.</value></data>
+  <data name="Steam_Running" xml:space="preserve"><value>Çalıştırılıyor: steamcmd {0}</value></data>
+  <data name="Steam_BranchValidate" xml:space="preserve"><value>Dal: {0} | Doğrulama: {1}</value></data>
+  <data name="Steam_FirstInstallSlow" xml:space="preserve"><value>İlk kurulumda bu biraz zaman alabilir...</value></data>
+  <data name="Steam_ServerExeFound" xml:space="preserve"><value>Sunucu exe dosyası bulundu: {0}</value></data>
+  <data name="Steam_UpdateSucceeded" xml:space="preserve"><value>Güncelleme başarıyla tamamlandı!</value></data>
+  <data name="Steam_ExitCode" xml:space="preserve"><value>SteamCMD şu kodla çıktı: {0}</value></data>
+  <data name="Steam_Cancelled" xml:space="preserve"><value>Güncelleme iptal edildi.</value></data>
+  <data name="Steam_RunError" xml:space="preserve"><value>SteamCMD çalıştırılırken hata: {0}</value></data>
+  <data name="Mods_OpenFolder" xml:space="preserve"><value>Klasörü Aç</value></data>
+  <data name="Mods_InstallFromZip" xml:space="preserve"><value>Zip'ten Kur</value></data>
+  <data name="Mods_EnabledSummary" xml:space="preserve"><value>{0} / {1} etkin</value></data>
+  <data name="Mods_StatusEnabled" xml:space="preserve"><value>Etkin</value></data>
+  <data name="Mods_StatusDisabled" xml:space="preserve"><value>Devre dışı</value></data>
+  <data name="Mods_Enable" xml:space="preserve"><value>Etkinleştir</value></data>
+  <data name="Mods_Disable" xml:space="preserve"><value>Devre Dışı Bırak</value></data>
+  <data name="Mods_ByAuthor" xml:space="preserve"><value>Yapımcı: </value></data>
+  <data name="Mods_CountStatus" xml:space="preserve"><value>{0} mod ({1} etkin)</value></data>
+  <data name="Mods_EnabledMod" xml:space="preserve"><value>Etkinleştirildi: {0}</value></data>
+  <data name="Mods_DisabledMod" xml:space="preserve"><value>Devre dışı bırakıldı: {0}</value></data>
+  <data name="Mods_DeleteConfirm" xml:space="preserve"><value>'{0}' modu silinsin mi?
+Tüm dosyaları kaldırılacak ve bu işlem geri alınamaz.</value></data>
+  <data name="Mods_DeleteConfirmTitle" xml:space="preserve"><value>Silmeyi Onayla</value></data>
+  <data name="Mods_Deleted" xml:space="preserve"><value>Silindi: {0}</value></data>
+  <data name="Mods_FilterArchives" xml:space="preserve"><value>Mod Arşivleri</value></data>
+  <data name="Mods_FilterAllFiles" xml:space="preserve"><value>Tüm Dosyalar</value></data>
+  <data name="Mods_SelectZipTitle" xml:space="preserve"><value>Mod Zip Dosyasını Seç</value></data>
+  <data name="Mods_ErrNoModStructure" xml:space="preserve"><value>Hata: Zip dosyasında mod yapısı algılanamadı. ModInfo.xml içeren bir klasör bekleniyordu.</value></data>
+  <data name="Mods_ErrInvalidFolderName" xml:space="preserve"><value>Hata: Geçersiz mod klasörü adı.</value></data>
+  <data name="Mods_Installed" xml:space="preserve"><value>Mod kuruldu: {0}</value></data>
+  <data name="Mods_InstallError" xml:space="preserve"><value>Mod kurulurken hata: {0}</value></data>
+  <data name="Backups_SaveLabel" xml:space="preserve"><value>Kayıt: </value></data>
+  <data name="Backups_SaveNotFound" xml:space="preserve"><value>Bulunamadı</value></data>
+  <data name="Backups_OpenFolder" xml:space="preserve"><value>Klasörü Aç</value></data>
+  <data name="Backups_CreateBackup" xml:space="preserve"><value>Yedek Oluştur</value></data>
+  <data name="Backups_ScheduledHeader" xml:space="preserve"><value>ZAMANLANMIŞ</value></data>
+  <data name="Backups_ScheduleEnabledCheck" xml:space="preserve"><value>Etkin</value></data>
+  <data name="Backups_IntervalHeader" xml:space="preserve"><value>ARALIK</value></data>
+  <data name="Backups_MaxBackupsHeader" xml:space="preserve"><value>MAKS. YEDEK</value></data>
+  <data name="Backups_SaveSchedule" xml:space="preserve"><value>Zamanlamayı Kaydet</value></data>
+  <data name="Backups_NextBackupHeader" xml:space="preserve"><value>SONRAKİ YEDEK</value></data>
+  <data name="Backups_EmptyTitle" xml:space="preserve"><value>Henüz yedek yok</value></data>
+  <data name="Backups_EmptyHintBefore" xml:space="preserve"><value>Mevcut kaydını zip'lemek için </value></data>
+  <data name="Backups_EmptyHintAfter" xml:space="preserve"><value> düğmesine bas ya da düzenli aralıklarla otomatik yedekleme için yukarıdaki zamanlamayı etkinleştir.</value></data>
+  <data name="Backups_Restore" xml:space="preserve"><value>Geri Yükle</value></data>
+  <data name="Backups_TypeManual" xml:space="preserve"><value>elle</value></data>
+  <data name="Backups_TypeScheduled" xml:space="preserve"><value>zamanlanmış</value></data>
+  <data name="Backups_TypePreRestore" xml:space="preserve"><value>geri yükleme öncesi</value></data>
+  <data name="Backups_Every30Minutes" xml:space="preserve"><value>30 dakikada bir</value></data>
+  <data name="Backups_EveryHour" xml:space="preserve"><value>Saat başı</value></data>
+  <data name="Backups_Every2Hours" xml:space="preserve"><value>2 saatte bir</value></data>
+  <data name="Backups_Every4Hours" xml:space="preserve"><value>4 saatte bir</value></data>
+  <data name="Backups_Every6Hours" xml:space="preserve"><value>6 saatte bir</value></data>
+  <data name="Backups_Every12Hours" xml:space="preserve"><value>12 saatte bir</value></data>
+  <data name="Backups_EveryDay" xml:space="preserve"><value>Her gün</value></data>
+  <data name="Backups_FoundCount" xml:space="preserve"><value>{0} yedek bulundu</value></data>
+  <data name="Backups_RestoreConfirm" xml:space="preserve"><value>'{0}' yedeği geri yüklensin mi?
+
+Önce bir güvenlik yedeği oluşturulacak.
+Geri yüklemeden önce sunucu durdurulmalı.</value></data>
+  <data name="Backups_RestoreConfirmTitle" xml:space="preserve"><value>Geri Yüklemeyi Onayla</value></data>
+  <data name="Backups_DeleteConfirm" xml:space="preserve"><value>'{0}' yedeği silinsin mi?
+Bu işlem geri alınamaz.</value></data>
+  <data name="Backups_DeleteConfirmTitle" xml:space="preserve"><value>Silmeyi Onayla</value></data>
+  <data name="Backups_ScheduleSaved" xml:space="preserve"><value>Zamanlama ayarları kaydedildi</value></data>
+  <data name="Backups_JustNow" xml:space="preserve"><value>az önce</value></data>
+  <data name="Backups_MinutesAgo" xml:space="preserve"><value>{0} dk önce</value></data>
+  <data name="Backups_HoursAgo" xml:space="preserve"><value>{0} sa önce</value></data>
+  <data name="Backups_DaysAgo" xml:space="preserve"><value>{0} gün önce</value></data>
+  <data name="Backups_RunningScheduled" xml:space="preserve"><value>Zamanlanmış yedekleme yapılıyor...</value></data>
+  <data name="Backups_ScheduleEnabled" xml:space="preserve"><value>Zamanlanmış yedekleme etkin — aralık: {0}</value></data>
+  <data name="Backups_IntervalMinutes" xml:space="preserve"><value>{0} dakika</value></data>
+  <data name="Backups_IntervalOneHour" xml:space="preserve"><value>1 saat</value></data>
+  <data name="Backups_IntervalHours" xml:space="preserve"><value>{0} saat</value></data>
+  <data name="Backups_IntervalOneDay" xml:space="preserve"><value>1 gün</value></data>
+  <data name="Backups_IntervalDays" xml:space="preserve"><value>{0} gün</value></data>
+  <data name="Backups_ErrNoSaveDir" xml:space="preserve"><value>Hata: Kayıt klasörü bulunamadı</value></data>
+  <data name="Backups_Creating" xml:space="preserve"><value>Yedek oluşturuluyor: {0}...</value></data>
+  <data name="Backups_Created" xml:space="preserve"><value>Yedek oluşturuldu: {0} ({1})</value></data>
+  <data name="Backups_CreateFailed" xml:space="preserve"><value>Yedekleme başarısız: {0}</value></data>
+  <data name="Backups_ErrNoRestoreDir" xml:space="preserve"><value>Hata: Geri yüklenecek kayıt klasörü bulunamadı</value></data>
+  <data name="Backups_CreatingSafety" xml:space="preserve"><value>Geri yüklemeden önce güvenlik yedeği oluşturuluyor...</value></data>
+  <data name="Backups_Restoring" xml:space="preserve"><value>Geri yükleniyor: {0}...</value></data>
+  <data name="Backups_Restored" xml:space="preserve"><value>{0} başarıyla geri yüklendi. Değişikliklerin geçerli olması için sunucuyu yeniden başlat.</value></data>
+  <data name="Backups_RestoreFailed" xml:space="preserve"><value>Geri yükleme başarısız: {0}</value></data>
+  <data name="Backups_Deleted" xml:space="preserve"><value>Silindi: {0}</value></data>
+  <data name="Backups_Pruned" xml:space="preserve"><value>Eski yedek temizlendi: {0}</value></data>
+  <data name="Config_Title" xml:space="preserve"><value>Sunucu Yapılandırması</value></data>
+  <data name="Config_FormView" xml:space="preserve"><value>Form Görünümü</value></data>
+  <data name="Config_RawXml" xml:space="preserve"><value>Ham XML</value></data>
+  <data name="Config_Reset" xml:space="preserve"><value>Sıfırla</value></data>
+  <data name="Config_SaveChanges" xml:space="preserve"><value>Değişiklikleri Kaydet</value></data>
+  <data name="Config_EmptyTitle" xml:space="preserve"><value>Yapılandırılmış sunucu yok</value></data>
+  <data name="Config_EmptyBefore" xml:space="preserve"><value>Kontrol Paneli'ne git ve şu dosyayı göster: </value></data>
+  <data name="Config_EmptyAfter" xml:space="preserve"><value> — ya da Ayarlar sayfasından SteamCMD ile yeni bir sunucu kur.</value></data>
+  <data name="Config_NoConfigFound" xml:space="preserve"><value>serverconfig.xml bulunamadı — Kontrol Paneli'nden bir sunucu yapılandır</value></data>
+  <data name="Config_Loaded" xml:space="preserve"><value>{0} özellik yüklendi</value></data>
+  <data name="Config_Saved" xml:space="preserve"><value>Kaydedildi (yedek oluşturuldu)</value></data>
+  <data name="Config_SaveFailed" xml:space="preserve"><value>Kaydetme başarısız — XML'in geçerli olup olmadığını denetle</value></data>
+  <data name="Config_ResetDone" xml:space="preserve"><value>Son kaydedilen değerlere sıfırlandı</value></data>
+  <data name="Config_DayNightTitle" xml:space="preserve"><value>GÜNDÜZ / GECE DÖNGÜSÜ</value></data>
+  <data name="Config_Day" xml:space="preserve"><value>GÜNDÜZ</value></data>
+  <data name="Config_Night" xml:space="preserve"><value>GECE</value></data>
+  <data name="Config_MinutesSuffix" xml:space="preserve"><value> dk</value></data>
+  <data name="Config_MinutesTotalSuffix" xml:space="preserve"><value> dk toplam</value></data>
+  <data name="Config_TotalCycle" xml:space="preserve"><value>Toplam döngü:</value></data>
+  <data name="Config_TotalCycleRange" xml:space="preserve"><value>dk  (10 – 240)</value></data>
+  <data name="Config_DayNightPreview" xml:space="preserve"><value>DayNightLength ({0}) ve DayLightLength ({1}) değerlerinin yerini alır</value></data>
+  <data name="Config_VersionFromLog" xml:space="preserve"><value>7 Days to Die {0} algılandı (sunucu günlüğünden)</value></data>
+  <data name="Config_VersionFromBranch" xml:space="preserve"><value>7 Days to Die {0} (SteamCMD dal ayarından)</value></data>
+  <data name="Config_VersionThreeX" xml:space="preserve"><value>7 Days to Die 3.x (sunucu bir kez başlatılana kadar tam sürüm bilinmiyor)</value></data>
+  <data name="Config_MigrateBannerTitle" xml:space="preserve"><value>Bu serverconfig.xml, 7 Days to Die 3.0 öncesine ait</value></data>
+  <data name="Config_MigrateBannerBody" xml:space="preserve"><value>3.x; zorluk, ganimet, zombi, Kanlı Ay ve gün uzunluğu ayarlarını oyun içi Sandbox'a taşıdı ve bunlar tek bir SandboxCode ile belirleniyor. Aşağıda Eski başlığı altındaki eski özellikler oyun tarafından yok sayılır. Güncelleme bunları yorum satırına çevirir (hiçbir şey silinmez), SandboxCode, Region ve Language ekler ve önce bir yedek alır.</value></data>
+  <data name="Config_MigrateButton" xml:space="preserve"><value>3.x için Güncelle</value></data>
+  <data name="Config_MigrateTitle" xml:space="preserve"><value>serverconfig.xml'i 3.x için Güncelle</value></data>
+  <data name="Config_MigrateConfirm" xml:space="preserve"><value>3.x'in yok saydığı ayarlar yorum satırına çevrilsin ve SandboxCode, Region ve Language eklensin mi?
+
+Önce serverconfig.xml dosyasının zaman damgalı bir yedeği alınır. Eski değerler dosyada yorum olarak kalır.</value></data>
+  <data name="Config_Migrated" xml:space="preserve"><value>3.x için güncellendi: {0} eski ayar yorum satırına çevrildi, eklenenler: {1}</value></data>
+  <data name="Config_AlreadyMigrated" xml:space="preserve"><value>serverconfig.xml zaten 3.x biçiminde</value></data>
+  <data name="Config_MigrateFailed" xml:space="preserve"><value>Güncelleme başarısız: {0}</value></data>
+  <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Önce kaydedilmemiş değişikliklerini kaydet ya da sıfırla</value></data>
+  <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x bunları yok sayar: değerleri SandboxCode'dan alır. Bunları yukarıdaki Sandbox düzenleyicisinden değiştir.</value></data>
+  <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Sandbox Seçenekleri</value></data>
+  <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Sandbox'ı Düzenle...</value></data>
+  <data name="Sandbox_CardHint" xml:space="preserve"><value>Zorluk, ganimet, zombiler, Kanlı Aylar, gün uzunluğu, tüccarlar ve daha fazlası. Oyunun Sandbox ekranındaki seçeneklerin aynısı.</value></data>
+  <data name="Sandbox_SummaryPreset" xml:space="preserve"><value>Ön ayar: {0}</value></data>
+  <data name="Sandbox_SummaryCustom" xml:space="preserve"><value>Özel kurallar: varsayılandan farklı {0} seçenek</value></data>
+  <data name="Sandbox_SummaryInvalid" xml:space="preserve"><value>Bu SandboxCode okunamıyor. Nedenini görmek için düzenleyiciyi aç.</value></data>
+  <data name="Sandbox_Updated" xml:space="preserve"><value>SandboxCode güncellendi. serverconfig.xml dosyasına yazmak için Değişiklikleri Kaydet'e tıkla.</value></data>
+  <data name="Sandbox_TableExact" xml:space="preserve"><value>{0} seçenek tablosu kullanılıyor (sunucu: 7 Days to Die {1}).</value></data>
+  <data name="Sandbox_TableBehind" xml:space="preserve"><value>Bu sunucu 7 Days to Die {0} çalıştırıyor, ancak Kitsune7Den'in bu sürümündeki en yeni seçenek tablosu {1}. O zamandan beri eklenen veya değişen seçenekler eksik ya da kaymış olabilir. Kitsune7Den güncellemesi olup olmadığını denetle.</value></data>
+  <data name="Sandbox_TableGuess" xml:space="preserve"><value>Bu sunucunun hangi 3.x sürümünü çalıştırdığı anlaşılamadı, bu yüzden en yeni tablo ({0}) kullanılıyor. Günlüğe sürümün kaydedilmesi için sunucuyu bir kez başlat; kodlar farklı 3.x sürümlerinde farklı anlamlara gelebilir.</value></data>
+  <data name="Sandbox_Preset" xml:space="preserve"><value>Ön Ayar</value></data>
+  <data name="Sandbox_MatchesPreset" xml:space="preserve"><value>{0} ön ayarıyla eşleşiyor</value></data>
+  <data name="Sandbox_CustomRules" xml:space="preserve"><value>Özel kurallar</value></data>
+  <data name="Sandbox_Search" xml:space="preserve"><value>Seçeneklerde ara...</value></data>
+  <data name="Sandbox_ResetOption" xml:space="preserve"><value>Varsayılana dön</value></data>
+  <data name="Sandbox_ResetAll" xml:space="preserve"><value>Tümünü Sıfırla</value></data>
+  <data name="Sandbox_Apply" xml:space="preserve"><value>Uygula</value></data>
+  <data name="Sandbox_CodeLabel" xml:space="preserve"><value>SandboxCode</value></data>
+  <data name="Sandbox_ChangedSuffix" xml:space="preserve"><value>varsayılandan farklı</value></data>
+  <data name="Sandbox_Default" xml:space="preserve"><value>Varsayılan: {0}</value></data>
+  <data name="Sandbox_CodeEmpty" xml:space="preserve"><value>Kod boş.</value></data>
+  <data name="Sandbox_CodeNotLetters" xml:space="preserve"><value>SandboxCode yalnızca A–Z harflerinden oluşur.</value></data>
+  <data name="Sandbox_CodeWrongVersion" xml:space="preserve"><value>Bu kod "{0}" ile başlıyor, ancak bu oyun sürümünün kodları "{1}" ile başlar.</value></data>
+  <data name="Sandbox_CodeUnknownTriples" xml:space="preserve"><value>Bu kodun {0} parçası bu oyun sürümünde bir seçeneğe karşılık gelmiyor ve olduğu gibi korunacak: {1}</value></data>
+  <data name="CfgCat_Core" xml:space="preserve"><value>Temel</value></data>
+  <data name="CfgCat_Sandbox" xml:space="preserve"><value>Sandbox</value></data>
+  <data name="CfgCat_World" xml:space="preserve"><value>Dünya</value></data>
+  <data name="CfgCat_BlockDamage" xml:space="preserve"><value>Blok Hasarı</value></data>
+  <data name="CfgCat_Gameplay" xml:space="preserve"><value>Oynanış</value></data>
+  <data name="CfgCat_Player" xml:space="preserve"><value>Oyuncu</value></data>
+  <data name="CfgCat_Zombies" xml:space="preserve"><value>Zombiler</value></data>
+  <data name="CfgCat_LootDrops" xml:space="preserve"><value>Ganimet ve Düşenler</value></data>
+  <data name="CfgCat_LandClaims" xml:space="preserve"><value>Alana El Koyma</value></data>
+  <data name="CfgCat_Network" xml:space="preserve"><value>Ağ</value></data>
+  <data name="CfgCat_Admin" xml:space="preserve"><value>Yönetim</value></data>
+  <data name="CfgCat_Advanced" xml:space="preserve"><value>Gelişmiş</value></data>
+  <data name="CfgCat_Legacy" xml:space="preserve"><value>Eski</value></data>
+  <data name="CfgCat_Other" xml:space="preserve"><value>Diğer</value></data>
+  <data name="Cfg_ServerName_Name" xml:space="preserve"><value>Sunucu Adı</value></data>
+  <data name="Cfg_ServerName_Desc" xml:space="preserve"><value>Sunucu tarayıcısında görünen ad</value></data>
+  <data name="Cfg_ServerPassword_Name" xml:space="preserve"><value>Sunucu Şifresi</value></data>
+  <data name="Cfg_ServerPassword_Desc" xml:space="preserve"><value>Katılmak için gereken şifre (boş = şifre yok)</value></data>
+  <data name="Cfg_ServerDescription_Name" xml:space="preserve"><value>Sunucu Açıklaması</value></data>
+  <data name="Cfg_ServerDescription_Desc" xml:space="preserve"><value>Sunucu tarayıcısı listesinde görünen açıklama</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Name" xml:space="preserve"><value>Giriş Onay Metni</value></data>
+  <data name="Cfg_ServerLoginConfirmationText_Desc" xml:space="preserve"><value>Oyuncuların katılmadan önce kabul etmesi gereken mesaj</value></data>
+  <data name="Cfg_Region_Name" xml:space="preserve"><value>Bölge</value></data>
+  <data name="Cfg_Region_Desc" xml:space="preserve"><value>Sunucunun bulunduğu bölge; sunucu tarayıcısının bölge filtresinde kullanılır (3.x)</value></data>
+  <data name="Cfg_Region_Opts" xml:space="preserve"><value>Kuzey Amerika - Doğu|Kuzey Amerika - Batı|Orta Amerika|Güney Amerika|Avrupa|Rusya|Asya|Ortadoğu|Afrika|Okyanusya</value></data>
+  <data name="Cfg_Language_Name" xml:space="preserve"><value>Dil</value></data>
+  <data name="Cfg_Language_Desc" xml:space="preserve"><value>Oyuncuların birincil dili; sunucu tarayıcısı aramasında bulunabilmesi için İngilizce adıyla yazılır ("Türkçe" değil, "Turkish") (3.x)</value></data>
+  <data name="Cfg_SandboxCode_Name" xml:space="preserve"><value>Sandbox Kodu</value></data>
+  <data name="Cfg_SandboxCode_Desc" xml:space="preserve"><value>7D2D 3.x, oynanış kurallarını (zorluk, ganimet, zombiler, Kanlı Aylar, gün uzunluğu...) bu tek kodda tutar. Sandbox düzenleyicisini kullan ya da oyunun Sandbox Seçenekleri ekranından kopyaladığın bir kodu yapıştır.</value></data>
+  <data name="Cfg_GameWorld_Name" xml:space="preserve"><value>Oyun Dünyası</value></data>
+  <data name="Cfg_GameWorld_Desc" xml:space="preserve"><value>Data/Worlds ve GeneratedWorlds klasörlerinden otomatik doldurulur. Mevcut bir dünyayı seç ya da özel bir ad yaz.</value></data>
+  <data name="Cfg_WorldGenSeed_Name" xml:space="preserve"><value>Dünya Tohumu</value></data>
+  <data name="Cfg_WorldGenSeed_Desc" xml:space="preserve"><value>Rastgele dünya oluşturmada kullanılan tohum metni</value></data>
+  <data name="Cfg_WorldGenSize_Name" xml:space="preserve"><value>Dünya Boyutu</value></data>
+  <data name="Cfg_WorldGenSize_Desc" xml:space="preserve"><value>RWG haritasının metre cinsinden genişliği/yüksekliği. Resmî olarak desteklenen: 6144 ile 10240 arası, 2048'in katı.</value></data>
+  <data name="Cfg_GameName_Name" xml:space="preserve"><value>Oyun Adı</value></data>
+  <data name="Cfg_GameName_Desc" xml:space="preserve"><value>Kayıtlı oyunun adı (harfler, rakamlar, _ - . ve boşluk). Bunu değiştirmek yeni bir kayıt başlatır.</value></data>
+  <data name="Cfg_GameMode_Name" xml:space="preserve"><value>Oyun Modu</value></data>
+  <data name="Cfg_GameMode_Desc" xml:space="preserve"><value>Sunucunun oyun modu</value></data>
+  <data name="Cfg_GameMode_Opts" xml:space="preserve"><value>Hayatta Kalma (GameModeSurvival)</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Name" xml:space="preserve"><value>Dürülü Yatak Ölüm Bölgesi</value></data>
+  <data name="Cfg_BedrollDeadZoneSize_Desc" xml:space="preserve"><value>Başkalarının seninkinin yakınına dürülü yatak koyamayacağı blok cinsinden yarıçap</value></data>
+  <data name="Cfg_BedrollExpiryTime_Name" xml:space="preserve"><value>Dürülü Yatak Süresi</value></data>
+  <data name="Cfg_BedrollExpiryTime_Desc" xml:space="preserve"><value>Sahibi son kez çevrimiçi olduktan sonra dürülü yatağın etkin kaldığı gerçek gün sayısı</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Name" xml:space="preserve"><value>Oyuncu Başına Maks. Açılan Harita Öbeği</value></data>
+  <data name="Cfg_MaxUncoveredMapChunksPerPlayer_Desc" xml:space="preserve"><value>Oyuncu başına açılabilecek en fazla harita öbeği (131072 = tüm harita)</value></data>
+  <data name="Cfg_BlockDamagePlayer_Name" xml:space="preserve"><value>Oyuncu Blok Hasarı</value></data>
+  <data name="Cfg_BlockDamagePlayer_Desc" xml:space="preserve"><value>Oyuncuların bloklara verdiği hasarı ölçekler (yüzde). Tek başına oynarken kaynak toplama yükünü azaltmak için %300 sık tercih edilir.</value></data>
+  <data name="Cfg_BlockDamageAI_Name" xml:space="preserve"><value>Düşman Blok Hasarı</value></data>
+  <data name="Cfg_BlockDamageAI_Desc" xml:space="preserve"><value>Normal oyunda zombi/hayvanların bloklara verdiği hasarı ölçekler. Zombilerin duvarları tırmalayarak geçmesini önlemek için %25-50'ye düşür.</value></data>
+  <data name="Cfg_BlockDamageAIBM_Name" xml:space="preserve"><value>Kanlı Ay Blok Hasarı</value></data>
+  <data name="Cfg_BlockDamageAIBM_Desc" xml:space="preserve"><value>Zombilerin yalnızca Kanlı Ay sırasında bloklara verdiği hasarı ölçekler. Normal düşman hasarından ayrıdır, böylece sürüler daha sert (ya da daha yumuşak) vurabilir.</value></data>
+  <data name="Cfg_GameDifficulty_Name" xml:space="preserve"><value>Oyun Zorluğu</value></data>
+  <data name="Cfg_GameDifficulty_Desc" xml:space="preserve"><value>Genel zorluk. 3.x'te oyuncuların asıl hissettiği şey Sandbox zorluk ön ayarıdır; bu ayar çoğunlukla eskiden kalmadır.</value></data>
+  <data name="Cfg_GameDifficulty_Opts" xml:space="preserve"><value>0 - Çöpçü|1 - Maceracı|2 - Göçebe|3 - Savaşçı|4 - Hayatta Kalma Ustası|5 - Delicesine Zor</value></data>
+  <data name="Cfg_DayNightLength_Name" xml:space="preserve"><value>24 Saatlik Döngü</value></data>
+  <data name="Cfg_DayNightLength_Desc" xml:space="preserve"><value>Oyun içi 24 saatlik döngünün gerçek dakika cinsinden süresi</value></data>
+  <data name="Cfg_DayLightLength_Name" xml:space="preserve"><value>Günışığı Süresi</value></data>
+  <data name="Cfg_DayLightLength_Desc" xml:space="preserve"><value>Oyun içi günışığı saati (24 saat içinden)</value></data>
+  <data name="Cfg_BuildCreate_Name" xml:space="preserve"><value>Yaratıcı Mod</value></data>
+  <data name="Cfg_BuildCreate_Desc" xml:space="preserve"><value>Yaratıcı/hile modunda inşaya izin ver</value></data>
+  <data name="Cfg_BuildCreate_Opts" xml:space="preserve"><value>Açık|Kapalı</value></data>
+  <data name="Cfg_BloodMoonFrequency_Name" xml:space="preserve"><value>Kanlı Ay Sıklığı</value></data>
+  <data name="Cfg_BloodMoonFrequency_Desc" xml:space="preserve"><value>Kanlı Ay sürüsü her N günde bir</value></data>
+  <data name="Cfg_BloodMoonRange_Name" xml:space="preserve"><value>Kanlı Ay Aralığı</value></data>
+  <data name="Cfg_BloodMoonRange_Desc" xml:space="preserve"><value>Kanlı Ay takvimine eklenen rastgele +/- gün (0 = tam zamanında)</value></data>
+  <data name="Cfg_BloodMoonWarning_Name" xml:space="preserve"><value>Kanlı Ay Uyarısı</value></data>
+  <data name="Cfg_BloodMoonWarning_Desc" xml:space="preserve"><value>Uyarının Kanlı Ay'dan kaç saat önce görüneceği</value></data>
+  <data name="Cfg_BiomeProgression_Name" xml:space="preserve"><value>Biyom İlerlemesi</value></data>
+  <data name="Cfg_BiomeProgression_Desc" xml:space="preserve"><value>Uzak biyomlarda zombiler zorlaşır</value></data>
+  <data name="Cfg_BiomeProgression_Opts" xml:space="preserve"><value>Açık|Kapalı</value></data>
+  <data name="Cfg_StormFreq_Name" xml:space="preserve"><value>Fırtına Sıklığı</value></data>
+  <data name="Cfg_StormFreq_Desc" xml:space="preserve"><value>Hava fırtınalarının sıklığı. %0 fırtınaları kapatır.</value></data>
+  <data name="Cfg_StormFreq_Opts" xml:space="preserve"><value>%0 - Kapalı|%50|%100|%150|%200|%300|%400|%500</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Name" xml:space="preserve"><value>Günlük Görev Sayısı</value></data>
+  <data name="Cfg_QuestProgressionDailyLimit_Desc" xml:space="preserve"><value>Kademe ilerlemesine sayılan günlük en fazla görev. Fazladan görevler yine ödül verir. Sınırsız için 0 yap.</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Name" xml:space="preserve"><value>Kanlı Ay Düşman Sayısı</value></data>
+  <data name="Cfg_BloodMoonEnemyCount_Desc" xml:space="preserve"><value>Kanlı Ay sırasında oyuncu başına canlı zombi sayısı. Oyun aşaması ve MaxSpawnedZombies bunu geçersiz kılabilir. Performansı çok etkiler.</value></data>
+  <data name="Cfg_XPMultiplier_Name" xml:space="preserve"><value>DP Çarpanı</value></data>
+  <data name="Cfg_XPMultiplier_Desc" xml:space="preserve"><value>DP kazanım çarpanı (%). Yüksek değer = daha hızlı seviye atlama.</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Name" xml:space="preserve"><value>Güvenli Bölge Seviyesi</value></data>
+  <data name="Cfg_PlayerSafeZoneLevel_Desc" xml:space="preserve"><value>Güvenli bölge korumasının sona erdiği oyuncu seviyesi. Yeni oyuncular bu seviyeye kadar zombilere karşı korunur.</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Name" xml:space="preserve"><value>Güvenli Bölge Süresi</value></data>
+  <data name="Cfg_PlayerSafeZoneHours_Desc" xml:space="preserve"><value>Yeni oyuncular için güvenli bölge korumasının saat cinsinden süresi. Bu süreden sonra koruma, seviyeden bağımsız olarak sona erer.</value></data>
+  <data name="Cfg_PlayerKillingMode_Name" xml:space="preserve"><value>Oyuncu Öldürme</value></data>
+  <data name="Cfg_PlayerKillingMode_Desc" xml:space="preserve"><value>Oyuncuya karşı oyuncu (PvP) çatışma kuralları</value></data>
+  <data name="Cfg_PlayerKillingMode_Opts" xml:space="preserve"><value>0 - Öldürme Yok|1 - Sadece Müttefikleri Öldür|2 - Sadece Yabancıları Öldür|3 - Herkesi Öldür</value></data>
+  <data name="Cfg_PartySharedKillRange_Name" xml:space="preserve"><value>Grup Öldürme Paylaşım Menzili</value></data>
+  <data name="Cfg_PartySharedKillRange_Desc" xml:space="preserve"><value>Grup üyelerinin öldürmelerden gelen DP'yi paylaşması için metre cinsinden mesafe. 0 = çok yakın olmalı.</value></data>
+  <data name="Cfg_DeathPenalty_Name" xml:space="preserve"><value>Ölüm Cezası</value></data>
+  <data name="Cfg_DeathPenalty_Desc" xml:space="preserve"><value>Oyuncu öldüğünde uygulanan DP cezası</value></data>
+  <data name="Cfg_DeathPenalty_Opts" xml:space="preserve"><value>0 - Yok|1 - Varsayılan|2 - Yaralı|3 - Kalıcı Ölüm</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Name" xml:space="preserve"><value>Arkadaşın Yanında Doğma</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Desc" xml:space="preserve"><value>Yeni oyuncular ilk bağlandıklarında bir arkadaşlarının yanında başlamayı seçebilir mi?</value></data>
+  <data name="Cfg_AllowSpawnNearFriend_Opts" xml:space="preserve"><value>0 - Devre Dışı|1 - Her Zaman|2 - Yalnızca Ormandaki Arkadaşların Yanında</value></data>
+  <data name="Cfg_JarRefund_Name" xml:space="preserve"><value>Kavanoz İadesi</value></data>
+  <data name="Cfg_JarRefund_Desc" xml:space="preserve"><value>Yiyecek/içecek üretirken geri verilen cam kavanoz yüzdesi (0 = iade yok)</value></data>
+  <data name="Cfg_ZombieMove_Name" xml:space="preserve"><value>Zombi Gündüz Hızı</value></data>
+  <data name="Cfg_ZombieMove_Desc" xml:space="preserve"><value>Zombilerin gündüz hareket hızı</value></data>
+  <data name="Cfg_ZombieMove_Opts" xml:space="preserve"><value>0 - Yürüme|1 - Yavaş|2 - Hafif Koşu|3 - Koşu|4 - Depar</value></data>
+  <data name="Cfg_ZombieMoveNight_Name" xml:space="preserve"><value>Zombi Gece Hızı</value></data>
+  <data name="Cfg_ZombieMoveNight_Desc" xml:space="preserve"><value>Zombilerin gece hareket hızı</value></data>
+  <data name="Cfg_ZombieMoveNight_Opts" xml:space="preserve"><value>0 - Yürüme|1 - Yavaş|2 - Hafif Koşu|3 - Koşu|4 - Depar</value></data>
+  <data name="Cfg_ZombieFeralMove_Name" xml:space="preserve"><value>Zombi Vahşi Hızı</value></data>
+  <data name="Cfg_ZombieFeralMove_Desc" xml:space="preserve"><value>Vahşi zombilerin hareket hızı</value></data>
+  <data name="Cfg_ZombieFeralMove_Opts" xml:space="preserve"><value>0 - Yürüme|1 - Yavaş|2 - Hafif Koşu|3 - Koşu|4 - Depar</value></data>
+  <data name="Cfg_ZombieBMMove_Name" xml:space="preserve"><value>Zombi Kanlı Ay Hızı</value></data>
+  <data name="Cfg_ZombieBMMove_Desc" xml:space="preserve"><value>Kanlı Ay'da zombilerin hareket hızı</value></data>
+  <data name="Cfg_ZombieBMMove_Opts" xml:space="preserve"><value>0 - Yürüme|1 - Yavaş|2 - Hafif Koşu|3 - Koşu|4 - Depar</value></data>
+  <data name="Cfg_EnemyDifficulty_Name" xml:space="preserve"><value>Düşman Saldırganlığı</value></data>
+  <data name="Cfg_EnemyDifficulty_Desc" xml:space="preserve"><value>Vahşi, daha zorlu zombi türleri ekler</value></data>
+  <data name="Cfg_EnemyDifficulty_Opts" xml:space="preserve"><value>0 - Normal|1 - Vahşi</value></data>
+  <data name="Cfg_EnemySpawnMode_Name" xml:space="preserve"><value>Düşman Doğması</value></data>
+  <data name="Cfg_EnemySpawnMode_Desc" xml:space="preserve"><value>Düşmanların dünyada doğup doğmayacağını belirler. Huzurlu inşa ya da test için kapat.</value></data>
+  <data name="Cfg_EnemySpawnMode_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Name" xml:space="preserve"><value>Maks. Zombi</value></data>
+  <data name="Cfg_MaxSpawnedZombies_Desc" xml:space="preserve"><value>Tüm dünyadaki en fazla canlı zombi sayısı (Kanlı Ay'da x1,9, uykucular için x2,1 ile ölçeklenir). Performansı çok etkiler.</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Name" xml:space="preserve"><value>Maks. Hayvan</value></data>
+  <data name="Cfg_MaxSpawnedAnimals_Desc" xml:space="preserve"><value>Aynı anda en fazla canlı hayvan sayısı</value></data>
+  <data name="Cfg_ZombieFeralSense_Name" xml:space="preserve"><value>Zombi Vahşi Duyusu</value></data>
+  <data name="Cfg_ZombieFeralSense_Desc" xml:space="preserve"><value>Vahşi zombiler oyuncuları duvarların ve engellerin arkasından sezebilir</value></data>
+  <data name="Cfg_ZombieFeralSense_Opts" xml:space="preserve"><value>0 - Kapalı|1 - Yalnızca Gündüz|2 - Yalnızca Gece|3 - Tümü</value></data>
+  <data name="Cfg_AISmellMode_Name" xml:space="preserve"><value>Yapay Zeka Koku Modu</value></data>
+  <data name="Cfg_AISmellMode_Desc" xml:space="preserve"><value>Zombilerin oyuncuları kokudan takip ederken ne kadar hızlı hareket ettiği. Zombiler kanın, yiyeceğin ve ocakların kokusunu alabilir. Yüksek hızlar, zombilerin yakınında yemek pişirmeyi ve üretim yapmayı çok daha tehlikeli hâle getirir.</value></data>
+  <data name="Cfg_AISmellMode_Opts" xml:space="preserve"><value>0 - Kapalı|1 - Yürüme|2 - Hafif Koşu|3 - Koşu|4 - Depar|5 - Kâbus</value></data>
+  <data name="Cfg_LootAbundance_Name" xml:space="preserve"><value>Ganimet Bolluğu</value></data>
+  <data name="Cfg_LootAbundance_Desc" xml:space="preserve"><value>Ganimet miktarı çarpanı (%)</value></data>
+  <data name="Cfg_LootRespawnDays_Name" xml:space="preserve"><value>Ganimet Yenilenme Süresi</value></data>
+  <data name="Cfg_LootRespawnDays_Desc" xml:space="preserve"><value>Yağmalanan kapların yeniden dolmasına kadar geçen gün sayısı</value></data>
+  <data name="Cfg_AirDropFrequency_Name" xml:space="preserve"><value>Hava Yardımı Sıklığı</value></data>
+  <data name="Cfg_AirDropFrequency_Desc" xml:space="preserve"><value>Oyun içi saat cinsinden hava yardımı aralığı (0 = devre dışı)</value></data>
+  <data name="Cfg_AirDropMarker_Name" xml:space="preserve"><value>Hava Yardımı İşareti</value></data>
+  <data name="Cfg_AirDropMarker_Desc" xml:space="preserve"><value>Hava yardımı indiğinde harita/pusula işaretini göster ya da gizle</value></data>
+  <data name="Cfg_AirDropMarker_Opts" xml:space="preserve"><value>Göster|Gizle</value></data>
+  <data name="Cfg_DropOnDeath_Name" xml:space="preserve"><value>Ölünce Düşür</value></data>
+  <data name="Cfg_DropOnDeath_Desc" xml:space="preserve"><value>Oyuncular öldürüldüğünde ne düşürür</value></data>
+  <data name="Cfg_DropOnDeath_Opts" xml:space="preserve"><value>0 - Hiç|1 - Her Şey|2 - Yalnızca Alet Kemeri|3 - Yalnızca Sırt Çantası|4 - Tümünü Sil</value></data>
+  <data name="Cfg_DropOnQuit_Name" xml:space="preserve"><value>Çıkınca Düşür</value></data>
+  <data name="Cfg_DropOnQuit_Desc" xml:space="preserve"><value>Oyuncular bağlantıyı kestiğinde ne düşürür</value></data>
+  <data name="Cfg_DropOnQuit_Opts" xml:space="preserve"><value>0 - Hiç|1 - Her Şey|2 - Yalnızca Alet Kemeri|3 - Yalnızca Sırt Çantası</value></data>
+  <data name="Cfg_LandClaimSize_Name" xml:space="preserve"><value>El Koyma Boyutu</value></data>
+  <data name="Cfg_LandClaimSize_Desc" xml:space="preserve"><value>Blok cinsinden korunan alan boyutu (41 = her yöne 20 blok)</value></data>
+  <data name="Cfg_LandClaimDeadZone_Name" xml:space="preserve"><value>El Koyma Ölüm Bölgesi</value></data>
+  <data name="Cfg_LandClaimDeadZone_Desc" xml:space="preserve"><value>El koyulan alanlar arasındaki blok cinsinden en az mesafe</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Name" xml:space="preserve"><value>El Koyma Süresi</value></data>
+  <data name="Cfg_LandClaimExpiryTime_Desc" xml:space="preserve"><value>El koymaların süresi dolmadan önce oyuncunun çevrimdışı kalabileceği gerçek gün sayısı</value></data>
+  <data name="Cfg_LandClaimDecayMode_Name" xml:space="preserve"><value>El Koyma Geçersizlik Modu</value></data>
+  <data name="Cfg_LandClaimDecayMode_Desc" xml:space="preserve"><value>Çevrimdışı bir oyuncunun el koyma korumasının nasıl azaldığı</value></data>
+  <data name="Cfg_LandClaimDecayMode_Opts" xml:space="preserve"><value>0 - Yavaş (Doğrusal)|1 - Hızlı (Üstel)|2 - Yok (süre dolana kadar tam)</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Name" xml:space="preserve"><value>Çevrimiçiyken El Koyma Sağlığı</value></data>
+  <data name="Cfg_LandClaimOnlineDurabilityModifier_Desc" xml:space="preserve"><value>Sahibi çevrimiçiyken blok sertliği çarpanı (0 = yok edilemez)</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Name" xml:space="preserve"><value>Çevrimdışıyken El Koyma Sağlığı</value></data>
+  <data name="Cfg_LandClaimOfflineDurabilityModifier_Desc" xml:space="preserve"><value>Sahibi çevrimdışıyken blok sertliği çarpanı (0 = yok edilemez)</value></data>
+  <data name="Cfg_LandClaimCount_Name" xml:space="preserve"><value>El Koyma Sayısı</value></data>
+  <data name="Cfg_LandClaimCount_Desc" xml:space="preserve"><value>Oyuncu başına izin verilen en fazla el koyma</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Name" xml:space="preserve"><value>El Koyma Çevrimdışı Gecikmesi</value></data>
+  <data name="Cfg_LandClaimOfflineDelay_Desc" xml:space="preserve"><value>Oturum kapatıldıktan sonra el koymanın çevrimiçi sertlikten çevrimdışı sertliğe geçmesine kadar geçen dakika</value></data>
+  <data name="Cfg_ServerPort_Name" xml:space="preserve"><value>Sunucu Portu</value></data>
+  <data name="Cfg_ServerPort_Desc" xml:space="preserve"><value>Ana oyun portu (yardımcı bağlantılar için +1 ve +2'yi de kullanır)</value></data>
+  <data name="Cfg_ServerVisibility_Name" xml:space="preserve"><value>Sunucu Görünürlüğü</value></data>
+  <data name="Cfg_ServerVisibility_Desc" xml:space="preserve"><value>Bu sunucuyu sunucu tarayıcısında kimlerin görebileceği</value></data>
+  <data name="Cfg_ServerVisibility_Opts" xml:space="preserve"><value>0 - Listelenmemiş|1 - Yalnızca Arkadaşlar|2 - Herkese Açık</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Name" xml:space="preserve"><value>Maks. Oyuncu</value></data>
+  <data name="Cfg_ServerMaxPlayerCount_Desc" xml:space="preserve"><value>Aynı anda en fazla oyuncu sayısı</value></data>
+  <data name="Cfg_ServerReservedSlots_Name" xml:space="preserve"><value>Ayrılmış Yuvalar</value></data>
+  <data name="Cfg_ServerReservedSlots_Desc" xml:space="preserve"><value>Maks. oyuncu sayısının bu kadar yuvası, ayrılmış yuva izin seviyesine sahip oyunculara ayrılır</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Name" xml:space="preserve"><value>Maks. Dünya Aktarım Hızı (KiB/s)</value></data>
+  <data name="Cfg_ServerMaxWorldTransferSpeedKiBs_Desc" xml:space="preserve"><value>Her yeni istemci için KiB/s cinsinden en yüksek dünya indirme hızı (oyun bunu yaklaşık 1300 ile sınırlar)</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Name" xml:space="preserve"><value>Devre Dışı Ağ Protokolleri</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Desc" xml:space="preserve"><value>Devre dışı bırakılacak protokoller. NAT yönlendirici yoksa ya da port yönlendirme doğru ayarlanmışsa ayrılmış sunucularda SteamNetworking devre dışı bırakılmalı.</value></data>
+  <data name="Cfg_ServerDisabledNetworkProtocols_Opts" xml:space="preserve"><value>Hiçbiri|SteamNetworking|LiteNetLib|İkisi de</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Name" xml:space="preserve"><value>Platformlar Arası Oyun</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Desc" xml:space="preserve"><value>Platformlar arası oyunu etkinleştir. Platformlar arası sunucular yaptırımları yok saymamalı ve varsayılan ya da daha az oyuncu yuvası kullanmalıdır.</value></data>
+  <data name="Cfg_ServerAllowCrossplay_Opts" xml:space="preserve"><value>Açık|Kapalı</value></data>
+  <data name="Cfg_TelnetEnabled_Name" xml:space="preserve"><value>Telnet Etkin</value></data>
+  <data name="Cfg_TelnetEnabled_Desc" xml:space="preserve"><value>Telnet uzak konsolunu etkinleştir</value></data>
+  <data name="Cfg_TelnetEnabled_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_TelnetPort_Name" xml:space="preserve"><value>Telnet Portu</value></data>
+  <data name="Cfg_TelnetPort_Desc" xml:space="preserve"><value>Telnet bağlantıları için port</value></data>
+  <data name="Cfg_TelnetPassword_Name" xml:space="preserve"><value>Telnet Şifresi</value></data>
+  <data name="Cfg_TelnetPassword_Desc" xml:space="preserve"><value>Telnet erişimi için şifre. Boşsa telnet yalnızca bu bilgisayarda (localhost) dinler.</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Name" xml:space="preserve"><value>Telnet Başarısız Giriş Sınırı</value></data>
+  <data name="Cfg_TelnetFailedLoginLimit_Desc" xml:space="preserve"><value>Geçici engellemeden önceki başarısız giriş denemesi sayısı</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Name" xml:space="preserve"><value>Telnet Engelleme Süresi</value></data>
+  <data name="Cfg_TelnetFailedLoginsBlocktime_Desc" xml:space="preserve"><value>Çok fazla başarısız telnet girişinden sonra saniye cinsinden engelleme süresi</value></data>
+  <data name="Cfg_EACEnabled_Name" xml:space="preserve"><value>EAC Etkin</value></data>
+  <data name="Cfg_EACEnabled_Desc" xml:space="preserve"><value>Easy Anti-Cheat — kapatmak modlu istemcilerin bağlanmasına izin verir</value></data>
+  <data name="Cfg_EACEnabled_Opts" xml:space="preserve"><value>Açık|Kapalı</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Name" xml:space="preserve"><value>Komut Günlüğünü Gizle</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Desc" xml:space="preserve"><value>Komut çalıştırma kayıtlarını gizler. Yüksek değerler daha fazla kaynaktan gizler.</value></data>
+  <data name="Cfg_HideCommandExecutionLog_Opts" xml:space="preserve"><value>0 - Tümünü Göster|1 - Telnet/Panelden Gizle|2 - İstemcilerden de Gizle|3 - Her Şeyi Gizle</value></data>
+  <data name="Cfg_AdminFileName_Name" xml:space="preserve"><value>Yönetici Dosyası Adı</value></data>
+  <data name="Cfg_AdminFileName_Desc" xml:space="preserve"><value>Sunucu yönetici dosyasının adı. Yol, kayıt klasörüne göredir.</value></data>
+  <data name="Cfg_ServerAdminSlots_Name" xml:space="preserve"><value>Yönetici Yuvaları</value></data>
+  <data name="Cfg_ServerAdminSlots_Desc" xml:space="preserve"><value>Sunucu doluyken bile bu sayıda yönetici katılabilir</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Name" xml:space="preserve"><value>Yönetici Yuvası İzni</value></data>
+  <data name="Cfg_ServerAdminSlotsPermission_Desc" xml:space="preserve"><value>Yönetici yuvalarını kullanmak için gereken izin seviyesi (0 = en üst yönetici)</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Name" xml:space="preserve"><value>Ayrılmış Yuva İzni</value></data>
+  <data name="Cfg_ServerReservedSlotsPermission_Desc" xml:space="preserve"><value>Ayrılmış yuvaları kullanmak için gereken izin seviyesi</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Name" xml:space="preserve"><value>EOS Yaptırımlarını Yok Say</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Desc" xml:space="preserve"><value>Oyuncuları kabul ederken EOS yaptırımlarını yok say</value></data>
+  <data name="Cfg_IgnoreEOSSanctions_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Name" xml:space="preserve"><value>Kalıcı Profiller</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Desc" xml:space="preserve"><value>Etkinse oyuncular her zaman son kullandıkları profille katılır. Devre dışıysa istedikleri profili seçebilir.</value></data>
+  <data name="Cfg_PersistentPlayerProfiles_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_CameraRestrictionMode_Name" xml:space="preserve"><value>Kamera Kısıtlaması</value></data>
+  <data name="Cfg_CameraRestrictionMode_Desc" xml:space="preserve"><value>Oyuncuların hangi kamera bakış açısını kullanabileceğini kısıtla</value></data>
+  <data name="Cfg_CameraRestrictionMode_Opts" xml:space="preserve"><value>0 - Serbest (1. ve 3. Şahıs)|1 - Yalnızca Birinci Şahıs|2 - Yalnızca Üçüncü Şahıs</value></data>
+  <data name="Cfg_TwitchServerPermission_Name" xml:space="preserve"><value>Twitch Sunucu İzni</value></data>
+  <data name="Cfg_TwitchServerPermission_Desc" xml:space="preserve"><value>Sunucuda Twitch entegrasyonunu kullanmak için gereken izin seviyesi</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Name" xml:space="preserve"><value>Kanlı Ay'da Twitch</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Desc" xml:space="preserve"><value>Kanlı Ay sırasında Twitch eylemlerine izin ver. Fazladan zombi doğması gecikmeye yol açabilir.</value></data>
+  <data name="Cfg_TwitchBloodMoonAllowed_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_ServerWebsiteURL_Name" xml:space="preserve"><value>Sunucu Web Sitesi</value></data>
+  <data name="Cfg_ServerWebsiteURL_Desc" xml:space="preserve"><value>Sunucu tarayıcısında sunucunun web sitesi olarak gösterilen URL</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Name" xml:space="preserve"><value>Maks. Görüş Mesafesi</value></data>
+  <data name="Cfg_ServerMaxAllowedViewDistance_Desc" xml:space="preserve"><value>Bir istemcinin isteyebileceği en yüksek görüş mesafesi (6-12). Belleği ve performansı çok etkiler.</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Name" xml:space="preserve"><value>Terminal Penceresi</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Desc" xml:space="preserve"><value>Günlük çıktısı ve komutlar için bir terminal penceresi göster (yalnızca Windows)</value></data>
+  <data name="Cfg_TerminalWindowEnabled_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_WebDashboardEnabled_Name" xml:space="preserve"><value>Web Paneli Etkin</value></data>
+  <data name="Cfg_WebDashboardEnabled_Desc" xml:space="preserve"><value>Yerleşik 7D2D web panelini etkinleştir</value></data>
+  <data name="Cfg_WebDashboardEnabled_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_WebDashboardPort_Name" xml:space="preserve"><value>Web Paneli Portu</value></data>
+  <data name="Cfg_WebDashboardPort_Desc" xml:space="preserve"><value>Yerleşik web paneli için port</value></data>
+  <data name="Cfg_WebDashboardUrl_Name" xml:space="preserve"><value>Web Paneli URL'si</value></data>
+  <data name="Cfg_WebDashboardUrl_Desc" xml:space="preserve"><value>Ters proxy kurulumları için harici panel URL'si</value></data>
+  <data name="Cfg_EnableMapRendering_Name" xml:space="preserve"><value>Harita Oluşturma</value></data>
+  <data name="Cfg_EnableMapRendering_Desc" xml:space="preserve"><value>Keşif sırasında haritayı karo görüntülerine dönüştür. Web paneli haritayı göstermek için bunu kullanır.</value></data>
+  <data name="Cfg_EnableMapRendering_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Name" xml:space="preserve"><value>Dinamik Mesh Etkin</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Desc" xml:space="preserve"><value>Daha iyi görseller için dinamik mesh sistemini etkinleştir</value></data>
+  <data name="Cfg_DynamicMeshEnabled_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Name" xml:space="preserve"><value>Dinamik Mesh Yalnızca El Koymada</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Desc" xml:space="preserve"><value>Dinamik mesh'i yalnızca el koyulan alanlarda kullan</value></data>
+  <data name="Cfg_DynamicMeshLandClaimOnly_Opts" xml:space="preserve"><value>Evet|Hayır</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Name" xml:space="preserve"><value>Dinamik Mesh El Koyma Tamponu</value></data>
+  <data name="Cfg_DynamicMeshLandClaimBuffer_Desc" xml:space="preserve"><value>Dinamik mesh için el koyma öbek yarıçapı</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Name" xml:space="preserve"><value>Dinamik Mesh Maks. Öğe Önbelleği</value></data>
+  <data name="Cfg_DynamicMeshMaxItemCache_Desc" xml:space="preserve"><value>Aynı anda işlenen en fazla öğe. Yüksek değerler daha fazla RAM kullanır.</value></data>
+  <data name="Cfg_MaxChunkAge_Name" xml:space="preserve"><value>Öbek Sıfırlama Süresi</value></data>
+  <data name="Cfg_MaxChunkAge_Desc" xml:space="preserve"><value>Ziyaret edilmeyen/korumasız öbeklerin sıfırlanmasına kadar geçen oyun içi gün. -1 = asla sıfırlanmaz.</value></data>
+  <data name="Cfg_SaveDataLimit_Name" xml:space="preserve"><value>Kayıt Verisi Sınırı</value></data>
+  <data name="Cfg_SaveDataLimit_Desc" xml:space="preserve"><value>Kayıt başına MB cinsinden en fazla disk alanı. Yer açmak için öbekler sıfırlanabilir. -1 = sınır yok.</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Name" xml:space="preserve"><value>Maks. Sıradaki Mesh Katmanı</value></data>
+  <data name="Cfg_MaxQueuedMeshLayers_Desc" xml:space="preserve"><value>Oluşturma sırasında sıraya alınan en fazla öbek mesh katmanı. Düşük = daha az bellek, daha yavaş oluşturma.</value></data>
+  <data name="Cfg_UserDataFolder_Name" xml:space="preserve"><value>Kullanıcı Verisi Klasörü</value></data>
+  <data name="Cfg_UserDataFolder_Desc" xml:space="preserve"><value>Tüm kullanıcı verileri, kayıtlar ve RWG dünyaları için yolu değiştirir. Varsayılan için boş bırak.</value></data>
+  <data name="Server_ExitedUnexpectedly" xml:space="preserve"><value>Sunucu beklenmedik şekilde kapandı (çıkış kodu {0}).</value></data>
+  <data name="Restart_Header" xml:space="preserve"><value>Otomatik Yeniden Başlatma</value></data>
+  <data name="Restart_CrashEnabled" xml:space="preserve"><value>Sunucu çökerse yeniden başlat</value></data>
+  <data name="Restart_CrashHint" xml:space="preserve"><value>Sunucu kendiliğinden kapandıktan 15 saniye sonra yeniden başlatır; bozuk bir mod ya da yapılandırma sonsuz döngüye girmesin diye 15 dakikada en fazla 3 kez. Kitsune7Den'in Durdur düğmesiyle durdurmak ya da Konsol'a shutdown yazmak asla çökme sayılmaz.</value></data>
+  <data name="Restart_ScheduledEnabled" xml:space="preserve"><value>Zamanlanmış yeniden başlatmalar</value></data>
+  <data name="Restart_ModeDaily" xml:space="preserve"><value>Her gün şu saatlerde:</value></data>
+  <data name="Restart_TimesHint" xml:space="preserve"><value>24 saat biçimi, bu bilgisayarın saati. Birden fazla: 04:00, 16:00</value></data>
+  <data name="Restart_ModeInterval" xml:space="preserve"><value>Her</value></data>
+  <data name="Restart_HoursOfUptime" xml:space="preserve"><value>saatlik çalışmada bir</value></data>
+  <data name="Restart_WarningsHeader" xml:space="preserve"><value>OYUN İÇİ UYARILAR (KAÇ DAKİKA ÖNCE)</value></data>
+  <data name="Restart_WarningsHint" xml:space="preserve"><value>Boş = uyarı yok</value></data>
+  <data name="Restart_MessageHeader" xml:space="preserve"><value>UYARI MESAJI ({minutes} = kalan dakika)</value></data>
+  <data name="Restart_FinalMessageHeader" xml:space="preserve"><value>SON MESAJ</value></data>
+  <data name="Restart_ScheduledHint" xml:space="preserve"><value>Uyarılar telnet üzerinden oyun içi say komutuyla gönderilir. Yeniden başlatma zamanı geldiğinde dünya kaydedilir, sunucu düzgünce kapanır ve yeniden başlar. Zamanlanmış yeniden başlatmaların gerçekleşmesi için Kitsune7Den'in açık olması gerekir.</value></data>
+  <data name="Restart_Save" xml:space="preserve"><value>Kaydet</value></data>
+  <data name="Restart_BadTimes" xml:space="preserve"><value>Saatler 04:00 ya da 4:00 biçiminde olmalı ve virgülle ayrılmalı.</value></data>
+  <data name="Restart_BadWarnings" xml:space="preserve"><value>Uyarılar 1 ile 120 arasında tam dakika olmalı ve virgülle ayrılmalı.</value></data>
+  <data name="Restart_CancelCountdown" xml:space="preserve"><value>Yeniden başlatmayı iptal et</value></data>
+  <data name="Restart_NowWithWarnings" xml:space="preserve"><value>Uyararak yeniden başlat</value></data>
+  <data name="Restart_NowWithWarningsTooltip" xml:space="preserve"><value>Uyarı geri sayımını şimdi başlat, ardından sunucuyu kaydet, durdur ve yeniden başlat</value></data>
+  <data name="Restart_NextStatus" xml:space="preserve"><value>Sonraki yeniden başlatma: {0} (kalan: {1})</value></data>
+  <data name="Restart_CountdownStatus" xml:space="preserve"><value>Yeniden başlatma saati: {0} (kalan: {1}). Oyuncular uyarılıyor.</value></data>
+  <data name="Restart_WaitingForServer" xml:space="preserve"><value>Zamanlanmış yeniden başlatmalar açık. Zamanlama, sunucu çalışmaya başlayınca devreye girer.</value></data>
+  <data name="Restart_NoneScheduled" xml:space="preserve"><value>Zamanlanmış yeniden başlatmalar açık, ancak planlanmış bir yeniden başlatma yok. Saatleri kontrol et.</value></data>
+  <data name="Restart_ScheduleOff" xml:space="preserve"><value>Zamanlanmış yeniden başlatma yok.</value></data>
+  <data name="Restart_LessThanMinute" xml:space="preserve"><value>1 dakikadan az</value></data>
+  <data name="Restart_HoursMinutes" xml:space="preserve"><value>{0} sa {1} dk</value></data>
+  <data name="Restart_Minutes" xml:space="preserve"><value>{0} dk</value></data>
+  <data name="Restart_DefaultWarningMessage" xml:space="preserve"><value>Sunucu {minutes} dakika içinde yeniden başlatılacak. Lütfen güvenli bir yer bul.</value></data>
+  <data name="Restart_DefaultFinalMessage" xml:space="preserve"><value>Sunucu şimdi yeniden başlatılıyor. Bir dakikaya görüşürüz!</value></data>
+  <data name="Restart_CancelledInGame" xml:space="preserve"><value>Zamanlanmış yeniden başlatma iptal edildi.</value></data>
+  <data name="Restart_Cancelled" xml:space="preserve"><value>Yeniden başlatma iptal edildi.</value></data>
+  <data name="Restart_ScheduledStarting" xml:space="preserve"><value>Zamanlanmış yeniden başlatma ({0}): oyuncular uyarılıyor.</value></data>
+  <data name="Restart_ManualStarting" xml:space="preserve"><value>Yeniden başlatma ({0}): oyuncular uyarılıyor.</value></data>
+  <data name="Restart_NoTelnet" xml:space="preserve"><value>Telnet bağlı değil; bu yüzden oyuncular uyarıları görmeyecek ve sunucu düzgünce kapatılamayacak.</value></data>
+  <data name="Restart_Saving" xml:space="preserve"><value>Dünya kaydediliyor...</value></data>
+  <data name="Restart_Restarting" xml:space="preserve"><value>Sunucu yeniden başlatılıyor...</value></data>
+  <data name="Restart_NotRunning" xml:space="preserve"><value>Sunucu artık çalışmıyor; zamanlanmış yeniden başlatma atlanıyor.</value></data>
+  <data name="Restart_StartFailed" xml:space="preserve"><value>Sunucu yeniden başlamadı. Konsolu ve Kontrol Paneli'ndeki sunucu yolunu kontrol et.</value></data>
+  <data name="Restart_Failed" xml:space="preserve"><value>Otomatik yeniden başlatma başarısız: {0}</value></data>
+  <data name="Restart_CrashRestarting" xml:space="preserve"><value>Sunucu {0} saniye içinde yeniden başlatılıyor (çökme sonrası yeniden başlatma {1}/{2}).</value></data>
+  <data name="Restart_CrashLoopGaveUp" xml:space="preserve"><value>Sunucu yine çöktü. Son {1} dakikada zaten {0} kez yeniden başlatıldı, bu yüzden kapalı kalacak. Nedenini bulmak için Konsol ve Günlükler sayfalarına bak.</value></data>
+  <data name="Telnet_Result_Unreachable" xml:space="preserve"><value>Telnet portu {0} üzerinde henüz dinleyen bir şey yok. Sunucu hâlâ başlıyorsa bir dakika bekle. Değilse serverconfig.xml içindeki TelnetEnabled ve TelnetPort ayarlarını kontrol et.</value></data>
+  <data name="Telnet_Result_WrongPassword" xml:space="preserve"><value>Sunucu telnet şifresini reddetti. Kitsune7Den, serverconfig.xml içindeki TelnetPassword değerini kullanır. Sunucu çalışırken şifreyi değiştirdiysen yeni şifrenin geçerli olması için sunucuyu yeniden başlat.</value></data>
+  <data name="Telnet_Result_PasswordRequired" xml:space="preserve"><value>Sunucu bir telnet şifresi istiyor, ancak ne serverconfig.xml dosyasında ne de Ayarlar'da şifre var. serverconfig.xml dosyasına yeni eklediysen sunucuyu yeniden başlat.</value></data>
+  <data name="Telnet_Result_TelnetDisabled" xml:space="preserve"><value>Telnet, serverconfig.xml dosyasında kapalı (TelnetEnabled = false). Kitsune7Den konsol, oyuncular ve yeniden başlatmalar için telnete ihtiyaç duyar. Telneti aç ve sunucuyu yeniden başlat.</value></data>
+  <data name="Telnet_Status_WrongPassword" xml:space="preserve"><value>Yanlış şifre</value></data>
+  <data name="Telnet_Status_PasswordRequired" xml:space="preserve"><value>Şifre gerekli</value></data>
+  <data name="Telnet_Status_TelnetDisabled" xml:space="preserve"><value>Yapılandırmada kapalı</value></data>
+  <data name="Settings_LaunchHeader" xml:space="preserve"><value>Sunucu Başlatma</value></data>
+  <data name="Settings_LaunchDescription" xml:space="preserve"><value>Kitsune7Den, 7DaysToDieServer.exe'yi startdedicated.bat ile aynı argümanlarla başlatır. Buraya eklediğin her şey, .bat dosyasındaki ek argümanların yerine, -dedicated'dan hemen önce gelir. Farklı bir yapılandırma dosyasıyla çalıştırmak için -configfile=yourconfig.xml kullan; Kitsune7Den de her yerde o dosyayı okuyup düzenler.</value></data>
+  <data name="Settings_LaunchArgsLabel" xml:space="preserve"><value>Ek başlatma argümanları (isteğe bağlı)</value></data>
+  <data name="Settings_LaunchPreviewLabel" xml:space="preserve"><value>Kitsune7Den şunu çalıştıracak:</value></data>
+  <data name="Settings_LaunchIgnored" xml:space="preserve"><value>Kitsune7Den bunları kendisi ayarlar ve yok sayacak: {0}</value></data>
+  <data name="Settings_LaunchConfigFile" xml:space="preserve"><value>Sunucu, Yapılandırma sayfası, telnet ve yedekler serverconfig.xml yerine şu dosyayı kullanacak: {0}. Geçerli olması için kaydet, sonra sunucuyu yeniden başlat.</value></data>
+  <data name="Server_LaunchArgIgnored" xml:space="preserve"><value>Başlatma argümanı yok sayıldı ({0}): Kitsune7Den bunu kendisi ayarlar.</value></data>
+</root>

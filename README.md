@@ -32,12 +32,12 @@
 - **Logs** -- Browse all server log files with dropdown selector and text filter
 - **Settings** -- SteamCMD install/update, auto-update on start, telnet config
 - **Themes** -- 4 live-swappable themes (Kitsune, Midnight, Forest, Accessible/colorblind-friendly)
-- **Languages** -- English and Simplified Chinese (简体中文), switchable live
+- **Languages** -- the 13 languages 7 Days to Die ships: English, Deutsch, Español, Français, Italiano, 日本語, 한국어, Polski, Português (Brasil), Русский, Türkçe, 简体中文 and 繁體中文, switchable live. Config and Sandbox labels use the game's own wording
 - **Config Protection** -- Automatically backs up serverconfig.xml before Steam updates, restores after
 
 ## 简体中文
 
-Kitsune7Den 支持简体中文。首次运行时会跟随 Windows 显示语言，也可以随时在 **设置 → 外观 → Language / 语言** 中切换，无需重启。服务器配置和沙盒选项使用游戏官方的中文译名，并保留原始属性名（例如 `玩家杀戮 (PlayerKillingMode)`），方便对照 `serverconfig.xml`。
+Kitsune7Den 支持简体中文。首次运行时会跟随 Windows 显示语言，也可以随时在 **设置 → 外观 → 语言 / Language** 中切换，无需重启。服务器配置和沙盒选项使用游戏官方的中文译名，并保留原始属性名（例如 `玩家杀戮 (PlayerKillingMode)`），方便对照 `serverconfig.xml`。
 
 自动重启：服务器崩溃后自动重启（带防循环保护），并支持每天定时或按运行小时数重启，重启前会在游戏内倒计时提醒玩家。
 

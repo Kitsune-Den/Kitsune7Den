@@ -2,6 +2,16 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [Unreleased]
+
+### Added
+- **12 more languages**, so Kitsune7Den now speaks all 13 that 7 Days to Die does: English, German, Spanish, French, Italian, Japanese, Korean, Polish, Brazilian Portuguese, Russian, Turkish, and Simplified and Traditional Chinese. It follows the Windows display language on first run (Taiwan and Hong Kong get Traditional Chinese, any Portuguese gets Brazilian), and you can switch live in **Settings → Appearance → Language**.
+  - **The Sandbox editor uses the game's own words** in every language, taken from its `Localization.csv`, so option names and values match the game's Sandbox Options screen. `scripts/gen-sandbox-i18n.mjs` regenerates them when a new game version adds options.
+  - Config fields and the rest of the app use the game's terms too (Blood Moon, Land Claim, the difficulty names). These translations are ours, not native-reviewed, so corrections are welcome: open an issue or a PR against `Resources/Strings.<language>.resx`.
+
+### Changed
+- The Language label in Settings is now in the current language, with "Language" after it so you can find it even when the app is set to a language you can't read.
+
 ## [1.2.0] - 2026-10-14
 
 ### Added
