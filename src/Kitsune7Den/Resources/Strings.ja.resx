@@ -313,6 +313,12 @@ Kitsune7Den は新しいバージョンをダウンロードして再起動し�
   <data name="Config_MigrateFailed" xml:space="preserve"><value>更新に失敗しました：{0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>先に未保存の変更を保存するか、リセットしてください</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ではこれらは無視され、代わりに SandboxCode の値が使われます。上のサンドボックスエディターで変更してください。</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>変更…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>サーバーが使う設定ファイルを選びます。設定 → サーバーの起動 に -configfile として保存されます。</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>サーバーの設定ファイルを選択</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>サーバー設定ファイル (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} はサーバー設定ファイルではないようです（property 項目がありません）</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>{0} を使用します。次回のサーバー起動から反映されます。</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>サンドボックス設定</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>サンドボックスを編集…</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>難易度、略奪品、ゾンビ、ブラッドムーン、1日の長さ、トレーダーなど。ゲームのサンドボックス画面と同じオプションです。</value></data>

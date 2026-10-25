@@ -19,6 +19,7 @@ internal static class TestSettingsIsolation
         Environment.SetEnvironmentVariable(AppSettings.PathOverrideVariable, SettingsFile);
 }
 
+[Collection("Localization")]
 public class TestSettingsIsolationTests
 {
     [Fact]

@@ -313,6 +313,12 @@ Kitsune7Den 將下載新版本並重新啟動。伺服器會繼續執行。</val
   <data name="Config_MigrateFailed" xml:space="preserve"><value>更新失敗：{0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>請先儲存或重設尚未儲存的變更</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x 不再讀取這些設定，而是改由 SandboxCode 決定。請在上方的沙盒編輯器中修改。</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>變更…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>選擇伺服器使用的設定檔。它會以 -configfile 儲存到 設定 → 伺服器啟動 中。</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>選擇伺服器設定檔</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>伺服器設定檔 (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} 看起來不是伺服器設定檔：其中沒有 property 項目</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>現在使用 {0}。伺服器將在下次啟動時使用它。</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>沙盒選項</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>編輯沙盒…</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>難度、戰利品、殭屍、血月、晝夜時長、商人等，與遊戲內的沙盒選項畫面相同。</value></data>

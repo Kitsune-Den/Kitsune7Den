@@ -313,6 +313,12 @@ Vorher wird ein Backup der serverconfig.xml mit Zeitstempel erstellt. Die alten 
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Aktualisierung fehlgeschlagen: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Speichere deine ungespeicherten Änderungen zuerst oder setze sie zurück</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ignoriert diese Werte und nimmt sie stattdessen aus dem SandboxCode. Ändere sie oben im Sandbox-Editor.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Ändern…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Wähle, mit welcher Konfigurationsdatei der Server läuft. Sie wird als -configfile unter Einstellungen → Serverstart gespeichert.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Konfigurationsdatei des Servers wählen</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Server-Konfigurationsdateien (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} sieht nicht wie eine Serverkonfiguration aus: Sie enthält keine property-Einträge</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Jetzt wird {0} verwendet. Der Server nutzt sie ab dem nächsten Start.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Sandbox-Optionen</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Sandbox bearbeiten...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Schwierigkeitsgrad, Beute, Zombies, Blutmonde, Tageslänge, Händler und mehr. Dieselben Optionen wie im Sandbox-Bildschirm des Spiels.</value></data>

@@ -313,6 +313,12 @@ Antes é feito um backup do serverconfig.xml com data e hora. Os valores antigos
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Falha na atualização: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Salve ou redefina suas alterações não salvas primeiro</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>O 7 Days to Die 3.x ignora estas: ele as obtém do SandboxCode. Altere-as no editor de Sandbox acima.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Alterar…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Escolha com qual arquivo de configuração o servidor roda. Ele é salvo como -configfile em Configurações → Inicialização do servidor.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Escolher o arquivo de configuração do servidor</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Arquivos de configuração do servidor (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} não parece uma configuração de servidor: não tem nenhuma entrada property</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Agora usando {0}. O servidor vai usá-lo a partir da próxima inicialização.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Opções sandbox</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Editar Sandbox...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Dificuldade, espólios, zumbis, luas de sangue, duração do dia, comerciantes e mais. As mesmas opções da tela Sandbox do jogo.</value></data>

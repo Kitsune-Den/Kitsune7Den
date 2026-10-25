@@ -79,7 +79,7 @@ public partial class SettingsViewModel : ObservableObject
     public ObservableCollection<string> UpdateLog { get; } = [];
 
     public SettingsViewModel(AppSettings settings, SteamCmdService steamCmd, ThemeService themeService, UpdateService updateService,
-        TelnetService telnetService)
+        TelnetService telnetService, ConfigService configService)
     {
         _settings = settings;
         _steamCmd = steamCmd;
@@ -109,6 +109,12 @@ public partial class SettingsViewModel : ObservableObject
         TelnetPort = settings.TelnetPort;
         TelnetPassword = settings.TelnetPassword;
         ServerLaunchArguments = settings.ServerLaunchArguments;
+
+        // The Config page's file picker saves a new -configfile; carry just that over,
+        // keeping anything else typed here but not saved yet
+        configService.ConfigFileChanged += () =>
+            ServerLaunchArguments = ServerLaunch.WithConfigFile(ServerLaunchArguments,
+                ServerLaunch.ConfigFileName(_settings.ServerLaunchArguments));
 
         // A successful login may have picked up new values from serverconfig.xml
         telnetService.ConnectionStateChanged += connected =>

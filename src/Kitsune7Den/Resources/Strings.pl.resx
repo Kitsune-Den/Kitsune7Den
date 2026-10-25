@@ -313,6 +313,12 @@ Najpierw zostanie utworzona kopia zapasowa serverconfig.xml ze znacznikiem czasu
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Aktualizacja nie powiodła się: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Najpierw zapisz lub zresetuj niezapisane zmiany</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ignoruje te ustawienia i pobiera je z SandboxCode. Zmień je w edytorze piaskownicy powyżej.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Zmień…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Wybierz plik konfiguracji, z którym uruchamia się serwer. Zostanie zapisany jako -configfile w Ustawienia → Uruchamianie serwera.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Wybierz plik konfiguracji serwera</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Pliki konfiguracji serwera (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} nie wygląda na konfigurację serwera: nie zawiera żadnych wpisów property</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Używany jest teraz plik {0}. Serwer użyje go przy następnym uruchomieniu.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Opcje trybu piaskownicy</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Edytuj piaskownicę...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Poziom trudności, łupy, zombie, Krwawe Księżyce, długość dnia, handlarze i nie tylko. Te same opcje co na ekranie piaskownicy w grze.</value></data>

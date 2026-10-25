@@ -17,8 +17,35 @@ public class ConfigService
     // serverconfig.xml, or whatever -configfile the server is launched with
     private string ConfigPath => ServerLaunch.ConfigFilePath(_settings);
 
+    /// <summary>Full path of the config file Kitsune7Den reads and edits.</summary>
+    public string ConfigFilePath => ConfigPath;
+
     /// <summary>File name shown in the Config page header.</summary>
     public string ConfigFileName => Path.GetFileName(ConfigPath);
+
+    public bool HasServer => !string.IsNullOrEmpty(_settings.ServerDirectory);
+
+    /// <summary>Raised after <see cref="UseConfigFile"/> changes the launch arguments.</summary>
+    public event Action? ConfigFileChanged;
+
+    /// <summary>
+    /// Switch the server (and everything in Kitsune7Den) to another config file, by setting
+    /// -configfile in the saved launch arguments. Picking serverconfig.xml removes it again.
+    /// </summary>
+    public void UseConfigFile(string path)
+    {
+        var argument = ServerLaunch.ConfigFileArgument(_settings.ServerDirectory, path);
+        _settings.ServerLaunchArguments = ServerLaunch.WithConfigFile(_settings.ServerLaunchArguments, argument);
+        _settings.Save();
+        ConfigFileChanged?.Invoke();
+    }
+
+    /// <summary>True when the file is XML with at least one &lt;property&gt;, like every server config.</summary>
+    public static bool LooksLikeServerConfig(string path)
+    {
+        try { return XDocument.Load(path).Descendants("property").Any(); }
+        catch { return false; }
+    }
 
     /// <summary>
     /// Scan both built-in and user-generated world folders for valid worlds.

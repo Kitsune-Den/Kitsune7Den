@@ -45,6 +45,31 @@ public static class ServerLaunch
         return Path.IsPathRooted(file) ? file : Path.Combine(serverDirectory ?? "", file);
     }
 
+    /// <summary>
+    /// The extras with -configfile pointing at <paramref name="configFile"/> (first, so it's easy to
+    /// spot), or with -configfile removed when that's the default. Every other argument is kept.
+    /// </summary>
+    public static string WithConfigFile(string? extraArguments, string configFile)
+    {
+        var rest = Tokenize(extraArguments)
+            .Where(t => !SplitOption(t).Name.Equals("-configfile", StringComparison.OrdinalIgnoreCase))
+            .Select(Quote);
+        if (!configFile.Equals(DefaultConfigFile, StringComparison.OrdinalIgnoreCase))
+            rest = rest.Prepend($"-configfile={QuoteValue(configFile)}");
+        return string.Join(' ', rest);
+    }
+
+    /// <summary>How to name a picked config file in -configfile: just the file name when it's in the server folder, else the full path.</summary>
+    public static string ConfigFileArgument(string? serverDirectory, string configFilePath)
+    {
+        var full = Path.GetFullPath(configFilePath);
+        var folder = Path.GetDirectoryName(full);
+        return !string.IsNullOrEmpty(serverDirectory) && folder is not null &&
+               string.Equals(Path.TrimEndingDirectorySeparator(Path.GetFullPath(serverDirectory)), folder, StringComparison.OrdinalIgnoreCase)
+            ? Path.GetFileName(full)
+            : full;
+    }
+
     public static LaunchCommand Build(string logFile, string? extraArguments)
     {
         var configFile = DefaultConfigFile;

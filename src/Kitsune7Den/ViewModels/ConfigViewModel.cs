@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.Input;
@@ -24,6 +25,7 @@ public partial class ConfigViewModel : ObservableObject
     [ObservableProperty] private bool _isFormView = true;
     [ObservableProperty] private string _rawXml = "";
     [ObservableProperty] private string _configFileLabel = "  (serverconfig.xml)";
+    [ObservableProperty] private bool _hasServer;
 
     // 7D2D 3.x: gameplay rules moved from serverconfig.xml into SandboxCode
     [ObservableProperty] private bool _isSandboxEra;
@@ -90,6 +92,7 @@ public partial class ConfigViewModel : ObservableObject
         }
 
         ConfigFileLabel = $"  ({_configService.ConfigFileName})";
+        HasServer = _configService.HasServer;
         IsSandboxEra = _detected.IsSandboxEra;
         NeedsMigration = IsSandboxEra && _configService.NeedsSandboxMigration();
         UpdateVersionText();
@@ -112,6 +115,37 @@ public partial class ConfigViewModel : ObservableObject
         HasChanges = false;
         IsEmpty = _allProperties.Count == 0;
         StatusMessage = LoadedMessage();
+    }
+
+    /// <summary>Pick another config file; it's saved as -configfile in Settings → Server Launch.</summary>
+    [RelayCommand]
+    private void ChangeConfigFile()
+    {
+        if (HasChanges)
+        {
+            StatusMessage = Loc.T("Config_SaveBeforeMigrate");
+            return;
+        }
+
+        var current = _configService.ConfigFilePath;
+        var dialog = new Microsoft.Win32.OpenFileDialog
+        {
+            Title = Loc.T("Config_ChooseFileTitle"),
+            Filter = $"{Loc.T("Config_FileFilter")}|*.xml",
+            InitialDirectory = Path.GetDirectoryName(current),
+            FileName = Path.GetFileName(current),
+        };
+        if (dialog.ShowDialog() != true) return;
+
+        if (!ConfigService.LooksLikeServerConfig(dialog.FileName))
+        {
+            StatusMessage = Loc.F("Config_NotAServerConfig", Path.GetFileName(dialog.FileName));
+            return;
+        }
+
+        _configService.UseConfigFile(dialog.FileName);
+        Load();
+        StatusMessage = Loc.F("Config_FileSwitched", _configService.ConfigFileName);
     }
 
     private string LoadedMessage() => _allProperties.Count == 0

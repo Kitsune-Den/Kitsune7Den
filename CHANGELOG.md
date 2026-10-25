@@ -2,6 +2,11 @@
 
 All notable changes to Kitsune7Den are documented here.
 
+## [Unreleased]
+
+### Added
+- **Change… button for the config file**, next to its name at the top of the Configuration page. Pick any .xml server config and Kitsune7Den saves it as `-configfile` in Settings → Server Launch, so you no longer have to find that setting or rename your file to `serverconfig.xml` (reported on Nexus). Picking `serverconfig.xml` switches back. Files with no `<property>` settings are turned down, and the change applies from the server's next start.
+
 ## [1.3.0] - 2026-10-18
 
 ### Added
