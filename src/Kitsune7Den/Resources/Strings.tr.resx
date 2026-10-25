@@ -313,6 +313,12 @@ Bu işlem geri alınamaz.</value></data>
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Güncelleme başarısız: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Önce kaydedilmemiş değişikliklerini kaydet ya da sıfırla</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x bunları yok sayar: değerleri SandboxCode'dan alır. Bunları yukarıdaki Sandbox düzenleyicisinden değiştir.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Değiştir…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Sunucunun hangi yapılandırma dosyasıyla çalışacağını seç. Ayarlar → Sunucu Başlatma bölümüne -configfile olarak kaydedilir.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Sunucunun yapılandırma dosyasını seç</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Sunucu yapılandırma dosyaları (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} bir sunucu yapılandırmasına benzemiyor: hiç property girdisi yok</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Artık {0} kullanılıyor. Sunucu bir sonraki başlatmadan itibaren bunu kullanacak.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Sandbox Seçenekleri</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Sandbox'ı Düzenle...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Zorluk, ganimet, zombiler, Kanlı Aylar, gün uzunluğu, tüccarlar ve daha fazlası. Oyunun Sandbox ekranındaki seçeneklerin aynısı.</value></data>

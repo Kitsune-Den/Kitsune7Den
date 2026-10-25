@@ -313,6 +313,12 @@ A timestamped backup of serverconfig.xml is made first. The old values stay in t
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Update failed: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Save or reset your unsaved changes first</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x ignores these: it takes them from SandboxCode instead. Change them in the Sandbox editor above.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Change…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Choose which config file the server runs with. It's saved as -configfile in Settings → Server Launch.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Choose the server's config file</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Server config files (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} doesn't look like a server config: it has no property settings</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Now using {0}. The server will run with it from its next start.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Sandbox Options</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Edit Sandbox...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Difficulty, loot, zombies, blood moons, day length, traders and more. Same options as the game's Sandbox screen.</value></data>

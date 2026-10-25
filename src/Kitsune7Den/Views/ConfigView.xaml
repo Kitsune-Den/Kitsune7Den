@@ -23,6 +23,10 @@
                                FontSize="16" FontWeight="SemiBold" />
                     <TextBlock Text="{Binding ConfigFileLabel}" Foreground="{DynamicResource TextSecondaryBrush}"
                                FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,1" />
+                    <Button Content="{l:Tr Config_ChangeFile}" ToolTip="{l:Tr Config_ChangeFileTooltip}"
+                            Style="{StaticResource SecondaryButton}" Command="{Binding ChangeConfigFileCommand}"
+                            Padding="8,2" FontSize="11" VerticalAlignment="Center" Margin="8,0,0,0"
+                            Visibility="{Binding HasServer, Converter={StaticResource BoolVis}}" />
                 </StackPanel>
 
                 <!-- Right-side buttons -->

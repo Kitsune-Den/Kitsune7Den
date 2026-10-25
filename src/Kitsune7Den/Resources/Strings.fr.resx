@@ -313,6 +313,12 @@ Une sauvegarde horodatée de serverconfig.xml est faite d'abord. Les anciennes v
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Échec de la mise à jour : {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Enregistrez ou annulez d'abord vos modifications non enregistrées</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x les ignore et les prend dans le SandboxCode à la place. Modifiez-les dans l'éditeur bac à sable ci-dessus.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Changer…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Choisissez le fichier de configuration utilisé par le serveur. Il est enregistré comme -configfile dans Paramètres → Lancement du serveur.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Choisir le fichier de configuration du serveur</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Fichiers de configuration du serveur (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} ne ressemble pas à une configuration de serveur : il ne contient aucune entrée property</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>{0} est maintenant utilisé. Le serveur s'en servira à partir de son prochain démarrage.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Options bac à sable</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Modifier le bac à sable...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Difficulté, butin, zombies, lunes sanglantes, durée du jour, marchands et plus encore. Les mêmes options que l'écran bac à sable du jeu.</value></data>

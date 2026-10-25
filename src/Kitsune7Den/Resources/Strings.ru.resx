@@ -313,6 +313,12 @@ Kitsune7Den скачает новую версию и перезапуститс
   <data name="Config_MigrateFailed" xml:space="preserve"><value>Не удалось обновить: {0}</value></data>
   <data name="Config_SaveBeforeMigrate" xml:space="preserve"><value>Сначала сохраните или сбросьте несохранённые изменения</value></data>
   <data name="Config_LegacyNote" xml:space="preserve"><value>7 Days to Die 3.x игнорирует эти параметры и берёт их из SandboxCode. Меняйте их в редакторе песочницы выше.</value></data>
+  <data name="Config_ChangeFile" xml:space="preserve"><value>Изменить…</value></data>
+  <data name="Config_ChangeFileTooltip" xml:space="preserve"><value>Выберите, с каким файлом конфигурации запускается сервер. Он сохраняется как -configfile в разделе Настройки → Запуск сервера.</value></data>
+  <data name="Config_ChooseFileTitle" xml:space="preserve"><value>Выберите файл конфигурации сервера</value></data>
+  <data name="Config_FileFilter" xml:space="preserve"><value>Файлы конфигурации сервера (*.xml)</value></data>
+  <data name="Config_NotAServerConfig" xml:space="preserve"><value>{0} не похож на конфигурацию сервера: в нём нет записей property</value></data>
+  <data name="Config_FileSwitched" xml:space="preserve"><value>Теперь используется {0}. Сервер начнёт использовать его со следующего запуска.</value></data>
   <data name="Sandbox_WindowTitle" xml:space="preserve"><value>Настройки песочницы</value></data>
   <data name="Sandbox_OpenEditor" xml:space="preserve"><value>Изменить песочницу...</value></data>
   <data name="Sandbox_CardHint" xml:space="preserve"><value>Сложность, добыча, зомби, кровавые луны, длительность дня, торговцы и многое другое. Те же параметры, что и на экране настроек песочницы в игре.</value></data>
